@@ -1,135 +1,310 @@
 [
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Phương thức sản xuất tư bản chủ nghĩa phát triển mạnh nhất trong lĩnh vực nào?",
-    "cac_dap_an": "A.Nông nghiệp và công thương nghiệp|B.Nông nghiệp và vũ trụ hạt nhân|C.Thương nghiệp và khai khoáng|D.Khai khoáng và luyện kim",
+    "cauhoi": "[Bài 1][Câu 1] Phương thức sản xuất tư bản chủ nghĩa phát triển mạnh, đặc biệt là ở trên lĩnh vực nào?",
+    "cac_dap_an": "A. Nông nghiệp và công thương nghiệp|B. Nông nghiệp và vũ trụ hạt nhân|C. Thương nghiệp, khai khoáng|D. Khai khoáng, luyện kim",
     "dap_an_dung": "A",
-    "giaithich": "CNTB phát triển mạnh trong nông nghiệp và công - thương nghiệp, đặc biệt ở Anh."
+    "giaithich": "Phương thức sản xuất tư bản chủ nghĩa (CNTB) phát triển mạnh mẽ và thâm nhập vào cả lĩnh vực **nông nghiệp** (qua phong trào rào đất cướp ruộng) và **công thương nghiệp** (thông qua công trường thủ công, buôn bán)."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Công nghiệp len, dạ bùng nổ làm cho nghề nào trở nên có lợi ở Anh?",
-    "cac_dap_an": "A.Nuôi bò|B.Nuôi cừu|C.Nuôi ngựa|D.Nuôi dê",
+    "cauhoi": "[Bài 1][Câu 2] Công nghiệp len, dạ bùng nổ làm cho nghề nào trở nên có lợi ở giai cấp tư sản và tầng lớp quý tộc?",
+    "cac_dap_an": "A. Nuôi Bò|B. Nuôi Cừu|C. Nuôi Ngựa|D. Nuôi Dê",
     "dap_an_dung": "B",
-    "giaithich": "Nhu cầu len tăng khiến nghề nuôi cừu phát triển, địa chủ rào đất để chăn cừu – tiền đề CNTB ở Anh."
+    "giaithich": "Nhu cầu về len, dạ tăng cao đã thúc đẩy việc chăn nuôi **cừu** để lấy lông, làm cho nghề này trở nên có lợi nhuận cao cho quý tộc mới, dẫn đến phong trào 'rào đất cướp ruộng' ở Anh."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Trước cách mạng, cư dân ở 13 thuộc địa Anh tại Bắc Mĩ phải tuân theo điều gì?",
-    "cac_dap_an": "A.Các đạo luật khắt khe do Chính phủ Anh ban hành|B.Các quy định tự quản của địa phương|C.Luật do quốc hội thuộc địa ban hành|D.Hiến pháp riêng của từng bang",
+    "cauhoi": "[Bài 1][Câu 3] Tại 13 thuộc địa Anh ở Bắc Mỹ trước cách mạng, người dân phải tuân theo?",
+    "cac_dap_an": "A. Các đạo luật khắt khe do Chính phủ Anh đề ra|B. Các đạo luật khắt khe do chính quyền mỗi thuộc địa đề ra|C. Các đạo luật cởi mở do Chính phủ Anh đề ra|D. Các đạo luật cởi mở do chính quyền mỗi thuộc địa đề ra",
     "dap_an_dung": "A",
-    "giaithich": "Chính phủ Anh áp đặt các đạo luật thuế và thương mại khắt khe, gây mâu thuẫn với dân thuộc địa."
+    "giaithich": "Trước Cách mạng giành độc lập, Chính phủ Anh đã ban hành nhiều **đạo luật khắt khe** nhằm kìm hãm sự phát triển kinh tế tư bản chủ nghĩa ở 13 thuộc địa Bắc Mỹ."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Ở Pháp trước cách mạng, mâu thuẫn gay gắt nhất trong xã hội là giữa những ai?",
-    "cac_dap_an": "A.Nhân dân thuộc địa với chính quyền thực dân|B.Giai cấp tư sản và nhân dân với tăng lữ, quý tộc|C.Tư sản với vua|D.Nông dân với thương nhân",
+    "cauhoi": "[Bài 1][Câu 4] Ở Pháp mâu thuẫn nào tồn tại gay gắt trong xã hội?",
+    "cac_dap_an": "A. Các tầng lớp nhân dân thuộc địa với chế độ thực dân.|B. Tư sản và tầng lớp nhân dân với tăng lữ quý tộc|C. Tầng lớp tư sản với nhà nước phong kiến.|D. Tầng lớp trí thức và giặc ngoại xâm.",
     "dap_an_dung": "B",
-    "giaithich": "Mâu thuẫn giữa Đẳng cấp thứ ba với hai đẳng cấp đặc quyền (tăng lữ, quý tộc) là gay gắt nhất."
+    "giaithich": "Mâu thuẫn gay gắt nhất ở Pháp trước cách mạng là giữa Đẳng cấp thứ ba (gồm **Tư sản và tầng lớp nhân dân** lao động) với hai đẳng cấp được hưởng đặc quyền là **Tăng lữ quý tộc**."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Xã hội Pháp trước cách mạng phân chia thành mấy đẳng cấp?",
-    "cac_dap_an": "A.1|B.2|C.3|D.4",
+    "cauhoi": "[Bài 1][Câu 5] Xã hội Pháp phân chia thành mấy đẳng cấp:",
+    "cac_dap_an": "A. 1|B. 2|C. 3|D. 4",
     "dap_an_dung": "C",
-    "giaithich": "Xã hội Pháp chia thành ba đẳng cấp: Tăng lữ, Quý tộc và Đẳng cấp thứ ba."
+    "giaithich": "Xã hội Pháp trước cách mạng phân chia thành **3** đẳng cấp: Tăng lữ, Quý tộc và Đẳng cấp thứ ba."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Giai cấp đông đảo nhất trong xã hội phong kiến Pháp là:",
-    "cac_dap_an": "A.Nông dân|B.Quý tộc|C.Tư sản|D.Tăng lữ",
+    "cauhoi": "[Bài 1][Câu 6] Giai cấp nào đông đảo nhất trong xã hội?",
+    "cac_dap_an": "A. Nông dân.|B. Qúy tộc.|C. Tư sản.|D. Tăng lữ.",
     "dap_an_dung": "A",
-    "giaithich": "Nông dân chiếm đa số dân cư, bị bóc lột nặng nề và là lực lượng đông đảo trong cách mạng."
+    "giaithich": "**Nông dân** là giai cấp chiếm số lượng đông đảo nhất, là bộ phận chủ yếu của Đẳng cấp thứ ba trong xã hội Pháp."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Cách mạng tư sản gồm hai nhiệm vụ cơ bản là:",
-    "cac_dap_an": "A.Dân tộc và dân chủ|B.Kinh tế và xã hội|C.Chính trị và văn hóa|D.Tự do và quyền lực",
+    "cauhoi": "[Bài 1][Câu 7] Cách mạng tư sản bao gồm hai nhiệm vụ cơ bản nào?",
+    "cac_dap_an": "A. Dân tộc và dân chủ.|B. Chính trị và xa hội.|C. Công bằng và văn minh.|D. Tiền tài và quyền lực.",
     "dap_an_dung": "A",
-    "giaithich": "Cách mạng tư sản có hai nhiệm vụ: dân tộc (thống nhất đất nước) và dân chủ (xóa bỏ phong kiến)."
+    "giaithich": "Cách mạng tư sản có hai nhiệm vụ cơ bản là nhiệm vụ **Dân tộc** (giải phóng dân tộc, thống nhất quốc gia) và nhiệm vụ **Dân chủ** (xóa bỏ chế độ phong kiến, xác lập quyền tự do, bình đẳng)."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Động lực quyết định thắng lợi của các cuộc cách mạng tư sản là:",
-    "cac_dap_an": "A.Giai cấp lãnh đạo và quần chúng nhân dân|B.Quân đội|C.Giới quý tộc|D.Giai cấp công nhân",
+    "cauhoi": "[Bài 1][Câu 8] Trong các cuộc cách mạng tư sản, đâu là động lực quyết định thắng lợi của cách mạng?",
+    "cac_dap_an": "A. Giai cấp lãnh đạo và quần chúng nhân dân.|B. Những hứa hẹn về một tương lai tương sáng của giai cấp lãnh đạo cho nhân dân.|C. Số tiền mà quần chúng nhân dân nhận được khi giành chiến thắng.|D. Giai cấp công nhân và quần chúng nhân dân.",
     "dap_an_dung": "A",
-    "giaithich": "Cách mạng tư sản do tư sản lãnh đạo nhưng thắng lợi nhờ sức mạnh của quần chúng nhân dân."
+    "giaithich": "Động lực quyết định thắng lợi của cách mạng tư sản là sự kết hợp giữa vai trò của **giai cấp lãnh đạo** (tư sản, quý tộc mới) và sự tham gia đấu tranh của **quần chúng nhân dân**."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Khẩu hiệu nào không thể hiện tư tưởng dân chủ tư sản?",
-    "cac_dap_an": "A.Tự do và tư hữu|B.Tấc đất tấc vàng|C.Thống nhất hay là chết|D.Hội những người con tự do",
+    "cauhoi": "[Bài 1][Câu 9] Đâu không phải là khẩu hiệu thể hiện tư tưởng dân chủ tư sản của giai cấp tư sản và chủ nô:",
+    "cac_dap_an": "A. Tự do và tư hữu.|B. Tấc đất tấc vàng.|C. Thống nhất hoàn toàn hay là chết.|D. Hội những người con tự do.",
     "dap_an_dung": "B",
-    "giaithich": "“Tấc đất tấc vàng” là tư tưởng phong kiến, không thuộc hệ giá trị dân chủ tư sản."
+    "giaithich": "Khẩu hiệu thể hiện tư tưởng dân chủ tư sản thường liên quan đến quyền tự do, bình đẳng, tư hữu và độc lập dân tộc. '**Tấc đất tấc vàng**' là câu tục ngữ nói về giá trị của đất đai, không phải khẩu hiệu chính trị của cách mạng tư sản."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Giai cấp lãnh đạo các cuộc cách mạng tư sản là:",
-    "cac_dap_an": "A.Quý tộc|B.Nông dân|C.Tư sản và các tầng lớp đại diện cho phương thức sản xuất tư bản chủ nghĩa|D.Tăng lữ",
+    "cauhoi": "[Bài 1][Câu 10] Lãnh đạo các cuộc cách mạng tư sản là giai cấp nào?",
+    "cac_dap_an": "A. Qúy tộc.|B. Nông dân và công nhân.|C. Tư sản và các giai cấp, tầng lớp đại diện cho phương thức sản xuất tư bản chủ nghĩa|D. Nông nô.",
     "dap_an_dung": "C",
-    "giaithich": "Cách mạng tư sản do giai cấp tư sản và tầng lớp liên minh với họ lãnh đạo."
+    "giaithich": "Giai cấp lãnh đạo các cuộc cách mạng tư sản là **tư sản** và các giai cấp, tầng lớp đại diện cho phương thức sản xuất tư bản chủ nghĩa."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "Thanh giáo là tiền đề tư tưởng của cuộc cách mạng nào?",
-    "cac_dap_an": "A.Cách mạng tư sản Anh|B.Cách mạng tư sản Pháp|C.Cách mạng ở Bắc Mĩ|D.Cách mạng Đức",
-    "dap_an_dung": "A",
-    "giaithich": "Thanh giáo (Puritanism) phản đối giáo quyền, ủng hộ tự do, là nền tảng tư tưởng của Cách mạng tư sản Anh."
-  },
-  {
-    "type": "TRAC_NGHIEM",
-    "cauhoi": "Trào lưu Triết học Ánh sáng là tiền đề tư tưởng của cuộc cách mạng nào?",
-    "cac_dap_an": "A.Cách mạng tư sản Anh|B.Cách mạng tư sản Pháp|C.Cách mạng Mỹ|D.Cách mạng Đức",
-    "dap_an_dung": "B",
-    "giaithich": "Triết học Ánh sáng (Voltaire, Rousseau...) phê phán phong kiến, chuẩn bị tư tưởng cho Cách mạng Pháp 1789."
-  },
-  {
-    "type": "TRAC_NGHIEM",
-    "cauhoi": "Nước tiêu biểu cho sự phát triển kinh tế tư bản chủ nghĩa trước cách mạng là:",
-    "cac_dap_an": "A.Anh|B.Pháp|C.Mỹ|D.Hà Lan",
-    "dap_an_dung": "A",
-    "giaithich": "Anh là trung tâm công nghiệp, thương mại lớn nhất châu Âu trước Cách mạng tư sản."
-  },
-  {
-    "type": "TRAC_NGHIEM",
-    "cauhoi": "Mục tiêu 'Lật đổ chế độ phong kiến do vua Sác-lơ I đứng đầu' thuộc về cuộc cách mạng nào?",
-    "cac_dap_an": "A.Cách mạng tư sản Anh|B.Cách mạng tư sản Pháp|C.Cách mạng ở Bắc Mĩ|D.Cách mạng Hà Lan",
-    "dap_an_dung": "A",
-    "giaithich": "Cách mạng tư sản Anh nhằm lật đổ phong kiến, thiết lập nền thống trị của giai cấp tư sản – quý tộc mới."
-  },
-  {
-    "type": "TRAC_NGHIEM",
-    "cauhoi": "Mục tiêu 'Lật đổ ách thống trị của thực dân Anh, giành độc lập dân tộc' thuộc về cuộc cách mạng nào?",
-    "cac_dap_an": "A.Cách mạng Anh|B.Cách mạng Pháp|C.Cách mạng ở Bắc Mĩ|D.Cách mạng Hà Lan",
-    "dap_an_dung": "C",
-    "giaithich": "Cách mạng Bắc Mĩ (1775–1783) nhằm giành độc lập cho 13 thuộc địa Anh, lập Hợp chúng quốc Hoa Kì."
-  },
-  {
-    "type": "TRAC_NGHIEM",
-    "cauhoi": "Ngày mở đầu Cách mạng tư sản Pháp là:",
-    "cac_dap_an": "A.14/7/1789|B.14/8/1789|C.15/7/1789|D.15/8/1789",
-    "dap_an_dung": "A",
-    "giaithich": "Ngày 14/7/1789, nhân dân Paris tấn công phá ngục Ba-xti, mở đầu Cách mạng tư sản Pháp."
-  },
-  {
-    "type": "TRAC_NGHIEM",
-    "cauhoi": "Tiền đề kinh tế dẫn đến sự bùng nổ của cách mạng tư sản là:",
-    "cac_dap_an": "A.Kinh tế tư bản chủ nghĩa ra đời và phát triển trong lòng xã hội phong kiến|B.Sự khủng hoảng của thương mại thế giới|C.Giai cấp quý tộc sụp đổ hoàn toàn|D.Cách mạng công nghiệp bùng nổ",
-    "dap_an_dung": "A",
-    "giaithich": "CNTB phát triển trong lòng phong kiến làm nảy sinh mâu thuẫn giữa lực lượng sản xuất mới và quan hệ sản xuất cũ."
-  },
-  {
-    "type": "TRAC_NGHIEM",
-    "cauhoi": "Mục tiêu chung của các cuộc cách mạng tư sản là:",
-    "cac_dap_an": "A.Lật đổ chế độ phong kiến, thực dân và tàn tích của nó|B.Thiết lập chế độ cộng sản|C.Mở rộng thuộc địa|D.Lật đổ xã hội cổ đại",
-    "dap_an_dung": "A",
-    "giaithich": "Cách mạng tư sản nhằm xóa bỏ phong kiến, mở đường cho CNTB phát triển."
-  },
-  {
-    "type": "TRAC_NGHIEM",
-    "cauhoi": "Đâu không phải là mục tiêu của cách mạng tư sản?",
-    "cac_dap_an": "A.Thiết lập nền thống trị tư sản|B.Lật đổ chế độ phong kiến|C.Mở đường cho kinh tế tư bản chủ nghĩa|D.Mở ra thời đại thắng lợi của chủ nghĩa xã hội",
+    "cauhoi": "[Bài 1][Câu 11] Nội dung nào sau đây phản ánh **không đúng** nhiệm vụ dân tộc của cách mạng tư sản là",
+    "cac_dap_an": "A. xóa bỏ tình trạng phong kiến cát cứ.|B. đánh đuổi thực dân, giải phóng dân tộc.|C. thống nhất thị trường dân tộc, hình thành quốc gia dân tộc.|D. thúc đẩy sự phát triển của kinh tế hàng hóa.",
     "dap_an_dung": "D",
-    "giaithich": "Cách mạng tư sản không hướng tới chủ nghĩa xã hội; đây là mục tiêu của giai đoạn sau trong lịch sử."
+    "giaithich": "Nhiệm vụ dân tộc bao gồm xóa bỏ cát cứ, giải phóng dân tộc, thống nhất quốc gia. **Thúc đẩy sự phát triển của kinh tế hàng hóa** là mục tiêu và hệ quả của cách mạng, nhưng không phải nội dung phản ánh trực tiếp nhiệm vụ dân tộc."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 12] Nội dung nào sau đây **không** phản anh đúng nhiệm vụ dân chủ của cách mạng tư sản là",
+    "cac_dap_an": "A. xóa bỏ tính chất chuyên chế phong kiến.|B. xác lập nền dân chủ tư sản.|C. thành lập nhà nước cộng hòa tư sản hoặc quân chủ lập hiến.|D. hướng đến một nền sản xuất tập trung.",
+    "dap_an_dung": "D",
+    "giaithich": "Nhiệm vụ dân chủ là xóa bỏ chuyên chế, xác lập dân chủ, xây dựng nhà nước tư sản mới. **Hướng đến một nền sản xuất tập trung** là đặc trưng kinh tế chứ không phải nhiệm vụ dân chủ trực tiếp."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 13] Thanh giáo là tiền đề tư tưởng của cuộc cách mạng nào?",
+    "cac_dap_an": "A. Cách mạng tư sản Anh.|B. Cách mạng tư sản Pháp.|C. Cách mạng giải phóng ở Bắc Mỹ.|D. Cách mạng giải phóng ở Đức.",
+    "dap_an_dung": "A",
+    "giaithich": "**Thanh giáo** là tiền đề tư tưởng quan trọng dẫn đến Cách mạng tư sản **Anh**."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 14] “Trào lưu Triết học Ánh sáng đã kịch liệt phê phán tình trạng mục nát, lỗi thời của chế độ phong kiến và Giáo hội Thiên Chúa giáo đương thời, đưa ra những lí thuyết về việc xây dựng nhà nước mới”.\nĐây là tiền đề tư tưởng của cuộc cách mạng nào?",
+    "cac_dap_an": "A. Cách mạng tư sản Anh.|B. Cách mạng tư sản Pháp.|C. Cách mạng giải phóng ở Bắc Mỹ.|D. Cách mạng giải phóng ở Đức.",
+    "dap_an_dung": "B",
+    "giaithich": "Trào lưu **Triết học Ánh sáng** là tiền đề tư tưởng trực tiếp, sâu sắc nhất của Cách mạng tư sản **Pháp**."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 15] Trước cách mạng, sự phát triển kinh tế tư bản chủ nghĩa ở nước nào là tiêu biểu nhất?",
+    "cac_dap_an": "A. Anh|B. Pháp|C. Mỹ|D. Nga",
+    "dap_an_dung": "A",
+    "giaithich": "Trước các cuộc cách mạng tư sản lớn (giữa thế kỷ XVII), **Anh** là nước có sự phát triển kinh tế tư bản chủ nghĩa mạnh và tiêu biểu nhất ở Tây Âu."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 16] Cách mạng tư sản là cuộc cách mạng như thế nào?",
+    "cac_dap_an": "A. Cách mạng tư sản là cuộc cách mạng do giai cấp tư sản (tầng lớp chủ xưởng, thương nhân, nhà buôn...) lãnh đạo, nhằm lật đổ chế độ phong kiến và thiết lập chế độ tư bản chủ nghĩa.|B. Cuộc cách mạng do giai cấp tư sản nhằm thay đổi hệ thống chính trị, mang lại công bằng, văn minh, nhân quyền cho nhân loại, mở đường cho chủ nghĩa tư bản phát triển.|C. Cuộc cách mạng do các giai cấp thấp kém trong xã hội (nông dân, nô lệ,…) lãnh đạo nhằm đòi lại quyền dân chủ, quyền con người từ giai cấp tư sản và quý tộc, nhằm thiết lập một thể chế nhà nước mới.|D. Cuộc cách mạng nhằm đòi lại quyền tư sản cho đại bộ phận dân chúng, hướng tới hình thành chủ nghĩa tư bản.",
+    "dap_an_dung": "A",
+    "giaithich": "Định nghĩa chính xác về Cách mạng tư sản là cuộc cách mạng do **giai cấp tư sản lãnh đạo**, nhằm **lật đổ chế độ phong kiến** và **thiết lập chế độ tư bản chủ nghĩa**."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 17] “Lật đổ chế độ phong kiến đứng đầu là vua Sác- lơ I thiết lập nền thống trị của giai cấp tư sản và quý tộc mới, mở đường cho sự phát triển của chủ nghĩa tư bản ”.\nĐây là mục tiêu của cuộc cách mạng nào?",
+    "cac_dap_an": "A. Cách mạng tư sản Anh.|B. Cách mạng tư sản Pháp.|C. Cách mạng giải phóng ở Bắc Mỹ.|D. Cách mạng giải phóng ở Đức.",
+    "dap_an_dung": "A",
+    "giaithich": "Mục tiêu lật đổ vua **Sác-lơ I** (Charles I) và thiết lập nền thống trị của **quý tộc mới** là đặc trưng của Cách mạng tư sản **Anh**."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 18] “Lật đổ ách thống trị của thực dân Anh, dành độc lập dân tộc, thiết lập chính quyền của giai cấp tư sản và chủ nô, mở đường cho sự phát triển của chủ nghĩa tư bản”.\nĐây là mục tiêu của cuộc cách mạng nào?",
+    "cac_dap_an": "A. Cách mạng tư sản Anh|B. Cách mạng tư sản Pháp|C. Cách mạng giải phóng ở Bắc Mỹ|D. Cách mạng giải phóng ở Đức",
+    "dap_an_dung": "C",
+    "giaithich": "Mục tiêu **lật đổ ách thống trị của thực dân Anh, dành độc lập dân tộc** và thiết lập chính quyền tư sản/chủ nô là mục tiêu của Cách mạng giải phóng ở **Bắc Mỹ** (Hoa Kỳ)."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 19] Để tập hợp quần chúng nhân dân đứng lên đấu tranh, giai cấp tư sản cần có",
+    "cac_dap_an": "A. Hệ tư tưởng mới để chống lại hệ tư tưởng phong kiến bảo thủ.|B. Quyền lực để ép buộc nhân dân.|C. Tiền bạc để mua vũ khí và quân binh.|D. Chỉ cần phát triển kinh tế.",
+    "dap_an_dung": "A",
+    "giaithich": "Để lãnh đạo và tập hợp quần chúng, giai cấp tư sản cần phải đưa ra một **Hệ tư tưởng mới** (Thanh giáo, Triết học Ánh sáng) để đấu tranh chống lại hệ tư tưởng phong kiến lỗi thời."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 20] Thomas Mun nói gì về vai trò của ngoại thương đối với nước Anh?",
+    "cac_dap_an": "A. Ngoại thương là sự giàu có của quốc vương, là danh dự của vương quốc, là sứ mệnh cao quý của thương nhân.|B. Ngoại thương là sứ mệnh cao quý của thương nhân, là sự tồn tại của chúng ta và là công ăn việc làm của người nghèo ở nước ta.|C. Ngoại thương là sự cải thiện đất đai của chúng ta, là trường học của các thuỷ thủ chúng ta, là động lực chiến tranh của chúng ta, là sự khủng khiếp của kẻ thù của chúng ta.|D. Ngoại thương chỉ là một ngành kinh tế thuần túy.",
+    "dap_an_dung": "B",
+    "giaithich": "Câu nói nổi tiếng của Thomas Mun về vai trò của ngoại thương đối với Anh là: '**Ngoại thương là sứ mệnh cao quý của thương nhân, là sự tồn tại của chúng ta và là công ăn việc làm của người nghèo ở nước ta**'."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 21] Ngày mở đầu Cách mạng tư sản Pháp diễn ra vào thời gian nào?",
+    "cac_dap_an": "A. 14/7/1789.|B. 14 /8/1789.|C. 15/7/1789.|D. 15/8/1789.",
+    "dap_an_dung": "A",
+    "giaithich": "Cách mạng tư sản Pháp mở đầu bằng sự kiện nhân dân tấn công ngục Ba-xti vào ngày **14/7/1789**."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 22] Cách mạng tư sản là cuộc cách mạng do giai cấp nào lãnh đạo?",
+    "cac_dap_an": "A. Nông dân.|B. Côn nhân.|C. Tri thức.|D. Tư sản",
+    "dap_an_dung": "D",
+    "giaithich": "Cách mạng tư sản là cuộc cách mạng do giai cấp **Tư sản** lãnh đạo."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 23] Cách mạng tư sản bao gồm mấy nhiệm vụ cơ bản?",
+    "cac_dap_an": "A. 1|B. 2|C. 3|D. 4",
+    "dap_an_dung": "B",
+    "giaithich": "Cách mạng tư sản bao gồm **2** nhiệm vụ cơ bản: Dân tộc và Dân chủ."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 24] Nhiệm vụ dân chủ của cuộc cách mạng tư sản là?",
+    "cac_dap_an": "A. Xóa bỏ chế độ phong kiến chuyên chế, xác nhận nền dân chủ tư sản|B. Xóa bỏ tình trạng phong kiến cát cứ, hình thành thị trưởng dân tộc thống nhất|C. Xóa bỏ chế độ mẫu hệ, xác nhận nền dân chủ tư sản|D. Xóa bỏ tình trạng chiếm đoạt quyền lợi, hình thành thị trưởng dân tộc thống nhất",
+    "dap_an_dung": "A",
+    "giaithich": "Nhiệm vụ **dân chủ** là nhằm **xóa bỏ chế độ phong kiến chuyên chế, xác lập nền dân chủ tư sản**."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 25] Cách mạng tư sản bao gồm nhiệm vụ cơ bản là:",
+    "cac_dap_an": "A. Dân tộc và dân chủ|B. Chính trị và xa hội|C. Công bằng và văn minh|D. Tiền tài và quyền lực",
+    "dap_an_dung": "A",
+    "giaithich": "Hai nhiệm vụ cơ bản của cách mạng tư sản là **Dân tộc và Dân chủ**."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 26] Tiền đề về kinh tế dẫn đến sự bùng nổ và thắng lợi của các cuộc cách mạng tư sản từ giữa thế kỉ XVI đến đầu thế kỉ XX là",
+    "cac_dap_an": "A. quan hệ sản xuất tư bản chủ nghĩa thay thế hoàn toàn quan hệ sản xuất phong kiến.|B. triết học Ánh sáng ra đời, thức tỉnh, dọn đường cho quần chúng đấu tranh.|C. Giai cấp tư sản và đồng minh có thế lực rất lớn cả về kinh tế và chính trị.|D. kinh tế tư bản chủ nghĩa ra đời và phát triển trong lòng chế độ xã hội phong kiến.",
+    "dap_an_dung": "D",
+    "giaithich": "Tiền đề kinh tế là sự phát triển của **kinh tế tư bản chủ nghĩa trong lòng chế độ xã hội phong kiến**, tạo ra mâu thuẫn cần được giải quyết bằng cách mạng."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 27] Mục tiêu chung của cách cuộc cách mạng tư sản là",
+    "cac_dap_an": "A. lật đổ chế đổ phong kiến, thực dân cùng tàn tích của nó.|B. lật đổ xã hội nguyên thủy, cổ đại cùng tàn tích của nó.|C. tạo điều kiện cho sự phát triển của chế độ phong kiến.|D. mở đường cho sự phát triển của chủ nghĩa xã hội.",
+    "dap_an_dung": "A",
+    "giaithich": "Mục tiêu chung của cách mạng tư sản là **lật đổ chế độ phong kiến, thực dân cùng tàn tích của nó** để mở đường cho CNTB phát triển."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1][Câu 28] Đâu không phải là mục tiêu của cuộc cách mạng tư sản?",
+    "cac_dap_an": "A. Thiết lập nền thống trị của giai cấp tư sản.|B. Lật đổ chế độ phong kiến, thực dân cùng tàn tích của nó.|C. Tạo điều kiện cho sự phát triển của nền kinh tế tư bản chủ nghĩa.|D. Mở ra thời đại mới, thời đại thắng lợi của chủ nghĩa xã hội.",
+    "dap_an_dung": "D",
+    "giaithich": "Cách mạng tư sản nhằm thiết lập CNTB. Mục tiêu của nó **không phải** là 'Mở ra thời đại mới, thời đại thắng lợi của **chủ nghĩa xã hội**'."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 1] Đọc đoạn tư liệu sau đây:\n“Hiện tượng “Cừu ăn thịt người” là câu nói của Tô – mát Mo – rơ miêu tả thảm cảnh của người nông dân Anh trong phong trào “rào đất cướp ruộng” cuối thế kỉ XV đầu thế kỉ XVI.\nQuý tộc mới (quý tộc tư sản hóa) đã đuổi nông dân ra khỏi những mảnh đất mà họ đã từng canh tác để biến thành đồng cỏ nuôi cừu, kinh doanh thu lợi nhuận, tạo ra sự tích lũy tư bản nguyên thủy”\n (Sách giáo khoa Lịch sử 11, Bộ Chân trời sáng tạo, tr.5)\nA. Cuối thế kỉ XV – đầu thế kỉ XVI, phương thức sản xuất tư bản chủ nghĩa đã thâm nhập mạnh vào nông nghiệp Anh.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Tư liệu mô tả phong trào 'rào đất cướp ruộng' do quý tộc mới thực hiện để kinh doanh thu lợi nhuận, chứng tỏ CNTB đã thâm nhập mạnh vào nông nghiệp Anh."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 1] Đọc đoạn tư liệu sau đây:\n“Hiện tượng “Cừu ăn thịt người” là câu nói của Tô – mát Mo – rơ miêu tả thảm cảnh của người nông dân Anh trong phong trào “rào đất cướp ruộng” cuối thế kỉ XV đầu thế kỉ XVI.\nQuý tộc mới (quý tộc tư sản hóa) đã đuổi nông dân ra khỏi những mảnh đất mà họ đã từng canh tác để biến thành đồng cỏ nuôi cừu, kinh doanh thu lợi nhuận, tạo ra sự tích lũy tư bản nguyên thủy”\n (Sách giáo khoa Lịch sử 11, Bộ Chân trời sáng tạo, tr.5)\nB. Nguyên nhân chủ yếu dẫn đến phong trào “rào đất cướp ruộng” ở Anh là do sự phát triển mạnh mẽ của ngành công nghiệp len dạ.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Sự phát triển mạnh mẽ của ngành công nghiệp len dạ làm tăng nhu cầu lông cừu, khiến việc chăn nuôi cừu trở nên có lợi nhuận cao, là nguyên nhân chủ yếu dẫn đến phong trào 'rào đất cướp ruộng'."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 1] Đọc đoạn tư liệu sau đây:\n“Hiện tượng “Cừu ăn thịt người” là câu nói của Tô – mát Mo – rơ miêu tả thảm cảnh của người nông dân Anh trong phong trào “rào đất cướp ruộng” cuối thế kỉ XV đầu thế kỉ XVI.\nQuý tộc mới (quý tộc tư sản hóa) đã đuổi nông dân ra khỏi những mảnh đất mà họ đã từng canh tác để biến thành đồng cỏ nuôi cừu, kinh doanh thu lợi nhuận, tạo ra sự tích lũy tư bản nguyên thủy”\n (Sách giáo khoa Lịch sử 11, Bộ Chân trời sáng tạo, tr.5)\nC. Sự phát triển của kinh tế tư bản chủ nghĩa trong nông nghiệp làm xuất hiện tầng lớp quý tộc mới, sau này đã liên minh với tư sản chống lại chế độ phong kiến Anh.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Tầng lớp quý tộc mới (quý tộc tư sản hóa) xuất hiện từ phong trào rào đất, họ là lực lượng lãnh đạo và động lực của Cách mạng tư sản Anh, liên minh với tư sản để lật đổ chế độ phong kiến."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 1] Đọc đoạn tư liệu sau đây:\n“Hiện tượng “Cừu ăn thịt người” là câu nói của Tô – mát Mo – rơ miêu tả thảm cảnh của người nông dân Anh trong phong trào “rào đất cướp ruộng” cuối thế kỉ XV đầu thế kỉ XVI.\nQuý tộc mới (quý tộc tư sản hóa) đã đuổi nông dân ra khỏi những mảnh đất mà họ đã từng canh tác để biến thành đồng cỏ nuôi cừu, kinh doanh thu lợi nhuận, tạo ra sự tích lũy tư bản nguyên thủy”\n (Sách giáo khoa Lịch sử 11, Bộ Chân trời sáng tạo, tr.5)\nD. Phong trào “rào đất cướp ruộng” đã góp phần cải thiện đời sống của nông dân Anh trước cách mạng tư sản.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "B",
+    "giaithich": "Tư liệu mô tả 'thảm cảnh' của người nông dân. Phong trào 'rào đất cướp ruộng' đã khiến nông dân mất đất, đẩy họ vào cảnh nghèo khổ, chứ không cải thiện đời sống."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 2] Đọc đoạn tư liệu sau đây:\n“Rạng sáng ngày 14-7-1789, khắp các khu phố Pa-ri vang lên lời kêu gọi “Hãy tiến chiếm Ba-xti”, hàng nghìn người dân pa-ri đã tấn công vào ngục Ba-xti. Đây vốn là một pháo đài, sau chuyển thành nhà ngục, được xem là biểu tượng quyền lực của chế độ phong kiến chuyên chế. Từ ngọn lửa tấn công ngục Ba-xti đã bùng lên thành cuộc cách mạng thiêu cháy những tàn dư bảo thủ và lạc hậu của chế độ phong kiến. Cách mạng tư sản Pháp cùng các cuộc cách mạng khác ở Tây Âu và Bắc Mỹ đã mở ra những trang sử mới cho nhân loại.”\n(SGK Lịch sử 11, Bộ Chân trời sáng tạo, trang 4)\nA. Ngục Ba-xti được xem là biểu tượng cho quyền lực của chế độ phong kiến ở Pháp.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Tư liệu nêu rõ: 'Đây vốn là một pháo đài, sau chuyển thành nhà ngục, được xem là **biểu tượng quyền lực của chế độ phong kiến chuyên chế**'."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 2] Đọc đoạn tư liệu sau đây:\n“Rạng sáng ngày 14-7-1789, khắp các khu phố Pa-ri vang lên lời kêu gọi “Hãy tiến chiếm Ba-xti”, hàng nghìn người dân pa-ri đã tấn công vào ngục Ba-xti. Đây vốn là một pháo đài, sau chuyển thành nhà ngục, được xem là biểu tượng quyền lực của chế độ phong kiến chuyên chế. Từ ngọn lửa tấn công ngục Ba-xti đã bùng lên thành cuộc cách mạng thiêu cháy những tàn dư bảo thủ và lạc hậu của chế độ phong kiến. Cách mạng tư sản Pháp cùng các cuộc cách mạng khác ở Tây Âu và Bắc Mỹ đã mở ra những trang sử mới cho nhân loại.”\n(SGK Lịch sử 11, Bộ Chân trời sáng tạo, trang 4)\nB. Sự kiện tấn công ngục Ba-xti đã đánh dấu thắng lợi của cuộc cách mạng tư sản Pháp.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "B",
+    "giaithich": "Sự kiện tấn công ngục Ba-xti (14/7/1789) chỉ là sự kiện **mở đầu** cho Cách mạng tư sản Pháp, không phải là thắng lợi cuối cùng."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 2] Đọc đoạn tư liệu sau đây:\n“Rạng sáng ngày 14-7-1789, khắp các khu phố Pa-ri vang lên lời kêu gọi “Hãy tiến chiếm Ba-xti”, hàng nghìn người dân pa-ri đã tấn công vào ngục Ba-xti. Đây vốn là một pháo đài, sau chuyển thành nhà ngục, được xem là biểu tượng quyền lực của chế độ phong kiến chuyên chế. Từ ngọn lửa tấn công ngục Ba-xti đã bùng lên thành cuộc cách mạng thiêu cháy những tàn dư bảo thủ và lạc hậu của chế độ phong kiến. Cách mạng tư sản Pháp cùng các cuộc cách mạng khác ở Tây Âu và Bắc Mỹ đã mở ra những trang sử mới cho nhân loại.”\n(SGK Lịch sử 11, Bộ Chân trời sáng tạo, trang 4)\nC. Mâu thuẫn ba đẳng cấp là nguyên nhân sâu xa thổi bùng lên cách mạng tư sản Pháp.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Mâu thuẫn giữa ba đẳng cấp (Tăng lữ, Quý tộc và Đẳng cấp thứ ba) là mâu thuẫn cơ bản, là **nguyên nhân sâu xa** dẫn đến sự bùng nổ Cách mạng tư sản Pháp."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 2] Đọc đoạn tư liệu sau đây:\n“Rạng sáng ngày 14-7-1789, khắp các khu phố Pa-ri vang lên lời kêu gọi “Hãy tiến chiếm Ba-xti”, hàng nghìn người dân pa-ri đã tấn công vào ngục Ba-xti. Đây vốn là một pháo đài, sau chuyển thành nhà ngục, được xem là biểu tượng quyền lực của chế độ phong kiến chuyên chế. Từ ngọn lửa tấn công ngục Ba-xti đã bùng lên thành cuộc cách mạng thiêu cháy những tàn dư bảo thủ và lạc hậu của chế độ phong kiến. Cách mạng tư sản Pháp cùng các cuộc cách mạng khác ở Tây Âu và Bắc Mỹ đã mở ra những trang sử mới cho nhân loại.”\n(SGK Lịch sử 11, Bộ Chân trời sáng tạo, trang 4)\nD. Lê-nin đánh giá cách mạng tư sản Pháp là cuộc “Đại cách mạng” trong thời cận đại.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Đây là nhận định lịch sử phổ biến của Lê-nin về tầm quan trọng và tính triệt để của Cách mạng tư sản Pháp (1789-1799)."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 3] Đọc đoạn tư liệu sau đây:\nTư liệu 1: “Tất cả mọi người sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc”.\n(Tuyên ngôn Độc lập (Mĩ, năm 1776)\nTư liệu 2:\n“Điều 1. Con người sinh ra đều có quyền tự do và bình đẳng. Những sự phân biệt xã hội chỉ có thể dựa trên lợi ích chung.\nĐiều 17. Quyền tư hữu là quyền bất khả xâm phạm và thiêng liêng không ai có thể bị tước bỏ”\n(Tuyên ngôn Nhân quyền và Dân quyền (Pháp, năm 1789)\nA. Bản Tuyên ngôn Nhân quyền và Dân quyền ra đời từ cuộc cách mạng tư sản Pháp cuối thế kỉ XVIII.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Tuyên ngôn Nhân quyền và Dân quyền được thông qua năm **1789**, thuộc cuộc Cách mạng tư sản Pháp cuối thế kỉ **XVIII**."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 3] Đọc đoạn tư liệu sau đây:\nTư liệu 1: “Tất cả mọi người sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc”.\n(Tuyên ngôn Độc lập (Mĩ, năm 1776)\nTư liệu 2:\n“Điều 1. Con người sinh ra đều có quyền tự do và bình đẳng. Những sự phân biệt xã hội chỉ có thể dựa trên lợi ích chung.\nĐiều 17. Quyền tư hữu là quyền bất khả xâm phạm và thiêng liêng không ai có thể bị tước bỏ”\n(Tuyên ngôn Nhân quyền và Dân quyền (Pháp, năm 1789)\nB. Điểm chung của Tuyên ngôn Độc lập của nước Mĩ và Tuyên ngôn Nhân quyền và Dân quyền của nước Pháp là đề cao quyền con người và quyền công dân.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Cả hai văn kiện đều nhấn mạnh các quyền tự nhiên, bất khả xâm phạm của con người như quyền bình đẳng, quyền tự do, là mục tiêu dân chủ của các cuộc cách mạng tư sản."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 3] Đọc đoạn tư liệu sau đây:\nTư liệu 1: “Tất cả mọi người sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc”.\n(Tuyên ngôn Độc lập (Mĩ, năm 1776)\nTư liệu 2:\n“Điều 1. Con người sinh ra đều có quyền tự do và bình đẳng. Những sự phân biệt xã hội chỉ có thể dựa trên lợi ích chung.\nĐiều 17. Quyền tư hữu là quyền bất khả xâm phạm và thiêng liêng không ai có thể bị tước bỏ”\n(Tuyên ngôn Nhân quyền và Dân quyền (Pháp, năm 1789)\nC. Bản Tuyên ngôn Nhân quyền và Dân quyền của nước Pháp năm 1789 không đề cao quyền tư hữu cá nhân vì đó là biểu hiện cho sự phân biệt giàu – nghèo trong xã hội.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "B",
+    "giaithich": "Tư liệu 2 khẳng định **Quyền tư hữu là quyền bất khả xâm phạm và thiêng liêng**, chứng tỏ nó **đề cao** quyền tư hữu, là một trong những mục tiêu của giai cấp tư sản."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 3] Đọc đoạn tư liệu sau đây:\nTư liệu 1: “Tất cả mọi người sinh ra có quyền bình đẳng. Tạo hóa cho họ những quyền không ai có thể xâm phạm được; trong những quyền ấy, có quyền được sống, quyền tự do và quyền mưu cầu hạnh phúc”.\n(Tuyên ngôn Độc lập (Mĩ, năm 1776)\nTư liệu 2:\n“Điều 1. Con người sinh ra đều có quyền tự do và bình đẳng. Những sự phân biệt xã hội chỉ có thể dựa trên lợi ích chung.\nĐiều 17. Quyền tư hữu là quyền bất khả xâm phạm và thiêng liêng không ai có thể bị tước bỏ”\n(Tuyên ngôn Nhân quyền và Dân quyền (Pháp, năm 1789)\nD. Trong Tuyên ngôn độc lập của nước Việt Nam dân chủ cộng hòa (2/9/1945), chủ tịch Hồ Chí Minh đã trích dẫn những câu nói nổi tiếng trong bản tuyên ngôn Độc lập của nước Mĩ và Tuyên ngôn Nhân quyền và Dân quyền của nước Pháp.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Đúng. Trong Tuyên ngôn Độc lập (2/9/1945), Chủ tịch Hồ Chí Minh đã trích dẫn những câu bất hủ từ cả Tuyên ngôn Độc lập của Mỹ và Tuyên ngôn Nhân quyền và Dân quyền của Pháp."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 4] Đọc đoạn tư liệu sau đây:\n“Một bộ phận rất nhỏ, thậm chí chỉ là 1% dân số nhưng lại chiếm giữ phần lớn của cải, tư liệu sản xuất, kiểm soát tới ¾ nguồn tài chính, tri thức và các phương tiện thông tin đại chúng chủ yếu và do đó chi phối toàn bộ xã hội. Đây là nguyên nhân sâu xa dẫn đến phong trào “99 chống lại 1” diễn ra ở Mĩ đầu năm 2011 và nhanh chóng lan rộng ở nhiều nước tư bản”.\n(Sách giáo khoa Lịch sử 11, Bộ Chân trời sáng tạo, tr.18 )\nA. Đoạn trích phản ánh một trong những thách thức mà nước Mĩ hiện nay phải đối mặt.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Tình trạng tập trung tài sản (1% dân số chiếm phần lớn của cải) là một vấn đề về bất bình đẳng kinh tế - xã hội, là **thách thức** lớn của chủ nghĩa tư bản hiện đại."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 4] Đọc đoạn tư liệu sau đây:\n“Một bộ phận rất nhỏ, thậm chí chỉ là 1% dân số nhưng lại chiếm giữ phần lớn của cải, tư liệu sản xuất, kiểm soát tới ¾ nguồn tài chính, tri thức và các phương tiện thông tin đại chúng chủ yếu và do đó chi phối toàn bộ xã hội. Đây là nguyên nhân sâu xa dẫn đến phong trào “99 chống lại 1” diễn ra ở Mĩ đầu năm 2011 và nhanh chóng lan rộng ở nhiều nước tư bản”.\n(Sách giáo khoa Lịch sử 11, Bộ Chân trời sáng tạo, tr.18 )\nB. Đoạn trích cho thấy tình trạng phân hóa giàu nghèo ở nước Mĩ diễn ra sâu sắc.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "A",
+    "giaithich": "Việc 1% dân số kiểm soát phần lớn của cải là bằng chứng rõ rệt cho thấy tình trạng **phân hóa giàu nghèo** và bất bình đẳng diễn ra sâu sắc."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 4] Đọc đoạn tư liệu sau đây:\n“Một bộ phận rất nhỏ, thậm chí chỉ là 1% dân số nhưng lại chiếm giữ phần lớn của cải, tư liệu sản xuất, kiểm soát tới ¾ nguồn tài chính, tri thức và các phương tiện thông tin đại chúng chủ yếu và do đó chi phối toàn bộ xã hội. Đây là nguyên nhân sâu xa dẫn đến phong trào “99 chống lại 1” diễn ra ở Mĩ đầu năm 2011 và nhanh chóng lan rộng ở nhiều nước tư bản”.\n(Sách giáo khoa Lịch sử 11, Bộ Chân trời sáng tạo, tr.18 )\nC. Đoạn trích phản ánh các mặt tích cực và hạn chế của nước Mĩ nói riêng và chủ nghĩa tư bản hiện đại nói chung.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "B",
+    "giaithich": "Đoạn trích **chủ yếu** tập trung vào sự bất bình đẳng, là một mặt **hạn chế** của CNTB, không đề cập đến mặt tích cực."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Phần II][Câu 4] Đọc đoạn tư liệu sau đây:\n“Một bộ phận rất nhỏ, thậm chí chỉ là 1% dân số nhưng lại chiếm giữ phần lớn của cải, tư liệu sản xuất, kiểm soát tới ¾ nguồn tài chính, tri thức và các phương tiện thông tin đại chúng chủ yếu và do đó chi phối toàn bộ xã hội. Đây là nguyên nhân sâu xa dẫn đến phong trào “99 chống lại 1” diễn ra ở Mĩ đầu năm 2011 và nhanh chóng lan rộng ở nhiều nước tư bản”.\n(Sách giáo khoa Lịch sử 11, Bộ Chân trời sáng tạo, tr.18 )\nD. Đoạn trích thể hiện toàn bộ mâu thuẫn xã hội sâu sắc ở Mĩ hiện nay.",
+    "cac_dap_an": "A.Đúng|B.Sai",
+    "dap_an_dung": "B",
+    "giaithich": "Đoạn trích chỉ đề cập đến mâu thuẫn bất bình đẳng giàu nghèo ('99 chống lại 1'), không thể hiện **toàn bộ** các mâu thuẫn xã hội khác ở Mỹ."
   }
 ]
