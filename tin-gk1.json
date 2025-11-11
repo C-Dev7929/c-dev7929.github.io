@@ -1,247 +1,247 @@
 [
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 1] Hệ điều hành là phần mềm điều khiển toàn bộ hoạt động của máy tính.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 1a]: Hệ điều hành là phần mềm điều khiển toàn bộ hoạt động của máy tính.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Hệ điều hành (HĐH) là phần mềm cốt lõi, chịu trách nhiệm quản lý và điều phối mọi hoạt động của máy tính."
+    "giaithich": "Hệ điều hành là phần mềm hệ thống cốt lõi, có vai trò quản lý tài nguyên phần cứng, phần mềm và điều phối toàn bộ hoạt động của máy tính."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 1] Hệ điều hành không liên quan đến phần cứng máy tính.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 1b]: Hệ điều hành không liên quan đến phần cứng máy tính.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "B",
-    "giaithich": "HĐH là phần mềm trung gian giữa người dùng và phần cứng. Nó phải quản lí và điều phối hoạt động của phần cứng."
+    "giaithich": "Phát biểu này sai. Một trong những chức năng chính của hệ điều hành là quản lý và tương tác trực tiếp với phần cứng máy tính (như CPU, bộ nhớ, thiết bị vào/ra)."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 1] Windows, Linux, macOS đều là hệ điều hành.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 1c]: Windows, Linux, macOS đều là hệ điều hành.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Đây là các hệ điều hành phổ biến trên máy tính cá nhân."
+    "giaithich": "Đây đều là những ví dụ phổ biến về hệ điều hành dành cho máy tính cá nhân và máy chủ."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 1] Hệ điều hành giúp người dùng giao tiếp với máy tính.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 1d]: Hệ điều hành giúp người dùng giao tiếp với máy tính.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "HĐH cung cấp giao diện (CLI hoặc GUI) để người dùng thao tác và trao đổi thông tin với máy tính."
+    "giaithich": "Hệ điều hành cung cấp giao diện người dùng (ví dụ: giao diện đồ họa GUI hoặc dòng lệnh CLI) để người dùng có thể ra lệnh và tương tác với máy tính."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 3] Phần mềm nguồn mở chỉ dùng cho lập trình viên.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 1e]: Phần mềm nguồn mở chỉ dùng cho lập trình viên.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "B",
-    "giaithich": "Bất kỳ ai cũng có thể sử dụng phần mềm nguồn mở, không giới hạn cho lập trình viên."
+    "giaithich": "Phát biểu này sai. Phần mềm nguồn mở được sử dụng rộng rãi bởi cả người dùng cuối (ví dụ: trình duyệt Firefox, bộ văn phòng LibreOffice) và lập trình viên."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 3] Phần mềm chạy trên Internet cho phép cộng tác trực tuyến.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 1f]: Phần mềm chạy trên Internet cho phép cộng tác trực tuyến.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Các phần mềm đám mây (Cloud-based software) được thiết kế để hỗ trợ làm việc và cộng tác trực tuyến."
+    "giaithich": "Đây là một trong những ưu điểm chính của phần mềm đám mây (chạy trên Internet), cho phép nhiều người dùng cùng truy cập và làm việc trên một tài liệu."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 3] Khi dùng phần mềm trực tuyến, cần có kết nối Internet.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 1g]: Khi dùng phần mềm trực tuyến, cần có kết nối Internet.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Bản chất phần mềm trực tuyến chạy trên máy chủ Internet, do đó cần kết nối mạng để truy cập."
+    "giaithich": "Bản chất của 'trực tuyến' (online) là yêu cầu phải có kết nối mạng Internet để truy cập và sử dụng dịch vụ hoặc phần mềm đó."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 3] Phần mềm nguồn mở không thể dùng trong học tập.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 1h]: Phần mềm nguồn mở không thể dùng trong học tập.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "B",
-    "giaithich": "Phần mềm nguồn mở được sử dụng rất phổ biến trong học tập và nghiên cứu."
+    "giaithich": "Phát biểu này sai. Có rất nhiều phần mềm nguồn mở được thiết kế và sử dụng rộng rãi trong giáo dục và học tập (ví dụ: Moodle, LibreOffice) do tính miễn phí và linh hoạt."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Máy tính hoạt động dựa trên tín hiệu logic 0 và 1.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 2a]: Máy tính hoạt động dựa trên tín hiệu logic 0 và 1.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Máy tính là thiết bị điện tử số, hoạt động trên hệ nhị phân (logic 0 và 1)."
+    "giaithich": "Đây là nguyên lý cơ bản của máy tính kỹ thuật số, sử dụng hệ nhị phân (gồm hai trạng thái 0 và 1) để biểu diễn mọi thông tin và lệnh."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Mạch logic được tạo bởi các cổng logic cơ bản.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 2b]: Mạch logic được tạo bởi các cổng logic cơ bản.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Các cổng logic (AND, OR, NOT) là khối xây dựng cơ bản của mạch logic trong máy tính."
+    "giaithich": "Các cổng logic (như AND, OR, NOT) là các đơn vị xây dựng cơ bản, chúng được kết hợp lại với nhau để tạo thành các mạch logic phức tạp hơn."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Có 3 cổng logic cơ bản: AND, OR, NOT.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 2c]: Có 3 cổng logic cơ bản: AND, OR, NOT.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Ba cổng này là nền tảng để xây dựng mọi mạch logic số phức tạp."
+    "giaithich": "AND, OR, và NOT là ba cổng logic nền tảng. Từ ba cổng này có thể xây dựng nên tất cả các cổng và mạch logic khác."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Bảng chân trị mô tả cấu tạo phần cứng của cổng logic.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 2d]: Bảng chân trị mô tả cấu tạo phần cứng của cổng logic.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "B",
-    "giaithich": "Bảng chân trị mô tả **quan hệ logic** (đầu vào và đầu ra), không phải cấu tạo phần cứng."
+    "giaithich": "Phát biểu này sai. Bảng chân trị (Truth Table) mô tả chức năng, tức là mối quan hệ logic giữa đầu vào và đầu ra, chứ không mô tả cấu tạo vật lý (phần cứng)."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Cổng AND cho ra 1 nếu tất cả đầu vào đều là 1.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 2e]: Cổng AND cho ra 1 nếu tất cả đầu vào đều là 1.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Đây là định nghĩa chính xác của cổng AND."
+    "giaithich": "Theo định nghĩa của phép toán AND (phép nhân logic), đầu ra chỉ bằng 1 (Đúng) khi và chỉ khi TẤT CẢ các đầu vào đều bằng 1 (Đúng)."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Cổng OR cho ra 1 nếu tất cả đầu vào là 0.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 2f]: Cổng OR cho ra 1 nếu tất cả đầu vào là 0.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "B",
-    "giaithich": "Cổng OR chỉ cho ra **0** nếu tất cả đầu vào là 0. Nó cho ra 1 nếu có ít nhất một đầu vào là 1."
+    "giaithich": "Phát biểu này sai. Cổng OR (phép cộng logic) cho ra 1 nếu CÓ ÍT NHẤT MỘT đầu vào là 1. Nó chỉ cho ra 0 khi tất cả đầu vào đều là 0."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Cổng NOT dùng để đảo ngược tín hiệu đầu vào.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 2g]: Cổng NOT dùng để đảo ngược tín hiệu đầu vào.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Đây là chức năng của cổng NOT (phủ định)."
+    "giaithich": "Đúng, cổng NOT (phép phủ định) có một đầu vào và một đầu ra. Đầu ra luôn có giá trị logic ngược lại với đầu vào (0 thành 1, và 1 thành 0)."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Cổng NOR cho kết quả ngược với cổng OR.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 2h]: Cổng NOR cho kết quả ngược với cổng OR.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "NOR là viết tắt của NOT OR, tức là kết quả là phủ định (ngược) của cổng OR."
+    "giaithich": "Tên 'NOR' là viết tắt của 'Not OR' (Không OR). Cổng này tương đương với một cổng OR có thêm một cổng NOT ở đầu ra, do đó kết quả luôn ngược với cổng OR."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 5] Thiết bị ngoại vi là các bộ phận nằm trong thùng máy.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 3a]: Thiết bị ngoại vi là các bộ phận nằm trong thùng máy.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "B",
-    "giaithich": "Thiết bị ngoại vi là thiết bị được kết nối **bên ngoài** thùng máy (như chuột, bàn phím)."
+    "giaithich": "Phát biểu này sai. Thiết bị ngoại vi (peripheral) là các thiết bị bên ngoài kết nối với máy tính (ví dụ: chuột, bàn phím, màn hình). Các bộ phận bên trong thùng máy là linh kiện (component)."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 5] Màn hình cảm ứng vừa là thiết bị đầu vào vừa là đầu ra.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 3b]: Màn hình cảm ứng vừa là thiết bị đầu vào vừa là đầu ra.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Màn hình cảm ứng hiển thị thông tin (đầu ra) và nhận lệnh chạm (đầu vào)."
+    "giaithich": "Đúng. Màn hình cảm ứng thực hiện chức năng đầu ra (hiển thị hình ảnh) và cả chức năng đầu vào (nhận tín hiệu chạm từ người dùng)."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 5] Trình điều khiển (driver) giúp máy tính giao tiếp với thiết bị.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 3c]: Trình điều khiển (driver) giúp máy tính giao tiếp với thiết bị.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "A",
-    "giaithich": "Driver là phần mềm giúp HĐH nhận diện và điều khiển thiết bị ngoại vi."
+    "giaithich": "Trình điều khiển (driver) là một phần mềm đặc biệt, đóng vai trò trung gian giúp hệ điều hành 'hiểu' và điều khiển một thiết bị phần cứng cụ thể."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 5] Không thể kết nối điện thoại với máy tính qua cáp USB.",
-    "cac_dap_an": "A.ĐÚNG|B.SAI",
+    "cauhoi": "[Câu 3d]: Không thể kết nối điện thoại với máy tính qua cáp USB.",
+    "cac_dap_an": "A.Đúng|B.Sai",
     "dap_an_dung": "B",
-    "giaithich": "Việc kết nối điện thoại với máy tính qua cáp USB để truyền dữ liệu hoặc sạc là hoàn toàn khả thi."
+    "giaithich": "Phát biểu này sai. Kết nối điện thoại với máy tính qua cáp USB là phương thức rất phổ biến để sạc, truyền dữ liệu và nhiều mục đích khác."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 1] Hệ điều hành là:",
+    "cauhoi": "[Câu 1]: Hệ điều hành là:",
     "cac_dap_an": "A. Phần mềm ứng dụng giúp người dùng soạn thảo văn bản.|B. Phần mềm trung gian giữa người dùng và phần cứng máy tính.|C. Bộ phận phần cứng của máy tính.|D. Phần mềm bảo vệ máy tính khỏi virus.",
     "dap_an_dung": "B",
-    "giaithich": "Hệ điều hành đóng vai trò là cầu nối, quản lý tài nguyên phần cứng và cung cấp giao diện cho người dùng."
+    "giaithich": "Hệ điều hành là phần mềm hệ thống, đóng vai trò là cầu nối trung gian, quản lý phần cứng và cung cấp môi trường cho phần mềm ứng dụng chạy, cho phép người dùng tương tác với máy."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 1] Chức năng chính của hệ điều hành là:",
+    "cauhoi": "[Câu 2]: Chức năng chính của hệ điều hành là:",
     "cac_dap_an": "A. Quản lí và điều phối các hoạt động của máy tính.|B. Cài đặt phần mềm ứng dụng.|C. Tăng tốc độ xử lí của CPU.|D. Thiết kế giao diện đồ họa.",
     "dap_an_dung": "A",
-    "giaithich": "Chức năng cốt lõi và bao quát nhất của HĐH là quản lí và điều phối toàn bộ hoạt động của máy tính, bao gồm quản lí phần cứng, bộ nhớ, và các tiến trình."
+    "giaithich": "Chức năng cốt lõi và tổng quát nhất của hệ điều hành là quản lý mọi tài nguyên (CPU, bộ nhớ, tệp, thiết bị) và điều phối các hoạt động, tác vụ của máy tính."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 1] Hệ điều hành giúp người dùng:",
+    "cauhoi": "[Câu 3]: Hệ điều hành giúp người dùng:",
     "cac_dap_an": "A. Trao đổi thông tin với máy tính.|B. Lắp ráp các linh kiện máy tính.|C. Lưu dữ liệu trên internet.|D. Mở rộng bộ nhớ trong.",
     "dap_an_dung": "A",
-    "giaithich": "HĐH cung cấp giao diện (ví dụ: màn hình, chuột) để người dùng có thể trao đổi thông tin và ra lệnh cho máy tính."
+    "giaithich": "Thông qua giao diện người dùng (GUI hoặc CLI) mà hệ điều hành cung cấp, người dùng có thể ra lệnh, nhập dữ liệu và nhận kết quả, tức là trao đổi thông tin với máy tính."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 1] Chức năng nào sau đây **không phải** là chức năng của hệ điều hành?",
+    "cauhoi": "[Câu 4]: Chức năng nào sau đây không phải là chức năng của hệ điều hành?",
     "cac_dap_an": "A. Quản lí phần cứng.|B. Quản lí bộ nhớ.|C. Quản lí tệp và thiết bị.|D. Soạn thảo văn bản.",
     "dap_an_dung": "D",
-    "giaithich": "Soạn thảo văn bản là chức năng của **phần mềm ứng dụng** (như Microsoft Word, Google Docs), không phải chức năng của hệ điều hành."
+    "giaithich": "Soạn thảo văn bản là chức năng của phần mềm ứng dụng (ví dụ: Notepad, Word). Các mục A, B, C là những chức năng quản lý tài nguyên cơ bản của hệ điều hành."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 1] Trong máy tính, hệ điều hành được nạp vào bộ nhớ khi nào?",
+    "cauhoi": "[Câu 5]: Trong máy tính, hệ điều hành được nạp vào bộ nhớ khi nào ?",
     "cac_dap_an": "A. Khi tắt máy.|B. Khi khởi động máy tính.|C. Khi mở trình duyệt web.|D. Khi cắm USB.",
     "dap_an_dung": "B",
-    "giaithich": "Hệ điều hành được nạp từ bộ nhớ ngoài (ổ cứng) vào bộ nhớ trong (RAM) khi máy tính khởi động. Quá trình này gọi là Booting."
+    "giaithich": "Quá trình khởi động (booting) chính là quá trình nạp nhân của hệ điều hành từ ổ đĩa lưu trữ (như ổ cứng) vào bộ nhớ chính (RAM) để bắt đầu điều khiển máy."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 3] Trong các phần mềm sau, phần mềm nào là hệ điều hành mã nguồn mở?",
+    "cauhoi": "[Câu 6]: Trong các phần mềm sau, phần mềm nào là hệ điều hành mã nguồn mở ?",
     "cac_dap_an": "A. Windows|B. Linux|C. macOS|D. Android",
     "dap_an_dung": "B",
-    "giaithich": "Linux là hệ điều hành mã nguồn mở. Windows và macOS là mã nguồn đóng. Android mặc dù sử dụng nhân Linux nhưng bản phân phối chính thức có thể chứa các thành phần mã nguồn đóng."
+    "giaithich": "Linux là hệ điều hành mã nguồn mở nổi tiếng, được phát triển bởi cộng đồng. Windows và macOS là mã nguồn đóng. Android cũng dựa trên nguồn mở (nhân Linux) nhưng thường đi kèm các thành phần nguồn đóng của Google."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 3] Phần mềm nguồn mở là gì?",
+    "cauhoi": "[Câu 7]: Phần mềm nguồn mở là gì?",
     "cac_dap_an": "A. Phần mềm miễn phí.|B. Phần mềm cho phép người dùng xem, sửa đổi và phân phối lại mã nguồn.|C. Phần mềm chỉ dùng thử.|D. Phần mềm thương mại có bản quyền.",
     "dap_an_dung": "B",
-    "giaithich": "Đặc điểm cốt lõi của phần mềm nguồn mở là quyền truy cập và chỉnh sửa mã nguồn."
+    "giaithich": "Đặc điểm cốt lõi định nghĩa phần mềm nguồn mở (Open Source) là mã nguồn (source code) được công khai và giấy phép đi kèm cho phép người dùng tự do xem, sửa đổi và phân phối lại."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 3] Phần mềm nguồn mở thường có đặc điểm:",
+    "cauhoi": "[Câu 8]: Phần mềm nguồn mở thường có đặc điểm:",
     "cac_dap_an": "A. Có mã nguồn đóng.|B. Người dùng không được phép sửa đổi.|C. Được phát triển cộng tác bởi cộng đồng.|D. Chỉ do một công ty duy nhất phát triển.",
     "dap_an_dung": "C",
-    "giaithich": "Việc công khai mã nguồn giúp khuyến khích sự tham gia của một cộng đồng lớn trong việc phát triển và cải tiến phần mềm."
+    "giaithich": "Một trong những đặc điểm nổi bật và là thế mạnh của phần mềm nguồn mở là sự tham gia phát triển, cải tiến của một cộng đồng lập trình viên rộng lớn trên toàn thế giới."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 3] Phần mềm nguồn mở khác phần mềm mã nguồn đóng ở chỗ:",
+    "cauhoi": "[Câu 9]: Phần mềm nguồn mở khác phần mềm mã nguồn đóng ở chỗ:",
     "cac_dap_an": "A. Có tốc độ xử lí nhanh hơn.|B. Mã nguồn được công khai cho người dùng.|C. Dung lượng nhỏ hơn.|D. Dễ bị virus hơn.",
     "dap_an_dung": "B",
-    "giaithich": "Sự khác biệt cơ bản nhất là mã nguồn được công khai (nguồn mở) hay giữ bí mật (nguồn đóng)."
+    "giaithich": "Điểm khác biệt căn bản nhất là 'nguồn mở' (Open Source) công khai mã nguồn, trong khi 'nguồn đóng' (Closed Source) giữ bí mật mã nguồn."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 3] Phần mềm chạy trên Internet còn gọi là:",
+    "cauhoi": "[Câu 10]: Phần mềm chạy trên Internet còn gọi là:",
     "cac_dap_an": "A. Phần mềm ngoại tuyến.|B. Phần mềm đám mây (Cloud-based software).|C. Phần mềm diệt virus.|D. Phần mềm trò chơi.",
     "dap_an_dung": "B",
-    "giaithich": "Phần mềm đám mây (Cloud-based software) là thuật ngữ chỉ các ứng dụng được lưu trữ và chạy trên máy chủ Internet."
+    "giaithich": "Các phần mềm được vận hành trên máy chủ từ xa và người dùng truy cập qua Internet (thường qua trình duyệt) được gọi chung là phần mềm đám mây."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Bộ phận nào là 'bộ não' của máy tính, thực hiện và điều khiển mọi hoạt động?",
+    "cauhoi": "[Câu 11]: Bộ phận nào là 'bộ não' của máy tính, thực hiện và điều khiển mọi hoạt động?",
     "cac_dap_an": "A. RAM|B. Ổ cứng|C. CPU|D. ROM",
     "dap_an_dung": "C",
-    "giaithich": "CPU (Central Processing Unit) là bộ phận xử lí trung tâm, chịu trách nhiệm thực thi lệnh và điều khiển hệ thống."
+    "giaithich": "CPU (Central Processing Unit - Bộ xử lý trung tâm) là thành phần chịu trách nhiệm thực thi các lệnh và điều khiển hầu hết các hoạt động của máy tính, nên được ví như 'bộ não'."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] CPU gồm những bộ phận chính nào?",
+    "cauhoi": "[Câu 12]: CPU gồm những bộ phận chính nào?",
     "cac_dap_an": "A. ALU và CU|B. RAM và ROM|C. Ổ cứng và bàn phím|D. Chuột và màn hình",
     "dap_an_dung": "A",
-    "giaithich": "CPU được cấu tạo từ Đơn vị Số học và Logic (ALU) và Đơn vị Điều khiển (CU)."
+    "giaithich": "Hai thành phần chính cấu tạo nên CPU là CU (Control Unit - Khối điều khiển) để điều phối hoạt động, và ALU (Arithmetic Logic Unit - Khối số học/logic) để thực hiện các phép toán."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] ALU trong CPU có chức năng gì?",
+    "cauhoi": "[Câu 13]: ALU trong CPU có chức năng gì?",
     "cac_dap_an": "A. Lưu trữ dữ liệu|B. Tính toán và xử lí logic|C. Hiển thị kết quả|D. Kết nối thiết bị",
     "dap_an_dung": "B",
-    "giaithich": "ALU (Arithmetic Logic Unit) có nhiệm vụ thực hiện các phép tính số học và các phép toán logic."
+    "giaithich": "ALU là viết tắt của Arithmetic Logic Unit (Khối số học và logic). Chức năng của nó đúng như tên gọi: thực hiện các phép toán số học (cộng, trừ...) và các phép toán logic (AND, OR, NOT)."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Đơn vị điều khiển (CU) có nhiệm vụ:",
+    "cauhoi": "[Câu 14]: Đơn vị điều khiển (CU) có nhiệm vụ:",
     "cac_dap_an": "A. Lưu dữ liệu|B. Điều khiển hoạt động của CPU và máy tính|C. Tính toán số học|D. Hiển thị dữ liệu",
     "dap_an_dung": "B",
-    "giaithich": "CU (Control Unit) chịu trách nhiệm điều phối và điều khiển hoạt động của tất cả các bộ phận trong CPU và máy tính."
+    "giaithich": "CU (Control Unit - Khối điều khiển) chịu trách nhiệm giải mã các lệnh từ bộ nhớ và điều khiển luồng dữ liệu, điều phối hoạt động của ALU và các thành phần khác."
   },
   {
     "type": "TRAC_NGHIEM",
-    "cauhoi": "[Bài 4] Tốc độ xử lí của CPU được đo bằng:",
+    "cauhoi": "[Câu 15]: Tốc độ xử lí của CPU được đo bằng:",
     "cac_dap_an": "A. GB|B. MB|C. GHz|D. dpi",
     "dap_an_dung": "C",
-    "giaithich": "Tốc độ xử lí của CPU thường được đo bằng tần số xung nhịp, đơn vị là GHz (Gigahertz)."
+    "giaithich": "Tốc độ xử lý (hay tốc độ xung nhịp) của CPU được đo bằng đơn vị tần số là Hertz (Hz), thường là Gigahertz (GHz), cho biết số chu kỳ xử lý mỗi giây. GB và MB là đơn vị đo dung lượng."
   }
 ]
