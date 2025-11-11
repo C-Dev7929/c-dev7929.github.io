@@ -118,5 +118,110 @@
     "cauhoi": "[Bài 5] Không thể kết nối điện thoại với máy tính qua cáp USB.",
     "dap_an": "SAI",
     "giaithich": "Việc kết nối điện thoại với máy tính qua cáp USB để truyền dữ liệu hoặc sạc là hoàn toàn khả thi."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1] Hệ điều hành là:",
+    "cac_dap_an": "A. Phần mềm ứng dụng giúp người dùng soạn thảo văn bản.|B. Phần mềm trung gian giữa người dùng và phần cứng máy tính.|C. Bộ phận phần cứng của máy tính.|D. Phần mềm bảo vệ máy tính khỏi virus.",
+    "dap_an_dung": "B",
+    "giaithich": "Hệ điều hành đóng vai trò là cầu nối, quản lý tài nguyên phần cứng và cung cấp giao diện cho người dùng."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1] Chức năng chính của hệ điều hành là:",
+    "cac_dap_an": "A. Quản lí và điều phối các hoạt động của máy tính.|B. Cài đặt phần mềm ứng dụng.|C. Tăng tốc độ xử lí của CPU.|D. Thiết kế giao diện đồ họa.",
+    "dap_an_dung": "A",
+    "giaithich": "Chức năng cốt lõi và bao quát nhất của HĐH là quản lí và điều phối toàn bộ hoạt động của máy tính, bao gồm quản lí phần cứng, bộ nhớ, và các tiến trình."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1] Hệ điều hành giúp người dùng:",
+    "cac_dap_an": "A. Trao đổi thông tin với máy tính.|B. Lắp ráp các linh kiện máy tính.|C. Lưu dữ liệu trên internet.|D. Mở rộng bộ nhớ trong.",
+    "dap_an_dung": "A",
+    "giaithich": "HĐH cung cấp giao diện (ví dụ: màn hình, chuột) để người dùng có thể trao đổi thông tin và ra lệnh cho máy tính."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1] Chức năng nào sau đây **không phải** là chức năng của hệ điều hành?",
+    "cac_dap_an": "A. Quản lí phần cứng.|B. Quản lí bộ nhớ.|C. Quản lí tệp và thiết bị.|D. Soạn thảo văn bản.",
+    "dap_an_dung": "D",
+    "giaithich": "Soạn thảo văn bản là chức năng của **phần mềm ứng dụng** (như Microsoft Word, Google Docs), không phải chức năng của hệ điều hành."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 1] Trong máy tính, hệ điều hành được nạp vào bộ nhớ khi nào?",
+    "cac_dap_an": "A. Khi tắt máy.|B. Khi khởi động máy tính.|C. Khi mở trình duyệt web.|D. Khi cắm USB.",
+    "dap_an_dung": "B",
+    "giaithich": "Hệ điều hành được nạp từ bộ nhớ ngoài (ổ cứng) vào bộ nhớ trong (RAM) khi máy tính khởi động. Quá trình này gọi là Booting."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 3] Trong các phần mềm sau, phần mềm nào là hệ điều hành mã nguồn mở?",
+    "cac_dap_an": "A. Windows|B. Linux|C. macOS|D. Android",
+    "dap_an_dung": "B",
+    "giaithich": "Linux là hệ điều hành mã nguồn mở. Windows và macOS là mã nguồn đóng. Android mặc dù sử dụng nhân Linux nhưng bản phân phối chính thức có thể chứa các thành phần mã nguồn đóng."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 3] Phần mềm nguồn mở là gì?",
+    "cac_dap_an": "A. Phần mềm miễn phí.|B. Phần mềm cho phép người dùng xem, sửa đổi và phân phối lại mã nguồn.|C. Phần mềm chỉ dùng thử.|D. Phần mềm thương mại có bản quyền.",
+    "dap_an_dung": "B",
+    "giaithich": "Đặc điểm cốt lõi của phần mềm nguồn mở là quyền truy cập và chỉnh sửa mã nguồn."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 3] Phần mềm nguồn mở thường có đặc điểm:",
+    "cac_dap_an": "A. Có mã nguồn đóng.|B. Người dùng không được phép sửa đổi.|C. Được phát triển cộng tác bởi cộng đồng.|D. Chỉ do một công ty duy nhất phát triển.",
+    "dap_an_dung": "C",
+    "giaithich": "Việc công khai mã nguồn giúp khuyến khích sự tham gia của một cộng đồng lớn trong việc phát triển và cải tiến phần mềm."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 3] Phần mềm nguồn mở khác phần mềm mã nguồn đóng ở chỗ:",
+    "cac_dap_an": "A. Có tốc độ xử lí nhanh hơn.|B. Mã nguồn được công khai cho người dùng.|C. Dung lượng nhỏ hơn.|D. Dễ bị virus hơn.",
+    "dap_an_dung": "B",
+    "giaithich": "Sự khác biệt cơ bản nhất là mã nguồn được công khai (nguồn mở) hay giữ bí mật (nguồn đóng)."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 3] Phần mềm chạy trên Internet còn gọi là:",
+    "cac_dap_an": "A. Phần mềm ngoại tuyến.|B. Phần mềm đám mây (Cloud-based software).|C. Phần mềm diệt virus.|D. Phần mềm trò chơi.",
+    "dap_an_dung": "B",
+    "giaithich": "Phần mềm đám mây (Cloud-based software) là thuật ngữ chỉ các ứng dụng được lưu trữ và chạy trên máy chủ Internet."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 4] Bộ phận nào là 'bộ não' của máy tính, thực hiện và điều khiển mọi hoạt động?",
+    "cac_dap_an": "A. RAM|B. Ổ cứng|C. CPU|D. ROM",
+    "dap_an_dung": "C",
+    "giaithich": "CPU (Central Processing Unit) là bộ phận xử lí trung tâm, chịu trách nhiệm thực thi lệnh và điều khiển hệ thống."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 4] CPU gồm những bộ phận chính nào?",
+    "cac_dap_an": "A. ALU và CU|B. RAM và ROM|C. Ổ cứng và bàn phím|D. Chuột và màn hình",
+    "dap_an_dung": "A",
+    "giaithich": "CPU được cấu tạo từ Đơn vị Số học và Logic (ALU) và Đơn vị Điều khiển (CU)."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 4] ALU trong CPU có chức năng gì?",
+    "cac_dap_an": "A. Lưu trữ dữ liệu|B. Tính toán và xử lí logic|C. Hiển thị kết quả|D. Kết nối thiết bị",
+    "dap_an_dung": "B",
+    "giaithich": "ALU (Arithmetic Logic Unit) có nhiệm vụ thực hiện các phép tính số học và các phép toán logic."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 4] Đơn vị điều khiển (CU) có nhiệm vụ:",
+    "cac_dap_an": "A. Lưu dữ liệu|B. Điều khiển hoạt động của CPU và máy tính|C. Tính toán số học|D. Hiển thị dữ liệu",
+    "dap_an_dung": "B",
+    "giaithich": "CU (Control Unit) chịu trách nhiệm điều phối và điều khiển hoạt động của tất cả các bộ phận trong CPU và máy tính."
+  },
+  {
+    "type": "TRAC_NGHIEM",
+    "cauhoi": "[Bài 4] Tốc độ xử lí của CPU được đo bằng:",
+    "cac_dap_an": "A. GB|B. MB|C. GHz|D. dpi",
+    "dap_an_dung": "C",
+    "giaithich": "Tốc độ xử lí của CPU thường được đo bằng tần số xung nhịp, đơn vị là GHz (Gigahertz)."
   }
 ]
