@@ -1,120 +1,120 @@
 [
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 1] Hệ điều hành là phần mềm điều khiển toàn bộ hoạt động của máy tính.",
     "dap_an": "ĐÚNG",
     "giaithich": "Hệ điều hành (HĐH) là phần mềm cốt lõi, chịu trách nhiệm quản lý và điều phối mọi hoạt động của máy tính."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 1] Hệ điều hành không liên quan đến phần cứng máy tính.",
     "dap_an": "SAI",
     "giaithich": "HĐH là phần mềm trung gian giữa người dùng và phần cứng. Nó phải quản lí và điều phối hoạt động của phần cứng."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 1] Windows, Linux, macOS đều là hệ điều hành.",
     "dap_an": "ĐÚNG",
     "giaithich": "Đây là các hệ điều hành phổ biến trên máy tính cá nhân."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 1] Hệ điều hành giúp người dùng giao tiếp với máy tính.",
     "dap_an": "ĐÚNG",
     "giaithich": "HĐH cung cấp giao diện (CLI hoặc GUI) để người dùng thao tác và trao đổi thông tin với máy tính."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 3] Phần mềm nguồn mở chỉ dùng cho lập trình viên.",
     "dap_an": "SAI",
     "giaithich": "Bất kỳ ai cũng có thể sử dụng phần mềm nguồn mở, không giới hạn cho lập trình viên."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 3] Phần mềm chạy trên Internet cho phép cộng tác trực tuyến.",
     "dap_an": "ĐÚNG",
     "giaithich": "Các phần mềm đám mây (Cloud-based software) được thiết kế để hỗ trợ làm việc và cộng tác trực tuyến."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 3] Khi dùng phần mềm trực tuyến, cần có kết nối Internet.",
     "dap_an": "ĐÚNG",
     "giaithich": "Bản chất phần mềm trực tuyến chạy trên máy chủ Internet, do đó cần kết nối mạng để truy cập."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 3] Phần mềm nguồn mở không thể dùng trong học tập.",
     "dap_an": "SAI",
     "giaithich": "Phần mềm nguồn mở được sử dụng rất phổ biến trong học tập và nghiên cứu."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 4] Máy tính hoạt động dựa trên tín hiệu logic 0 và 1.",
     "dap_an": "ĐÚNG",
     "giaithich": "Máy tính là thiết bị điện tử số, hoạt động trên hệ nhị phân (logic 0 và 1)."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 4] Mạch logic được tạo bởi các cổng logic cơ bản.",
     "dap_an": "ĐÚNG",
     "giaithich": "Các cổng logic (AND, OR, NOT) là khối xây dựng cơ bản của mạch logic trong máy tính."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 4] Có 3 cổng logic cơ bản: AND, OR, NOT.",
     "dap_an": "ĐÚNG",
     "giaithich": "Ba cổng này là nền tảng để xây dựng mọi mạch logic số phức tạp."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 4] Bảng chân trị mô tả cấu tạo phần cứng của cổng logic.",
     "dap_an": "SAI",
     "giaithich": "Bảng chân trị mô tả **quan hệ logic** (đầu vào và đầu ra), không phải cấu tạo phần cứng."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 4] Cổng AND cho ra 1 nếu tất cả đầu vào đều là 1.",
     "dap_an": "ĐÚNG",
     "giaithich": "Đây là định nghĩa chính xác của cổng AND."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 4] Cổng OR cho ra 1 nếu tất cả đầu vào là 0.",
     "dap_an": "SAI",
     "giaithich": "Cổng OR chỉ cho ra **0** nếu tất cả đầu vào là 0. Nó cho ra 1 nếu có ít nhất một đầu vào là 1."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 4] Cổng NOT dùng để đảo ngược tín hiệu đầu vào.",
     "dap_an": "ĐÚNG",
     "giaithich": "Đây là chức năng của cổng NOT (phủ định)."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 4] Cổng NOR cho kết quả ngược với cổng OR.",
     "dap_an": "ĐÚNG",
     "giaithich": "NOR là viết tắt của NOT OR, tức là kết quả là phủ định (ngược) của cổng OR."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 5] Thiết bị ngoại vi là các bộ phận nằm trong thùng máy.",
     "dap_an": "SAI",
     "giaithich": "Thiết bị ngoại vi là thiết bị được kết nối **bên ngoài** thùng máy (như chuột, bàn phím)."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 5] Màn hình cảm ứng vừa là thiết bị đầu vào vừa là đầu ra.",
     "dap_an": "ĐÚNG",
     "giaithich": "Màn hình cảm ứng hiển thị thông tin (đầu ra) và nhận lệnh chạm (đầu vào)."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 5] Trình điều khiển (driver) giúp máy tính giao tiếp với thiết bị.",
     "dap_an": "ĐÚNG",
     "giaithich": "Driver là phần mềm giúp HĐH nhận diện và điều khiển thiết bị ngoại vi."
   },
   {
-    "type": "TRAC_NGHIEM_DUNG_SAI",
+    "type": "TRAC_NGHIEM",
     "cauhoi": "[Bài 5] Không thể kết nối điện thoại với máy tính qua cáp USB.",
     "dap_an": "SAI",
     "giaithich": "Việc kết nối điện thoại với máy tính qua cáp USB để truyền dữ liệu hoặc sạc là hoàn toàn khả thi."
