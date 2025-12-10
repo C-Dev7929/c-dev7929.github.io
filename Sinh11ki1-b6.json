@@ -1,0 +1,86 @@
+[
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 1] Hợp chất hữu cơ được sử dụng phổ biến trong hô hấp ở thực vật là",
+        "cac_dap_an": "A. carbohydrate",
+        "dap_an_dung": "A",
+        "giaithich": "Glucose (một loại carbohydrate) là nguyên liệu hô hấp chủ yếu và phổ biến nhất ở thực vật."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 2] Hô hấp ở thực vật diễn ra rất chậm ở giai đoạn",
+        "cac_dap_an": "A. hạt khô",
+        "dap_an_dung": "A",
+        "giaithich": "Ở hạt khô, hàm lượng nước rất thấp, dẫn đến các enzyme hô hấp hoạt động yếu, do đó cường độ hô hấp giảm xuống mức tối thiểu để duy trì sự sống tiềm ẩn."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 5] Trong quá trình hô hấp hiếu khí 1 phân tử glucose, số lượng phân tử ATP được tích lũy trong giai đoạn đường phân là bao nhiêu?",
+        "cac_dap_an": "A. 2",
+        "dap_an_dung": "A",
+        "giaithich": "Giai đoạn đường phân tạo ra 4 ATP nhưng tiêu tốn 2 ATP để hoạt hóa glucose, nên số ATP tích lũy (lãi ròng) là 2."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 6] Trong quá trình lên men 1 phân tử glucose, số lượng phân tử ATP được tích lũy là bao nhiêu?",
+        "cac_dap_an": "A. 2",
+        "dap_an_dung": "A",
+        "giaithich": "Quá trình lên men chỉ bao gồm giai đoạn đường phân (tạo 2 ATP) và giai đoạn lên men (không tạo thêm ATP). Vậy tổng là 2 ATP."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 7] Trong hô hấp hiếu khí 1 phân tử glucose, giai đoạn đường phân diễn ra ở",
+        "cac_dap_an": "A. bào tương",
+        "dap_an_dung": "A",
+        "giaithich": "Đường phân xảy ra trong tế bào chất (bào tương) và không cần oxy."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 9] Trong quá trình hô hấp hiếu khí 1 phân tử glucose, giai đoạn chuỗi truyền electron diễn ra ở",
+        "cac_dap_an": "A. Màng trong ti thể",
+        "dap_an_dung": "A",
+        "giaithich": "Chuỗi chuyền electron hô hấp diễn ra tại màng trong của ti thể, nơi có các enzyme và protein vận chuyển."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 10] Bào quan tham gia thực hiện quá trình hô hấp hiếu khí ở thực vật là",
+        "cac_dap_an": "A. ti thể",
+        "dap_an_dung": "A",
+        "giaithich": "Ti thể được mệnh danh là nhà máy năng lượng của tế bào, nơi diễn ra chu trình Krebs và chuỗi chuyền electron."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 13] Khi nói về quá trình lên men ở thực vật, phát biểu nào sau đây sai?",
+        "cac_dap_an": "B. Hợp chất hữu cơ được tạo ra là lactate, etanol và acetic acid",
+        "dap_an_dung": "B",
+        "giaithich": "Ở thực vật, lên men chủ yếu tạo ra etanol (C2H5OH) hoặc lactate (C3H6O3). Acetic acid (CH3COOH) thường là sản phẩm của vi khuẩn (lên men giấm) hoặc quá trình oxy hóa không hoàn toàn khác, không phải sản phẩm điển hình của lên men kị khí ở thực vật."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 16] Khi nói về ảnh hưởng của các nhân tố môi trường đến quá trình hô hấp hiếu khí ở thực vật, phát biểu nào sau đây sai?",
+        "cac_dap_an": "D. Trong điều kiện thiếu oxy, thực vật tăng cường quá trình hô hấp hiếu khí",
+        "dap_an_dung": "D",
+        "giaithich": "Hô hấp hiếu khí cần có Oxy (O2). Nếu thiếu O2, cây không thể tăng cường hô hấp hiếu khí được mà sẽ chuyển sang phân giải kị khí (lên men)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 19] Loại nông phẩm nào sau đây thường được phơi khô để giảm cường độ hô hấp trong quá trình bảo quản?",
+        "cac_dap_an": "A. Hạt lúa, đậu",
+        "dap_an_dung": "A",
+        "giaithich": "Nguyên lý bảo quản là đưa hạt về trạng thái ngủ nghỉ (giảm hô hấp) bằng cách giảm lượng nước (phơi khô). Các loại rau, quả (B, C, D) chứa nhiều nước, nếu phơi khô sẽ làm biến đổi chất lượng tươi sống hoặc hư hỏng cấu trúc tế bào, thường được bảo quản lạnh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 20] Để tìm hiểu quá trình hô hấp ở thực vật, 1 nhóm học sinh đã bố trí thí nghiệm như hình bên. Nước vôi được sử dụng trong thí nghiệm này nhằm mục đích nào sau đây?",
+        "cac_dap_an": "A. Chứng minh hô hấp ở thực vật thải CO2",
+        "dap_an_dung": "A",
+        "giaithich": "Cơ chế: Hạt nảy mầm hô hấp mạnh, lấy O2 và thải ra khí CO2. Khí CO2 nặng hơn không khí sẽ chảy xuống ống nghiệm chứa nước vôi trong (Ca(OH)2). Hiện tượng: CO2 phản ứng với Ca(OH)2 tạo ra kết tủa CaCO3 làm nước vôi bị vẩn đục. Kết luận: Thí nghiệm chứng minh hô hấp thải khí CO2."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Bài 6][Câu 21] Khi nói về hô hấp hiếu khí của thực vật, có bao nhiêu phát biểu sau đây đúng?",
+        "cac_dap_an": "D. 4",
+        "dap_an_dung": "D",
+        "giaithich": "I. Đúng. Hô hấp hiếu khí bắt buộc phải có O2. II. Đúng. Sản phẩm là ATP (năng lượng hóa học) và nhiệt năng. III. Đúng. O2 đóng vai trò là chất nhận electron cuối cùng trong chuỗi chuyền electron. IV. Đúng. Chu trình Krebs và chuỗi chuyền electron diễn ra ở ti thể."
+    }
+]
