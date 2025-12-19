@@ -1,0 +1,492 @@
+[
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 1] Mục tiêu chính của việc lưu trữ dữ liệu trong các bài toán quản lý là gì?",
+        "cac_dap_an": "A. Để bảo mật dữ liệu.|B. Để phân tích dữ liệu.|C. Để cung cấp thông tin cho các hoạt động quản lý.|D. Để tiết kiệm không gian lưu trữ.",
+        "dap_an_dung": "C",
+        "giaithich": "Mục đích cốt lõi của việc lưu trữ dữ liệu trong quản lý là hỗ trợ ra quyết định và cung cấp thông tin cần thiết cho các hoạt động điều hành."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 2] Tại sao cần phải cập nhật dữ liệu thường xuyên trong các bài toán quản lý?",
+        "cac_dap_an": "A. Để dữ liệu luôn được chính xác và phản ánh đúng tình hình thực tế.|B. Để tăng khả năng bảo mật.|C. Để làm giảm dung lượng dữ liệu lưu trữ.|D. Để tăng tính thẩm mỹ của dữ liệu.",
+        "dap_an_dung": "A",
+        "giaithich": "Dữ liệu cần cập nhật để đảm bảo tính thời sự và chính xác, giúp phản ánh đúng thực trạng phục vụ cho việc quản lý hiệu quả."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 3] Truy xuất dữ liệu là gì?",
+        "cac_dap_an": "A. Là quá trình xóa dữ liệu không còn sử dụng.|B. Là quá trình tìm kiếm, sắp xếp và lọc dữ liệu theo tiêu chí nhất định.|C. Là quá trình sao lưu dữ liệu vào hệ thống đám mây.|D. Là quá trình nhập dữ liệu mới vào hệ thống.",
+        "dap_an_dung": "B",
+        "giaithich": "Truy xuất (khai thác) dữ liệu bao gồm các thao tác tìm kiếm, sắp xếp, lọc và trích xuất thông tin từ dữ liệu đã lưu trữ."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 4] Việc thu thập dữ liệu tự động tại các siêu thị thông qua đầu đọc mã vạch mang lại lợi ích gì?",
+        "cac_dap_an": "A. Giảm thời gian thanh toán và tăng hiệu quả bán hàng.|B. Tăng số lượng hàng hóa được bán ra.|C. Giảm chi phí vận chuyển hàng hóa.|D. Giảm dung lượng lưu trữ dữ liệu.",
+        "dap_an_dung": "A",
+        "giaithich": "Đầu đọc mã vạch giúp nhập dữ liệu nhanh chóng, chính xác, giảm thời gian chờ đợi của khách hàng và tăng hiệu suất làm việc của thu ngân."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 5] Lợi ích chính của việc sử dụng công tơ điện tử trong quản lý tiêu thụ điện là gì?",
+        "cac_dap_an": "A. Giúp giảm bớt nhân viên điện lực.|B. Giảm chi phí sản xuất điện.|C. Cung cấp dữ liệu liên tục giúp phân tích và quản lý hệ thống điện hiệu quả.|D. Tiết kiệm thời gian thu thập dữ liệu bằng tay.",
+        "dap_an_dung": "C",
+        "giaithich": "Công tơ điện tử ghi nhận dữ liệu theo thời gian thực và liên tục, giúp phân tích biểu đồ tiêu thụ và quản lý hệ thống tốt hơn (đáp án D cũng đúng nhưng C bao quát mục tiêu quản lý hơn)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 6] Trong quản lý kết quả học tập của học sinh, dữ liệu nào dưới đây cần được lưu trữ?",
+        "cac_dap_an": "A. Điểm đánh giá thường xuyên và giữa kỳ.|B. Thời gian học sinh đến lớp.|C. Số lượng sách học sinh đã mượn.|D. Thời gian nghỉ của giáo viên.",
+        "dap_an_dung": "A",
+        "giaithich": "Trong bài toán quản lý kết quả học tập (điểm số), dữ liệu cốt lõi cần lưu trữ là các đầu điểm kiểm tra/đánh giá."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 7] Những công việc nào sau đây không phải là khai thác thông tin từ dữ liệu đã có?",
+        "cac_dap_an": "A. Lập bảng xếp hạng học sinh theo điểm số.|B. Thống kê học sinh có kết quả học tập xuất sắc.|C. Nhập điểm mới vào hệ thống.|D. Lọc học sinh đạt từ điểm 8 trở lên.",
+        "dap_an_dung": "C",
+        "giaithich": "Nhập điểm mới là quá trình 'Cập nhật' hoặc 'Thu thập' dữ liệu, không phải là khai thác (truy xuất) dữ liệu đã có."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 8] Trong các hoạt động quản lý, việc nào dưới đây đòi hỏi phải truy xuất dữ liệu phức tạp?",
+        "cac_dap_an": "A. Lập bảng điểm cuối học kỳ cho toàn trường.|B. Xóa dữ liệu học sinh đã ra trường.|C. Sửa tên học sinh trong danh sách.|D. Nhập điểm đánh giá thường xuyên cho học sinh.",
+        "dap_an_dung": "A",
+        "giaithich": "Lập bảng điểm tổng kết đòi hỏi tổng hợp từ nhiều nguồn, tính toán trung bình, xếp loại,... phức tạp hơn so với các thao tác thêm/sửa/xóa đơn thuần."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 9] Trong các hệ thống quản lý truyền thống, thu thập dữ liệu chủ yếu được thực hiện như thế nào?",
+        "cac_dap_an": "A. Thủ công thông qua việc ghi chép tay hoặc nhập dữ liệu trực tiếp.|B. Tự động hóa qua các hệ thống cảm biến.|C. Tự động hóa thông qua các ứng dụng di động.|D. Thu thập qua mạng xã hội.",
+        "dap_an_dung": "A",
+        "giaithich": "Hệ thống truyền thống dựa vào sức người để ghi chép và nhập liệu thủ công."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 10] Trong bối cảnh công nghiệp 4.0, thu thập dữ liệu tự động giúp:",
+        "cac_dap_an": "A. Giảm bớt việc sử dụng lao động thủ công.|B. Tăng khả năng đánh giá và ra quyết định nhờ dữ liệu phong phú.|C. Giảm chi phí đầu tư hệ thống.|D. Tăng tốc độ xử lý dữ liệu.",
+        "dap_an_dung": "B",
+        "giaithich": "Mục tiêu cao nhất của dữ liệu lớn (Big Data) và tự động hóa là cung cấp lượng dữ liệu đủ lớn và kịp thời để hỗ trợ ra quyết định chính xác (A và D là hệ quả, B là mục đích quản lý)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 11] Cơ sở dữ liệu (CSDL) là gì?",
+        "cac_dap_an": "A. Một tập hợp các bảng tính trong Excel.|B. Một tập hợp các tệp văn bản trong máy tính.|C. Một tập hợp dữ liệu có liên quan, được lưu trữ có tổ chức trên máy tính.|D. Một bộ sưu tập hình ảnh và video.",
+        "dap_an_dung": "C",
+        "giaithich": "Định nghĩa chuẩn của CSDL là tập hợp các dữ liệu có liên quan với nhau, được lưu trữ một cách có tổ chức trên hệ thống máy tính."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 12] Tính chất nào sau đây là tính chất quan trọng của CSDL?",
+        "cac_dap_an": "A. Tính dư thừa dữ liệu.|B. Tính toàn vẹn dữ liệu.|C. Tính phụ thuộc phần mềm.|D. Tính lưu trữ trên giấy.",
+        "dap_an_dung": "B",
+        "giaithich": "Tính toàn vẹn (Integrity) đảm bảo dữ liệu chính xác, nhất quán và tuân thủ các quy tắc thực tế."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 13] Khi thiết kế CSDL, việc đảm bảo tính không dư thừa có nghĩa là:",
+        "cac_dap_an": "A. Giảm thiểu số lượng người dùng truy cập dữ liệu.|B. Hạn chế việc lưu trữ các dữ liệu lặp lại.|C. Tăng cường sự phụ thuộc vào phần mềm.|D. Lưu trữ tất cả dữ liệu ở cùng một nơi.",
+        "dap_an_dung": "B",
+        "giaithich": "Không dư thừa (hay giảm dư thừa) nghĩa là tránh lưu trữ cùng một thông tin ở nhiều nơi, giúp tiết kiệm dung lượng và tránh sai lệch dữ liệu."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 14] Hệ thống nào dưới đây thường sử dụng CSDL để quản lý dữ liệu?",
+        "cac_dap_an": "A. Quản lý hồ sơ khách hàng của ngân hàng.|B. Viết nhật ký cá nhân.|C. Lưu trữ tài liệu văn bản trên ổ đĩa cứng.|D. Tạo bảng tính đơn giản trong Excel.",
+        "dap_an_dung": "A",
+        "giaithich": "Ngân hàng có lượng dữ liệu lớn, phức tạp, cần bảo mật và truy xuất đồng thời, nên bắt buộc sử dụng hệ QTCSDL."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 15] Tính độc lập dữ liệu trong CSDL là gì?",
+        "cac_dap_an": "A. Khả năng phần mềm không cần cập nhật khi thay đổi dữ liệu (cấu trúc).|B. Khả năng dữ liệu không phụ thuộc vào bất kỳ phần mềm nào.|C. Dữ liệu có thể được lưu trữ trên nhiều hệ thống khác nhau.|D. Dữ liệu chỉ có thể được truy cập từ một chương trình duy nhất.",
+        "dap_an_dung": "A",
+        "giaithich": "Tính độc lập dữ liệu (gồm độc lập vật lý và logic) giúp việc thay đổi cấu trúc lưu trữ hoặc tổ chức dữ liệu không làm ảnh hưởng đến các ứng dụng đang sử dụng nó."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 16] Đâu là ví dụ về CSDL trong thực tế?",
+        "cac_dap_an": "A. Một tập hợp các video được lưu trữ trên ổ cứng.|B. Hệ thống quản lý điểm số của học sinh trong trường.|C. Một bảng tính Excel chứa danh sách hàng hóa.|D. Một tài liệu văn bản được lưu trên máy tính.",
+        "dap_an_dung": "B",
+        "giaithich": "Hệ thống quản lý điểm là một ứng dụng CSDL điển hình với các bảng dữ liệu liên kết (học sinh, môn học, điểm số)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 17] Trong CSDL, tính bảo mật có nghĩa là:",
+        "cac_dap_an": "A. Chỉ có một người được phép xem dữ liệu.|B. Mọi người đều có quyền truy cập dữ liệu.|C. Dữ liệu được bảo vệ khỏi truy cập trái phép và sửa đổi không hợp lệ.|D. Dữ liệu không bao giờ được thay đổi.",
+        "dap_an_dung": "C",
+        "giaithich": "Bảo mật là ngăn chặn các truy cập không được phép và đảm bảo dữ liệu không bị phá hoại hoặc rò rỉ."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 18] Cơ sở dữ liệu nào sau đây cần đảm bảo tính nhất quán dữ liệu cao?",
+        "cac_dap_an": "A. Hệ thống quản lý thư viện.|B. Ứng dụng lịch cá nhân.|C. Quản lý điểm thi của học sinh.|D. Tài khoản ngân hàng trực tuyến.",
+        "dap_an_dung": "D",
+        "giaithich": "Giao dịch ngân hàng liên quan đến tiền tệ, đòi hỏi tính nhất quán tuyệt đối (ví dụ: chuyển tiền thì bên A trừ, bên B phải cộng ngay lập tức)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 19] Khi cập nhật CSDL, đảm bảo tính toàn vẹn dữ liệu có nghĩa là:",
+        "cac_dap_an": "A. Các giá trị dữ liệu phải tuân theo các quy tắc nhất định.|B. Dữ liệu không bao giờ được thay đổi.|C. Chỉ một người có thể thay đổi dữ liệu cùng một lúc.|D. Không cho phép người dùng truy cập dữ liệu cùng lúc.",
+        "dap_an_dung": "A",
+        "giaithich": "Tính toàn vẹn thể hiện qua các ràng buộc (constraints), ví dụ: điểm số phải từ 0-10, tuổi không được âm."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 20] Trong CSDL, khi có sự cố trong quá trình cập nhật dữ liệu, tính nhất quán đảm bảo rằng:",
+        "cac_dap_an": "A. Dữ liệu vẫn được cập nhật đúng cách, ngay cả khi có sự cố (hoặc quay về trạng thái ban đầu).|B. Dữ liệu bị xóa nếu gặp sự cố.|C. Phần mềm sẽ tự động khôi phục dữ liệu.|D. Người dùng phải cập nhật lại toàn bộ dữ liệu từ đầu.",
+        "dap_an_dung": "A",
+        "giaithich": "Cơ chế giao dịch (transaction) đảm bảo 'All or Nothing': nếu lỗi xảy ra, hệ thống sẽ rollback (quay lui) để dữ liệu không bị sai lệch."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 21] Chức năng nào sau đây thuộc nhóm chức năng định nghĩa dữ liệu của hệ QTCSDL?",
+        "cac_dap_an": "A. Khai báo cơ sở dữ liệu với tên gọi xác định.|B. Thêm, sửa, xóa dữ liệu trong bảng.|C. Sao lưu và khôi phục dữ liệu.|D. Truy xuất dữ liệu theo tiêu chí khác nhau.",
+        "dap_an_dung": "A",
+        "giaithich": "Định nghĩa dữ liệu (DDL) bao gồm việc tạo lập CSDL, tạo bảng, khai báo cấu trúc."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 22] Hệ QTCSDL hỗ trợ người dùng truy xuất dữ liệu bằng cách nào?",
+        "cac_dap_an": "A. Cung cấp giao diện lập trình ứng dụng cho người dùng cuối.|B. Thực hiện truy vấn theo các tiêu chí khác nhau.|C. Cài đặt ràng buộc toàn vẹn dữ liệu.|D. Thực hiện sao lưu dữ liệu.",
+        "dap_an_dung": "B",
+        "giaithich": "Hệ QTCSDL cung cấp ngôn ngữ truy vấn (như SQL) để tìm kiếm và lấy dữ liệu theo yêu cầu."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 23] Trong hệ cơ sở dữ liệu tập trung, dữ liệu được lưu trữ ở đâu?",
+        "cac_dap_an": "A. Trên nhiều máy tính ở các địa điểm khác nhau.|B. Trên một máy tính duy nhất.|C. Trên nhiều máy chủ ở các quốc gia khác nhau.|D. Trên các máy trạm và máy chủ riêng biệt.",
+        "dap_an_dung": "B",
+        "giaithich": "Đặc trưng của hệ CSDL tập trung là toàn bộ dữ liệu nằm trên một hệ thống máy tính trung tâm."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 24] Ưu điểm của hệ cơ sở dữ liệu phân tán là gì?",
+        "cac_dap_an": "A. Khó khăn trong việc đảm bảo tính nhất quán và bảo mật dữ liệu.|B. Chi phí duy trì thấp.|C. Tính sẵn sàng và độ tin cậy cao hơn.|D. Không cần bổ sung thêm trạm dữ liệu khi mở rộng.",
+        "dap_an_dung": "C",
+        "giaithich": "Nếu một trạm gặp sự cố, các trạm khác vẫn hoạt động, giúp hệ thống có tính sẵn sàng cao."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 25] Chức năng sao lưu dự phòng của hệ QTCSDL nhằm mục đích gì?",
+        "cac_dap_an": "A. Giảm thiểu chi phí lưu trữ.|B. Đảm bảo dữ liệu không bị mất mát trong trường hợp sự cố.|C. Tăng tốc độ truy xuất dữ liệu.|D. Hỗ trợ người dùng thao tác dữ liệu dễ dàng hơn.",
+        "dap_an_dung": "B",
+        "giaithich": "Sao lưu (Backup) là để phục hồi (Restore) lại dữ liệu khi hệ thống gặp lỗi phần cứng, phần mềm hoặc bị tấn công."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 26] Hệ cơ sở dữ liệu tập trung có nhược điểm nào sau đây?",
+        "cac_dap_an": "A. Khó khăn trong việc mở rộng khi cần thêm máy trạm.|B. Chi phí bảo trì thấp.|C. Dễ dàng đảm bảo tính nhất quán của dữ liệu.|D. Tăng tính bảo mật dữ liệu.",
+        "dap_an_dung": "A",
+        "giaithich": "Hệ tập trung thường gặp nút thắt cổ chai khi lượng truy cập quá lớn và khó mở rộng quy mô hơn so với hệ phân tán."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 27] Trong hệ cơ sở dữ liệu phân tán, dữ liệu được lưu trữ như thế nào?",
+        "cac_dap_an": "A. Tập trung trên một máy tính duy nhất.|B. Phân tán trên nhiều máy tính ở các trạm khác nhau.|C. Được sao lưu duy nhất trên một máy chủ tập.|D. Lưu trên máy tính cục bộ và không có sự phân tán.",
+        "dap_an_dung": "B",
+        "giaithich": "Dữ liệu được chia nhỏ và lưu trữ rải rác trên các trạm (node) khác nhau trong mạng."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 28] Chức năng nào sau đây là của phần mềm ứng dụng cơ sở dữ liệu?",
+        "cac_dap_an": "A. Quản lý toàn bộ cơ sở dữ liệu.|B. Tương tác với hệ QTCSDL để khai thác dữ liệu.|C. Tạo lập cơ sở dữ liệu mới.|D. Sao lưu và bảo mật dữ liệu.",
+        "dap_an_dung": "B",
+        "giaithich": "Phần mềm ứng dụng đóng vai trò giao diện, gửi yêu cầu đến hệ QTCSDL để lấy dữ liệu hiển thị cho người dùng."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 29] Khái niệm cơ sở dữ liệu quan hệ là gì?",
+        "cac_dap_an": "A. CSDL lưu trữ dữ liệu dưới dạng tệp tin.|B. CSDL tổ chức dữ liệu theo dạng bảng.|C. CSDL không có quan hệ giữa các bảng.|D. CSDL chỉ có thể lưu trữ văn bản.",
+        "dap_an_dung": "B",
+        "giaithich": "Mô hình quan hệ tổ chức dữ liệu thành các bảng (Table) gồm hàng và cột."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 30] Khoá chính trong một bảng là gì?",
+        "cac_dap_an": "A. Trường không bao giờ có giá trị trùng lặp.|B. Trường chứa thông tin về mối quan hệ giữa các bảng.|C. Trường có thể chứa giá trị trùng lặp.|D. Trường chỉ được sử dụng để lưu trữ văn bản.",
+        "dap_an_dung": "A",
+        "giaithich": "Khóa chính (Primary Key) dùng để xác định duy nhất mỗi bản ghi, do đó không được phép trùng lặp và không được rỗng."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 31] Khái niệm khoá ngoài là gì?",
+        "cac_dap_an": "A. Trường trong bảng xác định duy nhất bản ghi.|B. Trường trong bảng kết nối với khoá chính của bảng khác.|C. Trường chỉ lưu trữ dữ liệu văn bản.|D. Trường không có giá trị.",
+        "dap_an_dung": "B",
+        "giaithich": "Khóa ngoài (Foreign Key) là trường tham chiếu đến khóa chính của bảng khác để tạo mối liên kết."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 32] Liên kết dữ liệu trong cơ sở dữ liệu quan hệ là gì?",
+        "cac_dap_an": "A. Việc lưu trữ dữ liệu trong một bảng.|B. Việc gộp nhiều bảng dữ liệu thành một bảng duy nhất.|C. Việc sử dụng khoá ngoài để kết nối dữ liệu từ hai bảng khác nhau.|D. Việc xóa dữ liệu trong bảng.",
+        "dap_an_dung": "C",
+        "giaithich": "Liên kết được thực hiện thông qua cặp Khóa chính - Khóa ngoài."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 33] Mỗi hàng trong một bảng được gọi là gì?",
+        "cac_dap_an": "A. Trường (field).|B. Bản ghi (record).|C. Khoá (key).|D. Dữ liệu (data).",
+        "dap_an_dung": "B",
+        "giaithich": "Hàng (Row) trong CSDL quan hệ được gọi là Bản ghi (Record) hoặc Bộ (Tuple)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 34] Kiểu dữ liệu của trường nào không cho phép nhập số?",
+        "cac_dap_an": "A. Trường số nguyên (integer).|B. Trường số thập phân (decimal).|C. Trường văn bản (string).|D. Trường ngày tháng (date).",
+        "dap_an_dung": "C",
+        "giaithich": "Câu hỏi hơi trừu tượng vì String có thể chứa ký tự số (ví dụ '123'), nhưng về mặt bản chất kiểu dữ liệu, String là chuỗi ký tự, không phải kiểu số để tính toán. Tuy nhiên, nếu hiểu chặt chẽ thì 'không cho phép nhập số' là không chính xác hoàn toàn. Trong ngữ cảnh so sánh các kiểu dữ liệu, C là kiểu phi số học nhất."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 35] Tại sao cần phải có khoá chính trong một bảng?",
+        "cac_dap_an": "A. Để lưu trữ thông tin về mối quan hệ giữa các bảng.|B. Để xác định duy nhất mỗi bản ghi trong bảng.|C. Để tránh việc lưu trữ dữ liệu trùng lặp.|D. Để tiết kiệm dung lượng lưu trữ.",
+        "dap_an_dung": "B",
+        "giaithich": "Mục đích chính của khóa chính là định danh (identify) duy nhất cho từng dòng dữ liệu."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 36] Khi nào nên sử dụng khoá ngoài?",
+        "cac_dap_an": "A. Khi cần phân biệt giữa các bản ghi trong cùng một bảng.|B. Khi cần kết nối thông tin giữa hai bảng khác nhau.|C. Khi cần lưu trữ dữ liệu văn bản.|D. Khi cần lưu trữ dữ liệu số.",
+        "dap_an_dung": "B",
+        "giaithich": "Khóa ngoài dùng để tham chiếu và liên kết dữ liệu giữa các bảng."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 37] Tại sao nên sử dụng nhiều bảng trong cơ sở dữ liệu thay vì chỉ sử dụng một bảng lớn?",
+        "cac_dap_an": "A. Để tiết kiệm thời gian.|B. Để dễ dàng sửa đổi và bảo trì dữ liệu (giảm dư thừa).|C. Để giảm chi phí lưu trữ.|D. Để tránh việc mất dữ liệu.",
+        "dap_an_dung": "B",
+        "giaithich": "Phân chia thành nhiều bảng (chuẩn hóa dữ liệu) giúp giảm dư thừa, tránh dị thường thông tin và dễ dàng cập nhật."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 38] Một bảng có thể có bao nhiêu khoá chính?",
+        "cac_dap_an": "A. Nhiều hơn một khoá chính.|B. Chỉ một khoá chính.|C. Không có khoá chính.|D. Tối đa hai khoá chính.",
+        "dap_an_dung": "B",
+        "giaithich": "Mỗi bảng chỉ có duy nhất 01 khóa chính (dù khóa chính đó có thể được tạo thành từ nhiều trường/cột gọi là khóa phức hợp)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 39] Câu truy vấn nào dưới đây được sử dụng để tạo một bảng mới trong SQL?",
+        "cac_dap_an": "A. CREATE TABLE|B. INSERT INTO|C. UPDATE TABLE|D. DELETE TABLE",
+        "dap_an_dung": "A",
+        "giaithich": "CREATE TABLE là lệnh thuộc nhóm DDL dùng để tạo bảng mới."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 40] Câu lệnh SQL nào được sử dụng để thêm dữ liệu vào một bảng?",
+        "cac_dap_an": "A. CREATE TABLE|B. INSERT INTO|C. SELECT FROM|D. DELETE FROM",
+        "dap_an_dung": "B",
+        "giaithich": "INSERT INTO là lệnh dùng để chèn bản ghi mới vào bảng."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 41] Câu truy vấn nào sau đây dùng để truy xuất tất cả các dòng trong bảng với một điều kiện cụ thể?",
+        "cac_dap_an": "A. SELECT * FROM bảng WHERE điều kiện|B. SELECT * FROM bảng|C. DELETE FROM bảng WHERE điều kiện|D. UPDATE bảng SET cột = giá trị WHERE điều kiện",
+        "dap_an_dung": "A",
+        "giaithich": "SELECT * lấy tất cả cột, mệnh đề WHERE dùng để lọc dòng theo điều kiện."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 42] Câu lệnh SQL nào sau đây được sử dụng để xóa các dòng dữ liệu trong bảng?",
+        "cac_dap_an": "A. DELETE FROM bảng|B. UPDATE bảng SET cột = giá trị|C. DROP TABLE bảng|D. TRUNCATE TABLE bảng",
+        "dap_an_dung": "A",
+        "giaithich": "DELETE FROM dùng để xóa dòng dữ liệu (DROP dùng xóa bảng, TRUNCATE xóa sạch dữ liệu nhưng là lệnh DDL)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 43] Câu lệnh SQL nào sau đây được sử dụng để sắp xếp kết quả của truy vấn theo thứ tự tăng dần hoặc giảm dần?",
+        "cac_dap_an": "A. ORDER BY|B. GROUP BY|C. HAVING|D. WHERE",
+        "dap_an_dung": "A",
+        "giaithich": "ORDER BY dùng để sắp xếp kết quả (ASC hoặc DESC)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 44] Để liên kết hai bảng trong SQL, chúng ta sử dụng câu lệnh nào?",
+        "cac_dap_an": "A. JOIN|B. GROUP BY|C. UNION|D. WHERE",
+        "dap_an_dung": "A",
+        "giaithich": "Mệnh đề JOIN (INNER JOIN, LEFT JOIN...) dùng để kết hợp dữ liệu từ nhiều bảng dựa trên điều kiện liên kết."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 45] Câu lệnh SQL nào sau đây được sử dụng để tính tổng giá trị của một cột trong bảng?",
+        "cac_dap_an": "A. SUM()|B. AVG()|C. COUNT()|D. MAX()",
+        "dap_an_dung": "A",
+        "giaithich": "Hàm SUM() dùng để tính tổng."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần I][Câu 46] Trong SQL, lệnh GRANT được sử dụng để làm gì?",
+        "cac_dap_an": "A. Cấp quyền truy cập cho người dùng|B. Thu hồi quyền truy cập của người dùng|C. Tạo mới bảng|D. Xóa bảng",
+        "dap_an_dung": "A",
+        "giaithich": "GRANT là lệnh thuộc nhóm DCL (Data Control Language) dùng để cấp quyền."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 1][Ý a] Nhận định về chức năng của hệ QTCSDL: Cung cấp công cụ tạo lập cơ sở dữ liệu.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Hệ QTCSDL cung cấp ngôn ngữ định nghĩa dữ liệu (DDL) để tạo lập CSDL."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 1][Ý b] Nhận định về chức năng của hệ QTCSDL: Hỗ trợ truy vấn dữ liệu từ cơ sở dữ liệu.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Hệ QTCSDL cung cấp ngôn ngữ thao tác dữ liệu (như SQL) để truy vấn."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 1][Ý c] Nhận định về chức năng của hệ QTCSDL: Bảo đảm an toàn và bảo mật cho dữ liệu.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Đây là chức năng quan trọng để ngăn chặn truy cập trái phép."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 1][Ý d] Nhận định về chức năng của hệ QTCSDL: Xử lý toàn bộ các yêu cầu của người dùng mà không cần lập trình ứng dụng.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "Hệ QTCSDL chỉ quản lý dữ liệu; để xử lý nghiệp vụ phức tạp và giao diện người dùng cần có phần mềm ứng dụng."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 2][Ý a] So sánh hệ CSDL phân tán với tập trung: Tính nhất quán và bảo mật dữ liệu tốt hơn.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "Hệ phân tán khó đảm bảo tính nhất quán và bảo mật hơn do dữ liệu rải rác nhiều nơi."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 2][Ý b] So sánh hệ CSDL phân tán với tập trung: Dễ dàng mở rộng hệ thống mà không ảnh hưởng đến hoạt động.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Đây là ưu điểm lớn của hệ phân tán (Scalability)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 2][Ý c] So sánh hệ CSDL phân tán với tập trung: Chi phí bảo trì và duy trì thấp hơn.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "Hệ phân tán phức tạp hơn nên chi phí thiết kế và bảo trì thường cao hơn."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 2][Ý d] So sánh hệ CSDL phân tán với tập trung: Việc triển khai và thiết kế đơn giản hơn.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "Thiết kế hệ phân tán phức tạp hơn nhiều so với tập trung."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 3][Ý a] Vai trò của khoá chính: Xác định duy nhất một bản ghi trong bảng.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Đây là định nghĩa và vai trò cốt lõi của khóa chính."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 3][Ý b] Vai trò của khoá chính: Tạo ra quan hệ giữa các bảng.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "Việc tạo quan hệ do Khóa Ngoại (Foreign Key) thực hiện (tham chiếu đến khóa chính)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 3][Ý c] Vai trò của khoá chính: Lưu trữ dữ liệu của các đối tượng.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "Cả bản ghi (record) mới là nơi lưu trữ dữ liệu đối tượng, khóa chính chỉ là thuộc tính định danh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 3][Ý d] Vai trò của khoá chính: Hạn chế sự trùng lặp của dữ liệu.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Do tính chất Unique (duy nhất), khóa chính ngăn chặn việc nhập trùng lặp các bản ghi."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 4][Ý a] Thành phần SQL tạo bảng: DML (Data Manipulation Language).",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "DML dùng để xử lý dữ liệu (INSERT, UPDATE, DELETE)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 4][Ý b] Thành phần SQL tạo bảng: DDL (Data Definition Language).",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "DDL chứa các lệnh định nghĩa cấu trúc như CREATE, DROP, ALTER."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 4][Ý c] Thành phần SQL tạo bảng: DCL (Data Control Language).",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "DCL dùng để cấp quyền (GRANT, REVOKE)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 4][Ý d] Thành phần SQL tạo bảng: TCL (Transaction Control Language).",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "TCL dùng để điều khiển giao dịch (COMMIT, ROLLBACK)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 5][Ý a] Lý do cần CSDL: CSDL cho phép lưu trữ dữ liệu trên giấy một cách khoa học.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "CSDL là lưu trữ trên máy tính, không phải trên giấy."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 5][Ý b] Lý do cần CSDL: CSDL giúp giảm trùng lặp và đảm bảo tính nhất quán của dữ liệu.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Đây là mục tiêu chính của CSDL."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 5][Ý c] Lý do cần CSDL: CSDL chỉ cần thiết khi có nhiều máy tính tham gia khai thác dữ liệu.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "Ngay cả trên một máy tính đơn lẻ, CSDL cũng cần thiết để quản lý lượng dữ liệu lớn và phức tạp."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 5][Ý d] Lý do cần CSDL: CSDL là phương tiện lưu trữ dữ liệu lớn, giúp khai thác dữ liệu hiệu quả hơn.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "CSDL cung cấp khả năng lưu trữ lớn và công cụ truy xuất nhanh chóng."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 6][Ý a] Tính độc lập dữ liệu: Dữ liệu trong CSDL không phụ thuộc vào phần mềm ứng dụng.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Đây là ý nghĩa của tính độc lập dữ liệu."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 6][Ý b] Tính độc lập dữ liệu: Mọi người dùng đều có thể sửa đổi dữ liệu trong CSDL mà không cần phần mềm.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "B",
+        "giaithich": "Người dùng vẫn cần công cụ hoặc phần mềm để tương tác, và phải có quyền hạn."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 6][Ý c] Tính độc lập dữ liệu: Việc thay đổi cấu trúc dữ liệu không ảnh hưởng đến các mô đun phần mềm đã phát triển.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Đây là tính độc lập logic."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Phần II][Câu 6][Ý d] Tính độc lập dữ liệu: CSDL cho phép người dùng truy cập và cập nhật dữ liệu mà không cần biết cách tổ chức dữ liệu.",
+        "cac_dap_an": "A. Đúng|B. Sai",
+        "dap_an_dung": "A",
+        "giaithich": "Người dùng thao tác ở mức quan niệm/khung nhìn mà không cần quan tâm dữ liệu lưu trữ vật lý ra sao."
+    }
+]
