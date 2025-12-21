@@ -3,127 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No title</title>
+    <title>Admin đẹp trai</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <style>
-        /* --- CẤU HÌNH MÀU SẮC (CSS VARIABLES) --- */
+        /* --- 1. CẤU HÌNH MÀU SẮC (Variables) --- */
         :root {
-            --bg-color: #f4f7f6;       /* Màu nền chế độ sáng */
-            --text-color: #333333;     /* Màu chữ chế độ sáng */
-            --container-bg: #ffffff;   /* Màu nền khung quiz sáng */
-            --shadow-color: rgba(0,0,0,0.1);
-            --btn-bg: #007bff;
-            --btn-text: #ffffff;
+            /* Màu Sáng (Light Mode) */
+            --bg-color: #f0f2f5;
+            --text-color: #333;
+            --container-bg: #ffffff;
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            
+            /* Màu Nút */
+            --btn-bg: #ffffff;
+            --btn-border: #ddd;
+            --btn-hover: #eef2ff;
+            --primary-color: #007bff; /* Màu chủ đạo (xanh) */
+            --primary-text: #fff;
         }
 
-        /* Class dành cho Dark Mode */
+        /* Màu Tối (Dark Mode) */
         body.dark-mode {
-            --bg-color: #18191a;       /* Màu nền chế độ tối */
-            --text-color: #e4e6eb;     /* Màu chữ chế độ tối */
-            --container-bg: #242526;   /* Màu nền khung quiz tối */
-            --shadow-color: rgba(0,0,0,0.5);
-            --btn-bg: #4e4f50;         /* Màu nút khi tối */
+            --bg-color: #18191a;
+            --text-color: #e4e6eb;
+            --container-bg: #242526;
+            --shadow: 0 4px 12px rgba(0,0,0,0.5);
+            
+            /* Màu Nút khi tối */
+            --btn-bg: #242526;
+            --btn-border: #3e4042;
+            --btn-hover: #3a3b3c;
         }
 
-        /* --- CSS CHUNG --- */
+        /* --- 2. CSS CƠ BẢN --- */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
-            transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            position: relative; /* Để định vị nút */
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* --- STYLE CHO NÚT DARK MODE --- */
+        /* Khung chứa Quiz */
+        #quiz-container {
+            background-color: var(--container-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 { margin-bottom: 25px; font-size: 24px; }
+
+        /* --- 3. CSS CHO NÚT DARK MODE (Góc phải) --- */
         #theme-toggle {
             position: absolute;
             top: 20px;
             right: 20px;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 20px;
-            background-color: var(--container-bg);
+            background: var(--container-bg);
+            border: 1px solid var(--btn-border);
             color: var(--text-color);
+            padding: 8px 12px;
+            border-radius: 20px;
             cursor: pointer;
-            box-shadow: 0 2px 5px var(--shadow-color);
-            font-size: 1.2rem;
+            font-size: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             transition: transform 0.2s;
-            z-index: 1000;
+            z-index: 10;
         }
+        #theme-toggle:hover { transform: scale(1.1); }
 
-        #theme-toggle:hover {
-            transform: scale(1.1);
-        }
-
-        /* --- STYLE CHO KHUNG QUIZ (CƠ BẢN) --- */
-        #quiz-container {
-            background-color: var(--container-bg);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px var(--shadow-color);
-            max-width: 600px;
-            width: 90%;
-            text-align: center;
-        }
-
-        h1 { margin-bottom: 20px; }
+        /* --- 4. CSS QUAN TRỌNG: CÁC NÚT CÂU TRẢ LỜI & ĐIỀU HƯỚNG --- */
         
-        #result-area { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px; }
+        /* Khu vực chứa các nút trả lời */
+        #answer-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Style chung cho nút (Trả lời + Next) */
+        button.btn {
+            background-color: var(--btn-bg);
+            color: var(--text-color);
+            border: 2px solid var(--btn-border);
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none;
+            width: 100%; /* Nút trả lời rộng full */
+            text-align: left;
+        }
+
+        /* Hiệu ứng khi di chuột vào nút */
+        button.btn:hover:not([disabled]) {
+            background-color: var(--btn-hover);
+            border-color: var(--primary-color);
+        }
+
+        /* Style riêng cho nút 'Next' hoặc 'Start' (Nút điều hướng) */
+        #next-btn, #start-btn {
+            background-color: var(--primary-color);
+            color: var(--primary-text);
+            border: none;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            width: auto; /* Nút next nhỏ gọn hơn */
+            min-width: 150px;
+            display: inline-block;
+        }
+
+        #next-btn:hover {
+            opacity: 0.9;
+            background-color: var(--primary-color); /* Giữ màu xanh */
+        }
+
+        /* Style cho trạng thái Đúng/Sai (JS sẽ thêm class này) */
+        button.correct {
+            background-color: #d4edda !important;
+            border-color: #28a745 !important;
+            color: #155724 !important;
+        }
+        button.wrong {
+            background-color: #f8d7da !important;
+            border-color: #dc3545 !important;
+            color: #721c24 !important;
+        }
+        
+        /* Dark mode cho đúng sai */
+        body.dark-mode button.correct {
+            background-color: #1e4620 !important;
+            color: #d4edda !important;
+        }
+        body.dark-mode button.wrong {
+            background-color: #4c1d1f !important;
+            color: #f8d7da !important;
+        }
+
     </style>
 </head>
 <body>
 
-    <button id="theme-toggle" title="Chuyển đổi Sáng/Tối">🌙</button>
+    <button id="theme-toggle" title="Đổi giao diện">🌙</button>
 
     <div id="quiz-container">
         <h1>💡 Bài Trắc Nghiệm Kiến Thức</h1>
         
         <div id="question-area">
-            <p>Đang tải dữ liệu...</p> 
-            <p><i>(Nội dung câu hỏi sẽ hiển thị ở đây)</i></p>
+            <h2 id="question">Đang tải câu hỏi...</h2>
+            
+            <div id="answer-buttons" class="btn-grid">
+                </div>
         </div>
         
+        <button id="next-btn" class="btn" style="display: none;">Câu Tiếp Theo</button>
+
         <div id="result-area" style="display:none;">
             <h2>🎉 Kết Quả Của Bạn</h2>
-            <p id="time-taken">⏱️</p>
             <p id="score">0/0</p>
-        </div>
-        
-        <div id="explanation-area">
+            <button class="btn" onclick="location.reload()">Chơi Lại</button>
         </div>
     </div>
 
     <script>
-        // Lấy thẻ button và thẻ body
         const toggleBtn = document.getElementById('theme-toggle');
         const body = document.body;
-
-        // Kiểm tra xem người dùng đã từng chọn chế độ nào chưa (lưu trong LocalStorage)
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'dark') {
+        
+        // Khôi phục trạng thái cũ nếu có
+        if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
-            toggleBtn.textContent = '☀️'; // Đổi icon thành mặt trời
+            toggleBtn.textContent = '☀️';
         }
 
-        // Sự kiện khi click vào nút
-        toggleBtn.addEventListener('click', function() {
+        toggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-
-            // Kiểm tra xem đang ở chế độ nào để đổi icon và lưu lại
-            if (body.classList.contains('dark-mode')) {
-                toggleBtn.textContent = '☀️';
-                localStorage.setItem('theme', 'dark'); // Lưu lại lựa chọn
-            } else {
-                toggleBtn.textContent = '🌙';
-                localStorage.setItem('theme', 'light'); // Lưu lại lựa chọn
-            }
+            const isDark = body.classList.contains('dark-mode');
+            toggleBtn.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
         });
     </script>
 
