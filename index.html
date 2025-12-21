@@ -5,197 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin đẹp trai</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
     <style>
-        /* --- 1. CẤU HÌNH MÀU SẮC (Variables) --- */
-        :root {
-            /* Màu Sáng (Light Mode) */
-            --bg-color: #f0f2f5;
-            --text-color: #333;
-            --container-bg: #ffffff;
-            --shadow: 0 4px 12px rgba(0,0,0,0.1);
-            
-            /* Màu Nút */
-            --btn-bg: #ffffff;
-            --btn-border: #ddd;
-            --btn-hover: #eef2ff;
-            --primary-color: #007bff; /* Màu chủ đạo (xanh) */
-            --primary-text: #fff;
-        }
-
-        /* Màu Tối (Dark Mode) */
-        body.dark-mode {
-            --bg-color: #18191a;
-            --text-color: #e4e6eb;
-            --container-bg: #242526;
-            --shadow: 0 4px 12px rgba(0,0,0,0.5);
-            
-            /* Màu Nút khi tối */
-            --btn-bg: #242526;
-            --btn-border: #3e4042;
-            --btn-hover: #3a3b3c;
-        }
-
-        /* --- 2. CSS CƠ BẢN --- */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Khung chứa Quiz */
         #quiz-container {
-            background-color: var(--container-bg);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
             max-width: 600px;
-            width: 90%;
-            text-align: center;
-            position: relative;
+            width: 100%;
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
 
-        h1 { margin-bottom: 25px; font-size: 24px; }
-
-        /* --- 3. CSS CHO NÚT DARK MODE (Góc phải) --- */
-        #theme-toggle {
+        /* --- CSS Nút Dark Mode --- */
+        .theme-btn {
             position: absolute;
             top: 20px;
             right: 20px;
-            background: var(--container-bg);
-            border: 1px solid var(--btn-border);
-            color: var(--text-color);
-            padding: 8px 12px;
-            border-radius: 20px;
+            background: transparent;
+            border: 2px solid #333;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
             cursor: pointer;
-            font-size: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-            z-index: 10;
-        }
-        #theme-toggle:hover { transform: scale(1.1); }
-
-        /* --- 4. CSS QUAN TRỌNG: CÁC NÚT CÂU TRẢ LỜI & ĐIỀU HƯỚNG --- */
-        
-        /* Khu vực chứa các nút trả lời */
-        #answer-buttons {
+            font-size: 1.2rem;
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
         }
 
-        /* Style chung cho nút (Trả lời + Next) */
-        button.btn {
-            background-color: var(--btn-bg);
-            color: var(--text-color);
-            border: 2px solid var(--btn-border);
-            border-radius: 8px;
-            padding: 12px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            outline: none;
-            width: 100%; /* Nút trả lời rộng full */
-            text-align: left;
+        .theme-btn:hover {
+            transform: scale(1.1);
         }
 
-        /* Hiệu ứng khi di chuột vào nút */
-        button.btn:hover:not([disabled]) {
-            background-color: var(--btn-hover);
-            border-color: var(--primary-color);
+        /* --- Giao diện Dark Mode --- */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f1f1f1;
         }
 
-        /* Style riêng cho nút 'Next' hoặc 'Start' (Nút điều hướng) */
-        #next-btn, #start-btn {
-            background-color: var(--primary-color);
-            color: var(--primary-text);
-            border: none;
-            text-align: center;
-            font-weight: bold;
-            margin-top: 20px;
-            width: auto; /* Nút next nhỏ gọn hơn */
-            min-width: 150px;
-            display: inline-block;
+        body.dark-mode #quiz-container {
+            background-color: #2c2c2c;
+            box-shadow: 0 0 15px rgba(255,255,255,0.05);
         }
 
-        #next-btn:hover {
-            opacity: 0.9;
-            background-color: var(--primary-color); /* Giữ màu xanh */
+        body.dark-mode .theme-btn {
+            border-color: #f1f1f1;
+            color: #f1f1f1;
+            background-color: rgba(255,255,255,0.1);
         }
-
-        /* Style cho trạng thái Đúng/Sai (JS sẽ thêm class này) */
-        button.correct {
-            background-color: #d4edda !important;
-            border-color: #28a745 !important;
-            color: #155724 !important;
-        }
-        button.wrong {
-            background-color: #f8d7da !important;
-            border-color: #dc3545 !important;
-            color: #721c24 !important;
-        }
-        
-        /* Dark mode cho đúng sai */
-        body.dark-mode button.correct {
-            background-color: #1e4620 !important;
-            color: #d4edda !important;
-        }
-        body.dark-mode button.wrong {
-            background-color: #4c1d1f !important;
-            color: #f8d7da !important;
-        }
-
     </style>
 </head>
 <body>
 
-    <button id="theme-toggle" title="Đổi giao diện">🌙</button>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
 
     <div id="quiz-container">
         <h1>💡 Bài Trắc Nghiệm Kiến Thức</h1>
         
         <div id="question-area">
-            <h2 id="question">Đang tải câu hỏi...</h2>
-            
-            <div id="answer-buttons" class="btn-grid">
-                </div>
+            <p>Đang tải dữ liệu...</p>
         </div>
         
-        <button id="next-btn" class="btn" style="display: none;">Câu Tiếp Theo</button>
-
         <div id="result-area" style="display:none;">
             <h2>🎉 Kết Quả Của Bạn</h2>
+            <p id="time-taken">⏱️</p>
             <p id="score">0/0</p>
-            <button class="btn" onclick="location.reload()">Chơi Lại</button>
+        </div>
+        
+        <div id="explanation-area">
         </div>
     </div>
 
     <script>
+        // Xử lý Dark Mode
         const toggleBtn = document.getElementById('theme-toggle');
         const body = document.body;
-        
-        // Khôi phục trạng thái cũ nếu có
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.add('dark-mode');
-            toggleBtn.textContent = '☀️';
-        }
 
         toggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-            const isDark = body.classList.contains('dark-mode');
-            toggleBtn.textContent = isDark ? '☀️' : '🌙';
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            if (body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '☀️';
+            } else {
+                toggleBtn.textContent = '🌙';
+            }
         });
     </script>
-
+    
     <script src="script.js"></script>
 </body>
 </html>
