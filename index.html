@@ -3,23 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin đẹp trai</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <title>No title</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* Áp dụng font Roboto nếu đã liên kết */
+        /* --- CẤU HÌNH MÀU SẮC (CSS VARIABLES) --- */
+        :root {
+            --bg-color: #f4f7f6;       /* Màu nền chế độ sáng */
+            --text-color: #333333;     /* Màu chữ chế độ sáng */
+            --container-bg: #ffffff;   /* Màu nền khung quiz sáng */
+            --shadow-color: rgba(0,0,0,0.1);
+            --btn-bg: #007bff;
+            --btn-text: #ffffff;
+        }
+
+        /* Class dành cho Dark Mode */
+        body.dark-mode {
+            --bg-color: #18191a;       /* Màu nền chế độ tối */
+            --text-color: #e4e6eb;     /* Màu chữ chế độ tối */
+            --container-bg: #242526;   /* Màu nền khung quiz tối */
+            --shadow-color: rgba(0,0,0,0.5);
+            --btn-bg: #4e4f50;         /* Màu nút khi tối */
+        }
+
+        /* --- CSS CHUNG --- */
         body {
             font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng chuyển màu mượt mà */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative; /* Để định vị nút */
         }
+
+        /* --- STYLE CHO NÚT DARK MODE --- */
+        #theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: var(--container-bg);
+            color: var(--text-color);
+            cursor: pointer;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+            z-index: 1000;
+        }
+
+        #theme-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- STYLE CHO KHUNG QUIZ (CƠ BẢN) --- */
+        #quiz-container {
+            background-color: var(--container-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+
+        h1 { margin-bottom: 20px; }
+        
+        #result-area { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 10px; }
     </style>
 </head>
 <body>
+
+    <button id="theme-toggle" title="Chuyển đổi Sáng/Tối">🌙</button>
+
     <div id="quiz-container">
         <h1>💡 Bài Trắc Nghiệm Kiến Thức</h1>
         
         <div id="question-area">
-            <p>Đang tải dữ liệu...</p>
+            <p>Đang tải dữ liệu...</p> 
+            <p><i>(Nội dung câu hỏi sẽ hiển thị ở đây)</i></p>
         </div>
         
         <div id="result-area" style="display:none;">
@@ -29,8 +97,35 @@
         </div>
         
         <div id="explanation-area">
-            </div>
+        </div>
     </div>
+
+    <script>
+        // Lấy thẻ button và thẻ body
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Kiểm tra xem người dùng đã từng chọn chế độ nào chưa (lưu trong LocalStorage)
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            toggleBtn.textContent = '☀️'; // Đổi icon thành mặt trời
+        }
+
+        // Sự kiện khi click vào nút
+        toggleBtn.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+
+            // Kiểm tra xem đang ở chế độ nào để đổi icon và lưu lại
+            if (body.classList.contains('dark-mode')) {
+                toggleBtn.textContent = '☀️';
+                localStorage.setItem('theme', 'dark'); // Lưu lại lựa chọn
+            } else {
+                toggleBtn.textContent = '🌙';
+                localStorage.setItem('theme', 'light'); // Lưu lại lựa chọn
+            }
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
