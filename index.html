@@ -3,67 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin đẹp trai</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Trắc Nghiệm Lịch Sử - Admin Đẹp Trai</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <style>
+        /* --- CẤU HÌNH GIAO DIỆN --- */
+        :root {
+            --primary: #4f46e5;       /* Màu tím xanh */
+            --primary-hover: #4338ca;
+            --bg-light: #f3f4f6;
+            --card-light: #ffffff;
+            --text-light: #1f2937;
+            
+            --bg-dark: #111827;
+            --card-dark: #1f2937;
+            --text-dark: #f9fafb;
+            
+            --correct: #10b981;       /* Xanh lá */
+            --wrong: #ef4444;         /* Đỏ */
+        }
+
+        * { box-sizing: border-box; }
+
         body {
             font-family: 'Roboto', sans-serif;
-            transition: background-color 0.3s, color 0.3s;
             margin: 0;
             padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: all 0.3s ease;
         }
 
         #quiz-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            max-width: 600px;
+            background-color: var(--card-light);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 700px;
             width: 100%;
-            transition: background-color 0.3s, box-shadow 0.3s;
+            position: relative;
         }
 
-        /* --- CSS Nút Dark Mode --- */
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- NÚT DARK MODE --- */
         .theme-btn {
             position: absolute;
             top: 20px;
             right: 20px;
             background: transparent;
-            border: 2px solid #333;
+            border: 2px solid currentColor;
             border-radius: 50%;
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             cursor: pointer;
-            font-size: 1.2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            transition: 0.3s;
+        }
+        .theme-btn:hover { transform: rotate(15deg) scale(1.1); }
+
+        /* --- CÂU HỎI --- */
+        #question-area {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
 
-        .theme-btn:hover {
-            transform: scale(1.1);
+        /* --- CÁC NÚT ĐÁP ÁN --- */
+        .btn-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        /* --- Giao diện Dark Mode --- */
+        .answer-btn {
+            padding: 15px 20px;
+            background-color: var(--card-light);
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            color: inherit;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .answer-btn:hover:not([disabled]) {
+            border-color: var(--primary);
+            background-color: #eef2ff;
+            transform: translateY(-2px);
+        }
+
+        /* Màu sắc khi đúng/sai */
+        .answer-btn.correct {
+            background-color: #d1fae5 !important;
+            border-color: var(--correct) !important;
+            color: #065f46 !important;
+        }
+        .answer-btn.wrong {
+            background-color: #fee2e2 !important;
+            border-color: var(--wrong) !important;
+            color: #991b1b !important;
+        }
+
+        /* --- GIẢI THÍCH --- */
+        #explanation-area {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff7ed;
+            border-left: 4px solid #f97316;
+            border-radius: 6px;
+            color: #9a3412;
+            display: none;
+            line-height: 1.5;
+            animation: fadeIn 0.5s;
+        }
+
+        /* --- NÚT NEXT --- */
+        #next-btn {
+            display: none;
+            width: 100%;
+            padding: 14px;
+            margin-top: 20px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+            transition: 0.3s;
+        }
+        #next-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* --- KẾT QUẢ --- */
+        #result-area {
+            text-align: center;
+            display: none;
+        }
+
+        /* --- DARK MODE --- */
         body.dark-mode {
-            background-color: #121212;
-            color: #f1f1f1;
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
         }
-
         body.dark-mode #quiz-container {
-            background-color: #2c2c2c;
-            box-shadow: 0 0 15px rgba(255,255,255,0.05);
+            background-color: var(--card-dark);
+        }
+        body.dark-mode .theme-btn { color: var(--text-dark); }
+        body.dark-mode .answer-btn {
+            background-color: #374151;
+            border-color: #4b5563;
+        }
+        body.dark-mode .answer-btn:hover:not([disabled]) {
+            background-color: #4b5563;
+            border-color: var(--primary);
+        }
+        body.dark-mode #explanation-area {
+            background-color: #431407;
+            color: #ffedd5;
         }
 
-        body.dark-mode .theme-btn {
-            border-color: #f1f1f1;
-            color: #f1f1f1;
-            background-color: rgba(255,255,255,0.1);
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -72,38 +195,183 @@
     <button id="theme-toggle" class="theme-btn">🌙</button>
 
     <div id="quiz-container">
-        <h1>💡 Bài Trắc Nghiệm Kiến Thức</h1>
+        <h1>📜 Lịch Sử & Xã Hội</h1>
         
-        <div id="question-area">
-            <p>Đang tải dữ liệu...</p>
-        </div>
+        <div id="question-area">Đang tải dữ liệu...</div>
         
-        <div id="result-area" style="display:none;">
-            <h2>🎉 Kết Quả Của Bạn</h2>
-            <p id="time-taken">⏱️</p>
-            <p id="score">0/0</p>
-        </div>
+        <div id="answer-buttons" class="btn-grid"></div>
         
         <div id="explanation-area">
+            <strong>💡 Giải thích:</strong> <span id="explanation-text"></span>
+        </div>
+
+        <button id="next-btn">Câu tiếp theo ➜</button>
+        
+        <div id="result-area">
+            <h2>🎉 Hoàn Thành!</h2>
+            <p>Bạn đã trả lời đúng:</p>
+            <p id="final-score" style="font-size: 2rem; font-weight: bold; color: var(--primary);">0/0</p>
+            <button class="answer-btn" style="text-align: center; margin-top: 15px;" onclick="location.reload()">Làm lại bài</button>
         </div>
     </div>
 
     <script>
-        // Xử lý Dark Mode
+        // --- 1. DARK MODE ---
         const toggleBtn = document.getElementById('theme-toggle');
         const body = document.body;
-
         toggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
-            
-            if (body.classList.contains('dark-mode')) {
-                toggleBtn.textContent = '☀️';
+            toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+
+        // --- 2. BIẾN TOÀN CỤC ---
+        const questionArea = document.getElementById('question-area');
+        const answerButtons = document.getElementById('answer-buttons');
+        const nextButton = document.getElementById('next-btn');
+        const explanationArea = document.getElementById('explanation-area');
+        const explanationText = document.getElementById('explanation-text');
+        const resultArea = document.getElementById('result-area');
+        const finalScore = document.getElementById('final-score');
+        const titleElement = document.querySelector('h1');
+
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        // --- 3. TẢI DỮ LIỆU ---
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const fileName = urlParams.get('file');
+
+            if (!fileName) {
+                console.log("Không tìm thấy tham số file, thử tải mặc định text.json");
+                fetchData('text.json'); 
             } else {
-                toggleBtn.textContent = '🌙';
+                fetchData(fileName);
             }
         });
+
+        async function fetchData(url) {
+            try {
+                questionArea.innerText = "Đang tải câu hỏi...";
+                const response = await fetch(url);
+                if (!response.ok) throw new Error("Không thể đọc file data.");
+                
+                const data = await response.json();
+                
+                if (Array.isArray(data) && data.length > 0) {
+                    questions = data;
+                    startQuiz();
+                } else {
+                    questionArea.innerText = "File dữ liệu rỗng!";
+                }
+            } catch (error) {
+                console.error(error);
+                questionArea.innerHTML = `<span style="color:var(--wrong)">Lỗi: ${error.message}<br>Hãy chạy trên Localhost (Live Server)!</span>`;
+            }
+        }
+
+        // --- 4. LOGIC QUIZ ---
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            nextButton.style.display = 'none';
+            resultArea.style.display = 'none';
+            titleElement.innerText = "Trắc Nghiệm Kiến Thức"; 
+            showQuestion();
+        }
+
+        function showQuestion() {
+            resetState();
+            let currentQ = questions[currentQuestionIndex];
+            
+            // Hiển thị câu hỏi
+            questionArea.innerText = currentQ.cauhoi;
+
+            // Xử lý đáp án (Tách chuỗi bằng dấu |)
+            if (currentQ.cac_dap_an) {
+                const answers = currentQ.cac_dap_an.split('|'); 
+                
+                answers.forEach((ansText, index) => {
+                    const button = document.createElement('button');
+                    button.innerText = ansText;
+                    button.classList.add('answer-btn');
+                    
+                    // Xác định đáp án đúng
+                    const mapChar = ['A', 'B', 'C', 'D', 'E', 'F'];
+                    const correctChar = currentQ.dap_an_dung.trim().toUpperCase();
+                    
+                    if (mapChar[index] === correctChar) {
+                        button.dataset.correct = "true";
+                    }
+                    
+                    button.addEventListener('click', selectAnswer);
+                    answerButtons.appendChild(button);
+                });
+            }
+        }
+
+        function resetState() {
+            nextButton.style.display = 'none';
+            explanationArea.style.display = 'none';
+            while (answerButtons.firstChild) {
+                answerButtons.removeChild(answerButtons.firstChild);
+            }
+        }
+
+        function selectAnswer(e) {
+            const selectedBtn = e.target;
+            const isCorrect = selectedBtn.dataset.correct === "true";
+            
+            if (isCorrect) {
+                selectedBtn.classList.add('correct');
+                score++;
+            } else {
+                selectedBtn.classList.add('wrong');
+            }
+
+            // Hiện đáp án đúng và khóa tất cả nút
+            Array.from(answerButtons.children).forEach(button => {
+                if (button.dataset.correct === "true") {
+                    button.classList.add('correct');
+                }
+                button.disabled = true;
+                button.style.cursor = "default";
+            });
+
+            // --- XỬ LÝ GIẢI THÍCH & TỰ ĐỘNG CUỘN ---
+            const currentQ = questions[currentQuestionIndex];
+            if (currentQ.giaithich) {
+                // Format in đậm
+                let formattedExplanation = currentQ.giaithich.replace(/\*\*(.*?)\*\*/g, '<b>$1</b>');
+                explanationText.innerHTML = formattedExplanation;
+                explanationArea.style.display = 'block';
+
+                // !!! MỚI: Lệnh tự động cuộn xuống phần giải thích !!!
+                // behavior: 'smooth' -> cuộn mượt
+                // block: 'center' -> đưa phần giải thích vào giữa màn hình
+                explanationArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            nextButton.style.display = 'block';
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                showQuestion();
+            } else {
+                showScore();
+            }
+        });
+
+        function showScore() {
+            resetState();
+            questionArea.innerText = "Đã hết câu hỏi!";
+            titleElement.innerText = "Kết Quả";
+            resultArea.style.display = 'block';
+            finalScore.innerText = `${score} / ${questions.length}`;
+        }
     </script>
-    
-    <script src="script.js"></script>
 </body>
 </html>
