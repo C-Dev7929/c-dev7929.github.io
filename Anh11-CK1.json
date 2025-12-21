@@ -1,0 +1,135 @@
+[
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 1] Hi Alex,\na. Secondly, animals rely on plants either directly or indirectly for energy within ecosystems.\nb. In conclusion, these interactions ensure ecological systems remain balanced and sustainable.\nc. Ecological systems explain how living organisms interact with their surrounding physical environment.\nd. Firstly, plants produce energy through photosynthesis and form the base of most ecosystems.\ne. Moreover, decomposers recycle nutrients back into the soil and water.",
+        "cac_dap_an": "A. c - d - a - e - b|B. c - a - d - e - b|C. c - d - a - b - e|D. c - d - b - a - e",
+        "dap_an_dung": "A",
+        "giaithich": "Trật tự hợp lý: Câu chủ đề (c) giới thiệu hệ sinh thái -> Ý thứ nhất (d) về thực vật -> Ý thứ hai (a) về động vật -> Ý bổ sung (e) về sinh vật phân hủy -> Kết luận (b). Đáp án trong ảnh được khoanh là A."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 2] Hi Emma,\na. In addition, forests help regulate climate by absorbing large amounts of carbon dioxide.\nb. Forest ecosystems play a vital role in maintaining environmental balance worldwide.\nc. Finally, protecting forests is essential for long-term ecological sustainability.\nd. Firstly, forests provide habitats for numerous plant and animal species.\ne. Secondly, they prevent soil erosion and protect important water resources.",
+        "cac_dap_an": "A. b - a - d - c - e|B. b - d - a - c - e|C. c - a - d - e - b|D. b - d - c - a - e",
+        "dap_an_dung": "B",
+        "giaithich": "Theo đáp án được khoanh trong ảnh là B. Tuy nhiên về mặt logic, thứ tự hợp lý thường là Intro (b) -> Firstly (d) -> Secondly (e) -> In addition (a) -> Finally (c). Đáp án B có trật tự là b-d-a-c-e."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 3] Hello Tom,\na. Secondly, wetlands naturally filter pollutants and improve water quality.\nb. Furthermore, they reduce flooding by absorbing excess rainwater during heavy storms.\nc. Wetlands are highly productive ecological systems supporting diverse forms of life.\nd. Firstly, wetlands provide habitats for many species of birds, fish, and plants.\ne. To sum up, wetlands should be protected from human destruction.",
+        "cac_dap_an": "A. b - d - a - e - c|B. b - d - e - a - c|C. d - b - a - e - c|D. b - a - d - e - c",
+        "dap_an_dung": "B",
+        "giaithich": "Theo đáp án được khoanh trong ảnh là B. (Lưu ý: Logic thông thường sẽ bắt đầu bằng câu định nghĩa c, tiếp theo là d -> a -> b -> e, nhưng không có đáp án nào bắt đầu bằng c trong danh sách lựa chọn của ảnh)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 4] Hi Lucy,\na. Moreover, these ecosystems support fishing industries and coastal communities.\nb. Marine ecosystems cover most of the Earth's surface and support ocean biodiversity.\nc. Secondly, coral reefs provide shelter and food for numerous marine species.\nd. In conclusion, marine ecosystems require urgent protection from human activities.\ne. Firstly, marine ecosystems help regulate the global climate system.",
+        "cac_dap_an": "A. b - e - c - a - d|B. b - c - e - a - d|C. b - c - e - a - d|D. b - e - a - c - d",
+        "dap_an_dung": "A",
+        "giaithich": "Trật tự hợp lý: Câu chủ đề (b) -> Ý 1 (e) Firstly -> Ý 2 (c) Secondly -> Ý thêm (a) Moreover -> Kết luận (d). Đáp án A phù hợp và được khoanh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 5] Dear Jack,\na. Secondly, consumers obtain energy by feeding on plants or other animals.\nb. In addition, decomposers break down dead organisms and recycle nutrients efficiently.\nc. Every ecosystem consists of producers, consumers, and decomposers interacting together.\nd. Finally, these processes allow ecosystems to function continuously over time.\ne. Firstly, producers such as plants create food using energy from sunlight.",
+        "cac_dap_an": "A. c - e - a - b - d|B. c - a - e - b - d|C. e - c - a - b - d|D. c - e - b - a - d",
+        "dap_an_dung": "A",
+        "giaithich": "Trật tự hợp lý: Câu chủ đề (c) -> Firstly (e) -> Secondly (a) -> In addition (b) -> Finally (d). Đáp án A trùng khớp và được khoanh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 6] Hi Sarah,\na. Secondly, this pollution harms wildlife, plant growth, and human health seriously.\nb. In conclusion, reducing pollution is necessary to protect ecological systems.\nc. Human activities have significantly affected ecological systems across the planet.\nd. Firstly, industrial pollution contaminates air, water, and soil in many regions.\ne. Furthermore, damaged ecosystems become less stable and productive.",
+        "cac_dap_an": "A. c - d - a - e - b|B. d - c - a - e - b|C. c - a - d - e - b|D. c - d - e - a - b",
+        "dap_an_dung": "A",
+        "giaithich": "Trật tự hợp lý: Câu chủ đề (c) -> Firstly (d) -> Secondly (a) -> Furthermore (e) -> In conclusion (b). Đáp án A trùng khớp và được khoanh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 7] Hello Ben,\na. Secondly, animals depend on plants directly or indirectly for energy.\nb. Moreover, decomposers break down dead organisms and return nutrients to ecosystems.\nc. Food chains illustrate how energy flows through an ecological system.\nd. To sum up, food chains connect all living organisms within ecosystems.\ne. Firstly, plants form the base of food chains as primary producers.",
+        "cac_dap_an": "A. c - e - a - b - d|B. e - c - a - b - d|C. c - a - e - b - d|D. c - e - b - a - d",
+        "dap_an_dung": "B",
+        "giaithich": "Đáp án A bị gạch chéo, đáp án B được khoanh tròn trong ảnh. Dù về logic câu c nên mở đầu, nhưng theo yêu cầu chọn đáp án được khoanh, đáp án là B."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 9] Dear Lisa,\na. Secondly, sustainable practices help reduce damage to ecological systems.\nb. Sustainable development aims to balance economic growth with environmental protection.\nc. Moreover, healthy ecosystems provide essential services for human survival.\nd. Firstly, it encourages responsible use of natural resources.\ne. To sum up, sustainability ensures long-term ecological health.",
+        "cac_dap_an": "A. c - b - e - a - d|B. b - c - e - a - d|C. c - e - b - a - d|D. c - b - a - e - d",
+        "dap_an_dung": "A",
+        "giaithich": "Đáp án A được khoanh trong ảnh (có dấu gạch chéo ở B). Lưu ý: Logic thông thường nên bắt đầu bằng b -> d -> a -> c -> e, nhưng A là đáp án được chọn trong ảnh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 10] Hi Peter,\na. Furthermore, controlled human activities help reduce environmental damage significantly.\nb. Secondly, human activities are strictly controlled within these protected areas.\nc. National parks are important for conserving ecological systems and biodiversity.\nd. In conclusion, national parks play a vital role in conservation efforts.\ne. Firstly, they protect natural habitats for endangered plant and animal species.",
+        "cac_dap_an": "A. b - d - a - c - e|B. d - b - a - c - e|C. b - a - d - c - e|D. d - b - d - c - a - e",
+        "dap_an_dung": "A",
+        "giaithich": "Đáp án A được khoanh tròn trong ảnh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 11] Dear ...\na. Moreover, local communities should be involved in protection efforts, as their traditions and livelihoods are closely connected to heritage sites.\nb. Preserving world heritage sites is essential for maintaining cultural identity and passing historical values on to future generations.\nc. Firstly, they protect natural habitats for endangered plant and animal species. (Lưu ý: nội dung câu c có vẻ thuộc bài khác hoặc in nhầm trong đề, nhưng xét theo ngữ cảnh bảo tồn di sản).\nd. In conclusion, national parks play a vital role... (Có vẻ đề bị trộn lẫn nội dung).\ne. To sum up, combined efforts from authorities, communities, and global organizations are necessary to preserve world heritage sites effectively.",
+        "cac_dap_an": "A. c - e - b - a - d|B. c - b - a - d|D. c - e - a - b - d",
+        "dap_an_dung": "A",
+        "giaithich": "Đáp án A được khoanh tròn trong ảnh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 12] Hi Alex,\na. In addition, educating young people about heritage values can raise awareness and encourage responsible behavior when visiting historic locations.\nb. Preserving world heritage sites plays a vital role in protecting human history and promoting mutual understanding among different cultures.\nc. Finally, strict laws and regulations are required to control harmful activities such as illegal construction or vandalism.\nd. Moreover, sustainable tourism helps balance economic benefits with long-term conservation of heritage sites.\ne. In conclusion, education, legal protection, and sustainable tourism together ensure the survival of world heritage sites.",
+        "cac_dap_an": "A. b - c - d - a - e|B. b - a - d - c - e|C. b - c - d - a - e|D. b - a - d - c - e",
+        "dap_an_dung": "B",
+        "giaithich": "Trật tự hợp lý: Intro (b) -> In addition (a) -> Moreover (d) -> Finally (c) -> Conclusion (e). Đáp án B trùng khớp và được khoanh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 13]\na. Finally, raising international funds can help poorer countries protect valuable heritage sites facing serious environmental threats.\nb. Preserving world heritage sites is important because they represent outstanding achievements of human creativity and historical development.\nc. Moreover, modern technology allows experts to monitor damage and plan effective restoration strategies.\nd. In addition, community participation ensures that conservation efforts respect local customs and traditional lifestyles.\ne. To sum up, financial support, technology, and community involvement are all essential for successful heritage preservation.",
+        "cac_dap_an": "A. b - a - d - c - e|B. b - d - a - c - e|C. b - a - c - d - e|D. b - d - c - a - e",
+        "dap_an_dung": "A",
+        "giaithich": "Đáp án A được khoanh tròn trong ảnh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 14]\na. Moreover, climate change has increased risks to heritage sites, making preservation efforts more urgent than ever before.\nb. Preserving world heritage sites helps future generations understand their roots and appreciate the diversity of human civilization.\nc. In addition, careful planning can reduce the negative impact of mass tourism on fragile historical structures.\nd. Finally, cooperation between scientists and governments improves long-term protection strategies.\ne. In conclusion, awareness, planning, and cooperation are key factors in preserving world heritage sites.",
+        "cac_dap_an": "A. b - c - d - a - e|B. b - d - c - a - e|C. b - c - a - d - e",
+        "dap_an_dung": "C",
+        "giaithich": "Đáp án B bị gạch chéo, đáp án C được khoanh tròn. Trật tự C hợp lý: Intro (b) -> In addition (c) -> Moreover (a) -> Finally (d) -> Conclusion (e)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 15]\na. In addition, digital preservation can store valuable information about heritage sites in case physical structures are damaged or destroyed.\nb. Preserving world heritage sites is necessary to protect irreplaceable cultural treasures from being lost forever.\nc. Moreover, trained professionals are required to restore ancient buildings without harming their original features.\nd. Finally, public awareness campaigns can encourage people to respect and protect heritage sites when traveling.\ne. To sum up, technology, expertise, and public responsibility contribute significantly to heritage preservation.",
+        "cac_dap_an": "A. b - c - a - d - e|B. b - c - a - d - e|C. b - a - d - c - e|D. b - c - d - a - e",
+        "dap_an_dung": "B",
+        "giaithich": "Đáp án B được khoanh tròn trong ảnh. (Lưu ý: Đáp án A và B trong ảnh giống hệt nhau)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 16]\na. Moreover, preserving heritage sites can support local economies by attracting responsible cultural tourism.\nb. Preserving world heritage sites allows societies to learn valuable lessons from past civilizations.\nc. In addition, clear guidelines help visitors understand how to behave respectfully at historical locations.\nd. Finally, long-term conservation plans ensure that heritage sites remain protected for many generations.\ne. In conclusion, education, tourism management, and planning are essential for preserving heritage sites.",
+        "cac_dap_an": "A. b - a - c - d - e|B. b - c - a - d - e|C. b - a - d - c - e|D. b - c - d - a - e",
+        "dap_an_dung": "A",
+        "giaithich": "Trật tự hợp lý: Intro (b) -> Moreover (a) -> In addition (c) -> Finally (d) -> Conclusion (e). Đáp án A trùng khớp và được khoanh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 17]\na. In addition, cooperation with international organizations provides technical support and global recognition for heritage conservation projects.\nb. Preserving world heritage sites is crucial for safeguarding historical evidence of human progress and cultural exchange.\nc. Moreover, local authorities must enforce protection laws to prevent illegal activities around heritage areas.\nd. Finally, community education helps residents understand their responsibility in protecting nearby heritage sites.\ne. To sum up, legal enforcement, cooperation, and education ensure effective heritage preservation.",
+        "cac_dap_an": "A. b - a - c - d - e|B. b - c - a - d - e|C. b - a - d - c - e|D. b - c - d - a - e",
+        "dap_an_dung": "A",
+        "giaithich": "Đáp án A được khoanh tròn trong ảnh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 18]\na. Moreover, preserving heritage sites strengthens national pride and cultural identity among citizens.\nb. Preserving world heritage sites helps maintain a strong connection between modern societies and their historical origins.\nc. In addition, scientific research contributes to better understanding and protection of ancient structures.\nd. Finally, responsible tourism policies reduce environmental damage and overcrowding at heritage locations.\ne. In conclusion, cultural pride, research, and tourism management support heritage preservation.",
+        "cac_dap_an": "A. b - c - a - d - e|B. b - a - c - d - e|C. b - c - d - a - e|D. b - a - d - c - e",
+        "dap_an_dung": "B",
+        "giaithich": "Đáp án B được khoanh tròn trong ảnh."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 19]\na. In addition, international campaigns can raise global awareness about endangered heritage sites.\nb. Preserving world heritage sites is a shared responsibility that requires action from individuals, governments, and organizations.\nc. Moreover, financial investment is necessary to repair damage caused by time and environmental factors.\nd. Finally, education programs help people understand why protecting heritage sites matters.\ne. To sum up, awareness, funding, and education play vital roles in heritage preservation.",
+        "cac_dap_an": "A. b - a - c - d - e|B. b - c - a - d - e|C. b - a - d - c - e|D. b - c - d - a - e",
+        "dap_an_dung": "A",
+        "giaithich": "Đáp án A được khoanh tròn trong ảnh. Trật tự hợp lý: Intro (b) -> In addition (a) -> Moreover (c) -> Finally (d) -> Sum up (e)."
+    },
+    {
+        "type": "TRAC_NGHIEM",
+        "cauhoi": "[Review The First Term - Grade 11][Question 20]\na. Moreover, preserving heritage sites promotes intercultural dialogue and respect among different societies.\nb. Preserving world heritage sites ensures that important historical landmarks are not forgotten or destroyed over time.\nc. In addition, modern conservation methods help protect sites from environmental and human threats.\nd. Finally, strong policies encourage sustainable development around heritage areas.\ne. In conclusion, cultural respect, technology, and policy support successful heritage preservation.",
+        "cac_dap_an": "A. b - a - c - d - e|B. b - c - a - d - e|C. b - a - d - c - e|D. b - c - d - a - e",
+        "dap_an_dung": "A",
+        "giaithich": "Đáp án A được khoanh tròn trong ảnh. Trật tự hợp lý: Intro (b) -> Moreover (a) -> In addition (c) -> Finally (d) -> Conclusion (e)."
+    }
+]
