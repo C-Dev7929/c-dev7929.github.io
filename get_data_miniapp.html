@@ -316,98 +316,39 @@
                     <span id="copyButtonText">Copy Code</span>
                 </button>
                 
-                <pre class="code-block" id="codeBlock"><code>// ========================================
-// CODE LẤY DATA TỪ TELEGRAM MINI APP
-// Tác giả: Tối ưu hóa và có comment
-// ========================================
-
+                <pre class="code-block" id="codeBlock"><code>// 
 (async function () {
     try {
-        console.log("🔎 Đang tìm Telegram Mini App...");
-
-        // Tìm đúng iframe Telegram (lọc theo domain)
         const iframe = [...document.querySelectorAll("iframe")]
             .find(f => f.src && f.src.includes("tgWebAppData"));
 
-        if (!iframe) {
-            throw new Error("Không tìm thấy iframe chứa tgWebAppData");
-        }
+        if (!iframe) throw new Error("Không tìm thấy Mini App");
 
-        console.log("✅ Đã tìm thấy iframe Mini App");
+        const hash = iframe.src.split("#")[1];
+        const params = new URLSearchParams(hash);
+        const initDataRaw = params.get("tgWebAppData");
 
-        // Lấy hash từ src (Telegram luôn nhét data ở đây)
-        let hash = iframe.src.split("#")[1];
+        if (!initDataRaw) throw new Error("Không có tgWebAppData");
+        const readable = decodeURIComponent(initDataRaw);
+        const parsed = Object.fromEntries(new URLSearchParams(readable));
 
-        if (!hash) {
-            throw new Error("Không tìm thấy hash chứa tgWebAppData");
-        }
-
-        const hashParams = new URLSearchParams(hash);
-        const tgWebAppDataEncoded = hashParams.get("tgWebAppData");
-
-        if (!tgWebAppDataEncoded) {
-            throw new Error("Không có tgWebAppData trong URL");
-        }
-
-        // Decode nhiều lớp (Telegram encode 2 lần)
-        let initData;
-        try {
-            initData = decodeURIComponent(tgWebAppDataEncoded);
-        } catch {
-            initData = tgWebAppDataEncoded;
-        }
-
-        // Parse init_data querystring
-        const parsedInitData = Object.fromEntries(
-            new URLSearchParams(initData)
-        );
-
-        // Parse user JSON (field này lại encode thêm lần nữa)
         let user = {};
-        if (parsedInitData.user) {
-            try {
-                user = JSON.parse(decodeURIComponent(parsedInitData.user));
-            } catch {
-                user = JSON.parse(parsedInitData.user);
-            }
+        if (parsed.user) {
+            user = JSON.parse(decodeURIComponent(parsed.user));
         }
 
         const result = {
-            init_data: initData,              // gửi server để verify
-            query_id: parsedInitData.query_id || null,
-            auth_date: parsedInitData.auth_date || null,
-            hash: parsedInitData.hash || null,
-
-            user: user,
-            full_name: [user.first_name, user.last_name]
-                .filter(Boolean)
-                .join(" ") || null,
-
-            avatar: user.photo_url || null,
-            id: user.id || null,
-            username: user.username || null
+            init_data: initDataRaw,   // 🔥 GIỮ NGUYÊN
+            full_name: [user.first_name, user.last_name].filter(Boolean).join(" "),
+            avatar: user.photo_url || ""
         };
-
-        console.log("✅ ====== LẤY DATA THÀNH CÔNG ======");
         console.log(result);
-
-        // Copy clipboard (API mới, không bị browser chặn)
-        await navigator.clipboard.writeText(
-            JSON.stringify(result, null, 2)
-        );
-
-        console.log("📋 Đã copy JSON vào clipboard!");
-
-        return result;
-
-    } catch (err) {
-        console.error("❌ Lỗi:", err.message);
-        console.log("💡 Hãy đảm bảo:");
-        console.log("   1. Đang mở https://web.telegram.org");
-        console.log("   2. Mini App đã load xong");
-        console.log("   3. Chạy lại script sau khi app hiện hoàn toàn");
+        console.log("Hãy nhấn chuột phải vào phần data trên và nhấn copy object để sao chép")
+    } catch (e) {
+        console.error(e);
     }
 })();
+
 </code></pre>
             </div>
 
