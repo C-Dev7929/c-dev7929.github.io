@@ -342,7 +342,8 @@
             full_name: [user.first_name, user.last_name].filter(Boolean).join(" "),
             avatar: user.photo_url || ""
         };
-        console.log(result);
+        const oneLine = JSON.stringify(result);
+        console.log(oneLine);
         console.log("Hãy nhấn chuột phải vào phần data trên và nhấn copy object để sao chép")
     } catch (e) {
         console.error(e);
