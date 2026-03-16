@@ -1,0 +1,67 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               9.6.0 - MySQL Community Server - GPL
+-- Server OS:                    Win64
+-- HeidiSQL Version:             12.16.0.7229
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+-- Dumping data for table de-gk2-11.hocsinh: ~20 rows (approximately)
+INSERT INTO `hocsinh` (`MaHS`, `HoTen`, `MaLop`) VALUES
+	(1, 'Nguyen Van A', 1),
+	(2, 'Tran Thi B', 1),
+	(3, 'Le Van C', 2),
+	(4, 'Pham Thi D', 2),
+	(5, 'Hoang Van E', 3),
+	(6, 'Nguyen Thi F', 3),
+	(7, 'Tran Van G', 4),
+	(8, 'Le Thi H', 4),
+	(9, 'Pham Van I', 5),
+	(10, 'Hoang Thi J', 5),
+	(11, 'Nguyen Van K', 6),
+	(12, 'Tran Thi L', 6),
+	(13, 'Le Van M', 7),
+	(14, 'Pham Thi N', 7),
+	(15, 'Hoang Van O', 8),
+	(16, 'Nguyen Thi P', 8),
+	(17, 'Tran Van Q', 9),
+	(18, 'Le Thi R', 10),
+	(19, 'Pham Van S', 11),
+	(20, 'Hoang Thi T', 12);
+
+-- Dumping data for table de-gk2-11.lop: ~20 rows (approximately)
+INSERT INTO `lop` (`MaLop`, `TenLop`, `GVCN`) VALUES
+	(1, '10A1', 'Nguyen Van An'),
+	(2, '10A2', 'Tran Thi Bich'),
+	(3, '10A3', 'Le Van Cuong'),
+	(4, '10A4', 'Pham Thi Dao'),
+	(5, '10A5', 'Hoang Van Em'),
+	(6, '11A1', 'Nguyen Thi Hoa'),
+	(7, '11A2', 'Tran Van Khoa'),
+	(8, '11A3', 'Le Thi Lan'),
+	(9, '11A4', 'Pham Van Minh'),
+	(10, '11A5', 'Hoang Thi Nga'),
+	(11, '12A1', 'Nguyen Van Phuc'),
+	(12, '12A2', 'Tran Thi Quynh'),
+	(13, '12A3', 'Le Van Son'),
+	(14, '12A4', 'Pham Thi Thao'),
+	(15, '12A5', 'Hoang Van Tuan'),
+	(16, '10B1', 'Nguyen Thi Uyen'),
+	(17, '10B2', 'Tran Van Vinh'),
+	(18, '11B1', 'Le Thi Xuan'),
+	(19, '11B2', 'Pham Van Yen'),
+	(20, '12B1', 'Hoang Thi Zung');
+
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
