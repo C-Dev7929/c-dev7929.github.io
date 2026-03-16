@@ -433,17 +433,40 @@
 
         // --- INIT ---
         window.addEventListener('DOMContentLoaded', () => {
+
             const params = new URLSearchParams(window.location.search);
-            fetchData(params.get('file') || 'text.json');
+        
+            let filePath = params.get('file') || "text.json";
+        
+            // nếu chạy trên github pages thì cần path đầy đủ
+            const base = window.location.origin + window.location.pathname;
+        
+            const fullPath = base.replace(/\/$/, "") + "/" + filePath;
+        
+            fetchData(fullPath);
+        
         });
 
         async function fetchData(url) {
             try {
+        
+                console.log("Loading:", url);
+        
                 const res = await fetch(url);
-                if(!res.ok) throw new Error();
+        
+                if(!res.ok) throw new Error("File not found");
+        
                 rawData = await res.json();
+        
+                console.log("Loaded questions:", rawData.length);
+        
             } catch (e) {
-                $('#question-text').innerText = "Không tìm thấy dữ liệu câu hỏi (text.json).";
+        
+                console.error(e);
+        
+                $('#question-text').innerText =
+                    "❌ Không tìm thấy file dữ liệu: " + url;
+        
             }
         }
 
