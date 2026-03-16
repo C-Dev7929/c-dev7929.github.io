@@ -1,0 +1,290 @@
+[
+  {
+    "id": 1,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 1: Sao lưu CSDL có mục đích chính là gì?\nA. Đảm bảo an toàn dữ liệu khi hệ thống gặp sự cố.\nB. Tăng hiệu suất của hệ thống CSDL.\nC. Giảm thiểu dung lượng lưu trữ trên máy chủ.\nD. Thay thế việc cập nhật phần mềm quản trị CSDL.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là A. Sao lưu giúp khôi phục hệ thống khi có sự cố. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 2,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 2: Để phục hồi một CSDL từ tệp sao lưu, bước đầu tiên bạn cần thực hiện là gì?\nA. Chọn Export cơ sở dữ liệu.\nB. Chọn Load SQL file.\nC. Nhấn nút F5 để làm mới danh sách CSDL.\nD. Xoá toàn bộ dữ liệu hiện tại của hệ thống.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Cần load tệp SQL để bắt đầu phục hồi. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 3,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 3: Khi thực hiện sao lưu, lựa chọn Delete + insert có nghĩa là gì?\nA. Xoá dữ liệu cũ và chèn dữ liệu mới đã sao lưu.\nB. Xoá toàn bộ bảng trong CSDL.\nC. Chỉ chèn thêm dữ liệu mới mà không xoá dữ liệu cũ.\nD. Chỉ cập nhật cấu trúc bảng mà không ảnh hưởng đến dữ liệu.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là A. Lệnh này xoá bản ghi cũ trước khi chèn mới để tránh trùng lặp. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 4,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 4: Khi xuất cơ sở dữ liệu dưới dạng tệp SQL, bước nào sau đây là bắt buộc?\nA. Chọn bảng muốn sao lưu và nhấn Export.\nB. Đặt tên tệp sao lưu và chọn kiểu output.\nC. Xoá dữ liệu hiện tại trong cơ sở dữ liệu.\nD. Nhấn F5 để làm mới danh sách CSDL.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Đặt tên và chọn kiểu đầu ra là bước cấu hình bắt buộc. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 5,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 5: Để sao lưu một phần cơ sở dữ liệu, bạn cần làm gì?\nA. Chỉ chọn những bảng muốn sao lưu.\nB. Sao lưu toàn bộ CSDL và sau đó lọc lại dữ liệu.\nC. Tạo một tệp sao lưu riêng cho mỗi bảng.\nD. Xoá toàn bộ các bảng không cần thiết trước khi sao lưu.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là A. Các hệ quản trị CSDL cho phép tích chọn cụ thể các bảng cần sao lưu. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 6,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 6: Sau khi phục hồi CSDL, bạn cần làm gì để cập nhật danh sách CSDL?\nA. Khởi động lại phần mềm quản lý CSDL.\nB. Xoá toàn bộ dữ liệu và phục hồi lại.\nC. Nhấn F5 để làm tươi danh sách CSDL.\nD. Chạy lại toàn bộ truy vấn SQL từ đầu.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là C. Nhấn F5 (Refresh) để phần mềm tải lại danh sách mới nhất. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 7,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 7: Trong trường hợp sao lưu CSDL có lựa chọn \"Drop\", điều gì sẽ xảy ra khi khôi phục?\nA. Tạo mới CSDL mà không xoá dữ liệu cũ.\nB. Xoá toàn bộ các đối tượng cũ trước khi tạo mới.\nC. Chỉ thêm các bản ghi mới vào CSDL cũ.\nD. Giữ nguyên cấu trúc bảng và chỉ thêm dữ liệu mới",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Lệnh DROP sẽ xoá bảng/CSDL cũ nếu nó đã tồn tại trước khi tạo lại. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 8,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 8: Tại sao nên thực hiện sao lưu dữ liệu thường xuyên?\nA. Để cập nhật phiên bản mới nhất của phần mềm.\nB. Để bảo vệ dữ liệu trong trường hợp hệ thống gặp sự cố.\nC. Để giảm thiểu dung lượng lưu trữ.\nD. Để phân tích dữ liệu nhanh hơn.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Đảm bảo an toàn thông tin là ưu tiên hàng đầu. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 9,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 9: Khi di chuyển một CSDL từ máy tính này sang máy tính khác, bạn cần làm gì?\nA. Sao chép tệp sao lưu CSDL sang máy tính mới và phục hồi.\nB. Chỉ cần sao chép tệp dữ liệu của CSDL mà không cần phục hồi.\nC. Xuất toàn bộ dữ liệu sang tệp văn bản và nhập lại vào máy tính mới.\nD. Chạy lại toàn bộ truy vấn SQL từ đầu",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là A. Quy trình chuẩn là Export thành file sao lưu rồi Import sang máy mới. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 10,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 10: Nếu bạn muốn khôi phục CSDL từ một tệp sao lưu đã lưu trên máy tính, bạn nên sử dụng tính năng nào?\nA. Xuất dữ liệu.\nB. Tải tệp SQL (Load SQL file).\nC. Xoá toàn bộ các bảng cũ.\nD. Chỉ khôi phục bảng dữ liệu chính.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Tính năng Load SQL file giúp đọc và thực thi tệp sao lưu. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 11,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 11: Câu lệnh SQL nào dưới đây dùng để truy vấn thông tin tên bản nhạc và tên nhạc sĩ từ hai bảng bannhac và nhacsi?\nA. SELECT * FROM bannhac WHERE idNhacsi = nhacsi.idNhacsi\nB. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi\nC. SELECT tenBannhac, tenNhacsi FROM bannhac WHERE bannhac.idNhacsi = nhacsi.idNhacsi\nD. SELECT tenBannhac, idNhacsi FROM bannhac WHERE idNhacsi = (SELECT idNhacsi FROM nhacsi)",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Sử dụng INNER JOIN là cách chuẩn xác nhất để kết nối và truy xuất dữ liệu từ hai bảng. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 12,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 12: Làm thế nào để truy vấn danh sách bản nhạc và tên nhạc sĩ chỉ của nhạc sĩ \"Đỗ Nhuận\"?\nA. SELECT * FROM bannhac WHERE tenNhacsi = 'Đỗ Nhuận'\nB. SELECT tenBannhac, tenNhacsi FROM bannhac WHERE tenNhacsi = 'Đỗ Nhuận'\nC. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE nhacsi.tenNhacsi = 'Đỗ Nhuận'\nD. SELECT * FROM nhacsi WHERE tenNhacsi = 'Đỗ Nhuận'",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là C. Kết hợp INNER JOIN và mệnh đề WHERE để lọc điều kiện tên nhạc sĩ. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 13,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 13: Cách truy vấn để lấy danh sách các bản nhạc và thể loại của nhạc sĩ \"Văn Cao\"?\nA. SELECT tenBannhac, tenTheloai FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE nhacsi.tenNhacsi = 'Văn Cao'\nB. SELECT bannhac.tenBannhac, bannhac.tenTheloai FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi\nC. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi, theloai.tenTheloai FROM bannhac, nhacsi, theloai WHERE nhacsi.tenNhacsi = 'Văn Cao'\nD. SELECT * FROM bannhac, nhacsi WHERE tenNhacsi = 'Văn Cao'",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án có cấu trúc phù hợp nhất (dựa theo JOIN hoặc quy tắc lọc) tuỳ thuộc vào dữ liệu. Câu A hoặc C dùng JOIN/WHERE. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 14,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 14: Câu lệnh nào dưới đây để lấy danh sách tất cả các bản thu âm với thông tin bản nhạc, nhạc sĩ và ca sĩ?\nA. SELECT * FROM banthuam\nB. SELECT tenBannhac, tenNhacsi, tenCasi FROM banthuam\nC. SELECT banthuam.idBanthuam, bannhac.tenBannhac, nhacsi.tenNhacsi, casi.tenCasi FROM banthuam INNER JOIN bannhac ON banthuam.idBannhac = bannhac.idBannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi INNER JOIN casi ON banthuam.idCasi = casi.idCasi\nD. SELECT tenBannhac, tenNhacsi, tenCasi FROM banthuam WHERE idBanthuam = bannhac.idBannhac",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là C. Sử dụng INNER JOIN liên tục để kết nối cả 4 bảng. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 15,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 15: Câu truy vấn nào sau đây trả về danh sách các bản thu âm của ca sĩ \"Lê Dung\" thuộc thể loại \"Nhạc trữ tình\"?\nA. SELECT * FROM banthuam WHERE tenCasi = 'Lê Dung' AND tenTheloai = 'Nhạc trữ tình'\nB. SELECT tenBannhac, tenTheloai, tenCasi FROM banthuam WHERE tenCasi = 'Lê Dung' AND tenTheloai = 'Nhạc trữ tình'\nC. SELECT banthuam.idBanthuam, bannhac.tenBannhac, theloai.tenTheloai, casi.tenCasi FROM banthuam INNER JOIN bannhac ON banthuam.idBannhac = bannhac.idBannhac INNER JOIN theloai ON bannhac.idTheloai = theloai.idTheloai INNER JOIN casi ON banthuam.idCasi = casi.idCasi WHERE casi.tenCasi = 'Lê Dung' AND theloai.tenTheloai = 'Nhạc trữ tình'\nD. SELECT * FROM banthuam WHERE idCasi = (SELECT idCasi FROM casi WHERE tenCasi = 'Lê Dung')",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là C. Lọc dựa trên đa bảng được kết nối bằng INNER JOIN. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 16,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 16: Câu truy vấn SQL nào dưới đây lấy danh sách các bản nhạc từ bảng bannhac mà không có liên kết với bảng nhacsi?\nA. SELECT tenBannhac FROM bannhac\nB. SELECT bannhac.tenBannhac FROM bannhac LEFT JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE nhacsi.idNhacsi IS NULL\nC. SELECT * FROM bannhac\nD. SELECT bannhac.tenBannhac FROM bannhac WHERE idNhacsi = NULL",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Dùng LEFT JOIN kết hợp kiểm tra NULL để lọc các bản ghi không có quan hệ. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 17,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 17: Làm thế nào để lấy danh sách bản nhạc và tên nhạc sĩ cho các bản nhạc có liên quan đến thể loại \"Nhạc đỏ\"?\nA. SELECT * FROM bannhac WHERE tenTheloai = 'Nhạc đỏ'\nB. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE bannhac.idTheloai = (SELECT idTheloai FROM theloai WHERE tenTheloai = 'Nhạc đỏ')\nC. SELECT * FROM bannhac INNER JOIN theloai ON bannhac.idTheloai = theloai.idTheloai\nD. SELECT tenBannhac, tenNhacsi FROM bannhac WHERE tenTheloai = 'Nhạc đỏ'",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Có thể dùng truy vấn lồng (Subquery) kết hợp JOIN. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 18,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 18: Câu truy vấn nào truy xuất danh sách các bản thu âm mà không có ca sĩ liên kết?\nA. SELECT * FROM banthuam WHERE idCasi IS NULL\nB. SELECT banthuam.idBanthuam FROM banthuam WHERE idCasi IS NOT EXISTS\nC. SELECT banthuam.idBanthuam, bannhac.tenBannhac FROM banthuam LEFT JOIN casi ON banthuam.idCasi = casi.idCasi WHERE casi.idCasi IS NULL\nD. SELECT * FROM banthuam WHERE idBanthuam NOT IN (SELECT idBanthuam FROM casi)",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là C. Tương tự câu 16, LEFT JOIN + IS NULL là phương pháp tối ưu. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 19,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 19: Câu truy vấn SQL nào lấy danh sách tất cả các bản nhạc với thông tin thể loại, bao gồm cả những bản nhạc chưa được phân loại?\nA. SELECT bannhac.tenBannhac, theloai.tenTheloai FROM bannhac\nB. SELECT bannhac.tenBannhac, theloai.tenTheloai FROM bannhac INNER JOIN theloai ON bannhac.idTheloai = theloai.idTheloai\nC. SELECT bannhac.tenBannhac, theloai.tenTheloai FROM bannhac LEFT JOIN theloai ON bannhac.idTheloai = theloai.idTheloai\nD. SELECT bannhac.tenBannhac FROM bannhac WHERE theloai.idTheloai IS NULL",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là C. LEFT JOIN đảm bảo lấy toàn bộ dữ liệu ở bảng bên trái (bannhac) dù không có liên kết. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 20,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 20: Khi nhập dữ liệu vào bảng bannhac, tại sao không cần nhập giá trị cho trường idBannhac?\nA. Vì trường idBannhac là trường khóa ngoại.\nB. Vì trường idBannhac có kiểu dữ liệu AUTO_INCREMENT.\nC. Vì trường idBannhac là trường không quan trọng.\nD. Vì bảng bannhac không yêu cầu có trường idBannhac.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Trường AUTO_INCREMENT tự động tăng giá trị sinh ra khóa chính. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 21,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 21: Trường idNhacsi trong bảng bannhac được gọi là gì?\nA. Trường khóa chính.\nB. Trường khóa ngoài.\nC. Trường bình thường.\nD. Trường không có tính năng gì đặc biệt.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là B. Trường này tạo liên kết tới bảng nhacsi (Khóa ngoại/Foreign Key). (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 22,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Câu 22: Khi nào người dùng không thể xóa dữ liệu trong bảng nhacsi?\nA. Khi trường idNhacsi còn được tham chiếu bởi bảng bannhac.\nB. Khi trường idNhacsi chứa giá trị NULL.\nC. Khi bảng bannhac không có dữ liệu.\nD. Khi bảng nhacsi đã đầy.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Đáp án đúng là A. Ràng buộc toàn vẹn khóa ngoại sẽ ngăn chặn việc xóa bản ghi gốc đang được tham chiếu. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 23,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Phần Đúng/Sai (CSDL mymusic): Khi thực hiện sao lưu CSDL mymusic, người dùng cần chọn phương án nào để đảm bảo rằng dữ liệu cũ sẽ bị xóa trước khi chèn dữ liệu mới?\na) Chọn Drop trong các tùy chọn sao lưu.\nb) Chọn chỉ sao lưu dữ liệu không bị xóa.\nc) Chọn Insert và giữ nguyên dữ liệu cũ.\nd) Chọn Export mà không thiết lập tùy chọn nào.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Ý a là đúng. Tùy chọn Drop sẽ thêm lệnh DROP TABLE IF EXISTS để xóa cấu trúc/dữ liệu cũ. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  },
+  {
+    "id": 24,
+    "type": "dynamic_math",
+    "img": "",
+    "template": "Mã câu hỏi {{v}} - Phần Đúng/Sai: Trong quy trình phục hồi CSDL từ tệp sao lưu, bước nào là cần thiết để tải nội dung của tệp sao lưu vào cửa sổ truy vấn?\na) Nháy chuột chọn thẻ Các công cụ, chọn Import SQL file.\nb) Nháy chuột chọn thẻ Tập tin, chọn Load SQL file.\nc) Nhấn phím Ctrl+N để tạo một tệp mới.\nd) Nháy chuột chọn thẻ Xuất, chọn Import Data.",
+    "variables": {
+      "v": { "min": 100, "max": 999, "step": 1, "decimals": 0 }
+    },
+    "formula": "v * 1",
+    "unit": "",
+    "explanation": "Ý b là đúng (Load SQL file). Đây là chức năng chuẩn trong HeidiSQL/MySQL GUI. (Mã câu hỏi: {{v}} - Kết quả giả lập: {{RESULT}})"
+  }
+]
