@@ -1,0 +1,61 @@
+{
+  "title": "Tổng Hợp Kiến Thức (Demo)",
+  "subject": "Toán & Khoa Học",
+  "timeLimit": 10,
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Tính tích phân $\\int_0^1 x^2 dx$ bằng bao nhiêu?",
+      "options": [
+        "$\\frac{1}{3}$",
+        "$\\frac{1}{2}$",
+        "$1$",
+        "$0$"
+      ],
+      "correct": "$\\frac{1}{3}$",
+      "explanation": "Ta có $\\int x^2 dx = \\frac{x^3}{3} + C$. Thế cận từ $0$ đến $1$ ta được $\\frac{1^3}{3} - \\frac{0^3}{3} = \\frac{1}{3}$.",
+      "topic": "Giải Tích",
+      "level": "TH",
+      "tags": ["Toán"]
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Công thức hóa học của axit sunfuric là gì?",
+      "options": [
+        "$H_2SO_4$",
+        "$HCl$",
+        "$HNO_3$",
+        "$H_2CO_3$"
+      ],
+      "correct": "$H_2SO_4$",
+      "explanation": "Axit sunfuric là một axit vô cơ mạnh, có công thức hóa học là $H_2SO_4$.",
+      "topic": "Hóa Vô Cơ",
+      "level": "NB",
+      "tags": ["Hóa"]
+    },
+    {
+      "id": 3,
+      "type": "true_false",
+      "question": "Theo định luật II Newton, gia tốc của một vật tỉ lệ thuận với lực tác dụng và tỉ lệ nghịch với khối lượng của vật: $a = \\frac{F}{m}$.",
+      "options": ["True", "False"],
+      "correct": "True",
+      "explanation": "Đúng. Biểu thức chuẩn là $\\vec{F} = m\\vec{a}$.",
+      "topic": "Cơ Học",
+      "level": "NB",
+      "tags": ["Lý"]
+    },
+    {
+      "id": 4,
+      "type": "short",
+      "question": "Cơ quan nào trong tế bào thực vật thực hiện chức năng quang hợp?",
+      "options": [],
+      "correct": "Lục lạp",
+      "explanation": "Lục lạp (chloroplast) chứa diệp lục, là nơi diễn ra quá trình hấp thụ ánh sáng để quang hợp.",
+      "topic": "Tế Bào",
+      "level": "NB",
+      "tags": ["Sinh"]
+    }
+  ]
+}
