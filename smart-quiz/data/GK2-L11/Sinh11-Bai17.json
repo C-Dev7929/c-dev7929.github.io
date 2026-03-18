@@ -1,150 +1,498 @@
 {
-"title": "Bộ đề trắc nghiệm Cảm ứng ở động vật",
-"subject": "Sinh học",
-"questions": [
-{
-"id": 1,
-"type": "mcq",
-"question": "Cảm ứng ở sinh vật mang lại vai trò chủ yếu nào sau đây?",
-"options": [
-"Giúp sinh vật tạo ra thế hệ con cháu",
-"Giúp sinh vật phản ứng lại các kích thích của môi trường để tồn tại và phát triển",
-"Giúp động vật có tư duy và nhận thức học tập",
-"Giúp sinh vật tìm kiếm được nguồn thức ăn dồi dào"
-],
-"correct": "Giúp sinh vật phản ứng lại các kích thích của môi trường để tồn tại và phát triển",
-"explanation": "Cảm ứng giúp sinh vật thích nghi với những thay đổi của môi trường xung quanh, từ đó duy trì sự sống và đảm bảo sự phát triển.",
-"image": null,
-"topic": "Khái quát về cảm ứng",
-"level": "NB"
-},
-{
-"id": 2,
-"type": "mcq",
-"question": "Cơ quan nào sau đây có vai trò chủ yếu trả lời kích thích ở người trong một cung phản xạ?",
-"options": [
-"Cơ quan thụ cảm",
-"Hệ thần kinh trung ương",
-"Cơ hoặc tuyến",
-"Dây thần kinh"
-],
-"correct": "Cơ hoặc tuyến",
-"explanation": "Trong cung phản xạ, cơ quan thụ cảm tiếp nhận kích thích, hệ thần kinh trung ương phân tích và xử lý thông tin, cơ quan thực hiện (cơ hoặc tuyến) sẽ đưa ra phản ứng trả lời kích thích đó.",
-"image": null,
-"topic": "Cơ chế cảm ứng",
-"level": "NB"
-},
-{
-"id": 3,
-"type": "mcq",
-"question": "Đặc điểm phản ứng của động vật có hệ thần kinh dạng chuỗi hạch là gì?",
-"options": [
-"Phản ứng toàn thân, tiêu tốn nhiều năng lượng",
-"Phản ứng cục bộ tại vùng bị kích thích, tiêu tốn ít năng lượng hơn",
-"Phản ứng chậm chạp và thiếu chính xác tuyệt đối",
-"Chỉ có khả năng thực hiện các phản xạ có điều kiện"
-],
-"correct": "Phản ứng cục bộ tại vùng bị kích thích, tiêu tốn ít năng lượng hơn",
-"explanation": "Mỗi hạch thần kinh điều khiển một vùng cơ thể xác định. Do đó, khi bị kích thích, động vật chỉ phản ứng cục bộ, giúp tiết kiệm năng lượng so với hệ thần kinh dạng lưới.",
-"image": null,
-"topic": "Tiến hóa hệ thần kinh",
-"level": "TH"
-},
-{
-"id": 4,
-"type": "true_false",
-"question": "Trong quá trình truyền tin qua synapse, chất trung gian hóa học được giải phóng từ màng sau và di chuyển về màng trước synapse.",
-"options": [
-"Đúng",
-"Sai"
-],
-"correct": "Sai",
-"explanation": "Chất trung gian hóa học chứa trong các bóng ở chùy synapse (thuộc màng trước). Khi có xung thần kinh, nó được giải phóng qua khe synapse và gắn vào các thụ thể đặc hiệu ở màng sau.",
-"image": null,
-"topic": "Truyền tin qua synapse",
-"level": "TH"
-},
-{
-"id": 5,
-"type": "true_false",
-"question": "Hiện tượng co rụt tay lại khi vô tình chạm vào cây xương rồng có gai nhọn là một phản xạ không điều kiện.",
-"options": [
-"Đúng",
-"Sai"
-],
-"correct": "Đúng",
-"explanation": "Đây là phản xạ bẩm sinh mang tính chất tự vệ, có khả năng di truyền và không cần qua quá trình học tập hay rèn luyện trong đời sống cá thể.",
-"image": null,
-"topic": "Phản xạ",
-"level": "NB"
-},
-{
-"id": 6,
-"type": "mcq",
-"question": "Sự di chuyển của ion nào sau đây vào chùy synapse gây vỡ các bóng chứa chất trung gian hóa học?",
-"options": [
-"$Na^+$",
-"$K^+$",
-"$Ca^{2+}$",
-"$Cl^-$"
-],
-"correct": "$Ca^{2+}$",
-"explanation": "Khi xung thần kinh truyền đến chùy synapse sẽ làm thay đổi điện thế màng, mở kênh ion $Ca^{2+}$. Dòng ion này tràn vào trong kích thích các bóng chứa chất trung gian hóa học vỡ ra.",
-"image": null,
-"topic": "Truyền tin qua synapse",
-"level": "TH"
-},
-{
-"id": 7,
-"type": "short",
-"question": "Chim tu hú có tập tính đẻ trứng vào tổ của các loài chim khác để nhờ ấp hộ. Dựa vào nguồn gốc, đây là loại tập tính gì?",
-"correct": "Tập tính bẩm sinh",
-"explanation": "Tập tính đẻ trứng nhờ của tu hú mang tính bản năng, sinh ra đã có, đặc trưng cho loài và được quy định bởi hệ gen.",
-"image": null,
-"topic": "Tập tính động vật",
-"level": "NB"
-},
-{
-"id": 8,
-"type": "mcq",
-"question": "Hình thức học tập 'In vết' dễ nhận thấy nhất ở nhóm động vật nào sau đây?",
-"options": [
-"Lưỡng cư",
-"Bò sát",
-"Chim",
-"Côn trùng"
-],
-"correct": "Chim",
-"explanation": "In vết là hiện tượng con non mới nở đi theo vật chuyển động đầu tiên mà nó nhìn thấy. Hiện tượng này đặc biệt phổ biến và dễ quan sát ở các loài chim (ví dụ: gà, vịt, ngỗng non).",
-"image": null,
-"topic": "Các hình thức học tập ở động vật",
-"level": "NB"
-},
-{
-"id": 9,
-"type": "mcq",
-"question": "Hiện tượng cá trong ao bơi nhanh về gần bờ khi nghe tiếng kẻng báo hiệu cho ăn là ví dụ về hình thức học tập nào?",
-"options": [
-"Học ngầm",
-"In vết",
-"Điều kiện hóa đáp ứng",
-"Điều kiện hóa hành động"
-],
-"correct": "Điều kiện hóa đáp ứng",
-"explanation": "Đây là sự hình thành mối liên kết giữa một kích thích trung tính (tiếng kẻng) và kích thích không điều kiện (thức ăn), tuân theo nguyên lý phản xạ có điều kiện (điều kiện hóa kiểu Pavlov).",
-"image": null,
-"topic": "Các hình thức học tập ở động vật",
-"level": "TH"
-},
-{
-"id": 10,
-"type": "short",
-"question": "Việc kiến lính sẵn sàng chiến đấu và hi sinh thân mình để bảo vệ kiến chúa và tổ phản ánh dạng tập tính nào ở động vật?",
-"correct": "Tập tính vị tha",
-"explanation": "Tập tính vị tha là sự hi sinh quyền lợi, sự sống của bản thân để đảm bảo sự sinh tồn, duy trì nòi giống và lợi ích cho cả bầy đàn.",
-"image": null,
-"topic": "Tập tính động vật",
-"level": "TH"
-}
-]
+  "title": "Bộ đề trắc nghiệm Cảm ứng ở động vật (Đầy đủ)",
+  "subject": "Sinh học",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Cơ quan nào sau đây có vai trò chủ yếu trả lời kích thích ở người?",
+      "options": [
+        "Cơ quan thụ cảm",
+        "Cơ hoặc tuyến",
+        "Hệ thần kinh",
+        "Dây thần kinh"
+      ],
+      "correct": "Cơ hoặc tuyến",
+      "explanation": "Trong một cung phản xạ, cơ quan thụ cảm tiếp nhận kích thích, hệ thần kinh làm nhiệm vụ phân tích và xử lý thông tin, còn cơ quan thực hiện (thường là cơ hoặc tuyến) sẽ đưa ra phản ứng trả lời lại kích thích đó.",
+      "image": null,
+      "topic": "Cảm ứng ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Một nhóm học sinh được yêu cầu thực hành tìm hiểu tập tính của động vật. Nhóm học sinh lên kế hoạch vào vườn thú để quan sát con công đực xòe đuôi. Nhóm học sinh đó đang muốn tìm hiểu tập tính nào sau đây?",
+      "options": [
+        "Tập tính kiếm ăn",
+        "Tập tính sinh sản",
+        "Tập tính xã hội",
+        "Tập tính bảo vệ vùng lãnh thổ"
+      ],
+      "correct": "Tập tính sinh sản",
+      "explanation": "Hành động xòe đuôi rực rỡ của công đực nhằm mục đích thu hút sự chú ý của công cái (ve vãn) để giao phối. Đây là đặc trưng của tập tính sinh sản.",
+      "image": null,
+      "topic": "Tập tính động vật",
+      "level": "TH"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Loài chim nào dưới đây có tập tính đẻ trứng vào tổ của các loài chim khác và nhờ ấp hộ?",
+      "options": [
+        "Chim ưng",
+        "Chim tu hú",
+        "Chim cánh cụt",
+        "Chim bồ câu"
+      ],
+      "correct": "Chim tu hú",
+      "explanation": "Chim tu hú nổi tiếng với tập tính đẻ trứng \"trộm\" vào tổ của các loài chim khác (như chim chích chòe, chim sâu...) để nhờ ấp và nuôi con hộ.",
+      "image": null,
+      "topic": "Tập tính động vật",
+      "level": "TH"
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "In vết là hình thức học tập dễ nhận thấy nhất ở nhóm động vật nào?",
+      "options": [
+        "Bò sát",
+        "Lưỡng cư",
+        "Chim",
+        "Cá"
+      ],
+      "correct": "Chim",
+      "explanation": "In vết là hình thức học tập mà ở đó con non mới nở đi theo vật chuyển động đầu tiên mà nó nhìn thấy. Hiện tượng này phổ biến và dễ quan sát nhất ở các loài chim (ví dụ: vịt, ngỗng mới nở).",
+      "image": null,
+      "topic": "Các hình thức học tập ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Khi nghe thấy tiếng kẻng báo hiệu, cá trong ao bơi nhanh về gần bờ để chờ chủ cho ăn. Ví dụ trên phản ánh hình thức học tập nào ở động vật?",
+      "options": [
+        "Học ngầm",
+        "In vết",
+        "Điều kiện hóa hành động",
+        "Điều kiện hóa đáp ứng"
+      ],
+      "correct": "Điều kiện hóa đáp ứng",
+      "explanation": "Đây là hình thức học tập theo kiểu Pavlov. Tiếng kẻng (kích thích trung tính) được lặp đi lặp lại đồng thời với việc cho ăn (kích thích không điều kiện). Dần dần, chỉ cần nghe tiếng kẻng, cá đã hình thành đáp ứng bơi vào bờ.",
+      "image": null,
+      "topic": "Các hình thức học tập ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Kiến lính sẵn sàng chiến đấu và hi sinh thân mình để bảo vệ kiến chúa, bảo vệ tổ. Hiện tượng trên phản ánh dạng tập tính nào?",
+      "options": [
+        "Tập tính thứ bậc",
+        "Tập tính hợp tác",
+        "Tập tính vị tha",
+        "Tập tính di cư"
+      ],
+      "correct": "Tập tính vị tha",
+      "explanation": "Tập tính vị tha là sự hi sinh quyền lợi, thậm chí cả tính mạng của bản thân vì lợi ích sinh tồn của cả bầy đàn.",
+      "image": null,
+      "topic": "Tập tính động vật",
+      "level": "TH"
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Vai trò của cảm ứng ở sinh vật là?",
+      "options": [
+        "Cảm ứng giúp sinh vật phản ứng lại các kích thích của môi trường để tồn tại và phát triển.",
+        "Cảm ứng giúp sinh vật thích ứng với những thay đổi của môi trường để tồn tại và phát triển.",
+        "Giúp động vật có tư duy và nhận thức học tập.",
+        "Giúp sinh vật tồn tại và phát triển."
+      ],
+      "correct": "Cảm ứng giúp sinh vật phản ứng lại các kích thích của môi trường để tồn tại và phát triển.",
+      "explanation": "Đây là khái quát chính xác và đầy đủ nhất về vai trò của cảm ứng. Nó đảm bảo cơ thể thích nghi được với những biến đổi của môi trường xung quanh.",
+      "image": null,
+      "topic": "Khái quát về cảm ứng",
+      "level": "TH"
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Cho ví dụ sau: Khi chạm tay vào cốc nước nóng thì tay ta rụt lại. Em hãy cho biết kích thích từ môi trường trong ví dụ trên là gì và phản ứng của cơ là gì để trả lời kích thích?",
+      "options": [
+        "Khi đó kích thích từ môi trường là cốc nước và phản ứng trả lời là rụt tay lại.",
+        "Khi đó kích thích từ môi trường là nhiệt độ và phản ứng trả lời là rụt tay lại.",
+        "Khi đó kích thích từ môi trường là cốc nước và phản ứng trả lời là cảm giác nóng.",
+        "Khi đó kích thích từ môi trường là nhiệt độ và phản ứng trả lời là cảm giác nóng."
+      ],
+      "correct": "Khi đó kích thích từ môi trường là nhiệt độ và phản ứng trả lời là rụt tay lại.",
+      "explanation": "Nhiệt độ cao tác động lên các thụ quan ở da là tác nhân kích thích. Hoạt động co cơ làm rụt tay lại chính là phản ứng của cơ thể.",
+      "image": null,
+      "topic": "Cảm ứng ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Cảm ứng ở sinh vật là gì?",
+      "options": [
+        "Khả năng cơ thể sinh vật phản ứng thích hợp với các kích thích từ môi trường, đảm bảo cho sinh vật tồn tại và phát triển.",
+        "Khả năng cơ thể sinh vật tiếp nhận với các kích thích từ môi trường, đảm bảo cho sinh vật tồn tại và phát triển.",
+        "Khả năng cơ thể sinh vật tiếp nhận và biến đổi thích hợp với các kích thích từ môi trường, đảm bảo cho sinh vật tồn tại và phát triển.",
+        "Khả năng cơ thể sinh vật tiếp nhận và phản ứng thích hợp với các kích thích từ môi trường, đảm bảo cho sinh vật tồn tại và phát triển."
+      ],
+      "correct": "Khả năng cơ thể sinh vật tiếp nhận và phản ứng thích hợp với các kích thích từ môi trường, đảm bảo cho sinh vật tồn tại và phát triển.",
+      "explanation": "Khái niệm cảm ứng bao gồm 2 vế bắt buộc: tiếp nhận và phản ứng trả lời kích thích.",
+      "image": null,
+      "topic": "Khái quát về cảm ứng",
+      "level": "NB"
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Đâu là hiện tượng cảm ứng ở sinh vật? (1) Cây con hướng về phía có ánh sáng. (2) Rễ cây hướng về phía có nguồn nước sạch. (3) Cây nho leo trên giàn cao. (4) Em dừng xe khi thấy đèn đỏ. (5) Em làm bài tập về nhà.",
+      "options": [
+        "(1), (2), (3), (4)",
+        "(1), (2), (3), (5)",
+        "(1), (2), (4), (5)",
+        "(2), (3), (4), (5)"
+      ],
+      "correct": "(1), (2), (3), (4)",
+      "explanation": "(1), (2), (3) là cảm ứng ở thực vật. (4) là cảm ứng ở động vật bậc cao (phản xạ có điều kiện). Số (5) làm bài tập là một hoạt động trí tuệ phức tạp có ý thức, không được xếp vào loại phản xạ/cảm ứng sinh học cơ bản.",
+      "image": null,
+      "topic": "Khái quát về cảm ứng",
+      "level": "NB"
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Bộ phận thần kinh ngoại biên bao gồm:",
+      "options": [
+        "Não và các hạch thần kinh",
+        "Tủy sống và các hạch thần kinh",
+        "Hạch thần kinh và dây thần kinh",
+        "Não và tủy sống"
+      ],
+      "correct": "Hạch thần kinh và dây thần kinh",
+      "explanation": "Hệ thần kinh gồm phần trung ương (não, tủy sống) và phần ngoại biên (các dây thần kinh và hạch thần kinh).",
+      "image": null,
+      "topic": "Cấu tạo hệ thần kinh",
+      "level": "NB"
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Ý nào không đúng với đặc điểm của hệ thần kinh chuỗi hạch?",
+      "options": [
+        "Số lượng tế bào thần kinh tăng so với thần kinh dạng lưới",
+        "Khả năng phối hợp giữa các tế bào thần kinh tăng lên",
+        "Phản ứng cục bộ, ít tiêu tốn năng lượng so với thần kinh dạng lưới",
+        "Phản ứng toàn thân, tiêu tốn nhiều năng lượng so với thần kinh dạng lưới"
+      ],
+      "correct": "Phản ứng toàn thân, tiêu tốn nhiều năng lượng so với thần kinh dạng lưới",
+      "explanation": "Hệ thần kinh chuỗi hạch hoạt động theo nguyên tắc phản xạ cục bộ (chỉ co một phần cơ thể khi bị kích thích) nên nó tiêu tốn ít năng lượng hơn so với hệ thần kinh dạng lưới.",
+      "image": null,
+      "topic": "Tiến hóa hệ thần kinh",
+      "level": "TH"
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Mô tả nào dưới đây về hệ thần kinh dạng ống là không đúng?",
+      "options": [
+        "Cùng với sự tiến hóa, số lượng tế bào thần kinh ngày càng ít đi nhưng kích thước lớn dần",
+        "Cùng với sự tiến hóa, sự liên kết và phối hợp hoạt động của các tế bào thần kinh ngày càng phức tạp.",
+        "Bán cầu đại脑 ngày càng phát triển và đóng vai trò quan trọng trong điều khiển các hoạt động sống của cơ thể.",
+        "Đầu trước của ống phát triển mạnh thành não bộ, phần sau hình thành tủy sống."
+      ],
+      "correct": "Cùng với sự tiến hóa, số lượng tế bào thần kinh ngày càng ít đi nhưng kích thước lớn dần",
+      "explanation": "Theo chiều hướng tiến hóa, số lượng tế bào thần kinh ngày càng tăng lên (nhiều hơn) và tập trung lại để hình thành não bộ phức tạp.",
+      "image": null,
+      "topic": "Tiến hóa hệ thần kinh",
+      "level": "TH"
+    },
+    {
+      "id": 14,
+      "type": "true_false",
+      "question": "Trong quá trình truyền tin qua synapse thần kinh, giai đoạn đầu là giai đoạn ion $Ca^{2+}$ đi qua kênh protein vào phần hậu synapse.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Ion $Ca^{2+}$ đi qua kênh protein vào phần trước synapse (chùy synapse), không phải hậu synapse.",
+      "image": null,
+      "topic": "Truyền tin qua synapse",
+      "level": "TH"
+    },
+    {
+      "id": 15,
+      "type": "true_false",
+      "question": "Trong chùy synapse có chứa các túi mang chất trung gian hóa học, ví dụ như axetylcholin.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Các bóng chứa chất trung gian hóa học (như acetylcholine) nằm tập trung ở chùy synapse.",
+      "image": null,
+      "topic": "Truyền tin qua synapse",
+      "level": "TH"
+    },
+    {
+      "id": 16,
+      "type": "true_false",
+      "question": "Trong quá trình truyền xung thần kinh, chất trung gian hóa học được phóng thích qua khe synapse để đi ngược vào chùy synapse.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Chất trung gian hóa học phóng thích qua khe synapse để đi đến gắn vào thụ thể ở màng hậu synapse, chứ không đi ngược lại chùy.",
+      "image": null,
+      "topic": "Truyền tin qua synapse",
+      "level": "TH"
+    },
+    {
+      "id": 17,
+      "type": "true_false",
+      "question": "Nếu chất trung gian hóa học không gắn vào thụ thể ở màng sau thì tín hiệu thần kinh không thể truyền từ neuron này qua neuron khác.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Nếu chất trung gian hóa học không gắn vào thụ thể ở màng sau, tín hiệu thần kinh sẽ bị nghẽn lại và không thể truyền tiếp.",
+      "image": null,
+      "topic": "Truyền tin qua synapse",
+      "level": "TH"
+    },
+    {
+      "id": 18,
+      "type": "true_false",
+      "question": "Khi tay chạm vào cây xương rồng, thứ tự truyền tin của hệ cung phản xạ là: Thụ quan đau ở da $\\rightarrow$ neuron cảm giác $\\rightarrow$ tủy sống $\\rightarrow$ neuron vận động.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là thứ tự chuẩn của một cung phản xạ tủy thông thường.",
+      "image": null,
+      "topic": "Cung phản xạ",
+      "level": "TH"
+    },
+    {
+      "id": 19,
+      "type": "true_false",
+      "question": "Hệ thần kinh trung ương là não bộ, và các dây thần kinh là nơi xử lí thông tin, đưa ra quyết định trả lời kích thích, lưu giữ thông tin.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Dây thần kinh chỉ làm nhiệm vụ dẫn truyền xung thần kinh. Nơi xử lý thông tin là thần kinh trung ương (Não bộ, tủy sống).",
+      "image": null,
+      "topic": "Cung phản xạ",
+      "level": "TH"
+    },
+    {
+      "id": 20,
+      "type": "true_false",
+      "question": "Hiện tượng co rút tay lại khi chạm vào vật nhọn là phản xạ không điều kiện.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Việc co tay khi chạm vật nhọn hoặc nóng là phản xạ bẩm sinh (không điều kiện) để bảo vệ cơ thể.",
+      "image": null,
+      "topic": "Cung phản xạ",
+      "level": "TH"
+    },
+    {
+      "id": 21,
+      "type": "true_false",
+      "question": "Tín hiệu thần kinh được dẫn truyền từ dây thần kinh ngoại biên đến cơ vân bằng synapse nhờ đó tay mới co rút lại.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Xung thần kinh từ neuron vận động được truyền sang các sợi cơ vân thông qua synapse thần kinh - cơ, kích thích cơ co rút.",
+      "image": null,
+      "topic": "Cung phản xạ",
+      "level": "TH"
+    },
+    {
+      "id": 22,
+      "type": "true_false",
+      "question": "Khi bị kim châm vào ngón tay, ngón tay co lại. Bộ phận tiếp nhận kích thích ở trường hợp này là các tế bào thụ quan ở cơ.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Bộ phận tiếp nhận ở trường hợp này là các thụ quan nằm ở da, không phải ở cơ.",
+      "image": null,
+      "topic": "Cung phản xạ",
+      "level": "TH"
+    },
+    {
+      "id": 23,
+      "type": "true_false",
+      "question": "Trong cung phản xạ tự vệ, sợi cảm giác truyền từ bộ phận thụ quan đến các da ở ngón tay.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Sợi cảm giác truyền xung thần kinh từ thụ quan ở da về hướng tâm (về tủy sống), chứ không truyền ngược ra da.",
+      "image": null,
+      "topic": "Cung phản xạ",
+      "level": "TH"
+    },
+    {
+      "id": 24,
+      "type": "true_false",
+      "question": "Trong phản xạ co ngón tay khi bị kim châm, bộ phận xử lí thông tin và quyết định hình thức phản ứng là trung ương thần kinh tủy sống.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Tủy sống đóng vai trò trung tâm xử lý cho các phản xạ tủy không điều kiện (như rụt tay/chân).",
+      "image": null,
+      "topic": "Cung phản xạ",
+      "level": "TH"
+    },
+    {
+      "id": 25,
+      "type": "true_false",
+      "question": "Sợi vận động truyền xung thần kinh từ tủy sống đến các cơ ở ngón tay để thực hiện hành động co.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Sợi vận động (neuron ly tâm) truyền lệnh từ tủy sống đến cơ ngón tay để thực hiện hành động co.",
+      "image": null,
+      "topic": "Cung phản xạ",
+      "level": "TH"
+    },
+    {
+      "id": 26,
+      "type": "true_false",
+      "question": "Ong sống theo bầy đàn, có sự phân chia nhiệm vụ rõ ràng. Ong có tập tính xã hội.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Ong sống theo bầy đàn có tổ chức cao, có sự phân công lao động rõ ràng, đây là đặc trưng của tập tính xã hội.",
+      "image": null,
+      "topic": "Tập tính động vật",
+      "level": "TH"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "question": "Tập tính ong nhỏ học cách kiếm mật bằng cách quan sát và bắt chước ong lớn là tập tính bẩm sinh.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Dữ kiện ghi rõ ong nhỏ đã học kiếm mật bằng cách quan sát và bắt chước theo. Đây là tập tính học được.",
+      "image": null,
+      "topic": "Tập tính động vật",
+      "level": "TH"
+    },
+    {
+      "id": 28,
+      "type": "true_false",
+      "question": "Tập tính của ong thợ làm các công việc nặng nhọc và bảo vệ tổ trong đàn ong là tập tính vị tha.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Ong thợ làm việc vất vả, hi sinh quyền sinh sản và bảo vệ tổ để duy trì nòi giống cho ong chúa. Đây là tập tính vị tha.",
+      "image": null,
+      "topic": "Tập tính động vật",
+      "level": "TH"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "question": "Tập tính phân chia các nhiệm vụ khác nhau cho các thành viên trong đàn ong là tập tính bảo vệ lãnh thổ.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Phân chia nhiệm vụ trong đàn là biểu hiện của Tập tính xã hội (tính thứ bậc và phân công lao động), không phải bảo vệ lãnh thổ.",
+      "image": null,
+      "topic": "Tập tính động vật",
+      "level": "TH"
+    },
+    {
+      "id": 30,
+      "type": "short",
+      "question": "Có các loại tập tính như: tập tính bẩm sinh, tập tính học được, tập tính hỗn hợp. Có bao nhiêu tập tính trong đó có tính di truyền?",
+      "correct": "2",
+      "explanation": "Có 2 tập tính mang tính di truyền là Tập tính bẩm sinh và Tập tính hỗn hợp.",
+      "image": null,
+      "topic": "Phân loại tập tính",
+      "level": "NB"
+    },
+    {
+      "id": 31,
+      "type": "short",
+      "question": "Trong các đặc điểm của phản xạ sau: tính di truyền, đặc trưng cho loài, rất bền vững, được hình thành với tác nhân bất kì, hình thành trong đời sống cá thể. Có bao nhiêu đặc điểm thuộc phản xạ không điều kiện?",
+      "correct": "3",
+      "explanation": "Có 3 đặc điểm thuộc phản xạ không điều kiện là: Tính di truyền, đặc trưng cho loài, rất bền vững.",
+      "image": null,
+      "topic": "Phân loại phản xạ",
+      "level": "NB"
+    },
+    {
+      "id": 32,
+      "type": "short",
+      "question": "Trong các tập tính: Cầy hương đánh dấu, Chim sâu làm tổ, Sếu bay tránh rét, Mèo rình bắt chuột, Ong bầy đàn, Cá hồi vượt đại dương, Hải li đập đuôi. Có bao nhiêu tập tính là tập tính sinh sản?",
+      "correct": "2",
+      "explanation": "Có 2 tập tính sinh sản là chim sâu tha vật liệu về làm tổ và cá hồi vượt đại dương để sinh sản.",
+      "image": null,
+      "topic": "Phân loại tập tính",
+      "level": "TH"
+    },
+    {
+      "id": 33,
+      "type": "short",
+      "question": "Trong các tập tính: Cầy hương đánh dấu, Chim sâu làm tổ, Sếu bay tránh rét, Mèo rình bắt chuột, Ong bầy đàn, Cá hồi vượt đại dương, Hải li đập đuôi. Có bao nhiêu tập tính là tập tính di cư?",
+      "correct": "2",
+      "explanation": "Có 2 tập tính di cư là đàn sếu bay về phương nam tránh rét và cá hồi vượt đại dương.",
+      "image": null,
+      "topic": "Phân loại tập tính",
+      "level": "TH"
+    },
+    {
+      "id": 34,
+      "type": "short",
+      "question": "Trong các tập tính: Cầy hương đánh dấu, Chim sâu làm tổ, Sếu bay tránh rét, Mèo rình bắt chuột, Ong bầy đàn, Cá hồi vượt đại dương, Hải li đập đuôi. Có bao nhiêu tập tính là tập tính xã hội?",
+      "correct": "1",
+      "explanation": "Có 1 tập tính xã hội là ong sống theo bầy đàn.",
+      "image": null,
+      "topic": "Phân loại tập tính",
+      "level": "TH"
+    },
+    {
+      "id": 35,
+      "type": "short",
+      "question": "Trong các tập tính: Cầy hương đánh dấu, Chim sâu làm tổ, Sếu bay tránh rét, Mèo rình bắt chuột, Ong bầy đàn, Cá hồi vượt đại dương, Hải li đập đuôi. Có bao nhiêu tập tính là tập tính kiếm ăn?",
+      "correct": "2",
+      "explanation": "Có 2 tập tính kiếm ăn là con mèo rình bắt chuột và hải li đập đuôi để bắt cá.",
+      "image": null,
+      "topic": "Phân loại tập tính",
+      "level": "TH"
+    }
+  ]
 }
