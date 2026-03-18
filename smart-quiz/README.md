@@ -22,23 +22,13 @@
 
 Yêu cầu đã cài đặt **Node.js**.
 
-1. Mở cửa sổ Terminal (PowerShell / Command Prompt) và `cd` vào thư mục của Project.
-2. Cài đặt các thư viện:
-```bash
-npm install
-```
-3. Chạy Server cục bộ (Development):
-```bash
-npm run dev
-```
-4. Build Project thành file tĩnh (để tải lên GitHub Pages, Vercel,...):
-```bash
-npm run build
-```
+1. Mở trang web https://c-dev7929.github.io/smart-quiz/
+2. Tải lên file json hoặc nhập link file:
+3. Bắt đầu làm bài.
 
 ## Cách nạp dữ liệu (Load JSON)
 
-Bạn có thể chỉnh sửa file `public/data/sample.json` và tải nó trong ứng dụng để thử nghiệm.
+Bạn có thể chỉnh sửa file và tải nó trong ứng dụng để thử nghiệm.
 
 **File JSON có cấu trúc sau:**
 
