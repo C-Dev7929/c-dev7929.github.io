@@ -1,0 +1,870 @@
+
+
+{
+  "title": "BÀI 22: SINH TRƯỞNG VÀ PHÁT TRIỂN Ở ĐỘNG VẬT",
+  "subject": "Sinh học",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Câu 1 (B): Quá trình phát triển của động vật đẻ trứng gồm giai đoạn",
+      "options": [
+        "A. phôi và sau khi sinh",
+        "B. phôi và hậu phôi",
+        "C. hậu phôi và sau khi sinh",
+        "D. phôi thai và sau khi sinh"
+      ],
+      "correct": "B. phôi và hậu phôi",
+      "explanation": "Phát triển của động vật đẻ trứng gồm hai giai đoạn chính: giai đoạn phôi (trong trứng) và giai đoạn hậu phôi (sau khi trứng nở).",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Câu 2 (B): Quá trình phát triển của động vật đẻ con gồm giai đoạn",
+      "options": [
+        "A. phôi thai và hậu phôi",
+        "B. phôi và hậu phôi",
+        "C. hậu phôi và sau khi sinh",
+        "D. phôi thai và sau khi sinh"
+      ],
+      "correct": "D. phôi thai và sau khi sinh",
+      "explanation": "Ở động vật đẻ con, giai đoạn phôi diễn ra trong tử cung (gọi là phôi thai) và sau khi sinh ra là giai đoạn sau khi sinh.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Câu 3 (B): Biến thái là",
+      "options": [
+        "A. sự thay đổi đột ngột về hình thái, cấu tạo và từ từ về sinh lý của động vật sau khi sinh ra hoặc nở từ trứng ra.",
+        "B. sự thay đổi từ từ về hình thái, cấu tạo và đột ngột về sinh lý của động vật sau khi sinh ra hoặc nở từ trứng ra.",
+        "C. sự thay đổi đột ngột về hình thái, cấu tạo và sinh lý của động vật sau khi sinh ra hoặc nở từ trứng ra.",
+        "D. sự thay đổi từ từ về hình thái, cấu tạo và về sinh lý của động vật sau khi sinh ra hoặc nở từ trứng ra."
+      ],
+      "correct": "C. sự thay đổi đột ngột về hình thái, cấu tạo và sinh lý của động vật sau khi sinh ra hoặc nở từ trứng ra.",
+      "explanation": "Biến thái là sự thay đổi đột ngột về hình thái, cấu tạo và sinh lý của động vật sau khi sinh ra hoặc nở từ trứng ra.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Câu 4 (B): Sinh trưởng và phát triển ở động vật không qua biến thái có đặc điểm",
+      "options": [
+        "A. con non có cấu tạo khác con trưởng thành.",
+        "B. con non lột xác hoàn thiện cơ thể giống con trưởng thành.",
+        "C. con non có sự lột xác biến đổi thành con trưởng thành.",
+        "D. con non có cấu tạo giống con trưởng thành."
+      ],
+      "correct": "D. con non có cấu tạo giống con trưởng thành.",
+      "explanation": "Phát triển không qua biến thái là kiểu phát triển mà con non có đặc điểm hình thái, cấu tạo và sinh lý tương tự con trưởng thành.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Câu 5 (B): Sinh trưởng và phát triển của động vật qua biến thái hoàn toàn là",
+      "options": [
+        "A. trường hợp ấu trùng có hình thái và cấu tạo rất khác với con trưởng thành.",
+        "B. trường hợp ấu trùng có hình thái giống với con trưởng thành, nhưng khác về cấu tạo.",
+        "C. trường hợp ấu trùng có cấu tạo giống với con trưởng thành, nhưng khác về hình thái.",
+        "D. trường hợp ấu trùng có hình thái và cấu tạo giống với con trưởng thành."
+      ],
+      "correct": "A. trường hợp ấu trùng có hình thái và cấu tạo rất khác với con trưởng thành.",
+      "explanation": "Biến thái hoàn toàn có đặc điểm là ấu trùng rất khác con trưởng thành về hình thái, cấu tạo và sinh lý.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Câu 6 (B): Sinh trưởng và phát triển của động vật qua biến thái không hoàn toàn là",
+      "options": [
+        "A. trường hợp ấu trùng phát triển hoàn thiện, trải qua nhiều lần lột xác để biến đổi thành con trưởng thành.",
+        "B. trường hợp ấu trùng phát triển chưa hoàn thiện, trải qua giai đoạn nhộng để biến đổi thành con trưởng thành.",
+        "C. trường hợp ấu trùng có hình thái và cấu tạo rất khác với con trưởng thành.",
+        "D. trường hợp ấu trùng phát triển chưa hoàn thiện, trải qua nhiều lần lột xác để biến đổi thành con trưởng thành."
+      ],
+      "correct": "D. trường hợp ấu trùng phát triển chưa hoàn thiện, trải qua nhiều lần lột xác để biến đổi thành con trưởng thành.",
+      "explanation": "Biến thái không hoàn toàn là kiểu phát triển mà ấu trùng phát triển chưa hoàn thiện, trải qua nhiều lần lột xác để trở thành con trưởng thành.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Câu 7 (B): Loài nào sau đây sinh trưởng và phát triển không qua biến thái?",
+      "options": [
+        "A. Ếch đồng.",
+        "B. Cào cào.",
+        "C. Gà.",
+        "D. Bướm."
+      ],
+      "correct": "C. Gà.",
+      "explanation": "Gà thuộc nhóm động vật có xương sống (lớp Chim) phát triển không qua biến thái; ếch là biến thái hoàn toàn, cào cào là biến thái không hoàn toàn, bướm là biến thái hoàn toàn.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Câu 8 (B): Loài nào sau đây sinh trưởng và phát triển qua biến thái hoàn toàn?",
+      "options": [
+        "A. Ếch đồng.",
+        "B. Cào cào.",
+        "C. Tôm.",
+        "D. Rắn."
+      ],
+      "correct": "A. Ếch đồng.",
+      "explanation": "Ếch đồng trải qua giai đoạn nòng nọc (ấu trùng) rất khác ếch trưởng thành nên là biến thái hoàn toàn.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Câu 9 (B): Loài nào sau đây sinh trưởng và phát triển qua biến thái không hoàn toàn?",
+      "options": [
+        "A. Ếch đồng.",
+        "B. Cào cào.",
+        "C. Cá.",
+        "D. Bướm."
+      ],
+      "correct": "B. Cào cào.",
+      "explanation": "Cào cào có ấu trùng (con non) gần giống con trưởng thành nhưng chưa có cánh, trải qua nhiều lần lột xác.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Câu 10 (B): Hormone làm cơ thể bé gái thay đổi mạnh về thể chất và sinh lý ở thời kì dậy thì là",
+      "options": [
+        "A. testosterone.",
+        "B. thyroxine.",
+        "C. estrogen.",
+        "D. GH."
+      ],
+      "correct": "C. estrogen.",
+      "explanation": "Estrogen là hormone sinh dục nữ đóng vai trò chủ đạo trong việc phát triển đặc điểm sinh dục phụ và sinh lý ở nữ giới giai đoạn dậy thì.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Câu 11 (B): Theo một số nghiên cứu của Việt Nam và thế giới. Độ tuổi trung bình bắt đầu dậy thì ở nữ là",
+      "options": [
+        "A. 10 tuổi.",
+        "B. 11 tuổi.",
+        "C. 12 tuổi.",
+        "D. 13 tuổi."
+      ],
+      "correct": "A. 10 tuổi.",
+      "explanation": "Theo các số liệu thống kê hiện nay, độ tuổi dậy thì của nữ thường sớm hơn nam, bắt đầu khoảng từ 10 tuổi.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Câu 12 (B): Theo một số nghiên cứu của Việt Nam và thế giới. Độ tuổi trung bình bắt đầu dậy thì ở nam là",
+      "options": [
+        "A. 11 tuổi.",
+        "B. 12 tuổi.",
+        "C. 13 tuổi.",
+        "D. 14 tuổi."
+      ],
+      "correct": "B. 12 tuổi.",
+      "explanation": "Độ tuổi dậy thì ở nam thường muộn hơn nữ, bắt đầu trung bình khoảng 12 tuổi.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Câu 13 (B): Trong quá trình phát triển ở động vật, trong giai đoạn phát triển phôi có các giai đoạn kế tiếp nhau là",
+      "options": [
+        "A. phân cắt trứng -> phôi vị -> phôi nang -> tạo cơ quan.",
+        "B. phân cắt trứng -> phôi nang -> phôi vị -> tạo cơ quan.",
+        "C. phân cắt trứng -> tạo cơ quan -> phôi vị -> phôi nang.",
+        "D. phân cắt trứng -> tạo cơ quan -> phôi nang -> phôi vị."
+      ],
+      "correct": "B. phân cắt trứng -> phôi nang -> phôi vị -> tạo cơ quan.",
+      "explanation": "Trình tự đúng là Trứng thụ tinh phân cắt tạo phôi nang, sau đó là phôi vị và cuối cùng là hình thành các cơ quan.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Câu 14 (B): Ở trẻ em, bị còi xương, chậm lớn do thiếu vitamin gì?",
+      "options": [
+        "A. Vitamin D.",
+        "B. Vitamin A.",
+        "C. Vitamin C.",
+        "D. Vitamin E."
+      ],
+      "correct": "A. Vitamin D.",
+      "explanation": "Vitamin D cần thiết cho việc hấp thụ Canxi để hình thành xương, thiếu nó trẻ sẽ bị còi xương.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Câu 15 (H): Những loài nào sau đây sinh trưởng và phát triển không qua biến thái?",
+      "options": [
+        "A. Châu chấu, ếch đồng, cá rô.",
+        "B. Bướm, mèo, cá rô.",
+        "C. Bồ câu, rắn, mèo.",
+        "D. Rắn, ruồi giấm, gà."
+      ],
+      "correct": "C. Bồ câu, rắn, mèo.",
+      "explanation": "Bồ câu, rắn, mèo đều là động vật có xương sống có kiểu phát triển không qua biến thái.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Câu 16 (H): Những loài nào sau đây sinh trưởng và phát triển qua biến thái hoàn toàn?",
+      "options": [
+        "A. Cào cào, bướm, rắn mối.",
+        "B. Ruồi, ếch đồng, bướm.",
+        "C. Bướm, châu chấu, cá heo.",
+        "D. Thằn lằn, tôm, cua."
+      ],
+      "correct": "B. Ruồi, ếch đồng, bướm.",
+      "explanation": "Ruồi, ếch đồng và bướm đều có ấu trùng khác biệt hoàn toàn với con trưởng thành.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Câu 17 (H): Chu kì biến thái ở bướm gồm các giai đoạn theo trình tự nào sau đây?",
+      "options": [
+        "A. Sâu → bướm → nhộng → trứng.",
+        "B. Bướm → trứng → sâu → nhộng.",
+        "C. Trứng → sâu→ nhộng→ bướm.",
+        "D. Trứng → nhộng → sâu → bướm."
+      ],
+      "correct": "C. Trứng → sâu→ nhộng→ bướm.",
+      "explanation": "Vòng đời bướm: Trứng nở thành sâu (ấu trùng), sâu hóa nhộng, nhộng lột xác thành bướm.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Câu 18 (H): Những động vật sinh trưởng và phát triển qua biến thái không hoàn toàn là",
+      "options": [
+        "A. Trăn, gián, dế mèn.",
+        "B. Bướm, ruồi giấm, muỗi.",
+        "C. Bọ ngựa, cào cào, dế mèn.",
+        "D. Châu chấu, ếch đồng, gián."
+      ],
+      "correct": "C. Bọ ngựa, cào cào, dế mèn.",
+      "explanation": "Bọ ngựa, cào cào, dế mèn là các côn trùng phát triển qua biến thái không hoàn toàn (ấu trùng gần giống con trưởng thành).",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "Câu 20 (H): Chất nào sau đây ảnh hưởng đến sinh trưởng và phát triển của phôi thai, gây dị tật ở trẻ em?",
+      "options": [
+        "A. Rượu và chất kích thích.",
+        "B. Ma túy, Thuốc lá và bia.",
+        "C. Chất kích thích, chất gây nghiện.",
+        "D. Ma túy, thuốc lá, rượu."
+      ],
+      "correct": "D. Ma túy, thuốc lá, rượu.",
+      "explanation": "Đây là các tác nhân hóa học cực kỳ độc hại gây rối loạn phát triển phôi thai và dẫn đến dị tật bẩm sinh.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Câu 21 (H): Ở trẻ em, thiếu loại hormone này(nào sau đây) làm cho trẻ chậm lớn, chịu lạnh kém, trí tuệ thấp",
+      "options": [
+        "A. testosterone.",
+        "B. thyroxine.",
+        "C. estrogen.",
+        "D. sinh trưởng (GH)."
+      ],
+      "correct": "B. thyroxine.",
+      "explanation": "Thyroxine kích thích chuyển hóa và phát triển hệ thần kinh, thiếu nó gây chậm lớn và kém phát triển trí tuệ ở trẻ.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Câu 22 (H): Hormone kích thích sâu lột xác biến thành nhộng và bướm là",
+      "options": [
+        "A. ecdysone, juvenile.",
+        "B. thyroxine, testosterone.",
+        "C. estrogen, ecdysone.",
+        "D. ecdysone."
+      ],
+      "correct": "D. ecdysone.",
+      "explanation": "Ecdysone gây lột xác ở sâu bướm và kích thích sâu biến thành nhộng và bướm.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Câu 23 (H): Hormone có tác dụng kích thích phát triển và hoạt động của hệ thần kinh, tăng sinh nhiệt là",
+      "options": [
+        "A. testosterone.",
+        "B. thyroxine.",
+        "C. eEstrogen.",
+        "D. juvenile."
+      ],
+      "correct": "B. thyroxine.",
+      "explanation": "Thyroxine do tuyến giáp tiết ra có vai trò quan trọng trong trao đổi chất, sinh nhiệt và phát triển thần kinh.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "Câu 24 (H): Vitamin có vai trò chuyển hóa canxi để hình thành xương là",
+      "options": [
+        "A. vitamin A.",
+        "B. vitamin D.",
+        "C. vitamin E.",
+        "D. vitamin K."
+      ],
+      "correct": "B. vitamin D.",
+      "explanation": "Vitamin D giúp hấp thụ và chuyển hóa Canxi vào xương.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "Câu 25 (H): Tạo chuồng trại thoáng mát, sử dụng cỏ sạch, cho bò nghe nhạc,.... là các biện pháp:",
+      "options": [
+        "A. Cải thiện nguồn vật liệu di truyền nhằm cải tạo giống.",
+        "B. Cải thiện môi trường sống nhằm tăng năng suất vật nuôi.",
+        "C. Cải tạo môi trường sống nhằm tạo được giống vật nuôi tốt cho năng suất cao.",
+        "D. Cải thiện chất lượng sản phẩm đầu ra, thân thiện môi trường."
+      ],
+      "correct": "B. Cải thiện môi trường sống nhằm tăng năng suất vật nuôi.",
+      "explanation": "Đây là các biện pháp tác động vào điều kiện môi trường sống (thức ăn, chuồng trại, tâm lý) để tối ưu hóa sự sinh trưởng.",
+      "image": null,
+      "topic": "Ứng dụng sinh trưởng phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Câu 26 (H): Khi trong thức ăn thiếu iodine thì hormone nào sau đây sẽ không được tạo thành ở động vật có xương sống?",
+      "options": [
+        "A. Testosterone.",
+        "B. Thyroxine.",
+        "C. Estrogen.",
+        "D. Juvenile."
+      ],
+      "correct": "B. Thyroxine.",
+      "explanation": "Iodine (I-ốt) là thành phần cấu tạo bắt buộc của hormone Thyroxine.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Câu 27 (VD): Ở động vật, ánh sáng ở vùng quang phổ nào tác động lên da để biến tiền vitamin D thành vitamin D?",
+      "options": [
+        "A. Tia hồng ngoại.",
+        "B. Tia tử ngoại.",
+        "C. Tia alpha.",
+        "D. Tia sáng nhìn thấy được."
+      ],
+      "correct": "B. Tia tử ngoại.",
+      "explanation": "Tia tử ngoại (UV) có năng lượng phù hợp để chuyển hóa tiền vitamin D dưới da thành vitamin D.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "VD"
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Câu 28 (VD): Hormone nào sau đây nếu được tạo thành nhiều sẽ sinh ra bệnh to đầu xương chi ở người lớn?",
+      "options": [
+        "A. Testosterone.",
+        "B. Thyroxine.",
+        "C. Estrogen.",
+        "D. Sinh trưởng(GH)."
+      ],
+      "correct": "D. Sinh trưởng(GH).",
+      "explanation": "Ở người lớn, khi xương đã ngừng dài ra, nếu thừa GH sẽ khiến xương phát triển theo chiều ngang, gây bệnh to đầu ngón và xương chi.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "VD"
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "Câu 29 (VD): Tại sao tắm nắng vào lúc ánh sáng yếu có lợi cho sự sinh trưởng và phát triển của trẻ nhỏ?",
+      "options": [
+        "A. Vì tia tử ngoại làm cho tiền vitamin D biến thành vitamin D có vai trò chuyển hoá Na để hình thành xương.",
+        "B. Vì tia tử ngoại làm cho tiền vitamin D biến thành vitamin D có vai trò chuyển hoá Ca để hình thành xương.",
+        "C. Vì tia tử ngoại làm cho tiền vitamin D biến thành vitamin D có vai trò chuyển hoá K để hình thành xương.",
+        "D. Vì tia tử ngoại làm cho tiền vitamin D biến thành vitamin D có vai trò ôxy hoá để hình thành xương."
+      ],
+      "correct": "B. Vì tia tử ngoại làm cho tiền vitamin D biến thành vitamin D có vai trò chuyển hoá Ca để hình thành xương.",
+      "explanation": "Tia tử ngoại giúp tổng hợp Vitamin D, hỗ trợ hấp thụ Canxi (Ca) để phát triển hệ xương.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "VD"
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "Câu 30 (VD): Khi nói về điểm giống nhau giữa sinh trưởng, phát triển qua biến thái hoàn toàn và biến thái không hoàn toàn, có bao nhiêu phương án không đúng?\nI. Ấu trùng qua nhiều lần lột xác để lớn lên.\nII. Ấu trùng có hình thái, cấu tạo giống con trưởng thành.\nIII. Ấu trùng có hình thái, cấu tạo khác với con trưởng thành.\nIV. Ấu trùng biến đổi thành con trưởng thành không qua lột xác.",
+      "options": [
+        "A. 2.",
+        "B. 4.",
+        "C. 3.",
+        "D. 1."
+      ],
+      "correct": "C. 3.",
+      "explanation": "Chỉ có ý I đúng (cả hai đều lột xác). Ý II sai (biến thái hoàn toàn thì ấu trùng rất khác). Ý III sai (biến thái không hoàn toàn thì ấu trùng gần giống). Ý IV sai (cả hai đều phải lột xác). Vậy có 3 ý không đúng.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "VD"
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "Câu 31 (VD): Cho các thông tin sau:\nI. Các tế bào của phôi phân hóa tạo thành các cơ quan của sâu bướm.\nII. Hợp tự phân chia nhiều lần để tạo phôi, hình thành cơ quan cơ thể.\nIII. Sự khác biệt về hình thái và cấu tạo của ấu trùng giữa các lần lột xác là rất nhỏ.\nIV. Ấu trùng có hình thái, cấu tạo và sinh lý rất khác với con trưởng thành.\nNhững thông tin đúng về biến thái hoàn toàn và biến thái không hoàn toàn là",
+      "options": [
+        "A. Biến thái hoàn toàn: I, III, IV; Biến thái không hoàn toàn: II, III.",
+        "B. Biến thái hoàn toàn: I, II, IV; Biến thái không hoàn toàn: II, III.",
+        "C. Biến thái hoàn toàn: I, II, IV; Biến thái không hoàn toàn: I, II, III.",
+        "D. Biến thái hoàn toàn: I, II, IV; Biến thái không hoàn toàn: II, III, IV."
+      ],
+      "correct": "B. Biến thái hoàn toàn: I, II, IV; Biến thái không hoàn toàn: II, III.",
+      "explanation": "Biến thái hoàn toàn có ấu trùng rất khác trưởng thành (IV). Biến thái không hoàn toàn có ấu trùng khác biệt rất nhỏ qua các lần lột xác (III). II là đặc điểm chung của giai đoạn phôi.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "VD"
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "Câu 33 (VD): Cho các thông tin sau:\nI. Kích thích phát triển xương, xương dài và to ra.\nII. Kích thích, duy trì chuyển hóa ở tế bào.\nIII. Kích thích chuyển calcium vào xương.\nIV. Kích thích mạnh ở giai đoạn dậy thì, hình thành các đặc điểm sinh dục phụ thứ cấp.\nCó bao nhiêu thông tin trên đúng với tác động của hormone Testosterone và Estrogen?",
+      "options": [
+        "A. 1.",
+        "B. 2.",
+        "C. 3.",
+        "D. 4."
+      ],
+      "correct": "B. 2.",
+      "explanation": "Các ý đúng là I (phát triển xương) và IV (đặc điểm sinh dục phụ). II là của Thyroxine, III là của Calcitonin.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "VD"
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "Câu 34 (VD): Cho các nhóm sinh vật sau:\nI. Cua; Mối; Tôm; Gián; Dế\nII. Chuồn chuồn; Ruồi nhà; Ong; Bọ ngựa\nIII. Chuột; Mèo; Cá; Gà\nIV. Cá; Cua; Muỗi; Ong\nNhóm sinh vật nào phát triển qua biến thái không hoàn toàn?",
+      "options": [
+        "A. Nhóm I.",
+        "B. Nhóm IV.",
+        "C. Nhóm III.",
+        "D. Nhóm II."
+      ],
+      "correct": "A. Nhóm I.",
+      "explanation": "Nhóm I gồm các sinh vật biến thái không hoàn toàn (côn trùng và giáp xác). Nhóm II có Ruồi/Ong là biến thái hoàn toàn. Nhóm III không qua biến thái. Nhóm IV có Muỗi/Ong là biến thái hoàn toàn.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "VD"
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "Câu 35 (VD): Quan sát hình dưới đây và cho biết có bao nhiêu nhận định sai?\nI. Tất cả côn trùng có kiểu phát triển giống bướm.\nII. Ở Bướm, ấu trùng trải quá nhiều lần lột xác để hình thành bộ phận mới.\nIII. Gà con có cấu tạo gần giống con trưởng thành. (cấu tạo giống con trưởng thành.)\nIV. Tất cả động vật có xương sống có kiểu phát triển không qua biến thái.",
+      "options": [
+        "A. 1.",
+        "B. 2.",
+        "C. 3.",
+        "D. 4"
+      ],
+      "correct": "B. 2.",
+      "explanation": "Nhận định I sai (côn trùng có thể biến thái không hoàn toàn). Nhận định IV sai (Lưỡng cư là động vật có xương sống nhưng biến thái hoàn toàn). II và III đúng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau35.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "VD"
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "Câu 36 (VD): Quan sát hình dưới đây và cho biết có bao nhiêu nhận định đúng?\nI. Gián, dế có kiểu phát triển giống cào cào.\nII. Ở cào cào, sự khác biệt về hình thái và cấu tạo của ấu trùng giữa các lần lột xác là rất nhỏ\nIII. Ấu trùng của bướm và cào cào có hình thái, cấu tạo và sinh lý rất khác với con trưởng thành.\nIV. Tất cả côn trùng có kiểu phát triển qua biến thái.",
+      "options": [
+        "A. 1.",
+        "B. 2.",
+        "C. 3.",
+        "D. 4."
+      ],
+      "correct": "C. 3.",
+      "explanation": "I, II, IV đúng. III sai vì ấu trùng cào cào gần giống con trưởng thành.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau36.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "VD"
+    },
+    {
+      "id": 37,
+      "type": "true_false",
+      "question": "Câu 2. Khi nói về giai đoạn sau sinh ở người. Ý a: Sự phát triển ở người không qua biến thái.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Ở người, con mới sinh có hình thái cấu tạo tương tự người trưởng thành.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 38,
+      "type": "true_false",
+      "question": "Câu 2. Khi nói về giai đoạn sau sinh ở người. Ý b: Ở giai đoạn dậy thì, cơ thể cần vận động để phát triển, nên cần ít thời gian ngủ.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Giai đoạn dậy thì cơ thể phát triển mạnh, cần ngủ đủ giấc để hormone GH tiết ra tối đa vào ban đêm.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 39,
+      "type": "true_false",
+      "question": "Câu 2. Khi nói về giai đoạn sau sinh ở người. Ý c: Dậy thì là giai đoạn sinh trưởng và phát triển mạnh mẽ.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là giai đoạn bước ngoặt với tốc độ tăng trưởng nhanh về chiều cao, cân nặng.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 40,
+      "type": "true_false",
+      "question": "Câu 2. Khi nói về giai đoạn sau sinh ở người. Ý d: Trong giai đoạn dậy thì, cơ thể có nhiều thay đổi về thể chất, sinh lí và tâm lí.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Dậy thì đi kèm với sự hoàn thiện cơ quan sinh dục, hormone và thay đổi tâm sinh lý.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 41,
+      "type": "true_false",
+      "question": "Câu 3. Hình bên mô tả vòng đời của bướm. Ý a: Chú thích các con số: (1) sâu, (2) nhộng, (3) trứng, (4) bướm",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Thứ tự đúng trên hình là (1) Trứng, (2) Sâu (ấu trùng), (3) Nhộng, (4) Bướm trưởng thành.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau3.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 42,
+      "type": "true_false",
+      "question": "Câu 3. Hình bên mô tả vòng đời của bướm. Ý b: Ở giai đoạn (2) là giai đoạn gây ra tổn thất cho nông nghiệp nhất",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Giai đoạn sâu (2) là giai đoạn ăn lá cây mạnh nhất, gây hại cho mùa màng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau3.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 43,
+      "type": "true_false",
+      "question": "Câu 3. Hình bên mô tả vòng đời của bướm. Ý c: Giai đoanh (4) hình thành góp phần nâng cao năng suất cây trồng vì hoạt động hút mật hoa của bướm giúp cây thụ phấn.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Bướm trưởng thành hút mật hoa và giúp thụ phấn cho cây.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau3.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 44,
+      "type": "true_false",
+      "question": "Câu 3. Hình bên mô tả vòng đời của bướm. Ý d: Sử dụng các thuốc bảo vệ thực vật hóa học để phòng trừ sâu hại phá hại mùa màng.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Thuốc hóa học gây ô nhiễm môi trường và ảnh hưởng sức khỏe, nên ưu tiên biện pháp sinh học.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau3.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 45,
+      "type": "true_false",
+      "question": "Câu 16. Hình trên minh họa sơ đồ phát triển ở châu chấu. Ý a: Vòng đời của châu chấu là biến thái hoàn toàn",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Châu chấu phát triển qua biến thái không hoàn toàn.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau16.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 46,
+      "type": "true_false",
+      "question": "Câu 16. Hình trên minh họa sơ đồ phát triển ở châu chấu. Ý b: Đây là kiểu phát triển gặp ở đa số các loài côn trùng như: châu chấu, cào cào, gián, tôm…",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Các loài này đều thuộc nhóm biến thái không hoàn toàn.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau16.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 47,
+      "type": "true_false",
+      "question": "Câu 16. Hình trên minh họa sơ đồ phát triển ở châu chấu. Ý c: Sự khác biệt về cấu tạo và hình thái của ấu trùng giữa các lần lột xác kế tiếp nhau là không lớn.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là đặc điểm đặc trưng của biến thái không hoàn toàn.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau16.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 48,
+      "type": "true_false",
+      "question": "Câu 16. Hình trên minh họa sơ đồ phát triển ở châu chấu. Ý d: Ấu trùng và châu chấu trưởng thành, trong ống tiêu hóa có đầy đủ các enzym tiêu hóa protein, lipit, cacbohiđrat nhưng thức ăn của chúng lại không giống nhau.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Ấu trùng và trưởng thành ở châu chấu có thức ăn giống nhau (cùng ăn lá cây).",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau16.png",
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 49,
+      "type": "short",
+      "question": "Câu 1. Có bao nhiêu giai đoạn sinh trưởng và phát triển ở động vật?",
+      "correct": "2",
+      "explanation": "Gồm giai đoạn phôi và giai đoạn hậu phôi.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 50,
+      "type": "short",
+      "question": "Câu 2. Trong các giai đoạn: trước phôi, phôi, hậu phôi, sinh phôi, chết phôi. Có bao nhiêu giai đoạn là quá trình sinh trương và phát triển ở động vật?",
+      "correct": "2",
+      "explanation": "Gồm phôi và hậu phôi.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 51,
+      "type": "short",
+      "question": "Câu 3. Có bao nhiêu hình thức phát triển ở động vật?",
+      "correct": "2",
+      "explanation": "Gồm phát triển qua biến thái và không qua biến thái.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "NB"
+    },
+    {
+      "id": 52,
+      "type": "short",
+      "question": "Câu 4. Trong các đặc điểm: không qua lột xác, ấu trùng giống con trưởng thành, con non khác con trưởng thành, qua một lần lột xác. Có bao nhiêu đặc điểm không phải là đặc điểm của phát triển không qua biến thái?",
+      "correct": "2",
+      "explanation": "Hai đặc điểm sai là: con non khác con trưởng thành, qua một lần lột xác.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 53,
+      "type": "short",
+      "question": "Câu 5. Trong các đặc điểm: không qua lột xác, ấu trùng giống con trưởng thành, con non khác con trưởng thành, qua ít nhất một lần lột xác. Có bao nhiêu đặc điểm là đặc điểm của phát triển qua biến thái hoàn toàn?",
+      "correct": "2",
+      "explanation": "Hai đặc điểm đúng là: con non khác con trưởng thành, qua ít nhất một lần lột xác.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 54,
+      "type": "short",
+      "question": "Câu 6. Trong các sinh vật: trâu, bò, sâu ăn cỏ, ếch, muỗi, rắn, chó, mèo. Có bao nhiêu loài động vật phát triển biến thái hoàn toàn?",
+      "correct": "3",
+      "explanation": "Gồm: sâu ăn cỏ (bướm), ếch, muỗi.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 55,
+      "type": "short",
+      "question": "Câu 7. Cho các loài động vật: bò, sâu ăn cỏ, chó, mèo, muỗi và rắn. Có bao nhiêu loài động vật sinh trưởng và phát triển không qua biến thái?",
+      "correct": "4",
+      "explanation": "Gồm: bò, chó, mèo, rắn.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 56,
+      "type": "short",
+      "question": "Câu 8. Cho các loài động vật: bò, sâu ăn cỏ, bọ ngựa, muỗi, gián, cào cào và bọ cánh cứng. Có bao nhiêu loài động vật sinh trưởng và phát triển qua biến thái không hoàn toàn?",
+      "correct": "3",
+      "explanation": "Gồm: bọ ngựa, gián, cào cào.",
+      "image": null,
+      "topic": "Sinh trưởng và phát triển ở động vật",
+      "level": "TH"
+    },
+    {
+      "id": 57,
+      "type": "short",
+      "question": "Câu 9. Cho các yếu tố: di truyền, môi trường, sinh lí, nhận thức và cân nặng. Độ tuổi dậy thì phụ thuộc vào mấy yếu tố kể trên?",
+      "correct": "3",
+      "explanation": "Chủ yếu phụ thuộc vào: di truyền, môi trường (dinh dưỡng), sinh lí.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 58,
+      "type": "short",
+      "question": "Câu 10. Cho các yếu tố: di truyền, gene, hormone, nhiệt độ, ánh sáng, độ ẩm và giới tính. Có bao nhiêu yếu tố ảnh hưởng đến sinh trưởng và phát triển ở động vật?",
+      "correct": "7",
+      "explanation": "Tất cả các yếu tố trên đều ảnh hưởng (nhân tố bên trong và bên ngoài).",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 59,
+      "type": "short",
+      "question": "Câu 12. Cho các tiêu chí: yếu tố di truyền, năng suất sữa, trọng lượng và ngoại hình. Khi chọn giống bò sữa, người ta dựa vào mấy tiêu chí kể trên?",
+      "correct": "4",
+      "explanation": "Tất cả các tiêu chí đều quan trọng trong chọn giống.",
+      "image": null,
+      "topic": "Ứng dụng sinh trưởng phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 60,
+      "type": "short",
+      "question": "Câu 13. Trong các nhân tố: nhiệt độ, thức ăn, độ ẩm, hàm lượng O2, nước, ánh sáng, khoáng chất. Có bao nhiêu nhân tố ảnh hưởng đến quá trình trao đổi chất ở động vật?",
+      "correct": "7",
+      "explanation": "Tất cả các nhân tố môi trường kể trên đều tác động đến quá trình trao đổi chất.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 61,
+      "type": "short",
+      "question": "Câu 14. Trong các nguyên nhân: thiếu protein, thiếu calciom, thiếu magie, thiếu vitamin, thiếu sắt. Có bao nhiêu nguyên nhân gây ra bệnh còn xương, chậm lớn ở trẻ em?",
+      "correct": "2",
+      "explanation": "Chủ yếu do thiếu Canxi (calcium) và Vitamin (đặc biệt là vitamin D).",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 62,
+      "type": "short",
+      "question": "Câu 17. Trong các thay đổi: trứng chín, tinh hoàn bắt đầu sản xuất tinh trùng, tăng tiết hormone testosterone, xuất hiện kinh nguyệt, trứng rụng. Có bao nhiêu thay đổi sinh lý ở nữ trong giai đoạn dậy thì?",
+      "correct": "3",
+      "explanation": "Ở nữ gồm: trứng chín, xuất hiện kinh nguyệt, trứng rụng.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng đến sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 63,
+      "type": "short",
+      "question": "Câu 19. Quan sát hình ảnh sau, cho biết nên diệt muỗi ở giai đoạn số mấy là hiệu quả nhất?",
+      "correct": "2",
+      "explanation": "Giai đoạn ấu trùng (loăng quăng/bọ gậy) sống trong nước, tập trung dễ tiêu diệt nhất bằng cách khơi thông cống rãnh, đổ nước đọng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai22-Cau19.png",
+      "topic": "Ứng dụng sinh trưởng phát triển",
+      "level": "VD"
+    }
+  ]
+}
