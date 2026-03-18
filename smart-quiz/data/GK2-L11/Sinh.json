@@ -1,0 +1,114 @@
+{
+"title": "Trắc nghiệm Bài 17: Cảm ứng ở động vật",
+"subject": "Sinh học",
+"questions": [
+{
+"id": 1,
+"type": "mcq",
+"question": "Cơ quan nào sau đây có vai trò chủ yếu trả lời kích thích ở người?",
+"options": ["Cơ quan thụ cảm", "Cơ hoặc tuyến", "Hệ thần kinh", "Dây thần kinh"],
+"correct": "Cơ hoặc tuyến",
+"explanation": "Cơ và tuyến là cơ quan thực hiện phản ứng trả lời kích thích (co cơ, tiết dịch).",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "NB"
+},
+{
+"id": 2,
+"type": "mcq",
+"question": "Quan sát con công đực xòe đuôi là nghiên cứu tập tính nào?",
+"options": ["Tập tính kiếm ăn", "Tập tính sinh sản", "Tập tính xã hội", "Tập tính bảo vệ lãnh thổ"],
+"correct": "Tập tính sinh sản",
+"explanation": "Xòe đuôi là hành vi thu hút bạn tình, thuộc tập tính sinh sản.",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "TH"
+},
+{
+"id": 3,
+"type": "mcq",
+"question": "Loài chim nào có tập tính đẻ trứng vào tổ loài khác?",
+"options": ["Chim ưng", "Chim tu hú", "Chim cánh cụt", "Chim bồ câu"],
+"correct": "Chim tu hú",
+"explanation": "Chim tu hú đẻ nhờ vào tổ loài khác để chúng ấp và nuôi con.",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "TH"
+},
+{
+"id": 4,
+"type": "mcq",
+"question": "In vết dễ thấy nhất ở nhóm động vật nào?",
+"options": ["Bò sát", "Lưỡng cư", "Chim", "Cá"],
+"correct": "Chim",
+"explanation": "Hiện tượng in vết rõ nhất ở chim non, đặc biệt là chim mới nở.",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "TH"
+},
+{
+"id": 5,
+"type": "mcq",
+"question": "Cá nghe tiếng kẻng thì bơi đến ăn là dạng học nào?",
+"options": ["Học ngầm", "In vết", "Điều kiện hóa hành động", "Điều kiện hóa đáp ứng"],
+"correct": "Điều kiện hóa đáp ứng",
+"explanation": "Âm thanh trở thành tín hiệu có điều kiện gắn với thức ăn.",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "TH"
+},
+{
+"id": 6,
+"type": "mcq",
+"question": "Kiến lính hi sinh bảo vệ tổ là dạng tập tính nào?",
+"options": ["Tập tính thứ bậc", "Tập tính hợp tác", "Tập tính vị tha", "Tập tính di cư"],
+"correct": "Tập tính vị tha",
+"explanation": "Hi sinh bản thân vì lợi ích của đàn là tập tính vị tha.",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "TH"
+},
+{
+"id": 7,
+"type": "true_false",
+"question": "Cảm ứng giúp sinh vật thích ứng với môi trường để tồn tại và phát triển.",
+"options": ["Đúng", "Sai"],
+"correct": "Đúng",
+"explanation": "Cảm ứng cho phép sinh vật phản ứng phù hợp với thay đổi môi trường.",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "TH"
+},
+{
+"id": 8,
+"type": "mcq",
+"question": "Khi chạm vào nước nóng, kích thích và phản ứng đúng là gì?",
+"options": ["Cốc nước – rụt tay", "Nhiệt độ – rụt tay", "Cốc nước – cảm giác nóng", "Nhiệt độ – cảm giác nóng"],
+"correct": "Nhiệt độ – rụt tay",
+"explanation": "Nhiệt độ cao là kích thích, phản ứng là co cơ rụt tay.",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "NB"
+},
+{
+"id": 9,
+"type": "short",
+"question": "Có bao nhiêu loại tập tính có tính di truyền trong ba loại: bẩm sinh, học được, hỗn hợp?",
+"correct": "2",
+"explanation": "Tập tính bẩm sinh và tập tính hỗn hợp có yếu tố di truyền.",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "NB"
+},
+{
+"id": 10,
+"type": "short",
+"question": "Có bao nhiêu đặc điểm thuộc phản xạ không điều kiện trong các đặc điểm đã cho?",
+"correct": "3",
+"explanation": "Các đặc điểm đúng: tính di truyền, đặc trưng loài, bền vững.",
+"image": null,
+"topic": "Cảm ứng ở động vật",
+"level": "NB"
+}
+]
+}
