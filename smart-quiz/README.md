@@ -92,7 +92,7 @@ Yêu cầu cấu trúc JSON:
 
 Quy tắc bắt buộc:
 
-1. Tạo đúng 10 câu hỏi thuộc chủ đề: [TÊN CHUYÊN ĐỀ].
+1. Tạo đúng, đầy đủ câu hỏi thuộc chủ đề: [TÊN CHUYÊN ĐỀ], hoặc theo dữ liệu.
 2. Các loại câu hỏi hợp lệ:
 
    * "mcq": phải có đủ 4 options
