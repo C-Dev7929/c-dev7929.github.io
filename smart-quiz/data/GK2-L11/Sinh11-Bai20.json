@@ -1,1 +1,946 @@
+{
+  "title": "BÀI 20: SINH TRƯỞNG VÀ PHÁT TRIỂN Ở THỰC VẬT",
+  "subject": "Sinh học",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Câu 1 (B): Khi nói về đặc điểm sinh trưởng và phát triển ở thực vật, phát biểu nào sau đây đúng?",
+      "options": [
+        "A. Quá trình sinh trưởng và phát triển từ giai đoạn ra hoa cho đến khi cây già và chết.",
+        "B. Sinh trưởng và phát triển xảy ra tại một số vị trí, cơ quan trên cơ thể thực vật như ngọn thân, đỉnh cành, chóp rễ nơi có các mô phân sinh.",
+        "C. Sinh trưởng và phát triển xảy ra tại tất cả cơ quan trên cơ thểthực vật làm tăng chiều cao, đường kính thân.",
+        "D. Sinh trưởng không giới hạn được biểu hiện bằng sự xuất hiện và thay mới của các cơ quan như cành, lá, rễ, hoa, quả trong suốt chu kì sống của cây."
+      ],
+      "correct": "B. Sinh trưởng và phát triển xảy ra tại một số vị trí, cơ quan trên cơ thể thực vật như ngọn thân, đỉnh cành, chóp rễ nơi có các mô phân sinh.",
+      "explanation": "Sinh trưởng và phát triển ở thực vật không diễn ra trên toàn bộ cơ thể mà tập trung ở các mô phân sinh.",
+      "image": null,
+      "topic": "Đặc điểm sinh trưởng thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Câu 2 (B): Hình bên dưới chỉ sự nảy mầm của hạt rau diếp (Lactuca sativa L.). Điều kiện nảy mầm của hạt rau diếp là",
+      "options": [
+        "A. ngoài sáng và trong điều kiện được chiếu ánh sáng đỏ.",
+        "B. ngoài sáng và trong điều kiện được chiếu ánh sáng xanh tím.",
+        "C. trong tối và trong điều kiện được chiếu ánh sáng đỏ.",
+        "D. trong tối và trong điều kiện được chiếu ánh sáng xanh tím."
+      ],
+      "correct": "A. ngoài sáng và trong điều kiện được chiếu ánh sáng đỏ.",
+      "explanation": "Hạt rau diếp là hạt nhạy sáng, ánh sáng đỏ ($R$) kích thích sự nảy mầm thông qua sắc tố phytochrome.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau2.png",
+      "topic": "Nhân tố ảnh hưởng sinh trưởng",
+      "level": "NB"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Câu 4 (B): Mô phân sinh ở thực vật là",
+      "options": [
+        "A. nhóm các tế bào chưa phân hóa, nhưng khả năng nguyên phân rất hạn chế.",
+        "B. nhóm các tế bào chưa phân hóa, có khả năng phân chia tạo tế bào mới trong suốt đời sống của thực vật.",
+        "C. nhóm các tế bào chưa phân hóa, mất dần khả năng nguyên phân.",
+        "D. nhóm các tế bào phân hóa, chuyên hóa về chức năng."
+      ],
+      "correct": "B. nhóm các tế bào chưa phân hóa, có khả năng phân chia tạo tế bào mới trong suốt đời sống của thực vật.",
+      "explanation": "Mô phân sinh gồm các tế bào chưa phân hóa và duy trì khả năng nguyên phân suốt đời.",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Câu 5 (B): Loại mô phân sinh nào sau đây không có ở cây một lá mầm?",
+      "options": [
+        "A. Mô phân sinh bên.",
+        "B. Mô phân sinh đỉnh cây.",
+        "C. Mô phân sinh lóng.",
+        "D. Mô phân sinh đỉnh rễ."
+      ],
+      "correct": "A. Mô phân sinh bên.",
+      "explanation": "Cây một lá mầm chỉ có mô phân sinh đỉnh và mô phân sinh lóng, không có mô phân sinh bên nên không có sinh trưởng thứ cấp.",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Câu 6 (B): Phát biểu đúng về mô phân sinh bên và mô phân sinh lóng là",
+      "options": [
+        "A. mô phân sinh bên và mô phân sinh lóng có ở thân cây một lá mầm.",
+        "B. mô phân sinh bên có ở thân cây một lá mầm, còn mô phân sinh lóng có ở thân cây hai lá mầm.",
+        "C. mô phân sinh bên có ở thân cây hai lá mầm, còn mô phân sinh lóng có ở thân cây một lá mầm.",
+        "D. mô phân sinh bên và mô phân sinh lóng có ở thân cây hai lá mầm."
+      ],
+      "correct": "C. mô phân sinh bên có ở thân cây hai lá mầm, còn mô phân sinh lóng có ở thân cây một lá mầm.",
+      "explanation": "Mô phân sinh bên đặc trưng cho cây hai lá mầm, mô phân sinh lóng đặc trưng cho cây một lá mầm.",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Câu 7 (B): Khi nói về sinh trưởng thứ cấp, phát biểu nào sau đây là đúng?",
+      "options": [
+        "A. Sinh trưởng thứ cấp là sự gia tăng về chiều dài của cơ thể thực vật.",
+        "B. Sinh trưởng thứ cấp là do hoạt động của mô phân sinh bên.",
+        "C. Sinh trưởng thứ cấp có ở tất cả các loài thực vật.",
+        "D. Sinh trưởng thứ cấp chỉ có ở thực vật một lá mầm."
+      ],
+      "correct": "B. Sinh trưởng thứ cấp là do hoạt động của mô phân sinh bên.",
+      "explanation": "Sinh trưởng thứ cấp làm tăng bề ngang của thân và rễ nhờ hoạt động của mô phân sinh bên (tầng sinh mạch, tầng sinh bần).",
+      "image": null,
+      "topic": "Sinh trưởng thứ cấp",
+      "level": "NB"
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Câu 8 (B): Ở cây hai lá mầm, tính từ ngọn đến rễ là các loại mô phân sinh theo thứ tự là:",
+      "options": [
+        "A. Mô phân sinh đỉnh ngọn → Mô phân sinh bên → Mô phân sinh đỉnh rễ.",
+        "B. Mô phân sinh đỉnh ngọn → Mô phân sinh đỉnh rễ → Mô phân sinh bên.",
+        "C. Mô phân sinh đỉnh rễ → Mô phân sinh bên → Mô phân sinh bên.",
+        "D. Mô phân sinh bên → Mô phân sinh đỉnh ngọn → Mô phân sinh đỉnh rễ."
+      ],
+      "correct": "A. Mô phân sinh đỉnh ngọn → Mô phân sinh bên → Mô phân sinh đỉnh rễ.",
+      "explanation": "Theo chiều dọc cơ thể cây hai lá mầm, đỉnh ngọn có MPS đỉnh, thân có MPS bên và chóp rễ có MPS đỉnh rễ.",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Câu 9 (B): Ở cây một lá mầm, mô phân sinh gồm có",
+      "options": [
+        "A. mô phân sinh đỉnh và mô phân sinh bên.",
+        "B. mô phân sinh lóng và mô phân sinh bên.",
+        "C. mô phân sinh đỉnh và mô phân sinh lóng.",
+        "D. mô phân sinh đỉnh và mô phân sinh rễ."
+      ],
+      "correct": "C. mô phân sinh đỉnh và mô phân sinh lóng.",
+      "explanation": "Cây một lá mầm có mô phân sinh đỉnh (ngọn và rễ) cùng mô phân sinh lóng.",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Câu 10 (B): Ở cây hai lá mầm, thân và rễ dài ra là nhờ hoạt động của",
+      "options": [
+        "A. mô phân sinh cành.",
+        "B. mô phân sinh bên.",
+        "C. mô phân sinh lóng.",
+        "D. mô phân sinh đỉnh."
+      ],
+      "correct": "D. mô phân sinh đỉnh.",
+      "explanation": "Mô phân sinh đỉnh thực hiện sinh trưởng sơ cấp, giúp cây dài ra.",
+      "image": null,
+      "topic": "Sinh trưởng sơ cấp",
+      "level": "NB"
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Câu 11 (B): Các hormone kích thích sinh trưởng bao gồm",
+      "options": [
+        "A. auxin, gibberellin, cytokinin.",
+        "B. auxin, abscisic acid, cytokinin.",
+        "C. auxin, ethylene, abscisic acid.",
+        "D. auxin, gibberellin, ethylene."
+      ],
+      "correct": "A. auxin, gibberellin, cytokinin.",
+      "explanation": "Nhóm kích thích sinh trưởng gồm Auxin, GA và Cytokinin. Ethylene và ABA thuộc nhóm ức chế.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Câu 12 (H): Loại mô phân sinh không có ở cây lúa là",
+      "options": [
+        "A. mô phân sinh đỉnh rễ.",
+        "B. mô phân sinh lóng.",
+        "C. mô phân sinh bên.",
+        "D. mô phân sinh đỉnh thân."
+      ],
+      "correct": "C. mô phân sinh bên.",
+      "explanation": "Cây lúa là cây một lá mầm, không có mô phân sinh bên.",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "TH"
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Câu 13 (H): Trong kĩ thuật nhân giống in vitro, loại mô nào thường được sử dụng làm vật liệu nuôi cấy tạo cây hoàn chỉnh, giúp nhân nhanh các giống cây trồng trong thời gian ngắn?",
+      "options": [
+        "A. Mô phân sinh bên.",
+        "B. Mô phân sinh lóng.",
+        "C. Mô phân sinh đỉnh rễ.",
+        "D. Mô phân sinh đỉnh."
+      ],
+      "correct": "D. Mô phân sinh đỉnh.",
+      "explanation": "Mô phân sinh đỉnh có tốc độ phân chia mạnh và ít nhiễm virus nhất.",
+      "image": null,
+      "topic": "Ứng dụng sinh trưởng thực vật",
+      "level": "TH"
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Câu 14 (H): Hình bên dưới là mặt cắt ngang thân cây gỗ thể hiện cấu tạo của thân. Sự gia tăng đường kính thân là kết quả của sự tạo thành mạch gỗ thứ cấp ở phía trong và mạch rây thứ cấp nằm ở phía ngoài thân. Nguyên nhân là do sự phân chia của",
+      "options": [
+        "A. mô phân sinh đỉnh ở ngọn.",
+        "B. tầng sinh mạch.",
+        "C. mô phân sinh đỉnh rễ.",
+        "D. tầng sinh bần."
+      ],
+      "correct": "B. tầng sinh mạch.",
+      "explanation": "Tầng sinh mạch (tầng sinh trụ) phân chia tạo ra mạch gỗ thứ cấp và mạch rây thứ cấp làm thân to ra.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau14.png",
+      "topic": "Sinh trưởng thứ cấp",
+      "level": "TH"
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Câu 15 (H): Hình bên dưới mô tả sự sinh trưởng sơ cấp ở thân và rễ. Để hạn chế chiều cao của cây, người làm vườn cần cắt tỉa bộ phận nào của cây?",
+      "options": [
+        "A. Ngọn cây.",
+        "B. Lá cây. ",
+        "C. Thân cây.",
+        "D. Rễ cây."
+      ],
+      "correct": "A. Ngọn cây.",
+      "explanation": "Cắt ngọn giúp loại bỏ mô phân sinh đỉnh, từ đó hạn chế sinh trưởng chiều cao và kích thích cành bên.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau15.png",
+      "topic": "Sinh trưởng sơ cấp",
+      "level": "TH"
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Câu 16 (H): Hormone được ứng dụng để kích thích ra rễ của cành giâm, cành chiết trong nhân giống vô tính là",
+      "options": [
+        "A. gibberellin.",
+        "B. auxin.",
+        "C. cytokinin.",
+        "D. kinetin."
+      ],
+      "correct": "B. auxin.",
+      "explanation": "Auxin có tác dụng kích thích hình thành rễ phụ ở cành giâm, cành chiết.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "TH"
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Câu 17 (H): Trong đời sống, việc sản xuất giá đỗ và làm mạch nha đã ứng dụng giai đoạn nào trong chu kì sinh trưởng và phát triển của thực vật?",
+      "options": [
+        "A. Giai đoạn mọc lá, sinh trưởng mạch.",
+        "B. Giai đoạn nảy mầm.",
+        "C. Giai đoạn ra hoa.",
+        "D. Giai đoạn tạo quả, chín."
+      ],
+      "correct": "B. Giai đoạn nảy mầm.",
+      "explanation": "Giá đỗ và mạch nha được tạo ra từ quá trình nảy mầm của hạt.",
+      "image": null,
+      "topic": "Ứng dụng sinh trưởng",
+      "level": "TH"
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Câu 18 (H): Một số hormone ngoại sinh được ứng dụng nhiều trong sản xuất nông nghiệp:",
+      "options": [
+        "A. Gibberellin, Auxin, Ethylene.",
+        "B. Gibberellin, Abscisic acid, Ethylene.",
+        "C. Gibberellin, Abscisic acid, Cytokinin.",
+        "D. Gibberellin, Auxin, Cytokinin"
+      ],
+      "correct": "D. Gibberellin, Auxin, Cytokinin",
+      "explanation": "Đây là 3 hormone kích thích sinh trưởng phổ biến nhất được ứng dụng để tăng năng suất.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "TH"
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Câu 19 (H): Cho các nhân tố chi phối quá trình phát triển của thực vật có hoa: I. yếu tố di truyền; II. hormone thực vật; III. ánh sáng; IV. nhiệt độ; V. chất dinh dưỡng. Các nhân tố bên trong là:",
+      "options": [
+        "A. I, II, V.",
+        "B. I, II.",
+        "C. I, II, IV.",
+        "D. III, IV, V."
+      ],
+      "correct": "B. I, II.",
+      "explanation": "Nhân tố bên trong gồm di truyền và hormone. Ánh sáng, nhiệt độ là nhân tố bên ngoài.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "Câu 20 (VD): Cho các phát biểu sau: I. Auxin được tổng hợp ở các cơ quan đang sinh trưởng mạnh (chồi ngọn, lá non, phấn hoa, phôi hạt) sau đó được vận chuyển hướng gốc đến rễ theo mạch rây. II. Auxin được tổng hợp ở các cơ quan đang sinh trưởng mạnh (chồi ngọn, lá non, phấn hoa, phôi hạt) sau đó được vận chuyển hướng gốc đến rễ theo mạch gỗ. III. Ở cấp độ tế bào, auxin kích thích phân bào, dãn dài của tế bào, phối hợp với hormone khác kích thích quá trình biệt hóa tế bào. IV. Ở cấp độ cơ thể, auxin có tác dụng làm tăng kích thước quả, làm chậm quá trình chín, hạn chế rụng quả, làm liền vết thương. Có bao nhiêu phát biểu trên là đúng?",
+      "options": [
+        "A. 1.",
+        "B. 2.",
+        "C. 3.",
+        "D. 4."
+      ],
+      "correct": "B. 2.",
+      "explanation": "Các phát biểu đúng là III và IV. Phát biểu I và II sai về cơ chế vận chuyển chủ đạo hướng gốc của Auxin (thường qua nhu mô).",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "VD"
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "Câu 21 (VD): Khi nói về tương quan giữa các hormone thực vật. Phát biểu nào sau đây đúng?",
+      "options": [
+        "A. Tương quan chung là tương quan giữa hormone thuộc nhóm kích thích sinh trưởng với hormone thuộc nhóm ức chế sinh trưởng.",
+        "B. Ở giai đoạn cây đang sinh trưởng, phát triển, hormone kích thích sinh trưởng được tổng hợp ít, khi cây chuyển sang giai đoạn sinh sản, già hóa thì hormone ức chế sinh trưởng giảm dần.",
+        "C. Theo chu kì phát triển của cây, tác động của hormone kích thích có xu hướng giảm dần, trong khi tác động của hormone ức chế tăng dần. Điều này chỉ đúng đối với cây lâu năm, đối với cây 1 năm thì ngược lại.",
+        "D.  Khi xử lí các hormone ngoại sinh kích thích sinh trương lên cây trồng sử dụng làm thức ăn cho người và động vật với liều lượng càng nhiều càng tốt."
+      ],
+      "correct": "A. Tương quan chung là tương quan giữa hormone thuộc nhóm kích thích sinh trưởng với hormone thuộc nhóm ức chế sinh trưởng.",
+      "explanation": "Sự sinh trưởng và phát triển của cây là kết quả của sự cân bằng và tương quan giữa các nhóm hormone.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "VD"
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Câu 22 (VD): Ethylene và abscisic acid có cùng tác động nào sau đây?",
+      "options": [
+        "A. Kích thích quá trình rụng lá và chín của quả.",
+        "B. Ức chế nảy mầm của hạt, kích thích quá trình già hóa của mô, cơ quan.",
+        "C. Kích thích quá trình già hóa của mô, cơ quan và chín của quả.",
+        "D.  Kích thích quá trình rụng lá và già hóa của mô, cơ quan."
+      ],
+      "correct": "D.  Kích thích quá trình rụng lá và già hóa của mô, cơ quan.",
+      "explanation": "Dựa vào bảng tương quan, cả Ethylene và ABA đều kích thích sự rụng lá và sự già hóa.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "VD"
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Câu 23 (VD): Sự hoa hoa của nhiều loài thực vật phụ thuộc vào tương quan độ dài ngày và đêm gọi là quang chu kì. Thực vật đêm dài (thực vật ngày ngắn) gồm các loài cây nào sau đây?",
+      "options": [
+        "A. Thanh long, cúc, mía, củ cải đường, lạc.",
+        "B. Cà chua, cà tím, cà rốt, cúc và đậu tương.",
+        "C. Dâu tây, cà tím, cà rốt, lạc và hành.",
+        "D. Cúc, thược dược, cà tím, đậu tương và mía."
+      ],
+      "correct": "D. Cúc, thược dược, cà tím, đậu tương và mía.",
+      "explanation": "Cúc, thược dược, đậu tương và mía là các cây ngày ngắn điển hình.",
+      "image": null,
+      "topic": "Phát triển thực vật",
+      "level": "VD"
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Câu 24 (VD): Sự hoa hoa của nhiều loài thực vật phụ thuộc vào tương quan độ dài ngày và đêm gọi là quang chu kì. Thực vật đêm ngắn (thực vật ngày dài) gồm các loài cây nào sau đây?",
+      "options": [
+        "A. Thanh long, dâu tây, cà rốt, củ cải đường và hành.",
+        "B. Cà chua, cà tím, cà rốt, cúc và đậu tương.",
+        "C. Dâu tây, cà tím, cà rốt, lạc và hướng dương.",
+        "D. Cúc, thược dược, cà tím, đậu tương và mía."
+      ],
+      "correct": "A. Thanh long, dâu tây, cà rốt, củ cải đường và hành.",
+      "explanation": "Thanh long, dâu tây, cà rốt, củ cải đường là cây ngày dài (đêm ngắn).",
+      "image": null,
+      "topic": "Phát triển thực vật",
+      "level": "VD"
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "Câu 25 (VD): Cho các bộ phận của câu như sau: I. Đỉnh rễ; II. Thân; III. Chồi nách; IV. Chồi đỉnh; V. Hoa; VI. Lá. Mô phân sinh đỉnh không có ở bộ phận nào của cây?",
+      "options": [
+        "A. I, II, III.",
+        "B. II, III, IV.",
+        "C. III, IV, V.",
+        "D. II, V, VI."
+      ],
+      "correct": "D. II, V, VI.",
+      "explanation": "Mô phân sinh đỉnh chỉ có ở các đỉnh sinh trưởng (đỉnh rễ, chồi ngọn, chồi nách). Thân, hoa, lá là cơ quan đã biệt hóa.",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "VD"
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "Câu 25 (VD): Cho các phát biểu sau: I. Ethylene là hormone thực vật duy nhất tồn tại ở dạng khí. II. Ethylene được vận chuyển bằng con đường khuếch tán trong phạm vi ngắn. III. Ethylene được tổng hợp nhiều trong giai đoạn già hóa và quá trình chín của quả hoặc do tổn thương cơ học và hạn hán. IV. Vai trò của ethylene là thúc đẩy sự chín của quả, kích thích sự rụng lá, và sự ra hoa của một số loài thực vật như dứa, xoài, dưa chuột. V. Ethylene là hormone kích thích sinh trưởng và phát triển ở thực vật. Những phát biểu đúng là:",
+      "options": [
+        "A. I, II, III, IV và V.",
+        "B. I, II, III và IV.",
+        "C. II, III, IV và V.",
+        "D. I, III, IV và V."
+      ],
+      "correct": "B. I, II, III và IV.",
+      "explanation": "Phát biểu V sai vì Ethylene thuộc nhóm hormone ức chế sinh trưởng.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "VD"
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Câu 26 (VD): Ức chế sự già hóa của mô và cơ quan do tác động của các loại hormone nào sau đây?",
+      "options": [
+        "A. Auxin, gibberellin và cytokinin.",
+        "B. Auxin, ethylene và abscisic acid.",
+        "C. Gibberellin, cytokinin và abscisic acid.",
+        "D.  Cytokinin, ethylene và abscisic acid."
+      ],
+      "correct": "A. Auxin, gibberellin và cytokinin.",
+      "explanation": "Theo bảng dữ liệu, Auxin, GA và Cytokinin đều có tác động ức chế sự già hóa.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "VD"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "question": "Câu 1 (NB) Xác định câu đúng (Đ), sai (S) ở những nội dung nói về Gibberellin dưới đây. Ý a. Gibberellin kích thích sự phân chia và kéo dài tế bào.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là chức năng chính của Gibberellin.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 28,
+      "type": "true_false",
+      "question": "Câu 1 (NB) Xác định câu đúng (Đ), sai (S) ở những nội dung nói về Gibberellin dưới đây. Ý b. Gibberellin ngăn chặn sự rụng lá, hoa.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Vai trò ngăn chặn rụng chủ yếu là Auxin và Cytokinin.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "question": "Câu 1 (NB) Xác định câu đúng (Đ), sai (S) ở những nội dung nói về Gibberellin dưới đây. Ý c. Gibberellin được tổng hợp ở bao lá mầm của phôi hạt.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Auxin mới được tổng hợp nhiều ở bao lá mầm.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 30,
+      "type": "true_false",
+      "question": "Câu 1 (NB) Xác định câu đúng (Đ), sai (S) ở những nội dung nói về Gibberellin dưới đây. Ý d. Gibberellin được vận chuyển trong hệ mạch gỗ và mạch rây.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Hormone GA vận chuyển không phân cực trong hệ thống mạch dẫn.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 31,
+      "type": "true_false",
+      "question": "Câu 2 (NB) Xác định câu đúng (Đ), sai (S) ở những nhận định về cytokinin dưới đây. Ý a. Dạng chính của cytokinin là Zeatin.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Zeatin là cytokinin tự nhiên phổ biến nhất.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 32,
+      "type": "true_false",
+      "question": "Câu 2 (NB) Xác định câu đúng (Đ), sai (S) ở những nhận định về cytokinin dưới đây. Ý b. Cytokinin được vận chuyển hướng đỉnh trong mạch rây.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Cytokinin vận chuyển hướng đỉnh qua mạch gỗ.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 33,
+      "type": "true_false",
+      "question": "Câu 2 (NB) Xác định câu đúng (Đ), sai (S) ở những nhận định về cytokinin dưới đây. Ý c. Cytokinin là hormone kích thích hạt nảy mầm.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Cytokinin có vai trò kích thích sự nảy mầm của hạt.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 34,
+      "type": "true_false",
+      "question": "Câu 2 (NB) Xác định câu đúng (Đ), sai (S) ở những nhận định về cytokinin dưới đây. Ý d. Tỉ lệ cytokinin và auxin quyết định sự biệt hóa tế bào.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Tương quan tỉ lệ này điều khiển quá trình phát sinh hình thái trong nuôi cấy mô.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 35,
+      "type": "true_false",
+      "question": "Câu 3.1: (NB) Xác định câu đúng (Đ), sai (S) ở những nhận định về ứng dụng của hormone dưới đây. Ý a. Sử dụng IAA để kích thích sự ra rễ ở cành giâm.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "IAA (nhóm Auxin) kích thích ra rễ.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 36,
+      "type": "true_false",
+      "question": "Câu 3.1: (NB) Xác định câu đúng (Đ), sai (S) ở những nhận định về ứng dụng của hormone dưới đây. Ý b. Sử dụng ethylene để thúc quả chín.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Ethylene là hormone làm chín quả.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 37,
+      "type": "true_false",
+      "question": "Câu 3.1: (NB) Xác định câu đúng (Đ), sai (S) ở những nhận định về ứng dụng của hormone dưới đây. Ý c. Sử dụng ethylene để tăng tỉ lệ đậu quả.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Ethylene thường gây rụng hoa và quả, không dùng tăng đậu quả.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 38,
+      "type": "true_false",
+      "question": "Câu 3.1: (NB) Xác định câu đúng (Đ), sai (S) ở những nhận định về ứng dụng của hormone dưới đây. Ý d. Sử dụng ethylene trong nhân giống vô tính.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Trong nhân giống vô tính dùng Auxin và Cytokinin.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 39,
+      "type": "true_false",
+      "question": "Câu 3.2: (NB) Dựa trên hình và kiến thức về mô phân sinh ở thực vật. Xác định phát biểu đúng, phát biểu sai? Ý a. Mô phân sinh đỉnh: có ở đầu ngọn thân, ngọn cành, chồi nách, chóp rễ.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Vị trí chính xác của mô phân sinh đỉnh.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau3.2.png",
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 40,
+      "type": "true_false",
+      "question": "Câu 3.2: (NB) Dựa trên hình và kiến thức về mô phân sinh ở thực vật. Xác định phát biểu đúng, phát biểu sai? Ý b. Mô phân sinh bên: nằm ở phần vỏ và trụ của thân, rễ của cây một lá mầm.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Cây một lá mầm không có mô phân sinh bên.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau3.2.png",
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 41,
+      "type": "true_false",
+      "question": "Câu 3.2: (NB) Dựa trên hình và kiến thức về mô phân sinh ở thực vật. Xác định phát biểu đúng, phát biểu sai? Ý c. Mô phân sinh lóng: nằm ở gốc của lóng. Sự hoạt động của mô phân sinh lóng giúp lóng cây dài ra và sẽ ngừng hoạt động khi lóng đạt đến kích thước tối đa.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Mô tả chính xác về mô phân sinh lóng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau3.2.png",
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 42,
+      "type": "true_false",
+      "question": "Câu 3.2: (NB) Dựa trên hình và kiến thức về mô phân sinh ở thực vật. Xác định phát biểu đúng, phát biểu sai? Ý d. Sự hoạt động của mô phân sinh bên giúp cây một lá mầm tăng trưởng theo đường kính của cây.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "MPS bên chỉ giúp cây hai lá mầm tăng đường kính.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau3.2.png",
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 43,
+      "type": "true_false",
+      "question": "Câu 3(TH) Cho biết mối tương quan của các loại hormone... Những nhận định sau đây là đúng hay sai? Ý a. Hormone auxin và gibberellin có tác động đối lập trong điều chỉnh sự già hóa của cơ quan.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Cả hai đều ức chế già hóa nên tác động cùng chiều.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau3.png",
+      "topic": "Hormone thực vật",
+      "level": "TH"
+    },
+    {
+      "id": 44,
+      "type": "true_false",
+      "question": "Câu 3(TH) Cho biết mối tương quan của các loại hormone... Những nhận định sau đây là đúng hay sai? Ý b. Sử dụng gibberellin để ức chế tác dụng của ABA trong điều chỉnh sự nảy mầm của hạt.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "GA kích thích nảy mầm đối kháng với ABA ức chế nảy mầm.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau3.png",
+      "topic": "Hormone thực vật",
+      "level": "TH"
+    },
+    {
+      "id": 45,
+      "type": "true_false",
+      "question": "Câu 3(TH) Cho biết mối tương quan của các loại hormone... Những nhận định sau đây là đúng hay sai? Ý c. Sử dụng cytokinin để làm tăng sự phân cành của cây.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Cytokinin kích thích chồi bên phát triển.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau3.png",
+      "topic": "Hormone thực vật",
+      "level": "TH"
+    },
+    {
+      "id": 46,
+      "type": "true_false",
+      "question": "Câu 3(TH) Cho biết mối tương quan của các loại hormone... Những nhận định sau đây là đúng hay sai? Ý d. Tác dụng của ethylene và ABA đối với sự nảy mầm của hạt là giống nhau.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "ABA ức chế nảy mầm hạt còn Ethylene không thể hiện rõ vai trò này trong bảng (thường là kích thích).",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau3.png",
+      "topic": "Hormone thực vật",
+      "level": "TH"
+    },
+    {
+      "id": 47,
+      "type": "true_false",
+      "question": "Câu 4 (VD) Mỗi nhận định sau đây là Đúng hay Sai về thí nghiệm này? Ý a. Cây chỉ hướng sáng khi ngọn cây được tiếp xúc với ánh sáng.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Ngọn cây là nơi tiếp nhận kích thích ánh sáng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau4.png",
+      "topic": "Tính hướng sáng",
+      "level": "VD"
+    },
+    {
+      "id": 48,
+      "type": "true_false",
+      "question": "Câu 4 (VD) Mỗi nhận định sau đây là Đúng hay Sai về thí nghiệm này? Ý b. Cây bị che ngọn bằng mũ chắn sáng không hướng sáng do không có auxin ở chồi mầm.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Vẫn có auxin nhưng do bị che sáng nên auxin phân bố đều, cây mọc thẳng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau4.png",
+      "topic": "Tính hướng sáng",
+      "level": "VD"
+    },
+    {
+      "id": 49,
+      "type": "true_false",
+      "question": "Câu 4 (VD) Mỗi nhận định sau đây là Đúng hay Sai về thí nghiệm này? Ý c. Auxin kích thích chồi mầm hướng về nơi có ánh sáng.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Sự phân bố auxin không đều kích thích tế bào dãn dài khác nhau làm ngọn cây cong về phía sáng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau4.png",
+      "topic": "Tính hướng sáng",
+      "level": "VD"
+    },
+    {
+      "id": 50,
+      "type": "true_false",
+      "question": "Câu 4 (VD) Mỗi nhận định sau đây là Đúng hay Sai về thí nghiệm này? Ý d. Tính hướng sáng của cây không xảy ra khi chồi mầm được che bằng mũ chắn sáng.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Khi bị che ngọn, cây không cảm ứng được hướng ánh sáng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau4.png",
+      "topic": "Tính hướng sáng",
+      "level": "VD"
+    },
+    {
+      "id": 51,
+      "type": "true_false",
+      "question": "Câu 5. Em hãy quan sát hình ảnh mặt cắt ngang của thân cây gỗ... Ý a) Các vòng gỗ đồng tâm hay còn gọi là vòng sinh trưởng",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Vòng gỗ tương ứng với chu kì sinh trưởng hàng năm.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau5.png",
+      "topic": "Sinh trưởng thứ cấp",
+      "level": "NB"
+    },
+    {
+      "id": 52,
+      "type": "true_false",
+      "question": "Câu 5. Em hãy quan sát hình ảnh mặt cắt ngang của thân cây gỗ... Ý b) Các vòng gỗ được hình thành là do hoạt động của tầng sinh mạch của mô phân sinh bên.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Tầng sinh mạch tạo gỗ thứ cấp tập tụ thành vòng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau5.png",
+      "topic": "Sinh trưởng thứ cấp",
+      "level": "NB"
+    },
+    {
+      "id": 53,
+      "type": "true_false",
+      "question": "Câu 5. Em hãy quan sát hình ảnh mặt cắt ngang của thân cây gỗ... Ý c) Tuổi của cây gỗ được tính dựa vào vòng năm bằng cách đếm tổng số vòng sáng cộng với vòng tối của thân.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Một năm gồm 1 vòng sáng và 1 vòng tối, nên tuổi bằng số cặp vòng chứ không phải tổng số vòng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau5.png",
+      "topic": "Sinh trưởng thứ cấp",
+      "level": "NB"
+    },
+    {
+      "id": 54,
+      "type": "true_false",
+      "question": "Câu 5. Em hãy quan sát hình ảnh mặt cắt ngang của thân cây gỗ... Ý d) Có thể sử dụng vòng gỗ để tính tuổi của cây và để tìm hiểu về đặc điểm khí hậu (lượng mưa, nhiệt độ) ở địa phương nơi TV đó sinh sống.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Độ dày vòng gỗ phản ánh điều kiện khí hậu của năm đó.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau5.png",
+      "topic": "Sinh trưởng thứ cấp",
+      "level": "NB"
+    },
+    {
+      "id": 55,
+      "type": "short",
+      "question": "Câu 1. Cho các hormone: Auxin, abcisic acid, cytokinin, gibberelin và ethylene. Có bao nhiêu hoocmon kích thích sinh trưởng của cơ thể thực vật?",
+      "correct": "3",
+      "explanation": "Gồm Auxin, Cytokinin, Gibberellin.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 56,
+      "type": "short",
+      "question": "Câu 2. Cho các nhóm thực vật: hành, cà chua, lạc, củ cải đường, cà phê, cà tím và hướng dương. Có bao nhiêu nhóm thực vật là cây ngày ngắn?",
+      "correct": "2",
+      "explanation": "Gồm cà phê, lạc.",
+      "image": null,
+      "topic": "Phát triển thực vật",
+      "level": "VD"
+    },
+    {
+      "id": 57,
+      "type": "short",
+      "question": "Câu 3. Cho các chất sau: cytokinin, cytocrome, phytochrome, ethylene, gibberelin và auxin. Có bao nhiêu chất tác dụng kích thích sự ra hoa của cây?",
+      "correct": "3",
+      "explanation": "Phytochrome, Gibberellin và Ethylene (trên một số loài).",
+      "image": null,
+      "topic": "Phát triển thực vật",
+      "level": "VD"
+    },
+    {
+      "id": 58,
+      "type": "short",
+      "question": "Câu 4. Nhiệt độ tối ưu tối đa với sinh trưởng và phát triển thực vật thường ở khoảng nào với cây nhiệt đới?",
+      "correct": "25-35°C",
+      "explanation": "Cây nhiệt đới sinh trưởng tốt nhất ở khoảng 25 - 35 độ C.",
+      "image": null,
+      "topic": "Nhân tố ảnh hưởng sinh trưởng",
+      "level": "NB"
+    },
+    {
+      "id": 59,
+      "type": "short",
+      "question": "Câu 5. Ở thực vật có bao nhiêu loại mô phân sinh ?",
+      "correct": "3",
+      "explanation": "Mô phân sinh đỉnh, mô phân sinh bên và mô phân sinh lóng.",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "NB"
+    },
+    {
+      "id": 60,
+      "type": "short",
+      "question": "Câu 6. Ở thực vật có bao nhiêu kiểu sinh trưởng?",
+      "correct": "2",
+      "explanation": "Sinh trưởng sơ cấp và sinh trưởng thứ cấp.",
+      "image": null,
+      "topic": "Sinh trưởng thực vật",
+      "level": "NB"
+    },
+    {
+      "id": 61,
+      "type": "short",
+      "question": "Câu 7. Tuổi của cây một năm được tính theo bao nhiêu yếu tố trong các yếu tố sau: số lá, đường kính thân, đường kính tán lá, chiều cao của cây, số nhánh rễ ?",
+      "correct": "1",
+      "explanation": "Thường tính theo số lá.",
+      "image": null,
+      "topic": "Phát triển thực vật",
+      "level": "TH"
+    },
+    {
+      "id": 62,
+      "type": "short",
+      "question": "Câu 8. Auxin chủ yếu sinh ra ở bao nhiêu bộ phận trong các bộ phận sau: cuốn lá, thân, cành, tế bào đang phân chia ở rễ, đỉnh của thân, tế bào đang phân chia ở quả, đỉnh cành?",
+      "correct": "3",
+      "explanation": "Đỉnh thân, đỉnh cành và tế bào phân chia ở quả/phôi hạt.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "TH"
+    },
+    {
+      "id": 63,
+      "type": "short",
+      "question": "Câu 9. Nhiệt độ  tối thiểu với sinh trưởng và phát triển thực vật thường ở khoảng nào với cây nhiệt đới?",
+      "correct": "5-10°C",
+      "explanation": "Dưới ngưỡng này cây nhiệt đới ngừng sinh trưởng.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau9.png",
+      "topic": "Nhân tố ảnh hưởng sinh trưởng",
+      "level": "NB"
+    },
+    {
+      "id": 64,
+      "type": "short",
+      "question": "Câu 11. Dựa vào hình vẽ gốc cây bị cặt ngang hãy cho biết cây này bao nhiêu tuổi ?",
+      "correct": "14",
+      "explanation": "Đếm các vòng năm tối trên hình vẽ.",
+      "image": "uploaded:image_864ceb.png",
+      "topic": "Sinh trưởng thứ cấp",
+      "level": "VD"
+    },
+    {
+      "id": 65,
+      "type": "short",
+      "question": "Câu 13: Cho các loài: tre, nứa, trúc, cam, chanh, vầu, mây, giang. Có bao nhiêu loài có mô phân sinh lóng?",
+      "correct": "6",
+      "explanation": "Gồm tre, nứa, trúc, vầu, mây, giang (nhóm họ Hòa thảo).",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "VD"
+    },
+    {
+      "id": 66,
+      "type": "short",
+      "question": "Câu 14: Mô phân sinh bên, mô phân đỉnh thân, mô phân sinh lóng, mô phân sinh đỉnh rễ. có mấy loại có ở cây 2 lá mầm?",
+      "correct": "3",
+      "explanation": "Gồm MPS bên, MPS đỉnh thân, MPS đỉnh rễ.",
+      "image": null,
+      "topic": "Mô phân sinh",
+      "level": "TH"
+    },
+    {
+      "id": 67,
+      "type": "short",
+      "question": "Câu 15. Cytokinin chủ yếu sinh ra ở bao nhiêu bộ phận trong các bộ phận sau: cuốn lá, thân, cành, tế bào đang phân chia ở rễ, đỉnh của thân, tế bào đang phân chia ở quả, đỉnh cành?",
+      "correct": "1",
+      "explanation": "Chủ yếu tổng hợp ở đỉnh rễ.",
+      "image": null,
+      "topic": "Hormone thực vật",
+      "level": "TH"
+    }
+  ]
+}
+
 
