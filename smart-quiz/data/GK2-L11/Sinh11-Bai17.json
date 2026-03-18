@@ -1,0 +1,150 @@
+{
+"title": "Bộ đề trắc nghiệm Cảm ứng ở động vật",
+"subject": "Sinh học",
+"questions": [
+{
+"id": 1,
+"type": "mcq",
+"question": "Cảm ứng ở sinh vật mang lại vai trò chủ yếu nào sau đây?",
+"options": [
+"Giúp sinh vật tạo ra thế hệ con cháu",
+"Giúp sinh vật phản ứng lại các kích thích của môi trường để tồn tại và phát triển",
+"Giúp động vật có tư duy và nhận thức học tập",
+"Giúp sinh vật tìm kiếm được nguồn thức ăn dồi dào"
+],
+"correct": "Giúp sinh vật phản ứng lại các kích thích của môi trường để tồn tại và phát triển",
+"explanation": "Cảm ứng giúp sinh vật thích nghi với những thay đổi của môi trường xung quanh, từ đó duy trì sự sống và đảm bảo sự phát triển.",
+"image": null,
+"topic": "Khái quát về cảm ứng",
+"level": "NB"
+},
+{
+"id": 2,
+"type": "mcq",
+"question": "Cơ quan nào sau đây có vai trò chủ yếu trả lời kích thích ở người trong một cung phản xạ?",
+"options": [
+"Cơ quan thụ cảm",
+"Hệ thần kinh trung ương",
+"Cơ hoặc tuyến",
+"Dây thần kinh"
+],
+"correct": "Cơ hoặc tuyến",
+"explanation": "Trong cung phản xạ, cơ quan thụ cảm tiếp nhận kích thích, hệ thần kinh trung ương phân tích và xử lý thông tin, cơ quan thực hiện (cơ hoặc tuyến) sẽ đưa ra phản ứng trả lời kích thích đó.",
+"image": null,
+"topic": "Cơ chế cảm ứng",
+"level": "NB"
+},
+{
+"id": 3,
+"type": "mcq",
+"question": "Đặc điểm phản ứng của động vật có hệ thần kinh dạng chuỗi hạch là gì?",
+"options": [
+"Phản ứng toàn thân, tiêu tốn nhiều năng lượng",
+"Phản ứng cục bộ tại vùng bị kích thích, tiêu tốn ít năng lượng hơn",
+"Phản ứng chậm chạp và thiếu chính xác tuyệt đối",
+"Chỉ có khả năng thực hiện các phản xạ có điều kiện"
+],
+"correct": "Phản ứng cục bộ tại vùng bị kích thích, tiêu tốn ít năng lượng hơn",
+"explanation": "Mỗi hạch thần kinh điều khiển một vùng cơ thể xác định. Do đó, khi bị kích thích, động vật chỉ phản ứng cục bộ, giúp tiết kiệm năng lượng so với hệ thần kinh dạng lưới.",
+"image": null,
+"topic": "Tiến hóa hệ thần kinh",
+"level": "TH"
+},
+{
+"id": 4,
+"type": "true_false",
+"question": "Trong quá trình truyền tin qua synapse, chất trung gian hóa học được giải phóng từ màng sau và di chuyển về màng trước synapse.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Chất trung gian hóa học chứa trong các bóng ở chùy synapse (thuộc màng trước). Khi có xung thần kinh, nó được giải phóng qua khe synapse và gắn vào các thụ thể đặc hiệu ở màng sau.",
+"image": null,
+"topic": "Truyền tin qua synapse",
+"level": "TH"
+},
+{
+"id": 5,
+"type": "true_false",
+"question": "Hiện tượng co rụt tay lại khi vô tình chạm vào cây xương rồng có gai nhọn là một phản xạ không điều kiện.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Đây là phản xạ bẩm sinh mang tính chất tự vệ, có khả năng di truyền và không cần qua quá trình học tập hay rèn luyện trong đời sống cá thể.",
+"image": null,
+"topic": "Phản xạ",
+"level": "NB"
+},
+{
+"id": 6,
+"type": "mcq",
+"question": "Sự di chuyển của ion nào sau đây vào chùy synapse gây vỡ các bóng chứa chất trung gian hóa học?",
+"options": [
+"$Na^+$",
+"$K^+$",
+"$Ca^{2+}$",
+"$Cl^-$"
+],
+"correct": "$Ca^{2+}$",
+"explanation": "Khi xung thần kinh truyền đến chùy synapse sẽ làm thay đổi điện thế màng, mở kênh ion $Ca^{2+}$. Dòng ion này tràn vào trong kích thích các bóng chứa chất trung gian hóa học vỡ ra.",
+"image": null,
+"topic": "Truyền tin qua synapse",
+"level": "TH"
+},
+{
+"id": 7,
+"type": "short",
+"question": "Chim tu hú có tập tính đẻ trứng vào tổ của các loài chim khác để nhờ ấp hộ. Dựa vào nguồn gốc, đây là loại tập tính gì?",
+"correct": "Tập tính bẩm sinh",
+"explanation": "Tập tính đẻ trứng nhờ của tu hú mang tính bản năng, sinh ra đã có, đặc trưng cho loài và được quy định bởi hệ gen.",
+"image": null,
+"topic": "Tập tính động vật",
+"level": "NB"
+},
+{
+"id": 8,
+"type": "mcq",
+"question": "Hình thức học tập 'In vết' dễ nhận thấy nhất ở nhóm động vật nào sau đây?",
+"options": [
+"Lưỡng cư",
+"Bò sát",
+"Chim",
+"Côn trùng"
+],
+"correct": "Chim",
+"explanation": "In vết là hiện tượng con non mới nở đi theo vật chuyển động đầu tiên mà nó nhìn thấy. Hiện tượng này đặc biệt phổ biến và dễ quan sát ở các loài chim (ví dụ: gà, vịt, ngỗng non).",
+"image": null,
+"topic": "Các hình thức học tập ở động vật",
+"level": "NB"
+},
+{
+"id": 9,
+"type": "mcq",
+"question": "Hiện tượng cá trong ao bơi nhanh về gần bờ khi nghe tiếng kẻng báo hiệu cho ăn là ví dụ về hình thức học tập nào?",
+"options": [
+"Học ngầm",
+"In vết",
+"Điều kiện hóa đáp ứng",
+"Điều kiện hóa hành động"
+],
+"correct": "Điều kiện hóa đáp ứng",
+"explanation": "Đây là sự hình thành mối liên kết giữa một kích thích trung tính (tiếng kẻng) và kích thích không điều kiện (thức ăn), tuân theo nguyên lý phản xạ có điều kiện (điều kiện hóa kiểu Pavlov).",
+"image": null,
+"topic": "Các hình thức học tập ở động vật",
+"level": "TH"
+},
+{
+"id": 10,
+"type": "short",
+"question": "Việc kiến lính sẵn sàng chiến đấu và hi sinh thân mình để bảo vệ kiến chúa và tổ phản ánh dạng tập tính nào ở động vật?",
+"correct": "Tập tính vị tha",
+"explanation": "Tập tính vị tha là sự hi sinh quyền lợi, sự sống của bản thân để đảm bảo sự sinh tồn, duy trì nòi giống và lợi ích cho cả bầy đàn.",
+"image": null,
+"topic": "Tập tính động vật",
+"level": "TH"
+}
+]
+}
