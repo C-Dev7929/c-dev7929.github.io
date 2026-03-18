@@ -1,0 +1,556 @@
+{
+  "title": "BÀI 19. KHÁI QUÁT VỀ SINH TRƯỞNG VÀ PHÁT TRIỂN Ở SINH VẬT",
+  "subject": "Sinh học",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Sinh trưởng ở sinh vật là",
+      "options": [
+        "A. quá trình tăng kích thước và tuổi của cơ thể.",
+        "B. quá trình tăng kích thước và khối lượng cơ thể.",
+        "C. quá trình tăng khối lượng và tuổi của cơ thể.",
+        "D. Quá trình tăng thể tích và khối lượng của cơ thể."
+      ],
+      "correct": "B. quá trình tăng kích thước và khối lượng cơ thể.",
+      "explanation": "Sinh trưởng là sự tăng lên về kích thước và khối lượng của cơ thể do sự tăng lên về số lượng và kích thước tế bào.",
+      "image": null,
+      "topic": "Khái quát sinh trưởng và phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Phát triển ở sinh vật là",
+      "options": [
+        "A. toàn bộ những biến đổi diễn ra bên ngoài của cá thể, bao gồm thay đổi kích thước và cân nặng.",
+        "B. toàn bộ những biến đổi diễn ra bên ngoài cơ thể của cá thể, bao gồm thay đổi về số lượng tế bào, cấu trúc, hình thái và trạng thái sinh lý.",
+        "C. toàn bộ những biến đổi diễn ra trong chu kì sống của cá thể, bao gồm thay đổi chiều cao, cân nặng và tuổi thọ.",
+        "D. toàn bộ những biến đổi diễn ra trong chu kì sống của cá thể, bao gồm thay đổi về số lượng tế bào, cấu trúc, hình thái và trạng thái sinh lý."
+      ],
+      "correct": "D. toàn bộ những biến đổi diễn ra trong chu kì sống của cá thể, bao gồm thay đổi về số lượng tế bào, cấu trúc, hình thái và trạng thái sinh lý.",
+      "explanation": "Phát triển bao gồm ba quá trình liên quan mật thiết: sinh trưởng, phân hóa tế bào và phát sinh hình thái cơ quan, cơ thể.",
+      "image": null,
+      "topic": "Khái quát sinh trưởng và phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Vòng đời của sinh vật là",
+      "options": [
+        "A. khoảng thời gian tính từ khi cơ thể được sinh ra, lớn lên, phát triển thành cơ thể trưởng thành, sinh sản tạo cá thể mới, già đi rồi chết.",
+        "B. khoảng thời gian tính từ khi cơ thể được sinh ra, lớn lên, phát triển thành cơ thể trưởng thành.",
+        "C. khoảng thời gian tính từ khi cơ thể được sinh ra, lớn lên, phát triển thành cơ thể trưởng thành, sinh sản tạo cá thể mới.",
+        "D. khoảng thời gian tính từ khi cơ thể được sinh ra, sinh trưởng và phát triển thành cơ thể trưởng thành."
+      ],
+      "correct": "A. khoảng thời gian tính từ khi cơ thể được sinh ra, lớn lên, phát triển thành cơ thể trưởng thành, sinh sản tạo cá thể mới, già đi rồi chết.",
+      "explanation": "Vòng đời bao quát toàn bộ các giai đoạn từ khi sinh ra cho đến khi kết thúc sự sống của một cá thể.",
+      "image": null,
+      "topic": "Vòng đời của sinh vật",
+      "level": "NB"
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Khi nói về tuổi thọ của sinh vật, phát biểu nào sau đây đúng?",
+      "options": [
+        "A. Thời gian sinh trưởng của sinh vật.",
+        "B. Thời gian sinh con của sinh vật.",
+        "C. Thời gian tuổi già của sinh vật.",
+        "D. Thời gian sống của một sinh vật."
+      ],
+      "correct": "D. Thời gian sống của một sinh vật.",
+      "explanation": "Tuổi thọ được định nghĩa là khoảng thời gian sống của một cá thể sinh vật.",
+      "image": null,
+      "topic": "Tuổi thọ của sinh vật",
+      "level": "NB"
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Tuổi thọ của một loài sinh vật là",
+      "options": [
+        "A. thời gian sống của các cá thể trong loài.",
+        "B. thời gian sống thức tế của các cá thể trong loài.",
+        "C. thời gian sống trung bình của các cá thể trong loài.",
+        "D. thời gian sống trung bình của các cá thể trong môi trường."
+      ],
+      "correct": "C. thời gian sống trung bình của các cá thể trong loài.",
+      "explanation": "Khi nói về tuổi thọ của một loài (thay vì một cá thể cụ thể), người ta sử dụng giá trị trung bình thống kê của các cá thể trong loài đó.",
+      "image": null,
+      "topic": "Tuổi thọ của sinh vật",
+      "level": "NB"
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Tuổi thọ của các loài sinh vật khác nhau thì do yếu tố nào quy định?",
+      "options": [
+        "A. Lối sống.",
+        "B. Thức ăn.",
+        "C. Môi trường sống.",
+        "D. Kiểu gene."
+      ],
+      "correct": "D. Kiểu gene.",
+      "explanation": "Kiểu gene là yếu tố nội tại quyết định giới hạn tuổi thọ tối đa đặc trưng cho mỗi loài sinh vật.",
+      "image": null,
+      "topic": "Tuổi thọ của sinh vật",
+      "level": "TH"
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Hình dạng chim bồ câu không giống với hình dạng các loài khác là do",
+      "options": [
+        "A. quá trình phân hóa tế bào.",
+        "B. quá trình phát sinh hình thái.",
+        "C. quá trình thay đổi cấu trúc tế bào.",
+        "D. quá trình phát sinh chức năng của cơ thể."
+      ],
+      "correct": "B. quá trình phát sinh hình thái.",
+      "explanation": "Quá trình phát sinh hình thái tạo nên hình dạng đặc trưng của các cơ quan và toàn bộ cơ thể sinh vật.",
+      "image": null,
+      "topic": "Phát triển ở sinh vật",
+      "level": "TH"
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Khi nói về sự sinh trưởng và phát triển ở sinh vật. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\nI. Cây ra lá là sự phát triển của thực vật.\nII. Con gà tăng khối lượng từ 1,3 kg đến 3,1 kg là sự sinh trưởng của động vật.\nIII. Phát triển là cơ sở cho sinh trưởng, sinh trưởng làm thay đổi và thúc đẩy phát triển.\nIV. Sinh trưởng và phát triển có liên quan mật thiết với nhau, không tách rời nhau và đan xen với nhau.",
+      "options": [
+        "A. 1.",
+        "B. 2.",
+        "C. 3.",
+        "D. 4."
+      ],
+      "correct": "C. 3.",
+      "explanation": "Phát biểu I, II, IV đúng. Phát biểu III sai vì Sinh trưởng là cơ sở cho phát triển (không phải ngược lại). Đáp án là 3 ý đúng.",
+      "image": null,
+      "topic": "Mối quan hệ sinh trưởng và phát triển",
+      "level": "VD"
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Khi nói về dấu hiệu biểu hiện sự sinh trưởng của động vật. Theo lí thuyết, có bao nhiêu phát biểu sau đây đúng?\nI. Con bò tăng khối lượng cơ thể từ 60 kg đến 120 kg.\nII. Con gà trống mọc mào và cựa.\nIII. Con gà mái đẻ trứng.\nIV. Con trăn tăng chiều dài cơ thể thêm 22 cm.",
+      "options": [
+        "A. 1.",
+        "B. 2.",
+        "C. 3.",
+        "D. 4."
+      ],
+      "correct": "B. 2.",
+      "explanation": "Dấu hiệu sinh trưởng là tăng kích thước/khối lượng: I và IV đúng. II và III là dấu hiệu của sự phát triển (phân hóa và phát sinh chức năng mới).",
+      "image": null,
+      "topic": "Dấu hiệu sinh trưởng",
+      "level": "VD"
+    },
+    {
+      "id": 10,
+      "type": "true_false",
+      "question": "Cho mệnh đề dưới đây: a. Sinh trưởng và phát triển là hai quá trình hoàn toàn độc lập với nhau.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Sinh trưởng và phát triển liên quan mật thiết, không tách rời và đan xen nhau.",
+      "image": null,
+      "topic": "Mối quan hệ sinh trưởng và phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 11,
+      "type": "true_false",
+      "question": "Cho mệnh đề dưới đây: b. Phát triển là cơ sở cho sinh trưởng, sinh trưởng làm thay đổi và thúc đẩy phát triển.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Sinh trưởng là cơ sở cho phát triển; sinh trưởng làm tăng số lượng và kích thước tế bào tạo tiền đề cho sự phân hóa và phát sinh hình thái.",
+      "image": null,
+      "topic": "Mối quan hệ sinh trưởng và phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 12,
+      "type": "true_false",
+      "question": "Cho mệnh đề dưới đây: c. Cây ra lá là sự phát triển của thực vật.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Ra lá mới là một phần của sự phát sinh hình thái và phát triển các cơ quan mới.",
+      "image": null,
+      "topic": "Dấu hiệu phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 13,
+      "type": "true_false",
+      "question": "Cho mệnh đề dưới đây: d. Con gà tăng từ 1,2 kg đến 3 kg là sự sinh trưởng của động vật.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Sự tăng khối lượng cơ thể là biểu hiện đặc trưng của sinh trưởng.",
+      "image": null,
+      "topic": "Dấu hiệu sinh trưởng",
+      "level": "NB"
+    },
+    {
+      "id": 14,
+      "type": "true_false",
+      "question": "Cho các phát biểu nói về dấu hiệu đặc trưng của phát triển ở sinh vật: a. Sự phát triển của các cơ quan trong cơ thể có thời điểm bắt đầu giống nhau.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Các cơ quan khác nhau có thời điểm bắt đầu và tốc độ phát triển khác nhau.",
+      "image": null,
+      "topic": "Đặc trưng phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 15,
+      "type": "true_false",
+      "question": "Cho các phát biểu nói về dấu hiệu đặc trưng của phát triển ở sinh vật: b. Quá trình phát triển chỉ được điều hoà bởi các yếu tố bên trong.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Phát triển được điều hòa bởi cả yếu tố bên trong (hormone, gene) và yếu tố bên ngoài (nhiệt độ, ánh sáng, dinh dưỡng).",
+      "image": null,
+      "topic": "Điều hòa phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 16,
+      "type": "true_false",
+      "question": "Cho các phát biểu nói về dấu hiệu đặc trưng của phát triển ở sinh vật: c. Sự phát triển của các hệ cơ quan trong cơ thể có tốc độ khác nhau tuỳ theo từng giai đoạn.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là đặc điểm đặc trưng của quá trình phát triển ở sinh vật đa bào.",
+      "image": null,
+      "topic": "Đặc trưng phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 17,
+      "type": "true_false",
+      "question": "Cho các phát biểu nói về dấu hiệu đặc trưng của phát triển ở sinh vật: d. Dấu hiệu đặc trưng của phát triển ở sinh vật là tăng tế bào.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Tăng tế bào (số lượng/kích thước) là dấu hiệu của sinh trưởng. Phát triển đặc trưng bởi sự phân hóa và phát sinh hình thái.",
+      "image": null,
+      "topic": "Đặc trưng phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 18,
+      "type": "true_false",
+      "question": "Dựa trên hình và kiến thức về sinh trưởng ở sinh vật: a. Vòng đời cây Cam diễn ra theo thứ tự: Hạt → Hạt nảy mầm → Cây con → Cây trưởng thành → Ra hoa kết quả.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là trình tự chính xác các giai đoạn trong vòng đời của cây cam.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai19-Cau1.png",
+      "topic": "Vòng đời sinh vật",
+      "level": "TH"
+    },
+    {
+      "id": 19,
+      "type": "true_false",
+      "question": "Dựa trên hình và kiến thức về sinh trưởng ở sinh vật: b. Dấu hiệu của sự phát triển ở cây cam là cây ra rễ, ra lá, ra hoa.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Ra các cơ quan mới thể hiện sự phân hóa tế bào và phát sinh hình thái (phát triển).",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai19-Cau1.png",
+      "topic": "Phát triển sinh vật",
+      "level": "TH"
+    },
+    {
+      "id": 20,
+      "type": "true_false",
+      "question": "Dựa trên hình và kiến thức về sinh trưởng ở sinh vật: c. Các giống cam khác nhau (như: cam Xoàn, cam Canh, cam Úc..) có vòng đời không giống nhau.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Các giống cùng một loài có các giai đoạn vòng đời tương tự nhau, chỉ khác nhau về thời gian hoặc đặc điểm hình thái cụ thể.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai19-Cau1.png",
+      "topic": "Vòng đời sinh vật",
+      "level": "TH"
+    },
+    {
+      "id": 21,
+      "type": "true_false",
+      "question": "Dựa trên hình và kiến thức về sinh trưởng ở sinh vật: d. Sau khi nảy mầm cây Cam bắt đầu phát triển bằng cách tăng chiều cao, diện tích lá (số lượng lá)",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Sự tăng kích thước và số lượng lá là biểu hiện của sinh trưởng và phát triển đan xen.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai19-Cau1.png",
+      "topic": "Sinh trưởng và phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 22,
+      "type": "true_false",
+      "question": "Dựa trên hình và kiến thức về sinh trưởng ở sinh vật: a. Vòng đời của bướm trải qua các giai đoạn: trứng → sâu bướm → kén → bướm trưởng thành.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Bướm có vòng đời biến thái hoàn toàn gồm 4 giai đoạn trên.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai19-Cau2.png",
+      "topic": "Vòng đời sinh vật",
+      "level": "TH"
+    },
+    {
+      "id": 23,
+      "type": "true_false",
+      "question": "Dựa trên hình và kiến thức về sinh trưởng ở sinh vật: b. Bướm trưởng thành đẻ ra sâu bướm, và cả hai đều phá hoại cây trồng vì bướm hút nhựa cây còn sâu bướm thường ăn các lá non để phát triển và tốc độ phát triển của chúng rất nhanh.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Bướm đẻ ra trứng, không đẻ trực tiếp ra sâu. Bướm trưởng thành chủ yếu hút mật hoa, không gây hại nhiều như sâu ăn lá.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai19-Cau2.png",
+      "topic": "Vòng đời sinh vật",
+      "level": "TH"
+    },
+    {
+      "id": 24,
+      "type": "true_false",
+      "question": "Dựa trên hình và kiến thức về sinh trưởng ở sinh vật: c. Sự biến đổi từ ấu trùng (nhộng) ở trong kén lột xác và trở thành bướm trưởng thành diễn ra trong đời sống của loài bướm là thể hiện sự phát triển.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là quá trình biến đổi cấu trúc và hình thái (phát triển).",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai19-Cau2.png",
+      "topic": "Phát triển sinh vật",
+      "level": "TH"
+    },
+    {
+      "id": 25,
+      "type": "true_false",
+      "question": "Dựa trên hình và kiến thức về sinh trưởng ở sinh vật: d. Sự phát triển của các hệ cơ quan trong cơ thể của loài này có tốc độ đều nhau kể cả các giai đoạn phát triển khác nhau.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Sự phát triển các cơ quan diễn ra với tốc độ không đều, đặc biệt khác biệt lớn giữa giai đoạn nhộng và giai đoạn bướm.",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai19-Cau2.png",
+      "topic": "Đặc trưng phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 26,
+      "type": "true_false",
+      "question": "Dựa trên kiến thức về sinh trưởng và phát triển của sinh vật: a. Dấu hiệu đặc trưng của sinh trưởng là tăng số lượng, kích thước và khối lượng tế bào.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là định nghĩa cơ bản về dấu hiệu sinh trưởng.",
+      "image": null,
+      "topic": "Đặc trưng sinh trưởng",
+      "level": "TH"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "question": "Dựa trên kiến thức về sinh trưởng và phát triển của sinh vật: b. Phát triển gồm: Sinh trưởng → Phân hoá tế bào → Phát sinh hình thái cơ quan, cơ thể.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Phát triển bao gồm ba quá trình này liên kết với nhau.",
+      "image": null,
+      "topic": "Khái quát phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 28,
+      "type": "true_false",
+      "question": "Dựa trên kiến thức về sinh trưởng và phát triển của sinh vật: c. Bản chất của phát triển là sự phân bào làm tăng số lượng tế bào, sự tổng hợp và tích luỹ các chất làm tế bào.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Mô tả này thuộc về bản chất của sinh trưởng.",
+      "image": null,
+      "topic": "Khái quát phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "question": "Dựa trên kiến thức về sinh trưởng và phát triển của sinh vật: d. Bản chất của sinh trưởng là sinh trưởng của tế bào - phân hoá tế bào - phát sinh hình thái cơ quan, cơ thể.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Mô tả này thuộc về bản chất của phát triển.",
+      "image": null,
+      "topic": "Khái quát sinh trưởng",
+      "level": "TH"
+    },
+    {
+      "id": 30,
+      "type": "true_false",
+      "question": "Cho đoạn văn về muỗi: a. Vòng đời của muỗi trải qua các giai đoạn: trứng → nhộng → ấu trùng → muỗi trưởng thành.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Thứ tự đúng phải là Trứng → Ấu trùng (Bọ gậy) → Nhộng → Muỗi trưởng thành.",
+      "image": null,
+      "topic": "Vòng đời sinh vật",
+      "level": "VD"
+    },
+    {
+      "id": 31,
+      "type": "true_false",
+      "question": "Cho đoạn văn về muỗi: b. Quá trình sinh trưởng và phát triển của muỗi ở giai đoạn ấu trùng và nhộng xảy ra ở cả môi trường nước và trên cạn.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Giai đoạn ấu trùng và nhộng của muỗi hoàn toàn diễn ra dưới nước.",
+      "image": null,
+      "topic": "Vòng đời sinh vật",
+      "level": "VD"
+    },
+    {
+      "id": 32,
+      "type": "true_false",
+      "question": "Cho đoạn văn về muỗi: c. Để tiêu diệt muỗi cần vệ sinh nơi ở thường xuyên, thả cá vào bể chứa nước, chum vại để tiêu diệt muỗi từ giai đoạn ấu trùng.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là biện pháp sinh học hiệu quả để tiêu diệt bọ gậy (ấu trùng muỗi).",
+      "image": null,
+      "topic": "Ứng dụng thực tiễn",
+      "level": "VD"
+    },
+    {
+      "id": 33,
+      "type": "true_false",
+      "question": "Cho đoạn văn về muỗi: d. Muỗi sống được khoảng 1 – 3 tháng, đây được gọi là giới hạn tuổi thọ của loài muỗi.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Thời gian sống từ khi sinh ra đến khi chết tự nhiên là tuổi thọ.",
+      "image": null,
+      "topic": "Tuổi thọ sinh vật",
+      "level": "VD"
+    },
+    {
+      "id": 34,
+      "type": "short",
+      "question": "Cho các dấu hiệu sau: Tăng khối lượng, tăng số lượng tế bào, tăng kích thước tế bào, phân hóa tế bào, phát sinh hình thái cơ quan. Có bao nhiêu dấu hiệu đặc trưng của sinh trưởng?",
+      "correct": "3",
+      "explanation": "Các dấu hiệu sinh trưởng gồm: Tăng khối lượng, tăng số lượng tế bào, tăng kích thước tế bào.",
+      "image": null,
+      "topic": "Đặc trưng sinh trưởng",
+      "level": "NB"
+    },
+    {
+      "id": 35,
+      "type": "short",
+      "question": "Cho các dấu hiệu sau: Tăng khối lượng, tăng số lượng tế bào, tăng kích thước tế bào, phân hóa tế bào, phát sinh hình thái cơ quan và cơ thể, xuất hiện đặc điểm sinh lý tương ứng. Có bao nhiêu dấu hiệu đặc trưng của phát triển?",
+      "correct": "3",
+      "explanation": "Dấu hiệu phát triển gồm: phân hóa tế bào, phát sinh hình thái cơ quan và cơ thể, xuất hiện đặc điểm sinh lý tương ứng.",
+      "image": null,
+      "topic": "Đặc trưng phát triển",
+      "level": "NB"
+    },
+    {
+      "id": 36,
+      "type": "short",
+      "question": "Cho các Yếu tố sau: di truyền, chế độ ăn, hormon, lối sống lành mạnh, giới tính, môi trường, chế độ chăm sóc sức khỏe; có bao nhiêu yếu tố bên ngoài ảnh hưởng đến tuổi thọ của con người?",
+      "correct": "4",
+      "explanation": "Các yếu tố bên ngoài gồm: chế độ ăn, lối sống lành mạnh, môi trường, chế độ chăm sóc sức khỏe.",
+      "image": null,
+      "topic": "Tuổi thọ con người",
+      "level": "NB"
+    },
+    {
+      "id": 37,
+      "type": "short",
+      "question": "Có bao nhiêu ứng dụng về hiểu biết sinh trưởng và phát triển\nI. Diệt muỗi trong giai đoạn ấu trùng\nII. Tưới nước đều đặn cho cây phát triển rễ\nIII. Cho gà mái ấp trứng để nở ra gà con\nIV. nuôi cấy mô tế bào.\nV. ghép mô sống.",
+      "correct": "5",
+      "explanation": "Tất cả 5 phương án đều là ứng dụng dựa trên hiểu biết về quy luật sinh trưởng và phát triển.",
+      "image": null,
+      "topic": "Ứng dụng sinh trưởng phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 38,
+      "type": "short",
+      "question": "Có bao nhiêu biện pháp tăng tuổi thọ bằng những thói quen đơn giản này:\n(1) Duy trì hoạt động thể chất.\n(2) Quản lý căng thẳng.\n(3) Ngủ đủ giấc là thói quen sinh hoạt tốt.\n(4) Khám sức khỏe định kì\n(5) Không hút thuốc.\n(6) Sử dụng đồ uống có cồn.\n(7) Ăn nhiều rau củ quả, các loại hạt.\n(8) Kích thích tinh thần thường xuyên.",
+      "correct": "7",
+      "explanation": "Có 7 biện pháp đúng: (1), (2), (3), (4), (5), (7), (8). Mục (6) sử dụng đồ uống có cồn làm giảm tuổi thọ.",
+      "image": null,
+      "topic": "Tuổi thọ con người",
+      "level": "TH"
+    },
+    {
+      "id": 39,
+      "type": "short",
+      "question": "Khi nói về biểu hiện của phát triển ở sinh vật có bao nhiêu phát biểu đúng\nI. Bé trai đến tuổi dậy thì vỡ giọng, mọc râu\nII. lợn con tăng cân từ ba đến 6 kg\nIII. gà trống bắt đầu biết gáy\nIV. cây cà chua bắt đầu ra hoa",
+      "correct": "3",
+      "explanation": "Các phát biểu đúng về phát triển là I, III, IV. Ý II là biểu hiện của sinh trưởng.",
+      "image": null,
+      "topic": "Biểu hiện phát triển",
+      "level": "TH"
+    },
+    {
+      "id": 40,
+      "type": "short",
+      "question": "Có bao nhiêu ý sai khi nói về vòng đời của ve sầu\nI. Ve sầu trải qua nhiều năm ở dạng nhộng\nII. Nhộng non nằm ở hang dưới đất để hút nhựa cây\nIII. Nhộng non sau khi làm tổ thì giao phối và sinh con\nIV. ve sầu trưởng thành chết sau khoảng 4 đến 6 tuần",
+      "correct": "2",
+      "explanation": "Ý II sai (ấu trùng/nhộng ve sầu không nằm trong tổ mà di chuyển tự do trong đất). Ý III sai (ve sầu sinh sản bằng cách đẻ trứng, không sinh con). Ý I và IV đúng.",
+      "image": null,
+      "topic": "Vòng đời sinh vật",
+      "level": "TH"
+    }
+  ]
+}
