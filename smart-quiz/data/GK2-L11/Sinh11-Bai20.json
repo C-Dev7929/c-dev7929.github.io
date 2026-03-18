@@ -334,7 +334,7 @@
       ],
       "correct": "D.  Kích thích quá trình rụng lá và già hóa của mô, cơ quan.",
       "explanation": "Dựa vào bảng tương quan, cả Ethylene và ABA đều kích thích sự rụng lá và sự già hóa.",
-      "image": null,
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-Cau3va26.png",
       "topic": "Hormone thực vật",
       "level": "VD"
     },
@@ -398,7 +398,7 @@
       ],
       "correct": "B. I, II, III và IV.",
       "explanation": "Phát biểu V sai vì Ethylene thuộc nhóm hormone ức chế sinh trưởng.",
-      "image": null,
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-Cau3va26.png",
       "topic": "Hormone thực vật",
       "level": "VD"
     },
@@ -652,7 +652,7 @@
       ],
       "correct": "Sai",
       "explanation": "Cả hai đều ức chế già hóa nên tác động cùng chiều.",
-      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-cau3.png",
+      "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Sinh11-Bai20-Cau3va26.png",
       "topic": "Hormone thực vật",
       "level": "TH"
     },
