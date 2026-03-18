@@ -171,8 +171,7 @@
 "options": ["Đúng", "Sai"],
 "correct": "Đúng",
 "explanation": "Ca2+ vào đầu trước synapse để giải phóng chất trung gian.",
-"image": "https://upload.wikimedia.org/wikipedia/commons/6/6c/SynapseSchematic_en.svg
-",
+"image": "https://upload.wikimedia.org/wikipedia/commons/6/6c/SynapseSchematic_en.svg",
 "topic": "Synapse",
 "level": "TH"
 },
@@ -183,8 +182,7 @@
 "options": ["Đúng", "Sai"],
 "correct": "Sai",
 "explanation": "Đây là phản xạ không điều kiện, bẩm sinh.",
-"image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Reflex_arc.svg
-",
+"image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Reflex_arc.svg",
 "topic": "Phản xạ",
 "level": "TH"
 },
@@ -195,8 +193,7 @@
 "options": ["Đúng", "Sai"],
 "correct": "Đúng",
 "explanation": "Tủy sống xử lý phản xạ nhanh không cần não.",
-"image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Spinal_cord_cross_section.svg
-",
+"image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Spinal_cord_cross_section.svg",
 "topic": "Hệ thần kinh",
 "level": "TH"
 },
