@@ -1,0 +1,1254 @@
+{
+  "title": "Ôn tập Tin học 11",
+  "subject": "Tin học",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Sao lưu CSDL có mục đích chính là gì?",
+      "options": [
+        "A. Đảm bảo an toàn dữ liệu khi hệ thống gặp sự cố.",
+        "B. Tăng hiệu suất của hệ thống CSDL.",
+        "C. Giảm thiểu dung lượng lưu trữ trên máy chủ.",
+        "D. Thay thế việc cập nhật phần mềm quản trị CSDL."
+      ],
+      "correct": "A. Đảm bảo an toàn dữ liệu khi hệ thống gặp sự cố.",
+      "explanation": "Mục đích quan trọng nhất của việc sao lưu (backup) là để có thể khôi phục lại dữ liệu khi xảy ra các sự cố hỏng hóc phần cứng, phần mềm hoặc thao tác sai.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Để phục hồi một CSDL từ tệp sao lưu, bước đầu tiên bạn cần thực hiện là gì?",
+      "options": [
+        "A. Chọn Export cơ sở dữ liệu.",
+        "B. Chọn Load SQL file.",
+        "C. Nhấn nút F5 để làm mới danh sách CSDL.",
+        "D. Xoá toàn bộ dữ liệu hiện tại của hệ thống."
+      ],
+      "correct": "B. Chọn Load SQL file.",
+      "explanation": "Để phục hồi từ một tệp SQL đã có, bước đầu tiên trong các phần mềm quản trị như HeidiSQL là mở (Load) tệp SQL đó vào cửa sổ truy vấn.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Khi thực hiện sao lưu, lựa chọn Delete + insert có nghĩa là gì?",
+      "options": [
+        "A. Xoá dữ liệu cũ và chèn dữ liệu mới đã sao lưu.",
+        "B. Xoá toàn bộ bảng trong CSDL.",
+        "C. Chỉ chèn thêm dữ liệu mới mà không xoá dữ liệu cũ.",
+        "D. Chỉ cập nhật cấu trúc bảng mà không ảnh hưởng đến dữ liệu."
+      ],
+      "correct": "A. Xoá dữ liệu cũ và chèn dữ liệu mới đã sao lưu.",
+      "explanation": "Tùy chọn 'Delete + insert' sẽ tạo ra câu lệnh xóa các bản ghi hiện có trong bảng trước khi thực hiện chèn các bản ghi từ tệp sao lưu vào.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Khi xuất cơ sở dữ liệu dưới dạng tệp SQL, bước nào sau đây là bắt buộc?",
+      "options": [
+        "A. Chọn bảng muốn sao lưu và nhấn Export.",
+        "B. Đặt tên tệp sao lưu và chọn kiểu output.",
+        "C. Xoá dữ liệu hiện tại trong cơ sở dữ liệu.",
+        "D. Nhấn F5 để làm mới danh sách CSDL."
+      ],
+      "correct": "B. Đặt tên tệp sao lưu và chọn kiểu output.",
+      "explanation": "Khi xuất (Export), bạn bắt buộc phải xác định nơi lưu trữ (tên tệp) và định dạng đầu ra (kiểu output như .sql, .csv...) để hệ thống thực hiện.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Để sao lưu một phần cơ sở dữ liệu, bạn cần làm gì?",
+      "options": [
+        "A. Chỉ chọn những bảng muốn sao lưu.",
+        "B. Sao lưu toàn bộ CSDL và sau đó lọc lại dữ liệu.",
+        "C. Tạo một tệp sao lưu riêng cho mỗi bảng.",
+        "D. Xoá toàn bộ các bảng không cần thiết trước khi sao lưu."
+      ],
+      "correct": "A. Chỉ chọn những bảng muốn sao lưu.",
+      "explanation": "Trong giao diện xuất dữ liệu, ta có thể tích chọn cụ thể các bảng cần thiết thay vì chọn toàn bộ CSDL.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Sau khi phục hồi CSDL, bạn cần làm gì để cập nhật danh sách CSDL?",
+      "options": [
+        "A. Khởi động lại phần mềm quản lý CSDL.",
+        "B. Xoá toàn bộ dữ liệu và phục hồi lại.",
+        "C. Nhấn F5 để làm tươi danh sách CSDL.",
+        "D. Chạy lại toàn bộ truy vấn SQL từ đầu."
+      ],
+      "correct": "C. Nhấn F5 để làm tươi danh sách CSDL.",
+      "explanation": "Phím F5 hoặc nút Refresh được dùng để làm mới giao diện hiển thị, cập nhật các thay đổi vừa thực hiện vào danh sách quản lý.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Trong trường hợp sao lưu CSDL có lựa chọn \"Drop\", điều gì sẽ xảy ra khi khôi phục?",
+      "options": [
+        "A. Tạo mới CSDL mà không xoá dữ liệu cũ.",
+        "B. Xoá toàn bộ các đối tượng cũ trước khi tạo mới.",
+        "C. Chỉ thêm các bản ghi mới vào CSDL cũ.",
+        "D. Giữ nguyên cấu trúc bảng và chỉ thêm dữ liệu mới"
+      ],
+      "correct": "B. Xoá toàn bộ các đối tượng cũ trước khi tạo mới.",
+      "explanation": "Lệnh DROP trong SQL dùng để xóa hoàn toàn cấu trúc đối tượng (như TABLE, DATABASE). Khi chọn Drop lúc sao lưu, tệp SQL sẽ chứa lệnh xóa đối tượng cũ trước khi tạo lại đối tượng mới.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Tại sao nên thực hiện sao lưu dữ liệu thường xuyên?",
+      "options": [
+        "A. Để cập nhật phiên bản mới nhất của phần mềm.",
+        "B. Để bảo vệ dữ liệu trong trường hợp hệ thống gặp sự cố.",
+        "C. Để giảm thiểu dung lượng lưu trữ.",
+        "D. Để phân tích dữ liệu nhanh hơn."
+      ],
+      "correct": "B. Để bảo vệ dữ liệu trong trường hợp hệ thống gặp sự cố.",
+      "explanation": "Sao lưu thường xuyên giúp giảm thiểu mất mát dữ liệu xuống mức thấp nhất khi có rủi ro xảy ra.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Khi di chuyển một CSDL từ máy tính này sang máy tính khác, bạn cần làm gì?",
+      "options": [
+        "A. Sao chép tệp sao lưu CSDL sang máy tính mới và phục hồi.",
+        "B. Chỉ cần sao chép tệp dữ liệu của CSDL mà không cần phục hồi.",
+        "C. Xuất toàn bộ dữ liệu sang tệp văn bản và nhập lại vào máy tính mới.",
+        "D. Chạy lại toàn bộ truy vấn SQL từ đầu"
+      ],
+      "correct": "A. Sao chép tệp sao lưu CSDL sang máy tính mới và phục hồi.",
+      "explanation": "Quy trình chuẩn là Export thành file SQL ở máy cũ, copy file đó sang máy mới và thực hiện Import (phục hồi).",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Nếu bạn muốn khôi phục CSDL từ một tệp sao lưu đã lưu trên máy tính, bạn nên sử dụng tính năng nào?",
+      "options": [
+        "A. Xuất dữ liệu.",
+        "B. Tải tệp SQL (Load SQL file).",
+        "C. Xoá toàn bộ các bảng cũ.",
+        "D. Chỉ khôi phục bảng dữ liệu chính."
+      ],
+      "correct": "B. Tải tệp SQL (Load SQL file).",
+      "explanation": "Tính năng 'Load SQL file' cho phép nạp tệp kịch bản sao lưu vào phần mềm để thực thi khôi phục.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Câu lệnh SQL nào dưới đây dùng để truy vấn thông tin tên bản nhạc và tên nhạc sĩ từ hai bảng bannhac và nhacsi?",
+      "options": [
+        "A. SELECT * FROM bannhac WHERE idNhacsi = nhacsi.idNhacsi",
+        "B. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi",
+        "C. SELECT tenBannhac, tenNhacsi FROM bannhac WHERE bannhac.idNhacsi = nhacsi.idNhacsi",
+        "D. SELECT tenBannhac, idNhacsi FROM bannhac WHERE idNhacsi = (SELECT idNhacsi FROM nhacsi)"
+      ],
+      "correct": "B. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi",
+      "explanation": "Sử dụng INNER JOIN là cách chuẩn nhất để kết hợp hai bảng dựa trên trường khóa chung idNhacsi để lấy thông tin từ cả hai bảng.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Làm thế nào để truy vấn danh sách bản nhạc và tên nhạc sĩ chỉ của nhạc sĩ \"Đỗ Nhuận\"?",
+      "options": [
+        "A. SELECT * FROM bannhac WHERE tenNhacsi = 'Đỗ Nhuận'",
+        "B. SELECT tenBannhac, tenNhacsi FROM bannhac WHERE tenNhacsi = 'Đỗ Nhuận'",
+        "C. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE nhacsi.tenNhacsi = 'Đỗ Nhuận'",
+        "D. SELECT * FROM nhacsi WHERE tenNhacsi = 'Đỗ Nhuận'"
+      ],
+      "correct": "C. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE nhacsi.tenNhacsi = 'Đỗ Nhuận'",
+      "explanation": "Phải JOIN hai bảng để có thông tin tên bản nhạc (bảng bannhac) và tên nhạc sĩ (bảng nhacsi), sau đó dùng điều kiện WHERE để lọc theo tên nhạc sĩ.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Cách truy vấn để lấy danh sách các bản nhạc và thể loại của nhạc sĩ \"Văn Cao\"?",
+      "options": [
+        "A. SELECT tenBannhac, tenTheloai FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE nhacsi.tenNhacsi = 'Văn Cao'",
+        "B. SELECT bannhac.tenBannhac, bannhac.tenTheloai FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi",
+        "C. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi, theloai.tenTheloai FROM bannhac, nhacsi, theloai WHERE nhacsi.tenNhacsi = 'Văn Cao'",
+        "D. SELECT * FROM bannhac, nhacsi WHERE tenNhacsi = 'Văn Cao'"
+      ],
+      "correct": "A. SELECT tenBannhac, tenTheloai FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE nhacsi.tenNhacsi = 'Văn Cao'",
+      "explanation": "Câu lệnh này kết hợp bảng bản nhạc và nhạc sĩ để lấy tên bản nhạc và thể loại (giả định cột tenTheloai nằm trong bannhac hoặc đã join) với điều kiện tên nhạc sĩ là Văn Cao.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Câu lệnh nào dưới đây để lấy danh sách tất cả các bản thu âm với thông tin bản nhạc, nhạc sĩ và ca sĩ?",
+      "options": [
+        "A. SELECT * FROM banthuam",
+        "B. SELECT tenBannhac, tenNhacsi, tenCasi FROM banthuam",
+        "C. SELECT banthuam.idBanthuam, bannhac.tenBannhac, nhacsi.tenNhacsi, casi.tenCasi FROM banthuam INNER JOIN bannhac ON banthuam.idBannhac = bannhac.idBannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi INNER JOIN casi ON banthuam.idCasi = casi.idCasi",
+        "D. SELECT tenBannhac, tenNhacsi, tenCasi FROM banthuam WHERE idBanthuam = bannhac.idBannhac"
+      ],
+      "correct": "C. SELECT banthuam.idBanthuam, bannhac.tenBannhac, nhacsi.tenNhacsi, casi.tenCasi FROM banthuam INNER JOIN bannhac ON banthuam.idBannhac = bannhac.idBannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi INNER JOIN casi ON banthuam.idCasi = casi.idCasi",
+      "explanation": "Để lấy đầy đủ tên từ các bảng khác nhau, cần thực hiện JOIN nhiều bảng thông qua các khóa ngoại tương ứng.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Câu truy vấn nào sau đây trả về danh sách các bản thu âm của ca sĩ \"Lê Dung\" thuộc thể loại \"Nhạc trữ tình\"?",
+      "options": [
+        "A. SELECT * FROM banthuam WHERE tenCasi = 'Lê Dung' AND tenTheloai = 'Nhạc trữ tình'",
+        "B. SELECT tenBannhac, tenTheloai, tenCasi FROM banthuam WHERE LIKE '%Lê Dung%'",
+        "C. SELECT banthuam.idBanthuam, bannhac.tenBannhac, theloai.tenTheloai, casi.tenCasi FROM banthuam INNER JOIN bannhac ON banthuam.idBannhac = bannhac.idBannhac INNER JOIN theloai ON bannhac.idTheloai = theloai.idTheloai INNER JOIN casi ON banthuam.idCasi = casi.idCasi WHERE casi.tenCasi = 'Lê Dung' AND theloai.tenTheloai = 'Nhạc trữ tình'",
+        "D. SELECT * FROM banthuam WHERE idCasi = (SELECT idCasi FROM casi WHERE tenCasi = 'Lê Dung')"
+      ],
+      "correct": "C. SELECT banthuam.idBanthuam, bannhac.tenBannhac, theloai.tenTheloai, casi.tenCasi FROM banthuam INNER JOIN bannhac ON banthuam.idBannhac = bannhac.idBannhac INNER JOIN theloai ON bannhac.idTheloai = theloai.idTheloai INNER JOIN casi ON banthuam.idCasi = casi.idCasi WHERE casi.tenCasi = 'Lê Dung' AND theloai.tenTheloai = 'Nhạc trữ tình'",
+      "explanation": "Cần kết nối 4 bảng: banthuam, bannhac, theloai, casi và lọc theo 2 điều kiện tên ca sĩ và tên thể loại.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Câu truy vấn SQL nào dưới đây lấy danh sách các bản nhạc từ bảng bannhac mà không có liên kết với bảng nhacsi?",
+      "options": [
+        "A. SELECT tenBannhac FROM bannhac",
+        "B. SELECT bannhac.tenBannhac FROM bannhac LEFT JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE nhacsi.idNhacsi IS NULL",
+        "C. SELECT * FROM bannhac",
+        "D. SELECT bannhac.tenBannhac FROM bannhac WHERE idNhacsi = NULL"
+      ],
+      "correct": "B. SELECT bannhac.tenBannhac FROM bannhac LEFT JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE nhacsi.idNhacsi IS NULL",
+      "explanation": "Sử dụng LEFT JOIN kết hợp với điều kiện kiểm tra NULL ở bảng bên phải là kỹ thuật để tìm các bản ghi không có liên kết.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Làm thế nào để lấy danh sách bản nhạc và tên nhạc sĩ cho các bản nhạc có liên quan đến thể loại \"Nhạc đỏ\"?",
+      "options": [
+        "A. SELECT * FROM bannhac WHERE tenTheloai = 'Nhạc đỏ'",
+        "B. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE bannhac.idTheloai = (SELECT idTheloai FROM theloai WHERE tenTheloai = 'Nhạc đỏ')",
+        "C. SELECT * FROM bannhac INNER JOIN theloai ON bannhac.idTheloai = theloai.idTheloai",
+        "D. SELECT tenBannhac, tenNhacsi FROM bannhac WHERE tenTheloai = 'Nhạc đỏ'"
+      ],
+      "correct": "B. SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac INNER JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi WHERE bannhac.idTheloai = (SELECT idTheloai FROM theloai WHERE tenTheloai = 'Nhạc đỏ')",
+      "explanation": "Câu lệnh này kết nối thông tin nhạc sĩ và lọc thể loại bằng một câu truy vấn con để xác định idTheloai tương ứng với 'Nhạc đỏ'.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Câu truy vấn nào truy xuất danh sách các bản thu âm mà không có ca sĩ liên kết?",
+      "options": [
+        "A. SELECT * FROM banthuam WHERE idCasi IS NULL",
+        "B. SELECT banthuam.idBanthuam FROM banthuam WHERE idCasi IS NOT EXISTS",
+        "C. SELECT banthuam.idBanthuam, bannhac.tenBannhac FROM banthuam LEFT JOIN casi ON banthuam.idCasi = casi.idCasi WHERE casi.idCasi IS NULL",
+        "D. SELECT * FROM banthuam WHERE idBanthuam NOT IN (SELECT idBanthuam FROM casi)"
+      ],
+      "correct": "C. SELECT banthuam.idBanthuam, bannhac.tenBannhac FROM banthuam LEFT JOIN casi ON banthuam.idCasi = casi.idCasi WHERE casi.idCasi IS NULL",
+      "explanation": "LEFT JOIN giúp lấy toàn bộ bản thu âm, và điều kiện 'casi.idCasi IS NULL' lọc ra những dòng không tìm thấy ca sĩ tương ứng.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "Câu truy vấn SQL nào lấy danh sách tất cả các bản nhạc với thông tin thể loại, bao gồm cả những bản nhạc chưa được phân loại?",
+      "options": [
+        "A. SELECT bannhac.tenBannhac, theloai.tenTheloai FROM bannhac",
+        "B. SELECT bannhac.tenBannhac, theloai.tenTheloai FROM bannhac INNER JOIN theloai ON bannhac.idTheloai = theloai.idTheloai",
+        "C. SELECT bannhac.tenBannhac, theloai.tenTheloai FROM bannhac LEFT JOIN theloai ON bannhac.idTheloai = theloai.idTheloai",
+        "D. SELECT bannhac.tenBannhac FROM bannhac WHERE theloai.idTheloai IS NULL"
+      ],
+      "correct": "C. SELECT bannhac.tenBannhac, theloai.tenTheloai FROM bannhac LEFT JOIN theloai ON bannhac.idTheloai = theloai.idTheloai",
+      "explanation": "LEFT JOIN giữ lại toàn bộ các bản ghi ở bảng bên trái (bannhac), kể cả khi không có bản ghi tương ứng ở bảng bên phải (theloai).",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "Khi nhập dữ liệu vào bảng bannhac , tại sao không cần nhập giá trị cho trường idBannhac ?",
+      "options": [
+        "A. Vì trường idBannhac là trường khóa ngoại.",
+        "B. Vì trường idBannhac có kiểu dữ liệu AUTO_INCREMENT .",
+        "C. Vì trường idBannhac là trường không quan trọng.",
+        "D. Vì bảng bannhac không yêu cầu có trường idBannhac ."
+      ],
+      "correct": "B. Vì trường idBannhac có kiểu dữ liệu AUTO_INCREMENT .",
+      "explanation": "Thuộc tính AUTO_INCREMENT giúp hệ quản trị CSDL tự động sinh giá trị số tăng dần cho mỗi dòng mới được chèn vào.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "NB"
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Trường idNhacsi trong bảng bannhac được gọi là gì?",
+      "options": [
+        "A. Trường khóa chính.",
+        "B. Trường khóa ngoài.",
+        "C. Trường bình thường.",
+        "D. Trường không có tính năng gì đặc biệt."
+      ],
+      "correct": "B. Trường khóa ngoài.",
+      "explanation": "Trường idNhacsi trong bảng bannhac dùng để tham chiếu đến trường idNhacsi (khóa chính) trong bảng nhacsi, nên nó là khóa ngoài.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "NB"
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Khi nào người dùng không thể xóa dữ liệu trong bảng nhacsi ?",
+      "options": [
+        "A. Khi trường idNhacsi còn được tham chiếu bởi bảng bannhac .",
+        "B. Khi trường idNhacsi chứa giá trị NULL.",
+        "C. Khi bảng bannhac không có dữ liệu.",
+        "D. Khi bảng nhacsi đã đầy."
+      ],
+      "correct": "A. Khi trường idNhacsi còn được tham chiếu bởi bảng bannhac .",
+      "explanation": "Ràng buộc toàn vẹn tham chiếu ngăn chặn việc xóa bản ghi ở bảng cha (nhacsi) nếu giá trị đó đang được sử dụng ở bảng con (bannhac).",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Để sửa dữ liệu trong bảng bannhac , người dùng cần làm gì?",
+      "options": [
+        "A. Xóa dữ liệu cũ và nhập lại dữ liệu mới.",
+        "B. Nháy đúp chuột vào ô dữ liệu cần sửa và nhập dữ liệu mới.",
+        "C. Sử dụng lệnh SQL để cập nhật dữ liệu.",
+        "D. Xóa bảng và tạo lại."
+      ],
+      "correct": "B. Nháy đúp chuột vào ô dữ liệu cần sửa và nhập dữ liệu mới.",
+      "explanation": "Trong các công cụ như HeidiSQL, bạn có thể sửa trực tiếp dữ liệu trên lưới (grid) bằng cách nháy đúp chuột.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 24,
+      "type": "mcq",
+      "question": "Tại sao MySQL ngăn chặn việc xóa dòng dữ liệu của nhạc sĩ Văn Cao trong bảng nhacsi ?",
+      "options": [
+        "A. Vì nhạc sĩ Văn Cao có nhiều bản nhạc nổi tiếng.",
+        "B. Vì idNhacsi của Văn Cao đang được tham chiếu trong bảng bannhac .",
+        "C. Vì bảng nhacsi không cho phép xóa dữ liệu.",
+        "D. Vì không có chức năng xóa trong MySQL"
+      ],
+      "correct": "B. Vì idNhacsi của Văn Cao đang được tham chiếu trong bảng bannhac .",
+      "explanation": "Đây là cơ chế bảo vệ tính toàn vẹn dữ liệu: không cho xóa thực thể đang được liên kết bởi thực thể khác.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 25,
+      "type": "mcq",
+      "question": "Để thực hiện việc tìm kiếm bản nhạc của nhạc sĩ Văn Cao trong bảng bannhac , cần làm gì?",
+      "options": [
+        "A. Lọc theo trường idBannhac .",
+        "B. Truy xuất theo thứ tự giảm dần của tên bản nhạc.",
+        "C. Lọc dữ liệu theo trường idNhacsi tương ứng với nhạc sĩ Văn Cao.",
+        "D. Không thể tìm kiếm."
+      ],
+      "correct": "C. Lọc dữ liệu theo trường idNhacsi tương ứng với nhạc sĩ Văn Cao.",
+      "explanation": "Mỗi bản nhạc liên kết với nhạc sĩ qua mã idNhacsi, do đó lọc theo mã này sẽ ra các bài hát của nhạc sĩ đó.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 26,
+      "type": "mcq",
+      "question": "Khi nào có thể xóa một dòng dữ liệu trong bảng bannhac ?",
+      "options": [
+        "A. Khi dòng đó không còn tham chiếu đến bất kỳ bảng nào khác.",
+        "B. Khi trường idBannhac có giá trị NULL.",
+        "C. Khi tất cả các bản nhạc đã được lưu trữ.",
+        "D. Khi người dùng muốn xóa mà không có điều kiện gì đặc biệt."
+      ],
+      "correct": "A. Khi dòng đó không còn tham chiếu đến bất kỳ bảng nào khác.",
+      "explanation": "Việc xóa bản ghi chỉ an toàn khi nó không bị ràng buộc bởi các bảng con khác (như bảng banthuam tham chiếu đến bannhac).",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 27,
+      "type": "mcq",
+      "question": "Nếu phát hiện lỗi dữ liệu trong trường idNhacsi của dòng số 2 trong bảng bannhac , cách sửa lỗi là gì?",
+      "options": [
+        "A. Xóa dòng số 2 và nhập lại dữ liệu.",
+        "B. Nháy đúp chuột vào ô chứa dữ liệu sai và sửa lại giá trị.",
+        "C. Sử dụng câu lệnh SQL để cập nhật dữ liệu.",
+        "D. Xóa bảng bannhac và nhập lại dữ liệu từ đầu."
+      ],
+      "correct": "B. Nháy đúp chuột vào ô chứa dữ liệu sai và sửa lại giá trị.",
+      "explanation": "Đây là cách nhanh nhất và trực quan nhất trong giao diện đồ họa của hệ quản trị CSDL.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 28,
+      "type": "mcq",
+      "question": "Khi thêm dữ liệu mới vào bảng bannhac , việc chọn nhạc sĩ được thực hiện như thế nào?",
+      "options": [
+        "A. Nhập trực tiếp tên nhạc sĩ vào trường idNhacsi .",
+        "B. Chọn nhạc sĩ từ hộp danh sách liên kết với bảng nhacsi .",
+        "C. Tạo mới một nhạc sĩ trước khi nhập dữ liệu.",
+        "D. Không cần chọn nhạc sĩ, chỉ cần nhập tên bản nhạc"
+      ],
+      "correct": "B. Chọn nhạc sĩ từ hộp danh sách liên kết với bảng nhacsi .",
+      "explanation": "Khi đã thiết lập khóa ngoài, HeidiSQL thường hỗ trợ hộp chọn (dropdown) để đảm bảo giá trị nhập vào khớp với bảng tham chiếu.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "Chức năng nào của hệ quản trị CSDL giúp ngăn chặn việc xóa dữ liệu có tham chiếu đến bảng khác?",
+      "options": [
+        "A. AUTO_INCREMENT.",
+        "B. Khóa chính (Primary Key).",
+        "C. Khóa ngoài (Foreign Key).",
+        "D. Chức năng tìm kiếm."
+      ],
+      "correct": "C. Khóa ngoài (Foreign Key).",
+      "explanation": "Khóa ngoài tạo ra mối quan hệ giữa các bảng và duy trì tính toàn vẹn tham chiếu giữa chúng.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "NB"
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "Chọn thao tác nào để thêm dữ liệu mới vào bảng trong HeidiSQL?",
+      "options": [
+        "A. Nhấn phím Delete",
+        "B. Nhấn phím Insert",
+        "C. Nhấn phím Ctrl + S",
+        "D. Nhấn phím Alt + Enter"
+      ],
+      "correct": "B. Nhấn phím Insert",
+      "explanation": "Phím Insert là phím tắt tiêu chuẩn để chèn thêm một dòng mới vào bảng dữ liệu trong HeidiSQL.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "Khi chỉnh sửa dữ liệu trong bảng, để sửa nội dung của một ô dữ liệu, ta thực hiện thao tác nào?",
+      "options": [
+        "A. Nhấn đôi chuột vào ô cần sửa",
+        "B. Chọn ô rồi nhấn phím Deletex",
+        "C. Chọn ô rồi nhấn phím Ctrl + Enter",
+        "D. Chọn ô rồi nhấn phím F"
+      ],
+      "correct": "A. Nhấn đôi chuột vào ô cần sửa",
+      "explanation": "Thao tác nhấp đúp chuột kích hoạt chế độ chỉnh sửa nội dung trong ô được chọn.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 32,
+      "type": "mcq",
+      "question": "Trong HeidiSQL, tổ hợp phím nào được sử dụng để xóa các dòng dữ liệu đã chọn?",
+      "options": [
+        "A. Ctrl + Delete",
+        "B. Shift + Delete",
+        "C. Alt + Delete",
+        "D. Ctrl + Shift"
+      ],
+      "correct": "B. Shift + Delete",
+      "explanation": "Trong HeidiSQL, Shift + Delete được dùng để xóa các dòng đang được chọn.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 33,
+      "type": "mcq",
+      "question": "Để sắp xếp dữ liệu trong bảng theo thứ tự giảm dần của một trường (column), ta thực hiện thao tác nào?",
+      "options": [
+        "A. Nhấp chuột phải vào tiêu đề cột và chọn \"Sort Descending\"",
+        "B. Nhấn đôi chuột vào tiêu đề cột",
+        "C. Nhấp chuột vào tiêu đề cột",
+        "D. Nhấn chuột vào tiêu đề cột, sau đó chọn biểu tượng tam giácx"
+      ],
+      "correct": "A. Nhấp chuột phải vào tiêu đề cột và chọn \"Sort Descending\"",
+      "explanation": "Thao tác qua menu chuột phải trên tiêu đề cột cho phép chọn kiểu sắp xếp tăng hoặc giảm.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 34,
+      "type": "mcq",
+      "question": "Câu lệnh SQL nào dùng để lấy tất cả các trường trong bảng \"nhacsi\"?",
+      "options": [
+        "A. SELECT * FROM nhacsi",
+        "B. SELECT idNhacsi, tenNhacsi FROM nhacsi",
+        "C. SELECT nhacsi.* FROM nhacsi",
+        "D. SELECT * FROM nhacsi WHERE idNhacsi > 0"
+      ],
+      "correct": "A. SELECT * FROM nhacsi",
+      "explanation": "Ký tự '*' đại diện cho tất cả các cột trong bảng được chỉ định sau từ khóa FROM.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 35,
+      "type": "mcq",
+      "question": "Để tìm kiếm các bản ghi có tên nhạc sĩ bắt đầu bằng chữ \"P\", câu lệnh SQL nào là đúng?",
+      "options": [
+        "A. SELECT * FROM nhacsi WHERE tenNhacsi = 'P%'",
+        "B. SELECT * FROM nhacsi WHERE tenNhacsi LIKE 'P%'x",
+        "C. SELECT * FROM nhacsi WHERE tenNhacsi LIKE '%P%'x",
+        "D. SELECT * FROM nhacsi WHERE tenNhacsi LIKE '%P'"
+      ],
+      "correct": "B. SELECT * FROM nhacsi WHERE tenNhacsi LIKE 'P%'x",
+      "explanation": "Từ khóa LIKE kết hợp với ký tự '%' ở cuối dùng để tìm chuỗi bắt đầu bằng giá trị cho trước.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 36,
+      "type": "mcq",
+      "question": "Khi muốn xóa tất cả các bản ghi trong bảng \"nhacsi\", nhưng vẫn giữ cấu trúc bảng, ta sử dụng câu lệnh nào?",
+      "options": [
+        "A. DELETE FROM nhacsi",
+        "B. DROP TABLE nhacsi",
+        "C. TRUNCATE TABLE nhacsi",
+        "D. DELETE * FROM nhacsi"
+      ],
+      "correct": "A. DELETE FROM nhacsi",
+      "explanation": "Lệnh DELETE FROM xóa dữ liệu dòng nhưng không xóa cấu trúc bảng. (Lưu ý: TRUNCATE cũng làm được điều này nhưng nhanh hơn và không lọc được điều kiện).",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 37,
+      "type": "mcq",
+      "question": "Trong HeidiSQL, để lọc dữ liệu với tiêu chí \"LIKE\", ta chọn tùy chọn nào?",
+      "options": [
+        "A. Edit > Filter > LIKE",
+        "B. View > Data Filter > LIKE",
+        "C. Filter > Apply LIKE Condition",
+        "D. Nhấp chuột phải vào cột dữ liệu, chọn Quick Filter và chọn LIKE"
+      ],
+      "correct": "D. Nhấp chuột phải vào cột dữ liệu, chọn Quick Filter và chọn LIKE",
+      "explanation": "HeidiSQL cung cấp menu Quick Filter để lọc nhanh dữ liệu dựa trên giá trị của ô hoặc các điều kiện tương tự.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 38,
+      "type": "mcq",
+      "question": "Để xem toàn bộ dữ liệu trong bảng \"nhacsi\" trong HeidiSQL, ta thực hiện thao tác nào?",
+      "options": [
+        "A. Mở bảng \"nhacsi\" và chọn thẻ \"Dữ liệu\"",
+        "B. Chọn thẻ \"Truy vấn\", nhập câu truy vấn SQL",
+        "C. Chọn thẻ \"Thiết kế bảng\"",
+        "D. Mở bảng \"nhacsi\" và nhấn F5"
+      ],
+      "correct": "A. Mở bảng \"nhacsi\" và chọn thẻ \"Dữ liệu\"",
+      "explanation": "Thẻ 'Dữ liệu' (Data) hiển thị nội dung các bản ghi hiện có trong bảng đang được chọn.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 39,
+      "type": "mcq",
+      "question": "Câu lệnh SQL nào sau đây dùng để sắp xếp dữ liệu theo tên nhạc sĩ theo thứ tự tăng dần?",
+      "options": [
+        "A. SELECT * FROM nhacsi ORDER BY tenNhacsi DESC",
+        "B. SELECT * FROM nhacsi ORDER BY tenNhacsi ASC",
+        "C. SELECT * FROM nhacsi ORDER BY idNhacsi",
+        "D. SELECT * FROM nhacsi WHERE ORDER BY tenNhacsi ASC"
+      ],
+      "correct": "B. SELECT * FROM nhacsi ORDER BY tenNhacsi ASC",
+      "explanation": "ORDER BY dùng để sắp xếp, ASC là sắp xếp tăng dần (Ascending).",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "NB"
+    },
+    {
+      "id": 40,
+      "type": "mcq",
+      "question": "Trường nào trong bảng \"bannhac\" được thiết lập làm khóa chính?",
+      "options": [
+        "A. idNhacsi",
+        "B. tenBannhac",
+        "C. idBannhac",
+        "D. tenNhacsi"
+      ],
+      "correct": "C. idBannhac",
+      "explanation": "idBannhac thường được dùng làm định danh duy nhất cho mỗi bản nhạc, đóng vai trò khóa chính.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "NB"
+    },
+    {
+      "id": 41,
+      "type": "mcq",
+      "question": "Khi khai báo khóa ngoài cho bảng \"bannhac\", trường nào được chọn làm khóa ngoài?",
+      "options": [
+        "A. idBannhac",
+        "B. tenBannhac",
+        "C. idNhacsi",
+        "D. idBanthuam"
+      ],
+      "correct": "C. idNhacsi",
+      "explanation": "Trường idNhacsi trong bảng bannhac dùng để liên kết tới bảng nhacsi, nên nó là khóa ngoài.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "TH"
+    },
+    {
+      "id": 42,
+      "type": "mcq",
+      "question": "Khi khai báo khóa ngoài cho idNhacsi, bảng tham chiếu nào được chọn?",
+      "options": [
+        "A. bannhac",
+        "B. nhacsi",
+        "C. banthuam",
+        "D. casi"
+      ],
+      "correct": "B. nhacsi",
+      "explanation": "Trường idNhacsi của bảng bannhac phải tham chiếu đến bảng nhacsi (bảng chứa thông tin gốc của các nhạc sĩ).",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "TH"
+    },
+    {
+      "id": 43,
+      "type": "mcq",
+      "question": "Khi khai báo khóa ngoài, kiểu dữ liệu của trường idNhacsi trong bảng \"bannhac\" nên là gì?",
+      "options": [
+        "A. VARCHAR",
+        "B. TEXT",
+        "C. INT",
+        "D. FLOAT"
+      ],
+      "correct": "C. INT",
+      "explanation": "Khóa ngoài phải có cùng kiểu dữ liệu với khóa chính mà nó tham chiếu. Trong trường hợp này là kiểu số nguyên (INT).",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "TH"
+    },
+    {
+      "id": 44,
+      "type": "mcq",
+      "question": "Khi khai báo cặp trường (tenBannhac, idNhacsi) không được trùng lặp giá trị, loại khóa nào được sử dụng?",
+      "options": [
+        "A. PRIMARY",
+        "B. UNIQUE",
+        "C. FOREIGN KEY",
+        "D. INDEX"
+      ],
+      "correct": "B. UNIQUE",
+      "explanation": "Ràng buộc UNIQUE đảm bảo giá trị trong một hoặc một nhóm cột không được giống nhau giữa các dòng.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "TH"
+    },
+    {
+      "id": 45,
+      "type": "mcq",
+      "question": "Khi tạo bảng \"bannhac\", để thêm một trường mới vào bảng, bạn sử dụng thao tác nào?",
+      "options": [
+        "A. Nhấn Ctrl+Alt+Del",
+        "B. Nhấn Ctrl+Insert",
+        "C. Nhấn Ctrl+Delete",
+        "D. Nhấn Alt+Insert"
+      ],
+      "correct": "B. Nhấn Ctrl+Insert",
+      "explanation": "Trong giao diện thiết kế bảng của HeidiSQL, Ctrl+Insert được dùng để thêm một cột mới vào định nghĩa bảng.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "NB"
+    },
+    {
+      "id": 46,
+      "type": "mcq",
+      "question": "Giá trị mặc định của trường khóa ngoài idNhacsi trong bảng \"bannhac\" nên là gì?",
+      "options": [
+        "A. NULL",
+        "B. AUTO_INCREMENT",
+        "C. 0",
+        "D. Một chuỗi rỗng"
+      ],
+      "correct": "A. NULL",
+      "explanation": "Nếu một bản nhạc chưa biết nhạc sĩ sáng tác, trường khóa ngoài có thể để giá trị NULL để thể hiện sự vắng mặt của liên kết.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "TH"
+    },
+    {
+      "id": 47,
+      "type": "mcq",
+      "question": "Khóa ngoài trong bảng \"bannhac\" tham chiếu đến khóa chính ở bảng nào?",
+      "options": [
+        "A. nhacsi",
+        "B. casi",
+        "C. banthuam",
+        "D. quận/huyện"
+      ],
+      "correct": "A. nhacsi",
+      "explanation": "Thông tin về nhạc sĩ nằm trong bảng nhacsi, vì vậy khóa ngoài trong bảng bannhac sẽ trỏ về đây.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "NB"
+    },
+    {
+      "id": 48,
+      "type": "mcq",
+      "question": "Thao tác nào được sử dụng để khai báo khóa chính cho trường idBannhac?",
+      "options": [
+        "A. Chọn \"Create new index\" → \"UNIQUE\"",
+        "B. Chọn \"Create new index\" → \"PRIMARY\"",
+        "C. Chọn \"Create new index\" → \"FOREIGN KEY\"",
+        "D. Chọn \"Create new index\" → \"INDEX\""
+      ],
+      "correct": "B. Chọn \"Create new index\" → \"PRIMARY\"",
+      "explanation": "Để xác định khóa chính, ta tạo chỉ mục kiểu PRIMARY cho cột đó.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "NB"
+    },
+    {
+      "id": 49,
+      "type": "mcq",
+      "question": "Sau khi khai báo xong các trường trong bảng \"bannhac\", thao tác cuối cùng là gì?",
+      "options": [
+        "A. Chọn \"Tạo bảng mới\"",
+        "B. Chọn \"Xóa bảng\"",
+        "C. Chọn \"Lưu\"",
+        "D. Chọn \"Chỉnh sửa khóa\""
+      ],
+      "correct": "C. Chọn \"Lưu\"",
+      "explanation": "Mọi thay đổi về cấu trúc bảng chỉ có hiệu lực sau khi nhấn nút Save (Lưu) để gửi lệnh ALTER hoặc CREATE tới server.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "NB"
+    },
+    {
+      "id": 50,
+      "type": "mcq",
+      "question": "Để tạo bảng \"nhacsi\" với trường \"idNhacsi\" và \"tenNhacsi\", kiểu dữ liệu của \"idNhacsi\" là gì?",
+      "options": [
+        "A. VARCHAR",
+        "B. INT",
+        "C. TEXT",
+        "D. FLOAT"
+      ],
+      "correct": "B. INT",
+      "explanation": "Trường mã ID thường được thiết lập kiểu số nguyên (INT) để tối ưu lưu trữ và truy xuất.",
+      "image": null,
+      "topic": "Thiết lập CSDL",
+      "level": "NB"
+    },
+    {
+      "id": 51,
+      "type": "true_false",
+      "question": "Khi thực hiện sao lưu cơ sở dữ liệu (CSDL) mymusic, người dùng cần chọn phương án nào để đảm bảo rằng dữ liệu cũ sẽ bị xóa trước khi chèn dữ liệu mới? Ý (a) Chọn Drop trong các tùy chọn sao lưu.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Tùy chọn Drop sẽ thêm lệnh xóa bảng/CSDL trước khi tạo lại và chèn dữ liệu.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 52,
+      "type": "true_false",
+      "question": "Khi thực hiện sao lưu cơ sở dữ liệu (CSDL) mymusic, người dùng cần chọn phương án nào để đảm bảo rằng dữ liệu cũ sẽ bị xóa trước khi chèn dữ liệu mới? Ý (b) Chọn chỉ sao lưu dữ liệu không bị xóa.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Việc chỉ chọn dữ liệu không giải quyết được vấn đề xóa dữ liệu cũ trên hệ thống đích.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 53,
+      "type": "true_false",
+      "question": "Khi thực hiện sao lưu cơ sở dữ liệu (CSDL) mymusic, người dùng cần chọn phương án nào để đảm bảo rằng dữ liệu cũ sẽ bị xóa trước khi chèn dữ liệu mới? Ý (c) Chọn Insert và giữ nguyên dữ liệu cũ.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Lựa chọn này sẽ gây lỗi nếu dữ liệu trùng khóa chính hoặc dẫn đến dữ liệu rác nếu không bị trùng.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 54,
+      "type": "true_false",
+      "question": "Khi thực hiện sao lưu cơ sở dữ liệu (CSDL) mymusic, người dùng cần chọn phương án nào để đảm bảo rằng dữ liệu cũ sẽ bị xóa trước khi chèn dữ liệu mới? Ý (d) Chọn Export mà không thiết lập tùy chọn nào.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Không thiết lập tùy chọn sẽ sử dụng mặc định, có thể không bao gồm lệnh Drop.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 55,
+      "type": "true_false",
+      "question": "Trong quy trình phục hồi CSDL từ tệp sao lưu, bước nào là cần thiết để tải nội dung của tệp sao lưu vào cửa sổ truy vấn? Ý (a) Nháy chuột chọn thẻ Các công cụ, chọn Import SQL file.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Trong HeidiSQL, chức năng này thường nằm ở menu Tập tin (File).",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 56,
+      "type": "true_false",
+      "question": "Trong quy trình phục hồi CSDL từ tệp sao lưu, bước nào là cần thiết để tải nội dung của tệp sao lưu vào cửa sổ truy vấn? Ý (b) Nháy chuột chọn thẻ Tập tin, chọn Load SQL file.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là thao tác chuẩn để mở file .sql vào cửa sổ Query trong HeidiSQL.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 57,
+      "type": "true_false",
+      "question": "Trong quy trình phục hồi CSDL từ tệp sao lưu, bước nào là cần thiết để tải nội dung của tệp sao lưu vào cửa sổ truy vấn? Ý (c) Nhấn phím Ctrl+N để tạo một tệp mới.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Ctrl+N dùng để mở một tab truy vấn trống, không phải để tải tệp sao lưu.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 58,
+      "type": "true_false",
+      "question": "Trong quy trình phục hồi CSDL từ tệp sao lưu, bước nào là cần thiết để tải nội dung của tệp sao lưu vào cửa sổ truy vấn? Ý (d) Nháy chuột chọn thẻ Xuất, chọn Import Data.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Thẻ xuất dùng để đưa dữ liệu ra, không phải nạp tệp SQL vào.",
+      "image": null,
+      "topic": "Sao lưu và phục hồi dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 59,
+      "type": "true_false",
+      "question": "Câu truy vấn SQL nào sau đây sẽ lấy danh sách tất cả các bản nhạc cùng với tên nhạc sĩ sáng tác từ hai bảng bannhac và nhacsi? Ý (a) SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi;",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Cú pháp JOIN (Inner Join) kết nối dựa trên khóa idNhacsi là chính xác.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 60,
+      "type": "true_false",
+      "question": "Câu truy vấn SQL nào sau đây sẽ lấy danh sách tất cả các bản nhạc cùng với tên nhạc sĩ sáng tác từ hai bảng bannhac và nhacsi? Ý (b) SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac LEFT JOIN nhacsi ON bannhac.idNhacsi = nhacsi.idNhacsi;",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "LEFT JOIN vẫn lấy được danh sách bản nhạc và nhạc sĩ (bao gồm cả bản nhạc chưa rõ nhạc sĩ), đáp ứng yêu cầu lấy danh sách.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 61,
+      "type": "true_false",
+      "question": "Câu truy vấn SQL nào sau đây sẽ lấy danh sách tất cả các bản nhạc cùng với tên nhạc sĩ sáng tác từ hai bảng bannhac và nhacsi? Ý (c) SELECT bannhac.tenBannhac FROM bannhac WHERE nhacsi.idNhacsi = bannhac.idNhacsi;",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Thiếu bảng nhacsi trong mệnh đề FROM và thiếu chọn trường tenNhacsi.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 62,
+      "type": "true_false",
+      "question": "Câu truy vấn SQL nào sau đây sẽ lấy danh sách tất cả các bản nhạc cùng với tên nhạc sĩ sáng tác từ hai bảng bannhac và nhacsi? Ý (d) SELECT bannhac.tenBannhac, nhacsi.tenNhacsi FROM bannhac, nhacsi WHERE bannhac.idNhacsi = nhacsi.idNhacsi;",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là cú pháp kết nối bảng kiểu cũ (Implicit Join), vẫn cho kết quả đúng.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 63,
+      "type": "true_false",
+      "question": "Câu truy vấn SQL nào sau đây lấy danh sách các bản thu âm với đủ thông tin về tên bản nhạc, tên ca sĩ và tên thể loại, từ ba bảng banthuam, bannhac, và casi? Ý (a) SELECT banthuam.idBanthuam, bannhac.tenBannhac, casi.tenCasi FROM banthuam JOIN bannhac ON banthuam.idBannhac = bannhac.idBannhac JOIN casi ON banthuam.idCasi = casi.idCasi;",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Câu lệnh JOIN chính xác qua 3 bảng để lấy các trường tương ứng.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 64,
+      "type": "true_false",
+      "question": "Câu truy vấn SQL nào sau đây lấy danh sách các bản thu âm với đủ thông tin về tên bản nhạc, tên ca sĩ và tên thể loại, từ ba bảng banthuam, bannhac, và casi? Ý (b) SELECT banthuam.idBanthuam, bannhac.tenBannhac, casi.tenCasi FROM banthuam LEFT JOIN bannhac ON banthuam.idBannhac = bannhac.idBannhac LEFT JOIN casi ON banthuam.idCasi = casi.idCasi;",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "LEFT JOIN vẫn cung cấp đủ thông tin và bao gồm cả những bản thu thiếu liên kết.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 65,
+      "type": "true_false",
+      "question": "Câu truy vấn SQL nào sau đây lấy danh sách các bản thu âm với đủ thông tin về tên bản nhạc, tên ca sĩ và tên thể loại, từ ba bảng banthuam, bannhac, và casi? Ý (c) SELECT banthuam.idBanthuam, bannhac.tenBannhac FROM banthuam WHERE banthuam.idCasi = casi.idCasi;",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Thiếu các bảng cần thiết trong mệnh đề FROM và thiếu trường tenCasi.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 66,
+      "type": "true_false",
+      "question": "Câu truy vấn SQL nào sau đây lấy danh sách các bản thu âm với đủ thông tin về tên bản nhạc, tên ca sĩ và tên thể loại, từ ba bảng banthuam, bannhac, và casi? Ý (d) SELECT banthuam.idBanthuam, bannhac.tenBannhac, casi.tenCasi FROM banthuam, bannhac, casi WHERE banthuam.idCasi = casi.idCasi;",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Thiếu điều kiện kết nối giữa banthuam và bannhac, dẫn đến kết quả tích Descartes sai lệch.",
+      "image": null,
+      "topic": "Truy vấn dữ liệu",
+      "level": "VD"
+    },
+    {
+      "id": 67,
+      "type": "true_false",
+      "question": "Điều nào sau đây là đúng khi thêm mới dữ liệu vào bảng bannhac? Ý (a) Bạn có thể nhập bất kỳ giá trị nào vào trường idNhacsi.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Phải tuân thủ ràng buộc khóa ngoài, giá trị phải tồn tại trong bảng nhacsi.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 68,
+      "type": "true_false",
+      "question": "Điều nào sau đây là đúng khi thêm mới dữ liệu vào bảng bannhac? Ý (b) Trường idBannhac tự động tăng giá trị khi nhập dữ liệu mới.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Nhờ thuộc tính AUTO_INCREMENT được thiết lập cho khóa chính.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 69,
+      "type": "true_false",
+      "question": "Điều nào sau đây là đúng khi thêm mới dữ liệu vào bảng bannhac? Ý (c) Bạn cần phải nhập thủ công tất cả các trường dữ liệu trong bảng.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Các trường tự động tăng hoặc có giá trị mặc định thì không cần nhập thủ công.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 70,
+      "type": "true_false",
+      "question": "Điều nào sau đây là đúng khi thêm mới dữ liệu vào bảng bannhac? Ý (d) Giá trị của trường idNhacsi phải chọn từ các giá trị có sẵn trong bảng nhacsi.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là quy tắc của khóa ngoài để đảm bảo tính toàn vẹn tham chiếu.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 71,
+      "type": "true_false",
+      "question": "Điều gì sẽ xảy ra khi cố gắng xóa nhạc sĩ trong bảng nhacsi mà nhạc sĩ đó đã được tham chiếu trong bảng bannhac? Ý (a) Dữ liệu sẽ được xóa hoàn toàn từ cả bảng nhacsi và bannhac.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Mặc định MySQL sẽ chặn hành động này trừ khi thiết lập ON DELETE CASCADE.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 72,
+      "type": "true_false",
+      "question": "Điều gì sẽ xảy ra khi cố gắng xóa nhạc sĩ trong bảng nhacsi mà nhạc sĩ đó đã được tham chiếu trong bảng bannhac? Ý (b) Hệ quản trị cơ sở dữ liệu sẽ ngăn chặn việc xóa và thông báo lỗi.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Cơ chế bảo vệ tính toàn vẹn tham chiếu của khóa ngoài.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 73,
+      "type": "true_false",
+      "question": "Điều gì sẽ xảy ra khi cố gắng xóa nhạc sĩ trong bảng nhacsi mà nhạc sĩ đó đã được tham chiếu trong bảng bannhac? Ý (c) Bảng nhacsi sẽ tự động cập nhật lại thông tin để không còn lỗi tham chiếu.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Hệ thống không tự động cập nhật nội dung như vậy.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 74,
+      "type": "true_false",
+      "question": "Điều gì sẽ xảy ra khi cố gắng xóa nhạc sĩ trong bảng nhacsi mà nhạc sĩ đó đã được tham chiếu trong bảng bannhac? Ý (d) Dữ liệu trong bảng bannhac sẽ tự động xóa để phù hợp với thao tác trong bảng nhacsi.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Chỉ xảy ra nếu cấu hình CASCADE, thông thường là ngăn chặn (RESTRICT).",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 75,
+      "type": "true_false",
+      "question": "Trong HeidiSQL, để thêm một hàng dữ liệu mới vào bảng nhacsi mà không cần nhập giá trị cho trường idNhacsi, bạn nên làm gì? Ý (a) Nhập giá trị thủ công cho trường idNhacsi.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Không cần thiết vì id đã tự động tăng.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 76,
+      "type": "true_false",
+      "question": "Trong HeidiSQL, để thêm một hàng dữ liệu mới vào bảng nhacsi mà không cần nhập giá trị cho trường idNhacsi, bạn nên làm gì? Ý (b) Để trường idNhacsi trống và chỉ nhập giá trị cho trường tenNhacsi.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Hệ thống sẽ tự sinh giá trị cho trường id.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 77,
+      "type": "true_false",
+      "question": "Trong HeidiSQL, để thêm một hàng dữ liệu mới vào bảng nhacsi mà không cần nhập giá trị cho trường idNhacsi, bạn nên làm gì? Ý (c) Sử dụng câu lệnh SQL để thêm dữ liệu và tự điền idNhacsi.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Đây là cách làm gián tiếp, không phải thao tác trực tiếp trên lưới dữ liệu như đề bài gợi ý.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 78,
+      "type": "true_false",
+      "question": "Trong HeidiSQL, để thêm một hàng dữ liệu mới vào bảng nhacsi mà không cần nhập giá trị cho trường idNhacsi, bạn nên làm gì? Ý (d) Nhấn phím Insert hoặc nhấp chuột phải để chèn hàng mới và chỉ nhập tên nhạc sĩ vào trường tenNhacsi.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là quy trình thao tác chuẩn trong HeidiSQL.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 79,
+      "type": "true_false",
+      "question": "Làm thế nào để xóa nhiều dòng dữ liệu trong bảng nhacsi trên HeidiSQL? Ý (a) Chọn dòng dữ liệu và nhấn phím Delete trên bàn phím.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Phím Delete đơn lẻ thường dùng để xóa nội dung ô, không phải xóa dòng trong HeidiSQL.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 80,
+      "type": "true_false",
+      "question": "Làm thế nào để xóa nhiều dòng dữ liệu trong bảng nhacsi trên HeidiSQL? Ý (b) Chọn nhiều dòng dữ liệu, sau đó nhấn tổ hợp phím Ctrl+Delete hoặc sử dụng biểu tượng xóa.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là các cách xóa nhiều dòng đồng thời.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 81,
+      "type": "true_false",
+      "question": "Làm thế nào để xóa nhiều dòng dữ liệu trong bảng nhacsi trên HeidiSQL? Ý (c) Sử dụng câu lệnh SQL DELETE để xóa các dòng dữ liệu.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Lệnh SQL DELETE là cách thức mạnh mẽ để xóa dữ liệu theo điều kiện.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    },
+    {
+      "id": 82,
+      "type": "true_false",
+      "question": "Làm thế nào để xóa nhiều dòng dữ liệu trong bảng nhacsi trên HeidiSQL? Ý (d) Nhấp chuột phải vào từng dòng và chọn Xóa dòng.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Thao tác thủ công cho từng dòng vẫn mang lại kết quả xóa.",
+      "image": null,
+      "topic": "Thao tác dữ liệu",
+      "level": "TH"
+    }
+  ]
+}
