@@ -1,0 +1,480 @@
+{
+  "title": "Đề cương Vật lý 11 – Giữa kì 2",
+  "subject": "Vật lý",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Có hai điện tích điểm $q_1$ và $q_2$, chúng đẩy nhau. Khẳng định nào sau đây là sai?",
+      "options": [
+        "A. $q_1 > 0$ và $q_2 > 0$",
+        "B. $q_1 < 0$ và $q_2 < 0$",
+        "C. $q_1 > 0$ và $q_2 < 0$",
+        "D. $q_1$ và $q_2$ trái dấu"
+      ],
+      "correct": "D. $q_1$ và $q_2$ trái dấu",
+      "explanation": "Hai điện tích đẩy nhau khi chúng cùng dấu ($q_1 q_2 > 0$). Do đó, khẳng định $q_1$ và $q_2$ trái dấu là sai.",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "NB"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Biểu thức của định luật Coulomb trong môi trường điện môi là",
+      "options": [
+        "A. $F = k \\frac{|q_1 q_2|}{r^2}$",
+        "B. $F = \\frac{|q_1 q_2|}{k r^2}$",
+        "C. $F = k \\frac{|q_1 q_2|}{\\varepsilon r^2}$",
+        "D. $F = \\frac{|q_1 q_2|}{\\varepsilon r^2}$"
+      ],
+      "correct": "C. $F = k \\frac{|q_1 q_2|}{\\varepsilon r^2}$",
+      "explanation": "Trong môi trường điện môi đồng tính có hằng số điện môi $\\varepsilon$, lực tương tác giảm đi $\\varepsilon$ lần so với chân không: $$F = k \\frac{|q_1 q_2|}{\\varepsilon r^2}$$.",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "NB"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Có ba vật A, B, C kích thước nhỏ, nhiễm điện. Biết rằng vật A hút vật B nhưng lại đẩy C. Khẳng định nào sau đây là không đúng?",
+      "options": [
+        "A. Điện tích của vật A và C cùng dấu",
+        "B. Điện tích của vật A và B trái dấu",
+        "C. Điện tích của vật B và C trái dấu",
+        "D. Điện tích của vật A và B cùng dấu"
+      ],
+      "correct": "D. Điện tích của vật A và B cùng dấu",
+      "explanation": "A hút B $\\Rightarrow$ A và B trái dấu. A đẩy C $\\Rightarrow$ A và C cùng dấu. Vậy B và C trái dấu. Khẳng định D là sai.",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "TH"
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Độ lớn của lực tương tác giữa hai điện tích điểm trong không khí",
+      "options": [
+        "A. tỉ lệ nghịch với bình phương khoảng cách giữa hai điện tích",
+        "B. tỉ lệ thuận với bình phương khoảng cách giữa hai điện tích",
+        "C. tỉ lệ nghịch với khoảng cách giữa hai điện tích",
+        "D. tỉ lệ thuận với khoảng cách giữa hai điện tích"
+      ],
+      "correct": "A. tỉ lệ nghịch với bình phương khoảng cách giữa hai điện tích",
+      "explanation": "Theo định luật Coulomb: $$F = k \\frac{|q_1 q_2|}{r^2}$$, lực $F$ tỉ lệ nghịch với $r^2$.",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "NB"
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Hai điện tích $q_1 = 2 \\times 10^{-6}$ C; $q_2 = -2 \\times 10^{-6}$ C đặt tại hai điểm A và B trong không khí. Lực tương tác giữa chúng là 0,4 N. Khoảng cách AB là",
+      "options": [
+        "A. 20 cm",
+        "B. 30 cm",
+        "C. 40 cm",
+        "D. 50 cm"
+      ],
+      "correct": "B. 30 cm",
+      "explanation": "$$r = \\sqrt{\\frac{k |q_1 q_2|}{F}} = \\sqrt{\\frac{9 \\times 10^9 \\cdot 4 \\times 10^{-12}}{0{,}4}} = 0{,}3 \\text{ m} = 30 \\text{ cm}.$$",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "VD"
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Lực tương tác giữa hai điện tích $q_1 = q_2 = -3 \\times 10^{-6}$ C khi đặt cách nhau 10 cm trong không khí là",
+      "options": [
+        "A. $2{,}7 \\times 10^{-1}$ N",
+        "B. $2{,}7 \\times 10^{-2}$ N",
+        "C. $8{,}1 \\times 10^{-2}$ N",
+        "D. $8{,}1 \\times 10^{-1}$ N"
+      ],
+      "correct": "D. $8{,}1 \\times 10^{-1}$ N",
+      "explanation": "$$F = 9 \\times 10^9 \\cdot \\frac{(3 \\times 10^{-6})^2}{(0{,}1)^2} = 9 \\times 10^9 \\cdot \\frac{9 \\times 10^{-12}}{0{,}01} = 0{,}81 \\text{ N} = 8{,}1 \\times 10^{-1} \\text{ N}.$$",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "TH"
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Một điện tích $q = 1$ µC đặt trong chân không sinh ra điện trường tại một điểm cách nó 1 m có độ lớn và hướng là",
+      "options": [
+        "A. 9000 V/m, hướng về q",
+        "B. 9000 V/m, hướng ra xa q",
+        "C. $9 \\times 10^6$ V/m, hướng về q",
+        "D. $9 \\times 10^6$ V/m, hướng ra xa q"
+      ],
+      "correct": "B. 9000 V/m, hướng ra xa q",
+      "explanation": "$$E = k \\frac{|q|}{r^2} = 9 \\times 10^9 \\cdot \\frac{10^{-6}}{1^2} = 9000 \\text{ V/m}.$$ Vì $q > 0$ nên vectơ cường độ điện trường hướng ra xa điện tích.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "TH"
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Đơn vị của cường độ điện trường là",
+      "options": [
+        "A. N",
+        "B. N/m",
+        "C. V/m",
+        "D. V.m"
+      ],
+      "correct": "C. V/m",
+      "explanation": "Cường độ điện trường có đơn vị là Vôn trên mét (V/m).",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Một điện tích điểm $Q = -2 \\times 10^{-6}$ C đặt tại điểm A trong môi trường có hằng số điện môi $\\varepsilon = 2$. Vectơ cường độ điện trường do điện tích Q gây ra tại điểm B với AB = 7,5 cm có",
+      "options": [
+        "A. phương AB, chiều từ A đến B, độ lớn $2{,}5 \\times 10^5$ V/m",
+        "B. phương AB, chiều từ B đến A, độ lớn $1{,}6 \\times 10^5$ V/m",
+        "C. phương AB, chiều từ B đến A, độ lớn $2{,}5 \\times 10^5$ V/m",
+        "D. phương AB, chiều từ A đến B, độ lớn $1{,}6 \\times 10^5$ V/m"
+      ],
+      "correct": "B. phương AB, chiều từ B đến A, độ lớn $1{,}6 \\times 10^5$ V/m",
+      "explanation": "$$E = k \\frac{|Q|}{\\varepsilon r^2} = 9 \\times 10^9 \\cdot \\frac{2 \\times 10^{-6}}{2 \\cdot (0{,}075)^2} = 9 \\times 10^9 \\cdot \\frac{2 \\times 10^{-6}}{2 \\cdot 0{,}005625} = 1{,}6 \\times 10^6 \\text{ V/m}.$$ Do $Q < 0$ nên hướng từ B về A. (Lưu ý: Có sai sót lũy thừa trong đề gốc, giá trị đúng là $1{,}6 \\times 10^6$ V/m).",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "VD"
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Phát biểu nào sau đây là sai về tính chất của đường sức điện trường?",
+      "options": [
+        "A. Đường sức điện trường là những đường có hướng",
+        "B. Nơi nào có điện trường mạnh thì đường sức mau, nơi nào có điện trường yếu thì đường sức thưa",
+        "C. Với điện tích dương thì các đường sức có hướng đi ra khỏi điện tích",
+        "D. Với mỗi điểm trong điện trường đều có thể có nhiều hơn một đường sức đi qua"
+      ],
+      "correct": "D. Với mỗi điểm trong điện trường đều có thể có nhiều hơn một đường sức đi qua",
+      "explanation": "Qua mỗi điểm trong điện trường chỉ có **duy nhất một** đường sức điện đi qua.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Phát biểu nào sau đây là sai khi nói về vector cường độ điện trường?",
+      "options": [
+        "A. Tại một điểm càng xa một điện tích dương thì độ lớn của vector cường độ điện trường càng nhỏ",
+        "B. Tại một điểm càng gần một điện tích âm thì độ lớn của vector cường độ điện trường càng nhỏ",
+        "C. Vector cường độ điện trường của một điện tích dương thì hướng từ điện tích ra xa",
+        "D. Vector cường độ điện trường của một điện tích âm thì hướng từ xa vào điện tích"
+      ],
+      "correct": "B. Tại một điểm càng gần một điện tích âm thì độ lớn của vector cường độ điện trường càng nhỏ",
+      "explanation": "$$E \\propto \\frac{1}{r^2}$$, nên càng gần điện tích ($r$ nhỏ) thì $E$ càng **lớn**.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "TH"
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Cho một electron chuyển động với vận tốc đầu vào chính giữa hai bản kim loại song song tích điện trái dấu theo phương vuông góc với các đường sức điện trường. Quỹ đạo chuyển động của electron có dạng",
+      "options": [
+        "A. theo cung parabol về phía bản dương",
+        "B. theo cung parabol về phía bản âm",
+        "C. chuyển động theo quỹ đạo thẳng",
+        "D. quỹ đạo tròn"
+      ],
+      "correct": "A. theo cung parabol về phía bản dương",
+      "explanation": "Electron mang điện âm nên chịu lực điện ngược chiều điện trường (hướng về bản dương), kết hợp với vận tốc vuông góc tạo quỹ đạo **parabol** về phía bản dương.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "TH"
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Phát biểu nào sau đây là không đúng?",
+      "options": [
+        "A. Điện phổ cho ta biết sự phân bố các đường sức trong điện trường",
+        "B. Tất cả các đường sức đều xuất phát từ điện tích dương và kết thúc ở điện tích âm",
+        "C. Cũng có khi đường sức điện không xuất phát từ điện tích dương mà xuất phát từ vô cực",
+        "D. Các đường sức của điện trường đều là các đường thẳng song song và cách đều nhau"
+      ],
+      "correct": "D. Các đường sức của điện trường đều là các đường thẳng song song và cách đều nhau",
+      "explanation": "Đặc điểm đường thẳng song song cách đều chỉ đúng với **điện trường đều**, không áp dụng cho mọi điện trường.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 49,
+      "type": "true_false",
+      "question": "Hai quả cầu tích điện $q_1 = 3{,}2 \\times 10^{-9}$ C và $q_2 = -4{,}8 \\times 10^{-9}$ C: b. Số electron dư ở quả cầu $q_2$ là $3 \\times 10^{10}$ electron.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "$$n = \\frac{|q_2|}{|e|} = \\frac{4{,}8 \\times 10^{-9}}{1{,}6 \\times 10^{-19}} = 3 \\times 10^{10}.$$",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "TH"
+    },
+    {
+      "id": 50,
+      "type": "true_false",
+      "question": "Hai quả cầu tích điện $q_1 = 3{,}2 \\times 10^{-9}$ C và $q_2 = -4{,}8 \\times 10^{-9}$ C: c. Cho hai quả cầu tiếp xúc nhau. Điện tích mỗi quả cầu sau khi tiếp xúc là $-0{,}8 \\times 10^{-9}$ C.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "$$q' = \\frac{q_1 + q_2}{2} = \\frac{3{,}2 - 4{,}8}{2} \\times 10^{-9} = -0{,}8 \\times 10^{-9} \\text{ C}.$$",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "TH"
+    },
+    {
+      "id": 51,
+      "type": "true_false",
+      "question": "Hai quả cầu tích điện $q_1 = 3{,}2 \\times 10^{-9}$ C và $q_2 = -4{,}8 \\times 10^{-9}$ C: d. Sau khi tiếp xúc, ta đặt chúng cách nhau 15 cm trong dầu hỏa có $\\varepsilon = 2$. Lực tương tác giữa chúng là $1{,}22 \\times 10^{-4}$ N.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Sau tiếp xúc, mỗi quả có $q' = -0{,}8 \\times 10^{-9}$ C. $$F = k \\frac{|q'|^2}{\\varepsilon r^2} = 9 \\times 10^9 \\cdot \\frac{(0{,}8 \\times 10^{-9})^2}{2 \\cdot (0{,}15)^2} = 1{,}28 \\times 10^{-7} \\text{ N}.$$ (Không phải $1{,}22 \\times 10^{-4}$ N).",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "VD"
+    },
+    {
+      "id": 52,
+      "type": "true_false",
+      "question": "Phát biểu về đường sức điện: a. Các đường sức của cùng một điện trường có thể cắt nhau.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Các đường sức điện **không bao giờ cắt nhau**.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 53,
+      "type": "true_false",
+      "question": "Phát biểu về đường sức điện: b. Các đường sức của điện trường tĩnh là đường không khép kín.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đường sức điện trường tĩnh xuất phát từ điện tích dương (hoặc vô cực) và kết thúc ở điện tích âm (hoặc vô cực), không khép kín.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 54,
+      "type": "true_false",
+      "question": "Phát biểu về đường sức điện: c. Hướng của đường sức điện tại mỗi điểm là hướng của vector cường độ điện trường tại điểm đó.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là định nghĩa về hướng của đường sức điện.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 55,
+      "type": "true_false",
+      "question": "Phát biểu về đường sức điện: d. Các đường sức là các đường không có hướng.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Đường sức điện luôn là đường **có hướng**.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 56,
+      "type": "true_false",
+      "question": "Phát biểu về điện trường: a. Lực hút giữa hai điện tích mang dấu âm còn lực đẩy giữa hai điện tích thì mang dấu dương.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Hai điện tích cùng dấu **đẩy nhau**, trái dấu **hút nhau**. Khẳng định không đúng.",
+      "image": null,
+      "topic": "Điện tích - Định luật Cu-lông",
+      "level": "NB"
+    },
+    {
+      "id": 57,
+      "type": "true_false",
+      "question": "Phát biểu về điện trường: b. Tính chất cơ bản của điện trường là nó tác dụng lực điện lên điện tích đặt trong nó.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đây là tính chất cơ bản của điện trường.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 58,
+      "type": "true_false",
+      "question": "Phát biểu về điện trường: c. Vector cường độ điện trường tại một điểm luôn cùng phương, cùng chiều với vector lực điện tác dụng lên một điện tích dương đặt tại điểm đó trong điện trường.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Vì $\\vec{F} = q \\vec{E}$, khi $q > 0$ thì $\\vec{F} \\uparrow \\uparrow \\vec{E}$.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 59,
+      "type": "true_false",
+      "question": "Phát biểu về điện trường: d. Vector cường độ điện trường tại một điểm luôn cùng phương, ngược chiều với vector lực điện tác dụng lên một điện tích âm đặt tại điểm đó trong điện trường.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Vì $\\vec{F} = q \\vec{E}$, khi $q < 0$ thì $\\vec{F} \\uparrow \\downarrow \\vec{E}$.",
+      "image": null,
+      "topic": "Điện trường",
+      "level": "NB"
+    },
+    {
+      "id": 60,
+      "type": "true_false",
+      "question": "Tam giác ABC vuông tại C, E // AC: a) Điện thế tại điểm A nhỏ hơn điện thế tại điểm C.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Điện trường hướng từ A đến C ($\\vec{E} // \\vec{AC}$), điện thế giảm theo chiều đường sức nên $V_A > V_C$.",
+      "image": null,
+      "topic": "Công của lực điện - Hiệu điện thế",
+      "level": "TH"
+    },
+    {
+      "id": 61,
+      "type": "true_false",
+      "question": "Tam giác ABC vuông tại C, E // AC: b) Nếu đặt hai điện tích thử giống nhau tại B và C thì thế năng tại điểm B và tại điểm C bằng nhau.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Vì $BC \\perp AC$ và $\\vec{E} // AC$ nên $BC \\perp \\vec{E}$, do đó $V_B = V_C$. Thế năng tại B và C bằng nhau (nếu điện tích thử giống nhau).",
+      "image": null,
+      "topic": "Công của lực điện - Hiệu điện thế",
+      "level": "VD"
+    },
+    {
+      "id": 62,
+      "type": "true_false",
+      "question": "Tam giác ABC vuông tại C, E // AC: c) Công của lực điện trường làm dịch chuyển một electron từ A đến C có giá trị $-4{,}8 \\times 10^{-18}$ J.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "$$A = q E d = (-1{,}6 \\times 10^{-19}) \\cdot 4000 \\cdot 0{,}07 = -4{,}48 \\times 10^{-17} \\text{ J}.$$ (Không phải $-4{,}8 \\times 10^{-18}$ J).",
+      "image": null,
+      "topic": "Công của lực điện - Hiệu điện thế",
+      "level": "VD"
+    },
+    {
+      "id": 63,
+      "type": "true_false",
+      "question": "Tam giác ABC vuông tại C, E // AC: d) Công của lực điện trường khi làm dịch chuyển một electron dọc theo đường gấp khúc ABC có giá trị nhỏ hơn công của lực điện trường khi làm dịch chuyển một electron từ A đến C.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Công của lực điện trường **không phụ thuộc** hình dạng đường đi, chỉ phụ thuộc vị trí đầu cuối: $A_{ABC} = A_{AC}$.",
+      "image": null,
+      "topic": "Công của lực điện - Hiệu điện thế",
+      "level": "TH"
+    },
+    {
+      "id": 64,
+      "type": "true_false",
+      "question": "Trên vỏ một tụ điện ghi 20 µF - 200 V: a) Hiệu điện thế tối đa được sử dụng là 200 V.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Số thứ hai trên vỏ tụ là hiệu điện thế định mức (tối đa) có thể sử dụng an toàn.",
+      "image": null,
+      "topic": "Tụ điện",
+      "level": "NB"
+    },
+    {
+      "id": 65,
+      "type": "true_false",
+      "question": "Trên vỏ một tụ điện ghi 20 µF - 200 V: b) Nối vào hiệu điện thế 120 V, điện tích tụ tích được là $2{,}4 \\times 10^{-3}$ C.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "$$Q = C U = 20 \\times 10^{-6} \\cdot 120 = 2{,}4 \\times 10^{-3} \\text{ C}.$$",
+      "image": null,
+      "topic": "Tụ điện",
+      "level": "TH"
+    },
+    {
+      "id": 66,
+      "type": "true_false",
+      "question": "Trên vỏ một tụ điện ghi 20 µF - 200 V: c) Sử dụng 3 tụ giống nhau ghép song song, điện dung bộ tụ là 60 µF.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "$$C_b = C + C + C = 20 + 20 + 20 = 60 \\mu\\text{F}.$$",
+      "image": null,
+      "topic": "Tụ điện",
+      "level": "TH"
+    },
+    {
+      "id": 67,
+      "type": "true_false",
+      "question": "Trên vỏ một tụ điện ghi 20 µF - 200 V: d) Điện tích tối đa mà tụ có thể tích được là $4 \\times 10^{-3}$ C.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "$$Q_{\\max} = C U_{\\max} = 20 \\times 10^{-6} \\cdot 200 = 4 \\times 10^{-3} \\text{ C}.$$",
+      "image": null,
+      "topic": "Tụ điện",
+      "level": "TH"
+    }
+  ]
+}
