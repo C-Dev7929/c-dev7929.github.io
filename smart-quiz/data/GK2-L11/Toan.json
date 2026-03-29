@@ -1,0 +1,638 @@
+{
+  "title": "ĐỀ CƯƠNG ÔN TẬP GK2 TOÁN 11 NĂM 2025-2026",
+  "subject": "Toán học",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Câu 1.1. Cho $a>0$ Giá trị của $\\sqrt[3]{a^{5}}$ bằng:",
+      "options": [
+        "A. $a^{\\frac{3}{5}}$",
+        "B. $a^{\\frac{5}{3}}$",
+        "C. $a^{15}$",
+        "D. $a^{\\frac{1}{15}}$"
+      ],
+      "correct": "B. $a^{\\frac{5}{3}}$",
+      "explanation": "Áp dụng công thức căn thức lũy thừa: $\\sqrt[n]{a^m} = a^{\\frac{m}{n}}$. Với $n=3, m=5$, ta có $\\sqrt[3]{a^5} = a^{\\frac{5}{3}}$.",
+      "image": null,
+      "topic": "Tính chất lũy thừa",
+      "level": "NB"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Câu 1.2. Cho $a>0$ Giá trị của $\\sqrt[4]{a^{7}}$ bằng:",
+      "options": [
+        "A. $a^{\\frac{7}{4}}$",
+        "B. $a^{\\frac{4}{7}}$",
+        "C. $a^{\\frac{1}{28}}$",
+        "D. $a^{28}$"
+      ],
+      "correct": "A. $a^{\\frac{7}{4}}$",
+      "explanation": "Sử dụng công thức $\\sqrt[n]{a^m} = a^{\\frac{m}{n}}$. Ở đây $n=4, m=7$, do đó $\\sqrt[4]{a^7} = a^{\\frac{7}{4}}$.",
+      "image": null,
+      "topic": "Tính chất lũy thừa",
+      "level": "NB"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Câu 2.1. Giá trị của $9^{\\frac{1}{2}}$ bằng:",
+      "options": [
+        "A. 81",
+        "B. 3",
+        "C. 14",
+        "D. 9"
+      ],
+      "correct": "B. 3",
+      "explanation": "$9^{\\frac{1}{2}} = \\sqrt{9} = 3$.",
+      "image": null,
+      "topic": "Giá trị biểu thức mũ",
+      "level": "TH"
+    },
+    {
+      "id": 4,
+      "type": "mcq",
+      "question": "Câu 2.2. Giá trị của $16^{\\frac{1}{4}}$ bằng:",
+      "options": [
+        "A. 2",
+        "B. 8",
+        "C. 4",
+        "D. 16"
+      ],
+      "correct": "A. 2",
+      "explanation": "$16^{\\frac{1}{4}} = \\sqrt[4]{16} = \\sqrt[4]{2^4} = 2$.",
+      "image": null,
+      "topic": "Giá trị biểu thức mũ",
+      "level": "TH"
+    },
+    {
+      "id": 5,
+      "type": "mcq",
+      "question": "Câu 3.1. Với các số thực dương a,b bất kì. Mệnh đề nào dưới đây đúng.",
+      "options": [
+        "A. $ln(ab)=ln\\ a+ln\\ b$.",
+        "B. $ln(ab)=ln\\ a.ln\\ b.$",
+        "C. $ln\\frac{a}{b}=\\frac{ln\\ a}{ln\\ b}.$",
+        "D. $ln\\frac{a}{b}=ln\\ b-ln\\ a.$"
+      ],
+      "correct": "A. $ln(ab)=ln\\ a+ln\\ b$.",
+      "explanation": "Theo tính chất của logarit: logarit của một tích bằng tổng các logarit.",
+      "image": null,
+      "topic": "Tính chất logarit",
+      "level": "NB"
+    },
+    {
+      "id": 6,
+      "type": "mcq",
+      "question": "Câu 3.2. Với a > 0, $a\\ne1$, khẳng định nào sau đây đúng?",
+      "options": [
+        "A. $log_{a}(xy)=log_{a}x\\cdot log_{a}y$",
+        "B. $log_{a}(xy)=\\frac{log_{a}x}{log_{a}y}$",
+        "C. $log_{a}(xy)=log_{a}x+log_{a}y$",
+        "D. $log_{a}(xy)=log_{x}y$"
+      ],
+      "correct": "C. $log_{a}(xy)=log_{a}x+log_{a}y$",
+      "explanation": "Đây là quy tắc logarit của một tích: $\\log_a(M.N) = \\log_a M + \\log_a N$.",
+      "image": null,
+      "topic": "Tính chất logarit",
+      "level": "NB"
+    },
+    {
+      "id": 7,
+      "type": "mcq",
+      "question": "Câu 4.1. Giá trị của $log_{2}4+log_{2}8$ bằng:",
+      "options": [
+        "A. 5",
+        "B. 3",
+        "C. 6",
+        "D. 8"
+      ],
+      "correct": "A. 5",
+      "explanation": "$log_2 4 = 2$ (vì $2^2=4$) và $log_2 8 = 3$ (vì $2^3=8$). Tổng là $2+3=5$.",
+      "image": null,
+      "topic": "Giá trị biểu thức logarit",
+      "level": "TH"
+    },
+    {
+      "id": 8,
+      "type": "mcq",
+      "question": "Câu 4.2. Giá trị của $log_{3}27-log_{3}3$ bằng:",
+      "options": [
+        "A. 0",
+        "B. 1",
+        "C. 2",
+        "D. 3"
+      ],
+      "correct": "C. 2",
+      "explanation": "$log_3 27 = 3$ (vì $3^3=27$) và $log_3 3 = 1$. Hiệu là $3-1=2$.",
+      "image": null,
+      "topic": "Giá trị biểu thức logarit",
+      "level": "TH"
+    },
+    {
+      "id": 9,
+      "type": "mcq",
+      "question": "Câu 5.1. Đồ thị như hình vẽ sau là của hàm số nào?",
+      "options": [
+        "A. $y=x^{2}$",
+        "B. $y=log_{2}x$",
+        "C. $y=2^{x}$",
+        "D. $y=(\\frac{1}{2})^{x}$"
+      ],
+      "correct": "C. $y=2^{x}$",
+      "explanation": "Đồ thị đi qua điểm (0;1) và (1;2). Thử với hàm mũ $y=a^x$: $2=a^1 \\Rightarrow a=2$. Vậy hàm số là $y=2^x$.",
+      "image": "https://p.calameoassets.com/240320084422-978189c4458f3f88f8d68f237f3a8f33/p1.jpg",
+      "topic": "Đồ thị hàm số mũ/logarit",
+      "level": "NB"
+    },
+    {
+      "id": 10,
+      "type": "mcq",
+      "question": "Câu 5.1. Đồ thị như hình vẽ sau là của hàm số nào? (Hình 2)",
+      "options": [
+        "A. $y=3^{x}$",
+        "B. $y=x^{3}$",
+        "C. $y=2^{x}$",
+        "D. $y=log_{3}x$"
+      ],
+      "correct": "D. $y=log_{3}x$",
+      "explanation": "Đồ thị nằm bên phải trục tung, đi qua điểm (1;0) và (3;1). Đây là đặc điểm của hàm logarit $y=\\log_a x$. Thử với (3;1): $1=\\log_a 3 \\Rightarrow a=3$. Vậy $y=\\log_3 x$.",
+      "image": "https://p.calameoassets.com/240320084422-978189c4458f3f88f8d68f237f3a8f33/p1.jpg",
+      "topic": "Đồ thị hàm số mũ/logarit",
+      "level": "NB"
+    },
+    {
+      "id": 11,
+      "type": "mcq",
+      "question": "Câu 6.1. Giải phương trình $log_{3}(2x-1)=1$",
+      "options": [
+        "A. $x=2$",
+        "B. $x=1$",
+        "C. $x=\\frac{1}{2}$",
+        "D. $x=0$"
+      ],
+      "correct": "A. $x=2$",
+      "explanation": "$log_3(2x-1)=1 \\Leftrightarrow 2x-1 = 3^1 \\Leftrightarrow 2x = 4 \\Leftrightarrow x = 2$.",
+      "image": null,
+      "topic": "Phương trình logarit",
+      "level": "TH"
+    },
+    {
+      "id": 12,
+      "type": "mcq",
+      "question": "Câu 6.2. Phương trình $log_{2}(x+1)=3$ có nghiệm là",
+      "options": [
+        "A. $x=7$",
+        "B. $x=8$",
+        "C. $x=6$",
+        "D. $x=5$"
+      ],
+      "correct": "A. $x=7$",
+      "explanation": "$log_2(x+1)=3 \\Leftrightarrow x+1 = 2^3 \\Leftrightarrow x+1 = 8 \\Leftrightarrow x = 7$.",
+      "image": null,
+      "topic": "Phương trình logarit",
+      "level": "TH"
+    },
+    {
+      "id": 13,
+      "type": "mcq",
+      "question": "Câu 7.1. Cho hình chóp S.ABC có $SA\\perp(ABC)$ Đường thẳng SA KHÔNG vuông góc với đường thẳng nào?",
+      "options": [
+        "A. AB",
+        "B. BC",
+        "C. AC",
+        "D. SB"
+      ],
+      "correct": "D. SB",
+      "explanation": "Vì $SA\\perp(ABC)$ nên SA vuông góc với mọi đường thẳng nằm trong (ABC) bao gồm AB, BC, AC. Đường thẳng SB không nằm trong (ABC) và cắt SA tại S, góc giữa chúng không phải 90 độ.",
+      "image": null,
+      "topic": "Đường thẳng vuông góc mặt phẳng",
+      "level": "NB"
+    },
+    {
+      "id": 14,
+      "type": "mcq",
+      "question": "Câu 7.2. Cho hình chóp S.ABCD có $SA\\perp(ABCD)$. Đường thẳng SA vuông góc với đường thẳng nào?",
+      "options": [
+        "A. SB",
+        "B. SC",
+        "C. BC",
+        "D. SD"
+      ],
+      "correct": "C. BC",
+      "explanation": "Vì $SA\\perp(ABCD)$ nên SA vuông góc với mọi đường thẳng nằm trong đáy (ABCD). Trong các phương án, chỉ có BC nằm trong mặt phẳng (ABCD).",
+      "image": null,
+      "topic": "Đường thẳng vuông góc mặt phẳng",
+      "level": "NB"
+    },
+    {
+      "id": 15,
+      "type": "mcq",
+      "question": "Câu 8.1. Trong không gian, đường thẳng d vuông góc với mặt phẳng (P) nếu",
+      "options": [
+        "A. d song song với mọi đường thăng trong (P)",
+        "B. d vuông góc với mọi đường thẳng trong (P)",
+        "C. d cắt (P)",
+        "D. d nằm trong (P)"
+      ],
+      "correct": "B. d vuông góc với mọi đường thẳng trong (P)",
+      "explanation": "Đây là định nghĩa đường thẳng vuông góc với mặt phẳng.",
+      "image": null,
+      "topic": "Đường thẳng vuông góc mặt phẳng",
+      "level": "NB"
+    },
+    {
+      "id": 16,
+      "type": "mcq",
+      "question": "Câu 8.2. Cho đường thẳng d vuông góc với hai đường thẳng cắt nhau nằm trong mặt phẳng (P). Khi đó",
+      "options": [
+        "A. d song song (P)",
+        "B. d vuông góc (P)",
+        "C. d nằm trong (P)",
+        "D. d cắt (P)"
+      ],
+      "correct": "B. d vuông góc (P)",
+      "explanation": "Đây là điều kiện để đường thẳng vuông góc với mặt phẳng.",
+      "image": null,
+      "topic": "Đường thẳng vuông góc mặt phẳng",
+      "level": "NB"
+    },
+    {
+      "id": 17,
+      "type": "mcq",
+      "question": "Câu 9. Góc giữa hai mặt phăng là",
+      "options": [
+        "A. Góc giữa hai đường thẳng bất kỳ nằm trong hai mặt phẳng đó",
+        "B. Góc giữa hai đường thẳng lần lượt vuông góc với hai mặt phẳng đó",
+        "C. Góc giữa hai giao tuyến của hai mặt phẳng",
+        "D. Góc giữa hai đường thẳng song song với hai mặt phẳng"
+      ],
+      "correct": "B. Góc giữa hai đường thẳng lần lượt vuông góc với hai mặt phẳng đó",
+      "explanation": "Theo định nghĩa về góc giữa hai mặt phẳng.",
+      "image": null,
+      "topic": "Góc giữa hai mặt phẳng",
+      "level": "NB"
+    },
+    {
+      "id": 18,
+      "type": "mcq",
+      "question": "Câu 10. Hai mặt phẳng được gọi là vuông góc nếu",
+      "options": [
+        "A. Góc giữa chúng bằng 45°",
+        "B. Góc giữa chúng bằng 60°",
+        "C. Góc giữa chúng bằng 90°",
+        "D. Chúng song song"
+      ],
+      "correct": "C. Góc giữa chúng bằng 90°",
+      "explanation": "Hai mặt phẳng vuông góc khi góc tạo bởi chúng là góc vuông.",
+      "image": null,
+      "topic": "Hai mặt phẳng vuông góc",
+      "level": "NB"
+    },
+    {
+      "id": 19,
+      "type": "mcq",
+      "question": "Câu 11.1. Cho lăng trụ tam giác đều ABC.A'B'C' có cạnh đáy bằng 3, chiều cao bằng 4. Khoảng cách giữa hai đường thẳng AB và CC' bằng",
+      "options": [
+        "A. $\\frac{\\sqrt{3}}{2}$",
+        "B. 3",
+        "C. 5",
+        "D. $\\frac{3\\sqrt{3}}{2}$"
+      ],
+      "correct": "D. $\\frac{3\\sqrt{3}}{2}$",
+      "explanation": "CC' song song với mặt phẳng (ABB'A'). Khoảng cách giữa AB và CC' bằng khoảng cách từ C đến AB. Trong tam giác đều ABC cạnh bằng 3, đường cao hạ từ C xuống AB là $h = \\frac{3\\sqrt{3}}{2}$.",
+      "image": null,
+      "topic": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "level": "VD"
+    },
+    {
+      "id": 20,
+      "type": "mcq",
+      "question": "Câu 11.2. Cho hình chóp S.ABCD có đáy ABCD là hình vuông cạnh 4, SA 1 (ABCD) và $SA=2$ . Khoảng cách giữa hai đường thẳng SB và AD bằng",
+      "options": [
+        "A. $\\frac{\\sqrt{3}}{3}$",
+        "B. $\\frac{4\\sqrt{5}}{5}$",
+        "C. $\\frac{4\\sqrt{3}}{3}$",
+        "D. $\\frac{\\sqrt{5}}{5}$"
+      ],
+      "correct": "B. $\\frac{4\\sqrt{5}}{5}$",
+      "explanation": "Vì AD // BC nên AD // (SBC). Khoảng cách giữa AD và SB là khoảng cách từ AD đến (SBC), bằng khoảng cách từ A đến (SBC). Kẻ AH vuông góc SB tại H. Ta có $d = \\frac{SA \\cdot AB}{\\sqrt{SA^2 + AB^2}} = \\frac{2 \\cdot 4}{\\sqrt{2^2 + 4^2}} = \\frac{8}{\\sqrt{20}} = \\frac{8}{2\\sqrt{5}} = \\frac{4\\sqrt{5}}{5}$.",
+      "image": null,
+      "topic": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "level": "VD"
+    },
+    {
+      "id": 21,
+      "type": "mcq",
+      "question": "Câu 12.1. Cho khối chóp có diện tích đáy $S=6$ và chiều cao $h=3$ Thể tích khối chóp là",
+      "options": [
+        "A. 18",
+        "B. 9",
+        "C. 6",
+        "D. 12"
+      ],
+      "correct": "C. 6",
+      "explanation": "$V = \\frac{1}{3} S h = \\frac{1}{3} \\cdot 6 \\cdot 3 = 6$.",
+      "image": null,
+      "topic": "Thể tích khối chóp",
+      "level": "TH"
+    },
+    {
+      "id": 22,
+      "type": "mcq",
+      "question": "Câu 12.2. Cho hình chóp S.ABCD có đáy ABCD là hình chữ nhật với $AB=3$, $BC=4$, chiều cao $SO=5$ (với O là tâm hình chữ nhật). Thể tích khối chóp bằng",
+      "options": [
+        "A. 40",
+        "B. 60",
+        "C. 30",
+        "D. 20"
+      ],
+      "correct": "D. 20",
+      "explanation": "Diện tích đáy $S = AB \\cdot BC = 3 \\cdot 4 = 12$. Thể tích $V = \\frac{1}{3} S h = \\frac{1}{3} \\cdot 12 \\cdot 5 = 20$.",
+      "image": null,
+      "topic": "Thể tích khối chóp",
+      "level": "TH"
+    },
+    {
+      "id": 23,
+      "type": "mcq",
+      "question": "Câu 12.3. Cho hình chóp S.ABC có đáy là $\\triangle ABC$ vuông ở A, $SA\\perp(ABC)$ và $SA=6,$ $AB=2$, $AC=3$ . Thể tích khối chóp bằng",
+      "options": [
+        "A. 36",
+        "B. 12",
+        "C. 18",
+        "D. 6"
+      ],
+      "correct": "D. 6",
+      "explanation": "Diện tích đáy $S = \\frac{1}{2} AB \\cdot AC = \\frac{1}{2} \\cdot 2 \\cdot 3 = 3$. Thể tích $V = \\frac{1}{3} S h = \\frac{1}{3} \\cdot 3 \\cdot 6 = 6$.",
+      "image": null,
+      "topic": "Thể tích khối chóp",
+      "level": "TH"
+    },
+    {
+      "id": 24,
+      "type": "true_false",
+      "question": "Câu 13.1. Cho hàm số $y=log_{2}x$. Xét tính đúng sai của mệnh đề sau:\na) Tập xác định của hàm số là $(0;+\infty)$.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Điều kiện xác định của hàm logarit là biểu thức dưới dấu logarit phải dương ($x>0$).",
+      "image": null,
+      "topic": "Tính chất hàm số logarit",
+      "level": "TH"
+    },
+    {
+      "id": 25,
+      "type": "true_false",
+      "question": "Câu 13.1. Cho hàm số $y=log_{2}x$. Xét tính đúng sai của mệnh đề sau:\nb) Hàm số đồng biến trên $(0;+\infty)$.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Hàm số $y=\\log_a x$ đồng biến khi cơ số $a > 1$. Ở đây $a=2 > 1$.",
+      "image": null,
+      "topic": "Tính chất hàm số logarit",
+      "level": "TH"
+    },
+    {
+      "id": 26,
+      "type": "true_false",
+      "question": "Câu 13.1. Cho hàm số $y=log_{2}x$. Xét tính đúng sai của mệnh đề sau:\nc) $log_{2}11<log_{2}12$",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Vì hàm số đồng biến và $11 < 12$ nên $\\log_2 11 < \\log_2 12$.",
+      "image": null,
+      "topic": "Tính chất hàm số logarit",
+      "level": "TH"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "question": "Câu 13.1. Cho hàm số $y=log_{2}x$. Xét tính đúng sai của mệnh đề sau:\nd) Tập nghiệm của bất phương trình $log_{2}x>1$ là $(1;+\infty)$",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "$log_2 x > 1 \\Leftrightarrow x > 2^1 \\Leftrightarrow x > 2$. Tập nghiệm là $(2;+\infty)$, không phải $(1;+\infty)$.",
+      "image": null,
+      "topic": "Bất phương trình logarit",
+      "level": "TH"
+    },
+    {
+      "id": 28,
+      "type": "true_false",
+      "question": "Câu 13.2. Cho hàm số $y=log_{\\frac{1}{2}}x$. Xét tính đúng sai của mệnh đề sau:\na) Tập xác định của hàm số là $(0;+\infty)$.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Điều kiện xác định là $x > 0$.",
+      "image": null,
+      "topic": "Tính chất hàm số logarit",
+      "level": "TH"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "question": "Câu 13.2. Cho hàm số $y=log_{\\frac{1}{2}}x$. Xét tính đúng sai của mệnh đề sau:\nb) Hàm số đồng biến trên $(0;+\infty)$.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Hàm số $y=\\log_a x$ nghịch biến khi $0 < a < 1$. Ở đây $a = 1/2 < 1$.",
+      "image": null,
+      "topic": "Tính chất hàm số logarit",
+      "level": "TH"
+    },
+    {
+      "id": 30,
+      "type": "true_false",
+      "question": "Câu 13.2. Cho hàm số $y=log_{\\frac{1}{2}}x$. Xét tính đúng sai của mệnh đề sau:\nc) $log_{\\frac{1}{2}}11<log_{\\frac{1}{2}}12$",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Vì hàm số nghịch biến và $11 < 12$ nên $\\log_{1/2} 11 > \\log_{1/2} 12$.",
+      "image": null,
+      "topic": "Tính chất hàm số logarit",
+      "level": "TH"
+    },
+    {
+      "id": 31,
+      "type": "true_false",
+      "question": "Câu 13.2. Cho hàm số $y=log_{\\frac{1}{2}}x$. Xét tính đúng sai của mệnh đề sau:\nd) Tập nghiệm của bất phương trình $log_{\\frac{1}{2}}x\\ge2$ là $[\\frac{1}{4};+\\infty).$",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "$log_{1/2} x \\ge 2 \\Leftrightarrow x \\le (1/2)^2 \\Leftrightarrow x \\le 1/4$. Kết hợp điều kiện $x>0$, tập nghiệm là $(0; 1/4]$.",
+      "image": null,
+      "topic": "Bất phương trình logarit",
+      "level": "TH"
+    },
+    {
+      "id": 32,
+      "type": "true_false",
+      "question": "Câu 14.1. Cho hình hộp chữ nhật ABCD.A'B'C'D' có $AB=1$ $AC=2$ $AD^{\\prime}=3$. Xét tính đúng sai các mệnh đề sau:\na) AB $\\perp$ AD.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Trong hình hộp chữ nhật, các mặt đều là hình chữ nhật nên các cạnh kề nhau vuông góc.",
+      "image": null,
+      "topic": "Hình hộp chữ nhật",
+      "level": "TH"
+    },
+    {
+      "id": 33,
+      "type": "true_false",
+      "question": "Câu 14.1. Cho hình hộp chữ nhật ABCD.A'B'C'D' có $AB=1$ $AC=2$ $AD^{\\prime}=3$. Xét tính đúng sai các mệnh đề sau:\nb) Độ dài đoạn AC' bằng $\\sqrt{14}$",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Từ AC=2, AB=1 $\\Rightarrow BC = \\sqrt{2^2 - 1^2} = \\sqrt{3}$. Từ $AD'=3, AD=BC=\\sqrt{3} \\Rightarrow DD' = \\sqrt{3^2 - (\\sqrt{3})^2} = \\sqrt{6}$. Vậy $AC' = \\sqrt{AB^2+BC^2+DD'^2} = \\sqrt{1^2+3+6} = \\sqrt{10}$. Không phải $\\sqrt{14}$.",
+      "image": null,
+      "topic": "Hình hộp chữ nhật",
+      "level": "TH"
+    },
+    {
+      "id": 34,
+      "type": "true_false",
+      "question": "Câu 14.1. Cho hình hộp chữ nhật ABCD.A'B'C'D' có $AB=1$ $AC=2$ $AD^{\\prime}=3$. Xét tính đúng sai các mệnh đề sau:\nc) Hình chiếu vuông góc của đường thẳng A'C trên mặt phẳng (ABCD) là AC.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Hình chiếu của A' lên (ABCD) là A, hình chiếu của C là chính nó. Vậy hình chiếu của A'C là AC.",
+      "image": null,
+      "topic": "Hình chiếu vuông góc",
+      "level": "TH"
+    },
+    {
+      "id": 35,
+      "type": "true_false",
+      "question": "Câu 14.1. Cho hình hộp chữ nhật ABCD.A'B'C'D' có $AB=1$ $AC=2$ $AD^{\\prime}=3$. Xét tính đúng sai các mệnh đề sau:\nd) Hình chiếu vuông góc của tam giác ABC trên mặt phẳng (ABCD) là tam giác ABC.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Tam giác ABC nằm sẵn trên mặt phẳng (ABCD) nên hình chiếu là chính nó.",
+      "image": null,
+      "topic": "Hình chiếu vuông góc",
+      "level": "TH"
+    },
+    {
+      "id": 36,
+      "type": "true_false",
+      "question": "Câu 14.2. Cho hình chóp S.ABCD có đáy là hình vuông và SA $\\perp$ (ABCD). Xét tính đúng sai của mệnh đề sau:\na) $BC\\perp DC$.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Đáy là hình vuông nên các cạnh kề vuông góc.",
+      "image": null,
+      "topic": "Đường thẳng vuông góc",
+      "level": "TH"
+    },
+    {
+      "id": 37,
+      "type": "true_false",
+      "question": "Câu 14.2. Cho hình chóp S.ABCD có đáy là hình vuông và SA $\\perp$ (ABCD). Xét tính đúng sai của mệnh đề sau:\nb) $SA\\perp BD$.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Vì $SA\\perp(ABCD)$ nên SA vuông góc với mọi đường thẳng trong đáy, bao gồm BD.",
+      "image": null,
+      "topic": "Đường thẳng vuông góc mặt phẳng",
+      "level": "TH"
+    },
+    {
+      "id": 38,
+      "type": "true_false",
+      "question": "Câu 14.2. Cho hình chóp S.ABCD có đáy là hình vuông và SA $\\perp$ (ABCD). Xét tính đúng sai của mệnh đề sau:\nc) Hình chiếu vuông góc của đường thẳng SD trên mặt phẳng (ABCD) là BD.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Hình chiếu của S lên (ABCD) là A, của D là chính nó. Vậy hình chiếu của SD là AD.",
+      "image": null,
+      "topic": "Hình chiếu vuông góc",
+      "level": "TH"
+    },
+    {
+      "id": 39,
+      "type": "true_false",
+      "question": "Câu 14.2. Cho hình chóp S.ABCD có đáy là hình vuông và SA $\\perp$ (ABCD). Xét tính đúng sai của mệnh đề sau:\nd) Hình chiếu vuông góc của tam giác SBD trên mặt phẳng (ABCD) là tam giác ABD.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "S chiếu xuống thành A, B và D chiếu xuống thành chính nó. Vậy tam giác SBD chiếu xuống thành tam giác ABD.",
+      "image": null,
+      "topic": "Hình chiếu vuông góc",
+      "level": "TH"
+    },
+    {
+      "id": 40,
+      "type": "short",
+      "question": "Câu 15.1. Tổng các nghiệm nguyên của bất phương trình $log_{2}(x-1)\\le3$ là:",
+      "correct": "35",
+      "explanation": "Điều kiện: $x-1 > 0 \\Leftrightarrow x > 1$. BPT $\\Leftrightarrow x-1 \\le 2^3 = 8 \\Leftrightarrow x \\le 9$. Các nghiệm nguyên là $2, 3, 4, 5, 6, 7, 8, 9$. Tổng: $2+3+4+5+6+7+8+9 = 44$.",
+      "image": null,
+      "topic": "Bất phương trình logarit",
+      "level": "VD"
+    },
+    {
+      "id": 41,
+      "type": "short",
+      "question": "Câu 16.1. Một kim tự tháp có dạng hình chóp đều S.ABCD với đáy ABCD là hình vuông cạnh 200m, cạnh bên có độ dài 180m. Tính cos của góc tạo bởi cạnh bên SC và cạnh đáy AB (làm tròn đến hàng phần chục).",
+      "correct": "0.6",
+      "explanation": "Vì AB // CD nên góc giữa SC và AB là góc giữa SC và CD (trong tam giác SCD). Áp dụng định lý cosin trong $\\triangle SCD$ với $SC=180, SD=180, CD=200$: $cos\\widehat{SCD} = \\frac{SC^2+CD^2-SD^2}{2SC \\cdot CD} = \\frac{180^2+200^2-180^2}{2 \\cdot 180 \\cdot 200} = \\frac{40000}{72000} = \\frac{5}{9} \\approx 0.555...$ Làm tròn đến hàng phần chục là 0.6.",
+      "image": null,
+      "topic": "Góc giữa hai đường thẳng",
+      "level": "VD"
+    },
+    {
+      "id": 42,
+      "type": "short",
+      "question": "Câu 17.1. Cho hình chóp S.ABC, biết SA $\\perp$ (ABC). Tính cos của góc giữa đường thẳng SA và (ABC).",
+      "correct": "0",
+      "explanation": "Vì $SA \\perp (ABC)$ nên góc giữa SA và (ABC) bằng 90°. $cos 90^\\circ = 0$.",
+      "image": null,
+      "topic": "Góc giữa đường thẳng và mặt phẳng",
+      "level": "TH"
+    },
+    {
+      "id": 43,
+      "type": "short",
+      "question": "Câu 17.2. Cho hình lăng trụ đều ABC.A'B'C'. Góc giữa AC' và mặt phẳng (ABC) bằng bao nhiêu độ?",
+      "correct": "arctan(h/AC)",
+      "explanation": "Hình chiếu của AC' lên (ABC) là AC. Góc cần tìm là $\\widehat{C'AC}$. Tùy thuộc vào chiều cao h và cạnh đáy a của lăng trụ.",
+      "image": null,
+      "topic": "Góc giữa đường thẳng và mặt phẳng",
+      "level": "TH"
+    }
+  ]
+}
