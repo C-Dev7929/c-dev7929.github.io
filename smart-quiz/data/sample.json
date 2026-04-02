@@ -5,15 +5,15 @@
     {
       "id": 1,
       "type": "mcq",
-      "question": "Tính đạo hàm của hàm số $y = x^2 \sin(x)$",
+      "question": "Tính đạo hàm của hàm số $y = x^2 \\sin(x)$",
       "options": [
-        "$y' = 2x \sin(x) + x^2 \cos(x)$",
-        "$y' = 2x \cos(x) + x^2 \sin(x)$",
-        "$y' = 2x \sin(x) - x^2 \cos(x)$",
-        "$y' = x^2 \cos(x)$"
+        "$y' = 2x \\sin(x) + x^2 \\cos(x)$",
+        "$y' = 2x \\cos(x) + x^2 \\sin(x)$",
+        "$y' = 2x \\sin(x) - x^2 \\cos(x)$",
+        "$y' = x^2 \\cos(x)$"
       ],
-      "correct": "$y' = 2x \\sin(x) + x^2 \\cos(x)$",
-      "explanation": "Sử dụng quy tắc đạo hàm của tích: $(uv)' = u'v + uv'$. Với $u = x^2, v = \\sin(x)$, ta có $u' = 2x, v' = \\cos(x)$.",
+      "correct": "$y' = 2x \\\\sin(x) + x^2 \\\\cos(x)$",
+      "explanation": "Sử dụng quy tắc đạo hàm của tích: $(uv)' = u'v + uv'$. Với $u = x^2, v = \\\\sin(x)$, ta có $u' = 2x, v' = \\\\cos(x)$.",
       "topic": "Đạo hàm",
       "level": "VD",
       "tags": ["Toán 11", "Quan trọng"]
@@ -23,13 +23,13 @@
       "type": "mcq",
       "question": "Mạch dao động $LC$ có tần số góc được tính bằng công thức nào?",
       "options": [
-        "$\\omega = \\frac{1}{\\sqrt{LC}}$",
-        "$\\omega = \\sqrt{LC}$",
-        "$\\omega = 2\\pi \\sqrt{LC}$",
-        "$\\omega = \\frac{1}{2\\pi \\sqrt{LC}}$"
+        "$\\\\omega = \\\\frac{1}{\\\\sqrt{LC}}$",
+        "$\\\\omega = \\\\sqrt{LC}$",
+        "$\\\\omega = 2\\\\pi \\\\sqrt{LC}$",
+        "$\\\\omega = \\\\frac{1}{2\\\\pi \\\\sqrt{LC}}$"
       ],
-      "correct": "$\\omega = \\frac{1}{\\sqrt{LC}}$",
-      "explanation": "Tần số góc $\\omega$ của mạch dao động lí tưởng được xác định bởi $\\omega = \\frac{1}{\\sqrt{LC}}$.",
+      "correct": "$\\\\omega = \\\\frac{1}{\\\\sqrt{LC}}$",
+      "explanation": "Tần số góc $\\\\omega$ của mạch dao động lí tưởng được xác định bởi $\\\\omega = \\\\frac{1}{\\\\sqrt{LC}}$.",
       "topic": "Dao động điện từ",
       "level": "NB",
       "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Tuned_circuit_animation_3_300ms.gif"
@@ -37,7 +37,7 @@
     {
       "id": 3,
       "type": "short",
-      "question": "Cho phản ứng nhiệt nhôm: $2Al + Fe_2O_3 \\xrightarrow{t^o} Al_2O_3 + 2Fe$. Tổng hệ số cân bằng nguyên của phương trình trên là bao nhiêu?",
+      "question": "Cho phản ứng nhiệt nhôm: $2Al + Fe_2O_3 \\\\xrightarrow{t^o} Al_2O_3 + 2Fe$. Tổng hệ số cân bằng nguyên của phương trình trên là bao nhiêu?",
       "correct": "6",
       "explanation": "Hệ số phương trình là: $2 + 1 + 1 + 2 = 6$.",
       "topic": "Kim loại",
