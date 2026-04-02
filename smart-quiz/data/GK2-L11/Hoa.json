@@ -625,10 +625,10 @@
     {
       "id": 58,
       "type": "true_false",
-      "question": "Thí nghiệm Copper(II) hydroxide tác dụng với alcohol đa chức: Ý d: có thể dùng Cu(OH)2 để nhận biết methanol và ethylene glycol",
+      "question": "Thí nghiệm Copper(II) hydroxide tác dụng với alcohol đa chức: Ý d: không thể dùng Cu(OH)2 để nhận biết methanol và ethylene glycol",
       "options": ["Đúng", "Sai"],
-      "correct": "Đúng",
-      "explanation": "Methanol (alcohol đơn chức) tạo kết tủa Cu(OH)2 không tan. Ethylene glycol (alcohol hai chức) làm tan kết tủa tạo dung dịch xanh lam. Có thể phân biệt được.",
+      "correct": "Sai",
+      "explanation": "Thực tế, Cu(OH)2 là thuốc thử tối ưu nhất để phân biệt hai chất này.",
       "image": null,
       "topic": "Alcohol",
       "level": "TH"
