@@ -539,7 +539,7 @@
       "id": 50,
       "type": "short",
       "question": "Cho các hydrocarbon sau: Số phân tử hydrocarbon thơm là bao nhiêu?",
-      "correct": "2",
+      "correct": "5",
       "explanation": "Hydrocarbon thơm là có vòng benzene.",
       "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Hoa-TLN2.png",
       "topic": "Hydrocarbon",
