@@ -1158,20 +1158,32 @@ const AlgoList = ({ algorithms, completed, notes, onOpenAlgo }) => {
   );
 };
 
+
 // =============================================
-// SCHEDULE PAGE
+// SCHEDULE PAGE — 2 TAB:
+//   Tab 1: Lịch học thuật toán (theo giờ & ngày)
+//   Tab 2: Thời khóa biểu trường (theo tiết × thứ)
 // =============================================
 const Schedule = ({ algorithms, completed, notes, onOpenAlgo }) => {
   const toast = useToast();
-  const [schedule, setSchedule] = React.useState(() => LS.get('schedule', {}));
-  const today = new Date().toISOString().slice(0,10);
-  const [selectedDate, setSelectedDate] = React.useState(today);
-  const [showPicker, setShowPicker] = React.useState(null); // slot index
 
+  // ── Tab hiện tại ──────────────────────────────────────────────
+  const [activeTab, setActiveTab] = React.useState('algo'); // 'algo' | 'school'
+
+  // ════════════════════════════════════════════════════════════════
+  //  TAB 1 — LỊCH HỌC THUẬT TOÁN
+  // ════════════════════════════════════════════════════════════════
+  const [schedule, setSchedule] = React.useState(() => LS.get('schedule', {}));
+  const today = new Date().toISOString().slice(0, 10);
+  const [selectedDate, setSelectedDate] = React.useState(today);
+  const [showPicker, setShowPicker] = React.useState(null); // slot đang mở picker
+
+  // Các khung giờ học trong ngày
   const SLOTS = ['07:00','08:00','09:00','10:00','14:00','15:00','16:00','19:00','20:00','21:00'];
   const daySchedule = schedule[selectedDate] || {};
 
-  const assign = (slot, algoId) => {
+  // Gán thuật toán vào khung giờ
+  const assignAlgo = (slot, algoId) => {
     const updated = { ...schedule, [selectedDate]: { ...daySchedule, [slot]: algoId } };
     setSchedule(updated);
     LS.set('schedule', updated);
@@ -1179,7 +1191,8 @@ const Schedule = ({ algorithms, completed, notes, onOpenAlgo }) => {
     toast('📅 Đã thêm vào lịch!', 'success', 2000);
   };
 
-  const remove = (slot) => {
+  // Xóa thuật toán khỏi khung giờ
+  const removeAlgo = (slot) => {
     const day = { ...daySchedule };
     delete day[slot];
     const updated = { ...schedule, [selectedDate]: day };
@@ -1188,84 +1201,381 @@ const Schedule = ({ algorithms, completed, notes, onOpenAlgo }) => {
     toast('🗑️ Đã xóa khỏi lịch', 'info', 2000);
   };
 
-  // Get upcoming 7 days
-  const days = Array.from({ length: 7 }, (_, i) => {
+  // Lấy 7 ngày tới để hiển thị
+  const days7 = Array.from({ length: 7 }, (_, i) => {
     const d = new Date(); d.setDate(d.getDate() + i);
-    return d.toISOString().slice(0,10);
+    return d.toISOString().slice(0, 10);
   });
 
+  // ════════════════════════════════════════════════════════════════
+  //  TAB 2 — THỜI KHÓA BIỂU TRƯỜNG
+  // ════════════════════════════════════════════════════════════════
+
+  // Cấu hình các tiết học: [giờ_bắt_đầu, phút, giờ_kết_thúc, phút]
+  const PERIODS = {
+    s1:[7,0,7,45],  s2:[7,50,8,35],  s3:[8,45,9,30],
+    s4:[9,35,10,20], s5:[10,25,11,10],
+    c1:[12,45,13,30], c2:[13,35,14,20], c3:[14,30,15,15],
+    c4:[15,20,16,5],  c5:[16,10,16,55]
+  };
+  const TKB_SLOTS   = ['s1','s2','s3','s4','s5','c1','c2','c3','c4','c5'];
+  const SLOT_SHORT  = { s1:'S1', s2:'S2', s3:'S3', s4:'S4', s5:'S5', c1:'C1', c2:'C2', c3:'C3', c4:'C4', c5:'C5' };
+  const SLOT_LABEL  = { s1:'Tiết 1', s2:'Tiết 2', s3:'Tiết 3', s4:'Tiết 4', s5:'Tiết 5', c1:'Tiết 6', c2:'Tiết 7', c3:'Tiết 8', c4:'Tiết 9', c5:'Tiết 10' };
+  const TKB_DAYS    = ['mon','tue','wed','thu','fri','sat'];
+  const DAY_LABELS  = ['T2','T3','T4','T5','T6','T7'];
+  const DAY_FULL    = ['Thứ Hai','Thứ Ba','Thứ Tư','Thứ Năm','Thứ Sáu','Thứ Bảy'];
+
+  // Khởi tạo TKB rỗng
+  const createEmptyTKB = () => {
+    const tkb = {};
+    TKB_SLOTS.forEach(s => { tkb[s] = {}; TKB_DAYS.forEach(d => tkb[s][d] = ''); });
+    return tkb;
+  };
+
+  const [tkb, setTkb] = React.useState(() => {
+    try { return JSON.parse(localStorage.getItem('algo_tkb_v1')) || createEmptyTKB(); }
+    catch { return createEmptyTKB(); }
+  });
+  const [editingTKB, setEditingTKB] = React.useState(false); // Hiện/ẩn bảng nhập
+  const [savedBadge, setSavedBadge]  = React.useState(false); // Hiện badge "Đã lưu"
+
+  // Đồng hồ cập nhật mỗi 30s để highlight tiết hiện tại
+  const [now, setNow] = React.useState(new Date());
+  React.useEffect(() => {
+    const timer = setInterval(() => setNow(new Date()), 30000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Tính tiết hiện tại (null nếu ngoài giờ học)
+  const currentSlot = React.useMemo(() => {
+    const total = now.getHours() * 60 + now.getMinutes();
+    return TKB_SLOTS.find(s => {
+      const [sh, sm, eh, em] = PERIODS[s];
+      return total >= sh * 60 + sm && total < eh * 60 + em;
+    }) || null;
+  }, [now]);
+
+  // Index cột hôm nay trong TKB (0=T2 ... 5=T7), null nếu là CN
+  const todayColIdx = now.getDay() >= 1 && now.getDay() <= 6 ? now.getDay() - 1 : null;
+
+  // Cập nhật ô nhập môn học và lưu localStorage ngay lập tức
+  const handleTKBInput = (slot, day, value) => {
+    const updated = { ...tkb, [slot]: { ...tkb[slot], [day]: value } };
+    setTkb(updated);
+    localStorage.setItem('algo_tkb_v1', JSON.stringify(updated));
+    setSavedBadge(true);
+    setTimeout(() => setSavedBadge(false), 1200);
+  };
+
+  // Xóa toàn bộ TKB
+  const resetTKB = () => {
+    if (!window.confirm('Xóa toàn bộ thời khóa biểu trường?')) return;
+    const empty = createEmptyTKB();
+    setTkb(empty);
+    localStorage.setItem('algo_tkb_v1', JSON.stringify(empty));
+    toast('🗑️ Đã xóa thời khóa biểu', 'warning');
+  };
+
+  // Format giờ: [7, 0] → "07:00"
+  const fmtHM = (h, m) => `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+
+  // ════════════════════════════════════════════════════════════════
+  //  RENDER
+  // ════════════════════════════════════════════════════════════════
   return (
     <div className="animate-fade">
+
+      {/* ── Tiêu đề trang ── */}
       <h1 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:24, color:'var(--text-primary)', marginBottom:20 }}>
         📅 Thời khóa biểu
       </h1>
 
-      {/* Day selector */}
-      <div className="flex gap-2 overflow-x-auto pb-2 mb-6">
-        {days.map(d => {
-          const date = new Date(d + 'T00:00:00');
-          const slots = Object.keys(schedule[d] || {}).length;
-          return (
-            <button key={d} onClick={() => setSelectedDate(d)}
-              className={selectedDate === d ? 'btn-primary' : 'btn-ghost'}
-              style={{ flexShrink:0, padding:'8px 14px', display:'flex', flexDirection:'column', alignItems:'center', gap:2 }}>
-              <span style={{ fontSize:11, textTransform:'uppercase' }}>
-                {date.toLocaleDateString('vi-VN', { weekday:'short' })}
-              </span>
-              <span style={{ fontFamily:'var(--font-mono)', fontWeight:800, fontSize:16 }}>{date.getDate()}</span>
-              {slots > 0 && <span style={{ fontSize:9, background:'var(--accent)', color:'white', borderRadius:8, padding:'1px 5px' }}>{slots}</span>}
-            </button>
-          );
-        })}
+      {/* ── Tab switcher ── */}
+      <div style={{ display:'flex', gap:0, marginBottom:24, background:'var(--bg-elevated)', borderRadius:10, padding:4, width:'fit-content', border:'1px solid var(--border)' }}>
+        {[
+          { key:'algo',   icon:'calendar', label:'Lịch học Thuật toán' },
+          { key:'school', icon:'clock',    label:'TKB Trường' },
+        ].map(tab => (
+          <button key={tab.key}
+            onClick={() => setActiveTab(tab.key)}
+            style={{
+              display:'flex', alignItems:'center', gap:7,
+              padding:'8px 18px', borderRadius:7, border:'none',
+              fontFamily:'var(--font-display)', fontWeight:700, fontSize:13,
+              cursor:'pointer', transition:'all 0.2s',
+              background: activeTab === tab.key ? 'var(--accent)' : 'transparent',
+              color:       activeTab === tab.key ? '#fff' : 'var(--text-secondary)',
+              boxShadow:   activeTab === tab.key ? '0 2px 8px var(--accent-glow)' : 'none',
+            }}>
+            <Icon name={tab.icon} size={14}/>
+            {tab.label}
+          </button>
+        ))}
       </div>
 
-      {/* Time slots */}
-      <div className="space-y-3">
-        {SLOTS.map(slot => {
-          const algoId = daySchedule[slot];
-          const algo = algoId ? algorithms.find(a => a.id === algoId) : null;
-          return (
-            <div key={slot} className="flex items-center gap-4">
-              <div style={{ width:52, flexShrink:0, fontFamily:'var(--font-mono)', fontSize:12, color:'var(--text-muted)', fontWeight:700 }}>{slot}</div>
-              {algo ? (
-                <div className={`schedule-slot filled flex-1 flex items-center gap-3`}
-                  style={{ background:'var(--accent-glow)', borderColor:'var(--accent)' }}>
-                  <div style={{ flex:1 }}>
-                    <div style={{ fontSize:13, fontWeight:700, color:'var(--text-primary)' }}>{algo.name}</div>
-                    <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:1 }}>{algo.category} · <Stars n={algo.stars}/></div>
+      {/* ════════════════════════════════════
+           TAB 1: LỊCH HỌC THUẬT TOÁN
+          ════════════════════════════════════ */}
+      {activeTab === 'algo' && (
+        <div className="animate-fade">
+
+          {/* Chọn ngày (7 ngày tới) */}
+          <div style={{ display:'flex', gap:8, overflowX:'auto', paddingBottom:8, marginBottom:20 }}>
+            {days7.map(d => {
+              const date  = new Date(d + 'T00:00:00');
+              const slots = Object.keys(schedule[d] || {}).length;
+              return (
+                <button key={d} onClick={() => setSelectedDate(d)}
+                  className={selectedDate === d ? 'btn-primary' : 'btn-ghost'}
+                  style={{ flexShrink:0, padding:'8px 14px', display:'flex', flexDirection:'column', alignItems:'center', gap:2 }}>
+                  <span style={{ fontSize:11, textTransform:'uppercase' }}>
+                    {date.toLocaleDateString('vi-VN', { weekday:'short' })}
+                  </span>
+                  <span style={{ fontFamily:'var(--font-mono)', fontWeight:800, fontSize:16 }}>{date.getDate()}</span>
+                  {slots > 0 && (
+                    <span style={{ fontSize:9, background:'var(--accent)', color:'white', borderRadius:8, padding:'1px 5px' }}>{slots}</span>
+                  )}
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Danh sách khung giờ */}
+          <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
+            {SLOTS.map(slot => {
+              const algoId = daySchedule[slot];
+              const algo   = algoId ? algorithms.find(a => a.id === algoId) : null;
+              return (
+                <div key={slot} style={{ display:'flex', alignItems:'center', gap:14 }}>
+                  {/* Nhãn giờ */}
+                  <div style={{ width:52, flexShrink:0, fontFamily:'var(--font-mono)', fontSize:12, color:'var(--text-muted)', fontWeight:700 }}>{slot}</div>
+
+                  {/* Slot có thuật toán */}
+                  {algo ? (
+                    <div className="schedule-slot filled" style={{ flex:1, display:'flex', alignItems:'center', gap:10 }}>
+                      <div style={{ flex:1 }}>
+                        <div style={{ fontSize:13, fontWeight:700, color:'var(--text-primary)' }}>{algo.name}</div>
+                        <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:1 }}>{algo.category} · <Stars n={algo.stars}/></div>
+                      </div>
+                      <button onClick={() => onOpenAlgo(algo)} className="btn-primary" style={{ padding:'4px 8px', fontSize:11 }}>Học</button>
+                      <button onClick={() => removeAlgo(slot)} className="btn-ghost" style={{ padding:'4px 8px', fontSize:11, color:'var(--danger)' }}>✕</button>
+                    </div>
+                  ) : (
+                    /* Slot trống */
+                    <div className="schedule-slot" style={{ flex:1, display:'flex', alignItems:'center', gap:8, cursor:'pointer', background: showPicker === slot ? 'var(--bg-elevated)' : 'transparent' }}
+                      onClick={() => setShowPicker(showPicker === slot ? null : slot)}>
+                      <Icon name="plus" size={14} style={{ color:'var(--text-muted)' }}/>
+                      <span style={{ fontSize:13, color:'var(--text-muted)' }}>Thêm thuật toán...</span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Picker chọn thuật toán */}
+          {showPicker !== null && (
+            <div className="card p-4 animate-fade" style={{ marginTop:14 }}>
+              <div style={{ fontSize:13, fontWeight:700, color:'var(--text-primary)', marginBottom:10 }}>
+                Chọn thuật toán cho {showPicker}:
+              </div>
+              <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fill, minmax(240px,1fr))', gap:8, maxHeight:300, overflowY:'auto' }}>
+                {algorithms.filter(a => !completed[a.id]).slice(0, 30).map(a => (
+                  <div key={a.id} className="card-elevated" style={{ padding:12, cursor:'pointer', border:'1px solid transparent', borderRadius:8, transition:'border-color 0.2s' }}
+                    onMouseEnter={e => e.currentTarget.style.borderColor='var(--accent)'}
+                    onMouseLeave={e => e.currentTarget.style.borderColor='transparent'}
+                    onClick={() => assignAlgo(showPicker, a.id)}>
+                    <div style={{ fontSize:13, fontWeight:600, color:'var(--text-primary)' }}>{a.name}</div>
+                    <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:2 }}>{a.category}</div>
                   </div>
-                  <button onClick={() => onOpenAlgo(algo)} className="btn-primary" style={{ padding:'4px 8px', fontSize:11 }}>Học</button>
-                  <button onClick={() => remove(slot)} className="btn-ghost" style={{ padding:'4px 8px', fontSize:11, color:'var(--danger)' }}>✕</button>
-                </div>
-              ) : (
-                <div className="schedule-slot flex-1 flex items-center gap-2"
-                  style={{ cursor:'pointer', background: showPicker === slot ? 'var(--bg-elevated)' : 'transparent' }}
-                  onClick={() => setShowPicker(showPicker === slot ? null : slot)}>
-                  <Icon name="plus" size={14} style={{ color:'var(--text-muted)' }}/>
-                  <span style={{ fontSize:13, color:'var(--text-muted)' }}>Thêm thuật toán...</span>
-                </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* ════════════════════════════════════
+           TAB 2: THỜI KHÓA BIỂU TRƯỜNG
+          ════════════════════════════════════ */}
+      {activeTab === 'school' && (
+        <div className="animate-fade">
+
+          {/* Thanh công cụ */}
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:16, flexWrap:'wrap', gap:10 }}>
+            <div style={{ display:'flex', alignItems:'center', gap:10 }}>
+              {/* Badge tự động lưu */}
+              {savedBadge && (
+                <span style={{ fontSize:12, color:'var(--success)', background:'rgba(52,211,153,0.12)', padding:'4px 12px', borderRadius:20, fontWeight:700, fontFamily:'var(--font-mono)' }}>
+                  ✓ Đã lưu
+                </span>
               )}
             </div>
-          );
-        })}
-      </div>
+            <div style={{ display:'flex', gap:8 }}>
+              <button className="btn-primary" onClick={() => setEditingTKB(e => !e)}
+                style={{ display:'flex', alignItems:'center', gap:6 }}>
+                <Icon name={editingTKB ? 'x' : 'plus'} size={14}/>
+                {editingTKB ? 'Đóng nhập TKB' : '✏️ Nhập / Sửa TKB'}
+              </button>
+              {editingTKB && (
+                <button className="btn-ghost" onClick={resetTKB}
+                  style={{ color:'var(--danger)', borderColor:'var(--danger)', display:'flex', alignItems:'center', gap:6 }}>
+                  <Icon name="trash" size={14}/> Xóa hết
+                </button>
+              )}
+            </div>
+          </div>
 
-      {/* Algo picker */}
-      {showPicker !== null && (
-        <div className="card p-4 mt-4 animate-fade">
-          <div style={{ fontSize:13, fontWeight:700, color:'var(--text-primary)', marginBottom:10 }}>
-            Chọn thuật toán cho {showPicker}:
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2" style={{ maxHeight:300, overflowY:'auto' }}>
-            {algorithms.filter(a => !completed[a.id]).slice(0, 30).map(a => (
-              <div key={a.id} className="card-elevated p-3 cursor-pointer hover:border-blue-400 transition-all"
-                style={{ border:'1px solid transparent', borderRadius:8 }}
-                onClick={() => assign(showPicker, a.id)}>
-                <div style={{ fontSize:13, fontWeight:600, color:'var(--text-primary)' }}>{a.name}</div>
-                <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:2 }}>{a.category}</div>
+          {/* Banner tiết hiện tại */}
+          {currentSlot && todayColIdx !== null && tkb[currentSlot] && (
+            <div className="card animate-fade" style={{ borderColor:'var(--accent)', background:'var(--accent-glow)', padding:'14px 18px', marginBottom:16, display:'flex', alignItems:'center', gap:14 }}>
+              <span style={{ fontSize:26 }}>⏰</span>
+              <div>
+                <div style={{ fontSize:11, color:'var(--accent)', fontWeight:700, textTransform:'uppercase', fontFamily:'var(--font-mono)', marginBottom:3 }}>
+                  Đang diễn ra · {SLOT_SHORT[currentSlot]}&nbsp;
+                  {fmtHM(PERIODS[currentSlot][0], PERIODS[currentSlot][1])}–{fmtHM(PERIODS[currentSlot][2], PERIODS[currentSlot][3])}
+                </div>
+                <div style={{ fontSize:20, fontWeight:800, color:'var(--text-primary)', fontFamily:'var(--font-display)' }}>
+                  {tkb[currentSlot][TKB_DAYS[todayColIdx]] || '(Trống tiết)'}
+                </div>
+                <div style={{ fontSize:12, color:'var(--text-secondary)', marginTop:2 }}>
+                  {DAY_FULL[todayColIdx]}
+                </div>
               </div>
-            ))}
+            </div>
+          )}
+
+          {/* ── Bảng nhập TKB (toggle) ── */}
+          {editingTKB && (
+            <div className="card animate-fade" style={{ padding:16, marginBottom:20, overflowX:'auto' }}>
+              <div style={{ fontSize:13, fontWeight:700, color:'var(--text-primary)', marginBottom:12 }}>
+                ✏️ Nhập tên môn học — tự động lưu khi gõ
+              </div>
+              <table style={{ width:'100%', borderCollapse:'collapse', minWidth:540 }}>
+                <thead>
+                  <tr>
+                    {/* Header: Tiết */}
+                    <th style={{ padding:'6px 10px', textAlign:'left', fontSize:11, color:'var(--text-muted)', fontWeight:700, textTransform:'uppercase', fontFamily:'var(--font-mono)', borderBottom:'1px solid var(--border)', whiteSpace:'nowrap' }}>Tiết</th>
+                    {/* Header: T2–T7, tô sáng ngày hôm nay */}
+                    {DAY_LABELS.map((d, i) => (
+                      <th key={d} style={{ padding:'6px 8px', textAlign:'center', fontSize:11, color: todayColIdx === i ? 'var(--accent)' : 'var(--text-muted)', fontWeight:700, textTransform:'uppercase', fontFamily:'var(--font-mono)', borderBottom:'1px solid var(--border)' }}>{d}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Phân nhóm Buổi sáng / Buổi chiều */}
+                  {['s','c'].map(session => (
+                    <React.Fragment key={session}>
+                      {/* Header nhóm */}
+                      <tr>
+                        <td colSpan={7} style={{ padding:'8px 10px 3px', fontSize:10, color:'var(--text-muted)', fontWeight:700, textTransform:'uppercase', fontFamily:'var(--font-mono)', letterSpacing:1 }}>
+                          {session === 's' ? '☀️ Buổi sáng' : '🌤️ Buổi chiều'}
+                        </td>
+                      </tr>
+                      {TKB_SLOTS.filter(s => s.startsWith(session)).map(slot => {
+                        const [sh, sm, eh, em] = PERIODS[slot];
+                        const isNowRow = currentSlot === slot;
+                        return (
+                          <tr key={slot} style={{ background: isNowRow ? 'var(--accent-glow)' : 'transparent', transition:'background 0.3s' }}>
+                            {/* Nhãn tiết + giờ */}
+                            <td style={{ padding:'3px 10px', whiteSpace:'nowrap' }}>
+                              <span style={{ fontFamily:'var(--font-mono)', fontWeight:700, fontSize:12, color: isNowRow ? 'var(--accent)' : 'var(--text-secondary)' }}>
+                                {SLOT_SHORT[slot]}
+                              </span>
+                              <span style={{ fontSize:10, color:'var(--text-muted)', marginLeft:6, fontFamily:'var(--font-mono)' }}>
+                                {fmtHM(sh, sm)}
+                              </span>
+                            </td>
+                            {/* Ô nhập môn học cho từng thứ */}
+                            {TKB_DAYS.map((day, i) => (
+                              <td key={day} style={{ padding:'3px 4px' }}>
+                                <input type="text"
+                                  value={tkb[slot][day]}
+                                  placeholder="—"
+                                  onChange={e => handleTKBInput(slot, day, e.target.value)}
+                                  style={{
+                                    width:'100%', background:'transparent', border:'none',
+                                    borderBottom:`1px solid ${todayColIdx === i ? 'var(--accent)' : 'var(--border)'}`,
+                                    color:'var(--text-primary)', fontFamily:'var(--font-display)',
+                                    fontSize:12, padding:'6px 4px', outline:'none', textAlign:'center',
+                                    transition:'background 0.2s', borderRadius:0,
+                                  }}
+                                  onFocus={e => e.target.style.background='var(--bg-elevated)'}
+                                  onBlur={e  => e.target.style.background='transparent'}
+                                />
+                              </td>
+                            ))}
+                          </tr>
+                        );
+                      })}
+                    </React.Fragment>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          {/* ── Preview: Hôm nay & Ngày mai ── */}
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:16 }}>
+            {[0, 1].map(offset => {
+              const d       = new Date(now); d.setDate(d.getDate() + offset);
+              const dIdx    = d.getDay();       // 0 = CN
+              const colIdx  = dIdx >= 1 && dIdx <= 6 ? dIdx - 1 : null;
+              const label   = offset === 0 ? '📆 Hôm nay' : '🗓️ Ngày mai';
+              const dayName = dIdx === 0 ? 'Chủ Nhật' : DAY_FULL[colIdx];
+
+              // Lọc các tiết có môn học
+              const filledSlots = colIdx !== null
+                ? TKB_SLOTS.filter(s => tkb[s] && tkb[s][TKB_DAYS[colIdx]])
+                : [];
+
+              return (
+                <div key={offset} className="card" style={{ padding:'14px 16px' }}>
+                  {/* Tiêu đề cột */}
+                  <div style={{ fontWeight:700, color:'var(--text-primary)', marginBottom:10, fontSize:14, display:'flex', justifyContent:'space-between', alignItems:'center' }}>
+                    <span>{label}</span>
+                    <span style={{ fontSize:11, color:'var(--text-muted)', fontFamily:'var(--font-mono)' }}>{dayName}</span>
+                  </div>
+
+                  {/* Chủ nhật không có tiết */}
+                  {dIdx === 0 ? (
+                    <div style={{ fontSize:13, color:'var(--text-muted)', padding:'8px 0' }}>🏖️ Chủ Nhật — Không có tiết học</div>
+                  ) : filledSlots.length === 0 ? (
+                    <div style={{ fontSize:13, color:'var(--text-muted)', padding:'8px 0' }}>✨ Không có tiết học</div>
+                  ) : (
+                    filledSlots.map(slot => {
+                      const [sh, sm] = PERIODS[slot];
+                      const isNow    = offset === 0 && slot === currentSlot;
+                      return (
+                        <div key={slot} style={{ display:'flex', alignItems:'center', gap:10, padding:'6px 0', borderBottom:'1px solid var(--border)' }}>
+                          {/* Badge tiết */}
+                          <span style={{ fontFamily:'var(--font-mono)', fontWeight:700, fontSize:11, padding:'2px 7px', borderRadius:6, flexShrink:0, background: isNow ? 'var(--accent)' : 'var(--bg-elevated)', color: isNow ? '#fff' : 'var(--text-secondary)' }}>
+                            {SLOT_SHORT[slot]}
+                          </span>
+                          {/* Giờ */}
+                          <span style={{ fontSize:11, color:'var(--text-muted)', fontFamily:'var(--font-mono)', flexShrink:0 }}>
+                            {fmtHM(sh, sm)}
+                          </span>
+                          {/* Tên môn */}
+                          <span style={{ fontSize:13, fontWeight:600, color: isNow ? 'var(--accent)' : 'var(--text-primary)', flex:1 }}>
+                            {tkb[slot][TKB_DAYS[colIdx]]}
+                          </span>
+                          {/* Indicator đang học */}
+                          {isNow && (
+                            <span style={{ fontSize:10, color:'var(--accent)', fontWeight:700, fontFamily:'var(--font-mono)', flexShrink:0 }}>▶ NOW</span>
+                          )}
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+              );
+            })}
           </div>
+
+          {/* Responsive: 2 cột → 1 cột trên mobile */}
+          <style>{`@media (max-width: 560px) { .tkb-preview-grid { grid-template-columns: 1fr !important; } }`}</style>
+
         </div>
       )}
     </div>
