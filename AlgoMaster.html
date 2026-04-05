@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AlgoMaster Planner</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- React + ReactDOM CDN -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<!-- Babel for JSX -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+
+<style>
+  :root {
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  /* Dark theme variables */
+  .dark {
+    --bg-base: #0a0d14;
+    --bg-surface: #111827;
+    --bg-card: #1a2235;
+    --bg-elevated: #243044;
+    --border: #2a3a54;
+    --text-primary: #e8f0fe;
+    --text-secondary: #8b9dc3;
+    --text-muted: #4a5a7a;
+    --accent: #4f8ef7;
+    --accent-glow: rgba(79,142,247,0.25);
+    --accent2: #a78bfa;
+    --success: #34d399;
+    --warning: #fbbf24;
+    --danger: #f87171;
+  }
+
+  /* Light theme variables */
+  .light {
+    --bg-base: #f0f4ff;
+    --bg-surface: #ffffff;
+    --bg-card: #f8faff;
+    --bg-elevated: #edf2ff;
+    --border: #dde5f5;
+    --text-primary: #0f1a35;
+    --text-secondary: #4a5a8a;
+    --text-muted: #8b9dc3;
+    --accent: #2563eb;
+    --accent-glow: rgba(37,99,235,0.15);
+    --accent2: #7c3aed;
+    --success: #059669;
+    --warning: #d97706;
+    --danger: #dc2626;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg-base); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+  /* Grid pattern background */
+  .grid-bg {
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+                      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: -1px -1px;
+  }
+
+  /* Animations */
+  @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes pulse-glow { 0%,100%{ box-shadow:0 0 0 0 var(--accent-glow); } 50%{ box-shadow:0 0 20px 6px var(--accent-glow); } }
+  @keyframes slide-in { from { transform:translateX(-100%); opacity:0; } to { transform:translateX(0); opacity:1; } }
+  @keyframes toast-in { from { transform:translateX(120%); opacity:0; } to { transform:translateX(0); opacity:1; } }
+  @keyframes toast-out { from { transform:translateX(0); opacity:1; } to { transform:translateX(120%); opacity:0; } }
+  @keyframes ring { 0%,100%{ transform:rotate(0); } 20%{ transform:rotate(15deg); } 40%{ transform:rotate(-15deg); } 60%{ transform:rotate(10deg); } 80%{ transform:rotate(-10deg); } }
+  @keyframes counter { from { opacity:0; transform:scale(0.8); } to { opacity:1; transform:scale(1); } }
+
+  .animate-fade { animation: fadeIn 0.35s ease both; }
+  .animate-slide { animation: slide-in 0.3s ease both; }
+  .animate-toast-in { animation: toast-in 0.4s cubic-bezier(0.34,1.56,0.64,1) both; }
+  .animate-toast-out { animation: toast-out 0.3s ease both; }
+  .animate-pulse-glow { animation: pulse-glow 2s infinite; }
+  .animate-ring { animation: ring 0.5s ease; }
+  .animate-counter { animation: counter 0.3s ease; }
+
+  /* Cards */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.2s;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card-elevated {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+  }
+  .btn-primary:hover { filter: brightness(1.1); transform: translateY(-1px); box-shadow: 0 4px 12px var(--accent-glow); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+  }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Tags */
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-family: var(--font-mono);
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border);
+    width: 240px;
+    flex-shrink: 0;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+    z-index: 50;
+  }
+
+  /* Nav items */
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+  .nav-item:hover { background: var(--bg-elevated); color: var(--text-primary); }
+  .nav-item.active {
+    background: var(--accent-glow);
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--bg-elevated);
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    transition: width 0.6s cubic-bezier(0.34,1.56,0.64,1);
+  }
+
+  /* Pomodoro ring */
+  .pomodoro-ring {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pomodoro-ring svg { transform: rotate(-90deg); }
+  .ring-track { fill: none; stroke: var(--bg-elevated); stroke-width: 8; }
+  .ring-fill {
+    fill: none;
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s linear, stroke 0.3s;
+  }
+
+  /* Note editor */
+  .note-editor {
+    width: 100%;
+    min-height: 200px;
+    background: var(--bg-base);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 12px;
+    line-height: 1.6;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .note-editor:focus { border-color: var(--accent); }
+
+  /* Star rating */
+  .star { color: #fbbf24; font-size: 12px; }
+  .star-empty { color: var(--text-muted); font-size: 12px; }
+
+  /* Toast */
+  .toast-container {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    pointer-events: none;
+  }
+  .toast {
+    pointer-events: all;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 280px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* Mobile sidebar overlay */
+  .sidebar-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 40;
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .sidebar { position: fixed; transform: translateX(-100%); }
+    .sidebar.open { transform: translateX(0); animation: slide-in 0.3s ease both; }
+    .sidebar-overlay { display: block; }
+    .main-content { margin-left: 0 !important; }
+  }
+
+  /* Category pill colors */
+  .cat-0 { background: rgba(79,142,247,0.15); color: #4f8ef7; }
+  .cat-1 { background: rgba(167,139,250,0.15); color: #a78bfa; }
+  .cat-2 { background: rgba(52,211,153,0.15); color: #34d399; }
+  .cat-3 { background: rgba(251,191,36,0.15); color: #fbbf24; }
+  .cat-4 { background: rgba(248,113,113,0.15); color: #f87171; }
+  .cat-5 { background: rgba(251,146,60,0.15); color: #fb923c; }
+  .cat-6 { background: rgba(34,211,238,0.15); color: #22d3ee; }
+  .cat-7 { background: rgba(244,114,182,0.15); color: #f472b6; }
+  .cat-8 { background: rgba(163,230,53,0.15); color: #a3e635; }
+  .cat-9 { background: rgba(99,102,241,0.15); color: #6366f1; }
+  .cat-10 { background: rgba(20,184,166,0.15); color: #14b8a6; }
+  .cat-11 { background: rgba(245,158,11,0.15); color: #f59e0b; }
+
+  /* Schedule grid */
+  .schedule-slot {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .schedule-slot:hover { border-color: var(--accent); }
+  .schedule-slot.filled { background: var(--accent-glow); border-color: var(--accent); }
+
+  /* Chart bar */
+  .chart-bar-fill {
+    height: 100%;
+    border-radius: 4px 4px 0 0;
+    background: linear-gradient(180deg, var(--accent), var(--accent2));
+    transition: height 0.6s cubic-bezier(0.34,1.56,0.64,1);
+    min-height: 2px;
+  }
+
+  /* Completed algo */
+  .algo-completed .algo-name { text-decoration: line-through; opacity: 0.6; }
+
+  /* Focus overlay */
+  .focus-mode {
+    position: fixed; inset: 0;
+    background: var(--bg-base);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+</style>
+
+<script>
+  // Tailwind config for custom colors
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: {} }
+  };
+</script>
+</head>
+<body class="dark">
+<div id="root"></div>
+
+<script type="text/babel">
+// =============================================
+// DATA: 127 thuật toán từ VNOI Wiki
+// =============================================
+const ALGORITHMS = [
+  {id:1,name:"Những cách tiếp cận bài toán",link:"https://wiki.vnoi.info/translate/topcoder/Planning-an-Approach-to-a-Topcoder-Problem-Part-1",stars:1,category:"Nhập môn"},
+  {id:2,name:"Độ phức tạp thời gian",link:"https://wiki.vnoi.info/algo/basic/computational-complexity.md",stars:1,category:"Nhập môn"},
+  {id:3,name:"Tìm kiếm nhị phân",link:"https://wiki.vnoi.info/algo/basic/Binary-Search",stars:1,category:"Các kỹ thuật cơ bản"},
+  {id:4,name:"Hai con trỏ",link:"https://wiki.vnoi.info/algo/basic/two-pointers",stars:1,category:"Các kỹ thuật cơ bản"},
+  {id:5,name:"Phép toán bit",link:"https://wiki.vnoi.info/algo/basic/bitwise-operators.md",stars:1,category:"Các kỹ thuật cơ bản"},
+  {id:6,name:"Fun with bits",link:"https://wiki.vnoi.info/translate/topcoder/fun-with-bits",stars:1,category:"Các kỹ thuật cơ bản"},
+  {id:7,name:"Đệ quy và quay lui",link:"https://wiki.vnoi.info/algo/basic/backtracking.md",stars:1,category:"Các kỹ thuật cơ bản"},
+  {id:8,name:"Chia đôi tập (Meet in the middle)",link:"https://wiki.vnoi.info/algo/basic/meet-in-the-middle.md",stars:1,category:"Các kỹ thuật cơ bản"},
+  {id:9,name:"Rời rạc hoá (nén số)",link:"https://wiki.vnoi.info/algo/trick/Roi-rac-hoa-va-ung-dung",stars:1,category:"Các kỹ thuật cơ bản"},
+  {id:10,name:"Tổng quan về cấu trúc dữ liệu",link:"https://wiki.vnoi.info/algo/data-structures/data-structures-overview",stars:1,category:"Cấu trúc dữ liệu"},
+  {id:11,name:"Mảng và danh sách liên kết",link:"https://wiki.vnoi.info/algo/data-structures/array-vs-linked-lists",stars:1,category:"Cấu trúc dữ liệu"},
+  {id:12,name:"Ngăn xếp (Stack)",link:"https://wiki.vnoi.info/algo/data-structures/Stack",stars:1,category:"Cấu trúc dữ liệu"},
+  {id:13,name:"Mảng cộng dồn và mảng hiệu",link:"https://wiki.vnoi.info/algo/data-structures/prefix-sum-and-difference-array.md",stars:1,category:"Cấu trúc dữ liệu"},
+  {id:14,name:"Deque và tìm min max trên đoạn tịnh tiến",link:"https://wiki.vnoi.info/algo/data-structures/deque-min-max",stars:2,category:"Cấu trúc dữ liệu"},
+  {id:15,name:"Binary Heap",link:"https://wiki.vnoi.info/translate/wcipeg/Binary-Heap",stars:2,category:"Cấu trúc dữ liệu"},
+  {id:16,name:"Bảng băm (Hash table)",link:"https://wiki.vnoi.info/algo/data-structures/hash-table",stars:2,category:"Cấu trúc dữ liệu"},
+  {id:17,name:"Sparse Table và bài toán RMQ",link:"https://wiki.vnoi.info/algo/data-structures/rmq",stars:2,category:"Cấu trúc dữ liệu"},
+  {id:18,name:"Persistent Data Structures (P1)",link:"https://wiki.vnoi.info/algo/data-structures/persistent-data-structures",stars:3,category:"Cấu trúc dữ liệu"},
+  {id:19,name:"Persistent Data Structures (P2)",link:"https://wiki.vnoi.info/algo/data-structures/persistent-data-structures-2",stars:3,category:"Cấu trúc dữ liệu"},
+  {id:20,name:"Skip List",link:"https://wiki.vnoi.info/algo/data-structures/Skip-Lists",stars:3,category:"Cấu trúc dữ liệu"},
+  {id:21,name:"Cây Phân Đoạn - Segment Tree (P1)",link:"https://wiki.vnoi.info/algo/data-structures/segment-tree-basic.md",stars:2,category:"Cấu trúc dữ liệu dạng cây"},
+  {id:22,name:"Cây Phân Đoạn - Segment Tree (P2)",link:"https://wiki.vnoi.info/algo/data-structures/segment-tree-extend",stars:2,category:"Cấu trúc dữ liệu dạng cây"},
+  {id:23,name:"Fenwick Tree (Binary Indexed Tree)",link:"https://wiki.vnoi.info/algo/data-structures/fenwick",stars:2,category:"Cấu trúc dữ liệu dạng cây"},
+  {id:24,name:"Cải tiến Segment Tree",link:"https://wiki.vnoi.info/translate/codeforces/Efficient-and-easy-segment-trees.md",stars:3,category:"Cấu trúc dữ liệu dạng cây"},
+  {id:25,name:"Fenwick Tree 2D",link:"https://wiki.vnoi.info/algo/data-structures/fenwick-2d",stars:3,category:"Cấu trúc dữ liệu dạng cây"},
+  {id:26,name:"Interval Tree trên tập đoạn thẳng",link:"https://wiki.vnoi.info/algo/data-structures/interval-tree-tap-doan-thang",stars:4,category:"Cấu trúc dữ liệu dạng cây"},
+  {id:27,name:"Li-chao Tree",link:"https://wiki.vnoi.info/algo/data-structures/lichao-tree",stars:4,category:"Cấu trúc dữ liệu dạng cây"},
+  {id:28,name:"Chia căn - Part 1",link:"https://wiki.vnoi.info/algo/data-structures/sqrt-decomposition",stars:1,category:"Chia căn"},
+  {id:29,name:"Chia căn - Part 2 (Mo's Algorithm)",link:"https://wiki.vnoi.info/algo/data-structures/mo-algorithm",stars:2,category:"Chia căn"},
+  {id:30,name:"Chia căn Phần I (mới)",link:"https://wiki.vnoi.info/algo/data-structures/sqrt-decomposition-I-new",stars:2,category:"Chia căn"},
+  {id:31,name:"Chia căn Phần II (mới)",link:"https://wiki.vnoi.info/algo/data-structures/sqrt-decomposition-II-new",stars:3,category:"Chia căn"},
+  {id:32,name:"Tổng quan về xử lý xâu",link:"https://wiki.vnoi.info/algo/string/basic",stars:2,category:"Xử lý xâu"},
+  {id:33,name:"KMP",link:"https://wiki.vnoi.info/algo/string/kmp",stars:2,category:"Xử lý xâu"},
+  {id:34,name:"Trie",link:"https://wiki.vnoi.info/algo/string/trie",stars:2,category:"Xử lý xâu"},
+  {id:35,name:"Hashing xâu",link:"https://wiki.vnoi.info/algo/string/hash",stars:2,category:"Xử lý xâu"},
+  {id:36,name:"Manacher",link:"https://wiki.vnoi.info/algo/string/manacher",stars:2,category:"Xử lý xâu"},
+  {id:37,name:"Z-function",link:"https://wiki.vnoi.info/algo/string/z-algo",stars:3,category:"Xử lý xâu"},
+  {id:38,name:"Aho-Corasick",link:"https://wiki.vnoi.info/algo/string/aho-corasick",stars:3,category:"Xử lý xâu"},
+  {id:39,name:"Suffix Array",link:"https://wiki.vnoi.info/algo/string/suffix-array",stars:4,category:"Xử lý xâu"},
+  {id:40,name:"Suffix Automaton",link:"https://wiki.vnoi.info/algo/string/suffix-automaton",stars:4,category:"Xử lý xâu"},
+  {id:41,name:"Palindrome Tree",link:"https://wiki.vnoi.info/translate/codeforces/palindrome-tree",stars:4,category:"Xử lý xâu"},
+  {id:42,name:"Nhập môn Quy hoạch động",link:"https://wiki.vnoi.info/translate/topcoder/dynamic-programming",stars:2,category:"Quy hoạch động"},
+  {id:43,name:"QHĐ cơ bản (Phần 1)",link:"https://wiki.vnoi.info/algo/dp/basic-dynamic-programming-1.md",stars:2,category:"Quy hoạch động"},
+  {id:44,name:"QHĐ cơ bản (Phần 2)",link:"https://wiki.vnoi.info/algo/dp/basic-dynamic-programming-2.md",stars:2,category:"Quy hoạch động"},
+  {id:45,name:"QHĐ cái túi Knapsack (P1)",link:"https://wiki.vnoi.info/algo/dp/dp-knapsack-1",stars:2,category:"Quy hoạch động"},
+  {id:46,name:"QHĐ cái túi Knapsack (P2)",link:"https://wiki.vnoi.info/algo/dp/dp-knapsack-2",stars:4,category:"Quy hoạch động"},
+  {id:47,name:"Bài tập về Palindrome (QHĐ)",link:"https://wiki.vnoi.info/algo/dp/palindrome-problems",stars:2,category:"Quy hoạch động"},
+  {id:48,name:"Một số bài toán QHĐ điển hình",link:"https://wiki.vnoi.info/algo/dp/basic-problems",stars:2,category:"Quy hoạch động"},
+  {id:49,name:"Phân tích về QHĐ - Lê Minh Hoàng",link:"https://wiki.vnoi.info/algo/dp/thac-mac-ve-qhd",stars:3,category:"Quy hoạch động"},
+  {id:50,name:"QHĐ Bitmask",link:"https://wiki.vnoi.info/algo/dp/dp-bitmask",stars:2,category:"Quy hoạch động"},
+  {id:51,name:"QHĐ chữ số (Digit DP)",link:"https://wiki.vnoi.info/algo/dp/digit-dp",stars:2,category:"Quy hoạch động"},
+  {id:52,name:"QHĐ Chia để trị",link:"https://wiki.vnoi.info/algo/dp/dpdnc",stars:3,category:"Quy hoạch động"},
+  {id:53,name:"Kỹ thuật tối ưu hoá QHĐ",link:"https://wiki.vnoi.info/algo/dp/Mot-so-ky-thuat-toi-uu-hoa-thuat-toan-Quy-Hoach-Dong",stars:3,category:"Quy hoạch động"},
+  {id:54,name:"Kĩ thuật Bao lồi trong QHĐ (CHT)",link:"https://wiki.vnoi.info/algo/dp/cht",stars:3,category:"Quy hoạch động"},
+  {id:55,name:"QHĐ trên cây (Tree DP)",link:"https://wiki.vnoi.info/algo/dp/treedp",stars:3,category:"Quy hoạch động"},
+  {id:56,name:"QHĐ SOS (P1)",link:"https://wiki.vnoi.info/algo/dp/dp-sos-1",stars:3,category:"Quy hoạch động"},
+  {id:57,name:"QHĐ SOS (P2)",link:"https://wiki.vnoi.info/algo/dp/dp-sos-2",stars:4,category:"Quy hoạch động"},
+  {id:58,name:"Tổng quan lý thuyết đồ thị",link:"https://wiki.vnoi.info/algo/graph-theory/graph",stars:2,category:"Đồ thị chung"},
+  {id:59,name:"Các chủ đề cơ bản về đồ thị",link:"https://wiki.vnoi.info/algo/graph-theory/everything",stars:2,category:"Đồ thị chung"},
+  {id:60,name:"Disjoint Set Union (DSU)",link:"https://wiki.vnoi.info/algo/data-structures/disjoint-set-union",stars:2,category:"Đồ thị chung"},
+  {id:61,name:"BFS - Duyệt chiều rộng",link:"https://wiki.vnoi.info/algo/graph-theory/breadth-first-search.md",stars:2,category:"Đồ thị chung"},
+  {id:62,name:"BFS 0-1",link:"https://wiki.vnoi.info/algo/graph-theory/bfs-01",stars:2,category:"Đồ thị chung"},
+  {id:63,name:"DFS - Duyệt chiều sâu",link:"https://wiki.vnoi.info/algo/graph-theory/Depth-First-Search-Tree.md",stars:2,category:"Đồ thị chung"},
+  {id:64,name:"Sắp xếp Tô-pô (Topological Sort)",link:"https://wiki.vnoi.info/algo/graph-theory/topological-sort.md",stars:2,category:"Đồ thị chung"},
+  {id:65,name:"Đường đi - Chu trình Euler",link:"https://wiki.vnoi.info/algo/graph-theory/euler-cycle.md",stars:2,category:"Đồ thị chung"},
+  {id:66,name:"Đường đi ngắn nhất (P1: Dijkstra)",link:"https://wiki.vnoi.info/algo/graph-theory/shortest-path",stars:2,category:"Đồ thị chung"},
+  {id:67,name:"Đường đi ngắn nhất (P2: chu trình âm)",link:"https://wiki.vnoi.info/algo/graph-theory/shortest-path-2",stars:2,category:"Đồ thị chung"},
+  {id:68,name:"Đường đi ngắn nhất (P3: SPFA)",link:"https://wiki.vnoi.info/algo/graph-theory/spfa",stars:2,category:"Đồ thị chung"},
+  {id:69,name:"Cây khung nhỏ nhất (MST)",link:"https://wiki.vnoi.info/algo/graph-theory/minimum-spanning-tree.md",stars:2,category:"Đồ thị chung"},
+  {id:70,name:"DSU Rollback",link:"https://wiki.vnoi.info/algo/data-structures/dsu-rollback",stars:3,category:"Đồ thị chung"},
+  {id:71,name:"Bài toán 2-SAT",link:"https://wiki.vnoi.info/algo/graph-theory/2-SAT",stars:3,category:"Đồ thị chung"},
+  {id:72,name:"Luồng cực đại trên mạng",link:"https://wiki.vnoi.info/algo/graph-theory/flow",stars:3,category:"Đồ thị chung"},
+  {id:73,name:"Luồng cực đại (Translate TC)",link:"https://wiki.vnoi.info/translate/topcoder/max-flow-1-luong-cuc-dai-tren-mang-1.md",stars:3,category:"Đồ thị chung"},
+  {id:74,name:"Luồng cực đại (WCIPEG)",link:"https://wiki.vnoi.info/translate/wcipeg/Flows",stars:3,category:"Đồ thị chung"},
+  {id:75,name:"Luồng với chi phí cực tiểu (Min Cost Flow)",link:"https://wiki.vnoi.info/algo/graph-theory/min-cost-flow",stars:3,category:"Đồ thị chung"},
+  {id:76,name:"Cặp ghép cực đại (Max Matching)",link:"https://wiki.vnoi.info/algo/graph-theory/max-matching",stars:3,category:"Đồ thị chung"},
+  {id:77,name:"Đường đi Euler trên cây (Euler Tour)",link:"https://wiki.vnoi.info/algo/graph-theory/euler-tour-on-tree.md",stars:2,category:"Đồ thị dạng cây"},
+  {id:78,name:"LCA - Lowest Common Ancestor",link:"https://wiki.vnoi.info/algo/data-structures/lca-binlift.md",stars:2,category:"Đồ thị dạng cây"},
+  {id:79,name:"RMQ và LCA (Translate)",link:"https://wiki.vnoi.info/translate/topcoder/Range-Minimum-Query-and-Lowest-Common-Ancestor",stars:2,category:"Đồ thị dạng cây"},
+  {id:80,name:"RMQ trên cây (Lubenica)",link:"https://wiki.vnoi.info/algo/graph-theory/lubenica-vnoj",stars:2,category:"Đồ thị dạng cây"},
+  {id:81,name:"Heavy Light Decomposition (HLD)",link:"https://wiki.vnoi.info/algo/data-structures/heavy-light-decomposition",stars:3,category:"Đồ thị dạng cây"},
+  {id:82,name:"Các phương pháp giải LCA",link:"https://wiki.vnoi.info/algo/data-structures/lca",stars:3,category:"Đồ thị dạng cây"},
+  {id:83,name:"Thuật toán phân tách trọng tâm (Centroid Decomp.)",link:"https://wiki.vnoi.info/algo/graph-theory/centroid-decomposition.md",stars:3,category:"Đồ thị dạng cây"},
+  {id:84,name:"Matroid",link:"https://wiki.vnoi.info/algo/math/matroid",stars:4,category:"Tham lam"},
+  {id:85,name:"Modulo cơ bản",link:"https://wiki.vnoi.info/algo/math/modulo",stars:1,category:"Số học"},
+  {id:86,name:"Ước chung lớn nhất & Thuật toán Euclid",link:"https://wiki.vnoi.info/algo/algebra/euclid",stars:1,category:"Số học"},
+  {id:87,name:"Lũy thừa nhị phân (Fast Exponentiation)",link:"https://wiki.vnoi.info/algo/algebra/binary_exponentation.md",stars:1,category:"Số học"},
+  {id:88,name:"Sàng nguyên tố (Sieve of Eratosthenes)",link:"https://wiki.vnoi.info/algo/algebra/prime_sieve.md",stars:1,category:"Số học"},
+  {id:89,name:"Nghịch đảo modulo",link:"https://wiki.vnoi.info/algo/math/modular-inverse",stars:2,category:"Số học"},
+  {id:90,name:"Kiểm tra số nguyên tố",link:"https://wiki.vnoi.info/algo/algebra/primality_check.md",stars:2,category:"Số học"},
+  {id:91,name:"Phân tích thừa số nguyên tố",link:"https://wiki.vnoi.info/algo/math/integer-factorization",stars:2,category:"Số học"},
+  {id:92,name:"Định lý Wilson",link:"https://wiki.vnoi.info/translate/he/Wilsons-theorem",stars:2,category:"Số học"},
+  {id:93,name:"Định lý Lucas",link:"https://wiki.vnoi.info/translate/he/Lucas-theorem",stars:2,category:"Số học"},
+  {id:94,name:"Định lý Thặng dư Trung Hoa (CRT)",link:"https://wiki.vnoi.info/algo/math/crt",stars:2,category:"Số học"},
+  {id:95,name:"Số các ước và Tổng các ước",link:"https://wiki.vnoi.info/algo/math/divisors",stars:1,category:"Số học"},
+  {id:96,name:"Phi hàm Euler",link:"https://wiki.vnoi.info/algo/algebra/phi-ham-euler",stars:2,category:"Số học"},
+  {id:97,name:"Hàm Mobius",link:"https://wiki.vnoi.info/translate/quora/mobius-function.md",stars:4,category:"Số học"},
+  {id:98,name:"Hàm nhân tính (Multiplicative Function)",link:"https://wiki.vnoi.info/algo/math/multiplicative-function",stars:4,category:"Số học"},
+  {id:99,name:"Tính tổ hợp nCk",link:"https://wiki.vnoi.info/algo/algebra/nCk",stars:2,category:"Số học"},
+  {id:100,name:"Giai thừa modulo nguyên tố",link:"https://wiki.vnoi.info/algo/math/factorial-modulo-prime",stars:3,category:"Số học"},
+  {id:101,name:"Căn bậc hai modulo",link:"https://wiki.vnoi.info/algo/math/sqrt-mod-p",stars:3,category:"Số học"},
+  {id:102,name:"Logarit rời rạc",link:"https://wiki.vnoi.info/algo/math/discrete-log",stars:3,category:"Số học"},
+  {id:103,name:"Tổ hợp cơ bản (Combinatorics)",link:"https://wiki.vnoi.info/translate/he/Number-Theory-5",stars:2,category:"Tổ hợp và Xác suất"},
+  {id:104,name:"Xác suất (Topcoder)",link:"https://wiki.vnoi.info/translate/topcoder/Hieu-ve-xac-suat",stars:2,category:"Tổ hợp và Xác suất"},
+  {id:105,name:"Xác suất (Probabilities)",link:"https://wiki.vnoi.info/translate/he/Number-Theory-6",stars:2,category:"Tổ hợp và Xác suất"},
+  {id:106,name:"Hình học tính toán P1: Khái niệm",link:"https://wiki.vnoi.info/algo/geometry/basic-geometry-1",stars:1,category:"Hình học"},
+  {id:107,name:"Hình học tính toán P2: Giao điểm",link:"https://wiki.vnoi.info/algo/geometry/basic-geometry-2",stars:1,category:"Hình học"},
+  {id:108,name:"Hình học tính toán P3: Đa giác",link:"https://wiki.vnoi.info/algo/geometry/basic-geometry-3",stars:1,category:"Hình học"},
+  {id:109,name:"Thuật toán đường quét (Sweep Line)",link:"https://wiki.vnoi.info/algo/geometry/Sweep-Line.md",stars:2,category:"Hình học"},
+  {id:110,name:"Bao lồi (Convex Hull)",link:"https://wiki.vnoi.info/translate/wcipeg/Convex-Hull",stars:3,category:"Hình học"},
+  {id:111,name:"Sum-constrained Convex Optimization",link:"https://wiki.vnoi.info/algo/trick/convex_greedy",stars:5,category:"Hình học"},
+  {id:112,name:"Tổng Minkowski",link:"https://wiki.vnoi.info/algo/trick/minkowski-sum",stars:5,category:"Hình học"},
+  {id:113,name:"Nhân ma trận",link:"https://wiki.vnoi.info/algo/trick/matrix-multiplication",stars:3,category:"Đại số - Giải tích"},
+  {id:114,name:"Khử nhân ma trận",link:"https://wiki.vnoi.info/algo/trick/counting-without-matrix-multiplication",stars:3,category:"Đại số - Giải tích"},
+  {id:115,name:"Nhân nhanh đa thức (FFT)",link:"https://wiki.vnoi.info/algo/trick/FFT",stars:4,category:"Đại số - Giải tích"},
+  {id:116,name:"Trò chơi Nim & Định lý Sprague-Grundy",link:"https://wiki.vnoi.info/algo/math/game-theory.md",stars:3,category:"Lý thuyết trò chơi"},
+  {id:117,name:"Giải thuật cắt tỉa Alpha-Beta",link:"https://wiki.vnoi.info/algo/games/Giai-Thuat-Cat-Tia-Alpha-beta",stars:3,category:"Lý thuyết trò chơi"},
+  {id:118,name:"Chia để trị (Divide & Conquer)",link:"https://wiki.vnoi.info/algo/basic/divide-and-conquer",stars:2,category:"Tối ưu hoá"},
+  {id:119,name:"Chia để trị Chen Danqi",link:"https://wiki.vnoi.info/algo/basic/chen-danqi-dnc",stars:2,category:"Tối ưu hoá"},
+  {id:120,name:"Chặt nhị phân song song (Parallel Binary Search)",link:"https://wiki.vnoi.info/algo/search/parallel-binary-search",stars:3,category:"Tối ưu hoá"},
+  {id:121,name:"Tìm kiếm tam phân (Ternary Search)",link:"https://wiki.vnoi.info/translate/emaxx/Tim-kiem-tam-phan-Ternary-Search",stars:3,category:"Tối ưu hoá"},
+  {id:122,name:"Local Search",link:"https://wiki.vnoi.info/algo/search/Local-Search",stars:3,category:"Tối ưu hoá"},
+  {id:123,name:"Tôi đã học Tin như thế nào (P1)",link:"https://wiki.vnoi.info/algo/basic/hoc-tin-the-nao-1",stars:1,category:"Về cách học Tin học"},
+  {id:124,name:"Tôi đã học Tin như thế nào (P2)",link:"https://wiki.vnoi.info/algo/basic/hoc-tin-the-nao-2",stars:1,category:"Về cách học Tin học"},
+  {id:125,name:"Viết trình chấm",link:"https://wiki.vnoi.info/algo/skill/viet-trinh-cham",stars:1,category:"Kĩ năng thi cử"},
+  {id:126,name:"Tổng hợp lời khuyên cho các kỳ thi",link:"https://wiki.vnoi.info/algo/skill/Ki-nang-thi-cu",stars:1,category:"Kĩ năng thi cử"},
+  {id:127,name:"Kinh nghiệm thi VOI",link:"https://wiki.vnoi.info/algo/skill/Kinh-nghiem-thi-VOI",stars:1,category:"Kĩ năng thi cử"},
+];
+
+// Categories list để gợi ý lộ trình
+const CATEGORY_ORDER = [
+  "Nhập môn","Về cách học Tin học","Kĩ năng thi cử",
+  "Các kỹ thuật cơ bản","Số học","Tổ hợp và Xác suất",
+  "Cấu trúc dữ liệu","Cấu trúc dữ liệu dạng cây","Chia căn",
+  "Hình học","Xử lý xâu","Quy hoạch động","Tham lam",
+  "Đồ thị chung","Đồ thị dạng cây","Đại số - Giải tích",
+  "Lý thuyết trò chơi","Tối ưu hoá"
+];
+
+// Màu category
+const CAT_COLORS = {};
+CATEGORY_ORDER.forEach((c, i) => { CAT_COLORS[c] = `cat-${i % 12}`; });
+
+// =============================================
+// UTILITIES
+// =============================================
+const LS = {
+  get: (k, def) => { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch { return def; } },
+  set: (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+
+const Stars = ({ n, max = 5 }) => (
+  <span>
+    {Array.from({ length: max }, (_, i) => (
+      <span key={i} className={i < n ? 'star' : 'star-empty'}>★</span>
+    ))}
+  </span>
+);
+
+const DiffLabel = ({ stars }) => {
+  const labels = ['', 'Cơ bản', 'Dễ', 'Trung bình', 'Khó', 'Rất khó'];
+  const colors = ['', 'text-green-400', 'text-blue-400', 'text-yellow-400', 'text-orange-400', 'text-red-400'];
+  return <span className={`text-xs font-bold font-mono ${colors[stars] || ''}`}>{labels[stars] || ''}</span>;
+};
+
+// Format time mm:ss
+const fmtTime = (s) => `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;
+
+// =============================================
+// ICONS (inline SVG để tránh dependency)
+// =============================================
+const Icon = ({ name, size = 16, className = '' }) => {
+  const icons = {
+    home: <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>,
+    list: <><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></>,
+    calendar: <><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></>,
+    settings: <><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></>,
+    sun: <><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></>,
+    moon: <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>,
+    check: <><polyline points="20 6 9 17 4 12"/></>,
+    'check-circle': <><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></>,
+    clock: <><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></>,
+    play: <polygon points="5 3 19 12 5 21 5 3"/>,
+    pause: <><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></>,
+    'skip-forward': <><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/></>,
+    'rotate-ccw': <><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 102.13-9.36L1 10"/></>,
+    'external-link': <><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></>,
+    'book-open': <><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></>,
+    x: <><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></>,
+    menu: <><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></>,
+    save: <><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></>,
+    trash: <><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/></>,
+    filter: <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>,
+    search: <><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></>,
+    zap: <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>,
+    award: <><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></>,
+    'bar-chart': <><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></>,
+    coffee: <><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></>,
+    bell: <><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></>,
+    plus: <><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></>,
+    minus: <line x1="5" y1="12" x2="19" y2="12"/>,
+    'chevron-right': <polyline points="9 18 15 12 9 6"/>,
+    'chevron-down': <polyline points="6 9 12 15 18 9"/>,
+    target: <><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></>,
+    'trending-up': <><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></>,
+    map: <><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></>,
+  };
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      {icons[name]}
+    </svg>
+  );
+};
+
+// =============================================
+// TOAST SYSTEM
+// =============================================
+const ToastContext = React.createContext(null);
+
+const ToastProvider = ({ children }) => {
+  const [toasts, setToasts] = React.useState([]);
+  const add = React.useCallback((msg, type = 'info', duration = 3500) => {
+    const id = Date.now();
+    setToasts(p => [...p, { id, msg, type, leaving: false }]);
+    setTimeout(() => {
+      setToasts(p => p.map(t => t.id === id ? { ...t, leaving: true } : t));
+      setTimeout(() => setToasts(p => p.filter(t => t.id !== id)), 350);
+    }, duration);
+  }, []);
+  const icons = { info: '💡', success: '✅', warning: '⏰', error: '❌' };
+  const borders = { info: '#4f8ef7', success: '#34d399', warning: '#fbbf24', error: '#f87171' };
+  return (
+    <ToastContext.Provider value={add}>
+      {children}
+      <div className="toast-container">
+        {toasts.map(t => (
+          <div key={t.id} className={`toast ${t.leaving ? 'animate-toast-out' : 'animate-toast-in'}`}
+            style={{ borderLeft: `3px solid ${borders[t.type]}` }}>
+            <span style={{ fontSize: 18 }}>{icons[t.type]}</span>
+            <span style={{ color: 'var(--text-primary)', fontSize: 13 }}>{t.msg}</span>
+          </div>
+        ))}
+      </div>
+    </ToastContext.Provider>
+  );
+};
+const useToast = () => React.useContext(ToastContext);
+
+// =============================================
+// POMODORO COMPONENT
+// =============================================
+const Pomodoro = ({ compact = false }) => {
+  const toast = useToast();
+  const WORK = 40 * 60, BREAK = 5 * 60;
+  const [mode, setMode] = React.useState('work'); // 'work' | 'break'
+  const [timeLeft, setTimeLeft] = React.useState(WORK);
+  const [running, setRunning] = React.useState(false);
+  const [cycles, setCycles] = React.useState(0);
+  const [customWork, setCustomWork] = React.useState(40);
+  const [customBreak, setCustomBreak] = React.useState(5);
+  const [showSettings, setShowSettings] = React.useState(false);
+  const timerRef = React.useRef(null);
+  const audioCtxRef = React.useRef(null);
+
+  // Beep sound
+  const beep = React.useCallback((freq = 880, dur = 0.3, type = 'sine') => {
+    try {
+      if (!audioCtxRef.current) audioCtxRef.current = new (window.AudioContext || window.webkitAudioContext)();
+      const ctx = audioCtxRef.current;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.frequency.value = freq;
+      osc.type = type;
+      gain.gain.setValueAtTime(0.3, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+      osc.start(ctx.currentTime);
+      osc.stop(ctx.currentTime + dur);
+    } catch (e) {}
+  }, []);
+
+  React.useEffect(() => {
+    if (running) {
+      timerRef.current = setInterval(() => {
+        setTimeLeft(t => {
+          if (t <= 1) {
+            // Switch mode
+            if (mode === 'work') {
+              setMode('break');
+              setTimeLeft(customBreak * 60);
+              setCycles(c => c + 1);
+              beep(660, 0.5); beep(880, 0.3);
+              toast('🎉 Hết giờ học! Nghỉ ngơi ' + customBreak + ' phút nào!', 'warning', 5000);
+            } else {
+              setMode('work');
+              setTimeLeft(customWork * 60);
+              beep(440, 0.5); beep(660, 0.3);
+              toast('💪 Hết giờ nghỉ! Bắt đầu học tập trung!', 'success', 5000);
+            }
+            return mode === 'work' ? customBreak * 60 : customWork * 60;
+          }
+          return t - 1;
+        });
+      }, 1000);
+    }
+    return () => clearInterval(timerRef.current);
+  }, [running, mode, customWork, customBreak]);
+
+  const total = mode === 'work' ? customWork * 60 : customBreak * 60;
+  const progress = (total - timeLeft) / total;
+  const r = compact ? 50 : 88;
+  const circ = 2 * Math.PI * r;
+  const offset = circ * (1 - progress);
+  const strokeColor = mode === 'work' ? '#4f8ef7' : '#34d399';
+
+  const reset = () => {
+    setRunning(false);
+    setMode('work');
+    setTimeLeft(customWork * 60);
+  };
+
+  if (compact) return (
+    <div className="flex items-center gap-3 px-4 py-2 card-elevated rounded-xl">
+      <div className="pomodoro-ring" style={{ width: 44, height: 44 }}>
+        <svg width="44" height="44" viewBox="0 0 120 120" style={{ transform:'rotate(-90deg)' }}>
+          <circle cx="60" cy="60" r={50} className="ring-track"/>
+          <circle cx="60" cy="60" r={50} className="ring-fill"
+            stroke={strokeColor}
+            strokeDasharray={circ}
+            strokeDashoffset={offset}/>
+        </svg>
+        <div style={{ position:'absolute', display:'flex', alignItems:'center', justifyContent:'center', inset:0 }}>
+          <span style={{ fontSize: 9, fontFamily:'var(--font-mono)', color:'var(--text-primary)', fontWeight:700 }}>{fmtTime(timeLeft)}</span>
+        </div>
+      </div>
+      <div>
+        <div style={{ fontSize: 11, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:1 }}>{mode === 'work' ? 'Học tập' : 'Nghỉ'}</div>
+        <div style={{ fontSize: 13, fontWeight:700, color:'var(--text-primary)', fontFamily:'var(--font-mono)' }}>{fmtTime(timeLeft)}</div>
+      </div>
+      <button onClick={() => setRunning(r => !r)} className="btn-primary" style={{ padding:'6px 12px', fontSize:12 }}>
+        {running ? '⏸' : '▶'}
+      </button>
+    </div>
+  );
+
+  return (
+    <div className="card p-6 animate-fade">
+      <div className="flex items-center justify-between mb-6">
+        <h2 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:22, color:'var(--text-primary)' }}>
+          🍅 Pomodoro Timer
+        </h2>
+        <button onClick={() => setShowSettings(s => !s)} className="btn-ghost" style={{ padding:'6px 10px' }}>
+          <Icon name="settings" size={14}/>
+        </button>
+      </div>
+
+      {showSettings && (
+        <div className="card-elevated p-4 mb-4 animate-fade grid grid-cols-2 gap-4">
+          <div>
+            <label style={{ fontSize:12, color:'var(--text-muted)', display:'block', marginBottom:4 }}>Học (phút)</label>
+            <input type="number" min={1} max={120} value={customWork}
+              onChange={e => { setCustomWork(+e.target.value); setRunning(false); setMode('work'); setTimeLeft(+e.target.value * 60); }}
+              style={{ width:'100%', background:'var(--bg-base)', border:'1px solid var(--border)', borderRadius:6, padding:'6px 10px', color:'var(--text-primary)', fontFamily:'var(--font-mono)', fontSize:14 }}/>
+          </div>
+          <div>
+            <label style={{ fontSize:12, color:'var(--text-muted)', display:'block', marginBottom:4 }}>Nghỉ (phút)</label>
+            <input type="number" min={1} max={60} value={customBreak}
+              onChange={e => { setCustomBreak(+e.target.value); }}
+              style={{ width:'100%', background:'var(--bg-base)', border:'1px solid var(--border)', borderRadius:6, padding:'6px 10px', color:'var(--text-primary)', fontFamily:'var(--font-mono)', fontSize:14 }}/>
+          </div>
+        </div>
+      )}
+
+      {/* Ring */}
+      <div className="flex flex-col items-center mb-6">
+        <div className="pomodoro-ring" style={{ width: 200, height: 200 }}>
+          <svg width="200" height="200" viewBox="0 0 200 200" style={{ transform:'rotate(-90deg)' }}>
+            <circle cx="100" cy="100" r={r} className="ring-track" strokeWidth="10"/>
+            <circle cx="100" cy="100" r={r} className="ring-fill"
+              stroke={strokeColor} strokeWidth="10"
+              strokeDasharray={circ} strokeDashoffset={offset}
+              style={{ filter:`drop-shadow(0 0 8px ${strokeColor}80)` }}/>
+          </svg>
+          <div style={{ position:'absolute', textAlign:'center' }}>
+            <div style={{ fontSize: 36, fontFamily:'var(--font-mono)', fontWeight:700, color:'var(--text-primary)', lineHeight:1 }}>{fmtTime(timeLeft)}</div>
+            <div style={{ fontSize: 13, color: strokeColor, fontWeight:600, marginTop:4 }}>{mode === 'work' ? 'TẬP TRUNG' : 'NGHỈ NGƠI'}</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Controls */}
+      <div className="flex gap-3 justify-center mb-4">
+        <button onClick={reset} className="btn-ghost" style={{ padding:'8px 14px' }}>
+          <Icon name="rotate-ccw" size={16}/>
+        </button>
+        <button onClick={() => setRunning(r => !r)} className="btn-primary"
+          style={{ padding:'10px 32px', fontSize:16, minWidth:120, display:'flex', alignItems:'center', gap:8, justifyContent:'center' }}
+          onMouseEnter={e => running && e.currentTarget.classList.add('animate-pulse-glow')}>
+          <Icon name={running ? 'pause' : 'play'} size={18}/> {running ? 'Dừng' : 'Bắt đầu'}
+        </button>
+        <button onClick={() => { setMode(m => m === 'work' ? 'break' : 'work'); setTimeLeft(mode === 'work' ? customBreak * 60 : customWork * 60); setRunning(false); }} className="btn-ghost" style={{ padding:'8px 14px' }}>
+          <Icon name="skip-forward" size={16}/>
+        </button>
+      </div>
+
+      <div className="text-center" style={{ fontSize: 13, color: 'var(--text-muted)' }}>
+        <Icon name="award" size={13} className="inline mr-1"/> Đã hoàn thành <strong style={{ color: 'var(--accent)' }}>{cycles}</strong> chu kỳ hôm nay
+      </div>
+    </div>
+  );
+};
+
+// =============================================
+// ALGORITHM DETAIL MODAL
+// =============================================
+const AlgoModal = ({ algo, onClose, notes, setNotes, completed, onToggleComplete }) => {
+  const toast = useToast();
+  const note = notes[algo.id] || '';
+  const [draft, setDraft] = React.useState(note);
+  const [saved, setSaved] = React.useState(true);
+
+  const save = () => {
+    const updated = { ...notes, [algo.id]: draft };
+    setNotes(updated);
+    LS.set('algo_notes', updated);
+    setSaved(true);
+    toast('📝 Ghi chú đã được lưu!', 'success', 2000);
+  };
+
+  const clear = () => {
+    if (!window.confirm('Xóa ghi chú này?')) return;
+    const updated = { ...notes };
+    delete updated[algo.id];
+    setNotes(updated);
+    LS.set('algo_notes', updated);
+    setDraft('');
+    toast('🗑️ Đã xóa ghi chú', 'info', 2000);
+  };
+
+  React.useEffect(() => { setSaved(draft === note); }, [draft, note]);
+
+  return (
+    <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,0.7)', zIndex:200, display:'flex', alignItems:'center', justifyContent:'center', padding:16 }}
+      onClick={e => e.target === e.currentTarget && onClose()}>
+      <div className="card animate-fade" style={{ width:'100%', maxWidth:640, maxHeight:'90vh', overflowY:'auto', padding:28 }}>
+        {/* Header */}
+        <div className="flex items-start justify-between mb-4 gap-3">
+          <div style={{ flex:1 }}>
+            <div className="flex items-center gap-2 mb-2 flex-wrap">
+              <span className={`tag ${CAT_COLORS[algo.category] || 'cat-0'}`}>{algo.category}</span>
+              <Stars n={algo.stars}/>
+              <DiffLabel stars={algo.stars}/>
+            </div>
+            <h2 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:20, color:'var(--text-primary)', lineHeight:1.3 }}>{algo.name}</h2>
+          </div>
+          <button onClick={onClose} className="btn-ghost" style={{ padding:'6px 10px', flexShrink:0 }}>
+            <Icon name="x" size={16}/>
+          </button>
+        </div>
+
+        {/* Link */}
+        <div className="card-elevated p-3 mb-4 flex items-center gap-2">
+          <Icon name="book-open" size={15} className="text-blue-400"/>
+          <span style={{ fontSize:13, color:'var(--text-muted)', flex:1 }}>Tài liệu VNOI Wiki</span>
+          <a href={algo.link} target="_blank" rel="noopener noreferrer" className="btn-primary"
+            style={{ padding:'5px 12px', fontSize:12, display:'flex', alignItems:'center', gap:5 }}>
+            <Icon name="external-link" size={12}/> Xem bài
+          </a>
+        </div>
+
+        {/* Complete toggle */}
+        <div className="flex items-center gap-3 mb-5">
+          <button onClick={() => { onToggleComplete(algo.id); toast(completed[algo.id] ? '↩️ Đã bỏ đánh dấu' : '✅ Đã hoàn thành!', completed[algo.id] ? 'info' : 'success'); }}
+            className={completed[algo.id] ? 'btn-primary' : 'btn-ghost'}
+            style={{ display:'flex', alignItems:'center', gap:6 }}>
+            <Icon name="check-circle" size={15}/>
+            {completed[algo.id] ? 'Đã học xong' : 'Đánh dấu hoàn thành'}
+          </button>
+          {completed[algo.id] && <span style={{ fontSize:12, color:'var(--success)' }}>✓ Bạn đã học thuật toán này</span>}
+        </div>
+
+        {/* Note editor */}
+        <div className="mb-3 flex items-center justify-between">
+          <h3 style={{ fontFamily:'var(--font-display)', fontWeight:700, fontSize:15, color:'var(--text-primary)' }}>
+            📝 Ghi chú cá nhân
+          </h3>
+          <div style={{ fontSize:11, color: saved ? 'var(--success)' : 'var(--warning)' }}>
+            {saved ? '● Đã lưu' : '● Chưa lưu'}
+          </div>
+        </div>
+        <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:6 }}>
+          Hỗ trợ Markdown. Code block: ``` code ```
+        </div>
+        <textarea className="note-editor" value={draft} onChange={e => setDraft(e.target.value)}
+          placeholder={`// Ghi chú về ${algo.name}\n// Ý tưởng chính:\n// Độ phức tạp:\n// Ví dụ:`}
+          rows={8}/>
+        <div className="flex gap-2 mt-3">
+          <button onClick={save} className="btn-primary" style={{ display:'flex', alignItems:'center', gap:5 }}>
+            <Icon name="save" size={14}/> Lưu
+          </button>
+          {draft && <button onClick={clear} className="btn-ghost" style={{ display:'flex', alignItems:'center', gap:5, color:'var(--danger)' }}>
+            <Icon name="trash" size={14}/> Xóa
+          </button>}
+        </div>
+
+        {/* Preview markdown note */}
+        {draft && (
+          <div className="mt-4">
+            <div style={{ fontSize:12, color:'var(--text-muted)', marginBottom:6, fontWeight:700 }}>PREVIEW:</div>
+            <div className="card-elevated p-3" style={{ fontSize:13, color:'var(--text-secondary)', lineHeight:1.7, fontFamily:'var(--font-mono)', whiteSpace:'pre-wrap', wordBreak:'break-word' }}>
+              {draft}
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+// =============================================
+// ALGORITHM CARD
+// =============================================
+const AlgoCard = React.memo(({ algo, note, completed, onOpen }) => (
+  <div className={`card p-4 cursor-pointer ${completed ? 'algo-completed' : ''}`}
+    style={{ borderLeft: completed ? '3px solid var(--success)' : '3px solid transparent' }}
+    onClick={() => onOpen(algo)}>
+    <div className="flex items-start gap-2 mb-2">
+      <div style={{ flex:1 }}>
+        <div className="flex flex-wrap gap-1 mb-1">
+          <span className={`tag ${CAT_COLORS[algo.category] || 'cat-0'}`}>{algo.category}</span>
+          {completed && <span className="tag" style={{ background:'rgba(52,211,153,0.15)', color:'#34d399' }}>✓ Xong</span>}
+          {note && <span className="tag" style={{ background:'rgba(167,139,250,0.15)', color:'#a78bfa' }}>📝 Ghi chú</span>}
+        </div>
+        <div className="algo-name" style={{ fontWeight:700, fontSize:14, color:'var(--text-primary)', lineHeight:1.4, fontFamily:'var(--font-display)' }}>{algo.name}</div>
+      </div>
+    </div>
+    <div className="flex items-center justify-between mt-2">
+      <div className="flex items-center gap-2">
+        <Stars n={algo.stars}/>
+        <DiffLabel stars={algo.stars}/>
+      </div>
+      <Icon name="chevron-right" size={14} className="text-muted" style={{ color:'var(--text-muted)' }}/>
+    </div>
+  </div>
+));
+
+// =============================================
+// DASHBOARD
+// =============================================
+const Dashboard = ({ algorithms, completed, notes, onOpenAlgo }) => {
+  const total = algorithms.length;
+  const completedCount = Object.values(completed).filter(Boolean).length;
+  const notedCount = Object.keys(notes).length;
+  const pct = Math.round((completedCount / total) * 100);
+
+  // Smart next recommendations
+  const BASIC_CATS = ['Nhập môn', 'Về cách học Tin học', 'Kĩ năng thi cử', 'Các kỹ thuật cơ bản'];
+  const basicDone = algorithms.filter(a => BASIC_CATS.includes(a.category)).every(a => completed[a.id]);
+  const recommended = React.useMemo(() => {
+    const sorted = [...algorithms].sort((a, b) => {
+      const aOrder = CATEGORY_ORDER.indexOf(a.category);
+      const bOrder = CATEGORY_ORDER.indexOf(b.category);
+      return (aOrder - bOrder) || (a.stars - b.stars);
+    });
+    return sorted.filter(a => !completed[a.id]).slice(0, 6);
+  }, [algorithms, completed]);
+
+  // Heatmap: algorithms per category
+  const catStats = CATEGORY_ORDER.map(cat => {
+    const catAlgos = algorithms.filter(a => a.category === cat);
+    const done = catAlgos.filter(a => completed[a.id]).length;
+    return { cat, total: catAlgos.length, done };
+  }).filter(c => c.total > 0);
+
+  const now = new Date();
+  const greeting = now.getHours() < 12 ? 'Chào buổi sáng' : now.getHours() < 18 ? 'Chào buổi chiều' : 'Chào buổi tối';
+
+  return (
+    <div className="animate-fade space-y-6">
+      {/* Header */}
+      <div className="card p-6 grid-bg" style={{ background:'linear-gradient(135deg, var(--bg-card), var(--bg-elevated))' }}>
+        <div style={{ fontSize:13, color:'var(--text-muted)', marginBottom:4 }}>
+          {now.toLocaleDateString('vi-VN', { weekday:'long', day:'numeric', month:'long', year:'numeric' })}
+        </div>
+        <h1 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:28, color:'var(--text-primary)', marginBottom:4 }}>
+          {greeting}! 🎯
+        </h1>
+        <p style={{ color:'var(--text-secondary)', fontSize:14, marginBottom:16 }}>
+          {completedCount === 0 ? 'Hãy bắt đầu hành trình chinh phục thuật toán!' :
+           `Bạn đã hoàn thành ${completedCount}/${total} thuật toán. ${pct >= 80 ? '🔥 Xuất sắc!' : pct >= 50 ? '💪 Tiếp tục phát huy!' : '⚡ Cố lên!'}`}
+        </p>
+        <div className="progress-bar">
+          <div className="progress-fill" style={{ width: `${pct}%` }}/>
+        </div>
+        <div className="flex justify-between mt-2" style={{ fontSize:12, color:'var(--text-muted)' }}>
+          <span>{completedCount} / {total} thuật toán</span>
+          <span style={{ color:'var(--accent)', fontWeight:700 }}>{pct}%</span>
+        </div>
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+        {[
+          { icon:'target', label:'Tổng thuật toán', value:total, color:'#4f8ef7' },
+          { icon:'check-circle', label:'Đã hoàn thành', value:completedCount, color:'#34d399' },
+          { icon:'book-open', label:'Có ghi chú', value:notedCount, color:'#a78bfa' },
+          { icon:'trending-up', label:'Tiến độ', value:`${pct}%`, color:'#fbbf24' },
+        ].map(s => (
+          <div key={s.label} className="card p-4 text-center">
+            <div style={{ color:s.color, marginBottom:8, display:'flex', justifyContent:'center' }}><Icon name={s.icon} size={22}/></div>
+            <div style={{ fontFamily:'var(--font-mono)', fontWeight:800, fontSize:22, color:'var(--text-primary)' }}>{s.value}</div>
+            <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:2 }}>{s.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* 2-column: Pomodoro + Recommended */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <Pomodoro/>
+
+        {/* Recommended */}
+        <div className="card p-5">
+          <div className="flex items-center gap-2 mb-4">
+            <Icon name="zap" size={18} style={{ color:'var(--accent)' }}/>
+            <h2 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:18, color:'var(--text-primary)' }}>Gợi ý tiếp theo</h2>
+          </div>
+          {!basicDone && (
+            <div className="card-elevated p-3 mb-3" style={{ borderLeft:'3px solid var(--warning)', fontSize:12, color:'var(--warning)' }}>
+              💡 Hoàn thành Nhập môn & Kỹ thuật cơ bản trước khi đến phần nâng cao!
+            </div>
+          )}
+          <div className="space-y-2">
+            {recommended.map(a => (
+              <div key={a.id} className="flex items-center gap-3 p-3 card-elevated rounded-lg cursor-pointer hover:border-blue-500 transition-all"
+                style={{ border:'1px solid transparent' }}
+                onClick={() => onOpenAlgo(a)}>
+                <div style={{ flex:1 }}>
+                  <div style={{ fontSize:13, fontWeight:700, color:'var(--text-primary)' }}>{a.name}</div>
+                  <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:2 }}>{a.category}</div>
+                </div>
+                <Stars n={a.stars} max={5}/>
+              </div>
+            ))}
+            {recommended.length === 0 && (
+              <div className="text-center py-8" style={{ color:'var(--success)', fontSize:15, fontWeight:700 }}>
+                🎊 Bạn đã hoàn thành tất cả!
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Category progress chart */}
+      <div className="card p-5">
+        <div className="flex items-center gap-2 mb-5">
+          <Icon name="bar-chart" size={18} style={{ color:'var(--accent)' }}/>
+          <h2 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:18, color:'var(--text-primary)' }}>Tiến độ theo danh mục</h2>
+        </div>
+        <div className="space-y-3">
+          {catStats.map((c, i) => (
+            <div key={c.cat}>
+              <div className="flex justify-between mb-1">
+                <span style={{ fontSize:13, color:'var(--text-secondary)', fontWeight:600 }}>{c.cat}</span>
+                <span style={{ fontSize:12, fontFamily:'var(--font-mono)', color:'var(--text-muted)' }}>{c.done}/{c.total}</span>
+              </div>
+              <div className="progress-bar">
+                <div className="progress-fill" style={{ width:`${c.total ? (c.done/c.total)*100 : 0}%` }}/>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// =============================================
+// ALGORITHM LIST PAGE
+// =============================================
+const AlgoList = ({ algorithms, completed, notes, onOpenAlgo }) => {
+  const [search, setSearch] = React.useState('');
+  const [filterCat, setFilterCat] = React.useState('Tất cả');
+  const [filterStar, setFilterStar] = React.useState(0);
+  const [filterStatus, setFilterStatus] = React.useState('all'); // 'all' | 'done' | 'todo' | 'noted'
+  const [sortBy, setSortBy] = React.useState('category'); // 'category' | 'stars' | 'name'
+  const [showFilters, setShowFilters] = React.useState(false);
+
+  const categories = ['Tất cả', ...CATEGORY_ORDER.filter(c => algorithms.some(a => a.category === c))];
+
+  const filtered = React.useMemo(() => {
+    let list = [...algorithms];
+    if (search) list = list.filter(a => a.name.toLowerCase().includes(search.toLowerCase()) || a.category.toLowerCase().includes(search.toLowerCase()));
+    if (filterCat !== 'Tất cả') list = list.filter(a => a.category === filterCat);
+    if (filterStar > 0) list = list.filter(a => a.stars === filterStar);
+    if (filterStatus === 'done') list = list.filter(a => completed[a.id]);
+    if (filterStatus === 'todo') list = list.filter(a => !completed[a.id]);
+    if (filterStatus === 'noted') list = list.filter(a => notes[a.id]);
+
+    if (sortBy === 'stars') list.sort((a, b) => a.stars - b.stars);
+    else if (sortBy === 'name') list.sort((a, b) => a.name.localeCompare(b.name, 'vi'));
+    else list.sort((a, b) => (CATEGORY_ORDER.indexOf(a.category) - CATEGORY_ORDER.indexOf(b.category)) || (a.stars - b.stars));
+    return list;
+  }, [algorithms, search, filterCat, filterStar, filterStatus, sortBy, completed, notes]);
+
+  // Group by category
+  const grouped = React.useMemo(() => {
+    if (sortBy !== 'category') return null;
+    const g = {};
+    filtered.forEach(a => { if (!g[a.category]) g[a.category] = []; g[a.category].push(a); });
+    return g;
+  }, [filtered, sortBy]);
+
+  return (
+    <div className="animate-fade">
+      <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
+        <h1 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:24, color:'var(--text-primary)' }}>
+          📚 Danh sách Thuật toán
+          <span style={{ marginLeft:8, fontSize:14, color:'var(--text-muted)', fontWeight:400 }}>{filtered.length}/{algorithms.length}</span>
+        </h1>
+        <button onClick={() => setShowFilters(f => !f)} className="btn-ghost" style={{ display:'flex', alignItems:'center', gap:6 }}>
+          <Icon name="filter" size={14}/> Bộ lọc
+        </button>
+      </div>
+
+      {/* Search */}
+      <div className="relative mb-4">
+        <span style={{ position:'absolute', left:12, top:'50%', transform:'translateY(-50%)', color:'var(--text-muted)' }}>
+          <Icon name="search" size={15}/>
+        </span>
+        <input value={search} onChange={e => setSearch(e.target.value)}
+          placeholder="Tìm kiếm thuật toán..."
+          style={{ width:'100%', background:'var(--bg-card)', border:'1px solid var(--border)', borderRadius:10, padding:'10px 14px 10px 38px', color:'var(--text-primary)', fontFamily:'var(--font-display)', fontSize:14, outline:'none' }}
+          onFocus={e => e.target.style.borderColor='var(--accent)'}
+          onBlur={e => e.target.style.borderColor='var(--border)'}/>
+      </div>
+
+      {/* Filters */}
+      {showFilters && (
+        <div className="card-elevated p-4 mb-4 animate-fade space-y-3">
+          <div>
+            <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:6, fontWeight:700, textTransform:'uppercase' }}>Danh mục</div>
+            <div className="flex flex-wrap gap-2">
+              {categories.map(c => (
+                <button key={c} onClick={() => setFilterCat(c)}
+                  className={filterCat === c ? 'btn-primary' : 'btn-ghost'}
+                  style={{ padding:'4px 10px', fontSize:12 }}>{c === 'Tất cả' ? c : c}</button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:6, fontWeight:700, textTransform:'uppercase' }}>Độ khó</div>
+            <div className="flex gap-2 flex-wrap">
+              {[0,1,2,3,4,5].map(s => (
+                <button key={s} onClick={() => setFilterStar(s)}
+                  className={filterStar === s ? 'btn-primary' : 'btn-ghost'}
+                  style={{ padding:'4px 10px', fontSize:12 }}>
+                  {s === 0 ? 'Tất cả' : '★'.repeat(s)}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:6, fontWeight:700, textTransform:'uppercase' }}>Trạng thái</div>
+            <div className="flex gap-2 flex-wrap">
+              {[['all','Tất cả'],['done','✓ Xong'],['todo','⏳ Chưa học'],['noted','📝 Có ghi chú']].map(([v,l]) => (
+                <button key={v} onClick={() => setFilterStatus(v)}
+                  className={filterStatus === v ? 'btn-primary' : 'btn-ghost'}
+                  style={{ padding:'4px 10px', fontSize:12 }}>{l}</button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize:11, color:'var(--text-muted)', marginBottom:6, fontWeight:700, textTransform:'uppercase' }}>Sắp xếp</div>
+            <div className="flex gap-2 flex-wrap">
+              {[['category','Theo danh mục'],['stars','Theo độ khó'],['name','Theo tên']].map(([v,l]) => (
+                <button key={v} onClick={() => setSortBy(v)}
+                  className={sortBy === v ? 'btn-primary' : 'btn-ghost'}
+                  style={{ padding:'4px 10px', fontSize:12 }}>{l}</button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* List */}
+      {grouped ? (
+        Object.entries(grouped).map(([cat, algos]) => (
+          <div key={cat} className="mb-6">
+            <div className="flex items-center gap-2 mb-3">
+              <span className={`tag ${CAT_COLORS[cat] || 'cat-0'}`}>{cat}</span>
+              <span style={{ fontSize:12, color:'var(--text-muted)' }}>{algos.filter(a => completed[a.id]).length}/{algos.length}</span>
+            </div>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              {algos.map(a => <AlgoCard key={a.id} algo={a} note={notes[a.id]} completed={!!completed[a.id]} onOpen={onOpenAlgo}/>)}
+            </div>
+          </div>
+        ))
+      ) : (
+        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+          {filtered.map(a => <AlgoCard key={a.id} algo={a} note={notes[a.id]} completed={!!completed[a.id]} onOpen={onOpenAlgo}/>)}
+        </div>
+      )}
+
+      {filtered.length === 0 && (
+        <div className="text-center py-16" style={{ color:'var(--text-muted)' }}>
+          <Icon name="search" size={40} className="mx-auto mb-3 opacity-30"/>
+          <div style={{ fontSize:15, fontWeight:600 }}>Không tìm thấy thuật toán nào</div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// =============================================
+// SCHEDULE PAGE
+// =============================================
+const Schedule = ({ algorithms, completed, notes, onOpenAlgo }) => {
+  const toast = useToast();
+  const [schedule, setSchedule] = React.useState(() => LS.get('schedule', {}));
+  const today = new Date().toISOString().slice(0,10);
+  const [selectedDate, setSelectedDate] = React.useState(today);
+  const [showPicker, setShowPicker] = React.useState(null); // slot index
+
+  const SLOTS = ['07:00','08:00','09:00','10:00','14:00','15:00','16:00','19:00','20:00','21:00'];
+  const daySchedule = schedule[selectedDate] || {};
+
+  const assign = (slot, algoId) => {
+    const updated = { ...schedule, [selectedDate]: { ...daySchedule, [slot]: algoId } };
+    setSchedule(updated);
+    LS.set('schedule', updated);
+    setShowPicker(null);
+    toast('📅 Đã thêm vào lịch!', 'success', 2000);
+  };
+
+  const remove = (slot) => {
+    const day = { ...daySchedule };
+    delete day[slot];
+    const updated = { ...schedule, [selectedDate]: day };
+    setSchedule(updated);
+    LS.set('schedule', updated);
+    toast('🗑️ Đã xóa khỏi lịch', 'info', 2000);
+  };
+
+  // Get upcoming 7 days
+  const days = Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(); d.setDate(d.getDate() + i);
+    return d.toISOString().slice(0,10);
+  });
+
+  return (
+    <div className="animate-fade">
+      <h1 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:24, color:'var(--text-primary)', marginBottom:20 }}>
+        📅 Thời khóa biểu
+      </h1>
+
+      {/* Day selector */}
+      <div className="flex gap-2 overflow-x-auto pb-2 mb-6">
+        {days.map(d => {
+          const date = new Date(d + 'T00:00:00');
+          const slots = Object.keys(schedule[d] || {}).length;
+          return (
+            <button key={d} onClick={() => setSelectedDate(d)}
+              className={selectedDate === d ? 'btn-primary' : 'btn-ghost'}
+              style={{ flexShrink:0, padding:'8px 14px', display:'flex', flexDirection:'column', alignItems:'center', gap:2 }}>
+              <span style={{ fontSize:11, textTransform:'uppercase' }}>
+                {date.toLocaleDateString('vi-VN', { weekday:'short' })}
+              </span>
+              <span style={{ fontFamily:'var(--font-mono)', fontWeight:800, fontSize:16 }}>{date.getDate()}</span>
+              {slots > 0 && <span style={{ fontSize:9, background:'var(--accent)', color:'white', borderRadius:8, padding:'1px 5px' }}>{slots}</span>}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Time slots */}
+      <div className="space-y-3">
+        {SLOTS.map(slot => {
+          const algoId = daySchedule[slot];
+          const algo = algoId ? algorithms.find(a => a.id === algoId) : null;
+          return (
+            <div key={slot} className="flex items-center gap-4">
+              <div style={{ width:52, flexShrink:0, fontFamily:'var(--font-mono)', fontSize:12, color:'var(--text-muted)', fontWeight:700 }}>{slot}</div>
+              {algo ? (
+                <div className={`schedule-slot filled flex-1 flex items-center gap-3`}
+                  style={{ background:'var(--accent-glow)', borderColor:'var(--accent)' }}>
+                  <div style={{ flex:1 }}>
+                    <div style={{ fontSize:13, fontWeight:700, color:'var(--text-primary)' }}>{algo.name}</div>
+                    <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:1 }}>{algo.category} · <Stars n={algo.stars}/></div>
+                  </div>
+                  <button onClick={() => onOpenAlgo(algo)} className="btn-primary" style={{ padding:'4px 8px', fontSize:11 }}>Học</button>
+                  <button onClick={() => remove(slot)} className="btn-ghost" style={{ padding:'4px 8px', fontSize:11, color:'var(--danger)' }}>✕</button>
+                </div>
+              ) : (
+                <div className="schedule-slot flex-1 flex items-center gap-2"
+                  style={{ cursor:'pointer', background: showPicker === slot ? 'var(--bg-elevated)' : 'transparent' }}
+                  onClick={() => setShowPicker(showPicker === slot ? null : slot)}>
+                  <Icon name="plus" size={14} style={{ color:'var(--text-muted)' }}/>
+                  <span style={{ fontSize:13, color:'var(--text-muted)' }}>Thêm thuật toán...</span>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Algo picker */}
+      {showPicker !== null && (
+        <div className="card p-4 mt-4 animate-fade">
+          <div style={{ fontSize:13, fontWeight:700, color:'var(--text-primary)', marginBottom:10 }}>
+            Chọn thuật toán cho {showPicker}:
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2" style={{ maxHeight:300, overflowY:'auto' }}>
+            {algorithms.filter(a => !completed[a.id]).slice(0, 30).map(a => (
+              <div key={a.id} className="card-elevated p-3 cursor-pointer hover:border-blue-400 transition-all"
+                style={{ border:'1px solid transparent', borderRadius:8 }}
+                onClick={() => assign(showPicker, a.id)}>
+                <div style={{ fontSize:13, fontWeight:600, color:'var(--text-primary)' }}>{a.name}</div>
+                <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:2 }}>{a.category}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// =============================================
+// SETTINGS PAGE
+// =============================================
+const Settings = ({ darkMode, setDarkMode, completed, setCompleted, notes, setNotes }) => {
+  const toast = useToast();
+  const completedCount = Object.values(completed).filter(Boolean).length;
+  const notedCount = Object.keys(notes).length;
+
+  const resetProgress = () => {
+    if (!window.confirm('Xóa toàn bộ tiến độ? Hành động này không thể hoàn tác.')) return;
+    setCompleted({});
+    LS.set('completed', {});
+    toast('🗑️ Đã xóa tiến độ', 'warning');
+  };
+
+  const resetNotes = () => {
+    if (!window.confirm('Xóa toàn bộ ghi chú?')) return;
+    setNotes({});
+    LS.set('algo_notes', {});
+    toast('🗑️ Đã xóa ghi chú', 'warning');
+  };
+
+  const exportData = () => {
+    const data = { completed, notes, exportedAt: new Date().toISOString() };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = `algomaster-backup-${new Date().toISOString().slice(0,10)}.json`;
+    a.click(); URL.revokeObjectURL(url);
+    toast('📦 Đã xuất dữ liệu!', 'success');
+  };
+
+  const importData = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (data.completed) { setCompleted(data.completed); LS.set('completed', data.completed); }
+        if (data.notes) { setNotes(data.notes); LS.set('algo_notes', data.notes); }
+        toast('✅ Đã nhập dữ liệu thành công!', 'success');
+      } catch { toast('❌ File không hợp lệ', 'error'); }
+    };
+    reader.readAsText(file);
+  };
+
+  return (
+    <div className="animate-fade max-w-xl">
+      <h1 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:24, color:'var(--text-primary)', marginBottom:24 }}>
+        ⚙️ Cài đặt
+      </h1>
+
+      <div className="space-y-4">
+        {/* Theme */}
+        <div className="card p-5">
+          <h3 style={{ fontWeight:700, color:'var(--text-primary)', marginBottom:12 }}>🎨 Giao diện</h3>
+          <div className="flex items-center justify-between">
+            <span style={{ fontSize:14, color:'var(--text-secondary)' }}>Chế độ {darkMode ? 'Tối (Dark)' : 'Sáng (Light)'}</span>
+            <button onClick={() => setDarkMode(d => !d)} className="btn-primary"
+              style={{ display:'flex', alignItems:'center', gap:6 }}>
+              <Icon name={darkMode ? 'sun' : 'moon'} size={14}/>
+              Chuyển sang {darkMode ? 'Light' : 'Dark'}
+            </button>
+          </div>
+        </div>
+
+        {/* Stats */}
+        <div className="card p-5">
+          <h3 style={{ fontWeight:700, color:'var(--text-primary)', marginBottom:12 }}>📊 Thống kê</h3>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="card-elevated p-3 text-center">
+              <div style={{ fontFamily:'var(--font-mono)', fontWeight:800, fontSize:24, color:'var(--success)' }}>{completedCount}</div>
+              <div style={{ fontSize:12, color:'var(--text-muted)', marginTop:2 }}>Đã hoàn thành</div>
+            </div>
+            <div className="card-elevated p-3 text-center">
+              <div style={{ fontFamily:'var(--font-mono)', fontWeight:800, fontSize:24, color:'var(--accent2)' }}>{notedCount}</div>
+              <div style={{ fontSize:12, color:'var(--text-muted)', marginTop:2 }}>Có ghi chú</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Data management */}
+        <div className="card p-5">
+          <h3 style={{ fontWeight:700, color:'var(--text-primary)', marginBottom:12 }}>💾 Quản lý dữ liệu</h3>
+          <div className="space-y-3">
+            <button onClick={exportData} className="btn-primary w-full" style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
+              <Icon name="save" size={14}/> Xuất dữ liệu (JSON)
+            </button>
+            <label className="btn-ghost w-full cursor-pointer" style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:6, textAlign:'center' }}>
+              <Icon name="plus" size={14}/> Nhập dữ liệu (JSON)
+              <input type="file" accept=".json" style={{ display:'none' }} onChange={importData}/>
+            </label>
+          </div>
+        </div>
+
+        {/* Danger zone */}
+        <div className="card p-5" style={{ borderColor:'rgba(248,113,113,0.3)' }}>
+          <h3 style={{ fontWeight:700, color:'var(--danger)', marginBottom:12 }}>⚠️ Khu vực nguy hiểm</h3>
+          <div className="space-y-3">
+            <button onClick={resetProgress} className="btn-ghost w-full" style={{ color:'var(--danger)', borderColor:'var(--danger)', display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
+              <Icon name="trash" size={14}/> Xóa tiến độ học tập
+            </button>
+            <button onClick={resetNotes} className="btn-ghost w-full" style={{ color:'var(--danger)', borderColor:'var(--danger)', display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
+              <Icon name="trash" size={14}/> Xóa tất cả ghi chú
+            </button>
+          </div>
+        </div>
+
+        {/* About */}
+        <div className="card-elevated p-5 text-center">
+          <div style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:18, color:'var(--accent)', marginBottom:4 }}>AlgoMaster Planner</div>
+          <div style={{ fontSize:12, color:'var(--text-muted)' }}>Dữ liệu từ <a href="https://wiki.vnoi.info" target="_blank" style={{ color:'var(--accent)' }}>VNOI Wiki</a> · 127 thuật toán</div>
+          <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:4 }}>Dữ liệu được lưu tại LocalStorage của trình duyệt</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// =============================================
+// MAIN APP
+// =============================================
+const App = () => {
+  const [page, setPage] = React.useState('dashboard');
+  const [darkMode, setDarkMode] = React.useState(() => LS.get('darkMode', true));
+  const [completed, setCompleted] = React.useState(() => LS.get('completed', {}));
+  const [notes, setNotes] = React.useState(() => LS.get('algo_notes', {}));
+  const [selectedAlgo, setSelectedAlgo] = React.useState(null);
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
+  // Apply dark/light mode
+  React.useEffect(() => {
+    document.body.className = darkMode ? 'dark' : 'light';
+    LS.set('darkMode', darkMode);
+  }, [darkMode]);
+
+  const toggleComplete = (id) => {
+    const updated = { ...completed, [id]: !completed[id] };
+    setCompleted(updated);
+    LS.set('completed', updated);
+  };
+
+  const navItems = [
+    { key:'dashboard', icon:'home', label:'Dashboard' },
+    { key:'algorithms', icon:'list', label:'Thuật toán' },
+    { key:'schedule', icon:'calendar', label:'Thời khóa biểu' },
+    { key:'settings', icon:'settings', label:'Cài đặt' },
+  ];
+
+  const completedCount = Object.values(completed).filter(Boolean).length;
+  const pct = Math.round((completedCount / ALGORITHMS.length) * 100);
+
+  const Sidebar = () => (
+    <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+      {/* Logo */}
+      <div style={{ padding:'20px 16px 16px', borderBottom:'1px solid var(--border)' }}>
+        <div style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:20, color:'var(--text-primary)', display:'flex', alignItems:'center', gap:8 }}>
+          <span style={{ fontSize:22 }}>⚡</span>
+          <span>AlgoMaster</span>
+        </div>
+        <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:2, fontFamily:'var(--font-mono)' }}>
+          {completedCount}/{ALGORITHMS.length} · {pct}%
+        </div>
+        <div className="progress-bar" style={{ marginTop:6 }}>
+          <div className="progress-fill" style={{ width:`${pct}%` }}/>
+        </div>
+      </div>
+
+      {/* Nav */}
+      <nav style={{ padding:'12px 10px', flex:1 }}>
+        {navItems.map(item => (
+          <div key={item.key} className={`nav-item ${page === item.key ? 'active' : ''}`}
+            onClick={() => { setPage(item.key); setSidebarOpen(false); }}>
+            <Icon name={item.icon} size={16}/>
+            <span>{item.label}</span>
+          </div>
+        ))}
+      </nav>
+
+      {/* Pomodoro compact */}
+      <div style={{ padding:'10px 10px 16px' }}>
+        <Pomodoro compact/>
+      </div>
+
+      {/* Theme toggle */}
+      <div style={{ padding:'10px 10px 16px', borderTop:'1px solid var(--border)' }}>
+        <button className="nav-item w-full" onClick={() => setDarkMode(d => !d)}>
+          <Icon name={darkMode ? 'sun' : 'moon'} size={16}/>
+          <span>{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
+        </button>
+      </div>
+    </div>
+  );
+
+  return (
+    <ToastProvider>
+      <div style={{ display:'flex', minHeight:'100vh', background:'var(--bg-base)' }}>
+        {/* Mobile overlay */}
+        {sidebarOpen && <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)}/>}
+
+        <Sidebar/>
+
+        {/* Main */}
+        <div style={{ flex:1, minWidth:0, display:'flex', flexDirection:'column' }}>
+          {/* Mobile header */}
+          <div style={{ display:'none', alignItems:'center', gap:12, padding:'14px 16px', borderBottom:'1px solid var(--border)', background:'var(--bg-surface)', position:'sticky', top:0, zIndex:30 }}
+            className="md:hidden mobile-header">
+            <button onClick={() => setSidebarOpen(true)} className="btn-ghost" style={{ padding:'8px' }}>
+              <Icon name="menu" size={18}/>
+            </button>
+            <span style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:18, color:'var(--text-primary)' }}>⚡ AlgoMaster</span>
+          </div>
+
+          <style>{`.mobile-header { display: flex !important; } @media(min-width:769px){ .mobile-header { display: none !important; } }`}</style>
+
+          {/* Content */}
+          <div style={{ flex:1, padding:'24px', maxWidth:960, width:'100%', margin:'0 auto' }}>
+            {page === 'dashboard' && <Dashboard algorithms={ALGORITHMS} completed={completed} notes={notes} onOpenAlgo={setSelectedAlgo}/>}
+            {page === 'algorithms' && <AlgoList algorithms={ALGORITHMS} completed={completed} notes={notes} onOpenAlgo={setSelectedAlgo}/>}
+            {page === 'schedule' && <Schedule algorithms={ALGORITHMS} completed={completed} notes={notes} onOpenAlgo={setSelectedAlgo}/>}
+            {page === 'settings' && <Settings darkMode={darkMode} setDarkMode={setDarkMode} completed={completed} setCompleted={setCompleted} notes={notes} setNotes={setNotes}/>}
+          </div>
+        </div>
+
+        {/* Modal */}
+        {selectedAlgo && (
+          <AlgoModal
+            algo={selectedAlgo}
+            onClose={() => setSelectedAlgo(null)}
+            notes={notes} setNotes={setNotes}
+            completed={completed}
+            onToggleComplete={toggleComplete}
+          />
+        )}
+      </div>
+    </ToastProvider>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
