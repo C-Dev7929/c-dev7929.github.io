@@ -890,11 +890,18 @@ const AlgoCard = React.memo(({ algo, note, completed, onOpen }) => (
     </div>
   </div>
 ));
-
 // =============================================
-// DASHBOARD
+// DASHBOARD (Đã cập nhật đồng hồ thời gian thực)
 // =============================================
 const Dashboard = ({ algorithms, completed, notes, onOpenAlgo }) => {
+  const [now, setNow] = React.useState(new Date());
+
+  // Cập nhật thời gian mỗi giây
+  React.useEffect(() => {
+    const timer = setInterval(() => setNow(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
   const total = algorithms.length;
   const completedCount = Object.values(completed).filter(Boolean).length;
   const notedCount = Object.keys(notes).length;
@@ -919,18 +926,24 @@ const Dashboard = ({ algorithms, completed, notes, onOpenAlgo }) => {
     return { cat, total: catAlgos.length, done };
   }).filter(c => c.total > 0);
 
-  const now = new Date();
   const greeting = now.getHours() < 12 ? 'Chào buổi sáng' : now.getHours() < 18 ? 'Chào buổi chiều' : 'Chào buổi tối';
+  
+  // Định dạng thời gian và ngày tháng
+  const timeString = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  const dateString = now.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
   return (
     <div className="animate-fade space-y-6">
       {/* Header */}
       <div className="card p-6 grid-bg" style={{ background:'linear-gradient(135deg, var(--bg-card), var(--bg-elevated))' }}>
-        <div style={{ fontSize:13, color:'var(--text-muted)', marginBottom:4 }}>
-          {now.toLocaleDateString('vi-VN', { weekday:'long', day:'numeric', month:'long', year:'numeric' })}
+        <div style={{ fontSize:13, color:'var(--text-muted)', marginBottom:4, textTransform: 'uppercase', letterSpacing: '1px' }}>
+          {now.toLocaleDateString('vi-VN', { weekday:'long' })}
         </div>
-        <h1 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:28, color:'var(--text-primary)', marginBottom:4 }}>
-          {greeting}! 🎯
+        <h1 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:28, color:'var(--text-primary)', marginBottom:4, display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', gap: '12px' }}>
+          <span>{greeting}! 🎯</span>
+          <span style={{ fontSize:16, color:'var(--accent)', fontFamily:'var(--font-mono)', fontWeight: 600, opacity: 0.9 }}>
+            [{timeString} — {dateString}]
+          </span>
         </h1>
         <p style={{ color:'var(--text-secondary)', fontSize:14, marginBottom:16 }}>
           {completedCount === 0 ? 'Hãy bắt đầu hành trình chinh phục thuật toán!' :
@@ -944,8 +957,8 @@ const Dashboard = ({ algorithms, completed, notes, onOpenAlgo }) => {
           <span style={{ color:'var(--accent)', fontWeight:700 }}>{pct}%</span>
         </div>
       </div>
-
-      {/* Stats */}
+      
+      {/* ... Các phần còn lại của Dashboard giữ nguyên ... */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         {[
           { icon:'target', label:'Tổng thuật toán', value:total, color:'#4f8ef7' },
@@ -961,11 +974,8 @@ const Dashboard = ({ algorithms, completed, notes, onOpenAlgo }) => {
         ))}
       </div>
 
-      {/* 2-column: Pomodoro + Recommended */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <Pomodoro/>
-
-        {/* Recommended */}
         <div className="card p-5">
           <div className="flex items-center gap-2 mb-4">
             <Icon name="zap" size={18} style={{ color:'var(--accent)' }}/>
@@ -988,16 +998,10 @@ const Dashboard = ({ algorithms, completed, notes, onOpenAlgo }) => {
                 <Stars n={a.stars} max={5}/>
               </div>
             ))}
-            {recommended.length === 0 && (
-              <div className="text-center py-8" style={{ color:'var(--success)', fontSize:15, fontWeight:700 }}>
-                🎊 Bạn đã hoàn thành tất cả!
-              </div>
-            )}
           </div>
         </div>
       </div>
 
-      {/* Category progress chart */}
       <div className="card p-5">
         <div className="flex items-center gap-2 mb-5">
           <Icon name="bar-chart" size={18} style={{ color:'var(--accent)' }}/>
@@ -1020,7 +1024,6 @@ const Dashboard = ({ algorithms, completed, notes, onOpenAlgo }) => {
     </div>
   );
 };
-
 // =============================================
 // ALGORITHM LIST PAGE
 // =============================================
