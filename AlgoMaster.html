@@ -551,6 +551,16 @@ const Icon = ({ name, size = 16, className = '' }) => {
     target: <><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></>,
     'trending-up': <><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></>,
     map: <><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></>,
+    'file-text': <><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></>,
+    edit: <><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></>,
+    'move-up': <><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></>,
+    'move-down': <><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></>,
+    tag: <><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></>,
+    database: <><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></>,
+    download: <><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></>,
+    upload: <><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></>,
+    'check-square': <><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></>,
+    copy: <><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></>,
   };
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -1586,12 +1596,311 @@ const Schedule = ({ algorithms, completed, notes, onOpenAlgo }) => {
 };
 
 // =============================================
-// SETTINGS PAGE
+// NOTES PAGE
 // =============================================
-const Settings = ({ darkMode, setDarkMode, completed, setCompleted, notes, setNotes }) => {
+const NotesPage = ({ notes, setNotes, algorithms, onOpenAlgo, customNotes, setCustomNotes }) => {
+  const toast = useToast();
+  const [showAddModal, setShowAddModal] = React.useState(false);
+  const [editingNote, setEditingNote] = React.useState(null); // note being edited
+  const [newTitle, setNewTitle] = React.useState('');
+  const [newContent, setNewContent] = React.useState('');
+  const [newPosition, setNewPosition] = React.useState('');
+  const [activeTab, setActiveTab] = React.useState('all'); // 'all' | 'custom' | 'algo'
+  const [searchQ, setSearchQ] = React.useState('');
+
+  const saveCustomNotes = (updated) => {
+    setCustomNotes(updated);
+    LS.set('custom_notes', updated);
+  };
+
+  const openAdd = () => {
+    setEditingNote(null);
+    setNewTitle(''); setNewContent(''); setNewPosition('');
+    setShowAddModal(true);
+  };
+
+  const openEdit = (note) => {
+    setEditingNote(note);
+    setNewTitle(note.title);
+    setNewContent(note.content);
+    setNewPosition(note.position || '');
+    setShowAddModal(true);
+  };
+
+  const saveNote = () => {
+    if (!newTitle.trim()) { toast('⚠️ Vui lòng nhập tên note', 'warning'); return; }
+    const now = new Date().toISOString();
+    if (editingNote) {
+      const updated = customNotes.map(n => n.id === editingNote.id
+        ? { ...n, title: newTitle.trim(), content: newContent, position: newPosition.trim(), updatedAt: now }
+        : n
+      );
+      saveCustomNotes(updated);
+      toast('✅ Đã cập nhật note!', 'success');
+    } else {
+      const newNote = {
+        id: 'cn_' + Date.now(),
+        title: newTitle.trim(),
+        content: newContent,
+        position: newPosition.trim(),
+        createdAt: now,
+        updatedAt: now,
+      };
+      const updated = [...customNotes, newNote];
+      saveCustomNotes(updated);
+      toast('✅ Đã tạo note mới!', 'success');
+    }
+    setShowAddModal(false);
+  };
+
+  const deleteCustomNote = (id) => {
+    if (!window.confirm('Xóa note này?')) return;
+    saveCustomNotes(customNotes.filter(n => n.id !== id));
+    toast('🗑️ Đã xóa note', 'info');
+  };
+
+  const moveNote = (id, dir) => {
+    const idx = customNotes.findIndex(n => n.id === id);
+    if (idx < 0) return;
+    const arr = [...customNotes];
+    const swap = idx + dir;
+    if (swap < 0 || swap >= arr.length) return;
+    [arr[idx], arr[swap]] = [arr[swap], arr[idx]];
+    saveCustomNotes(arr);
+  };
+
+  // Algo notes with algorithm info
+  const algoNotesList = React.useMemo(() => {
+    return Object.entries(notes)
+      .filter(([id, content]) => content && content.trim())
+      .map(([id, content]) => {
+        const algo = algorithms.find(a => a.id === parseInt(id));
+        return { id, content, algo };
+      })
+      .filter(n => n.algo);
+  }, [notes, algorithms]);
+
+  const inputStyle = {
+    width:'100%', background:'var(--bg-base)', border:'1px solid var(--border)',
+    borderRadius:8, padding:'9px 12px', color:'var(--text-primary)',
+    fontFamily:'var(--font-display)', fontSize:14, outline:'none',
+  };
+
+  const filteredCustom = customNotes.filter(n =>
+    !searchQ || n.title.toLowerCase().includes(searchQ.toLowerCase()) || n.content.toLowerCase().includes(searchQ.toLowerCase()) || (n.position || '').toLowerCase().includes(searchQ.toLowerCase())
+  );
+  const filteredAlgo = algoNotesList.filter(n =>
+    !searchQ || n.algo.name.toLowerCase().includes(searchQ.toLowerCase()) || n.content.toLowerCase().includes(searchQ.toLowerCase())
+  );
+
+  return (
+    <div className="animate-fade">
+      <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
+        <h1 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:24, color:'var(--text-primary)' }}>
+          📝 Ghi Chú
+        </h1>
+        <button onClick={openAdd} className="btn-primary" style={{ display:'flex', alignItems:'center', gap:6 }}>
+          <Icon name="plus" size={14}/> Tạo Note Mới
+        </button>
+      </div>
+
+      {/* Search */}
+      <div className="relative mb-4">
+        <span style={{ position:'absolute', left:12, top:'50%', transform:'translateY(-50%)', color:'var(--text-muted)' }}>
+          <Icon name="search" size={15}/>
+        </span>
+        <input value={searchQ} onChange={e => setSearchQ(e.target.value)}
+          placeholder="Tìm kiếm ghi chú..."
+          style={{ width:'100%', background:'var(--bg-card)', border:'1px solid var(--border)', borderRadius:10, padding:'10px 14px 10px 38px', color:'var(--text-primary)', fontFamily:'var(--font-display)', fontSize:14, outline:'none' }}
+          onFocus={e => e.target.style.borderColor='var(--accent)'}
+          onBlur={e => e.target.style.borderColor='var(--border)'}/>
+      </div>
+
+      {/* Tabs */}
+      <div style={{ display:'flex', gap:0, marginBottom:20, background:'var(--bg-elevated)', borderRadius:10, padding:4, width:'fit-content', border:'1px solid var(--border)' }}>
+        {[
+          { key:'all', label:`Tất cả (${filteredCustom.length + filteredAlgo.length})` },
+          { key:'custom', label:`📌 Ghi chú riêng (${filteredCustom.length})` },
+          { key:'algo', label:`🔗 Ghi chú thuật toán (${filteredAlgo.length})` },
+        ].map(tab => (
+          <button key={tab.key} onClick={() => setActiveTab(tab.key)}
+            style={{
+              padding:'7px 14px', borderRadius:7, border:'none',
+              fontFamily:'var(--font-display)', fontWeight:700, fontSize:12,
+              cursor:'pointer', transition:'all 0.2s', whiteSpace:'nowrap',
+              background: activeTab === tab.key ? 'var(--accent)' : 'transparent',
+              color: activeTab === tab.key ? '#fff' : 'var(--text-secondary)',
+            }}>{tab.label}</button>
+        ))}
+      </div>
+
+      {/* Custom Notes Section */}
+      {(activeTab === 'all' || activeTab === 'custom') && (
+        <div className="mb-6">
+          {activeTab === 'all' && (
+            <div style={{ fontSize:12, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:1, marginBottom:10 }}>
+              📌 GHI CHÚ RIÊNG
+            </div>
+          )}
+          {filteredCustom.length === 0 ? (
+            <div className="card p-8 text-center" style={{ color:'var(--text-muted)' }}>
+              <div style={{ fontSize:32, marginBottom:8 }}>📭</div>
+              <div style={{ fontSize:14, fontWeight:600 }}>Chưa có ghi chú riêng</div>
+              <div style={{ fontSize:12, marginTop:4 }}>Nhấn "Tạo Note Mới" để bắt đầu</div>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {filteredCustom.map((note, idx) => (
+                <div key={note.id} className="card p-4" style={{ borderLeft:'3px solid var(--accent2)' }}>
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <div style={{ flex:1 }}>
+                      <div style={{ fontWeight:700, fontSize:15, color:'var(--text-primary)', marginBottom:2 }}>{note.title}</div>
+                      {note.position && (
+                        <span className="tag" style={{ background:'rgba(167,139,250,0.15)', color:'#a78bfa', marginBottom:4 }}>
+                          📍 {note.position}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <button onClick={() => moveNote(note.id, -1)} className="btn-ghost" style={{ padding:'4px 7px' }} title="Lên">
+                        <Icon name="move-up" size={13}/>
+                      </button>
+                      <button onClick={() => moveNote(note.id, 1)} className="btn-ghost" style={{ padding:'4px 7px' }} title="Xuống">
+                        <Icon name="move-down" size={13}/>
+                      </button>
+                      <button onClick={() => openEdit(note)} className="btn-ghost" style={{ padding:'4px 7px' }}>
+                        <Icon name="edit" size={13}/>
+                      </button>
+                      <button onClick={() => deleteCustomNote(note.id)} className="btn-ghost" style={{ padding:'4px 7px', color:'var(--danger)' }}>
+                        <Icon name="trash" size={13}/>
+                      </button>
+                    </div>
+                  </div>
+                  {note.content && (
+                    <div style={{ fontSize:13, color:'var(--text-secondary)', whiteSpace:'pre-wrap', wordBreak:'break-word', fontFamily:'var(--font-mono)', lineHeight:1.6, maxHeight:120, overflow:'hidden', maskImage:'linear-gradient(to bottom, black 60%, transparent 100%)' }}>
+                      {note.content}
+                    </div>
+                  )}
+                  <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:8 }}>
+                    Cập nhật: {new Date(note.updatedAt).toLocaleString('vi-VN')}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Algo Notes Section */}
+      {(activeTab === 'all' || activeTab === 'algo') && (
+        <div>
+          {activeTab === 'all' && (
+            <div style={{ fontSize:12, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', letterSpacing:1, marginBottom:10 }}>
+              🔗 GHI CHÚ THUẬT TOÁN
+            </div>
+          )}
+          {filteredAlgo.length === 0 ? (
+            <div className="card p-8 text-center" style={{ color:'var(--text-muted)' }}>
+              <div style={{ fontSize:32, marginBottom:8 }}>📭</div>
+              <div style={{ fontSize:14, fontWeight:600 }}>Chưa có ghi chú thuật toán nào</div>
+              <div style={{ fontSize:12, marginTop:4 }}>Mở một thuật toán và thêm ghi chú vào đó</div>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {filteredAlgo.map(({ id, content, algo }) => (
+                <div key={id} className="card p-4 cursor-pointer" style={{ borderLeft:'3px solid var(--accent)' }}
+                  onClick={() => onOpenAlgo && onOpenAlgo(algo)}>
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <div>
+                      <div className="flex items-center gap-2 flex-wrap mb-1">
+                        <span className={`tag ${CAT_COLORS[algo.category] || 'cat-0'}`}>{algo.category}</span>
+                        <Stars n={algo.stars}/>
+                      </div>
+                      <div style={{ fontWeight:700, fontSize:14, color:'var(--text-primary)' }}>{algo.name}</div>
+                    </div>
+                    <Icon name="external-link" size={13} style={{ color:'var(--text-muted)', flexShrink:0, marginTop:4 }}/>
+                  </div>
+                  <div style={{ fontSize:13, color:'var(--text-secondary)', whiteSpace:'pre-wrap', wordBreak:'break-word', fontFamily:'var(--font-mono)', lineHeight:1.6, maxHeight:100, overflow:'hidden', maskImage:'linear-gradient(to bottom, black 50%, transparent 100%)' }}>
+                    {content}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Add/Edit Modal */}
+      {showAddModal && (
+        <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,0.7)', zIndex:300, display:'flex', alignItems:'center', justifyContent:'center', padding:16 }}
+          onClick={e => e.target === e.currentTarget && setShowAddModal(false)}>
+          <div className="card animate-fade" style={{ width:'100%', maxWidth:560, padding:28 }}>
+            <div className="flex items-center justify-between mb-5">
+              <h2 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:18, color:'var(--text-primary)' }}>
+                {editingNote ? '✏️ Chỉnh sửa Note' : '✨ Tạo Note Mới'}
+              </h2>
+              <button onClick={() => setShowAddModal(false)} className="btn-ghost" style={{ padding:'6px 10px' }}>
+                <Icon name="x" size={16}/>
+              </button>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <label style={{ fontSize:12, color:'var(--text-muted)', display:'block', marginBottom:5, fontWeight:700 }}>TÊN NOTE *</label>
+                <input value={newTitle} onChange={e => setNewTitle(e.target.value)}
+                  placeholder="Nhập tên note..."
+                  style={inputStyle}
+                  onFocus={e => e.target.style.borderColor='var(--accent)'}
+                  onBlur={e => e.target.style.borderColor='var(--border)'}/>
+              </div>
+              <div>
+                <label style={{ fontSize:12, color:'var(--text-muted)', display:'block', marginBottom:5, fontWeight:700 }}>VỊ TRÍ / NHÃN (tuỳ chọn)</label>
+                <input value={newPosition} onChange={e => setNewPosition(e.target.value)}
+                  placeholder="VD: Phần 1, Chương 3, Quan trọng..."
+                  style={inputStyle}
+                  onFocus={e => e.target.style.borderColor='var(--accent)'}
+                  onBlur={e => e.target.style.borderColor='var(--border)'}/>
+              </div>
+              <div>
+                <label style={{ fontSize:12, color:'var(--text-muted)', display:'block', marginBottom:5, fontWeight:700 }}>NỘI DUNG GHI CHÚ</label>
+                <textarea value={newContent} onChange={e => setNewContent(e.target.value)}
+                  placeholder="Nhập nội dung ghi chú..."
+                  rows={7}
+                  style={{ ...inputStyle, fontFamily:'var(--font-mono)', fontSize:13, resize:'vertical', lineHeight:1.6 }}
+                  onFocus={e => e.target.style.borderColor='var(--accent)'}
+                  onBlur={e => e.target.style.borderColor='var(--border)'}/>
+              </div>
+              <div className="flex gap-2 justify-end">
+                <button onClick={() => setShowAddModal(false)} className="btn-ghost">Hủy</button>
+                <button onClick={saveNote} className="btn-primary" style={{ display:'flex', alignItems:'center', gap:6 }}>
+                  <Icon name="save" size={14}/> {editingNote ? 'Cập nhật' : 'Tạo Note'}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// =============================================
+// SETTINGS PAGE (nâng cấp export/import)
+// =============================================
+const Settings = ({ darkMode, setDarkMode, completed, setCompleted, notes, setNotes, customNotes, setCustomNotes }) => {
   const toast = useToast();
   const completedCount = Object.values(completed).filter(Boolean).length;
   const notedCount = Object.keys(notes).length;
+
+  // Export options state
+  const [showExportModal, setShowExportModal] = React.useState(false);
+  const [showImportModal, setShowImportModal] = React.useState(false);
+  const [exportFormat, setExportFormat] = React.useState('json'); // 'json' | 'sql'
+  const [exportSections, setExportSections] = React.useState({ completed: true, notes: true, customNotes: true, schedule: true, tkb: true });
+  const [importMode, setImportMode] = React.useState('merge'); // 'merge' | 'replace'
+  const [importFormat, setImportFormat] = React.useState('json'); // 'json' | 'sql'
+  const [importPreview, setImportPreview] = React.useState(null);
+  const [pendingImport, setPendingImport] = React.useState(null);
+  const importFileRef = React.useRef();
 
   const resetProgress = () => {
     if (!window.confirm('Xóa toàn bộ tiến độ? Hành động này không thể hoàn tác.')) return;
@@ -1607,30 +1916,147 @@ const Settings = ({ darkMode, setDarkMode, completed, setCompleted, notes, setNo
     toast('🗑️ Đã xóa ghi chú', 'warning');
   };
 
-  const exportData = () => {
-    const data = { completed, notes, exportedAt: new Date().toISOString() };
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url; a.download = `algomaster-backup-${new Date().toISOString().slice(0,10)}.json`;
-    a.click(); URL.revokeObjectURL(url);
-    toast('📦 Đã xuất dữ liệu!', 'success');
+  const toggleExportSection = (key) => {
+    setExportSections(prev => ({ ...prev, [key]: !prev[key] }));
   };
 
-  const importData = (e) => {
+  // Collect data for selected sections
+  const buildExportData = () => {
+    const data = { exportedAt: new Date().toISOString(), version: 3 };
+    if (exportSections.completed) data.completed = completed;
+    if (exportSections.notes) data.notes = notes;
+    if (exportSections.customNotes) data.customNotes = customNotes;
+    if (exportSections.schedule) {
+      try { data.schedule = JSON.parse(localStorage.getItem('schedule') || 'null'); } catch {}
+    }
+    if (exportSections.tkb) {
+      try { data.tkb = JSON.parse(localStorage.getItem('algo_tkb_v1') || 'null'); } catch {}
+    }
+    return data;
+  };
+
+  const exportAsSQL = (data) => {
+    const ts = new Date().toISOString();
+    let sql = `-- AlgoMaster Export SQL\n-- Exported: ${ts}\n-- Version: 3\n\n`;
+    sql += `CREATE TABLE IF NOT EXISTS am_export (key TEXT PRIMARY KEY, value TEXT, exported_at TEXT);\n\n`;
+    sql += `-- Clear old data\nDELETE FROM am_export;\n\n`;
+    sql += `-- Insert data\n`;
+    Object.entries(data).forEach(([key, val]) => {
+      if (key === 'exportedAt' || key === 'version') return;
+      if (val === null || val === undefined) return;
+      const escaped = JSON.stringify(val).replace(/'/g, "''");
+      sql += `INSERT INTO am_export (key, value, exported_at) VALUES ('${key}', '${escaped}', '${ts}');\n`;
+    });
+    return sql;
+  };
+
+  const doExport = () => {
+    const data = buildExportData();
+    const selectedCount = Object.values(exportSections).filter(Boolean).length;
+    if (selectedCount === 0) { toast('⚠️ Chọn ít nhất 1 phần để xuất', 'warning'); return; }
+
+    if (exportFormat === 'json') {
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = `algomaster-v3-${new Date().toISOString().slice(0,10)}.json`;
+      a.click(); URL.revokeObjectURL(url);
+      toast('📦 Đã xuất JSON!', 'success');
+    } else {
+      const sql = exportAsSQL(data);
+      const blob = new Blob([sql], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = `algomaster-v3-${new Date().toISOString().slice(0,10)}.sql`;
+      a.click(); URL.revokeObjectURL(url);
+      toast('📦 Đã xuất SQL!', 'success');
+    }
+    setShowExportModal(false);
+  };
+
+  const parseImportFile = (e) => {
     const file = e.target.files[0];
     if (!file) return;
     const reader = new FileReader();
     reader.onload = (ev) => {
       try {
-        const data = JSON.parse(ev.target.result);
-        if (data.completed) { setCompleted(data.completed); LS.set('completed', data.completed); }
-        if (data.notes) { setNotes(data.notes); LS.set('algo_notes', data.notes); }
-        toast('✅ Đã nhập dữ liệu thành công!', 'success');
-      } catch { toast('❌ File không hợp lệ', 'error'); }
+        let data;
+        if (importFormat === 'json') {
+          data = JSON.parse(ev.target.result);
+        } else {
+          // Parse SQL: extract INSERT statements
+          data = {};
+          const text = ev.target.result;
+          const regex = /INSERT INTO am_export[^)]*\)\s*VALUES\s*\('([^']+)',\s*'((?:[^']|'')*)',/g;
+          let m;
+          while ((m = regex.exec(text)) !== null) {
+            const key = m[1];
+            const val = m[2].replace(/''/g, "'");
+            try { data[key] = JSON.parse(val); } catch {}
+          }
+          if (Object.keys(data).length === 0) throw new Error('Không tìm thấy dữ liệu trong SQL');
+        }
+        // Preview
+        const preview = [];
+        if (data.completed) preview.push(`✓ Tiến độ: ${Object.values(data.completed).filter(Boolean).length} đã học`);
+        if (data.notes) preview.push(`📝 Ghi chú thuật toán: ${Object.keys(data.notes).length} note`);
+        if (data.customNotes) preview.push(`📌 Ghi chú riêng: ${data.customNotes.length} note`);
+        if (data.schedule) preview.push(`📅 Lịch học thuật toán: có dữ liệu`);
+        if (data.tkb) preview.push(`🏫 Thời khóa biểu: có dữ liệu`);
+        setImportPreview(preview);
+        setPendingImport(data);
+      } catch (err) {
+        toast('❌ File không hợp lệ: ' + err.message, 'error');
+        setImportPreview(null);
+        setPendingImport(null);
+      }
     };
     reader.readAsText(file);
   };
+
+  const doImport = () => {
+    if (!pendingImport) return;
+    const data = pendingImport;
+    const isReplace = importMode === 'replace';
+
+    if (data.completed) {
+      const updated = isReplace ? data.completed : { ...completed, ...data.completed };
+      setCompleted(updated); LS.set('completed', updated);
+    }
+    if (data.notes) {
+      const updated = isReplace ? data.notes : { ...notes, ...data.notes };
+      setNotes(updated); LS.set('algo_notes', updated);
+    }
+    if (data.customNotes) {
+      const updated = isReplace ? data.customNotes : [...customNotes, ...data.customNotes.filter(n => !customNotes.find(c => c.id === n.id))];
+      setCustomNotes(updated); LS.set('custom_notes', updated);
+    }
+    if (data.schedule) { localStorage.setItem('schedule', JSON.stringify(data.schedule)); }
+    if (data.tkb) { localStorage.setItem('algo_tkb_v1', JSON.stringify(data.tkb)); }
+
+    toast(`✅ Đã nhập dữ liệu (chế độ: ${isReplace ? 'Thay thế' : 'Gộp'})!`, 'success');
+    setShowImportModal(false);
+    setPendingImport(null);
+    setImportPreview(null);
+    if (importFileRef.current) importFileRef.current.value = '';
+  };
+
+  const sectionLabels = {
+    completed: '✓ Tiến độ học tập',
+    notes: '📝 Ghi chú thuật toán',
+    customNotes: '📌 Ghi chú riêng',
+    schedule: '📅 Lịch học thuật toán',
+    tkb: '🏫 Thời khóa biểu',
+  };
+
+  const btnTabStyle = (active) => ({
+    padding:'7px 14px', borderRadius:7, border:'none', cursor:'pointer',
+    fontFamily:'var(--font-display)', fontWeight:700, fontSize:13, transition:'all 0.2s',
+    background: active ? 'var(--accent)' : 'transparent',
+    color: active ? '#fff' : 'var(--text-secondary)',
+  });
+
+  const modalOverlay = { position:'fixed', inset:0, background:'rgba(0,0,0,0.75)', zIndex:400, display:'flex', alignItems:'center', justifyContent:'center', padding:16 };
 
   return (
     <div className="animate-fade max-w-xl">
@@ -1662,7 +2088,7 @@ const Settings = ({ darkMode, setDarkMode, completed, setCompleted, notes, setNo
             </div>
             <div className="card-elevated p-3 text-center">
               <div style={{ fontFamily:'var(--font-mono)', fontWeight:800, fontSize:24, color:'var(--accent2)' }}>{notedCount}</div>
-              <div style={{ fontSize:12, color:'var(--text-muted)', marginTop:2 }}>Có ghi chú</div>
+              <div style={{ fontSize:12, color:'var(--text-muted)', marginTop:2 }}>Ghi chú thuật toán</div>
             </div>
           </div>
         </div>
@@ -1671,13 +2097,14 @@ const Settings = ({ darkMode, setDarkMode, completed, setCompleted, notes, setNo
         <div className="card p-5">
           <h3 style={{ fontWeight:700, color:'var(--text-primary)', marginBottom:12 }}>💾 Quản lý dữ liệu</h3>
           <div className="space-y-3">
-            <button onClick={exportData} className="btn-primary w-full" style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
-              <Icon name="save" size={14}/> Xuất dữ liệu (JSON)
+            <button onClick={() => setShowExportModal(true)} className="btn-primary w-full"
+              style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
+              <Icon name="download" size={14}/> Xuất dữ liệu (JSON / SQL)
             </button>
-            <label className="btn-ghost w-full cursor-pointer" style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:6, textAlign:'center' }}>
-              <Icon name="plus" size={14}/> Nhập dữ liệu (JSON)
-              <input type="file" accept=".json" style={{ display:'none' }} onChange={importData}/>
-            </label>
+            <button onClick={() => setShowImportModal(true)} className="btn-ghost w-full"
+              style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
+              <Icon name="upload" size={14}/> Nhập dữ liệu (JSON / SQL)
+            </button>
           </div>
         </div>
 
@@ -1685,22 +2112,160 @@ const Settings = ({ darkMode, setDarkMode, completed, setCompleted, notes, setNo
         <div className="card p-5" style={{ borderColor:'rgba(248,113,113,0.3)' }}>
           <h3 style={{ fontWeight:700, color:'var(--danger)', marginBottom:12 }}>⚠️ Khu vực nguy hiểm</h3>
           <div className="space-y-3">
-            <button onClick={resetProgress} className="btn-ghost w-full" style={{ color:'var(--danger)', borderColor:'var(--danger)', display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
+            <button onClick={resetProgress} className="btn-ghost w-full"
+              style={{ color:'var(--danger)', borderColor:'var(--danger)', display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
               <Icon name="trash" size={14}/> Xóa tiến độ học tập
             </button>
-            <button onClick={resetNotes} className="btn-ghost w-full" style={{ color:'var(--danger)', borderColor:'var(--danger)', display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
-              <Icon name="trash" size={14}/> Xóa tất cả ghi chú
+            <button onClick={resetNotes} className="btn-ghost w-full"
+              style={{ color:'var(--danger)', borderColor:'var(--danger)', display:'flex', alignItems:'center', justifyContent:'center', gap:6 }}>
+              <Icon name="trash" size={14}/> Xóa tất cả ghi chú thuật toán
             </button>
           </div>
         </div>
 
         {/* About */}
         <div className="card-elevated p-5 text-center">
-          <div style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:18, color:'var(--accent)', marginBottom:4 }}>AlgoMaster Planner</div>
+          <div style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:18, color:'var(--accent)', marginBottom:4 }}>AlgoMaster Planner v3</div>
           <div style={{ fontSize:12, color:'var(--text-muted)' }}>Dữ liệu từ <a href="https://wiki.vnoi.info" target="_blank" style={{ color:'var(--accent)' }}>VNOI Wiki</a> · 127 thuật toán</div>
           <div style={{ fontSize:11, color:'var(--text-muted)', marginTop:4 }}>Dữ liệu được lưu tại LocalStorage của trình duyệt</div>
         </div>
       </div>
+
+      {/* ── EXPORT MODAL ── */}
+      {showExportModal && (
+        <div style={modalOverlay} onClick={e => e.target === e.currentTarget && setShowExportModal(false)}>
+          <div className="card animate-fade" style={{ width:'100%', maxWidth:500, padding:28 }}>
+            <div className="flex items-center justify-between mb-5">
+              <h2 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:18, color:'var(--text-primary)' }}>
+                📦 Xuất dữ liệu
+              </h2>
+              <button onClick={() => setShowExportModal(false)} className="btn-ghost" style={{ padding:'6px 10px' }}>
+                <Icon name="x" size={16}/>
+              </button>
+            </div>
+
+            {/* Format */}
+            <div className="mb-4">
+              <div style={{ fontSize:12, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', marginBottom:8 }}>Định dạng xuất</div>
+              <div style={{ display:'flex', gap:0, background:'var(--bg-elevated)', borderRadius:8, padding:3, border:'1px solid var(--border)' }}>
+                <button style={btnTabStyle(exportFormat === 'json')} onClick={() => setExportFormat('json')}>
+                  📄 JSON
+                </button>
+                <button style={btnTabStyle(exportFormat === 'sql')} onClick={() => setExportFormat('sql')}>
+                  <Icon name="database" size={13}/> SQL
+                </button>
+              </div>
+              <div style={{ fontSize:12, color:'var(--text-muted)', marginTop:6 }}>
+                {exportFormat === 'json' ? 'File JSON dễ đọc, tương thích nhập lại.' : 'File SQL dạng INSERT statements, dùng được với SQLite/MySQL.'}
+              </div>
+            </div>
+
+            {/* Sections */}
+            <div className="mb-5">
+              <div style={{ fontSize:12, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', marginBottom:8 }}>Chọn phần dữ liệu</div>
+              <div className="space-y-2">
+                {Object.entries(sectionLabels).map(([key, label]) => (
+                  <label key={key} style={{ display:'flex', alignItems:'center', gap:10, cursor:'pointer', padding:'8px 12px', borderRadius:8, border:'1px solid', borderColor: exportSections[key] ? 'var(--accent)' : 'var(--border)', background: exportSections[key] ? 'var(--accent-glow)' : 'var(--bg-elevated)', transition:'all 0.2s' }}>
+                    <input type="checkbox" checked={exportSections[key]} onChange={() => toggleExportSection(key)}
+                      style={{ accentColor:'var(--accent)', width:15, height:15 }}/>
+                    <span style={{ fontSize:14, fontWeight:600, color: exportSections[key] ? 'var(--accent)' : 'var(--text-secondary)' }}>{label}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex gap-2 justify-end">
+              <button onClick={() => setShowExportModal(false)} className="btn-ghost">Hủy</button>
+              <button onClick={doExport} className="btn-primary" style={{ display:'flex', alignItems:'center', gap:6 }}>
+                <Icon name="download" size={14}/> Xuất {exportFormat.toUpperCase()}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── IMPORT MODAL ── */}
+      {showImportModal && (
+        <div style={modalOverlay} onClick={e => e.target === e.currentTarget && setShowImportModal(false)}>
+          <div className="card animate-fade" style={{ width:'100%', maxWidth:500, padding:28 }}>
+            <div className="flex items-center justify-between mb-5">
+              <h2 style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:18, color:'var(--text-primary)' }}>
+                📥 Nhập dữ liệu
+              </h2>
+              <button onClick={() => setShowImportModal(false)} className="btn-ghost" style={{ padding:'6px 10px' }}>
+                <Icon name="x" size={16}/>
+              </button>
+            </div>
+
+            {/* Import format */}
+            <div className="mb-4">
+              <div style={{ fontSize:12, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', marginBottom:8 }}>Định dạng file</div>
+              <div style={{ display:'flex', gap:0, background:'var(--bg-elevated)', borderRadius:8, padding:3, border:'1px solid var(--border)' }}>
+                <button style={btnTabStyle(importFormat === 'json')} onClick={() => { setImportFormat('json'); setPendingImport(null); setImportPreview(null); }}>
+                  📄 JSON
+                </button>
+                <button style={btnTabStyle(importFormat === 'sql')} onClick={() => { setImportFormat('sql'); setPendingImport(null); setImportPreview(null); }}>
+                  <Icon name="database" size={13}/> SQL
+                </button>
+              </div>
+            </div>
+
+            {/* Import mode */}
+            <div className="mb-4">
+              <div style={{ fontSize:12, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', marginBottom:8 }}>Chế độ nhập</div>
+              <div className="space-y-2">
+                {[
+                  { key:'merge', label:'🔀 Gộp (Merge)', desc:'Thêm dữ liệu mới, giữ lại dữ liệu cũ. Không xóa gì.' },
+                  { key:'replace', label:'🔄 Thay thế (Replace)', desc:'Ghi đè hoàn toàn lên dữ liệu cũ.' },
+                ].map(m => (
+                  <label key={m.key} style={{ display:'flex', alignItems:'flex-start', gap:10, cursor:'pointer', padding:'10px 12px', borderRadius:8, border:'1px solid', borderColor: importMode === m.key ? 'var(--accent)' : 'var(--border)', background: importMode === m.key ? 'var(--accent-glow)' : 'var(--bg-elevated)', transition:'all 0.2s' }}
+                    onClick={() => setImportMode(m.key)}>
+                    <input type="radio" checked={importMode === m.key} onChange={() => setImportMode(m.key)}
+                      style={{ accentColor:'var(--accent)', marginTop:2, width:14, height:14 }}/>
+                    <div>
+                      <div style={{ fontSize:14, fontWeight:700, color: importMode === m.key ? 'var(--accent)' : 'var(--text-primary)' }}>{m.label}</div>
+                      <div style={{ fontSize:12, color:'var(--text-muted)', marginTop:2 }}>{m.desc}</div>
+                    </div>
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            {/* File picker */}
+            <div className="mb-4">
+              <div style={{ fontSize:12, fontWeight:700, color:'var(--text-muted)', textTransform:'uppercase', marginBottom:8 }}>Chọn file</div>
+              <label style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8, padding:'12px', borderRadius:8, border:'2px dashed var(--border)', cursor:'pointer', color:'var(--text-secondary)', fontSize:13, fontWeight:600, transition:'border-color 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.borderColor='var(--accent)'}
+                onMouseLeave={e => e.currentTarget.style.borderColor='var(--border)'}>
+                <Icon name="upload" size={16}/>
+                Chọn file .{importFormat}...
+                <input ref={importFileRef} type="file" accept={`.${importFormat}`} style={{ display:'none' }} onChange={parseImportFile}/>
+              </label>
+            </div>
+
+            {/* Preview */}
+            {importPreview && (
+              <div className="card-elevated p-3 mb-4 animate-fade">
+                <div style={{ fontSize:12, fontWeight:700, color:'var(--success)', marginBottom:6 }}>✅ File hợp lệ — Nội dung sẽ nhập:</div>
+                {importPreview.map((line, i) => (
+                  <div key={i} style={{ fontSize:13, color:'var(--text-secondary)', marginTop:3 }}>• {line}</div>
+                ))}
+                <div style={{ fontSize:12, color:'var(--warning)', marginTop:8, padding:'6px 8px', background:'rgba(251,191,36,0.1)', borderRadius:5, border:'1px solid rgba(251,191,36,0.3)' }}>
+                  ⚠️ Chế độ: <strong>{importMode === 'merge' ? 'Gộp — dữ liệu cũ được giữ lại' : 'Thay thế — dữ liệu cũ sẽ bị ghi đè'}</strong>
+                </div>
+              </div>
+            )}
+
+            <div className="flex gap-2 justify-end">
+              <button onClick={() => { setShowImportModal(false); setPendingImport(null); setImportPreview(null); }} className="btn-ghost">Hủy</button>
+              <button onClick={doImport} disabled={!pendingImport} className="btn-primary"
+                style={{ display:'flex', alignItems:'center', gap:6, opacity: pendingImport ? 1 : 0.4, cursor: pendingImport ? 'pointer' : 'not-allowed' }}>
+                <Icon name="upload" size={14}/> Xác nhận nhập
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -1713,6 +2278,7 @@ const App = () => {
   const [darkMode, setDarkMode] = React.useState(() => LS.get('darkMode', true));
   const [completed, setCompleted] = React.useState(() => LS.get('completed', {}));
   const [notes, setNotes] = React.useState(() => LS.get('algo_notes', {}));
+  const [customNotes, setCustomNotes] = React.useState(() => LS.get('custom_notes', []));
   const [selectedAlgo, setSelectedAlgo] = React.useState(null);
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
@@ -1732,6 +2298,7 @@ const App = () => {
     { key:'dashboard', icon:'home', label:'Dashboard' },
     { key:'algorithms', icon:'list', label:'Thuật toán' },
     { key:'schedule', icon:'calendar', label:'Thời khóa biểu' },
+    { key:'notes', icon:'file-text', label:'Ghi chú', badge: Object.keys(notes).length + customNotes.length },
     { key:'settings', icon:'settings', label:'Cài đặt' },
   ];
 
@@ -1758,9 +2325,15 @@ const App = () => {
       <nav style={{ padding:'12px 10px', flex:1 }}>
         {navItems.map(item => (
           <div key={item.key} className={`nav-item ${page === item.key ? 'active' : ''}`}
-            onClick={() => { setPage(item.key); setSidebarOpen(false); }}>
+            onClick={() => { setPage(item.key); setSidebarOpen(false); }}
+            style={{ position:'relative' }}>
             <Icon name={item.icon} size={16}/>
             <span>{item.label}</span>
+            {item.badge > 0 && (
+              <span style={{ marginLeft:'auto', fontSize:10, background:'var(--accent)', color:'#fff', borderRadius:999, padding:'1px 6px', fontFamily:'var(--font-mono)', fontWeight:700 }}>
+                {item.badge}
+              </span>
+            )}
           </div>
         ))}
       </nav>
@@ -1806,7 +2379,8 @@ const App = () => {
             {page === 'dashboard' && <Dashboard algorithms={ALGORITHMS} completed={completed} notes={notes} onOpenAlgo={setSelectedAlgo}/>}
             {page === 'algorithms' && <AlgoList algorithms={ALGORITHMS} completed={completed} notes={notes} onOpenAlgo={setSelectedAlgo}/>}
             {page === 'schedule' && <Schedule algorithms={ALGORITHMS} completed={completed} notes={notes} onOpenAlgo={setSelectedAlgo}/>}
-            {page === 'settings' && <Settings darkMode={darkMode} setDarkMode={setDarkMode} completed={completed} setCompleted={setCompleted} notes={notes} setNotes={setNotes}/>}
+            {page === 'notes' && <NotesPage notes={notes} setNotes={setNotes} algorithms={ALGORITHMS} customNotes={customNotes} setCustomNotes={setCustomNotes} onOpenAlgo={setSelectedAlgo}/>}
+            {page === 'settings' && <Settings darkMode={darkMode} setDarkMode={setDarkMode} completed={completed} setCompleted={setCompleted} notes={notes} setNotes={setNotes} customNotes={customNotes} setCustomNotes={setCustomNotes}/>}
           </div>
         </div>
 
