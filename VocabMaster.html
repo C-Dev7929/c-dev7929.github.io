@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>VocabMaster 🎯</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={darkMode:'class'}</script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<style>
+*{box-sizing:border-box}
+@keyframes shake{0%,100%{transform:translateX(0)}18%,54%,82%{transform:translateX(-7px)}36%,72%{transform:translateX(7px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes popIn{0%{opacity:0;transform:scale(.75)}75%{transform:scale(1.06)}100%{opacity:1;transform:scale(1)}}
+@keyframes ripple{0%{box-shadow:0 0 0 0 rgba(99,102,241,.45)}70%{box-shadow:0 0 0 12px rgba(99,102,241,0)}100%{box-shadow:0 0 0 0 rgba(99,102,241,0)}}
+.anim-shake{animation:shake .42s ease-in-out}
+.anim-fadeUp{animation:fadeUp .28s ease-out both}
+.anim-popIn{animation:popIn .35s cubic-bezier(.22,1,.36,1) both}
+.anim-ripple{animation:ripple .55s ease-out}
+body{font-family:system-ui,-apple-system,sans-serif}
+kbd{font-family:inherit}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:99px}
+.dark ::-webkit-scrollbar-thumb{background:#374151}
+</style>
+</head>
+<body class="bg-slate-50 dark:bg-gray-950 min-h-screen transition-colors duration-300">
+<div id="root"></div>
+<script type="text/babel">
+const {useState,useEffect,useRef,useCallback,useMemo}=React;
+
+/* ═══════════════════════════════════════════════════════ STORAGE */
+const LS={
+  get(k,d){try{const v=localStorage.getItem(k);return v!=null?JSON.parse(v):d}catch{return d}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}},
+};
+
+/* ═══════════════════════════════════════════════════════ UTILS */
+const todayStr=()=>new Date().toISOString().slice(0,10);
+const shuffle=a=>[...a].sort(()=>Math.random()-.5);
+const delay=ms=>new Promise(r=>setTimeout(r,ms));
+
+function cleanWords(raw){
+  return[...new Set(
+    raw.split('\n')
+      .map(l=>l.trim().replace(/[^a-zA-Z\s'\-]/g,'').trim().toLowerCase())
+      .filter(l=>l.length>=2&&/[a-zA-Z]/.test(l))
+  )];
+}
+
+/* ═══════════════════════════════════════════════════════ APIS */
+async function fetchDict(word){
+  const r=await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
+  if(!r.ok)throw new Error('not_found');
+  const[entry]=await r.json();
+  const ipa=entry.phonetics?.find(p=>p.text)?.text||'';
+  const audio=entry.phonetics?.find(p=>p.audio?.startsWith('http'))?.audio
+    ||entry.phonetics?.find(p=>p.audio)?.audio||'';
+  const def=entry.meanings?.[0]?.definitions?.[0]?.definition||'';
+  if(!def)throw new Error('no_def');
+  return{ipa,audio,def};
+}
+
+async function translateVI(text){
+  const r=await fetch(
+    `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text.slice(0,400))}&langpair=en|vi`
+  );
+  if(!r.ok)throw new Error('translate_fail');
+  const d=await r.json();
+  const t=d.responseData?.translatedText;
+  if(!t||t.includes('MYMEMORY')||t.includes('PLEASE')||t.length<2)throw new Error('bad_result');
+  return t;
+}
+
+/* ═══════════════════════════════════════════════════════ CONFETTI */
+function fireConfetti(){
+  if(typeof confetti==='undefined')return;
+  const base={spread:80,startVelocity:35};
+  confetti({...base,particleCount:110,origin:{x:.3,y:.65}});
+  setTimeout(()=>confetti({...base,particleCount:90,origin:{x:.7,y:.55}}),320);
+  setTimeout(()=>confetti({particleCount:70,spread:120,origin:{y:.4}}),700);
+}
+
+/* ═══════════════════════════════════════════════════════ PIE CHART */
+function PieChart({done,total}){
+  const pct=total>0?Math.round(done/total*100):0;
+  return(
+    <div className="flex items-center gap-3">
+      <div className="relative w-[52px] h-[52px] flex-shrink-0 rounded-full"
+        style={{background:`conic-gradient(#6366f1 0% ${pct}%,#e2e8f0 ${pct}% 100%)`}}>
+        <div className="absolute inset-[7px] rounded-full bg-white dark:bg-gray-800 flex items-center justify-center">
+          <span className="text-[9px] font-bold text-indigo-600 dark:text-indigo-400 leading-none">{pct}%</span>
+        </div>
+      </div>
+      <div className="space-y-0.5 text-[11px]">
+        <div className="flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"/>
+          <span className="text-gray-600 dark:text-gray-300">Đã học: <b>{done}</b></span>
+        </div>
+        <div className="flex items-center gap-1.5">
+          <span className="w-2 h-2 rounded-full bg-slate-200 dark:bg-slate-600 flex-shrink-0"/>
+          <span className="text-gray-600 dark:text-gray-300">Còn lại: <b>{total-done}</b></span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════ HEADER */
+function Header({dark,onToggleDark,streak}){
+  return(
+    <header className="sticky top-0 z-30 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-slate-200 dark:border-gray-700/60">
+      <div className="max-w-lg mx-auto flex items-center justify-between px-4 py-2.5">
+        <div className="flex items-center gap-2">
+          <span style={{fontSize:22}}>📚</span>
+          <span className="font-black text-indigo-600 dark:text-indigo-400 text-lg tracking-tight">VocabMaster</span>
+        </div>
+        <div className="flex items-center gap-2">
+          {streak.count>0&&(
+            <div className="flex items-center gap-1 bg-orange-100 dark:bg-orange-900/40 text-orange-600 dark:text-orange-300 rounded-full px-2.5 py-1 text-[11px] font-bold">
+              🔥 {streak.count} ngày
+            </div>
+          )}
+          <button onClick={onToggleDark}
+            className="w-8 h-8 rounded-full bg-slate-100 dark:bg-gray-700 flex items-center justify-center hover:scale-110 transition-transform"
+            style={{fontSize:16}}>
+            {dark?'☀️':'🌙'}
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════ SETUP SCREEN */
+function SetupScreen({onStart,dark,onToggleDark,streak}){
+  const[text,setText]=useState('');
+  const[err,setErr]=useState('');
+  const[dragOver,setDragOver]=useState(false);
+
+  const readFile=f=>{
+    const r=new FileReader();
+    r.onload=e=>setText(p=>p+(p?'\n':'')+e.target.result);
+    r.readAsText(f);
+  };
+
+  const start=()=>{
+    const ws=cleanWords(text);
+    if(ws.length<4){setErr('Cần ít nhất 4 từ hợp lệ để bắt đầu!');return;}
+    setErr('');onStart(ws);
+  };
+
+  const sample='apple\ncomputer\nteacher\nfreedom\nhappy\nbeautiful\nknowledge\njourney\nfamily\nstudent';
+
+  return(
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
+      <Header dark={dark} onToggleDark={onToggleDark} streak={streak}/>
+      <div className="max-w-lg mx-auto px-4 py-10 anim-fadeUp">
+        <div className="text-center mb-8">
+          <div style={{fontSize:60}} className="mb-3">🎯</div>
+          <h1 className="text-3xl font-black text-gray-800 dark:text-white mb-1">Chào mừng!</h1>
+          <p className="text-gray-500 dark:text-gray-400 text-sm">Tải lên danh sách từ vựng để bắt đầu luyện tập</p>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg shadow-slate-200/60 dark:shadow-none p-6 space-y-5">
+
+          <div>
+            <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">📄 Upload file (.txt / .csv)</p>
+            <label
+              onDragOver={e=>{e.preventDefault();setDragOver(true)}}
+              onDragLeave={()=>setDragOver(false)}
+              onDrop={e=>{e.preventDefault();setDragOver(false);const f=e.dataTransfer.files[0];if(f)readFile(f);}}
+              className={`flex flex-col items-center justify-center w-full h-24 border-2 border-dashed rounded-xl cursor-pointer transition-all duration-200
+                ${dragOver?'border-indigo-500 bg-indigo-50 dark:bg-indigo-950/50':'border-slate-300 dark:border-gray-600 hover:border-indigo-400 hover:bg-slate-50 dark:hover:bg-gray-700/50'}`}>
+              <div style={{fontSize:28}}>{dragOver?'📥':'📂'}</div>
+              <div className="text-xs text-gray-400 mt-1">Kéo thả hoặc click để chọn file</div>
+              <input type="file" accept=".txt,.csv" className="hidden"
+                onChange={e=>{if(e.target.files[0])readFile(e.target.files[0]);e.target.value='';}}/>
+            </label>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <div className="flex-1 h-px bg-slate-100 dark:bg-gray-700"/>
+            <span className="text-xs text-gray-400">hoặc nhập tay</span>
+            <div className="flex-1 h-px bg-slate-100 dark:bg-gray-700"/>
+          </div>
+
+          <div>
+            <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">✏️ Mỗi dòng một từ tiếng Anh</p>
+            <textarea
+              value={text} onChange={e=>setText(e.target.value)}
+              placeholder={sample} rows={8}
+              className="w-full p-3 text-sm font-mono border border-slate-200 dark:border-gray-600 rounded-xl bg-slate-50 dark:bg-gray-700/60 text-gray-800 dark:text-gray-100 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-shadow placeholder:text-gray-300 dark:placeholder:text-gray-600"/>
+          </div>
+
+          {err&&<p className="text-red-500 text-sm text-center font-medium bg-red-50 dark:bg-red-950/40 py-2 rounded-lg">{err}</p>}
+
+          <button onClick={start}
+            className="w-full py-3.5 bg-indigo-600 hover:bg-indigo-700 active:scale-[.98] text-white font-bold text-base rounded-xl transition-all shadow-lg shadow-indigo-300/40 dark:shadow-indigo-900/40">
+            Bắt đầu học 🚀
+          </button>
+
+          <p className="text-center text-[11px] text-gray-400">
+            Ký tự đặc biệt và dòng trống sẽ được lọc tự động
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════ CHOICE BUTTON */
+function Choice({idx,text,state,onClick}){
+  const base="w-full text-left px-4 py-3 rounded-xl border-2 flex items-start gap-3 text-sm font-medium transition-all duration-200 select-none";
+  const s={
+    idle:"border-slate-200 dark:border-gray-600 bg-white dark:bg-gray-800 hover:border-indigo-400 hover:bg-indigo-50/60 dark:hover:bg-indigo-900/20 text-gray-800 dark:text-gray-100 cursor-pointer active:scale-[.98]",
+    correct:"border-green-400 bg-green-50 dark:bg-green-950/40 text-green-800 dark:text-green-200 cursor-default",
+    wrong:"border-red-400 bg-red-50 dark:bg-red-950/40 text-red-800 dark:text-red-200 cursor-default",
+    reveal:"border-slate-100 dark:border-gray-700/50 bg-slate-50/40 dark:bg-gray-800/30 text-gray-400 dark:text-gray-600 cursor-default",
+  };
+  return(
+    <button onClick={state==='idle'?onClick:undefined} className={`${base} ${s[state]||s.idle}`}>
+      <span className="flex-shrink-0 w-6 h-6 rounded-lg bg-slate-100 dark:bg-gray-700 flex items-center justify-center text-[11px] font-bold text-gray-500 dark:text-gray-400">
+        {idx+1}
+      </span>
+      <span className="leading-snug pt-0.5 flex-1">{text}</span>
+      {state==='correct'&&<span className="text-green-500 flex-shrink-0 font-bold">✓</span>}
+      {state==='wrong'&&<span className="text-red-400 flex-shrink-0 font-bold">✗</span>}
+    </button>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════ QUIZ SCREEN */
+function QuizScreen({words,onReset,dark,onToggleDark}){
+  /* ── persistent state */
+  const[learned,setLearned]=useState(()=>new Set(LS.get('vm_learned',[])));
+  const[wrongMap,setWrongMap]=useState(()=>LS.get('vm_wrong',{}));
+  const[streak,setStreak]=useState(()=>LS.get('vm_streak',{count:0,last:''}));
+  const[reviewMode,setReviewMode]=useState(false);
+
+  /* ── quiz state */
+  const[card,setCard]=useState(null);
+  const[loading,setLoading]=useState(false);
+  const[selected,setSelected]=useState(-1);
+  const[answered,setAnswered]=useState(false);
+  const[shaking,setShaking]=useState(false);
+  const[completed,setCompleted]=useState(false);
+  const[skipMsg,setSkipMsg]=useState('');
+
+  /* ── audio state */
+  const[audioOn,setAudioOn]=useState(true);
+  const audioRef=useRef(null);
+  const loopTimer=useRef(null);
+  const activeUrl=useRef('');
+
+  /* ── stable refs (avoid stale closures in async/event handlers) */
+  const learnedRef=useRef(learned);        learnedRef.current=learned;
+  const wrongMapRef=useRef(wrongMap);      wrongMapRef.current=wrongMap;
+  const reviewRef=useRef(reviewMode);      reviewRef.current=reviewMode;
+  const audioOnRef=useRef(audioOn);        audioOnRef.current=audioOn;
+  const answeredRef=useRef(answered);      answeredRef.current=answered;
+  const cardRef=useRef(card);              cardRef.current=card;
+
+  /* ── translation cache (ref + localStorage, no re-render overhead) */
+  const cache=useRef(LS.get('vm_cache',{}));
+  const saveCache=useCallback(()=>LS.set('vm_cache',cache.current),[]);
+
+  /* ── streak update on mount */
+  useEffect(()=>{
+    const t=todayStr();
+    setStreak(prev=>{
+      if(prev.last===t)return prev;
+      const yest=new Date();yest.setDate(yest.getDate()-1);
+      const y=yest.toISOString().slice(0,10);
+      const n={count:prev.last===y?prev.count+1:1,last:t};
+      LS.set('vm_streak',n);return n;
+    });
+  },[]);
+
+  /* ── persist learned / wrong */
+  useEffect(()=>LS.set('vm_learned',[...learned]),[learned]);
+  useEffect(()=>LS.set('vm_wrong',wrongMap),[wrongMap]);
+
+  /* ── audio helpers */
+  const stopAudio=useCallback(()=>{
+    clearTimeout(loopTimer.current);
+    if(audioRef.current){
+      audioRef.current.onended=null;
+      audioRef.current.pause();
+      audioRef.current=null;
+    }
+    activeUrl.current='';
+  },[]);
+
+  const startAudio=useCallback((url)=>{
+    if(!url)return;
+    stopAudio();
+    activeUrl.current=url;
+    const play=()=>{
+      if(!audioOnRef.current||activeUrl.current!==url)return;
+      const a=new Audio(url);
+      audioRef.current=a;
+      a.onended=()=>{loopTimer.current=setTimeout(()=>play(),1000);};
+      a.play().catch(()=>{});
+    };
+    play();
+  },[stopAudio]);
+
+  /* toggle audio on/off */
+  useEffect(()=>{
+    if(!audioOn){stopAudio();}
+    else if(cardRef.current?.audio){startAudio(cardRef.current.audio);}
+  },[audioOn,stopAudio,startAudio]);
+
+  useEffect(()=>()=>stopAudio(),[stopAudio]);
+
+  /* ── get translation with cache */
+  const getVI=useCallback(async(word,def)=>{
+    if(cache.current[word])return cache.current[word];
+    const vi=await translateVI(def);
+    cache.current[word]=vi;
+    saveCache();
+    return vi;
+  },[saveCache]);
+
+  /* ── load next question */
+  const loadNext=useCallback(async(overrideReview)=>{
+    const rm=overrideReview!==undefined?overrideReview:reviewRef.current;
+    const pool=rm
+      ?words.filter(w=>wrongMapRef.current[w])
+      :words.filter(w=>!learnedRef.current.has(w));
+
+    if(pool.length===0){
+      if(!rm){setCompleted(true);fireConfetti();}
+      else{alert('✅ Bạn đã ôn xong tất cả từ sai!');setReviewMode(false);}
+      return;
+    }
+
+    stopAudio();
+    setCard(null);
+    setSelected(-1);
+    setAnswered(false);
+    setSkipMsg('');
+    setLoading(true);
+
+    const tried=new Set();
+    let result=null;
+    const maxTry=Math.min(7,pool.length);
+
+    while(tried.size<maxTry&&!result){
+      const word=pool[Math.floor(Math.random()*pool.length)];
+      if(tried.has(word))continue;
+      tried.add(word);
+      try{
+        const{ipa,audio,def}=await fetchDict(word);
+        const correctVI=await getVI(word,def);
+        if(!correctVI)continue;
+
+        // fetch distractors
+        const pool2=shuffle(words.filter(w=>w!==word));
+        const distractors=[];
+        for(const w of pool2){
+          if(distractors.length>=3)break;
+          try{
+            let vi=cache.current[w];
+            if(!vi){
+              const dd=await fetchDict(w);
+              vi=await translateVI(dd.def);
+              if(!vi)continue;
+              cache.current[w]=vi;
+              saveCache();
+            }
+            if(vi===correctVI)continue; // avoid duplicate
+            distractors.push({text:vi,ok:false});
+          }catch{}
+        }
+        if(distractors.length<3)continue;
+
+        const choices=shuffle([{text:correctVI,ok:true},...distractors]);
+        result={word,ipa,audio,choices};
+      }catch{}
+    }
+
+    setLoading(false);
+    if(!result){
+      setSkipMsg('Không tìm được dữ liệu. Đang thử lại…');
+      setCard({word:'',ipa:'',audio:'',choices:[],error:true});
+      setTimeout(()=>loadNext(rm),2500);
+      return;
+    }
+    setCard(result);
+    if(result.audio&&audioOnRef.current)startAudio(result.audio);
+  },[words,stopAudio,startAudio,getVI,saveCache]);
+
+  /* ── initial load */
+  useEffect(()=>{loadNext();},[]);// eslint-disable-line
+
+  /* ── check completion */
+  useEffect(()=>{
+    if(words.length>0&&learned.size>=words.length&&!completed){
+      setCompleted(true);fireConfetti();
+    }
+  },[learned,words.length,completed]);
+
+  /* ── answer handler */
+  const handleAnswer=useCallback((idx)=>{
+    if(answeredRef.current||!cardRef.current||cardRef.current.error)return;
+    const c=cardRef.current;
+    setSelected(idx);
+    setAnswered(true);
+    const ok=c.choices[idx].ok;
+    if(ok){
+      if(!reviewRef.current){
+        setLearned(prev=>new Set([...prev,c.word]));
+      }else{
+        setWrongMap(prev=>{const n={...prev};delete n[c.word];return n;});
+      }
+    }else{
+      setShaking(true);
+      setTimeout(()=>setShaking(false),450);
+      setWrongMap(prev=>({...prev,[c.word]:(prev[c.word]||0)+1}));
+    }
+  },[]);
+
+  /* ── keyboard shortcuts (stable via refs) */
+  const handleAnswerRef=useRef(handleAnswer);handleAnswerRef.current=handleAnswer;
+  const loadNextRef=useRef(null);loadNextRef.current=()=>loadNext();
+
+  useEffect(()=>{
+    const h=e=>{
+      if(['1','2','3','4'].includes(e.key)&&!e.ctrlKey&&!e.metaKey&&!e.altKey){
+        handleAnswerRef.current(+e.key-1);
+      }
+      if(e.key==='Enter'&&answeredRef.current){
+        loadNextRef.current();
+      }
+    };
+    window.addEventListener('keydown',h);
+    return()=>window.removeEventListener('keydown',h);
+  },[]);
+
+  /* ── export */
+  const exportData=()=>{
+    const d={learned:[...learned],wrongMap,cache:cache.current,streak,words,exportedAt:new Date().toISOString()};
+    const blob=new Blob([JSON.stringify(d,null,2)],{type:'application/json'});
+    const u=URL.createObjectURL(blob);
+    const a=document.createElement('a');a.href=u;a.download=`vocabmaster-${todayStr()}.json`;a.click();
+    URL.revokeObjectURL(u);
+  };
+
+  /* ── import */
+  const importData=e=>{
+    const f=e.target.files[0];if(!f)return;
+    const r=new FileReader();
+    r.onload=ev=>{
+      try{
+        const d=JSON.parse(ev.target.result);
+        if(d.learned)setLearned(new Set(d.learned));
+        if(d.wrongMap)setWrongMap(d.wrongMap);
+        if(d.cache){cache.current=d.cache;saveCache();}
+        if(d.streak){setStreak(d.streak);LS.set('vm_streak',d.streak);}
+        alert('✅ Nhập tiến trình thành công!');
+      }catch{alert('❌ File không hợp lệ hoặc bị hỏng!');}
+    };
+    r.readAsText(f);
+    e.target.value='';
+  };
+
+  /* ── derived */
+  const learnedCount=words.filter(w=>learned.has(w)).length;
+  const wrongCount=Object.keys(wrongMap).filter(w=>words.includes(w)).length;
+  const correctIdx=card?.choices?.findIndex(c=>c.ok)??-1;
+  const isCorrectAnswer=answered&&card?.choices?.[selected]?.ok;
+
+  /* ─────────────────────── COMPLETION SCREEN */
+  if(completed)return(
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
+      <Header dark={dark} onToggleDark={onToggleDark} streak={streak}/>
+      <div className="max-w-lg mx-auto px-4 py-16 text-center anim-fadeUp">
+        <div style={{fontSize:80}} className="mb-4 anim-popIn inline-block">🎉</div>
+        <h2 className="text-4xl font-black text-gray-800 dark:text-white mb-2">Xuất sắc!</h2>
+        <p className="text-gray-500 dark:text-gray-400 mb-8">
+          Bạn đã học thuộc tất cả <span className="font-bold text-indigo-600 dark:text-indigo-400">{words.length}</span> từ!
+        </p>
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg mb-6 flex justify-center">
+          <PieChart done={learnedCount} total={words.length}/>
+        </div>
+        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/40 dark:to-purple-950/40 rounded-2xl p-4 mb-6 border border-indigo-100 dark:border-indigo-900/40">
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            🔥 Streak hiện tại: <span className="font-bold text-orange-500">{streak.count} ngày</span> &nbsp;|&nbsp;
+            ⚠️ Từ cần ôn: <span className="font-bold text-red-500">{wrongCount}</span>
+          </p>
+        </div>
+        <div className="flex gap-3 justify-center flex-wrap">
+          <button onClick={onReset}
+            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold transition-colors shadow-md shadow-indigo-200 dark:shadow-none">
+            📚 Học danh sách mới
+          </button>
+          {wrongCount>0&&(
+            <button onClick={()=>{setCompleted(false);setReviewMode(true);loadNext(true);}}
+              className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-xl font-bold transition-colors shadow-md">
+              🔄 Ôn {wrongCount} từ sai
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+
+  /* ─────────────────────── QUIZ SCREEN */
+  return(
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
+      <Header dark={dark} onToggleDark={onToggleDark} streak={streak}/>
+      <div className="max-w-lg mx-auto px-4 py-4 space-y-3 pb-10">
+
+        {/* Stats bar */}
+        <div className="bg-white dark:bg-gray-800 rounded-2xl px-4 py-3 shadow-sm flex items-center justify-between">
+          <PieChart done={learnedCount} total={words.length}/>
+          <div className="text-right space-y-0.5">
+            {wrongCount>0&&(
+              <div className="text-[11px] font-semibold text-orange-500">⚠️ {wrongCount} từ cần ôn</div>
+            )}
+            <div className="text-[11px] text-gray-400">Tổng: {words.length} từ</div>
+          </div>
+        </div>
+
+        {/* Toolbar */}
+        <div className="flex gap-2 flex-wrap">
+          <button onClick={()=>{const rm=!reviewMode;setReviewMode(rm);reviewRef.current=rm;loadNext(rm);}}
+            className={`px-3 py-1.5 rounded-lg text-[11px] font-bold transition-all border
+              ${reviewMode
+                ?'bg-orange-500 border-orange-500 text-white shadow-sm'
+                :'bg-white dark:bg-gray-800 border-slate-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:border-orange-300'}`}>
+            {reviewMode?'🔄 Đang ôn tập':'🔄 Ôn tập từ sai'}
+          </button>
+
+          <button onClick={exportData}
+            className="px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-slate-50 dark:hover:bg-gray-700 transition-colors">
+            ⬇️ Xuất tiến trình
+          </button>
+
+          <label className="px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-slate-50 dark:hover:bg-gray-700 transition-colors cursor-pointer">
+            ⬆️ Nhập tiến trình
+            <input type="file" accept=".json" className="hidden" onChange={importData}/>
+          </label>
+
+          <button onClick={onReset}
+            className="px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-gray-600 dark:text-gray-300 hover:bg-slate-50 dark:hover:bg-gray-700 transition-colors">
+            🏠 Trang chủ
+          </button>
+        </div>
+
+        {/* Loading */}
+        {loading&&(
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-14 shadow-sm text-center">
+            <div className="inline-block animate-spin mb-3" style={{fontSize:36}}>⚙️</div>
+            <p className="text-gray-400 text-sm">Đang tải từ vựng & dịch nghĩa…</p>
+            <p className="text-gray-300 dark:text-gray-600 text-xs mt-1">Lần đầu có thể mất vài giây</p>
+          </div>
+        )}
+
+        {/* Card */}
+        {!loading&&card&&(
+          <div className={`space-y-3 ${shaking?'anim-shake':''}`}>
+            {card.error?(
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-10 text-center shadow-sm">
+                <div style={{fontSize:36}} className="mb-2">⚠️</div>
+                <p className="text-orange-500 font-medium text-sm">{skipMsg||'Đang tìm từ tiếp theo…'}</p>
+              </div>
+            ):(
+              <>
+                {/* Word card */}
+                <div className="bg-white dark:bg-gray-800 rounded-2xl px-6 py-5 shadow-sm text-center anim-popIn">
+                  <div className="flex items-center justify-center gap-3 mb-1">
+                    <h2 className="text-4xl font-black text-indigo-600 dark:text-indigo-400 tracking-wide break-all">
+                      {card.word}
+                    </h2>
+                    <button onClick={()=>setAudioOn(a=>!a)}
+                      className="w-9 h-9 flex-shrink-0 rounded-full bg-slate-100 dark:bg-gray-700 flex items-center justify-center hover:scale-110 transition-transform"
+                      style={{fontSize:16}} title={audioOn?'Tắt âm thanh':'Bật âm thanh'}>
+                      {audioOn?'🔊':'🔇'}
+                    </button>
+                  </div>
+                  {card.ipa&&(
+                    <p className="font-mono text-gray-400 dark:text-gray-500 text-base mb-2">{card.ipa}</p>
+                  )}
+                  {reviewMode&&wrongMap[card.word]>0&&(
+                    <span className="inline-block bg-orange-100 dark:bg-orange-950/50 text-orange-600 dark:text-orange-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full mb-2">
+                      ❌ Đã sai {wrongMap[card.word]} lần
+                    </span>
+                  )}
+                  <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
+                    🇻🇳 Chọn nghĩa tiếng Việt đúng của từ trên:
+                  </p>
+                </div>
+
+                {/* Choices */}
+                <div className="space-y-2.5 anim-fadeUp">
+                  {card.choices.map((ch,i)=>{
+                    let state='idle';
+                    if(answered){
+                      if(ch.ok)state='correct';
+                      else if(i===selected)state='wrong';
+                      else state='reveal';
+                    }
+                    return<Choice key={i} idx={i} text={ch.text} state={state} onClick={()=>handleAnswer(i)}/>;
+                  })}
+                </div>
+
+                {/* Result banner + next btn */}
+                {answered&&(
+                  <div className="space-y-2.5 anim-fadeUp">
+                    <div className={`text-center text-sm font-bold py-3 px-4 rounded-xl ${isCorrectAnswer
+                      ?'bg-green-50 dark:bg-green-950/30 text-green-700 dark:text-green-300 border border-green-200 dark:border-green-900/50'
+                      :'bg-red-50 dark:bg-red-950/30 text-red-600 dark:text-red-300 border border-red-200 dark:border-red-900/50'}`}>
+                      {isCorrectAnswer
+                        ?'🎉 Chính xác! Tuyệt vời!'
+                        :<>😅 Sai rồi! Đáp án đúng: <span className="underline underline-offset-2">"{card.choices[correctIdx]?.text}"</span></>}
+                    </div>
+                    <button onClick={()=>loadNext()}
+                      className="w-full py-3.5 bg-indigo-600 hover:bg-indigo-700 active:scale-[.98] text-white font-bold rounded-xl transition-all shadow-md shadow-indigo-200/60 dark:shadow-none flex items-center justify-center gap-2">
+                      Câu tiếp theo
+                      <span className="opacity-50 text-xs font-normal">↵ Enter</span>
+                    </button>
+                  </div>
+                )}
+
+                {/* Key hint */}
+                {!answered&&(
+                  <p className="text-center text-[11px] text-gray-400">
+                    Phím&nbsp;
+                    {[1,2,3,4].map(n=>(
+                      <kbd key={n} className="bg-white dark:bg-gray-700 border border-slate-200 dark:border-gray-600 px-1.5 py-0.5 rounded text-[11px] mx-0.5">{n}</kbd>
+                    ))}
+                    &nbsp;để chọn &nbsp;·&nbsp; <kbd className="bg-white dark:bg-gray-700 border border-slate-200 dark:border-gray-600 px-1.5 py-0.5 rounded text-[11px]">Enter</kbd> câu tiếp theo
+                  </p>
+                )}
+              </>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════ APP ROOT */
+function App(){
+  const[words,setWords]=useState(null);
+  const[dark,setDark]=useState(()=>LS.get('vm_dark',
+    window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches));
+  const[streak]=useState(()=>LS.get('vm_streak',{count:0,last:''}));
+
+  useEffect(()=>{
+    document.documentElement.classList.toggle('dark',dark);
+    LS.set('vm_dark',dark);
+  },[dark]);
+
+  const toggleDark=()=>setDark(d=>!d);
+
+  if(!words)return(
+    <SetupScreen onStart={setWords} dark={dark} onToggleDark={toggleDark} streak={streak}/>
+  );
+  return(
+    <QuizScreen words={words} onReset={()=>setWords(null)} dark={dark} onToggleDark={toggleDark}/>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
