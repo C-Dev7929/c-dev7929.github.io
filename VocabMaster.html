@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>VocabMaster 🎯</title>
+<title>VocabMaster</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>tailwind.config={darkMode:'class'}</script>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
@@ -325,14 +325,79 @@ function QuizScreen({words,onReset,dark,onToggleDark}){
     return vi;
   },[saveCache]);
 
-  /* ── load next question */
-  const loadNext=useCallback(async(overrideReview)=>{
-    const rm=overrideReview!==undefined?overrideReview:reviewRef.current;
-    const pool=rm
-      ?words.filter(w=>wrongMapRef.current[w])
-      :words.filter(w=>!learnedRef.current.has(w));
+  /* ═════════ PREFETCH LOGIC (TẢI TRƯỚC) ═════════ */
+  const prefetchedCard = useRef(null);
+  const isPrefetching = useRef(false);
 
-    if(pool.length===0){
+  // 1. Tách logic tạo câu hỏi ra một hàm riêng chỉ trả về data (không làm thay đổi UI)
+  const buildCard = useCallback(async (overrideReview) => {
+    const rm = overrideReview !== undefined ? overrideReview : reviewRef.current;
+    const pool = rm
+      ? words.filter(w => wrongMapRef.current[w])
+      : words.filter(w => !learnedRef.current.has(w));
+
+    if(pool.length === 0) return null;
+
+    const tried = new Set();
+    let result = null;
+    const maxTry = Math.min(7, pool.length);
+
+    while(tried.size < maxTry && !result) {
+      const word = pool[Math.floor(Math.random() * pool.length)];
+      // Bỏ qua từ đang hiển thị hiện tại để không bị lặp lại liền nhau
+      if(tried.has(word) || word === cardRef.current?.word) continue;
+      
+      tried.add(word);
+      try {
+        const {ipa, audio, def} = await fetchDict(word);
+        const correctVI = await getVI(word, def);
+        if(!correctVI) continue;
+
+        const pool2 = shuffle(words.filter(w => w !== word));
+        const distractors = [];
+        for(const w of pool2){
+          if(distractors.length >= 3) break;
+          try {
+            let vi = cache.current[w];
+            if(!vi){
+              const dd = await fetchDict(w);
+              vi = await translateVI(dd.def);
+              if(!vi) continue;
+              cache.current[w] = vi;
+              saveCache();
+            }
+            if(vi === correctVI) continue; 
+            distractors.push({text: vi, ok: false});
+          } catch{}
+        }
+        if(distractors.length < 3) continue;
+
+        const choices = shuffle([{text: correctVI, ok: true}, ...distractors]);
+        result = {word, ipa, audio, choices};
+      } catch{}
+    }
+    return result || {error: true};
+  }, [words, getVI, saveCache]);
+
+  // 2. Hàm kích hoạt chạy ngầm để chuẩn bị sẵn thẻ tiếp theo
+  const triggerPrefetch = useCallback(async (rm) => {
+    if(isPrefetching.current) return;
+    isPrefetching.current = true;
+    const nextCard = await buildCard(rm);
+    if (nextCard && !nextCard.error) {
+       prefetchedCard.current = nextCard;
+    }
+    isPrefetching.current = false;
+  }, [buildCard]);
+
+  /* ── load next question (Hàm xử lý khi bấm Next) ── */
+  const loadNext = useCallback(async (overrideReview) => {
+    const rm = overrideReview !== undefined ? overrideReview : reviewRef.current;
+    const pool = rm
+      ? words.filter(w => wrongMapRef.current[w])
+      : words.filter(w => !learnedRef.current.has(w));
+
+    if(pool.length === 0){
       if(!rm){setCompleted(true);fireConfetti();}
       else{alert('✅ Bạn đã ôn xong tất cả từ sai!');setReviewMode(false);}
       return;
@@ -343,56 +408,39 @@ function QuizScreen({words,onReset,dark,onToggleDark}){
     setSelected(-1);
     setAnswered(false);
     setSkipMsg('');
-    setLoading(true);
 
-    const tried=new Set();
-    let result=null;
-    const maxTry=Math.min(7,pool.length);
-
-    while(tried.size<maxTry&&!result){
-      const word=pool[Math.floor(Math.random()*pool.length)];
-      if(tried.has(word))continue;
-      tried.add(word);
-      try{
-        const{ipa,audio,def}=await fetchDict(word);
-        const correctVI=await getVI(word,def);
-        if(!correctVI)continue;
-
-        // fetch distractors
-        const pool2=shuffle(words.filter(w=>w!==word));
-        const distractors=[];
-        for(const w of pool2){
-          if(distractors.length>=3)break;
-          try{
-            let vi=cache.current[w];
-            if(!vi){
-              const dd=await fetchDict(w);
-              vi=await translateVI(dd.def);
-              if(!vi)continue;
-              cache.current[w]=vi;
-              saveCache();
-            }
-            if(vi===correctVI)continue; // avoid duplicate
-            distractors.push({text:vi,ok:false});
-          }catch{}
-        }
-        if(distractors.length<3)continue;
-
-        const choices=shuffle([{text:correctVI,ok:true},...distractors]);
-        result={word,ipa,audio,choices};
-      }catch{}
+    // NẾU ĐÃ CÓ DATA TẢI TRƯỚC HỢP LỆ -> HIỂN THỊ NGAY LẬP TỨC
+    if (prefetchedCard.current && !prefetchedCard.current.error && pool.includes(prefetchedCard.current.word)) {
+       const readyCard = prefetchedCard.current;
+       prefetchedCard.current = null; // Xóa cache của ref sau khi đã lấy ra dùng
+       
+       setCard(readyCard);
+       setLoading(false);
+       if(readyCard.audio && audioOnRef.current) startAudio(readyCard.audio);
+       
+       // Kích hoạt prefetch cho câu sau nữa
+       triggerPrefetch(rm);
+       return;
     }
 
+    // NẾU CHƯA CÓ (Ví dụ: Câu đầu tiên, hoặc user bấm quá nhanh, hoặc đổi chế độ ôn tập)
+    setLoading(true);
+    const newCard = await buildCard(rm);
     setLoading(false);
-    if(!result){
+
+    if(!newCard || newCard.error){
       setSkipMsg('Không tìm được dữ liệu. Đang thử lại…');
       setCard({word:'',ipa:'',audio:'',choices:[],error:true});
-      setTimeout(()=>loadNext(rm),2500);
+      setTimeout(() => loadNext(rm), 2500);
       return;
     }
-    setCard(result);
-    if(result.audio&&audioOnRef.current)startAudio(result.audio);
-  },[words,stopAudio,startAudio,getVI,saveCache]);
+
+    setCard(newCard);
+    if(newCard.audio && audioOnRef.current) startAudio(newCard.audio);
+
+    // Kích hoạt prefetch cho câu sau
+    triggerPrefetch(rm);
+  }, [words, stopAudio, startAudio, buildCard, triggerPrefetch]);
 
   /* ── initial load */
   useEffect(()=>{loadNext();},[]);// eslint-disable-line
