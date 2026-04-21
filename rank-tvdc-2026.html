@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 BXH Liên Trường - Trực Tiếp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #070b14; }
+        .glass { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.05); }
+        .status-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+        .rank-1 { background: linear-gradient(90deg, rgba(251, 191, 36, 0.1) 0%, transparent 100%); border-left: 4px solid #fbbf24; }
+        .rank-2 { background: linear-gradient(90deg, rgba(148, 163, 184, 0.1) 0%, transparent 100%); border-left: 4px solid #94a3b8; }
+        .rank-3 { background: linear-gradient(90deg, rgba(217, 119, 6, 0.1) 0%, transparent 100%); border-left: 4px solid #d97706; }
+    </style>
+</head>
+<body class="text-slate-300 min-h-screen p-4 sm:p-10">
+
+    <div class="max-w-5xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+            <div>
+                <h1 class="text-4xl font-extrabold text-white tracking-tight mb-2">
+                    🏆 BXH TRỰC TIẾP <span class="text-sky-500">2026</span>
+                </h1>
+                <div class="flex items-center gap-3 text-sm">
+                    <span id="indicator" class="h-2.5 w-2.5 rounded-full bg-emerald-500 status-pulse"></span>
+                    <span id="status" class="font-medium text-slate-400">Đang chuẩn bị kết nối trực tiếp...</span>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 bg-slate-900/50 p-2 rounded-2xl border border-slate-800">
+                <select id="limit" class="bg-transparent text-sm font-bold text-sky-400 outline-none px-3 cursor-pointer">
+                    <option value="10">TOP 10</option>
+                    <option value="20">TOP 20</option>
+                    <option value="50" selected>TOP 50</option>
+                    <option value="100">TOP 100</option>
+                </select>
+                <div class="w-[1px] h-6 bg-slate-800"></div>
+                <div class="px-3 py-1 text-xs font-black bg-sky-500/10 text-sky-500 rounded-lg" id="count">0 HỌC SINH</div>
+            </div>
+        </div>
+
+        <div class="glass rounded-3xl overflow-hidden shadow-2xl">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-separate border-spacing-0">
+                    <thead>
+                        <tr class="bg-slate-900/80">
+                            <th class="px-6 py-5 text-xs font-bold text-slate-500 uppercase tracking-widest text-center">Hạng</th>
+                            <th class="px-6 py-5 text-xs font-bold text-slate-500 uppercase tracking-widest">Thí sinh</th>
+                            <th class="px-6 py-5 text-xs font-bold text-slate-500 uppercase tracking-widest">Trường</th>
+                            <th class="px-6 py-5 text-xs font-bold text-slate-500 uppercase tracking-widest text-right">Điểm số</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body" class="divide-y divide-slate-800/50">
+                        </tbody>
+                </table>
+            </div>
+            <div id="loading-state" class="py-20 text-center">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-sky-500/20 border-t-sky-500 mb-4"></div>
+                <p class="text-slate-500 text-sm">Vui lòng bật tiện ích "Allow CORS" để lấy dữ liệu...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const SCHOOL_URLS = [
+            "https://thpt-bacbinh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
+            "https://thpt-daksong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
+            "https://thpt-dahuoai.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
+            "https://thpt-truongchinhhoaninh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
+            "https://thpt-dtntntranglong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
+            "https://thcs-thpt-tayson.dongnai.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
+            "https://thpt-hungvuongdran.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
+            "https://thpt-phanboichaunamdong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
+            "https://thpt-nguyenchithanh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html"
+        ];
+
+        let masterData = [];
+
+        async function fetchSequentially() {
+            const status = document.getElementById('status');
+            const indicator = document.getElementById('indicator');
+            
+            indicator.className = "h-2.5 w-2.5 rounded-full bg-yellow-500 animate-bounce";
+            
+            for (let i = 0; i < SCHOOL_URLS.length; i++) {
+                const url = SCHOOL_URLS[i];
+                const domain = new URL(url).hostname.split('.')[0].toUpperCase();
+                
+                status.innerText = `Đang kết nối trực tiếp: ${domain}...`;
+
+                try {
+                    // REQUEST TRỰC TIẾP - KHÔNG PROXY
+                    const response = await fetch(url, { method: 'GET' });
+                    if (!response.ok) throw new Error('CORS Blocked');
+                    
+                    const html = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, "text/html");
+                    
+                    const winners = doc.querySelectorAll('.leaderboard .winner');
+                    const schoolStudents = [];
+
+                    winners.forEach(w => {
+                        if (w.classList.contains('my-rank')) return;
+                        const name = w.querySelector('.name')?.innerText.trim();
+                        const scoreStr = w.querySelector('.score')?.innerText.replace(/\D/g, '');
+                        if (name && scoreStr) {
+                            schoolStudents.push({
+                                name: name,
+                                score: parseInt(scoreStr),
+                                school: domain.replace('THPT-', '')
+                            });
+                        }
+                    });
+
+                    // Cập nhật mảng tổng: Xóa dữ liệu cũ của trường này và thêm mới
+                    masterData = masterData.filter(s => s.school !== domain.replace('THPT-', ''));
+                    masterData.push(...schoolStudents);
+                    masterData.sort((a, b) => b.score - a.score);
+                    
+                    renderTable();
+                } catch (err) {
+                    status.innerText = `Lỗi: Không thể truy cập trực tiếp. Hãy bật Extension Allow CORS!`;
+                    indicator.className = "h-2.5 w-2.5 rounded-full bg-red-500";
+                    console.error(err);
+                    return; // Dừng lại nếu bị chặn CORS
+                }
+                
+                // Nghỉ 1 giây để tránh bị server coi là DDOS
+                await new Promise(r => setTimeout(r, 1000));
+            }
+
+            indicator.className = "h-2.5 w-2.5 rounded-full bg-emerald-500 status-pulse";
+            status.innerText = `Đồng bộ hoàn tất lúc ${new Date().toLocaleTimeString()}`;
+            
+            // Lặp lại sau 10 giây
+            setTimeout(fetchSequentially, 10000);
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('leaderboard-body');
+            const limit = parseInt(document.getElementById('limit').value);
+            const loading = document.getElementById('loading-state');
+            
+            const display = masterData.slice(0, limit);
+            document.getElementById('count').innerText = `${masterData.length} HỌC SINH`;
+            
+            if (display.length > 0) loading.style.display = 'none';
+
+            tbody.innerHTML = display.map((s, i) => {
+                const rank = i + 1;
+                let rankText = rank;
+                let specialClass = "";
+
+                if (rank === 1) { rankText = "🥇"; specialClass = "rank-1"; }
+                else if (rank === 2) { rankText = "🥈"; specialClass = "rank-2"; }
+                else if (rank === 3) { rankText = "🥉"; specialClass = "rank-3"; }
+
+                return `
+                    <tr class="transition-all hover:bg-slate-800/40 ${specialClass}">
+                        <td class="px-6 py-4 text-center font-black text-slate-400">${rankText}</td>
+                        <td class="px-6 py-4 font-bold text-white">${s.name}</td>
+                        <td class="px-6 py-4">
+                            <span class="text-[10px] font-black px-2 py-1 rounded bg-slate-800 text-slate-400 border border-slate-700 uppercase">
+                                ${s.school}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 text-right font-black text-sky-400 text-lg tabular-nums">
+                            ${s.score.toLocaleString()}
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        document.getElementById('limit').addEventListener('change', renderTable);
+
+        // Khởi chạy
+        fetchSequentially();
+    </script>
+</body>
+</html>
