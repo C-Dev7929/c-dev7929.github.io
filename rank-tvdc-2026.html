@@ -6,67 +6,92 @@
     <title>🏆 BXH Liên Trường - Clean Data</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&display=swap');
         body { font-family: 'Be Vietnam Pro', sans-serif; background: #020617; }
         .glass-effect { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
-        .update-flash { animation: flash 0.8s ease-out; }
-        @keyframes flash { 0% { background: rgba(56, 189, 248, 0.2); } 100% { background: transparent; } }
+        
+        /* Hiệu ứng xuất hiện mượt mà cho các hàng của bảng */
+        .fade-in-row {
+            animation: fadeIn 0.4s ease-out forwards;
+            opacity: 0;
+            transform: translateY(5px);
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Tùy chỉnh thanh cuộn */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
     </style>
 </head>
-<body class="text-slate-200 min-h-screen p-4 md:p-12">
+<body class="text-slate-200 min-h-screen p-4 md:p-8 lg:p-12">
 
-    <div class="max-w-5xl mx-auto">
-        <header class="mb-10">
-            <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
                 <div>
-                    <h1 class="text-4xl font-black text-white tracking-tighter uppercase italic">
+                    <h1 class="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase italic drop-shadow-lg">
                         Leaderboard <span class="text-sky-500 not-italic">2026</span>
                     </h1>
-                    <div class="flex items-center gap-3 mt-3">
+                    <div class="flex items-center gap-3 mt-4 bg-slate-900/50 inline-flex px-3 py-1.5 rounded-full border border-slate-800">
                         <div id="status-icon" class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-                        <span id="status-text" class="text-sm font-medium text-slate-400 text-sm uppercase tracking-widest">Đang khởi tạo hệ thống...</span>
+                        <span id="status-text" class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Đang khởi tạo hệ thống...</span>
                     </div>
                 </div>
 
-                <div class="flex gap-4 p-2 bg-slate-900 rounded-2xl border border-slate-800 shadow-inner">
-                    <select id="limitSelect" class="bg-transparent text-sm font-bold text-sky-400 outline-none px-4 cursor-pointer">
-                        <option value="10">TOP 10</option>
-                        <option value="50" selected>TOP 50</option>
-                        <option value="100">TOP 100</option>
-                        <option value="1000">TẤT CẢ</option>
-                    </select>
-                    <div class="w-[1px] h-6 bg-slate-700"></div>
-                    <div class="px-4 py-1 text-xs font-black text-white" id="total-students">0 THÍ SINH</div>
+                <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+                    <div class="relative flex-grow md:flex-grow-0">
+                        <input type="text" id="searchInput" placeholder="Tìm tên thí sinh..." 
+                            class="w-full md:w-64 bg-slate-900/80 border border-slate-700 text-sm rounded-xl px-4 py-2.5 outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all placeholder-slate-500 text-white">
+                        <svg class="w-4 h-4 absolute right-3 top-3 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+
+                    <select id="schoolFilter" class="bg-slate-900/80 border border-slate-700 text-sm font-semibold text-slate-300 rounded-xl outline-none px-4 py-2.5 cursor-pointer hover:border-slate-600 transition-all">
+                        <option value="ALL">Tất cả các trường</option>
+                        </select>
+
+                    <div class="flex items-center gap-3 bg-slate-900/80 border border-slate-700 rounded-xl px-2 py-2">
+                        <select id="limitSelect" class="bg-transparent text-sm font-bold text-sky-400 outline-none px-2 cursor-pointer">
+                            <option value="10">TOP 10</option>
+                            <option value="50" selected>TOP 50</option>
+                            <option value="100">TOP 100</option>
+                            <option value="1000">TẤT CẢ</option>
+                        </select>
+                        <div class="w-[1px] h-5 bg-slate-700"></div>
+                        <div class="px-2 text-xs font-black text-slate-300 tabular-nums" id="total-students">0 / 0</div>
+                    </div>
                 </div>
             </div>
         </header>
 
-        <div class="glass-effect rounded-3xl overflow-hidden shadow-2xl border border-slate-800">
+        <div class="glass-effect rounded-3xl overflow-hidden shadow-2xl shadow-sky-900/10 border border-slate-700/50">
             <div class="overflow-x-auto">
-                <table class="w-full text-left">
+                <table class="w-full text-left border-collapse">
                     <thead>
-                        <tr class="bg-slate-900/50 text-slate-500 text-[11px] font-black uppercase tracking-[0.2em] border-b border-slate-800">
-                            <th class="px-8 py-5 text-center">Hạng</th>
-                            <th class="px-8 py-5">Thí sinh</th>
-                            <th class="px-8 py-5">Đơn vị trường</th>
-                            <th class="px-8 py-5 text-right">Điểm tổng</th>
+                        <tr class="bg-slate-900/80 text-slate-400 text-[11px] font-black uppercase tracking-[0.2em] border-b border-slate-700/50">
+                            <th class="px-6 py-4 text-center w-24">Hạng</th>
+                            <th class="px-6 py-4">Thí sinh</th>
+                            <th class="px-6 py-4 hidden sm:table-cell">Đơn vị trường</th>
+                            <th class="px-6 py-4 text-right w-32">Điểm tổng</th>
                         </tr>
                     </thead>
-                    <tbody id="table-body" class="divide-y divide-slate-800/50">
-                    </tbody>
+                    <tbody id="table-body" class="divide-y divide-slate-800/50 bg-slate-900/30">
+                        </tbody>
                 </table>
             </div>
             
-            <div id="empty-msg" class="py-32 text-center">
-                <div class="inline-block animate-pulse mb-4 text-4xl">📡</div>
-                <p class="text-slate-500 font-medium">Đang thiết lập kết nối lấy dữ liệu BXH...</p>
-                <p class="text-slate-600 text-xs mt-2 uppercase tracking-widest">(Yêu cầu bật Extension Allow-CORS)</p>
+            <div id="empty-msg" class="py-24 text-center">
+                <div id="empty-icon" class="inline-block animate-pulse mb-4 text-4xl">📡</div>
+                <p id="empty-text" class="text-slate-400 font-medium text-sm">Đang thiết lập kết nối lấy dữ liệu BXH...</p>
+                <p id="empty-subtext" class="text-slate-500 text-[10px] mt-2 uppercase tracking-widest">(Yêu cầu bật Extension Allow-CORS)</p>
             </div>
         </div>
     </div>
 
     <script>
-        // Đã cập nhật ID URL thành 14329 theo mẫu curl
         const SCHOOL_SOURCES = [
             "https://thpt-bacbinh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
             "https://thpt-daksong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
@@ -80,25 +105,44 @@
         ];
 
         let uniqueStudentsMap = new Map();
-
-        // Tham số query dựa trên curl
+        let isFirstLoad = true;
         const queryParams = "?camp_type=1&statistical_point_type=all";
+
+        // Lắng nghe sự kiện UI
+        document.getElementById('limitSelect').addEventListener('change', renderTable);
+        document.getElementById('searchInput').addEventListener('input', renderTable);
+        document.getElementById('schoolFilter').addEventListener('change', renderTable);
+
+        // Cập nhật danh sách trường vào thẻ Select
+        function updateSchoolFilterOptions() {
+            const select = document.getElementById('schoolFilter');
+            const currentVal = select.value;
+            
+            // Lấy danh sách trường độc nhất từ Map hiện tại
+            const schools = new Set(Array.from(uniqueStudentsMap.values()).map(s => s.school));
+            
+            let html = `<option value="ALL">Tất cả các trường</option>`;
+            Array.from(schools).sort().forEach(school => {
+                html += `<option value="${school}">${school}</option>`;
+            });
+            
+            select.innerHTML = html;
+            select.value = schools.has(currentVal) ? currentVal : "ALL";
+        }
 
         async function startSync() {
             const statusText = document.getElementById('status-text');
             const statusIcon = document.getElementById('status-icon');
-            
             statusIcon.className = "w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse";
 
             for (let i = 0; i < SCHOOL_SOURCES.length; i++) {
                 const baseUrl = SCHOOL_SOURCES[i];
                 const schoolName = new URL(baseUrl).hostname.split('.')[0].toUpperCase().replace('THPT-', '').replace('THCS-', '');
-                const fetchUrl = baseUrl + queryParams + '&_t=' + Date.now(); // Thêm timestamp để tránh cache
+                const fetchUrl = baseUrl + queryParams + '&_t=' + Date.now();
                 
                 statusText.innerText = `Đang quét: ${schoolName} (${i+1}/${SCHOOL_SOURCES.length})`;
 
                 try {
-                    // Áp dụng Headers tương tự như cấu trúc Curl
                     const response = await fetch(fetchUrl, {
                         method: 'GET',
                         headers: {
@@ -110,17 +154,12 @@
                     if (!response.ok) throw new Error("HTTP " + response.status);
 
                     const htmlText = await response.text();
-                    
                     const parser = new DOMParser();
                     const doc = parser.parseFromString(htmlText, "text/html");
-                    
-                    // Tìm tất cả các div có class winner trong response
                     const winners = doc.querySelectorAll('.winner');
 
                     winners.forEach(w => {
-                        // Bỏ qua thành phần my-rank
                         if (w.classList.contains('my-rank')) return;
-                        
                         const nameEl = w.querySelector('.name');
                         const scoreEl = w.querySelector('.score');
                         
@@ -130,29 +169,29 @@
 
                         if (name && score) {
                             const uniqueKey = `${name}_${schoolName}`;
-                            
                             if (!uniqueStudentsMap.has(uniqueKey) || uniqueStudentsMap.get(uniqueKey).score < score) {
                                 uniqueStudentsMap.set(uniqueKey, { name, score, school: schoolName });
                             }
                         }
                     });
 
+                    updateSchoolFilterOptions();
                     renderTable();
+                    isFirstLoad = false;
                 } catch (e) {
-                    console.error(`Lỗi truy cập tại ${schoolName}:`, e);
-                    statusText.innerText = "Lỗi CORS! Hãy bật Extension Allow-CORS.";
-                    statusIcon.className = "w-2.5 h-2.5 rounded-full bg-red-600";
-                    return; 
+                    console.error(`Lỗi tại ${schoolName}:`, e);
+                    if (isFirstLoad) {
+                        statusText.innerText = "Lỗi CORS! Hãy bật Extension Allow-CORS.";
+                        statusIcon.className = "w-2.5 h-2.5 rounded-full bg-red-600";
+                        return;
+                    }
                 }
-                
-                // Nghỉ 800ms giữa các trường để tránh bị chặn do ddos
-                await new Promise(r => setTimeout(r, 800));
+                await new Promise(r => setTimeout(r, 600)); // Nghỉ 600ms
             }
 
-            statusIcon.className = "w-2.5 h-2.5 rounded-full bg-emerald-500";
-            statusText.innerText = `Cập nhật lúc: ${new Date().toLocaleTimeString()}`;
+            statusIcon.className = "w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]";
+            statusText.innerText = `Online - Đã đồng bộ`;
             
-            // Tự động quét lại sau 30 giây
             setTimeout(startSync, 30000);
         }
 
@@ -160,41 +199,81 @@
             const tbody = document.getElementById('table-body');
             const emptyMsg = document.getElementById('empty-msg');
             const limit = parseInt(document.getElementById('limitSelect').value);
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            const selectedSchool = document.getElementById('schoolFilter').value;
             
-            const sortedData = Array.from(uniqueStudentsMap.values())
-                                    .sort((a, b) => b.score - a.score);
+            // 1. Chuyển Map thành mảng
+            let data = Array.from(uniqueStudentsMap.values());
+            const totalSystem = data.length;
 
-            document.getElementById('total-students').innerText = `${sortedData.length} THÍ SINH`;
+            // 2. Lọc theo Trường
+            if (selectedSchool !== "ALL") {
+                data = data.filter(s => s.school === selectedSchool);
+            }
+
+            // 3. Lọc theo Từ khóa tìm kiếm
+            if (searchTerm) {
+                // Hỗ trợ tìm tiếng Việt không dấu cơ bản (tùy chọn)
+                data = data.filter(s => s.name.toLowerCase().includes(searchTerm));
+            }
+
+            // 4. Sắp xếp giảm dần theo điểm
+            data.sort((a, b) => b.score - a.score);
+
+            // Cập nhật text thống kê góc phải trên
+            document.getElementById('total-students').innerText = `${data.length} / ${totalSystem}`;
             
-            if (sortedData.length > 0) emptyMsg.style.display = 'none';
+            // Render logic
+            if (data.length === 0) {
+                tbody.innerHTML = '';
+                emptyMsg.style.display = 'block';
+                if (!isFirstLoad) {
+                    document.getElementById('empty-icon').innerText = '🔍';
+                    document.getElementById('empty-icon').classList.remove('animate-pulse');
+                    document.getElementById('empty-text').innerText = 'Không tìm thấy thí sinh nào phù hợp.';
+                    document.getElementById('empty-subtext').innerText = 'Vui lòng thử lại với từ khóa khác.';
+                }
+                return;
+            }
 
-            tbody.innerHTML = sortedData.slice(0, limit).map((s, i) => {
-                const rank = i + 1;
-                let rankLabel = rank;
-                let rowStyle = "";
+            emptyMsg.style.display = 'none';
 
-                if (rank === 1) { rankLabel = "👑"; rowStyle = "text-amber-400"; }
-                else if (rank === 2) { rankLabel = "🥈"; rowStyle = "text-slate-300"; }
-                else if (rank === 3) { rankLabel = "🥉"; rowStyle = "text-orange-400"; }
+            // Dùng requestAnimationFrame để hiệu ứng mượt hơn khi gõ phím nhanh
+            requestAnimationFrame(() => {
+                tbody.innerHTML = data.slice(0, limit).map((s, i) => {
+                    // Chú ý: i + 1 chỉ là số thứ tự HIỂN THỊ trong bảng sau khi đã lọc.
+                    // Nếu muốn giữ nguyên Rank Toàn Hệ Thống, ta cần tính Rank gốc trước khi filter.
+                    // Ở đây mặc định hiển thị xếp hạng của danh sách đang xem.
+                    const rank = i + 1; 
+                    let rankLabel = rank;
+                    let rankStyle = "text-slate-400";
+                    let bgStyle = "hover:bg-slate-800/40";
 
-                return `
-                    <tr class="hover:bg-slate-800/30 transition-all duration-300">
-                        <td class="px-8 py-5 text-center font-black text-lg ${rowStyle}">${rankLabel}</td>
-                        <td class="px-8 py-5 font-bold text-white text-base">${s.name}</td>
-                        <td class="px-8 py-5">
-                            <span class="text-[10px] tracking-widest font-black py-1.5 px-3 rounded-lg bg-slate-900 border border-slate-700/50 text-slate-400 uppercase">
-                                ${s.school}
-                            </span>
-                        </td>
-                        <td class="px-8 py-5 text-right font-black text-xl text-sky-400 tabular-nums">
-                            ${s.score.toLocaleString()}
-                        </td>
-                    </tr>
-                `;
-            }).join('');
+                    if (rank === 1) { rankLabel = "👑"; rankStyle = "text-amber-400 scale-125 inline-block drop-shadow-md"; bgStyle = "bg-amber-900/10 hover:bg-amber-900/20"; }
+                    else if (rank === 2) { rankLabel = "🥈"; rankStyle = "text-slate-300 scale-110 inline-block"; bgStyle = "bg-slate-800/20 hover:bg-slate-800/40"; }
+                    else if (rank === 3) { rankLabel = "🥉"; rankStyle = "text-orange-400 scale-110 inline-block"; bgStyle = "bg-orange-900/10 hover:bg-orange-900/20"; }
+
+                    // Thêm class fade-in-row và delay để xuất hiện kiểu bậc thang (cascade)
+                    const delay = (i % 20) * 0.03; // Limit delay để tránh lag nếu load 1000 row
+
+                    return `
+                        <tr class="transition-colors duration-200 ${bgStyle} fade-in-row group" style="animation-delay: ${delay}s">
+                            <td class="px-6 py-4 text-center font-black text-lg ${rankStyle}">${rankLabel}</td>
+                            <td class="px-6 py-4 font-bold text-white text-base group-hover:text-sky-300 transition-colors">${s.name}</td>
+                            <td class="px-6 py-4 hidden sm:table-cell">
+                                <span class="text-[10px] tracking-widest font-black py-1.5 px-3 rounded-md bg-slate-950/50 border border-slate-700/50 text-slate-400 uppercase">
+                                    ${s.school}
+                                </span>
+                            </td>
+                            <td class="px-6 py-4 text-right font-black text-xl text-sky-400 tabular-nums">
+                                ${s.score.toLocaleString()}
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+            });
         }
 
-        document.getElementById('limitSelect').addEventListener('change', renderTable);
         startSync();
     </script>
 </body>
