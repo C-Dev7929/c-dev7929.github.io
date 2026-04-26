@@ -53,33 +53,36 @@
                         </tr>
                     </thead>
                     <tbody id="table-body" class="divide-y divide-slate-800/50">
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
             
             <div id="empty-msg" class="py-32 text-center">
                 <div class="inline-block animate-pulse mb-4 text-4xl">📡</div>
-                <p class="text-slate-500 font-medium">Đang thiết lập kết nối trực tiếp không qua trung gian...</p>
+                <p class="text-slate-500 font-medium">Đang thiết lập kết nối lấy dữ liệu BXH...</p>
                 <p class="text-slate-600 text-xs mt-2 uppercase tracking-widest">(Yêu cầu bật Extension Allow-CORS)</p>
             </div>
         </div>
     </div>
 
     <script>
+        // Đã cập nhật ID URL thành 14329 theo mẫu curl
         const SCHOOL_SOURCES = [
-            "https://thpt-bacbinh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
-            "https://thpt-daksong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
-            "https://thpt-dahuoai.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
-            "https://thpt-truongchinhhoaninh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
-            "https://thpt-dtntntranglong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
-            "https://thcs-thpt-tayson.dongnai.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
-            "https://thpt-hungvuongdran.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
-            "https://thpt-phanboichaunamdong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html",
-            "https://thpt-nguyenchithanh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-10261.html"
+            "https://thpt-bacbinh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
+            "https://thpt-daksong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
+            "https://thpt-dahuoai.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
+            "https://thpt-truongchinhhoaninh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
+            "https://thpt-dtntntranglong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
+            "https://thcs-thpt-tayson.dongnai.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
+            "https://thpt-hungvuongdran.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
+            "https://thpt-phanboichaunamdong.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html",
+            "https://thpt-nguyenchithanh.lamdong.dlib.vn/danh-muc/tin-tuc-su-kien/chinh-phuc-tuan-le-doc-sach-2026-vuon-minh-ky-nguyen-so-kien-tao-tuong-lai-voi-6-tram-trai-nghiem-hap-dan-14329.html"
         ];
 
-        // Dùng Map để lưu trữ học sinh duy nhất (Key là Tên_Trường)
         let uniqueStudentsMap = new Map();
+
+        // Tham số query dựa trên curl
+        const queryParams = "?camp_type=1&statistical_point_type=all";
 
         async function startSync() {
             const statusText = document.getElementById('status-text');
@@ -88,31 +91,46 @@
             statusIcon.className = "w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse";
 
             for (let i = 0; i < SCHOOL_SOURCES.length; i++) {
-                const url = SCHOOL_SOURCES[i];
-                const schoolName = new URL(url).hostname.split('.')[0].toUpperCase().replace('THPT-', '');
+                const baseUrl = SCHOOL_SOURCES[i];
+                const schoolName = new URL(baseUrl).hostname.split('.')[0].toUpperCase().replace('THPT-', '').replace('THCS-', '');
+                const fetchUrl = baseUrl + queryParams + '&_t=' + Date.now(); // Thêm timestamp để tránh cache
                 
                 statusText.innerText = `Đang quét: ${schoolName} (${i+1}/${SCHOOL_SOURCES.length})`;
 
                 try {
-                    const response = await fetch(url + '?cache=' + Date.now());
-                    const html = await response.text();
+                    // Áp dụng Headers tương tự như cấu trúc Curl
+                    const response = await fetch(fetchUrl, {
+                        method: 'GET',
+                        headers: {
+                            'accept': 'application/json, text/plain, */*',
+                            'accept-language': 'en-US,en;q=0.9,vi;q=0.8'
+                        }
+                    });
+
+                    if (!response.ok) throw new Error("HTTP " + response.status);
+
+                    const htmlText = await response.text();
                     
                     const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, "text/html");
-                    const winners = doc.querySelectorAll('.leaderboard .winner');
+                    const doc = parser.parseFromString(htmlText, "text/html");
+                    
+                    // Tìm tất cả các div có class winner trong response
+                    const winners = doc.querySelectorAll('.winner');
 
                     winners.forEach(w => {
+                        // Bỏ qua thành phần my-rank
                         if (w.classList.contains('my-rank')) return;
                         
-                        const name = w.querySelector('.name')?.innerText.trim();
-                        const scoreStr = w.querySelector('.score')?.innerText.replace(/\D/g, '');
+                        const nameEl = w.querySelector('.name');
+                        const scoreEl = w.querySelector('.score');
+                        
+                        const name = nameEl ? nameEl.innerText.trim() : null;
+                        const scoreStr = scoreEl ? scoreEl.innerText.replace(/\D/g, '') : null;
                         const score = parseInt(scoreStr || 0);
 
                         if (name && score) {
-                            // TẠO KEY DUY NHẤT: Tên + Trường (Tránh trùng học sinh cùng tên khác trường)
                             const uniqueKey = `${name}_${schoolName}`;
                             
-                            // Chỉ thêm hoặc cập nhật nếu điểm mới cao hơn dữ liệu cũ trong Map
                             if (!uniqueStudentsMap.has(uniqueKey) || uniqueStudentsMap.get(uniqueKey).score < score) {
                                 uniqueStudentsMap.set(uniqueKey, { name, score, school: schoolName });
                             }
@@ -121,13 +139,13 @@
 
                     renderTable();
                 } catch (e) {
-                    console.error(`Lỗi truy cập trực tiếp tại ${schoolName}:`, e);
-                    statusText.innerText = "Lỗi CORS! Hãy bật Extension để tiếp tục.";
+                    console.error(`Lỗi truy cập tại ${schoolName}:`, e);
+                    statusText.innerText = "Lỗi CORS! Hãy bật Extension Allow-CORS.";
                     statusIcon.className = "w-2.5 h-2.5 rounded-full bg-red-600";
-                    return; // Dừng lại để người dùng bật extension
+                    return; 
                 }
                 
-                // Nghỉ 800ms giữa các request để mượt mà
+                // Nghỉ 800ms giữa các trường để tránh bị chặn do ddos
                 await new Promise(r => setTimeout(r, 800));
             }
 
@@ -143,7 +161,6 @@
             const emptyMsg = document.getElementById('empty-msg');
             const limit = parseInt(document.getElementById('limitSelect').value);
             
-            // Chuyển Map thành mảng và sắp xếp điểm giảm dần
             const sortedData = Array.from(uniqueStudentsMap.values())
                                     .sort((a, b) => b.score - a.score);
 
