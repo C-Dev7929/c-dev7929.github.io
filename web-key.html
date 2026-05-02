@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lấy Mã Key Truy Cập</title>
+    <style>
+        :root {
+            --bg: #0a0f1e;
+            --card: #161e31;
+            --primary: #00f2fe;
+            --primary2: #4facfe;
+            --text: #e2e8f0;
+            --muted: #64748b;
+            --success: #22c55e;
+            --error: #ef4444;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(ellipse at 20% 20%, rgba(0,242,254,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(79,172,254,0.06) 0%, transparent 50%);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: var(--card);
+            padding: 40px 36px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+            text-align: center;
+            max-width: 420px;
+            width: 100%;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon { font-size: 52px; margin-bottom: 16px; display: block; }
+
+        h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        /* Key display box */
+        #key-display {
+            background: rgba(0,0,0,0.35);
+            border: 1.5px dashed var(--primary);
+            border-radius: 12px;
+            padding: 18px 16px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.7rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: #ffffff;
+            cursor: pointer;
+            word-break: break-all;
+            margin: 0 0 8px 0;
+            transition: background 0.2s, border-color 0.2s;
+            position: relative;
+            user-select: all;
+        }
+
+        #key-display:hover {
+            background: rgba(0,242,254,0.06);
+            border-color: var(--primary2);
+        }
+
+        .click-hint {
+            font-size: 0.72rem;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        /* Copy button */
+        .btn-copy {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary2) 100%);
+            border: none;
+            padding: 13px 28px;
+            border-radius: 10px;
+            color: #0a0f1e;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0,242,254,0.3);
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn-copy:hover  { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,242,254,0.4); }
+        .btn-copy:active { transform: translateY(0); opacity: 0.85; }
+
+        /* Copy success feedback */
+        .btn-copy.copied {
+            background: linear-gradient(90deg, var(--success) 0%, #16a34a 100%);
+            box-shadow: 0 4px 20px rgba(34,197,94,0.35);
+        }
+
+        /* Steps */
+        .steps {
+            margin: 24px 0 0 0;
+            text-align: left;
+            background: rgba(0,0,0,0.2);
+            border-radius: 12px;
+            padding: 16px 18px;
+        }
+
+        .steps p {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .steps ol {
+            padding-left: 18px;
+        }
+
+        .steps li {
+            font-size: 0.83rem;
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .steps li span { color: var(--text); font-weight: 600; }
+
+        /* Divider */
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            margin: 20px 0;
+        }
+
+        .warning {
+            font-size: 0.75rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* Error state */
+        .error-text { color: var(--error); font-size: 1rem; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="icon">🔐</span>
+        <h1>Xác Minh Thành Công</h1>
+        <p class="subtitle">Đây là mã truy cập Bot của bạn hôm nay</p>
+
+        <div id="key-display" onclick="copyKey()" title="Nhấn để sao chép">
+            ĐANG TẢI...
+        </div>
+        <p class="click-hint">👆 Nhấn vào mã để sao chép</p>
+
+        <button class="btn-copy" id="copy-btn" onclick="copyKey()">
+            <span id="btn-icon">📋</span>
+            <span id="btn-text">SAO CHÉP MÃ KEY</span>
+        </button>
+
+        <div class="steps">
+            <p>📌 Tiếp theo</p>
+            <ol>
+                <li><span>Sao chép</span> mã Key ở trên</li>
+                <li>Quay lại <span>Telegram Bot</span></li>
+                <li>Nhấn <span>「🔑 Nhập Key」</span> và dán mã vào</li>
+            </ol>
+        </div>
+
+        <hr class="divider">
+        <p class="warning">🔒 Không chia sẻ mã này cho bất kỳ ai</p>
+    </div>
+
+    <script>
+        // Giải mã Base64 từ URL parameter
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            const token  = params.get('token');
+            const display = document.getElementById('key-display');
+
+            if (!token) {
+                display.innerHTML = '<span class="error-text">❌ KHÔNG TÌM THẤY TOKEN</span>';
+                return;
+            }
+
+            try {
+                const decoded = atob(token);
+                if (!decoded) throw new Error("Empty");
+                display.innerText = decoded;
+            } catch (e) {
+                display.innerHTML = '<span class="error-text">❌ LỖI GIẢI MÃ</span>';
+            }
+        };
+
+        function copyKey() {
+            const display = document.getElementById('key-display');
+            const key = display.innerText;
+
+            // Không sao chép nếu đang lỗi
+            if (!key || key.includes('LỖI') || key.includes('ĐANG TẢI') || key.includes('KHÔNG TÌM')) return;
+
+            const btn      = document.getElementById('copy-btn');
+            const btnIcon  = document.getElementById('btn-icon');
+            const btnText  = document.getElementById('btn-text');
+
+            // Sao chép vào clipboard
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(key).then(() => showCopied(btn, btnIcon, btnText));
+            } else {
+                // Fallback cho trình duyệt cũ
+                const tmp = document.createElement('textarea');
+                tmp.value = key;
+                document.body.appendChild(tmp);
+                tmp.select();
+                document.execCommand('copy');
+                document.body.removeChild(tmp);
+                showCopied(btn, btnIcon, btnText);
+            }
+        }
+
+        function showCopied(btn, icon, text) {
+            btn.classList.add('copied');
+            icon.innerText  = '✅';
+            text.innerText  = 'ĐÃ SAO CHÉP!';
+
+            setTimeout(() => {
+                btn.classList.remove('copied');
+                icon.innerText = '📋';
+                text.innerText = 'SAO CHÉP MÃ KEY';
+            }, 2500);
+        }
+    </script>
+</body>
+</html>
