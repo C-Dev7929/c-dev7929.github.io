@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Smart Quiz - Hệ thống học tập thông minh</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- KaTeX for Math Formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <!-- LZ-String for Link Compression -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.5.0/lz-string.min.js"></script>
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain-circuit"></i>
+                    <span>SmartQuiz AI</span>
+                </div>
+            </div>
+            
+            <nav class="question-nav">
+                <div class="nav-title">Danh sách câu hỏi</div>
+                <div id="question-grid" class="question-grid">
+                    <!-- Questions will be injected here -->
+                </div>
+            </nav>
+
+            <div class="stats-mini">
+                <div class="stat-item">
+                    <span class="label">Tiến độ</span>
+                    <span id="progress-text">0/0</span>
+                    <div class="progress-bar-bg">
+                        <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <button id="btn-theme" class="btn-icon">
+                    <i data-lucide="sun"></i>
+                </button>
+                <button id="btn-reset" class="btn-secondary">Làm lại</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <div class="quiz-info">
+                    <h1 id="quiz-title">Đang tải...</h1>
+                    <p id="quiz-subject">Vui lòng chọn bộ đề</p>
+                </div>
+                <div class="actions">
+                    <button id="btn-history" class="btn-outline" title="Lịch sử bộ đề">
+                        <i data-lucide="history"></i> Lịch sử
+                    </button>
+                    <div class="view-switcher">
+                        <button id="view-card" class="btn-view active" title="Chế độ thẻ"><i data-lucide="square"></i></button>
+                        <button id="view-list" class="btn-view" title="Chế độ danh sách"><i data-lucide="layers"></i></button>
+                    </div>
+                    <button id="btn-share" class="btn-outline">
+                        <i data-lucide="share-2"></i> Chia sẻ
+                    </button>
+                    <button id="btn-import" class="btn-primary">
+                        <i data-lucide="upload"></i> Nhập JSON
+                    </button>
+                    <button id="btn-stats" class="btn-outline">
+                        <i data-lucide="bar-chart-3"></i> Phân tích
+                    </button>
+                </div>
+            </header>
+
+            <div id="quiz-area" class="quiz-area">
+                <!-- Question Card (Card View) -->
+                <div id="question-card" class="question-card hidden">
+                    <div class="card-header">
+                        <span id="q-topic" class="badge topic">Topic</span>
+                        <span id="q-level" class="badge level">NB</span>
+                        <span id="q-timer" class="timer">00:00</span>
+                    </div>
+                    
+                    <div class="q-content">
+                        <h2 id="q-text">Câu hỏi sẽ hiển thị ở đây?</h2>
+                        <div id="q-image-container" class="q-image hidden">
+                            <img id="q-image" src="" alt="Question Image">
+                        </div>
+                    </div>
+
+                    <div id="options-container" class="options-container">
+                        <!-- Options injected here -->
+                    </div>
+
+                    <div id="feedback-area" class="feedback-area hidden">
+                        <div class="feedback-content">
+                            <div class="feedback-status">
+                                <i id="feedback-icon" data-lucide="check-circle"></i>
+                                <span id="feedback-title">Chính xác!</span>
+                            </div>
+                            <div class="ai-explanation">
+                                <div class="ai-badge"><i data-lucide="sparkles"></i> AI Giải thích</div>
+                                <p id="q-explanation"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <button id="btn-prev" class="btn-nav"><i data-lucide="chevron-left"></i> Câu trước</button>
+                        <div class="flex-spacer"></div>
+                        <button id="btn-next" class="btn-nav">Câu sau <i data-lucide="chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- List View Area -->
+                <div id="quiz-list-view" class="quiz-list-view hidden">
+                    <!-- Multiple questions will be injected here -->
+                </div>
+
+                <!-- Finish Screen -->
+                <div id="finish-screen" class="finish-screen hidden">
+                    <div class="finish-card">
+                        <i data-lucide="trophy" class="trophy-icon"></i>
+                        <h1>Tuyệt vời!</h1>
+                        <p>Bạn đã hoàn thành bộ đề này</p>
+                        <div class="finish-stats">
+                            <div class="f-stat">
+                                <span class="f-label">Đúng</span>
+                                <span id="f-correct" class="f-value">0</span>
+                            </div>
+                            <div class="f-stat">
+                                <span class="f-label">Điểm số</span>
+                                <span id="f-score" class="f-value">0%</span>
+                            </div>
+                        </div>
+                        <div class="finish-actions">
+                            <button id="btn-restart" class="btn-primary">Làm lại bài này</button>
+                            <button id="btn-home" class="btn-outline">Về trang chủ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" class="empty-state">
+                    <i data-lucide="file-question" size="64"></i>
+                    <h2>Chưa có dữ liệu quiz</h2>
+                    <p>Hãy tải file JSON hoặc nhập URL để bắt đầu học tập.</p>
+                    <div class="upload-options">
+                        <input type="file" id="file-input" accept=".json" hidden>
+                        <button onclick="document.getElementById('file-input').click()" class="btn-primary">
+                            <i data-lucide="file-up"></i> Chọn File JSON
+                        </button>
+                        <button id="btn-show-url-modal" class="btn-outline">
+                            <i data-lucide="link"></i> Nhập từ URL
+                        </button>
+                        <button id="btn-load-sample" class="btn-secondary">Dùng đề mẫu</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modals -->
+        <div id="modal-history" class="modal hidden">
+            <div class="modal-content">
+                <header>
+                    <h2><i data-lucide="library"></i> Thư viện bộ đề</h2>
+                    <button class="close-modal">&times;</button>
+                </header>
+                <div class="modal-body">
+                    <p>Các bộ đề bạn đã từng làm:</p>
+                    <div id="history-list" class="history-list">
+                        <!-- History items -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-import-url" class="modal hidden">
+            <div class="modal-content">
+                <header>
+                    <h2><i data-lucide="link"></i> Nhập từ URL</h2>
+                    <button class="close-modal">&times;</button>
+                </header>
+                <div class="modal-body">
+                    <p>Nhập địa chỉ URL chứa file JSON của bộ đề:</p>
+                    <input type="url" id="url-input" placeholder="https://example.com/quiz.json" class="form-input">
+                    <div class="modal-actions">
+                        <button id="btn-confirm-url" class="btn-primary">Tải đề</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-stats" class="modal hidden">
+            <div class="modal-content">
+                <header>
+                    <h2><i data-lucide="pie-chart"></i> Phân tích học tập</h2>
+                    <button class="close-modal">&times;</button>
+                </header>
+                <div class="stats-body">
+                    <div class="stats-overview">
+                        <div class="stat-card">
+                            <span class="value" id="stat-score">0%</span>
+                            <span class="label">Độ chính xác</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="value" id="stat-xp">0</span>
+                            <span class="label">XP Đã nhận</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="value" id="stat-streak">0</span>
+                            <span class="label">Streak</span>
+                        </div>
+                    </div>
+                    <div class="stats-details">
+                        <div class="chart-section">
+                            <h3>Hiệu suất theo Topic</h3>
+                            <div id="topic-stats-list"></div>
+                        </div>
+                        <div class="ai-suggestion">
+                            <h3><i data-lucide="lightbulb"></i> Gợi ý từ AI</h3>
+                            <p id="ai-advice">Hoàn thành thêm câu hỏi để AI phân tích điểm yếu của bạn.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "title": "Ôn tập Kiến thức Tổng hợp",
+  "subject": "Công nghệ & Đời sống",
+  "FolerImgUrl": "https://picsum.photos/seed/",
+  "questions": [
+    {
+      "id": 1,
+      "type": "mcq",
+      "question": "Ngôn ngữ lập trình nào thường được dùng để phát triển Frontend web?",
+      "options": ["Python", "Java", "JavaScript", "C++"],
+      "correct": "JavaScript",
+      "explanation": "JavaScript là ngôn ngữ duy nhất chạy trực tiếp trên trình duyệt để tạo tính tương tác cho web.",
+      "image": "800/400",
+      "topic": "Lập trình Web",
+      "level": "NB"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Framework nào dưới đây dựa trên ngôn ngữ JavaScript?",
+      "options": ["Django", "React", "Laravel", "Flask"],
+      "correct": "React",
+      "explanation": "React là một thư viện/framework JavaScript phổ biến do Meta phát triển.",
+      "image": "801/400",
+      "topic": "Frontend Frameworks",
+      "level": "TH"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Thuộc tính CSS nào dùng để thay đổi màu chữ?",
+      "options": ["font-color", "text-color", "color", "background-color"],
+      "correct": "color",
+      "explanation": "Trong CSS, thuộc tính 'color' dùng để định nghĩa màu sắc của văn bản.",
+      "image": "",
+      "topic": "CSS Basics",
+      "level": "NB"
+    }
+  ]
+}
