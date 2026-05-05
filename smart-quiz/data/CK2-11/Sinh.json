@@ -1,1474 +1,1474 @@
 {
-  "title": "Ôn tập Học kì II - Sinh học 11",
-  "subject": "Sinh học",
-  "questions": [
-    {
-      "id": 1,
-      "type": "mcq",
-      "question": "Câu 1. Hệ thần kinh dạng lưới thường gặp ở:",
-      "options": [
-        "A. Động vật có cơ thể đối xứng tỏa tròn.",
-        "B. Động vật có xương sống.",
-        "C. Các ngành giun như Giun dẹp, Giun tròn.",
-        "D. Động vật chân khớp, côn trùng."
-      ],
-      "correct": "A. Động vật có cơ thể đối xứng tỏa tròn.",
-      "explanation": "Hệ thần kinh dạng lưới là dạng hệ thần kinh nguyên thủy nhất, có cấu tạo đơn giản, mạng lưới các tế bào thần kinh phân bố khắp cơ thể. Dạng này đặc trưng cho các động vật có cơ thể đối xứng tỏa tròn như ngành Ruột khoang (thủy tức, sứa, san hô...).",
-      "image": null,
-      "topic": "Cảm ứng ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 2,
-      "type": "mcq",
-      "question": "Câu 2. Ở động vật có hệ thần kinh, dựa vào đặc điểm cấu trúc hệ thần kinh chia thành các nhóm:",
-      "options": [
-        "A. hệ thần kinh dạng đốt và hệ thần kinh dạng ống.",
-        "B. hệ thần kinh dạng lưới và hệ thần kinh dạng ống.",
-        "C. hệ thần kinh dạng lưới, hệ thần kinh dạng chuỗi hạch, hệ thần kinh dạng ống.",
-        "D. hệ thần kinh dạng lưới, hệ thần kinh dạng đốt, hệ thần kinh dạng ống."
-      ],
-      "correct": "C. hệ thần kinh dạng lưới, hệ thần kinh dạng chuỗi hạch, hệ thần kinh dạng ống.",
-      "explanation": "Theo chiều hướng tiến hóa của giới Động vật, hệ thần kinh được phân chia thành 3 dạng cấu trúc từ đơn giản đến phức tạp: Hệ thần kinh dạng lưới (ruột khoang) -> Hệ thần kinh dạng chuỗi hạch (giun, chân khớp) -> Hệ thần kinh dạng ống (động vật có xương sống).",
-      "image": null,
-      "topic": "Cảm ứng ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 3,
-      "type": "mcq",
-      "question": "Câu 3. Hệ thần kinh ống hoạt động theo nguyên tắc:",
-      "options": [
-        "A. phản xạ.",
-        "B. cảm ứng.",
-        "C. dẫn truyền",
-        "D. đáp ứng xung thần kinh"
-      ],
-      "correct": "A. phản xạ.",
-      "explanation": "Mọi hoạt động của hệ thần kinh dạng ống (cũng như chuỗi hạch) đều thực hiện theo nguyên tắc phản xạ. Phản xạ là phản ứng của cơ thể trả lời kích thích của môi trường thông qua hệ thần kinh.",
-      "image": null,
-      "topic": "Cảm ứng ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 4,
-      "type": "mcq",
-      "question": "Câu 4. Tế bào thần kinh còn được gọi là:",
-      "options": [
-        "A. synapse.",
-        "B. neuron.",
-        "C. myelin.",
-        "D. ranvier."
-      ],
-      "correct": "B. neuron.",
-      "explanation": "Neuron (nơ-ron) chính là tên gọi khoa học của tế bào thần kinh, là đơn vị cấu tạo và chức năng cơ bản của hệ thần kinh.",
-      "image": null,
-      "topic": "Cảm ứng ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 5,
-      "type": "mcq",
-      "question": "Câu 5. Sợi trục của neuron có chức năng:",
-      "options": [
-        "A. truyền kích thích ra khắp cơ thể.",
-        "B. truyền kích thích đến tế bào khác.",
-        "C. truyền xung thần kinh đến tế bào khác.",
-        "D. truyền xung thần kinh ra khắp cơ thể."
-      ],
-      "correct": "C. truyền xung thần kinh đến tế bào khác.",
-      "explanation": "Sợi trục là phần kéo dài của nơ-ron, chức năng chính là dẫn truyền xung thần kinh từ thân nơ-ron đi xa, truyền đến các nơ-ron khác hoặc tế bào cơ quan đích (cơ, tuyến) thông qua xináp.",
-      "image": null,
-      "topic": "Cảm ứng ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 6,
-      "type": "mcq",
-      "question": "Câu 6. Chức năng của neuron là:",
-      "options": [
-        "A. tiếp nhận kích thích, tạo ra xung thần kinh và truyền xung thần kinh ra toàn cơ thể.",
-        "B. tiếp nhận kích thích, tạo ra xung thần kinh và truyền xung thần kinh đến neuron khác hoặc tế bào khác.",
-        "C. tiếp nhận xung thần kinh, tạo các kích thích và dẫn truyền đến neuron khác hoặc tế bào khác.",
-        "D. tiếp nhận xung thần kinh, tạo các kích thích và dẫn truyền ra toàn cơ thể."
-      ],
-      "correct": "B. tiếp nhận kích thích, tạo ra xung thần kinh và truyền xung thần kinh đến neuron khác hoặc tế bào khác.",
-      "explanation": "Chức năng cơ bản của nơ-ron là cảm ứng (tiếp nhận kích thích từ môi trường hoặc từ nơ-ron khác, chuyển hóa thành xung thần kinh) và dẫn truyền (truyền xung thần kinh dọc theo sợi trục đến nơ-ron khác hoặc tế bào cơ quan đáp ứng).",
-      "image": null,
-      "topic": "Cảm ứng ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 7,
-      "type": "mcq",
-      "question": "Câu 7. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về phản xạ ở động vật:\n1. Phản xạ có điều kiện\na. Hít phải bụi ta “hắt xì hơi”. \nb. Nhìn thấy con quạ bay trên trời, gà con núp vào cánh gà mẹ.\n2. Phản xạ không điều kiện\nc. Nghe tiếng gọi “chít chít”, gà chạy tới.\nd. Khóc khi chào đời.",
-      "options": [
-        "A. 1-ac, 2-bd.",
-        "B. 1-ab, 2-cd.",
-        "C. 1-cd, 2-ab.",
-        "D. 1-bc, 2-ad."
-      ],
-      "correct": "D. 1-bc, 2-ad.",
-      "explanation": "Phản xạ có điều kiện (học được trong đời sống): Gà núp khi thấy quạ (b), nghe gọi thì chạy tới (c). Phản xạ không điều kiện (bẩm sinh): Hắt xì khi hít bụi (a), khóc khi chào đời (d). Do đó ghép: 1-bc, 2-ad.",
-      "image": null,
-      "topic": "Cảm ứng ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 8,
-      "type": "mcq",
-      "question": "Câu 8. Tập tính là:",
-      "options": [
-        "A. Những động tác của động vật trả lời lại các kích thích",
-        "B. Những hành động của động vật trả lời lại các kích thích",
-        "C. Những suy nghĩ của động vật trả lời lại các kích thích",
-        "D. Những biểu hiện của động vật trả lời lại các kích thích"
-      ],
-      "correct": "B. Những hành động của động vật trả lời lại các kích thích",
-      "explanation": "Tập tính là chuỗi những phản ứng, hành động của động vật trả lời kích thích từ môi trường (bao gồm môi trường bên trong hoặc bên ngoài cơ thể), giúp chúng thích nghi với môi trường sống và tồn tại.",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 9,
-      "type": "mcq",
-      "question": "Câu 9. Tập tính được thể hiện khi con vật nhận:",
-      "options": [
-        "A. Kích thích từ môi trường",
-        "B. Kích thích tại não bộ của cơ thể",
-        "C. Kích thích từ các tác nhân ngoại cảnh",
-        "D. Kích thích từ thiên nhiên sinh sống"
-      ],
-      "correct": "A. Kích thích từ môi trường",
-      "explanation": "Tập tính luôn bắt đầu bằng một kích thích từ môi trường (bao gồm cả môi trường ngoài và môi trường trong cơ thể như sự thay đổi hormone, cảm giác đói khát...).",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 10,
-      "type": "mcq",
-      "question": "Câu 10. Khi thời tiết lạnh, cơ thể thằn lằn bị hạ nhiệt độ, thụ thể sẽ báo tin về não và buộc thằn lằn phải di chuyển đến nơi có ánh nắng để thu nhiệt là ví dụ về vai trò:",
-      "options": [
-        "A. Tăng khả năng thành công sinh sản",
-        "B. Tăng khả năng hình thành tập tính mới",
-        "C. Duy trì môi trường bên trong cơ thể ổn định",
-        "D. Tăng khả năng học hỏi của động vật"
-      ],
-      "correct": "C. Duy trì môi trường bên trong cơ thể ổn định",
-      "explanation": "Hành động di chuyển tìm nắng của thằn lằn nhằm lấy nhiệt làm ấm cơ thể, chống lại cái lạnh của môi trường để duy trì thân nhiệt (ổn định môi trường trong cơ thể - nội môi).",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 11,
-      "type": "mcq",
-      "question": "Câu 11. Cơ sở giải thích tại sao học tập có thể đưa đến hình thành tập tính mới:",
-      "options": [
-        "A. Sự hình thành mối liên hệ thần kinh mới giữa các neuron",
-        "B. Sự thành lập gene mới",
-        "C. Do tiết ra nhiều hormone hơn",
-        "D. Do có sự liên kết giữa các cá thể trong loài"
-      ],
-      "correct": "A. Sự hình thành mối liên hệ thần kinh mới giữa các neuron",
-      "explanation": "Cơ sở thần kinh của tập tính học được (tập tính mới) là sự hình thành các mối liên hệ thần kinh mới (đường liên hệ tạm thời) giữa các nơ-ron trong hệ thần kinh trung ương thông qua quá trình học tập và rút kinh nghiệm.",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 12,
-      "type": "mcq",
-      "question": "Câu 12. Con lớn thường đi đầu đàn là ví dụ về:",
-      "options": [
-        "A. Tập tính vị tha",
-        "B. Tập tính kiếm ăn",
-        "C. Tập tính thứ bậc",
-        "D. Tập tính hợp tác"
-      ],
-      "correct": "C. Tập tính thứ bậc",
-      "explanation": "Trong các bầy đàn động vật, tập tính thứ bậc phân chia rõ ràng con đầu đàn (thường là con to lớn, khỏe mạnh nhất) có quyền ưu tiên về thức ăn, sinh sản và chỉ huy. Đi đầu đàn thể hiện sự phân cấp này.",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 13,
-      "type": "mcq",
-      "question": "Câu 13. Hình thức học tập đơn giản nhất ở động vật",
-      "options": [
-        "A. In vết",
-        "B. Học liên hệ",
-        "C. Học cách nhận biết không gian",
-        "D. Quen nhờn"
-      ],
-      "correct": "D. Quen nhờn",
-      "explanation": "Quen nhờn là hình thức học tập đơn giản nhất. Khi kích thích lặp đi lặp lại nhiều lần mà không gây ra tác động có hại hay có lợi nào, động vật sẽ không trả lời lại kích thích đó nữa.",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 14,
-      "type": "mcq",
-      "question": "Câu 14. Hình thức học tập in vết phát triển nhất ở:",
-      "options": [
-        "A. Chim",
-        "B. Cáo",
-        "C. Rắn",
-        "D. Heo"
-      ],
-      "correct": "A. Chim",
-      "explanation": "In vết (imprinting) là hình thức học tập đặc biệt thường thấy nhất và phát triển mạnh nhất ở các loài chim non mới nở. Chúng sẽ bám theo và học hỏi từ vật thể chuyển động đầu tiên mà chúng nhìn thấy (thường là chim mẹ).",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 15,
-      "type": "mcq",
-      "question": "Câu 15. Nối cột A với cột B sao cho các ví dụ trùng khớp với tên và định nghĩa của chúng.\nA\nB\n1. Tập tính bẩm sinh\na. Sinh ra đã có, di truyền từ bố mẹ\nb. Sau nhiều lần ăn thử sâu có màu đỏ và bị ngộ độc, chim chích không ăn loại sâu này nữa\n2. Tập tính học được\nc. Mọt gỗ chuyển động nhanh khi đi qua vùng khô\nd. Hình thành trong quá trình sống của cá thể",
-      "options": [
-        "A. 1-ab, 2-cd",
-        "B. 1-ac, 2-bd",
-        "C. 1-ad, 2-bc",
-        "D. 1-bc, 2-ad"
-      ],
-      "correct": "B. 1-ac, 2-bd",
-      "explanation": "Tập tính bẩm sinh (1) mang tính di truyền, sinh ra đã có (a), ví dụ như mọt gỗ chạy nhanh qua vùng khô (c) là phản xạ không điều kiện. Tập tính học được (2) hình thành trong đời sống (d), ví dụ chim chích không ăn sâu độc do rút kinh nghiệm (b). Ghép: 1-ac, 2-bd.",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 16,
-      "type": "mcq",
-      "question": "Câu 16. Nối cột A với cột B sao cho các ví dụ trùng khớp với tên của chúng.\nA\nB\n1. Tập tính bảo vệ lãnh thổ\na. Bao gồm nhiều tập tính nhỏ như tìm kiếm bạn tình, ấp trứng, chăm sóc con,…\n2. Tập tính sinh sản\nb. Nếu kẻ khác cố tình xâm nhập và khu vực bảo vệ thì con chủ sẽ xua đuổi kẻ xâm nhập, đôi khi xảy ra các trận chiến dữ dội\n3. Tập tính di cư\nc. Chim bay về phương Nam khi mùa đông đến",
-      "options": [
-        "A. 1-a, 2-b, 3-c",
-        "B. 1-b, 2-a, 3-c",
-        "C. 1-b, 2-c, 3-a",
-        "D. 1-c, 2-b, 3-a"
-      ],
-      "correct": "B. 1-b, 2-a, 3-c",
-      "explanation": "Bảo vệ lãnh thổ (1) là xua đuổi kẻ xâm nhập (b). Tập tính sinh sản (2) liên quan đến tìm bạn tình, chăm sóc con (a). Di cư (3) là di chuyển xa theo mùa như chim bay về Nam (c). Ghép: 1-b, 2-a, 3-c.",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 17,
-      "type": "mcq",
-      "question": "Câu 17. Đặc điểm nào không có ở sinh trưởng thứ cấp?",
-      "options": [
-        "A. Làm tăng kích thước chiều ngang của cây.",
-        "B. Diễn ra chủ yếu ở cây một lá mầm và hạn chế ở cây hai lá mầm.",
-        "C. Diễn ra hoạt động của tầng sinh mạch.",
-        "D. Diễn ra hoạt động của tầng sinh bần (vỏ)."
-      ],
-      "correct": "B. Diễn ra chủ yếu ở cây một lá mầm và hạn chế ở cây hai lá mầm.",
-      "explanation": "Sinh trưởng thứ cấp là sự sinh trưởng làm tăng bề ngang của thân do hoạt động của mô phân sinh bên (tầng sinh mạch, tầng sinh bần). Quá trình này đặc trưng và diễn ra ở cây hai lá mầm, cây một lá mầm hầu như không có sinh trưởng thứ cấp. Do đó nhận định B là sai.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 18,
-      "type": "mcq",
-      "question": "Câu 18. Sinh trưởng thứ cấp là:",
-      "options": [
-        "A. Sự tăng trưởng bề ngang của cây do mô phân sinh bên của cây thân thảo hoạt động tạo ra.",
-        "B. Sự tăng trưởng bề ngang của cây do mô phân sinh bên của cây thân gỗ hoạt động tạo ra.",
-        "C. Sự tăng trưởng bề ngang của cây một lá mầm do mô phân sinh bên của cây hoạt động tạo ra.",
-        "D. Sự tăng trưởng bề ngang của cây do mô phân sinh lóng của cây hoạt động tạo ra."
-      ],
-      "correct": "B. Sự tăng trưởng bề ngang của cây do mô phân sinh bên của cây thân gỗ hoạt động tạo ra.",
-      "explanation": "Sinh trưởng thứ cấp ở thực vật là sự tăng bề ngang (đường kính) của thân và rễ, chủ yếu diễn ra ở thực vật hai lá mầm (đặc biệt là cây thân gỗ), nhờ sự phân chia của các tế bào thuộc mô phân sinh bên (tầng sinh mạch và tầng sinh bần).",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 19,
-      "type": "mcq",
-      "question": "Câu 19. Cây trung tính là các cây",
-      "options": [
-        "A. hành, cà rốt, rau diếp, sen cạn, củ cải đường.",
-        "B. thanh long, cà tím, cà phê ngô, hướng dương",
-        "C. thược dược, đậu tương, vừng, gai dầu, mía.",
-        "D. cà chua, lạc, đậu, ngô, hướng dương."
-      ],
-      "correct": "D. cà chua, lạc, đậu, ngô, hướng dương.",
-      "explanation": "Cây trung tính là cây ra hoa ở bất kỳ quang chu kỳ nào (độ dài ngày và đêm không ảnh hưởng tới sự ra hoa), ví dụ điển hình là cà chua, lạc, đậu, ngô, hướng dương.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 20,
-      "type": "mcq",
-      "question": "Câu 20. Đặc điểm nào không có ở sinh trưởng sơ cấp?",
-      "options": [
-        "A. Làm tăng kích thước chiều dài của cây.",
-        "B. Diễn ra hoạt động của tầng sinh bần.",
-        "C. Diễn ra cả ở cây một lá mầm và cây hai lá mầm.",
-        "D. Diễn ra hoạt động của mô phân sinh đỉnh."
-      ],
-      "correct": "B. Diễn ra hoạt động của tầng sinh bần.",
-      "explanation": "Sinh trưởng sơ cấp diễn ra do hoạt động của mô phân sinh đỉnh (và lóng ở cây 1 lá mầm), giúp thân và rễ dài ra. Hoạt động của tầng sinh bần thuộc về sinh trưởng thứ cấp làm tăng bề ngang.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 21,
-      "type": "mcq",
-      "question": "Câu 21. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về sinh trưởng ở thực vật:\n1. Sinh trưởng sơ cấp\na. Là sự sinh trưởng của thân và rễ theo chiều dài do hoạt động của mô phân sinh đỉnh.\nb. Diễn ra ở thực vật 2 lá mầm.\n2. Sinh trưởng thứ cấp\nc. Là sự tăng trưởng bề ngang của cây do mô phân sinh bên của cây thân gỗ hoạt động tạo ra.\nd. Diễn ra ở thực vật 1 lá mầm.",
-      "options": [
-        "A. 1-ac, 2-bd.",
-        "B. 1-bd, 2-ac.",
-        "C. 1-bc, 2-ad.",
-        "D. 1-ad, 2-bc."
-      ],
-      "correct": "D. 1-ad, 2-bc.",
-      "explanation": "Sinh trưởng sơ cấp (1) là sinh trưởng chiều dài (a) và cũng là kiểu sinh trưởng duy nhất của cây 1 lá mầm (d). Sinh trưởng thứ cấp (2) là sinh trưởng bề ngang (c) và xảy ra ở thực vật 2 lá mầm (b). Ghép hợp lí là 1-ad, 2-bc.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 22,
-      "type": "mcq",
-      "question": "Câu 22. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về đại diện các loại cây:\n1. Cây ngắn ngày\na. Cà chua, lạc, đậu, ngô, hướng dương...\n2. Cây trung tính\nb. Hành, cà rốt, lúa mì...\n3. Cây dài ngày\nc. Đậu tương, vừng, cà tím, mía...",
-      "options": [
-        "A. 1-c, 2-b, 3-a.",
-        "B. 1-b, 2-a, 3-c.",
-        "C. 1-c, 2-a, 3-b.",
-        "D. 1-b, 2-c, 3-a."
-      ],
-      "correct": "C. 1-c, 2-a, 3-b.",
-      "explanation": "Cây ngắn ngày (1) là đậu tương, vừng, mía (c). Cây trung tính (2) không phụ thuộc ánh sáng là cà chua, lạc, đậu ngô (a). Cây dài ngày (3) là hành, cà rốt, lúa mì (b). Ghép 1-c, 2-a, 3-b.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 23,
-      "type": "mcq",
-      "question": "Câu 23. Các cây ngày ngắn là:",
-      "options": [
-        "A. Thược dược, đậu tương, vừng, gai dầu, mía.",
-        "B. Cà chua, lạc, đậu, ngô, hướng dương.",
-        "C. Thanh long, cà tím, cà phê ngô, hướng dương.",
-        "D. Hành, cà rốt, rau diếp, sen cạn, củ cải đường."
-      ],
-      "correct": "A. Thược dược, đậu tương, vừng, gai dầu, mía.",
-      "explanation": "Cây ngày ngắn thường ra hoa khi thời gian chiếu sáng trong ngày ngắn hơn một ngưỡng nhất định. Các ví dụ điển hình là thược dược, đậu tương, vừng, gai dầu, mía.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 24,
-      "type": "mcq",
-      "question": "Câu 24. Thứ tự các loại mô phân sinh tính từ ngọn đến rễ cây 2 lá mầm là",
-      "options": [
-        "A. mô phân sinh đỉnh → mô phân sinh bên → mô phân sinh đỉnh rễ",
-        "B. mô phân sinh đỉnh → mô phân sinh đỉnh rễ → mô phân sinh bên",
-        "C. mô phân sinh đỉnh rễ → mô phân sinh đỉnh → mô phân sinh bên",
-        "D. mô phân sinh bên → mô phân sinh đỉnh → mô phân sinh đỉnh rễ"
-      ],
-      "correct": "A. mô phân sinh đỉnh → mô phân sinh bên → mô phân sinh đỉnh rễ",
-      "explanation": "Mô phân sinh đỉnh nằm ở chồi đỉnh (ngọn) giúp cây cao lên. Mô phân sinh bên nằm chạy dọc thân rễ giúp tăng bề ngang. Mô phân sinh đỉnh rễ nằm ở chóp rễ. Nên thứ tự từ ngọn xuống rễ là Đỉnh -> Bên -> Đỉnh rễ.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 25,
-      "type": "mcq",
-      "question": "Câu 25. Thời gian sống (thời gian tồn tại) của một loài sinh vật hoặc con người là",
-      "options": [
-        "A. tuổi đời",
-        "B. chu kỳ chết",
-        "C. tuổi thọ",
-        "D. vòng đời"
-      ],
-      "correct": "C. tuổi thọ",
-      "explanation": "Tuổi thọ là khái niệm chỉ khoảng thời gian sống hay thời gian tồn tại của một sinh vật (từ lúc sinh ra đến lúc chết đi) hoặc con người.",
-      "image": null,
-      "topic": "Khái quát về sinh trưởng và phát triển",
-      "level": "NB"
-    },
-    {
-      "id": 26,
-      "type": "mcq",
-      "question": "Câu 26. Các cây trung tính là cây",
-      "options": [
-        "A. thanh long, cà tím, cà phê ngô, huớng dương.",
-        "B. hành, cà rốt, rau diếp, sen cạn, củ cải đường.",
-        "C. cà chua, lạc, đậu, ngô, hướng dương.",
-        "D. thược dược, đậu tương, vừng, gai dầu, mía."
-      ],
-      "correct": "C. cà chua, lạc, đậu, ngô, hướng dương.",
-      "explanation": "Cây trung tính là các cây mà sự ra hoa không phụ thuộc vào độ dài ngày hay đêm (quang chu kỳ). Đại diện nhóm này gồm cà chua, lạc, đậu, ngô, hướng dương.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 27,
-      "type": "mcq",
-      "question": "Câu 27. Mô phân sinh đỉnh không có ở vị trí nào của cây?",
-      "options": [
-        "A. Ở đỉnh rễ.",
-        "B. Ở thân.",
-        "C. Ở chồi nách.",
-        "D. Ở chồi đỉnh."
-      ],
-      "correct": "B. Ở thân.",
-      "explanation": "Mô phân sinh đỉnh nằm ở chồi đỉnh, chồi nách và đỉnh rễ. Nó không tồn tại ở dọc thân cây (vị trí ở dọc thân thường là mô phân sinh bên hoặc mô phân sinh lóng).",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 28,
-      "type": "mcq",
-      "question": "Câu 28. Khoảng thời gian tính từ khi cơ thể được sinh ra, lớn lên, phát triển thành cơ thể trưởng thành, sinh sản tạo ra cá thể mới, già đi rồi chết được gọi là",
-      "options": [
-        "A. tuổi đời",
-        "B. chu kỳ chết",
-        "C. tuổi thọ",
-        "D. vòng đời"
-      ],
-      "correct": "D. vòng đời",
-      "explanation": "Vòng đời (hay chu kỳ sống) là khoảng thời gian tính từ khi cơ thể được sinh ra, lớn lên, phát triển thành cơ thể trưởng thành, sinh sản tạo ra cá thể mới, già đi rồi chết.",
-      "image": null,
-      "topic": "Khái quát về sinh trưởng và phát triển",
-      "level": "NB"
-    },
-    {
-      "id": 29,
-      "type": "mcq",
-      "question": "Câu 29. Các cây ngày ngắn gồm các cây",
-      "options": [
-        "A. thược dược, đậu tương, vừng, gai dầu, mía.",
-        "B. cà chua, lạc, đậu, ngô, hướng dương.",
-        "C. thanh long, cà tím, cà phê ngô, hướng dương.",
-        "D. hành, cà rốt, rau diếp, sen cạn, củ cải đường."
-      ],
-      "correct": "A. thược dược, đậu tương, vừng, gai dầu, mía.",
-      "explanation": "Cây ngày ngắn là các cây cần ánh sáng ít hơn một giới hạn (thường ra hoa vào mùa thu đông) như thược dược, đậu tương, vừng, mía.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 30,
-      "type": "mcq",
-      "question": "Câu 30. Đặc điểm nào không có ở sinh trưởng thứ cấp?",
-      "options": [
-        "A. Làm tăng kích thước chiều ngang của cây.",
-        "B. Chỉ diễn ra chủ yếu ở cây một lá mầm.",
-        "C. Diễn ra hoạt động của tầng sinh mạch.",
-        "D. Diễn ra hoạt động của tầng sinh bần (vỏ)."
-      ],
-      "correct": "B. Chỉ diễn ra chủ yếu ở cây một lá mầm.",
-      "explanation": "Sinh trưởng thứ cấp là quá trình diễn ra ở cây hai lá mầm, giúp cây phát triển bề ngang, không có hoặc hạn chế ở cây một lá mầm.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 31,
-      "type": "mcq",
-      "question": "Câu 31. Giai đoạn nhộng trong vòng đời của bươm bướm là",
-      "options": [
-        "A. giai đoạn tích luỹ dinh dưỡng.",
-        "B. giai đoạn có sự chuyển hoá bên trong diễn ra mạnh mẽ.",
-        "C. giai đoạn thích nghi với chức năng sinh sản.",
-        "D. giai đoạn trung gian tạo ra thế hệ sâu mới."
-      ],
-      "correct": "B. giai đoạn có sự chuyển hoá bên trong diễn ra mạnh mẽ.",
-      "explanation": "Ở côn trùng biến thái hoàn toàn như bướm, giai đoạn nhộng tuy trông bất động nhưng bên trong lại diễn ra quá trình phân giải tế bào, cơ quan của ấu trùng và hình thành các cơ quan cấu tạo mới của con trưởng thành vô cùng mạnh mẽ.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 32,
-      "type": "mcq",
-      "question": "Câu 32. Hình thức sinh sản và phát triển của châu chấu là",
-      "options": [
-        "A. đẻ con và biến thái hoàn toàn.",
-        "B. đẻ con và biến thái không hoàn toàn.",
-        "C. đẻ trứng và biến thái hoàn toàn.",
-        "D. đẻ trứng và biến thái không hoàn toàn."
-      ],
-      "correct": "D. đẻ trứng và biến thái không hoàn toàn.",
-      "explanation": "Châu chấu là loài côn trùng đẻ trứng, sau đó trứng nở thành ấu trùng có hình dạng gần giống với con trưởng thành nhưng chưa hoàn thiện, trải qua các lần lột xác để lớn lên nên gọi là phát triển qua biến thái không hoàn toàn.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 33,
-      "type": "mcq",
-      "question": "Câu 33. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về sự sinh trưởng và phát triển của động vật:\n1. Không qua biến thái\na. Bọ ngựa, cào cào, ve sầu.\n2. Qua biến thái không hoàn toàn\nb. Ruồi, tằm, ong.\n3. Qua biến thái hoàn toàn\nc. Lợn, thỏ, bồ câu.",
-      "options": [
-        "A. 1-a, 2-b, 3-c.",
-        "B. 1-c, 2-a, 3-b.",
-        "C. 1-c, 2-b, 3-a.",
-        "D. 1-a, 2-c, 3-b."
-      ],
-      "correct": "B. 1-c, 2-a, 3-b.",
-      "explanation": "Không qua biến thái (1) gồm chim và thú như lợn, thỏ, bồ câu (c). Biến thái không hoàn toàn (2) có cào cào, ve sầu, bọ ngựa (a). Biến thái hoàn toàn (3) có bướm, ruồi, muỗi, ong (b). Ghép đúng: 1-c, 2-a, 3-b.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 34,
-      "type": "mcq",
-      "question": "Câu 34. Những động vật nào sau đây có quá trình sinh trưởng và phát triển trải qua biến thái hoàn toàn?\n(1) Ong\t(2) Cào cào\t(3) Chuồn chuồn\n(4) Muỗi\t(5) Ve sầu\t(6) Bọ hung",
-      "options": [
-        "A. 1, 2, 3, 4, 6.",
-        "B. 1, 3, 4, 6.",
-        "C. 1, 2, 3, 5, 6.",
-        "D. 2, 3, 4, 5."
-      ],
-      "correct": "B. 1, 3, 4, 6.",
-      "explanation": "Nhóm phát triển qua biến thái hoàn toàn trong danh sách gồm: Ong (1), Muỗi (4) và Bọ hung (6). (Cào cào, ve sầu là biến thái không hoàn toàn. Chuồn chuồn là biến thái không hoàn toàn, nhưng dựa theo các phương án của đề thi thì đáp án chứa 1, 4, 6 tối ưu nhất là B).",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 35,
-      "type": "mcq",
-      "question": "Câu 35. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về sự sinh trưởng và phát triển của động vật:\n1. Không qua biến thái\na. Con mới nở đã có hình dạng, cấu tạo và sinh lý gần giống với con trưởng thành.\n2. Qua biến thái không hoàn toàn\nb. Con non mới nở hoặc mới sinh có hình thái, cấu tạo và sinh lí tương tự con trưởng thành.\n3. Qua biến thái hoàn toàn\nc. Con mới nở có hình dạng, cấu tạo và sinh lí rất khác với con trưởng thành.",
-      "options": [
-        "A. 1-b, 2-a, 3-c.",
-        "B. 1-a, 2-b, 3-c.",
-        "C. 1-b, 2-c, 3-a.",
-        "D. 1-a, 2-c, 3-b."
-      ],
-      "correct": "A. 1-b, 2-a, 3-c.",
-      "explanation": "Không qua biến thái (1) thì con non có hình dạng cấu tạo tương tự con trưởng thành (b). Biến thái không hoàn toàn (2) thì con non gần giống (a), lớn lên qua các lần lột xác. Biến thái hoàn toàn (3) thì con non (ấu trùng) rất khác con trưởng thành (c). Ghép: 1-b, 2-a, 3-c.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 36,
-      "type": "mcq",
-      "question": "Câu 36. Phát triển không qua biến thái có đặc điểm",
-      "options": [
-        "A. con non cấu tạo giống con trưởng thành.",
-        "B. con non gần giống con trưởng thành.",
-        "C. con non khác con trưởng thành.",
-        "D. phải qua một lần lột xác."
-      ],
-      "correct": "A. con non cấu tạo giống con trưởng thành.",
-      "explanation": "Phát triển không qua biến thái là kiểu phát triển mà con non mới nở hoặc mới đẻ đã có đặc điểm hình thái, cấu tạo và sinh lý tương tự (giống) với con trưởng thành, chúng chỉ lớn lên mà không qua lột xác hay biến đổi hình thái đột ngột.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 37,
-      "type": "mcq",
-      "question": "Câu 37. Những động vật sinh trưởng và phát triển không qua biến thái là",
-      "options": [
-        "A. cá chép, gà, thỏ, khỉ.",
-        "B. cánh cam, bọ rùa, bướm, ruồi.",
-        "C. bọ ngựa, cào cào, tôm, cua",
-        "D. châu chấu, ếch, muỗi."
-      ],
-      "correct": "A. cá chép, gà, thỏ, khỉ.",
-      "explanation": "Hầu hết các động vật có xương sống (ngoại trừ lưỡng cư như ếch) đều phát triển không qua biến thái. Cá chép, gà (chim), thỏ, khỉ (thú) đẻ con hoặc đẻ trứng nở ra con non hình dáng giống con trưởng thành.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 38,
-      "type": "mcq",
-      "question": "Câu 38. Ý nghĩa sinh học của hiện tượng thụ tinh kép ở thực vật hạt kín là",
-      "options": [
-        "A. cung cấp chất dinh dưỡng cho sự phát triển của phôi và thời kì đầu của cá thể mới.",
-        "B. hình thành nội nhũ chứa các tế bào tam bội.",
-        "C. hình thành nội nhũ cung cấp chất dinh dưỡng cho phôi phát triển.",
-        "D. tiết kiệm vật liệu di truyền (do sử dụng cả hai tinh tử để thụ tinh)."
-      ],
-      "correct": "C. hình thành nội nhũ cung cấp chất dinh dưỡng cho phôi phát triển.",
-      "explanation": "Thụ tinh kép (một tinh tử kết hợp với noãn tạo hợp tử, một tinh tử kết hợp với nhân cực tạo nội nhũ 3n) có ý nghĩa sinh học là hình thành nội nhũ giàu chất dự trữ để cung cấp chất dinh dưỡng nuôi phôi phát triển, đảm bảo thế hệ sau có sức sống cao.",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 39,
-      "type": "mcq",
-      "question": "Câu 39. Sinh sản sinh dưỡng là hình thức sinh sản tạo ra cây mới chỉ từ một phần:",
-      "options": [
-        "A. của thân của cây mẹ và cây bố.",
-        "B. của cơ quan sinh dưỡng ở cây mẹ.",
-        "C. rễ của cây mẹ và không có bố.",
-        "D. lá của cây mẹ."
-      ],
-      "correct": "B. của cơ quan sinh dưỡng ở cây mẹ.",
-      "explanation": "Sinh sản sinh dưỡng là hình thức sinh sản vô tính ở thực vật, trong đó cây con được tạo ra từ một cơ quan sinh dưỡng của cây mẹ (có thể là thân, rễ hoặc lá).",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 40,
-      "type": "mcq",
-      "question": "Câu 40. Cho các loài thực vật sau, các loài thực vật có hình thức sinh sản bào tử là gì?\n(1) Rêu.\t(2) Dương xỉ.\t(3) Cỏ tranh.\n(4) Diếp cá.\t(5) Khoai lang.",
-      "options": [
-        "A. (1), (2).",
-        "B. (3), (4).",
-        "C. (2), (3).",
-        "D. (4), (5)."
-      ],
-      "correct": "A. (1), (2).",
-      "explanation": "Sinh sản bằng bào tử là hình thức sinh sản đặc trưng của các nhóm thực vật bậc thấp và trung bình chưa có hạt, bao gồm ngành Rêu (rêu) và ngành Quyết (dương xỉ).",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 41,
-      "type": "mcq",
-      "question": "Câu 41. Ví dụ nào sau đây là sinh sản?",
-      "options": [
-        "A. Cây cam mọc chồi mới.",
-        "B. Cây bàng thay bộ lá mới.",
-        "C. Cây chuối mọc chồi mới.",
-        "D. Cây bưởi ra nhiều quả mới."
-      ],
-      "correct": "C. Cây chuối mọc chồi mới.",
-      "explanation": "Sinh sản là quá trình tạo ra các cá thể mới bảo đảm sự phát triển liên tục của loài. Cây chuối mọc chồi mới từ thân ngầm tạo ra cây chuối con, đây là hình thức sinh sản sinh dưỡng (vô tính). Các phương án còn lại chỉ là hiện tượng sinh trưởng.",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 42,
-      "type": "mcq",
-      "question": "Câu 42. Sinh sản bào tử có ở những ngành thực vật nào?",
-      "options": [
-        "A. Rêu, hạt trần",
-        "B. Rêu, quyết",
-        "C. Quyết, hạt kín",
-        "D. Quyết, hạt trần"
-      ],
-      "correct": "B. Rêu, quyết",
-      "explanation": "Sinh sản bằng bào tử là đặc điểm sinh sản của các loài thực vật không có hạt thuộc ngành Rêu và ngành Quyết (dương xỉ).",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 43,
-      "type": "mcq",
-      "question": "Câu 43. Sự phát triển của túi phôi theo thứ tự sau:",
-      "options": [
-        "A. Bầu nhụy 🡪 noãn 🡪 túi phôi.",
-        "B. Bầu nhụy 🡪 noãn 🡪 đại bào tử 🡪 túi phôi.",
-        "C. Bầu nhụy 🡪 đại bào tử 🡪 túi phôi.",
-        "D. Bầu nhụy 🡪 túi phôi."
-      ],
-      "correct": "B. Bầu nhụy 🡪 noãn 🡪 đại bào tử 🡪 túi phôi.",
-      "explanation": "Bên trong bầu nhụy có noãn. Tế bào mẹ trong noãn giảm phân tạo ra 4 đại bào tử (trong đó 3 tiêu biến, 1 phát triển). Đại bào tử nguyên phân tạo thành túi phôi (thể giao tử cái chứa tế bào trứng).",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 44,
-      "type": "mcq",
-      "question": "Câu 44. Hình thức sinh sản vô tính nào có ở động vật không xương sống và có xương sống?",
-      "options": [
-        "A. Phân đôi.",
-        "B. Nảy chồi.",
-        "C. Trinh sinh.",
-        "D. Phân mảnh."
-      ],
-      "correct": "C. Trinh sinh.",
-      "explanation": "Trinh sinh là hình thức sinh sản mà trứng không qua thụ tinh tự phát triển thành cá thể mới. Nó xảy ra ở cả động vật không xương sống (ong, kiến, rệp) và một số động vật có xương sống (một số loài cá, lưỡng cư, bò sát).",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 45,
-      "type": "mcq",
-      "question": "Câu 45. Khi xét về hình thức sinh sản trong tự nhiên, cây nào sau đây không cùng nhóm với các cây còn lại?",
-      "options": [
-        "A. Cây mít.",
-        "B. Cây chuối.",
-        "C. Cây gừng.",
-        "D. Cây rau má."
-      ],
-      "correct": "A. Cây mít.",
-      "explanation": "Chuối, gừng, rau má có khả năng sinh sản vô tính bằng các cơ quan sinh dưỡng trong tự nhiên (thân rễ, thân ngầm, thân bò). Cây mít sinh sản chủ yếu bằng hình thức hữu tính (bằng hạt).",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 46,
-      "type": "mcq",
-      "question": "Câu 46. Xét các ngành thực vật sau:\n(1) Hạt trần\t\t(2) Rêu\t\t(3) Quyết\t\t(4) Hạt kín\nSinh sản bằng bào tử có ở:",
-      "options": [
-        "A. (1) và (2)",
-        "B. (1) và (4)",
-        "C. (2) và (3)",
-        "D. (3) và (4)"
-      ],
-      "correct": "C. (2) và (3)",
-      "explanation": "Sinh sản bằng bào tử (vô tính) xuất hiện ở ngành Rêu và ngành Quyết.",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 47,
-      "type": "mcq",
-      "question": "Câu 47. Sự phát triển của hạt phấn theo thứ tự:",
-      "options": [
-        "A. tế bào trong bao phấn giảm phân 🡪 bốn tiểu bào tử (n) nguyên phân 🡪 bốn hạt phấn (n).",
-        "B. tế bào trong bao phấn giảm phân 🡪 bốn tiểu bào tử (n) nguyên phân.",
-        "C. tế bào trong bao phấn giảm phân 🡪 bốn hạt phấn (n).",
-        "D. tế bào trong bao phấn giảm phân 🡪 bốn hạt phấn (n) 🡪 bốn tiểu bào tử (n) nguyên phân."
-      ],
-      "correct": "A. tế bào trong bao phấn giảm phân 🡪 bốn tiểu bào tử (n) nguyên phân 🡪 bốn hạt phấn (n).",
-      "explanation": "Tế bào mẹ hạt phấn (2n) trong bao phấn tiến hành giảm phân tạo ra 4 tiểu bào tử đơn bội (n). Mỗi tiểu bào tử này nguyên phân 1 lần tạo nên hạt phấn (gồm một tế bào sinh dưỡng và một tế bào sinh sản).",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 48,
-      "type": "true_false",
-      "question": "Ý a: Hình A mô tả kĩ thuật ghép cành, Hình B mô tả kĩ thuật ghép mắt.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Dựa vào đặc điểm các phương pháp nhân giống vô tính nhân tạo ở thực vật: việc nối một đoạn cành gọi là ghép cành, còn tách lấy một mắt ghép vào thân gốc gọi là ghép mắt.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 49,
-      "type": "true_false",
-      "question": "Ý b: Cây cho cành ghép và cây cho mắt ghép thường là cây có các tính trạng tốt, năng suất cao, chống chịu tốt với môi trường.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Mục đích của việc ghép là lấy những ưu điểm vượt trội (năng suất cao, phẩm chất tốt) của cành ghép hoặc mắt ghép để kết hợp với khả năng sinh trưởng khỏe, rễ tốt của gốc ghép.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 50,
-      "type": "true_false",
-      "question": "Ý c: Nếu tiếp tục lấy cây 1 và cây 2 làm giống cho các lần ghép tiếp theo thì các cây con vẫn tiếp tục giữ được các tính trạng tốt của cây mẹ ban đầu.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Ghép là hình thức sinh sản vô tính, dựa trên quá trình nguyên phân nên cơ sở di truyền không thay đổi, các đặc tính tốt của cây mẹ sẽ được duy trì và truyền lại nguyên vẹn.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 51,
-      "type": "true_false",
-      "question": "Ý d: Các bệnh trên cây mẹ, nhất là do virus có thể lây qua cây con qua nhiều thế hệ.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Nhược điểm lớn nhất của các phương pháp nhân giống vô tính (như giâm, chiết, ghép) là sự lây truyền các mầm bệnh như virus, nấm từ cây mẹ sang các thế hệ cây con nếu cây mẹ đã mang bệnh.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 52,
-      "type": "true_false",
-      "question": "Ý a: Quá trình A là quá trình thụ phấn chéo, quá trình B là tự thụ phấn",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Thụ phấn chéo (A) là hiện tượng hạt phấn từ hoa cây này rơi vào đầu nhụy hoa cây khác. Tự thụ phấn (B) là hiện tượng hạt phấn rơi vào nhụy của chính hoa đó hoặc cùng một cây.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 53,
-      "type": "true_false",
-      "question": "Ý b: Quá trình B có thể làm giống thoái hóa qua nhiều thế hệ.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Tự thụ phấn liên tục qua nhiều thế hệ làm tăng tỉ lệ đồng hợp tử lặn, dễ biểu hiện các tính trạng xấu (gen lặn có hại), dẫn tới hiện tượng thoái hóa giống.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 54,
-      "type": "true_false",
-      "question": "Ý c: Quá trình A nhờ sự hỗ trợ của các loài như ong, bướm hoặc tác động của gió.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Để thụ phấn chéo, hạt phấn cần được vận chuyển từ hoa này sang hoa khác (của cây khác) thông qua các tác nhân như côn trùng (ong, bướm), gió hoặc con người.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 55,
-      "type": "true_false",
-      "question": "Ý d: Quá trình A có thể tạo ra các giống mới có các phẩm chất tốt hơn so với giống ban đầu.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Thụ phấn chéo mang lại sự giao phối giữa các nguồn gen khác nhau, tạo ra các biến dị tổ hợp đa dạng, làm tăng ưu thế lai và có thể có phẩm chất vượt trội hơn.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 56,
-      "type": "true_false",
-      "question": "Ý a: Ở hình bên số (1) mô tả bao phấn, số (3) mô tả núm nhụy, số (4) mô tả hạt phấn.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Dựa trên cấu tạo hoa: bao phấn (1) chứa hạt phấn, ong mang phấn hoa đến đặt lên đầu nhụy/núm nhụy (3). Tại đây hạt phấn (4) sẽ nảy mầm và mọc ống phấn đâm sâu vào noãn.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 57,
-      "type": "true_false",
-      "question": "Ý b: Quá trình (2) gọi là quá trình thụ phấn nhờ côn trùng.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Quá trình ong mang hạt phấn bay từ nhị hoa này sang núm nhụy hoa khác chính là hoạt động thụ phấn nhờ động vật (cụ thể là côn trùng).",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 58,
-      "type": "true_false",
-      "question": "Ý c: Quá trình thụ phấn có hiệu quả cao vì con ong chỉ hút mật các cây cùng loài.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Trong mỗi chuyến đi kiếm ăn, ong thường thể hiện 'tính chung thủy với hoa' (flower constancy), ưu tiên viếng thăm những hoa cùng một loài, giúp quá trình thụ phấn chéo đạt hiệu quả rất cao.",
-      "image": "img",
-      "topic": "Tập tính ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 59,
-      "type": "true_false",
-      "question": "Ý d: Nếu quần thể ong bị sụt giảm số lượng thì sẽ gây bất lợi cho quá trình thụ phấn của loài thực vật này.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Ong là tác nhân thụ phấn chính yếu của rất nhiều thực vật hạt kín. Sự suy giảm của loài vật trung gian này làm giảm nghiêm trọng tỷ lệ thụ phấn và đậu quả.",
-      "image": "img",
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 60,
-      "type": "mcq",
-      "question": "Câu 52. Các hình thức sinh sản vô tính ở động vật là:",
-      "options": [
-        "A. phân đôi, nảy chồi, phân mảnh và trinh sinh.",
-        "B. phân đôi, nảy chồi, phân mảnh và đẻ trứng.",
-        "C. phân đôi, nảy chồi, đẻ trứng và trinh sinh.",
-        "D. phân đôi, nảy chồi, đẻ trứng thai và trinh sinh."
-      ],
-      "correct": "A. phân đôi, nảy chồi, phân mảnh và trinh sinh.",
-      "explanation": "Các hình thức sinh sản vô tính cơ bản ở động vật bao gồm: phân đôi (amip, trùng roi), nảy chồi (thủy tức), phân mảnh (bọt biển, sao biển) và trinh sinh (ong, rệp, kiến).",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 61,
-      "type": "mcq",
-      "question": "Câu 53. Trinh sinh là hình thức sinh sản mà:",
-      "options": [
-        "A. cơ thể mới phát triển từ trứng không được thụ tinh.",
-        "B. một các thể mẹ phân đôi thành hai cá thể có kích thước gần bằng nhau.",
-        "C. cơ thể mới phát triển từ mảnh tách ra từ cơ thể mẹ.",
-        "D. chồi mọc ra từ cơ thể mẹ, lớn dần lên, sau đó tách ra thành cơ thể mới."
-      ],
-      "correct": "A. cơ thể mới phát triển từ trứng không được thụ tinh.",
-      "explanation": "Trinh sinh (hay sinh sản trinh tiết) là hình thức sinh sản đặc biệt, trong đó tế bào trứng (n) không được thụ tinh với tinh trùng nhưng vẫn tự phát triển nguyên phân tạo thành cá thể mới (thường là cá thể đơn bội).",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 62,
-      "type": "mcq",
-      "question": "Câu 54. Động vật ở hình dưới có hình thức sinh sản là ?",
-      "options": [
-        "A. phân đôi.",
-        "B. đẻ con.",
-        "C. trinh sinh.",
-        "D. phân mảnh."
-      ],
-      "correct": "D. phân mảnh.",
-      "explanation": "Động vật (ví dụ sán lông Planaria, sao biển) khi bị cắt thành nhiều phần, mỗi mảnh có khả năng tái sinh và phát triển thành một cơ thể mới hoàn chỉnh. Đây là hình thức sinh sản vô tính bằng phân mảnh.",
-      "image": "img",
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 63,
-      "type": "mcq",
-      "question": "Câu 55. Thụ tinh là sự kết hợp giữa:",
-      "options": [
-        "A. tinh trùng đơn bội (n) và tế bào trứng lưỡng bội (2n) tạo thành hợp tử đa bội (3n).",
-        "B. tinh trùng đơn bội (n) và tế bào trứng lưỡng bội (2n) tạo thành hợp tử lưỡng bội (2n).",
-        "C. tinh trùng đơn bội (n) và tế bào trứng đơn bội (n) tạo thành hợp tử lưỡng bội (2n).",
-        "D. tinh trùng lưỡng bội (2n) và tế bào trứng lưỡng bội (2n) tạo thành hợp tử lưỡng bội (2n)."
-      ],
-      "correct": "C. tinh trùng đơn bội (n) và tế bào trứng đơn bội (n) tạo thành hợp tử lưỡng bội (2n).",
-      "explanation": "Trong sinh sản hữu tính, thụ tinh là sự kết hợp của hai loại giao tử đực (tinh trùng - n) và giao tử cái (trứng - n) để tạo thành hợp tử lưỡng bội (2n), khôi phục lại bộ nhiễm sắc thể đặc trưng của loài.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 64,
-      "type": "mcq",
-      "question": "Câu 56. Hình thức sinh sản vừa có ở động vật không xương sống và động vật có xương sống là:",
-      "options": [
-        "A. phân đôi.",
-        "B. nảy chồi.",
-        "C. phân mảnh.",
-        "D. trinh sinh"
-      ],
-      "correct": "D. trinh sinh",
-      "explanation": "Trinh sinh là hình thức sinh sản vô tính duy nhất có thể xảy ra ở cả hai nhóm: động vật không xương sống (ong, kiến, rệp) và cả ở động vật có xương sống (thằn lằn, rắn, cá, gà tây).",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 65,
-      "type": "short",
-      "question": "Câu 57: Thời gian sinh sản tinh trùng tính từ tinh nguyên bào đến khi tạo thành tinh trùng mất khoảng bao nhiêu ngày?",
-      "correct": "74",
-      "explanation": "Ở người, quá trình sinh tinh từ tinh nguyên bào qua các giai đoạn giảm phân và biệt hóa để hình thành tinh trùng trưởng thành mất khoảng 74 ngày.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 66,
-      "type": "short",
-      "question": "Câu 58: Trong các hệ cơ quan:\n1. Hệ tuần hoàn.\n2. Hệ nội tiết.\n3. Hệ hô hấp.\n4. Hệ bài tiết.\n5. Hệ sinh dục.\nCó bao nhiêu hệ cơ quan đóng vai trò chủ yếu trong điều hòa sinh sản?",
-      "correct": "1",
-      "explanation": "Trong quá trình điều hòa sinh sản, hệ nội tiết thông qua các hormone (như GnRH, FSH, LH, estrogen, testosterone...) đóng vai trò chủ đạo trực tiếp tác động lên hệ sinh dục.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 67,
-      "type": "short",
-      "question": "Câu 59: Trong các quá trình:\n1. Nguyên phân.\n2. Thụ tinh.\n3. Giảm phân.\n4. Sinh phôi.\nCó bao nhiêu quá trình không là cơ sở tế bào học của sinh sản vô tính ở động vật?",
-      "correct": "3",
-      "explanation": "Cơ sở tế bào học của sinh sản vô tính là nguyên phân (1). Các quá trình liên quan đến sinh sản hữu tính bao gồm thụ tinh (2), giảm phân (3) và sinh phôi hữu tính (4). Vậy có 3 quá trình không phải cơ sở của sinh sản vô tính.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "VD"
-    },
-    {
-      "id": 68,
-      "type": "short",
-      "question": "Câu 60: Trong các cơ quan: \n1. Vùng dưới đồi.\n2. Thể vàng.\n3. Nang trứng.\n4. Tuyến yên.\nCó bao nhiêu cơ quan của nữ giới tiết ra progesterone?",
-      "correct": "1",
-      "explanation": "Trong số các cơ quan đưa ra, chỉ có thể vàng (2) (hình thành sau khi nang trứng rụng) là cơ quan chủ yếu tiết ra hormone progesterone để duy trì niêm mạc tử cung.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 69,
-      "type": "mcq",
-      "question": "Câu 61. Sinh đẻ có kế hoạch ở người là",
-      "options": [
-        "A. điều chỉnh về số con, thời điểm sinh con và khoảng cách sinh con sao cho phù hợp gia đình.",
-        "B. điều chỉnh về số con, thời điểm sinh con sao cho phù hợp với việc nâng cao chất lượng cuộc sống gia đình, xã hội.",
-        "C. điều chỉnh về thời điểm sinh con và khoảng cách sinh con sao cho phù hợp với việc nâng cao chất lượng cuộc sống gia đình, xã hội.",
-        "D. điều chỉnh về số con, thời điểm sinh con và khoảng cách sinh con sao cho phù hợp với việc nâng cao chất lượng cuộc sống gia đình, xã hội."
-      ],
-      "correct": "D. điều chỉnh về số con, thời điểm sinh con và khoảng cách sinh con sao cho phù hợp với việc nâng cao chất lượng cuộc sống gia đình, xã hội.",
-      "explanation": "Sinh đẻ có kế hoạch bao hàm việc kiểm soát và điều chỉnh ba yếu tố: số lượng con sinh ra, khoảng cách thời gian giữa các lần sinh, và thời điểm sinh con phù hợp với độ tuổi, thể trạng nhằm nâng cao chất lượng cuộc sống.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 70,
-      "type": "short",
-      "question": "Câu 62. Trong các nguyên nhân: Thiếu protein; thiếu calcium; thiếu magie; thiếu vitamin; thiếu sắt. Có bao nhiêu nguyên nhân gây ra bệnh còi xương, chậm lớn ở trẻ em?",
-      "correct": "3",
-      "explanation": "Có 3 nguyên nhân chính kể trên gây ra bệnh còi xương và chậm lớn: thiếu protein (nguyên liệu xây dựng tế bào), thiếu calcium (khoáng chất cấu tạo xương), thiếu vitamin (đặc biệt là vitamin D giúp hấp thụ canxi).",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 71,
-      "type": "short",
-      "question": "Câu 63: Hình thức sinh sản hữu tính ở động vật có bao nhiêu giai đoạn?",
-      "correct": "4",
-      "explanation": "Sinh sản hữu tính thường trải qua các giai đoạn: 1. Hình thành giao tử (tinh trùng, trứng) - 2. Thụ tinh tạo hợp tử - 3. Phát triển phôi thai - 4. Đẻ con/Nở trứng.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 72,
-      "type": "short",
-      "question": "Câu 64. Ở thực vật có bao nhiêu loại mô phân sinh ?",
-      "correct": "3",
-      "explanation": "Có 3 loại mô phân sinh chính ở thực vật: Mô phân sinh đỉnh (chồi ngọn, chồi nách, rễ), Mô phân sinh bên (tầng sinh mạch, sinh bần) và Mô phân sinh lóng (ở cây 1 lá mầm).",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 73,
-      "type": "mcq",
-      "question": "Câu 12: Hình thức sinh sản vô tính nào ở động vật diễn ra đơn giản nhất?",
-      "options": [
-        "A. Nảy chồi.",
-        "B. Trinh sinh.",
-        "C. Phân mảnh.",
-        "D. Phân đôi."
-      ],
-      "correct": "D. Phân đôi.",
-      "explanation": "Phân đôi là hình thức sinh sản vô tính đơn giản nhất, phổ biến ở động vật đơn bào (amip, trùng roi), thông qua việc tế bào mẹ phân chia trực tiếp làm hai tế bào con.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 74,
-      "type": "short",
-      "question": "Câu 65. Trong các loại hình thức sinh sản sau đây, có bao nhiêu hình thức thuộc sinh sản vô tính?\n(1). Sinh sản sinh dưỡng; (2). Thụ phấn; (3). Sinh sản bằng bào tử; (4). Trinh sinh; (5). Giao phấn; (6). Nuôi cấy mô.",
-      "correct": "4",
-      "explanation": "Các hình thức sinh sản vô tính (không có sự kết hợp giao tử) bao gồm: Sinh sản sinh dưỡng (1), Sinh sản bằng bào tử (3), Trinh sinh (4) và Nuôi cấy mô tế bào nhân tạo (6). (Thụ phấn và giao phấn thuộc sinh sản hữu tính).",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 75,
-      "type": "short",
-      "question": "Câu 66. Ở thực vật có bao nhiêu kiểu sinh trưởng?",
-      "correct": "2",
-      "explanation": "Thực vật có 2 kiểu sinh trưởng cơ bản: Sinh trưởng sơ cấp (giúp tăng chiều dài thân rễ) và Sinh trưởng thứ cấp (giúp tăng bề ngang của cây thân gỗ).",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 76,
-      "type": "short",
-      "question": "Câu 67. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về tập tính ở động vật:\nA. Tập tính học được -> 1, 3, 5\nB. Tập tính sinh sản -> 4\nC. Tập tính di cư -> 2\nD. Tập tính bảo vệ lãnh thổ -> 6\n(Tương ứng các số trong đề)",
-      "correct": "A - 5; B - 4; C - 2; D - 6",
-      "explanation": "Học được: rút kinh nghiệm sau nhiều lần ngộ độc (5). Sinh sản: bao gồm tìm bạn tình, ấp trứng (4). Di cư: chim bay về phương Nam (2). Bảo vệ lãnh thổ: xua đuổi kẻ lạ (6).",
-      "image": null,
-      "topic": "Tập tính ở động vật",
-      "level": "VD"
-    },
-    {
-      "id": 77,
-      "type": "true_false",
-      "question": "Ý a: Lúa thuộc ngành thực vật hạt trần vì hạt thóc không được quả bảo vệ.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Lúa thuộc ngành Hạt kín. 'Hạt thóc' thực chất chính là quả lúa, vỏ trấu bên ngoài chính là vỏ quả bảo vệ hạt lúa gạo bên trong.",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 78,
-      "type": "true_false",
-      "question": "Ý b: Quả không hạt là quả đơn tính.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Quả đơn tính (parthenocarpy) là thuật ngữ sinh học chỉ loại quả được hình thành mà không cần thông qua sự thụ tinh của noãn, do đó hạt không được hình thành và ta có quả không hạt.",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 79,
-      "type": "true_false",
-      "question": "Ý c: Cây tre là thực vật có hoa.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Cây tre thuộc họ Hòa thảo, là thực vật Hạt kín (có hoa). Đặc điểm đặc biệt là tre chỉ nở hoa một lần duy nhất vào cuối vòng đời rồi lụi tàn.",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "NB"
-    },
-    {
-      "id": 80,
-      "type": "true_false",
-      "question": "Ý d: Mít thuộc nhóm cây cỏ quả đơn hạt.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Mít không phải là cây cỏ quả đơn hạt. Quả mít thực chất là một 'quả kép' (quả tụ) hình thành từ một cụm hoa, mỗi múi mít thực chất là phát triển từ một bông hoa đơn lẻ.",
-      "image": null,
-      "topic": "Sinh sản ở thực vật",
-      "level": "TH"
-    },
-    {
-      "id": 81,
-      "type": "true_false",
-      "question": "Ý a: Chú thích các con số: (1) sâu, (2) nhộng, (3) trứng, (4) bướm",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Thông thường trong vòng đời của bướm, thứ tự mô tả là (1) trứng nở ra (2) sâu, (3) đóng kén thành nhộng, (4) lột xác thành bướm trưởng thành.",
-      "image": "img",
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 82,
-      "type": "true_false",
-      "question": "Ý b: Ở giai đoạn (2) là giai đoạn gây ra tổn thất cho nông nghiệp nhất",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Nếu chú thích (2) là nhộng thì nhộng nằm yên trong kén, không ăn uống nên không phá hoại. Nếu theo đúng quá trình phá hoại thì giai đoạn sâu non (ấu trùng) mới là lúc ăn lá nhiều và phá hoại mạnh nhất.",
-      "image": "img",
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 83,
-      "type": "true_false",
-      "question": "Ý c: Giai đoanh (4) hình thành góp phần nâng cao năng suất cây trồng vì hoạt động hút mật hoa của bướm giúp cây thụ phấn.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Giai đoạn (4) bướm trưởng thành, di chuyển từ hoa này sang hoa khác hút mật, vô tình mang theo hạt phấn giúp cây giao phấn, tăng năng suất đậu quả đậu hạt.",
-      "image": "img",
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 84,
-      "type": "true_false",
-      "question": "Ý d: Sử dụng các thuốc bảo vệ thực vật hóa học để phòng trừ sâu hại phá hại mùa màng.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Không khuyến khích lạm dụng thuốc bảo vệ thực vật hóa học vì gây ô nhiễm và kháng thuốc. Cần ưu tiên các biện pháp sinh học, cơ học (bắt bằng tay, dùng bẫy ánh sáng, nuôi thiên địch).",
-      "image": "img",
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 85,
-      "type": "true_false",
-      "question": "Ý a: Tăng tiết hoocmon sinh dục nữ.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Dậy thì ở nữ khởi phát do vùng dưới đồi và tuyến yên kích thích buồng trứng, làm tăng mạnh quá trình tiết hormone sinh dục nữ (estrogen và progesteron).",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 86,
-      "type": "true_false",
-      "question": "Ý b: Tuyến vú phát triển.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Tác động của hormone estrogen trong tuổi dậy thì giúp hình thành các đặc điểm sinh dục phụ thứ cấp ở nữ, trong đó có sự nở nang của tuyến vú.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 87,
-      "type": "true_false",
-      "question": "Ý c: Tinh hoàn bắt đầu sản xuất tinh trùng.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Tinh hoàn sản xuất tinh trùng là đặc điểm thay đổi sinh lý diễn ra ở tuổi dậy thì của nam giới, không phải ở nữ giới.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 88,
-      "type": "true_false",
-      "question": "Ý d: Xuất hiện kinh nguyệt.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Đặc điểm đánh dấu buồng trứng đã hoạt động trưởng thành và có khả năng sinh sản ở nữ giới là hiện tượng kinh nguyệt bắt đầu xuất hiện.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 89,
-      "type": "true_false",
-      "question": "Ý a: Tìm hiểu những kiến thức về giới tính và sức khoẻ sinh sản từ những nguồn thông tin đáng tin cậy.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Nâng cao hiểu biết thông qua các tài liệu y tế, chuyên gia, trường lớp giúp thanh thiếu niên hiểu đúng về giới tính và tự bảo vệ mình.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 90,
-      "type": "true_false",
-      "question": "Ý b: Giáo dục giới tính từ sớm.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Việc giáo dục giới tính phù hợp lứa tuổi từ khi còn nhỏ giúp trẻ hình thành thói quen bảo vệ cơ thể và có tâm lý vững vàng trước tuổi dậy thì.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 91,
-      "type": "true_false",
-      "question": "Ý c: Không nên quan hệ tình dục trước tuổi trưởng thành.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Tránh quan hệ tình dục sớm bảo vệ cơ thể khỏi nguy cơ mang thai ngoài ý muốn và các bệnh lây truyền khi cơ thể và tâm lý chưa phát triển hoàn thiện.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 92,
-      "type": "true_false",
-      "question": "Ý d: Ngăn cấm không cho yêu sớm.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Tuổi vị thành niên nảy sinh tình cảm là tự nhiên. Việc cấm đoán khắt khe mang lại phản ứng ngược, thay vì vậy cần chia sẻ, định hướng để có tình bạn khác giới trong sáng.",
-      "image": null,
-      "topic": "Sinh sản ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 93,
-      "type": "true_false",
-      "question": "Ý a: Tăng phát triển xương.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Testosterone (ở nam giới) có tác dụng kích thích sụn mềm kéo dài và sự dày lên của xương, đóng vai trò tạo đà tăng trưởng mạnh chiều cao ở tuổi dậy thì.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 94,
-      "type": "true_false",
-      "question": "Ý b: Kích thích phân hoá tế bào.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Testosterone kích thích quá trình phân bào và biệt hóa tế bào, đặc biệt quan trọng trong việc hình thành tinh trùng ở nam giới.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 95,
-      "type": "true_false",
-      "question": "Ý c: Tăng tổng hợp protein, phát triển cơ bắp.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Testosterone là hormone đồng hóa có tính năng kích thích tổng hợp protein mạnh, khiến thể trạng cơ bắp nam giới trở nên rắn chắc và nở nang.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 96,
-      "type": "true_false",
-      "question": "Ý d: Hình thành các đặc điểm sinh dục phụ thứ cấp.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Đây là vai trò tiêu biểu nhất của testosterone: giúp phát triển cơ quan sinh dục và bộc lộ tính trạng thứ cấp như mọc râu, vỡ giọng, vai rộng.",
-      "image": null,
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 97,
-      "type": "true_false",
-      "question": "Ý a: Vòng đời của châu chấu là biến thái hoàn toàn",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Châu chấu phát triển qua biến thái không hoàn toàn, bao gồm ba giai đoạn: trứng, ấu trùng (có hình dạng gần giống trưởng thành nhưng chưa có cánh hoặc chưa hoàn thiện) và trưởng thành.",
-      "image": "img",
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 98,
-      "type": "true_false",
-      "question": "Ý b: Đây là kiểu phát triển gặp ở đa số các loài côn trùng như: châu chấu, cào cào, gián, tôm…",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Tôm thuộc ngành Chân khớp, lớp Giáp xác, không phải là côn trùng. Tôm trải qua biến thái phức tạp từ ấu trùng (nauplius).",
-      "image": "img",
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "TH"
-    },
-    {
-      "id": 99,
-      "type": "true_false",
-      "question": "Ý c: Sự khác biệt về cấu tạo và hình thái của ấu trùng giữa các lần lột xác kế tiếp nhau là không lớn.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Đặc trưng của biến thái không hoàn toàn là sự biến đổi dần dần qua nhiều lần lột xác, sau mỗi lần ấu trùng lớn lên một chút và hình thái dần được hoàn thiện (như cánh mọc dài thêm).",
-      "image": "img",
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "NB"
-    },
-    {
-      "id": 100,
-      "type": "true_false",
-      "question": "Ý d: Ấu trùng và châu chấu trưởng thành, trong ống tiêu hóa có đầy đủ các enzym tiêu hóa protein, lipit, cacbohiđrat nhưng thức ăn của chúng lại không giống nhau.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Ấu trùng châu chấu và châu chấu trưởng thành có chung môi trường sống và tiêu thụ chung một loại thức ăn (chủ yếu là lá cây - thực vật), đây là nguyên nhân gây cạnh tranh thức ăn trong cùng một loài.",
-      "image": "img",
-      "topic": "Sinh trưởng và phát triển ở động vật",
-      "level": "TH"
-    }
-  ]
+	"title": "Ôn tập Học kì II - Sinh học 11",
+	"subject": "Sinh học",
+	"questions": [
+		{
+			"id": 1,
+			"type": "mcq",
+			"question": "Câu 1. Hệ thần kinh dạng lưới thường gặp ở:",
+			"options": [
+				"A. Động vật có cơ thể đối xứng tỏa tròn.",
+				"B. Động vật có xương sống.",
+				"C. Các ngành giun như Giun dẹp, Giun tròn.",
+				"D. Động vật chân khớp, côn trùng."
+			],
+			"correct": "A. Động vật có cơ thể đối xứng tỏa tròn.",
+			"explanation": "Hệ thần kinh dạng lưới là dạng hệ thần kinh nguyên thủy nhất, có cấu tạo đơn giản, mạng lưới các tế bào thần kinh phân bố khắp cơ thể. Dạng này đặc trưng cho các động vật có cơ thể đối xứng tỏa tròn như ngành Ruột khoang (thủy tức, sứa, san hô...).",
+			"image": null,
+			"topic": "Cảm ứng ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 2,
+			"type": "mcq",
+			"question": "Câu 2. Ở động vật có hệ thần kinh, dựa vào đặc điểm cấu trúc hệ thần kinh chia thành các nhóm:",
+			"options": [
+				"A. hệ thần kinh dạng đốt và hệ thần kinh dạng ống.",
+				"B. hệ thần kinh dạng lưới và hệ thần kinh dạng ống.",
+				"C. hệ thần kinh dạng lưới, hệ thần kinh dạng chuỗi hạch, hệ thần kinh dạng ống.",
+				"D. hệ thần kinh dạng lưới, hệ thần kinh dạng đốt, hệ thần kinh dạng ống."
+			],
+			"correct": "C. hệ thần kinh dạng lưới, hệ thần kinh dạng chuỗi hạch, hệ thần kinh dạng ống.",
+			"explanation": "Theo chiều hướng tiến hóa của giới Động vật, hệ thần kinh được phân chia thành 3 dạng cấu trúc từ đơn giản đến phức tạp: Hệ thần kinh dạng lưới (ruột khoang) -> Hệ thần kinh dạng chuỗi hạch (giun, chân khớp) -> Hệ thần kinh dạng ống (động vật có xương sống).",
+			"image": null,
+			"topic": "Cảm ứng ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 3,
+			"type": "mcq",
+			"question": "Câu 3. Hệ thần kinh ống hoạt động theo nguyên tắc:",
+			"options": [
+				"A. phản xạ.",
+				"B. cảm ứng.",
+				"C. dẫn truyền",
+				"D. đáp ứng xung thần kinh"
+			],
+			"correct": "A. phản xạ.",
+			"explanation": "Mọi hoạt động của hệ thần kinh dạng ống (cũng như chuỗi hạch) đều thực hiện theo nguyên tắc phản xạ. Phản xạ là phản ứng của cơ thể trả lời kích thích của môi trường thông qua hệ thần kinh.",
+			"image": null,
+			"topic": "Cảm ứng ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 4,
+			"type": "mcq",
+			"question": "Câu 4. Tế bào thần kinh còn được gọi là:",
+			"options": [
+				"A. synapse.",
+				"B. neuron.",
+				"C. myelin.",
+				"D. ranvier."
+			],
+			"correct": "B. neuron.",
+			"explanation": "Neuron (nơ-ron) chính là tên gọi khoa học của tế bào thần kinh, là đơn vị cấu tạo và chức năng cơ bản của hệ thần kinh.",
+			"image": null,
+			"topic": "Cảm ứng ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 5,
+			"type": "mcq",
+			"question": "Câu 5. Sợi trục của neuron có chức năng:",
+			"options": [
+				"A. truyền kích thích ra khắp cơ thể.",
+				"B. truyền kích thích đến tế bào khác.",
+				"C. truyền xung thần kinh đến tế bào khác.",
+				"D. truyền xung thần kinh ra khắp cơ thể."
+			],
+			"correct": "C. truyền xung thần kinh đến tế bào khác.",
+			"explanation": "Sợi trục là phần kéo dài của nơ-ron, chức năng chính là dẫn truyền xung thần kinh từ thân nơ-ron đi xa, truyền đến các nơ-ron khác hoặc tế bào cơ quan đích (cơ, tuyến) thông qua xináp.",
+			"image": null,
+			"topic": "Cảm ứng ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 6,
+			"type": "mcq",
+			"question": "Câu 6. Chức năng của neuron là:",
+			"options": [
+				"A. tiếp nhận kích thích, tạo ra xung thần kinh và truyền xung thần kinh ra toàn cơ thể.",
+				"B. tiếp nhận kích thích, tạo ra xung thần kinh và truyền xung thần kinh đến neuron khác hoặc tế bào khác.",
+				"C. tiếp nhận xung thần kinh, tạo các kích thích và dẫn truyền đến neuron khác hoặc tế bào khác.",
+				"D. tiếp nhận xung thần kinh, tạo các kích thích và dẫn truyền ra toàn cơ thể."
+			],
+			"correct": "B. tiếp nhận kích thích, tạo ra xung thần kinh và truyền xung thần kinh đến neuron khác hoặc tế bào khác.",
+			"explanation": "Chức năng cơ bản của nơ-ron là cảm ứng (tiếp nhận kích thích từ môi trường hoặc từ nơ-ron khác, chuyển hóa thành xung thần kinh) và dẫn truyền (truyền xung thần kinh dọc theo sợi trục đến nơ-ron khác hoặc tế bào cơ quan đáp ứng).",
+			"image": null,
+			"topic": "Cảm ứng ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 7,
+			"type": "mcq",
+			"question": "Câu 7. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về phản xạ ở động vật:\n1. Phản xạ có điều kiện\na. Hít phải bụi ta “hắt xì hơi”. \nb. Nhìn thấy con quạ bay trên trời, gà con núp vào cánh gà mẹ.\n2. Phản xạ không điều kiện\nc. Nghe tiếng gọi “chít chít”, gà chạy tới.\nd. Khóc khi chào đời.",
+			"options": [
+				"A. 1-ac, 2-bd.",
+				"B. 1-ab, 2-cd.",
+				"C. 1-cd, 2-ab.",
+				"D. 1-bc, 2-ad."
+			],
+			"correct": "D. 1-bc, 2-ad.",
+			"explanation": "Phản xạ có điều kiện (học được trong đời sống): Gà núp khi thấy quạ (b), nghe gọi thì chạy tới (c). Phản xạ không điều kiện (bẩm sinh): Hắt xì khi hít bụi (a), khóc khi chào đời (d). Do đó ghép: 1-bc, 2-ad.",
+			"image": null,
+			"topic": "Cảm ứng ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 8,
+			"type": "mcq",
+			"question": "Câu 8. Tập tính là:",
+			"options": [
+				"A. Những động tác của động vật trả lời lại các kích thích",
+				"B. Những hành động của động vật trả lời lại các kích thích",
+				"C. Những suy nghĩ của động vật trả lời lại các kích thích",
+				"D. Những biểu hiện của động vật trả lời lại các kích thích"
+			],
+			"correct": "B. Những hành động của động vật trả lời lại các kích thích",
+			"explanation": "Tập tính là chuỗi những phản ứng, hành động của động vật trả lời kích thích từ môi trường (bao gồm môi trường bên trong hoặc bên ngoài cơ thể), giúp chúng thích nghi với môi trường sống và tồn tại.",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 9,
+			"type": "mcq",
+			"question": "Câu 9. Tập tính được thể hiện khi con vật nhận:",
+			"options": [
+				"A. Kích thích từ môi trường",
+				"B. Kích thích tại não bộ của cơ thể",
+				"C. Kích thích từ các tác nhân ngoại cảnh",
+				"D. Kích thích từ thiên nhiên sinh sống"
+			],
+			"correct": "A. Kích thích từ môi trường",
+			"explanation": "Tập tính luôn bắt đầu bằng một kích thích từ môi trường (bao gồm cả môi trường ngoài và môi trường trong cơ thể như sự thay đổi hormone, cảm giác đói khát...).",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 10,
+			"type": "mcq",
+			"question": "Câu 10. Khi thời tiết lạnh, cơ thể thằn lằn bị hạ nhiệt độ, thụ thể sẽ báo tin về não và buộc thằn lằn phải di chuyển đến nơi có ánh nắng để thu nhiệt là ví dụ về vai trò:",
+			"options": [
+				"A. Tăng khả năng thành công sinh sản",
+				"B. Tăng khả năng hình thành tập tính mới",
+				"C. Duy trì môi trường bên trong cơ thể ổn định",
+				"D. Tăng khả năng học hỏi của động vật"
+			],
+			"correct": "C. Duy trì môi trường bên trong cơ thể ổn định",
+			"explanation": "Hành động di chuyển tìm nắng của thằn lằn nhằm lấy nhiệt làm ấm cơ thể, chống lại cái lạnh của môi trường để duy trì thân nhiệt (ổn định môi trường trong cơ thể - nội môi).",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 11,
+			"type": "mcq",
+			"question": "Câu 11. Cơ sở giải thích tại sao học tập có thể đưa đến hình thành tập tính mới:",
+			"options": [
+				"A. Sự hình thành mối liên hệ thần kinh mới giữa các neuron",
+				"B. Sự thành lập gene mới",
+				"C. Do tiết ra nhiều hormone hơn",
+				"D. Do có sự liên kết giữa các cá thể trong loài"
+			],
+			"correct": "A. Sự hình thành mối liên hệ thần kinh mới giữa các neuron",
+			"explanation": "Cơ sở thần kinh của tập tính học được (tập tính mới) là sự hình thành các mối liên hệ thần kinh mới (đường liên hệ tạm thời) giữa các nơ-ron trong hệ thần kinh trung ương thông qua quá trình học tập và rút kinh nghiệm.",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 12,
+			"type": "mcq",
+			"question": "Câu 12. Con lớn thường đi đầu đàn là ví dụ về:",
+			"options": [
+				"A. Tập tính vị tha",
+				"B. Tập tính kiếm ăn",
+				"C. Tập tính thứ bậc",
+				"D. Tập tính hợp tác"
+			],
+			"correct": "C. Tập tính thứ bậc",
+			"explanation": "Trong các bầy đàn động vật, tập tính thứ bậc phân chia rõ ràng con đầu đàn (thường là con to lớn, khỏe mạnh nhất) có quyền ưu tiên về thức ăn, sinh sản và chỉ huy. Đi đầu đàn thể hiện sự phân cấp này.",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 13,
+			"type": "mcq",
+			"question": "Câu 13. Hình thức học tập đơn giản nhất ở động vật",
+			"options": [
+				"A. In vết",
+				"B. Học liên hệ",
+				"C. Học cách nhận biết không gian",
+				"D. Quen nhờn"
+			],
+			"correct": "D. Quen nhờn",
+			"explanation": "Quen nhờn là hình thức học tập đơn giản nhất. Khi kích thích lặp đi lặp lại nhiều lần mà không gây ra tác động có hại hay có lợi nào, động vật sẽ không trả lời lại kích thích đó nữa.",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 14,
+			"type": "mcq",
+			"question": "Câu 14. Hình thức học tập in vết phát triển nhất ở:",
+			"options": [
+				"A. Chim",
+				"B. Cáo",
+				"C. Rắn",
+				"D. Heo"
+			],
+			"correct": "A. Chim",
+			"explanation": "In vết (imprinting) là hình thức học tập đặc biệt thường thấy nhất và phát triển mạnh nhất ở các loài chim non mới nở. Chúng sẽ bám theo và học hỏi từ vật thể chuyển động đầu tiên mà chúng nhìn thấy (thường là chim mẹ).",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 15,
+			"type": "mcq",
+			"question": "Câu 15. Nối cột A với cột B sao cho các ví dụ trùng khớp với tên và định nghĩa của chúng.\nA\nB\n1. Tập tính bẩm sinh\na. Sinh ra đã có, di truyền từ bố mẹ\nb. Sau nhiều lần ăn thử sâu có màu đỏ và bị ngộ độc, chim chích không ăn loại sâu này nữa\n2. Tập tính học được\nc. Mọt gỗ chuyển động nhanh khi đi qua vùng khô\nd. Hình thành trong quá trình sống của cá thể",
+			"options": [
+				"A. 1-ab, 2-cd",
+				"B. 1-ac, 2-bd",
+				"C. 1-ad, 2-bc",
+				"D. 1-bc, 2-ad"
+			],
+			"correct": "B. 1-ac, 2-bd",
+			"explanation": "Tập tính bẩm sinh (1) mang tính di truyền, sinh ra đã có (a), ví dụ như mọt gỗ chạy nhanh qua vùng khô (c) là phản xạ không điều kiện. Tập tính học được (2) hình thành trong đời sống (d), ví dụ chim chích không ăn sâu độc do rút kinh nghiệm (b). Ghép: 1-ac, 2-bd.",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 16,
+			"type": "mcq",
+			"question": "Câu 16. Nối cột A với cột B sao cho các ví dụ trùng khớp với tên của chúng.\nA\nB\n1. Tập tính bảo vệ lãnh thổ\na. Bao gồm nhiều tập tính nhỏ như tìm kiếm bạn tình, ấp trứng, chăm sóc con,…\n2. Tập tính sinh sản\nb. Nếu kẻ khác cố tình xâm nhập và khu vực bảo vệ thì con chủ sẽ xua đuổi kẻ xâm nhập, đôi khi xảy ra các trận chiến dữ dội\n3. Tập tính di cư\nc. Chim bay về phương Nam khi mùa đông đến",
+			"options": [
+				"A. 1-a, 2-b, 3-c",
+				"B. 1-b, 2-a, 3-c",
+				"C. 1-b, 2-c, 3-a",
+				"D. 1-c, 2-b, 3-a"
+			],
+			"correct": "B. 1-b, 2-a, 3-c",
+			"explanation": "Bảo vệ lãnh thổ (1) là xua đuổi kẻ xâm nhập (b). Tập tính sinh sản (2) liên quan đến tìm bạn tình, chăm sóc con (a). Di cư (3) là di chuyển xa theo mùa như chim bay về Nam (c). Ghép: 1-b, 2-a, 3-c.",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 17,
+			"type": "mcq",
+			"question": "Câu 17. Đặc điểm nào không có ở sinh trưởng thứ cấp?",
+			"options": [
+				"A. Làm tăng kích thước chiều ngang của cây.",
+				"B. Diễn ra chủ yếu ở cây một lá mầm và hạn chế ở cây hai lá mầm.",
+				"C. Diễn ra hoạt động của tầng sinh mạch.",
+				"D. Diễn ra hoạt động của tầng sinh bần (vỏ)."
+			],
+			"correct": "B. Diễn ra chủ yếu ở cây một lá mầm và hạn chế ở cây hai lá mầm.",
+			"explanation": "Sinh trưởng thứ cấp là sự sinh trưởng làm tăng bề ngang của thân do hoạt động của mô phân sinh bên (tầng sinh mạch, tầng sinh bần). Quá trình này đặc trưng và diễn ra ở cây hai lá mầm, cây một lá mầm hầu như không có sinh trưởng thứ cấp. Do đó nhận định B là sai.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 18,
+			"type": "mcq",
+			"question": "Câu 18. Sinh trưởng thứ cấp là:",
+			"options": [
+				"A. Sự tăng trưởng bề ngang của cây do mô phân sinh bên của cây thân thảo hoạt động tạo ra.",
+				"B. Sự tăng trưởng bề ngang của cây do mô phân sinh bên của cây thân gỗ hoạt động tạo ra.",
+				"C. Sự tăng trưởng bề ngang của cây một lá mầm do mô phân sinh bên của cây hoạt động tạo ra.",
+				"D. Sự tăng trưởng bề ngang của cây do mô phân sinh lóng của cây hoạt động tạo ra."
+			],
+			"correct": "B. Sự tăng trưởng bề ngang của cây do mô phân sinh bên của cây thân gỗ hoạt động tạo ra.",
+			"explanation": "Sinh trưởng thứ cấp ở thực vật là sự tăng bề ngang (đường kính) của thân và rễ, chủ yếu diễn ra ở thực vật hai lá mầm (đặc biệt là cây thân gỗ), nhờ sự phân chia của các tế bào thuộc mô phân sinh bên (tầng sinh mạch và tầng sinh bần).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 19,
+			"type": "mcq",
+			"question": "Câu 19. Cây trung tính là các cây",
+			"options": [
+				"A. hành, cà rốt, rau diếp, sen cạn, củ cải đường.",
+				"B. thanh long, cà tím, cà phê ngô, hướng dương",
+				"C. thược dược, đậu tương, vừng, gai dầu, mía.",
+				"D. cà chua, lạc, đậu, ngô, hướng dương."
+			],
+			"correct": "D. cà chua, lạc, đậu, ngô, hướng dương.",
+			"explanation": "Cây trung tính là cây ra hoa ở bất kỳ quang chu kỳ nào (độ dài ngày và đêm không ảnh hưởng tới sự ra hoa), ví dụ điển hình là cà chua, lạc, đậu, ngô, hướng dương.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 20,
+			"type": "mcq",
+			"question": "Câu 20. Đặc điểm nào không có ở sinh trưởng sơ cấp?",
+			"options": [
+				"A. Làm tăng kích thước chiều dài của cây.",
+				"B. Diễn ra hoạt động của tầng sinh bần.",
+				"C. Diễn ra cả ở cây một lá mầm và cây hai lá mầm.",
+				"D. Diễn ra hoạt động của mô phân sinh đỉnh."
+			],
+			"correct": "B. Diễn ra hoạt động của tầng sinh bần.",
+			"explanation": "Sinh trưởng sơ cấp diễn ra do hoạt động của mô phân sinh đỉnh (và lóng ở cây 1 lá mầm), giúp thân và rễ dài ra. Hoạt động của tầng sinh bần thuộc về sinh trưởng thứ cấp làm tăng bề ngang.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 21,
+			"type": "mcq",
+			"question": "Câu 21. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về sinh trưởng ở thực vật:\n1. Sinh trưởng sơ cấp\na. Là sự sinh trưởng của thân và rễ theo chiều dài do hoạt động của mô phân sinh đỉnh.\nb. Diễn ra ở thực vật 2 lá mầm.\n2. Sinh trưởng thứ cấp\nc. Là sự tăng trưởng bề ngang của cây do mô phân sinh bên của cây thân gỗ hoạt động tạo ra.\nd. Diễn ra ở thực vật 1 lá mầm.",
+			"options": [
+				"A. 1-ac, 2-bd.",
+				"B. 1-bd, 2-ac.",
+				"C. 1-bc, 2-ad.",
+				"D. 1-ad, 2-bc."
+			],
+			"correct": "D. 1-ad, 2-bc.",
+			"explanation": "Sinh trưởng sơ cấp (1) là sinh trưởng chiều dài (a) và cũng là kiểu sinh trưởng duy nhất của cây 1 lá mầm (d). Sinh trưởng thứ cấp (2) là sinh trưởng bề ngang (c) và xảy ra ở thực vật 2 lá mầm (b). Ghép hợp lí là 1-ad, 2-bc.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 22,
+			"type": "mcq",
+			"question": "Câu 22. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về đại diện các loại cây:\n1. Cây ngắn ngày\na. Cà chua, lạc, đậu, ngô, hướng dương...\n2. Cây trung tính\nb. Hành, cà rốt, lúa mì...\n3. Cây dài ngày\nc. Đậu tương, vừng, cà tím, mía...",
+			"options": [
+				"A. 1-c, 2-b, 3-a.",
+				"B. 1-b, 2-a, 3-c.",
+				"C. 1-c, 2-a, 3-b.",
+				"D. 1-b, 2-c, 3-a."
+			],
+			"correct": "C. 1-c, 2-a, 3-b.",
+			"explanation": "Cây ngắn ngày (1) là đậu tương, vừng, mía (c). Cây trung tính (2) không phụ thuộc ánh sáng là cà chua, lạc, đậu ngô (a). Cây dài ngày (3) là hành, cà rốt, lúa mì (b). Ghép 1-c, 2-a, 3-b.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 23,
+			"type": "mcq",
+			"question": "Câu 23. Các cây ngày ngắn là:",
+			"options": [
+				"A. Thược dược, đậu tương, vừng, gai dầu, mía.",
+				"B. Cà chua, lạc, đậu, ngô, hướng dương.",
+				"C. Thanh long, cà tím, cà phê ngô, hướng dương.",
+				"D. Hành, cà rốt, rau diếp, sen cạn, củ cải đường."
+			],
+			"correct": "A. Thược dược, đậu tương, vừng, gai dầu, mía.",
+			"explanation": "Cây ngày ngắn thường ra hoa khi thời gian chiếu sáng trong ngày ngắn hơn một ngưỡng nhất định. Các ví dụ điển hình là thược dược, đậu tương, vừng, gai dầu, mía.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 24,
+			"type": "mcq",
+			"question": "Câu 24. Thứ tự các loại mô phân sinh tính từ ngọn đến rễ cây 2 lá mầm là",
+			"options": [
+				"A. mô phân sinh đỉnh → mô phân sinh bên → mô phân sinh đỉnh rễ",
+				"B. mô phân sinh đỉnh → mô phân sinh đỉnh rễ → mô phân sinh bên",
+				"C. mô phân sinh đỉnh rễ → mô phân sinh đỉnh → mô phân sinh bên",
+				"D. mô phân sinh bên → mô phân sinh đỉnh → mô phân sinh đỉnh rễ"
+			],
+			"correct": "A. mô phân sinh đỉnh → mô phân sinh bên → mô phân sinh đỉnh rễ",
+			"explanation": "Mô phân sinh đỉnh nằm ở chồi đỉnh (ngọn) giúp cây cao lên. Mô phân sinh bên nằm chạy dọc thân rễ giúp tăng bề ngang. Mô phân sinh đỉnh rễ nằm ở chóp rễ. Nên thứ tự từ ngọn xuống rễ là Đỉnh -> Bên -> Đỉnh rễ.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 25,
+			"type": "mcq",
+			"question": "Câu 25. Thời gian sống (thời gian tồn tại) của một loài sinh vật hoặc con người là",
+			"options": [
+				"A. tuổi đời",
+				"B. chu kỳ chết",
+				"C. tuổi thọ",
+				"D. vòng đời"
+			],
+			"correct": "C. tuổi thọ",
+			"explanation": "Tuổi thọ là khái niệm chỉ khoảng thời gian sống hay thời gian tồn tại của một sinh vật (từ lúc sinh ra đến lúc chết đi) hoặc con người.",
+			"image": null,
+			"topic": "Khái quát về sinh trưởng và phát triển",
+			"level": "NB"
+		},
+		{
+			"id": 26,
+			"type": "mcq",
+			"question": "Câu 26. Các cây trung tính là cây",
+			"options": [
+				"A. thanh long, cà tím, cà phê ngô, huớng dương.",
+				"B. hành, cà rốt, rau diếp, sen cạn, củ cải đường.",
+				"C. cà chua, lạc, đậu, ngô, hướng dương.",
+				"D. thược dược, đậu tương, vừng, gai dầu, mía."
+			],
+			"correct": "C. cà chua, lạc, đậu, ngô, hướng dương.",
+			"explanation": "Cây trung tính là các cây mà sự ra hoa không phụ thuộc vào độ dài ngày hay đêm (quang chu kỳ). Đại diện nhóm này gồm cà chua, lạc, đậu, ngô, hướng dương.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 27,
+			"type": "mcq",
+			"question": "Câu 27. Mô phân sinh đỉnh không có ở vị trí nào của cây?",
+			"options": [
+				"A. Ở đỉnh rễ.",
+				"B. Ở thân.",
+				"C. Ở chồi nách.",
+				"D. Ở chồi đỉnh."
+			],
+			"correct": "B. Ở thân.",
+			"explanation": "Mô phân sinh đỉnh nằm ở chồi đỉnh, chồi nách và đỉnh rễ. Nó không tồn tại ở dọc thân cây (vị trí ở dọc thân thường là mô phân sinh bên hoặc mô phân sinh lóng).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 28,
+			"type": "mcq",
+			"question": "Câu 28. Khoảng thời gian tính từ khi cơ thể được sinh ra, lớn lên, phát triển thành cơ thể trưởng thành, sinh sản tạo ra cá thể mới, già đi rồi chết được gọi là",
+			"options": [
+				"A. tuổi đời",
+				"B. chu kỳ chết",
+				"C. tuổi thọ",
+				"D. vòng đời"
+			],
+			"correct": "D. vòng đời",
+			"explanation": "Vòng đời (hay chu kỳ sống) là khoảng thời gian tính từ khi cơ thể được sinh ra, lớn lên, phát triển thành cơ thể trưởng thành, sinh sản tạo ra cá thể mới, già đi rồi chết.",
+			"image": null,
+			"topic": "Khái quát về sinh trưởng và phát triển",
+			"level": "NB"
+		},
+		{
+			"id": 29,
+			"type": "mcq",
+			"question": "Câu 29. Các cây ngày ngắn gồm các cây",
+			"options": [
+				"A. thược dược, đậu tương, vừng, gai dầu, mía.",
+				"B. cà chua, lạc, đậu, ngô, hướng dương.",
+				"C. thanh long, cà tím, cà phê ngô, hướng dương.",
+				"D. hành, cà rốt, rau diếp, sen cạn, củ cải đường."
+			],
+			"correct": "A. thược dược, đậu tương, vừng, gai dầu, mía.",
+			"explanation": "Cây ngày ngắn là các cây cần ánh sáng ít hơn một giới hạn (thường ra hoa vào mùa thu đông) như thược dược, đậu tương, vừng, mía.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 30,
+			"type": "mcq",
+			"question": "Câu 30. Đặc điểm nào không có ở sinh trưởng thứ cấp?",
+			"options": [
+				"A. Làm tăng kích thước chiều ngang của cây.",
+				"B. Chỉ diễn ra chủ yếu ở cây một lá mầm.",
+				"C. Diễn ra hoạt động của tầng sinh mạch.",
+				"D. Diễn ra hoạt động của tầng sinh bần (vỏ)."
+			],
+			"correct": "B. Chỉ diễn ra chủ yếu ở cây một lá mầm.",
+			"explanation": "Sinh trưởng thứ cấp là quá trình diễn ra ở cây hai lá mầm, giúp cây phát triển bề ngang, không có hoặc hạn chế ở cây một lá mầm.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 31,
+			"type": "mcq",
+			"question": "Câu 31. Giai đoạn nhộng trong vòng đời của bướm là",
+			"options": [
+				"A. giai đoạn tích luỹ dinh dưỡng.",
+				"B. giai đoạn có sự chuyển hoá bên trong diễn ra mạnh mẽ.",
+				"C. giai đoạn thích nghi với chức năng sinh sản.",
+				"D. giai đoạn trung gian tạo ra thế hệ sâu mới."
+			],
+			"correct": "B. giai đoạn có sự chuyển hoá bên trong diễn ra mạnh mẽ.",
+			"explanation": "Ở côn trùng biến thái hoàn toàn như bướm, giai đoạn nhộng tuy trông bất động nhưng bên trong lại diễn ra quá trình phân giải tế bào, cơ quan của ấu trùng và hình thành các cơ quan cấu tạo mới của con trưởng thành vô cùng mạnh mẽ.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 32,
+			"type": "mcq",
+			"question": "Câu 32. Hình thức sinh sản và phát triển của châu chấu là",
+			"options": [
+				"A. đẻ con và biến thái hoàn toàn.",
+				"B. đẻ con và biến thái không hoàn toàn.",
+				"C. đẻ trứng và biến thái hoàn toàn.",
+				"D. đẻ trứng và biến thái không hoàn toàn."
+			],
+			"correct": "D. đẻ trứng và biến thái không hoàn toàn.",
+			"explanation": "Châu chấu là loài côn trùng đẻ trứng, sau đó trứng nở thành ấu trùng có hình dạng gần giống với con trưởng thành nhưng chưa hoàn thiện, trải qua các lần lột xác để lớn lên nên gọi là phát triển qua biến thái không hoàn toàn.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 33,
+			"type": "mcq",
+			"question": "Câu 33. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về sự sinh trưởng và phát triển của động vật:\n1. Không qua biến thái\na. Bọ ngựa, cào cào, ve sầu.\nb. Ruồi, tằm, ong.\n3. Qua biến thái hoàn toàn\nc. Lợn, thỏ, bồ câu.",
+			"options": [
+				"A. 1-a, 2-b, 3-c.",
+				"B. 1-c, 2-a, 3-b.",
+				"C. 1-c, 2-b, 3-a.",
+				"D. 1-a, 2-c, 3-b."
+			],
+			"correct": "B. 1-c, 2-a, 3-b.",
+			"explanation": "Không qua biến thái (1) gồm chim và thú như lợn, thỏ, bồ câu (c). Biến thái không hoàn toàn (2) có cào cào, ve sầu, bọ ngựa (a). Biến thái hoàn toàn (3) có bướm, ruồi, muỗi, ong (b). Ghép đúng: 1-c, 2-a, 3-b.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 34,
+			"type": "mcq",
+			"question": "Câu 34. Những động vật nào sau đây có quá trình sinh trưởng và phát triển trải qua biến thái hoàn toàn?\n(1) Ong\t(2) Cào cào\t(3) Chuồn chuồn\n(4) Muỗi\t(5) Ve sầu\t(6) Bọ hung",
+			"options": [
+				"A. 1, 2, 3, 4, 6.",
+				"B. 1, 3, 4, 6.",
+				"C. 1, 2, 3, 5, 6.",
+				"D. 2, 3, 4, 5."
+			],
+			"correct": "B. 1, 3, 4, 6.",
+			"explanation": "Nhóm phát triển qua biến thái hoàn toàn trong danh sách gồm: Ong (1), Muỗi (4) và Bọ hung (6). (Cào cào, ve sầu là biến thái không hoàn toàn. Chuồn chuồn là biến thái không hoàn toàn, nhưng dựa theo các phương án của đề thi thì đáp án chứa 1, 4, 6 tối ưu nhất là B).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 35,
+			"type": "mcq",
+			"question": "Câu 35. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về sự sinh trưởng và phát triển của động vật:\n1. Không qua biến thái\na. Con mới nở đã có hình dạng, cấu tạo và sinh lý gần giống với con trưởng thành.\n2. Qua biến thái không hoàn toàn\nb. Con non mới nở hoặc mới sinh có hình thái, cấu tạo và sinh lí tương tự con trưởng thành.\n3. Qua biến thái hoàn toàn\nc. Con mới nở có hình dạng, cấu tạo và sinh lí rất khác với con trưởng thành.",
+			"options": [
+				"A. 1-b, 2-a, 3-c.",
+				"B. 1-a, 2-b, 3-c.",
+				"C. 1-b, 2-c, 3-a.",
+				"D. 1-a, 2-c, 3-b."
+			],
+			"correct": "A. 1-b, 2-a, 3-c.",
+			"explanation": "Không qua biến thái (1) thì con non có hình dạng cấu tạo tương tự con trưởng thành (b). Biến thái không hoàn toàn (2) thì con non gần giống (a), lớn lên qua các lần lột xác. Biến thái hoàn toàn (3) thì con non (ấu trùng) rất khác con trưởng thành (c). Ghép: 1-b, 2-a, 3-c.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 36,
+			"type": "mcq",
+			"question": "Câu 36. Phát triển không qua biến thái có đặc điểm",
+			"options": [
+				"A. con non cấu tạo giống con trưởng thành.",
+				"B. con non gần giống con trưởng thành.",
+				"C. con non khác con trưởng thành.",
+				"D. phải qua một lần lột xác."
+			],
+			"correct": "A. con non cấu tạo giống con trưởng thành.",
+			"explanation": "Phát triển không qua biến thái là kiểu phát triển mà con non mới nở hoặc mới đẻ đã có đặc điểm hình thái, cấu tạo và sinh lý tương tự (giống) với con trưởng thành, chúng chỉ lớn lên mà không qua lột xác hay biến đổi hình thái đột ngột.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 37,
+			"type": "mcq",
+			"question": "Câu 37. Những động vật sinh trưởng và phát triển không qua biến thái là",
+			"options": [
+				"A. cá chép, gà, thỏ, khỉ.",
+				"B. cánh cam, bọ rùa, bướm, ruồi.",
+				"C. bọ ngựa, cào cào, tôm, cua",
+				"D. châu chấu, ếch, muỗi."
+			],
+			"correct": "A. cá chép, gà, thỏ, khỉ.",
+			"explanation": "Hầu hết các động vật có xương sống (ngoại trừ lưỡng cư như ếch) đều phát triển không qua biến thái. Cá chép, gà (chim), thỏ, khỉ (thú) đẻ con hoặc đẻ trứng nở ra con non hình dáng giống con trưởng thành.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 38,
+			"type": "mcq",
+			"question": "Câu 38. Ý nghĩa sinh học của hiện tượng thụ tinh kép ở thực vật hạt kín là",
+			"options": [
+				"A. cung cấp chất dinh dưỡng cho sự phát triển của phôi và thời kì đầu của cá thể mới.",
+				"B. hình thành nội nhũ chứa các tế bào tam bội.",
+				"C. hình thành nội nhũ cung cấp chất dinh dưỡng cho phôi phát triển.",
+				"D. tiết kiệm vật liệu di truyền (do sử dụng cả hai tinh tử để thụ tinh)."
+			],
+			"correct": "C. hình thành nội nhũ cung cấp chất dinh dưỡng cho phôi phát triển.",
+			"explanation": "Thụ tinh kép (một tinh tử kết hợp với noãn tạo hợp tử, một tinh tử kết hợp với nhân cực tạo nội nhũ 3n) có ý nghĩa sinh học là hình thành nội nhũ giàu chất dự trữ để cung cấp chất dinh dưỡng nuôi phôi phát triển, đảm bảo thế hệ sau có sức sống cao.",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 39,
+			"type": "mcq",
+			"question": "Câu 39. Sinh sản sinh dưỡng là hình thức sinh sản tạo ra cây mới chỉ từ một phần:",
+			"options": [
+				"A. của thân của cây mẹ và cây bố.",
+				"B. của cơ quan sinh dưỡng ở cây mẹ.",
+				"C. rễ của cây mẹ và không có bố.",
+				"D. lá của cây mẹ."
+			],
+			"correct": "B. của cơ quan sinh dưỡng ở cây mẹ.",
+			"explanation": "Sinh sản sinh dưỡng là hình thức sinh sản vô tính ở thực vật, trong đó cây con được tạo ra từ một cơ quan sinh dưỡng của cây mẹ (có thể là thân, rễ hoặc lá).",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 40,
+			"type": "mcq",
+			"question": "Câu 40. Cho các loài thực vật sau, các loài thực vật có hình thức sinh sản bào tử là gì?\n(1) Rêu.\t(2) Dương xỉ.\t(3) Cỏ tranh.\n(4) Diếp cá.\t(5) Khoai lang.",
+			"options": [
+				"A. (1), (2).",
+				"B. (3), (4).",
+				"C. (2), (3).",
+				"D. (4), (5)."
+			],
+			"correct": "A. (1), (2).",
+			"explanation": "Sinh sản bằng bào tử là hình thức sinh sản đặc trưng của các nhóm thực vật bậc thấp và trung bình chưa có hạt, bao gồm ngành Rêu (rêu) và ngành Quyết (dương xỉ).",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 41,
+			"type": "mcq",
+			"question": "Câu 41. Ví dụ nào sau đây là sinh sản?",
+			"options": [
+				"A. Cây cam mọc chồi mới.",
+				"B. Cây bàng thay bộ lá mới.",
+				"C. Cây chuối mọc chồi mới.",
+				"D. Cây bưởi ra nhiều quả mới."
+			],
+			"correct": "C. Cây chuối mọc chồi mới.",
+			"explanation": "Sinh sản là quá trình tạo ra các cá thể mới bảo đảm sự phát triển liên tục của loài. Cây chuối mọc chồi mới từ thân ngầm tạo ra cây chuối con, đây là hình thức sinh sản sinh dưỡng (vô tính). Các phương án còn lại chỉ là hiện tượng sinh trưởng.",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 42,
+			"type": "mcq",
+			"question": "Câu 42. Sinh sản bào tử có ở những ngành thực vật nào?",
+			"options": [
+				"A. Rêu, hạt trần",
+				"B. Rêu, quyết",
+				"C. Quyết, hạt kín",
+				"D. Quyết, hạt trần"
+			],
+			"correct": "B. Rêu, quyết",
+			"explanation": "Sinh sản bằng bào tử là đặc điểm sinh sản của các loài thực vật không có hạt thuộc ngành Rêu và ngành Quyết (dương xỉ).",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 43,
+			"type": "mcq",
+			"question": "Câu 43. Sự phát triển của túi phôi theo thứ tự sau:",
+			"options": [
+				"A. Bầu nhụy 🡪 noãn 🡪 túi phôi.",
+				"B. Bầu nhụy 🡪 noãn 🡪 đại bào tử 🡪 túi phôi.",
+				"C. Bầu nhụy 🡪 đại bào tử 🡪 túi phôi.",
+				"D. Bầu nhụy 🡪 túi phôi."
+			],
+			"correct": "B. Bầu nhụy 🡪 noãn 🡪 đại bào tử 🡪 túi phôi.",
+			"explanation": "Bên trong bầu nhụy có noãn. Tế bào mẹ trong noãn giảm phân tạo ra 4 đại bào tử (trong đó 3 tiêu biến, 1 phát triển). Đại bào tử nguyên phân tạo thành túi phôi (thể giao tử cái chứa tế bào trứng).",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 44,
+			"type": "mcq",
+			"question": "Câu 44. Hình thức sinh sản vô tính nào có ở động vật không xương sống và có xương sống?",
+			"options": [
+				"A. Phân đôi.",
+				"B. Nảy chồi.",
+				"C. Trinh sinh.",
+				"D. Phân mảnh."
+			],
+			"correct": "C. Trinh sinh.",
+			"explanation": "Trinh sinh là hình thức sinh sản mà trứng không qua thụ tinh tự phát triển thành cá thể mới. Nó xảy ra ở cả động vật không xương sống (ong, kiến, rệp) và một số động vật có xương sống (một số loài cá, lưỡng cư, bò sát).",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 45,
+			"type": "mcq",
+			"question": "Câu 45. Khi xét về hình thức sinh sản trong tự nhiên, cây nào sau đây không cùng nhóm với các cây còn lại?",
+			"options": [
+				"A. Cây mít.",
+				"B. Cây chuối.",
+				"C. Cây gừng.",
+				"D. Cây rau má."
+			],
+			"correct": "A. Cây mít.",
+			"explanation": "Chuối, gừng, rau má có khả năng sinh sản vô tính bằng các cơ quan sinh dưỡng trong tự nhiên (thân rễ, thân ngầm, thân bò). Cây mít sinh sản chủ yếu bằng hình thức hữu tính (bằng hạt).",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 46,
+			"type": "mcq",
+			"question": "Câu 46. Xét các ngành thực vật sau:\n(1) Hạt trần\t\t(2) Rêu\t\t(3) Quyết\t\t(4) Hạt kín\nSinh sản bằng bào tử có ở:",
+			"options": [
+				"A. (1) và (2)",
+				"B. (1) và (4)",
+				"C. (2) và (3)",
+				"D. (3) và (4)"
+			],
+			"correct": "C. (2) và (3)",
+			"explanation": "Sinh sản bằng bào tử (vô tính) xuất hiện ở ngành Rêu và ngành Quyết.",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 47,
+			"type": "mcq",
+			"question": "Câu 47. Sự phát triển của hạt phấn theo thứ tự:",
+			"options": [
+				"A. tế bào trong bao phấn giảm phân 🡪 bốn tiểu bào tử (n) nguyên phân 🡪 bốn hạt phấn (n).",
+				"B. tế bào trong bao phấn giảm phân 🡪 bốn tiểu bào tử (n) nguyên phân.",
+				"C. tế bào trong bao phấn giảm phân 🡪 bốn hạt phấn (n).",
+				"D. tế bào trong bao phấn giảm phân 🡪 bốn hạt phấn (n) 🡪 bốn tiểu bào tử (n) nguyên phân."
+			],
+			"correct": "A. tế bào trong bao phấn giảm phân 🡪 bốn tiểu bào tử (n) nguyên phân 🡪 bốn hạt phấn (n).",
+			"explanation": "Tế bào mẹ hạt phấn (2n) trong bao phấn tiến hành giảm phân tạo ra 4 tiểu bào tử đơn bội (n). Mỗi tiểu bào tử này nguyên phân 1 lần tạo nên hạt phấn (gồm một tế bào sinh dưỡng và một tế bào sinh sản).",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 48,
+			"type": "true_false",
+			"question": "Câu 48. Hình trên mô tả kĩ thuật nhân giống vô tính của thực vật, mỗi nhận định sau đây là Đúng hay Sai khi nói về kĩ thuật này ? \n  a: Hình A mô tả kĩ thuật ghép cành, Hình B mô tả kĩ thuật ghép mắt.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Dựa vào đặc điểm các phương pháp nhân giống vô tính nhân tạo ở thực vật: việc nối một đoạn cành gọi là ghép cành, còn tách lấy một mắt ghép vào thân gốc gọi là ghép mắt.",
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-48.png",
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 49,
+			"type": "true_false",
+			"question": "Câu 48. Hình trên mô tả kĩ thuật nhân giống vô tính của thực vật, mỗi nhận định sau đây là Đúng hay Sai khi nói về kĩ thuật này ? \n  b: Cây cho cành ghép và cây cho mắt ghép thường là cây có các tính trạng tốt, năng suất cao, chống chịu tốt với môi trường.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Mục đích của việc ghép là lấy những ưu điểm vượt trội (năng suất cao, phẩm chất tốt) của cành ghép hoặc mắt ghép để kết hợp với khả năng sinh trưởng khỏe, rễ tốt của gốc ghép.",
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-48.png",
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 50,
+			"type": "true_false",
+			"question": "Câu 48. Hình trên mô tả kĩ thuật nhân giống vô tính của thực vật, mỗi nhận định sau đây là Đúng hay Sai khi nói về kĩ thuật này ? \n  c: Nếu tiếp tục lấy cây 1 và cây 2 làm giống cho các lần ghép tiếp theo thì các cây con vẫn tiếp tục giữ được các tính trạng tốt của cây mẹ ban đầu.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Ghép là hình thức sinh sản vô tính, dựa trên quá trình nguyên phân nên cơ sở di truyền không thay đổi, các đặc tính tốt của cây mẹ sẽ được duy trì và truyền lại nguyên vẹn.",
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-50.png",
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 51,
+			"type": "true_false",
+			"question": "Câu 48. Hình trên mô tả kĩ thuật nhân giống vô tính của thực vật, mỗi nhận định sau đây là Đúng hay Sai khi nói về kĩ thuật này ? \n  d: Các bệnh trên cây mẹ, nhất là do virus có thể lây qua cây con qua nhiều thế hệ.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Nhược điểm lớn nhất của các phương pháp nhân giống vô tính (như giâm, chiết, ghép) là sự lây truyền các mầm bệnh như virus, nấm từ cây mẹ sang các thế hệ cây con nếu cây mẹ đã mang bệnh.",
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-51.png",
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 52,
+			"type": "true_false",
+			"question": "Câu 50. Hình bên mô tả quá trình sinh sản hữu tính ở thực vật, mỗi nhận định sau đây là Đúng / Sai khi nói về quá trình này? \n  a: Quá trình A là quá trình thụ phấn chéo, quá trình B là tự thụ phấn",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Thụ phấn chéo (A) là hiện tượng hạt phấn từ hoa cây này rơi vào đầu nhụy hoa cây khác. Tự thụ phấn (B) là hiện tượng hạt phấn rơi vào nhụy của chính hoa đó hoặc cùng một cây.",
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-52.png",
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 53,
+			"type": "true_false",
+			"question": "Câu 50. Hình bên mô tả quá trình sinh sản hữu tính ở thực vật, mỗi nhận định sau đây là Đúng / Sai khi nói về quá trình này? \n  b: Quá trình B có thể làm giống thoái hóa qua nhiều thế hệ.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Tự thụ phấn liên tục qua nhiều thế hệ làm tăng tỉ lệ đồng hợp tử lặn, dễ biểu hiện các tính trạng xấu (gen lặn có hại), dẫn tới hiện tượng thoái hóa giống.",
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-52.png",
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 54,
+			"type": "true_false",
+			"question": "Câu 50. Hình bên mô tả quá trình sinh sản hữu tính ở thực vật, mỗi nhận định sau đây là Đúng / Sai khi nói về quá trình này? \n  c: Quá trình A nhờ sự hỗ trợ của các loài như ong, bướm hoặc tác động của gió.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Để thụ phấn chéo, hạt phấn cần được vận chuyển từ hoa này sang hoa khác (của cây khác) thông qua các tác nhân như côn trùng (ong, bướm), gió hoặc con người.",
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-52.png",
+			"topic": "Sinh sản ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 55,
+			"type": "true_false",
+			"question": "Câu 50. Hình bên mô tả quá trình sinh sản hữu tính ở thực vật, mỗi nhận định sau đây là Đúng / Sai khi nói về quá trình này? \n  d: Quá trình A có thể tạo ra các giống mới có các phẩm chất tốt hơn so với giống ban đầu.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Thụ phấn chéo mang lại sự giao phối giữa các nguồn gen khác nhau, tạo ra các biến dị tổ hợp đa dạng, làm tăng ưu thế lai và có thể có phẩm chất vượt trội hơn.",
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-52.png",
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 56,
+			"type": "true_false",
+			"question": "Câu 51. Hình trên mô tả quá trình thụ phấn nhờ côn trùng của một loài thực vật, mỗi nhận định sau đây là Đúng hay Sai khi nói về quá trình này? \n  a: Ở hình bên số (1) mô tả bao phấn, số (3) mô tả núm nhụy, số (4) mô tả hạt phấn.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Dựa trên cấu tạo hoa: bao phấn (1) chứa hạt phấn, ong mang phấn hoa đến đặt lên đầu nhụy/núm nhụy (3). Tại đây hạt phấn (4) sẽ nảy mầm và mọc ống phấn đâm sâu vào noãn.",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 57,
+			"type": "true_false",
+			"question": "Câu 51. Hình trên mô tả quá trình thụ phấn nhờ côn trùng của một loài thực vật, mỗi nhận định sau đây là Đúng hay Sai khi nói về quá trình này? \n  b: Quá trình (2) gọi là quá trình thụ phấn nhờ côn trùng.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Quá trình ong mang hạt phấn bay từ nhị hoa này sang núm nhụy hoa khác chính là hoạt động thụ phấn nhờ động vật (cụ thể là côn trùng).",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 58,
+			"type": "true_false",
+			"question": "Câu 51. Hình trên mô tả quá trình thụ phấn nhờ côn trùng của một loài thực vật, mỗi nhận định sau đây là Đúng hay Sai khi nói về quá trình này? \n  c: Quá trình thụ phấn có hiệu quả cao vì con ong chỉ hút mật các cây cùng loài.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Trong mỗi chuyến đi kiếm ăn, ong thường thể hiện 'tính chung thủy với hoa' (flower constancy), ưu tiên viếng thăm những hoa cùng một loài, giúp quá trình thụ phấn chéo đạt hiệu quả rất cao.",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 59,
+			"type": "true_false",
+			"question": "Câu 51. Hình trên mô tả quá trình thụ phấn nhờ côn trùng của một loài thực vật, mỗi nhận định sau đây là Đúng hay Sai khi nói về quá trình này? \n  d: Nếu quần thể ong bị sụt giảm số lượng thì sẽ gây bất lợi cho quá trình thụ phấn của loài thực vật này.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Ong là tác nhân thụ phấn chính yếu của rất nhiều thực vật hạt kín. Sự suy giảm của loài vật trung gian này làm giảm nghiêm trọng tỷ lệ thụ phấn và đậu quả.",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 60,
+			"type": "mcq",
+			"question": "Câu 52. Các hình thức sinh sản vô tính ở động vật là:",
+			"options": [
+				"A. phân đôi, nảy chồi, phân mảnh và trinh sinh.",
+				"B. phân đôi, nảy chồi, phân mảnh và đẻ trứng.",
+				"C. phân đôi, nảy chồi, đẻ trứng và trinh sinh.",
+				"D. phân đôi, nảy chồi, đẻ trứng thai và trinh sinh."
+			],
+			"correct": "A. phân đôi, nảy chồi, phân mảnh và trinh sinh.",
+			"explanation": "Các hình thức sinh sản vô tính cơ bản ở động vật bao gồm: phân đôi (amip, trùng roi), nảy chồi (thủy tức), phân mảnh (bọt biển, sao biển) và trinh sinh (ong, rệp, kiến).",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 61,
+			"type": "mcq",
+			"question": "Câu 53. Trinh sinh là hình thức sinh sản mà:",
+			"options": [
+				"A. cơ thể mới phát triển từ trứng không được thụ tinh.",
+				"B. một các thể mẹ phân đôi thành hai cá thể có kích thước gần bằng nhau.",
+				"C. cơ thể mới phát triển từ mảnh tách ra từ cơ thể mẹ.",
+				"D. chồi mọc ra từ cơ thể mẹ, lớn dần lên, sau đó tách ra thành cơ thể mới."
+			],
+			"correct": "A. cơ thể mới phát triển từ trứng không được thụ tinh.",
+			"explanation": "Trinh sinh (hay sinh sản trinh tiết) là hình thức sinh sản đặc biệt, trong đó tế bào trứng (n) không được thụ tinh với tinh trùng nhưng vẫn tự phát triển nguyên phân tạo thành cá thể mới (thường là cá thể đơn bội).",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 62,
+			"type": "mcq",
+			"question": "Câu 54. Động vật ở hình dưới có hình thức sinh sản là ?",
+			"options": [
+				"A. phân đôi.",
+				"B. đẻ con.",
+				"C. trinh sinh.",
+				"D. phân mảnh."
+			],
+			"correct": "D. phân mảnh.",
+			"explanation": "Động vật (ví dụ sán lông Planaria, sao biển) khi bị cắt thành nhiều phần, mỗi mảnh có khả năng tái sinh và phát triển thành một cơ thể mới hoàn chỉnh. Đây là hình thức sinh sản vô tính bằng phân mảnh.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 63,
+			"type": "mcq",
+			"question": "Câu 55. Thụ tinh là sự kết hợp giữa:",
+			"options": [
+				"A. tinh trùng đơn bội (n) và tế bào trứng lưỡng bội (2n) tạo thành hợp tử đa bội (3n).",
+				"B. tinh trùng đơn bội (n) và tế bào trứng lưỡng bội (2n) tạo thành hợp tử lưỡng bội (2n).",
+				"C. tinh trùng đơn bội (n) và tế bào trứng đơn bội (n) tạo thành hợp tử lưỡng bội (2n).",
+				"D. tinh trùng lưỡng bội (2n) và tế bào trứng lưỡng bội (2n) tạo thành hợp tử lưỡng bội (2n)."
+			],
+			"correct": "C. tinh trùng đơn bội (n) và tế bào trứng đơn bội (n) tạo thành hợp tử lưỡng bội (2n).",
+			"explanation": "Trong sinh sản hữu tính, thụ tinh là sự kết hợp của hai loại giao tử đực (tinh trùng - n) và giao tử cái (trứng - n) để tạo thành hợp tử lưỡng bội (2n), khôi phục lại bộ nhiễm sắc thể đặc trưng của loài.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 64,
+			"type": "mcq",
+			"question": "Câu 56. Hình thức sinh sản vừa có ở động vật không xương sống và động vật có xương sống là:",
+			"options": [
+				"A. phân đôi.",
+				"B. nảy chồi.",
+				"C. phân mảnh.",
+				"D. trinh sinh"
+			],
+			"correct": "D. trinh sinh",
+			"explanation": "Trinh sinh là hình thức sinh sản vô tính duy nhất có thể xảy ra ở cả hai nhóm: động vật không xương sống (ong, kiến, rệp) và cả ở động vật có xương sống (thằn lằn, rắn, cá, gà tây).",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 65,
+			"type": "short",
+			"question": "Câu 57: Thời gian sinh sản tinh trùng tính từ tinh nguyên bào đến khi tạo thành tinh trùng mất khoảng bao nhiêu ngày?",
+			"correct": "74",
+			"explanation": "Ở người, quá trình sinh tinh từ tinh nguyên bào qua các giai đoạn giảm phân và biệt hóa để hình thành tinh trùng trưởng thành mất khoảng 74 ngày.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 66,
+			"type": "short",
+			"question": "Câu 58: Trong các hệ cơ quan:\n1. Hệ tuần hoàn.\n2. Hệ nội tiết.\n3. Hệ hô hấp.\n4. Hệ bài tiết.\n5. Hệ sinh dục.\nCó bao nhiêu hệ cơ quan đóng vai trò chủ yếu trong điều hòa sinh sản?",
+			"correct": "1",
+			"explanation": "Trong quá trình điều hòa sinh sản, hệ nội tiết thông qua các hormone (như GnRH, FSH, LH, estrogen, testosterone...) đóng vai trò chủ đạo trực tiếp tác động lên hệ sinh dục.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 67,
+			"type": "short",
+			"question": "Câu 59: Trong các quá trình:\n1. Nguyên phân.\n2. Thụ tinh.\n3. Giảm phân.\n4. Sinh phôi.\nCó bao nhiêu quá trình không là cơ sở tế bào học của sinh sản vô tính ở động vật?",
+			"correct": "3",
+			"explanation": "Cơ sở tế bào học của sinh sản vô tính là nguyên phân (1). Các quá trình liên quan đến sinh sản hữu tính bao gồm thụ tinh (2), giảm phân (3) và sinh phôi hữu tính (4). Vậy có 3 quá trình không phải cơ sở của sinh sản vô tính.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "VD"
+		},
+		{
+			"id": 68,
+			"type": "short",
+			"question": "Câu 60: Trong các cơ quan: \n1. Vùng dưới đồi.\n2. Thể vàng.\n3. Nang trứng.\n4. Tuyến yên.\nCó bao nhiêu cơ quan của nữ giới tiết ra progesterone?",
+			"correct": "1",
+			"explanation": "Trong số các cơ quan đưa ra, chỉ có thể vàng (2) (hình thành sau khi nang trứng rụng) là cơ quan chủ yếu tiết ra hormone progesterone để duy trì niêm mạc tử cung.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 69,
+			"type": "mcq",
+			"question": "Câu 61. Sinh đẻ có kế hoạch ở người là",
+			"options": [
+				"A. điều chỉnh về số con, thời điểm sinh con và khoảng cách sinh con sao cho phù hợp gia đình.",
+				"B. điều chỉnh về số con, thời điểm sinh con sao cho phù hợp với việc nâng cao chất lượng cuộc sống gia đình, xã hội.",
+				"C. điều chỉnh về thời điểm sinh con và khoảng cách sinh con sao cho phù hợp với việc nâng cao chất lượng cuộc sống gia đình, xã hội.",
+				"D. điều chỉnh về số con, thời điểm sinh con và khoảng cách sinh con sao cho phù hợp với việc nâng cao chất lượng cuộc sống gia đình, xã hội."
+			],
+			"correct": "D. điều chỉnh về số con, thời điểm sinh con và khoảng cách sinh con sao cho phù hợp với việc nâng cao chất lượng cuộc sống gia đình, xã hội.",
+			"explanation": "Sinh đẻ có kế hoạch bao hàm việc kiểm soát và điều chỉnh ba yếu tố: số lượng con sinh ra, khoảng cách thời gian giữa các lần sinh, và thời điểm sinh con phù hợp với độ tuổi, thể trạng nhằm nâng cao chất lượng cuộc sống.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 70,
+			"type": "short",
+			"question": "Câu 62. Trong các nguyên nhân: Thiếu protein; thiếu calcium; thiếu magie; thiếu vitamin; thiếu sắt. Có bao nhiêu nguyên nhân gây ra bệnh còi xương, chậm lớn ở trẻ em?",
+			"correct": "3",
+			"explanation": "Có 3 nguyên nhân chính kể trên gây ra bệnh còi xương và chậm lớn: thiếu protein (nguyên liệu xây dựng tế bào), thiếu calcium (khoáng chất cấu tạo xương), thiếu vitamin (đặc biệt là vitamin D giúp hấp thụ canxi).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 71,
+			"type": "short",
+			"question": "Câu 63: Hình thức sinh sản hữu tính ở động vật có bao nhiêu giai đoạn?",
+			"correct": "4",
+			"explanation": "Sinh sản hữu tính thường trải qua các giai đoạn: 1. Hình thành giao tử (tinh trùng, trứng) - 2. Thụ tinh tạo hợp tử - 3. Phát triển phôi thai - 4. Đẻ con/Nở trứng.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 72,
+			"type": "short",
+			"question": "Câu 64. Ở thực vật có bao nhiêu loại mô phân sinh ?",
+			"correct": "3",
+			"explanation": "Có 3 loại mô phân sinh chính ở thực vật: Mô phân sinh đỉnh (chồi ngọn, chồi nách, rễ), Mô phân sinh bên (tầng sinh mạch, sinh bần) và Mô phân sinh lóng (ở cây 1 lá mầm).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 73,
+			"type": "mcq",
+			"question": "Câu 12: Hình thức sinh sản vô tính nào ở động vật diễn ra đơn giản nhất?",
+			"options": [
+				"A. Nảy chồi.",
+				"B. Trinh sinh.",
+				"C. Phân mảnh.",
+				"D. Phân đôi."
+			],
+			"correct": "D. Phân đôi.",
+			"explanation": "Phân đôi là hình thức sinh sản vô tính đơn giản nhất, phổ biến ở động vật đơn bào (amip, trùng roi), thông qua việc tế bào mẹ phân chia trực tiếp làm hai tế bào con.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 74,
+			"type": "short",
+			"question": "Câu 65. Trong các loại hình thức sinh sản sau đây, có bao nhiêu hình thức thuộc sinh sản vô tính?\n(1). Sinh sản sinh dưỡng; (2). Thụ phấn; (3). Sinh sản bằng bào tử; (4). Trinh sinh; (5). Giao phấn; (6). Nuôi cấy mô.",
+			"correct": "4",
+			"explanation": "Các hình thức sinh sản vô tính (không có sự kết hợp giao tử) bao gồm: Sinh sản sinh dưỡng (1), Sinh sản bằng bào tử (3), Trinh sinh (4) và Nuôi cấy mô tế bào nhân tạo (6). (Thụ phấn và giao phấn thuộc sinh sản hữu tính).",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 75,
+			"type": "short",
+			"question": "Câu 66. Ở thực vật có bao nhiêu kiểu sinh trưởng?",
+			"correct": "2",
+			"explanation": "Thực vật có 2 kiểu sinh trưởng cơ bản: Sinh trưởng sơ cấp (giúp tăng chiều dài thân rễ) và Sinh trưởng thứ cấp (giúp tăng bề ngang của cây thân gỗ).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 76,
+			"type": "short",
+			"question": "Câu 67. Ghép nội dung ở cột bên phải với nội dung ở cột bên trái để trở thành một câu có nội dung đúng về tập tính ở động vật:\nA. Tập tính học được -> 1, 3, 5\nB. Tập tính sinh sản -> 4\nC. Tập tính di cư -> 2\nD. Tập tính bảo vệ lãnh thổ -> 6\n(Tương ứng các số trong đề)",
+			"correct": "A - 5; B - 4; C - 2; D - 6",
+			"explanation": "Học được: rút kinh nghiệm sau nhiều lần ngộ độc (5). Sinh sản: bao gồm tìm bạn tình, ấp trứng (4). Di cư: chim bay về phương Nam (2). Bảo vệ lãnh thổ: xua đuổi kẻ lạ (6).",
+			"image": null,
+			"topic": "Tập tính ở động vật",
+			"level": "VD"
+		},
+		{
+			"id": 77,
+			"type": "true_false",
+			"question": "Câu 68. Xét các mệnh đề dưới đây, hãy cho biết mỗi nhận định sau đây Đúng hay Sai? \n  a: Lúa thuộc ngành thực vật hạt trần vì hạt thóc không được quả bảo vệ.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Lúa thuộc ngành Hạt kín. 'Hạt thóc' thực chất chính là quả lúa, vỏ trấu bên ngoài chính là vỏ quả bảo vệ hạt lúa gạo bên trong.",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 78,
+			"type": "true_false",
+			"question": "Câu 68. Xét các mệnh đề dưới đây, hãy cho biết mỗi nhận định sau đây Đúng hay Sai? \n  b: Quả không hạt là quả đơn tính.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Quả đơn tính (parthenocarpy) là thuật ngữ sinh học chỉ loại quả được hình thành mà không cần thông qua sự thụ tinh của noãn, do đó hạt không được hình thành và ta có quả không hạt.",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 79,
+			"type": "true_false",
+			"question": "Câu 68. Xét các mệnh đề dưới đây, hãy cho biết mỗi nhận định sau đây Đúng hay Sai? \n  c: Cây tre là thực vật có hoa.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Cây tre thuộc họ Hòa thảo, là thực vật Hạt kín (có hoa). Đặc điểm đặc biệt là tre chỉ nở hoa một lần duy nhất vào cuối vòng đời rồi lụi tàn.",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "NB"
+		},
+		{
+			"id": 80,
+			"type": "true_false",
+			"question": "Câu 68. Xét các mệnh đề dưới đây, hãy cho biết mỗi nhận định sau đây Đúng hay Sai? \n  d: Mít thuộc nhóm cây cỏ quả đơn hạt.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Mít không phải là cây cỏ quả đơn hạt. Quả mít thực chất là một 'quả kép' (quả tụ) hình thành từ một cụm hoa, mỗi múi mít thực chất là phát triển từ một bông hoa đơn lẻ.",
+			"image": null,
+			"topic": "Sinh sản ở thực vật",
+			"level": "TH"
+		},
+		{
+			"id": 81,
+			"type": "true_false",
+			"question": "Câu 69. Hình bên mô tả vòng đời của bướm, mỗi nhận định dưới đây là Đúng hay Sai? \n  a: Chú thích các con số: (1) sâu, (2) nhộng, (3) trứng, (4) bướm",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Thông thường trong vòng đời của bướm, thứ tự mô tả là (1) trứng nở ra (2) sâu, (3) đóng kén thành nhộng, (4) lột xác thành bướm trưởng thành.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 82,
+			"type": "true_false",
+			"question": "Câu 69. Hình bên mô tả vòng đời của bướm, mỗi nhận định dưới đây là Đúng hay Sai? \n  b: Ở giai đoạn (2) là giai đoạn gây ra tổn thất cho nông nghiệp nhất",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Nếu chú thích (2) là nhộng thì nhộng nằm yên trong kén, không ăn uống nên không phá hoại. Nếu theo đúng quá trình phá hoại thì giai đoạn sâu non (ấu trùng) mới là lúc ăn lá nhiều và phá hoại mạnh nhất.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 83,
+			"type": "true_false",
+			"question": "Câu 69. Hình bên mô tả vòng đời của bướm, mỗi nhận định dưới đây là Đúng hay Sai? \n  c: Giai đoanh (4) hình thành góp phần nâng cao năng suất cây trồng vì hoạt động hút mật hoa của bướm giúp cây thụ phấn.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Giai đoạn (4) bướm trưởng thành, di chuyển từ hoa này sang hoa khác hút mật, vô tình mang theo hạt phấn giúp cây giao phấn, tăng năng suất đậu quả đậu hạt.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 84,
+			"type": "true_false",
+			"question": "Câu 69. Hình bên mô tả vòng đời của bướm, mỗi nhận định dưới đây là Đúng hay Sai? \n  d: Sử dụng các thuốc bảo vệ thực vật hóa học để phòng trừ sâu hại phá hại mùa màng.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Không khuyến khích lạm dụng thuốc bảo vệ thực vật hóa học vì gây ô nhiễm và kháng thuốc. Cần ưu tiên các biện pháp sinh học, cơ học (bắt bằng tay, dùng bẫy ánh sáng, nuôi thiên địch).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 85,
+			"type": "true_false",
+			"question": "Câu 70. Khi nói về những thay đổi sinh lí ở tuổi dậy thì ở nữ, mỗi mệnh đề sau là đúng hay sai? \n  a: Tăng tiết hoocmon sinh dục nữ.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Dậy thì ở nữ khởi phát do vùng dưới đồi và tuyến yên kích thích buồng trứng, làm tăng mạnh quá trình tiết hormone sinh dục nữ (estrogen và progesteron).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 86,
+			"type": "true_false",
+			"question": "Câu 70. Khi nói về những thay đổi sinh lí ở tuổi dậy thì ở nữ, mỗi mệnh đề sau là đúng hay sai? \n  b: Tuyến vú phát triển.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Tác động của hormone estrogen trong tuổi dậy thì giúp hình thành các đặc điểm sinh dục phụ thứ cấp ở nữ, trong đó có sự nở nang của tuyến vú.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 87,
+			"type": "true_false",
+			"question": "Câu 70. Khi nói về những thay đổi sinh lí ở tuổi dậy thì ở nữ, mỗi mệnh đề sau là đúng hay sai? \n  c: Tinh hoàn bắt đầu sản xuất tinh trùng.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Tinh hoàn sản xuất tinh trùng là đặc điểm thay đổi sinh lý diễn ra ở tuổi dậy thì của nam giới, không phải ở nữ giới.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 88,
+			"type": "true_false",
+			"question": "Câu 70. Khi nói về những thay đổi sinh lí ở tuổi dậy thì ở nữ, mỗi mệnh đề sau là đúng hay sai? \n  d: Xuất hiện kinh nguyệt.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Đặc điểm đánh dấu buồng trứng đã hoạt động trưởng thành và có khả năng sinh sản ở nữ giới là hiện tượng kinh nguyệt bắt đầu xuất hiện.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 89,
+			"type": "true_false",
+			"question": "Câu 71. Khi nói về các biện pháp có tác dụng giáo dục giới tính. Phát biểu nào đúng, phát biểu nào sai? \n  a: Tìm hiểu những kiến thức về giới tính và sức khoẻ sinh sản từ những nguồn thông tin đáng tin cậy.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Nâng cao hiểu biết thông qua các tài liệu y tế, chuyên gia, trường lớp giúp thanh thiếu niên hiểu đúng về giới tính và tự bảo vệ mình.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 90,
+			"type": "true_false",
+			"question": "Câu 71. Khi nói về các biện pháp có tác dụng giáo dục giới tính. Phát biểu nào đúng, phát biểu nào sai? \n  b: Giáo dục giới tính từ sớm.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Việc giáo dục giới tính phù hợp lứa tuổi từ khi còn nhỏ giúp trẻ hình thành thói quen bảo vệ cơ thể và có tâm lý vững vàng trước tuổi dậy thì.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 91,
+			"type": "true_false",
+			"question": "Câu 71. Khi nói về các biện pháp có tác dụng giáo dục giới tính. Phát biểu nào đúng, phát biểu nào sai? \n  c: Không nên quan hệ tình dục trước tuổi trưởng thành.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Tránh quan hệ tình dục sớm bảo vệ cơ thể khỏi nguy cơ mang thai ngoài ý muốn và các bệnh lây truyền khi cơ thể và tâm lý chưa phát triển hoàn thiện.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 92,
+			"type": "true_false",
+			"question": "Câu 71. Khi nói về các biện pháp có tác dụng giáo dục giới tính. Phát biểu nào đúng, phát biểu nào sai? \n  d: Ngăn cấm không cho yêu sớm.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Tuổi vị thành niên nảy sinh tình cảm là tự nhiên. Việc cấm đoán khắt khe mang lại phản ứng ngược, thay vì vậy cần chia sẻ, định hướng để có tình bạn khác giới trong sáng.",
+			"image": null,
+			"topic": "Sinh sản ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 93,
+			"type": "true_false",
+			"question": "Câu 72. Khi nói về chức năng của hormone Testosterone. Hãy cho biết mệnh đề nào đúng, mệnh đề nào sai? \n  a: Tăng phát triển xương.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Testosterone (ở nam giới) có tác dụng kích thích sụn mềm kéo dài và sự dày lên của xương, đóng vai trò tạo đà tăng trưởng mạnh chiều cao ở tuổi dậy thì.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 94,
+			"type": "true_false",
+			"question": "Câu 72. Khi nói về chức năng của hormone Testosterone. Hãy cho biết mệnh đề nào đúng, mệnh đề nào sai? \n  b: Kích thích phân hoá tế bào.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Testosterone kích thích quá trình phân bào và biệt hóa tế bào, đặc biệt quan trọng trong việc hình thành tinh trùng ở nam giới.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 95,
+			"type": "true_false",
+			"question": "Câu 72. Khi nói về chức năng của hormone Testosterone. Hãy cho biết mệnh đề nào đúng, mệnh đề nào sai? \n  c: Tăng tổng hợp protein, phát triển cơ bắp.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Testosterone là hormone đồng hóa có tính năng kích thích tổng hợp protein mạnh, khiến thể trạng cơ bắp nam giới trở nên rắn chắc và nở nang.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 96,
+			"type": "true_false",
+			"question": "Câu 72. Khi nói về chức năng của hormone Testosterone. Hãy cho biết mệnh đề nào đúng, mệnh đề nào sai? \n  d: Hình thành các đặc điểm sinh dục phụ thứ cấp.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Đây là vai trò tiêu biểu nhất của testosterone: giúp phát triển cơ quan sinh dục và bộc lộ tính trạng thứ cấp như mọc râu, vỡ giọng, vai rộng.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 97,
+			"type": "true_false",
+			"question": "Câu 73. Hình trên minh họa sơ đồ phát triển ở châu chấu, mỗi nhận định dưới đây là Đúng hay Sai? \n  a: Vòng đời của châu chấu là biến thái hoàn toàn",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Châu chấu phát triển qua biến thái không hoàn toàn, bao gồm ba giai đoạn: trứng, ấu trùng (có hình dạng gần giống trưởng thành nhưng chưa có cánh hoặc chưa hoàn thiện) và trưởng thành.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 98,
+			"type": "true_false",
+			"question": "Câu 73. Hình trên minh họa sơ đồ phát triển ở châu chấu, mỗi nhận định dưới đây là Đúng hay Sai? \n  b: Đây là kiểu phát triển gặp ở đa số các loài côn trùng như: châu chấu, cào cào, gián, tôm…",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Tôm thuộc ngành Chân khớp, lớp Giáp xác, không phải là côn trùng. Tôm trải qua biến thái phức tạp từ ấu trùng (nauplius).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "TH"
+		},
+		{
+			"id": 99,
+			"type": "true_false",
+			"question": "Câu 73. Hình trên minh họa sơ đồ phát triển ở châu chấu, mỗi nhận định dưới đây là Đúng hay Sai? \n  c: Sự khác biệt về cấu tạo và hình thái của ấu trùng giữa các lần lột xác kế tiếp nhau là không lớn.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Đúng",
+			"explanation": "Đặc trưng của biến thái không hoàn toàn là sự biến đổi dần dần qua nhiều lần lột xác, sau mỗi lần ấu trùng lớn lên một chút và hình thái dần được hoàn thiện (như cánh mọc dài thêm).",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "NB"
+		},
+		{
+			"id": 100,
+			"type": "true_false",
+			"question": "Câu 73. Hình trên minh họa sơ đồ phát triển ở châu chấu, mỗi nhận định dưới đây là Đúng hay Sai? \n  d: Ấu trùng và châu chấu trưởng thành, trong ống tiêu hóa có đầy đủ các enzym tiêu hóa protein, lipit, cacbohiđrat nhưng thức ăn của chúng lại không giống nhau.",
+			"options": [
+				"Đúng",
+				"Sai"
+			],
+			"correct": "Sai",
+			"explanation": "Ấu trùng châu chấu và châu chấu trưởng thành có chung môi trường sống và tiêu thụ chung một loại thức ăn (chủ yếu là lá cây - thực vật), đây là nguyên nhân gây cạnh tranh thức ăn trong cùng một loài.",
+			"image": null,
+			"topic": "Sinh trưởng và phát triển ở động vật",
+			"level": "TH"
+		}
+	]
 }
