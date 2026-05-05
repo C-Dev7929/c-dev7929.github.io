@@ -1424,7 +1424,7 @@
 			],
 			"correct": "Sai",
 			"explanation": "Châu chấu phát triển qua biến thái không hoàn toàn, bao gồm ba giai đoạn: trứng, ấu trùng (có hình dạng gần giống trưởng thành nhưng chưa có cánh hoặc chưa hoàn thiện) và trưởng thành.",
-			"image": null,
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-73.png",
 			"topic": "Sinh trưởng và phát triển ở động vật",
 			"level": "NB"
 		},
@@ -1438,7 +1438,7 @@
 			],
 			"correct": "Sai",
 			"explanation": "Tôm thuộc ngành Chân khớp, lớp Giáp xác, không phải là côn trùng. Tôm trải qua biến thái phức tạp từ ấu trùng (nauplius).",
-			"image": null,
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-73.png",
 			"topic": "Sinh trưởng và phát triển ở động vật",
 			"level": "TH"
 		},
@@ -1452,7 +1452,7 @@
 			],
 			"correct": "Đúng",
 			"explanation": "Đặc trưng của biến thái không hoàn toàn là sự biến đổi dần dần qua nhiều lần lột xác, sau mỗi lần ấu trùng lớn lên một chút và hình thái dần được hoàn thiện (như cánh mọc dài thêm).",
-			"image": null,
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-73.png",
 			"topic": "Sinh trưởng và phát triển ở động vật",
 			"level": "NB"
 		},
@@ -1466,7 +1466,7 @@
 			],
 			"correct": "Sai",
 			"explanation": "Ấu trùng châu chấu và châu chấu trưởng thành có chung môi trường sống và tiêu thụ chung một loại thức ăn (chủ yếu là lá cây - thực vật), đây là nguyên nhân gây cạnh tranh thức ăn trong cùng một loài.",
-			"image": null,
+			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-73.png",
 			"topic": "Sinh trưởng và phát triển ở động vật",
 			"level": "TH"
 		}
