@@ -1,820 +1,2486 @@
 {
-  "title": "Lịch Sử 11 - Bài 10, 11, 12, 13",
-  "subject": "Lịch Sử",
-  "questions": [
-    {
-      "id": 1,
-      "type": "mcq",
-      "question": "[Bài 10] Năm 1460, vua Lê Thánh Tông lên ngôi trong bối cảnh như thế nào?",
-      "options": ["A. Tình hình đất nước từng bước được ổn định.", "B. Nhà Lê lâm vào vào khủng hoảng, suy yếu.", "C. Nhà Minh đang lăm le xâm lược Đại Việt.", "D. Nhà Lê đang ở thời kì phát triển đỉnh cao."],
-      "correct": "A. Tình hình đất nước từng bước được ổn định.",
-      "explanation": "Năm 1460, sau sự kiện biến loạn của Lê Nghi Dân, triều đình rước Lê Thánh Tông lên ngôi. Lúc này, đất nước đã qua thời kỳ chiến tranh giải phóng dân tộc, những nền móng của nhà Lê sơ đã được các vua trước xây dựng và đang dần đi vào quỹ đạo ổn định.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 2,
-      "type": "mcq",
-      "question": "[Bài 10] Về hành chính, Lê Thánh Tông đã thực hiện biện pháp gì để nâng cao quyền lực của nhà vua?",
-      "options": ["A. Xóa bỏ hầu hết các chức quan đại thần có quyền lực lớn.", "B. Xóa bỏ tất cả các chức quan đại thần trong triều.", "C. Tiến hành hạ bậc các chức quan cao xuống nhiều lần.", "D. Tiến hành tuyển chọn các quan đại thần bằng thi cử."],
-      "correct": "A. Xóa bỏ hầu hết các chức quan đại thần có quyền lực lớn.",
-      "explanation": "Để tập trung quyền lực tuyệt đối vào tay hoàng đế, Lê Thánh Tông đã xóa bỏ các chức vụ trung gian có thể lấn át quyền vua như Tướng quốc, Đại hành khiển, Tể tướng.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 3,
-      "type": "mcq",
-      "question": "[Bài 10] Nội dung nào sau đây phản ánh đúng mục đích cải cách của vua Lê Thánh Tông?",
-      "options": ["A. Tăng cường quyền lực của hoàng đế và củng cố bộ máy nhà nước.", "B. Giải quyết tình trạng khủng hoảng trầm trọng của đất nước bấy giờ.", "C. Biến nước ta trở thành cường quốc lớn mạnh hàng đầu trong khu vực.", "D. Tăng cường tiềm lực đất nước chuẩn bị đối phó với giặc ngoại xâm."],
-      "correct": "A. Tăng cường quyền lực của hoàng đế và củng cố bộ máy nhà nước.",
-      "explanation": "Mục đích cốt lõi của mọi cuộc cải cách quân chủ chuyên chế là tập quyền (quyền lực về tay vua) và chính quy hóa bộ máy hành chính để quản lý hiệu quả hơn.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 4,
-      "type": "mcq",
-      "question": "[Bài 10] Một trong những đặc điểm về tình hình chính trị, xã hội nước ta trước khi vua Lê Thánh Tông tiến hành cải cách là",
-      "options": ["A. chính trị bất ổn kéo dài ảnh hưởng đến sự phát triển của đất nước.", "B. nhiều cuộc đấu tranh của nông dân nổ ra ngày càng quyết liệt.", "C. bộ máy hành chính nhà nước bắt đầu bộc lộ những hạn chế.", "D. chính trị, xã hội ổn định, đất nước có bước phát triển mới."],
-      "correct": "C. bộ máy hành chính nhà nước bắt đầu bộc lộ những hạn chế.",
-      "explanation": "Trước cải cách, bộ máy nhà nước vẫn còn mang dấu ấn của thời kỳ chiến tranh, cồng kềnh và quyền lực bị phân tán ở các công thần khai quốc, dẫn đến hiệu lực quản lý bắt đầu giảm sút.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 5,
-      "type": "mcq",
-      "question": "[Bài 10] Năm 1484, vua Lê Thánh Tông quyết định cho dựng bia ghi tên Tiến sĩ nhằm",
-      "options": ["A. tập trung quyền lực vào tay vua và triều đình trung ương.", "B. đề cao Nho học và tôn vinh các bậc trí thức Nho học.", "C. phát huy những phong tục tập quán tốt đẹp của dân tộc.", "D. tăng cường sự ràng buộc lẫn nhau giữa các cơ quan."],
-      "correct": "B. đề cao Nho học và tôn vinh các bậc trí thức Nho học.",
-      "explanation": "Việc dựng bia Tiến sĩ tại Văn Miếu là một hành động mang tính biểu tượng cao nhằm khuyến khích học tập, đề cao trí thức theo tư tưởng Nho giáo - hệ tư tưởng chính thống của nhà nước.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 6,
-      "type": "mcq",
-      "question": "[Bài 10] Cuộc cải cách do vua Lê Thánh Tông thực hiện có ý nghĩa như thế nào đối với đất nước?",
-      "options": ["A. Là khuôn mẫu điển hình cho nhà Lê sơ noi theo.", "B. Tạo điều kiện cho kinh tế thương nghiệp phát triển mạnh.", "C. Kìm hãm sự chuyên quyền của quan lại triều đình.", "D. Làm chuyển biến toàn bộ hoạt động của đất nước."],
-      "correct": "D. Làm chuyển biến toàn bộ hoạt động của đất nước.",
-      "explanation": "Đây là cuộc cải cách toàn diện nhất từ hành chính, quân sự đến luật pháp, văn hóa, giáo dục, làm thay đổi bộ mặt của quốc gia Đại Việt thế kỷ XV.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 7,
-      "type": "mcq",
-      "question": "[Bài 10] Cuộc cải cách của vua Lê Thánh Tông được tiến hành trong bối cảnh lịch sử nào sau đây?",
-      "options": ["A. Nội bộ triều đình có nhiều mâu thuẫn, biến động.", "B. Nền kinh tế sa sút, nạn đói diễn ra thường xuyên.", "C. Đất nước đứng trước nguy cơ bị nhà Minh xâm lược.", "D. Chế độ phong kiến lâm vào khủng hoảng trầm trọng."],
-      "correct": "A. Nội bộ triều đình có nhiều mâu thuẫn, biến động.",
-      "explanation": "Sau cái chết của vua Lê Nhân Tông và sự kiện Lê Nghi Dân cướp ngôi, nội bộ triều đình Lê sơ nảy sinh nhiều phe phái và mâu thuẫn giữa công thần với nhà vua.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 8,
-      "type": "mcq",
-      "question": "[Bài 10] Công cuộc cải cách của Lê Thánh Tông được tiến hành trên mọi lĩnh vực, nhưng tập trung chủ yếu vào lĩnh vực",
-      "options": ["A. kinh tế.", "B. giáo dục.", "C. hành chính.", "D. văn hóa."],
-      "correct": "C. hành chính.",
-      "explanation": "Trọng tâm xuyên suốt của cải cách Lê Thánh Tông là xây dựng một bộ máy nhà nước quân chủ chuyên chế tập quyền hoàn thiện nhất từ trung ương đến địa phương.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 9,
-      "type": "mcq",
-      "question": "[Bài 10] Để quản lý đất nước, vua Lê Thánh Tông đã cho ban hành bộ luật nào sau đây?",
-      "options": ["A. Hình thư.", "B. Quốc triều hình luật.", "C. Hình luật.", "D. Hoàng Việt luật lệ."],
-      "correct": "B. Quốc triều hình luật.",
-      "explanation": "Quốc triều hình luật (hay luật Hồng Đức) là thành tựu tiêu biểu của thời Lê Thánh Tông. Hình thư là luật nhà Lý, Hình luật là nhà Trần, Hoàng Việt luật lệ là nhà Nguyễn.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 10,
-      "type": "mcq",
-      "question": "[Bài 10] Trong lĩnh vực văn hóa, Lê Thánh Tông đặc biệt đề cao hệ tư tưởng",
-      "options": ["A. Phật giáo.", "B. Đạo giáo.", "C. Nho giáo.", "D. Thiên chúa giáo."],
-      "correct": "C. Nho giáo.",
-      "explanation": "Thời Lê sơ, Nho giáo chiếm vị trí độc tôn, trở thành hệ tư tưởng chính thống để xây dựng nhà nước quân chủ.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 11,
-      "type": "mcq",
-      "question": "[Bài 10] Dưới thời vua Lê Thánh Tông, hệ thống cơ quan phụ trách đạo thừa tuyên có tên gọi là",
-      "options": ["A. Tam ty.", "B. Lục bộ.", "C. Lục khoa.", "D. Thông chính ty."],
-      "correct": "A. Tam ty.",
-      "explanation": "Ở mỗi đạo thừa tuyên, nhà vua thiết lập 'Tam ty' gồm: Đô ty (quân sự), Thừa ty (hành chính), Hiến ty (giám sát). Lục bộ, Lục khoa là ở cấp trung ương.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 12,
-      "type": "mcq",
-      "question": "[Bài 10] Năm 1471, vua Lê Thánh Tông cho lập thêm đạo thừa tuyên thứ 13 có tên gọi là",
-      "options": ["A. Hà Nội.", "B. Phú Xuân.", "C. Quảng Nam.", "D. Tây Đô."],
-      "correct": "C. Quảng Nam.",
-      "explanation": "Sau cuộc thân chinh chinh phạt Chiêm Thành năm 1471, vùng đất chiếm được được đặt làm đạo thừa tuyên thứ 13 - Quảng Nam.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 13,
-      "type": "mcq",
-      "question": "[Bài 10] Trong cuộc cải cách thế kỉ XV, dưới đạo thừa tuyên, vua Lê Thánh Tông thiết lập hệ thống",
-      "options": ["A. phủ, huyện/châu, xã.", "B. tỉnh/thành phố, huyện, xã.", "C. lộ, trấn, phủ, huyện/châu.", "D. tỉnh, phủ, huyện, làng."],
-      "correct": "A. phủ, huyện/châu, xã.",
-      "explanation": "Cấp hành chính địa phương thời Lê Thánh Tông lần lượt là: Đạo thừa tuyên → Phủ → Huyện (miền xuôi)/Châu (miền núi) → Xã.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 14,
-      "type": "mcq",
-      "question": "[Bài 10] Dưới thời vua Lê Thánh Tông, hệ thống quan lại được tuyển chọn chủ yếu thông qua",
-      "options": ["A. dòng dõi tôn thất.", "B. tiến cử.", "C. giáo dục – khoa cử.", "D. đề cử."],
-      "correct": "C. giáo dục – khoa cử.",
-      "explanation": "Ông đẩy mạnh Nho học và lấy khoa cử làm phương thức chính để chọn người tài thay vì dựa vào dòng tộc như thời Trần.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 15,
-      "type": "mcq",
-      "question": "[Bài 10] Để tập trung quyền lực vào nhà vua, Lê Thánh Tông đã",
-      "options": ["A. bãi bỏ nhiều cơ quan, chức quan cũ.", "B. chú trọng đổi mới giáo dục khoa cử.", "C. ban hành chính sách hạn điền và hạn nô.", "D. coi trọng bảo vệ quyền lợi phụ nữ, trẻ em."],
-      "correct": "A. bãi bỏ nhiều cơ quan, chức quan cũ.",
-      "explanation": "Đây là biện pháp hành chính trực tiếp nhất để thu quyền lực về tay nhà vua, xóa bỏ các chức vụ trung gian như Tướng quốc, Tể tướng.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 16,
-      "type": "mcq",
-      "question": "[Bài 10] 'Đây là một bộ luật đầy đủ… gồm hơn 700 điều... bảo vệ quyền hành của giai cấp thống trị, một số quyền lợi chân chính của nhân dân và an ninh đất nước'. Nhận xét trên đề cập đến bộ luật nào sau đây?",
-      "options": ["A. Hình luật.", "B. Hình thư.", "C. Quốc triều hình luật.", "D. Hoàng Việt luật lệ."],
-      "correct": "C. Quốc triều hình luật.",
-      "explanation": "Đặc trưng của Quốc triều hình luật (luật Hồng Đức) là tính toàn diện với hơn 700 điều và có những điểm tiến bộ bảo vệ nhân dân.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 17,
-      "type": "mcq",
-      "question": "[Bài 10] Một trong những điểm mới và tiến bộ của bộ luật Quốc triều hình luật là",
-      "options": ["A. đề cao quyền tự do, dân chủ của nhân dân.", "B. bảo vệ tuyệt đối quyền và lợi ích của vua.", "C. bảo vệ quyền và lợi ích của quân cấm binh.", "D. bảo vệ quyền lợi và địa vị của người phụ nữ."],
-      "correct": "D. bảo vệ quyền lợi và địa vị của người phụ nữ.",
-      "explanation": "Điểm tiến bộ vượt thời đại của luật Hồng Đức là công nhận quyền thừa kế tài sản và vị thế của phụ nữ trong gia đình.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 18,
-      "type": "mcq",
-      "question": "[Bài 10] Nội dung nào sau đây phản ánh đúng về chức năng của Lục bộ dưới thời vua Lê Thánh Tông?",
-      "options": ["A. Cơ quan giúp việc cho Lục Tự, Lục khoa.", "B. Theo dõi, giám sát hoạt động của Lục khoa.", "C. Cơ quan cao cấp chủ chốt trong triều đình.", "D. Phụ trách hoạt động quân sự của nhà nước."],
-      "correct": "C. Cơ quan cao cấp chủ chốt trong triều đình.",
-      "explanation": "Lục bộ (Lại, Hộ, Lễ, Binh, Hình, Công) là các cơ quan trực tiếp điều hành công việc đại sự của quốc gia dưới sự chỉ đạo trực tiếp của vua.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 19,
-      "type": "mcq",
-      "question": "[Bài 10] Nội dung nào sau đây là cải cách của vua Lê Thánh Tông trên lĩnh vực văn hóa – giáo dục?",
-      "options": ["A. Quy định chặt chẽ chế độ khoa cử.", "B. Thành lập Lục khoa giám sát Lục bộ.", "C. Ban hành chế độ lộc điền và quân điền.", "D. Hạn chế quyền lực của vương hầu, quý tộc."],
-      "correct": "A. Quy định chặt chẽ chế độ khoa cử.",
-      "explanation": "Vua quy định 3 năm có một kỳ thi Hội, dựng bia tiến sĩ... đều thuộc chế độ khoa cử - cải cách văn hóa giáo dục.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 20,
-      "type": "mcq",
-      "question": "[Bài 10] Nội dung nào sau đây là cải cách của vua Lê Thánh Tông trên lĩnh vực quân đội, quốc phòng?",
-      "options": ["A. Bãi bỏ hầu hết các chức quan đại thần có quyền lực lớn.", "B. Chú trọng xây dựng đội ngũ quan lại có phẩm chất tốt.", "C. Chú trọng hoàn thiện hệ thống pháp luật quản lý đất nước.", "D. Tổ chức các kì thi khảo võ nghệ để tuyển chọn tướng sĩ."],
-      "correct": "D. Tổ chức các kì thi khảo võ nghệ để tuyển chọn tướng sĩ.",
-      "explanation": "Để nâng cao chất lượng quân đội, vua tổ chức duyệt binh và thi sát hạch võ nghệ thường xuyên.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 21,
-      "type": "mcq",
-      "question": "[Bài 10] Nội dung nào sau đây phản ánh đúng điểm giống nhau giữa cải cách của Hồ Quý Ly và vua Lê Thánh Tông?",
-      "options": ["A. Cải cách chủ yếu mô phỏng theo mô hình nhà Minh (Trung Quốc).", "B. Cải cách thành công trọn vẹn và mang tính triệt để trên mọi lĩnh vực.", "C. Cải cách nhằm tập trung quyền lực về tay vua và triều đình trung ương.", "D. Cải cách toàn diện, quy mô lớn nhưng tập trung vào lĩnh vực quân đội."],
-      "correct": "C. Cải cách nhằm tập trung quyền lực về tay vua và triều đình trung ương.",
-      "explanation": "Cả hai đều muốn xóa bỏ chế độ quý tộc phân quyền thời Trần để xây dựng chế độ quân chủ tập quyền.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "VD",
-      "image": null
-    },
-    {
-      "id": 22,
-      "type": "mcq",
-      "question": "[Bài 10] Công cuộc cải cách của vua Lê Thánh Tông thế kỉ XV không được tiến hành trên lĩnh vực nào sau đây?",
-      "options": ["A. Hành chính.", "B. Giáo dục.", "C. Kinh tế.", "D. Ngoại giao."],
-      "correct": "D. Ngoại giao.",
-      "explanation": "Cải cách của Lê Thánh Tông tập trung vào nội trị (Hành chính, Quân sự, Pháp luật, Kinh tế, Văn hóa). Ngoại giao là chính sách đối ngoại, không nằm trong các sắc lệnh 'cải cách' cấu trúc hệ thống.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 23,
-      "type": "mcq",
-      "question": "[Bài 10] 'Coi trọng biên soạn quốc sử' là nội dung cải cách của vua Lê Thánh Tông trên lĩnh vực nào sau đây?",
-      "options": ["A. Quân đội.", "B. Văn hóa.", "C. Luật pháp.", "D. Kinh tế."],
-      "correct": "B. Văn hóa.",
-      "explanation": "Sử học là một bộ phận của văn hóa. Thời kỳ này có bộ Đại Việt sử ký toàn thư.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 24,
-      "type": "mcq",
-      "question": "[Bài 10] Trong nội dung cải cách, Hồ Quý Ly và vua Lê Thánh Tông đều",
-      "options": ["A. bãi bỏ nhiều cơ quan, chức quan cũ có nhiều quyền lực.", "B. khuyến khích và đề cao sử dụng chữ Nôm trong thi cử.", "C. hạn chế sở hữu ruộng đất quy mô lớn của quý tộc tôn thất.", "D. tăng cường cơ chế giám sát, ràng buộc nhau giữa các cơ quan."],
-      "correct": "A. bãi bỏ nhiều cơ quan, chức quan cũ có nhiều quyền lực.",
-      "explanation": "Đây là biện pháp cốt lõi để thu quyền về trung ương của cả hai nhà cải cách. Chữ Nôm và hạn điền chỉ đúng với Hồ Quý Ly, không phải Lê Thánh Tông.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "VD",
-      "image": null
-    },
-    {
-      "id": 25,
-      "type": "mcq",
-      "question": "[Bài 10] Một trong những điểm mới của bộ Quốc triều hình luật là",
-      "options": ["A. có sự gia tăng hình phạt đối với người phạm tội nếu đã đến tuổi trưởng thành.", "B. có sự phân biệt hình phạt đối với người phạm tội nếu tàn tật hoặc còn nhỏ.", "C. đề cao quyền lợi và địa vị của nam giới, quy định cụ thể về tố tụng.", "D. xóa bỏ hình phạt đối với người phạm tội nếu tàn tật hoặc còn nhỏ."],
-      "correct": "B. có sự phân biệt hình phạt đối với người phạm tội nếu tàn tật hoặc còn nhỏ.",
-      "explanation": "Bộ luật thể hiện tính nhân đạo khi quy định giảm nhẹ hoặc có chế độ riêng cho người già, trẻ em và người tàn tật.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 26,
-      "type": "mcq",
-      "question": "[Bài 10] Nội dung nào sau đây không phải là những giá trị cơ bản mà cuộc cải cách hành chính của vua Lê Thánh Tông thế kỉ XV mang lại?",
-      "options": ["A. Không để quyền lực tập trung quá nhiều vào một cơ quan.", "B. Xây dựng quy chế vận hành bộ máy nhà nước trên nguyên tắc quyền lực thuộc về nhân dân.", "C. Các cơ quan Nhà nước giám sát lẫn nhau để hạn chế sự lạm quyền.", "D. Thanh lọc, tinh giản một số chức quan và các cấp chính quyền trung gian."],
-      "correct": "B. Xây dựng quy chế vận hành bộ máy nhà nước trên nguyên tắc quyền lực thuộc về nhân dân.",
-      "explanation": "Nhà nước thời Lê Thánh Tông là nhà nước quân chủ chuyên chế (quyền lực thuộc về vua), không phải nhà nước dân chủ (quyền lực thuộc về nhân dân).",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "VD",
-      "image": null
-    },
-    {
-      "id": 27,
-      "type": "mcq",
-      "question": "[Bài 10] Nội dung nào sau đây là một trong những ý nghĩa về cuộc cải cách của vua Lê Thánh Tông ở thế kỉ XV?",
-      "options": ["A. Mở ra khả năng độc lập, tự chủ đầu tiên cho dân tộc ta.", "B. Làm chuyển biến toàn bộ các hoạt động của quốc gia.", "C. Tạo thế và lực cho ta đánh bại quân xâm lược Minh.", "D. Tạo tiền đề cho cuộc chiến tranh xâm lược phương Bắc."],
-      "correct": "B. Làm chuyển biến toàn bộ các hoạt động của quốc gia.",
-      "explanation": "Cuộc cải cách làm Đại Việt cường thịnh toàn diện, tạo ra những chuyển biến quan trọng trên tất cả các lĩnh vực của quốc gia.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 28,
-      "type": "mcq",
-      "question": "[Bài 10] Để tăng cường sức mạnh quân đội, trong cải cách của mình, vua Lê Thánh Tông đã",
-      "options": ["A. quy định chặt chẽ kỉ luật quân đội và huấn luyện, tập trận.", "B. thải hồi những binh sĩ già yếu, bổ sung người khỏe mạnh.", "C. tăng cường tuyển quân quy mô lớn, ồ ạt ở các địa phương.", "D. chú trọng cải tiến vũ khí, phòng thủ những nơi hiểm yếu."],
-      "correct": "A. quy định chặt chẽ kỉ luật quân đội và huấn luyện, tập trận.",
-      "explanation": "Vua ban hành 'Thập điều quân lệnh' (10 điều kỷ luật) và thường xuyên tổ chức thao diễn võ trận.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 29,
-      "type": "mcq",
-      "question": "[Bài 10] Cuộc cải cách do vua Lê Thánh Tông thực hiện có ý nghĩa như thế nào đối với Vương triều Lê sơ?",
-      "options": ["A. Là khuôn mẫu điển hình cho nhà Lê sơ noi theo.", "B. Tạo điều kiện cho kinh tế thương nghiệp phát triển mạnh.", "C. Tạo cơ sở cho Vương triều Lê sơ phát triển vững mạnh.", "D. Kìm hãm sự chuyên quyền của quan lại triều đình."],
-      "correct": "C. Tạo cơ sở cho Vương triều Lê sơ phát triển vững mạnh.",
-      "explanation": "Cải cách giúp triều đại thoát khỏi sự lũng đoạn của các công thần và bước vào giai đoạn hoàng kim.",
-      "topic": "Cải cách Lê Thánh Tông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 30,
-      "type": "mcq",
-      "question": "[Bài 11] Cuộc cải cách hành chính lớn nhất của vương triều Nguyễn được tiến hành dưới thời vua",
-      "options": ["A. Gia Long.", "B. Minh Mạng.", "C. Tự Đức.", "D. Thiệu Trị."],
-      "correct": "B. Minh Mạng.",
-      "explanation": "Vua Minh Mạng là người thực hiện cuộc cải cách hành chính quy mô lớn nhất (1831-1832), xóa bỏ các cấp trung gian để trực tiếp quản lý các tỉnh.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 31,
-      "type": "mcq",
-      "question": "[Bài 11] Cơ mật viện có chức năng, nhiệm vụ là cơ quan",
-      "options": ["A. tiếp nhận và xử lý công văn đến và đi giữa trung ương với địa phương.", "B. tham mưu, tư vấn cho nhà vua các vấn đề chiến lược về quân sự.", "C. nắm quyền chỉ đạo các quan văn, thay thế vua xử lí một số công việc.", "D. giám sát thi hành luật pháp và quy định triều đình."],
-      "correct": "B. tham mưu, tư vấn cho nhà vua các vấn đề chiến lược về quân sự.",
-      "explanation": "Cơ mật viện được thành lập năm 1834, là cơ quan tư vấn tối cao cho vua về các việc trọng đại, đặc biệt là quân sự và an ninh.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 32,
-      "type": "mcq",
-      "question": "[Bài 11] Nội dung nào sau đây không phản ánh đúng kết quả cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX)?",
-      "options": ["A. Xây dựng được chế độ quân chủ trung ương tập quyền cao độ.", "B. Thống nhất đơn vị hành chính địa phương trong cả nước.", "C. Tổ chức cơ cấu bộ máy nhà nước gọn nhẹ, chặt chẽ.", "D. Xây dựng chế độ quân chủ trung ương phân quyền cao độ."],
-      "correct": "D. Xây dựng chế độ quân chủ trung ương phân quyền cao độ.",
-      "explanation": "Cải cách của Minh Mạng nhằm tập quyền (quyền lực tập trung vào tay vua), hoàn toàn đối lập với phân quyền.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 33,
-      "type": "mcq",
-      "question": "[Bài 11] Hàn lâm viện có nhiệm vụ",
-      "options": ["A. khởi thảo chiếu, sách, chế, cáo của nhà vua và thư từ ngoại giao.", "B. tham mưu, tư vấn cho nhà vua các vấn đề chiến lược về quân sự.", "C. nắm quyền chỉ đạo các quan văn, thay thế vua xử lí một số công việc.", "D. giám sát thi hành luật pháp và quy định triều đình."],
-      "correct": "A. khởi thảo chiếu, sách, chế, cáo của nhà vua và thư từ ngoại giao.",
-      "explanation": "Hàn lâm viện là cơ quan chuyên trách việc soạn thảo các văn kiện chính thức của triều đình.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 34,
-      "type": "mcq",
-      "question": "[Bài 11] Nội dung nào sau đây không phải là chính sách cải cách về hành chính của Minh Mạng đối với vùng dân tộc thiểu số?",
-      "options": ["A. Cho đổi tên nước Việt Nam thành Đại Nam.", "B. Bãi bỏ chế độ cai trị của các tù trưởng ở địa phương.", "C. Bổ nhiệm các quan lại triều đình đến cai trị trực tiếp.", "D. Xoá bỏ chế độ thổ quan."],
-      "correct": "A. Cho đổi tên nước Việt Nam thành Đại Nam.",
-      "explanation": "Việc đổi tên nước thành Đại Nam (1838) là chính sách mang tính quốc gia tổng thể, không phải là chính sách riêng biệt áp dụng cho vùng dân tộc thiểu số.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 35,
-      "type": "mcq",
-      "question": "[Bài 11] Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) được thực hiện trong bối cảnh lịch sử nào sau đây?",
-      "options": ["A. Chế độ quân chủ chuyên chế đang trong thời kì thịnh trị.", "B. Phương thức sản xuất tư bản chủ nghĩa phát triển mạnh.", "C. Bộ máy chính quyền nhà nước chưa hoàn thiện, đồng bộ.", "D. Đất nước đứng trước nguy cơ xâm lược từ nhà Thanh."],
-      "correct": "C. Bộ máy chính quyền nhà nước chưa hoàn thiện, đồng bộ.",
-      "explanation": "Dưới thời Gia Long, bộ máy nhà nước còn mang tính phân quyền (Bắc Thành và Gia Định Thành có quyền tự trị lớn), đơn vị hành chính chưa thống nhất.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 36,
-      "type": "mcq",
-      "question": "[Bài 11] Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) nhằm thực hiện một trong những mục đích nào sau đây?",
-      "options": ["A. Tập trung quyền lực vào tay vua.", "B. Thúc đẩy kinh tế tư bản chủ nghĩa.", "C. Ngăn ngừa nguy cơ giặc ngoại xâm.", "D. Khôi phục nền giáo dục Nho học."],
-      "correct": "A. Tập trung quyền lực vào tay vua.",
-      "explanation": "Mục tiêu tối thượng của Minh Mạng là củng cố quyền lực tuyệt đối của nhà vua và thống nhất quản lý quốc gia từ trung ương.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 37,
-      "type": "mcq",
-      "question": "[Bài 11] Để hoàn thiện bộ máy chính quyền Trung ương, vua Minh Mạng đã cho thành lập một số cơ quan mới có tên là",
-      "options": ["A. Lục bộ, Lục khoa, Lục tự.", "B. Đô ty, Thừa ty, Hiến ty.", "C. Đô sát viện, Cơ mật viện.", "D. Thông chính ty, Quốc Tử Giám."],
-      "correct": "C. Đô sát viện, Cơ mật viện.",
-      "explanation": "Ngoài việc giữ lại Lục bộ, Minh Mạng lập thêm Đô sát viện (giám sát), Cơ mật viện (tư vấn quân sự) và Nội các. Lục bộ, Lục khoa là các cơ quan thời Lê Thánh Tông.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 38,
-      "type": "mcq",
-      "question": "[Bài 11] Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) tập trung vào lĩnh vực chủ yếu nào sau đây?",
-      "options": ["A. Kinh tế.", "B. Văn hóa.", "C. Quốc phòng.", "D. Hành chính."],
-      "correct": "D. Hành chính.",
-      "explanation": "Trọng tâm của cuộc cải cách này là tổ chức lại bộ máy nhà nước (hành chính).",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 39,
-      "type": "mcq",
-      "question": "[Bài 11] Trong cuộc cải cách nửa đầu thế kỉ XIX, vua Minh Mạng đã phân chia bộ máy chính quyền địa phương thành các cấp nào sau đây?",
-      "options": ["A. Đạo thừa tuyên, phủ, huyện/châu, xã.", "B. Tỉnh/thành phố, huyện/châu, xã.", "C. Lộ, trấn, phủ, huyện/châu, xã.", "D. Tỉnh, phủ, huyện/châu, tổng, xã."],
-      "correct": "D. Tỉnh, phủ, huyện/châu, tổng, xã.",
-      "explanation": "Hệ thống cấp bậc thời Minh Mạng là: Tỉnh → Phủ → Huyện/Châu → Tổng → Xã.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 40,
-      "type": "mcq",
-      "question": "[Bài 11] Nội dung nào sau đây không phải là hoạt động cải cách của vua Minh Mạng nửa đầu thế kỉ XIX?",
-      "options": ["A. Hoàn thiện cơ cấu, chức năng của Lục bộ.", "B. Ban hành chính sách hạn điền và hạn nô.", "C. Tăng cường giám sát lẫn nhau giữa các cơ quan.", "D. Phân chia lại đơn vị hành chính ở cấp địa phương."],
-      "correct": "B. Ban hành chính sách hạn điền và hạn nô.",
-      "explanation": "Chính sách 'hạn điền, hạn nô' là của Hồ Quý Ly (cuối thế kỷ XIV), không phải của Minh Mạng.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 41,
-      "type": "mcq",
-      "question": "[Bài 11] Trong công cuộc cải cách của vua Minh Mạng, Nội các được thành lập có vai trò nào sau đây?",
-      "options": ["A. Giúp vua khởi thảo các văn bản hành chính.", "B. Kiểm tra, giám sát hoạt động của Lục bộ.", "C. Phụ trách nhân khẩu, thu thuế trong cả nước.", "D. Xướng danh những người đỗ trong kì thi Đình."],
-      "correct": "A. Giúp vua khởi thảo các văn bản hành chính.",
-      "explanation": "Nội các là cơ quan văn phòng của vua, lo việc tiếp nhận công văn, khởi thảo chiếu dụ.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 42,
-      "type": "mcq",
-      "question": "[Bài 11] Năm 1832, vua Minh Mạng cho thành lập Đô sát viện để thực hiện nhiệm vụ nào sau đây?",
-      "options": ["A. Tiếp nhận và xử lý các loại công văn, giấy tờ.", "B. Can gián nhà vua và giám sát các cơ quan.", "C. Phụ trách nhân khẩu, thu thuế trong cả nước.", "D. Phụ trách bang giao, đón tiếp sứ thần nước ngoài."],
-      "correct": "B. Can gián nhà vua và giám sát các cơ quan.",
-      "explanation": "Đô sát viện là cơ quan giám sát quan lại và can gián những sai lầm của nhà vua (ngự sử).",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 43,
-      "type": "mcq",
-      "question": "[Bài 11] Trong cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX), đứng đầu tỉnh là",
-      "options": ["A. Đô ty, Thừa ty, Hiến ty.", "B. Lục bộ, Lục khoa.", "C. Tổng đốc, Tuần phủ.", "D. Lục khoa, Lục tự."],
-      "correct": "C. Tổng đốc, Tuần phủ.",
-      "explanation": "Minh Mạng đặt ra chức Tổng đốc (quản lý 2-3 tỉnh) và Tuần phủ (quản lý 1 tỉnh) để đứng đầu chính quyền cấp tỉnh.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 44,
-      "type": "mcq",
-      "question": "[Bài 11] Ở địa phương, trong công cuộc cải cách hành chính nửa đầu thế kỉ XIX, vua Minh Mạng đã chia cả nước thành",
-      "options": ["A. 30 tỉnh và 1 phủ Thừa Thiên.", "B. Bắc Thành, Gia Định thành.", "C. 13 đạo thừa tuyên và các phủ.", "D. các lộ, trấn, phủ, huyện/châu."],
-      "correct": "A. 30 tỉnh và 1 phủ Thừa Thiên.",
-      "explanation": "Năm 1831 (miền Bắc) và 1832 (miền Nam), vua chia cả nước thành 30 tỉnh và phủ Thừa Thiên (kinh đô).",
-      "topic": "Cải cách Minh Mạng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 45,
-      "type": "mcq",
-      "question": "[Bài 11] Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) có ý nghĩa quan trọng nào sau đây?",
-      "options": ["A. xóa bỏ tình trạng 'bế quan tỏa cảng' của đất nước.", "B. ngăn chặn mọi nguy cơ xâm lược từ bên ngoài.", "C. đặt cơ sở cho sự phân chia tỉnh, huyện hiện nay.", "D. hoàn thành thống nhất đất nước về mặt lãnh thổ."],
-      "correct": "C. đặt cơ sở cho sự phân chia tỉnh, huyện hiện nay.",
-      "explanation": "Việc phân chia 30 tỉnh của Minh Mạng là tiền đề và có sự tương đồng rất lớn với bản đồ hành chính Việt Nam hiện đại.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 46,
-      "type": "mcq",
-      "question": "[Bài 11] Cuộc cải cách của vua Minh Mạng nửa đầu thế kỉ XIX đã đưa đến",
-      "options": ["A. sự phát triển thịnh trị đạt đến đỉnh cao trong lịch sử của chế độ quân chủ Việt Nam.", "B. sự xác lập của mô hình quản lý nhà nước hoàn toàn độc đáo so với thế giới lúc bấy giờ.", "C. sự xác lập của nền quân chủ chuyên chế trung ương tập quyền cao độ mang tính quan liêu.", "D. sự xác lập của nền quân chủ chuyên chế trung ương tập quyền cao độ mang tính quý tộc."],
-      "correct": "C. sự xác lập của nền quân chủ chuyên chế trung ương tập quyền cao độ mang tính quan liêu.",
-      "explanation": "Nhà nước thời Minh Mạng vận hành dựa trên hệ thống quan lại chuyên nghiệp, phân cấp rõ ràng và tuân thủ kỷ luật nghiêm ngặt từ trên xuống (tính quan liêu).",
-      "topic": "Cải cách Minh Mạng",
-      "level": "VD",
-      "image": null
-    },
-    {
-      "id": 47,
-      "type": "mcq",
-      "question": "[Bài 11] Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) và cuộc cải cách của vua Lê Thánh Tông (thế kỉ XV) có điểm khác biệt nào sau đây?",
-      "options": ["A. Thành lập lục Bộ để giúp việc cho nhà vua.", "B. Tăng cường quyền lực tuyệt đối của nhà vua.", "C. Thành lập các cơ quan Nội các và Cơ mật viện.", "D. Củng cố chế độ quân chủ chuyên chế tập quyền."],
-      "correct": "C. Thành lập các cơ quan Nội các và Cơ mật viện.",
-      "explanation": "Nội các và Cơ mật viện là những cơ quan đặc thù riêng của thời Nguyễn, không có ở thời Lê Thánh Tông.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "VD",
-      "image": null
-    },
-    {
-      "id": 48,
-      "type": "mcq",
-      "question": "[Bài 11] Một trong những hạn chế trong cải cách của vua Minh Mạng nửa đầu thế kỉ XIX là",
-      "options": ["A. cải cách nặng về củng cố vương triều, ít chú ý đến cải thiện dân sinh.", "B. cải cách làm tăng thêm tình trạng cát cứ, phân quyền ở các địa phương.", "C. sự giám sát, ràng buộc lẫn nhau giữa các cơ quan, chức quan mờ nhạt.", "D. bộ máy nhà nước cồng kềnh, hoạt động kém hiệu quả hơn thời kì trước."],
-      "correct": "A. cải cách nặng về củng cố vương triều, ít chú ý đến cải thiện dân sinh.",
-      "explanation": "Cải cách của ông tập trung quá mức vào việc kiểm soát và tập quyền (phục vụ dòng họ Nguyễn), chưa giải quyết được những mâu thuẫn xã hội cơ bản của nhân dân.",
-      "topic": "Cải cách Minh Mạng",
-      "level": "VD",
-      "image": null
-    },
-    {
-      "id": 49,
-      "type": "mcq",
-      "question": "[Bài 12] Vùng biển nằm ở rìa phía Tây Thái Bình Dương có diện tích khoảng 3,5 triệu km², trải dài khoảng 3000km theo trục đông bắc – tây nam là",
-      "options": ["A. Biển Đông.", "B. Biển Philippines.", "C. Biển San Hô.", "D. Biển Tasman."],
-      "correct": "A. Biển Đông.",
-      "explanation": "Đây là thông số địa lý cơ bản xác định danh tính của Biển Đông (South China Sea). Biển Đông là biển lớn thứ 2 ở Thái Bình Dương và thứ 4 trên thế giới.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 50,
-      "type": "mcq",
-      "question": "[Bài 12] Tuyến đường vận tải quốc tế qua Biển Đông được coi là nhộn nhịp thứ 2 trên thế giới chỉ sau biển",
-      "options": ["A. Địa Trung Hải.", "B. Hoa Đông.", "C. Caribê.", "D. Gia-va."],
-      "correct": "A. Địa Trung Hải.",
-      "explanation": "Về lưu lượng hàng hóa và tàu bè, Biển Đông chỉ đứng sau Địa Trung Hải.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 51,
-      "type": "mcq",
-      "question": "[Bài 12] Tầm quan trọng chiến lược của quần đảo Hoàng Sa và Trường Sa được thể hiện ở nội dung nào sau đây?",
-      "options": ["A. Đây là hai quần đảo duy nhất thuộc khu vực Biển Đông.", "B. Đây là hai quần đảo lớn nhất thuộc khu vực Biển Đông.", "C. Phục vụ tuyến hàng hải huyết mạch trên Biển Đông.", "D. Là nơi tiếp nhiên liệu duy nhất cho các tàu trên biển."],
-      "correct": "C. Phục vụ tuyến hàng hải huyết mạch trên Biển Đông.",
-      "explanation": "Hai quần đảo nằm ở vị trí trung tâm Biển Đông, án ngữ các tuyến hàng hải quốc tế trọng yếu, đóng vai trò trạm dừng chân, cứu hộ và bảo vệ an ninh hàng hải.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 52,
-      "type": "mcq",
-      "question": "[Bài 12] Biển Đông là một vùng biển kín thuộc khu vực",
-      "options": ["A. Bắc Băng Dương.", "B. Ấn Độ Dương.", "C. Đại Tây Dương.", "D. Thái Bình Dương."],
-      "correct": "D. Thái Bình Dương.",
-      "explanation": "Biển Đông nằm ở rìa phía Tây của Thái Bình Dương.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 53,
-      "type": "mcq",
-      "question": "[Bài 12] Hiện nay Trường Sa trực thuộc quyền quản lí hành chính của tỉnh nào ở Việt Nam?",
-      "options": ["A. Đà Nẵng.", "B. Kiên Giang.", "C. Khánh Hòa.", "D. Cà Mau."],
-      "correct": "C. Khánh Hòa.",
-      "explanation": "Theo phân cấp hành chính hiện nay, huyện đảo Trường Sa thuộc tỉnh Khánh Hòa.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 54,
-      "type": "mcq",
-      "question": "[Bài 12] Về vị trí địa lý, biển Đông được coi là cầu nối giữa Thái Bình Dương và",
-      "options": ["A. Bắc Băng Dương.", "B. Ấn Độ Dương.", "C. Đại Tây Dương.", "D. Địa Trung Hải."],
-      "correct": "B. Ấn Độ Dương.",
-      "explanation": "Biển Đông thông với Ấn Độ Dương qua eo biển Malacca.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 55,
-      "type": "mcq",
-      "question": "[Bài 12] Biển Đông là vùng biển chung của 9 quốc gia ở châu Á, trong đó có",
-      "options": ["A. Trung Quốc.", "B. Lào.", "C. Ấn Độ.", "D. Nhật Bản."],
-      "correct": "A. Trung Quốc.",
-      "explanation": "9 quốc gia ven Biển Đông gồm: Việt Nam, Trung Quốc, Philippines, Malaysia, Brunei, Indonesia, Thái Lan, Campuchia và Singapore. Lào không giáp biển.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 56,
-      "type": "mcq",
-      "question": "[Bài 12] Phía tây nam của biển Đông nối với biển An-đa-man của Ấn Độ Dương thông qua eo biển",
-      "options": ["A. La-li-man-tan.", "B. Ma-lắc-ca.", "C. Lu-dông.", "D. Đài Loan."],
-      "correct": "B. Ma-lắc-ca.",
-      "explanation": "Malacca là eo biển quan trọng nhất kết nối Biển Đông với Ấn Độ Dương.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 57,
-      "type": "mcq",
-      "question": "[Bài 12] Eo biển Ma-lắc-ca là điểm điều tiết giao thông quan trọng bậc nhất ở châu lục nào sau đây?",
-      "options": ["A. Châu Âu.", "B. Châu Mĩ.", "C. Châu Phi.", "D. Châu Á."],
-      "correct": "D. Châu Á.",
-      "explanation": "Eo biển Malacca nằm giữa Malaysia, Singapore và Indonesia, thuộc Châu Á.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 58,
-      "type": "mcq",
-      "question": "[Bài 12] Ở Biển Đông, nguồn tài nguyên thiên nhiên nào sau đây có trữ lượng vào loại lớn nhất thế giới?",
-      "options": ["A. Muối biển.", "B. Băng cháy.", "C. Dầu khí.", "D. Quặng sắt."],
-      "correct": "B. Băng cháy.",
-      "explanation": "Ngoài dầu khí, Biển Đông được đánh giá là có trữ lượng Băng cháy (Methane Hydrate) khổng lồ, được coi là nguồn năng lượng của tương lai.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 59,
-      "type": "mcq",
-      "question": "[Bài 12] Quần đảo Hoàng Sa và quần đảo Trường Sa thuộc chủ quyền của quốc gia nào sau đây?",
-      "options": ["A. Trung Quốc.", "B. Hàn Quốc.", "C. Việt Nam.", "D. Nhật Bản."],
-      "correct": "C. Việt Nam.",
-      "explanation": "Đây là khẳng định pháp lý và lịch sử của Nhà nước Việt Nam về chủ quyền đối với hai quần đảo.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 60,
-      "type": "mcq",
-      "question": "[Bài 12] Hiện nay, quần đảo Hoàng Sa trực thuộc quyền quản lý hành chính của",
-      "options": ["A. thành phố Đà Nẵng.", "B. tỉnh Bà Rịa – Vũng Tàu.", "C. tỉnh Cà Mau.", "D. tỉnh Khánh Hòa."],
-      "correct": "A. thành phố Đà Nẵng.",
-      "explanation": "Huyện đảo Hoàng Sa thuộc thành phố Đà Nẵng.",
-      "topic": "Biển Đông - Vị trí và tầm quan trọng",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 61,
-      "type": "mcq",
-      "question": "[Bài 13] Nội dung nào sau đây phản ánh đúng tầm quan trọng của Biển Đông về quốc phòng, an ninh đối với Việt Nam?",
-      "options": ["A. Tạo điều kiện thuận lợi phát triển kinh tế biển đa dạng.", "B. Là cửa ngõ, tuyến phòng thủ bảo vệ đất liền từ xa.", "C. Là con đường giao thương giữa các vùng trong cả nước.", "D. Tạo thuận lợi cho Việt Nam phát triển thương mại hàng hải."],
-      "correct": "B. Là cửa ngõ, tuyến phòng thủ bảo vệ đất liền từ xa.",
-      "explanation": "Về mặt an ninh - quốc phòng, hệ thống đảo và vùng biển đóng vai trò là 'lá chắn' bảo vệ vùng trời, vùng biển và đất liền trước các nguy cơ từ phía Đông.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 62,
-      "type": "mcq",
-      "question": "[Bài 13] Bờ biển nước ta dài khoảng 3260 km, kéo dài từ",
-      "options": ["A. tỉnh Quảng Ninh đến tỉnh Kiên Giang.", "B. tỉnh Quảng Ninh đến tỉnh An Giang.", "C. tỉnh Thái Bình đến tỉnh Cà Mau.", "D. tỉnh Nam Định đến tỉnh Bình Thuận."],
-      "correct": "A. tỉnh Quảng Ninh đến tỉnh Kiên Giang.",
-      "explanation": "Điểm đầu là Móng Cái (Quảng Ninh) và điểm cuối là Hà Tiên (Kiên Giang).",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 63,
-      "type": "mcq",
-      "question": "[Bài 13] Khu vực nào của Việt Nam không giáp với Biển Đông?",
-      "options": ["A. Tây Bắc.", "B. Đông Bắc.", "C. Tây Nam.", "D. Đông Nam."],
-      "correct": "A. Tây Bắc.",
-      "explanation": "Tây Bắc là vùng trung du miền núi phía bắc, nằm sâu trong đất liền, giáp Lào và Trung Quốc.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 64,
-      "type": "mcq",
-      "question": "[Bài 13] Một trong những nguồn tài nguyên quan trọng nhất ở thềm lục địa Việt Nam ở Biển Đông là",
-      "options": ["A. dầu khí.", "B. gỗ lim.", "C. cánh kiến.", "D. đồi mồi."],
-      "correct": "A. dầu khí.",
-      "explanation": "Dầu khí ở thềm lục địa là ngành đóng góp ngân sách lớn cho quốc gia.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 65,
-      "type": "mcq",
-      "question": "[Bài 13] Quốc gia đầu tiên khai phá, xác lập chủ quyền và quản lý liên tục đối với quần đảo Trường Sa và Hoàng Sa là",
-      "options": ["A. Việt Nam.", "B. Trung Quốc.", "C. Thái Lan.", "D. Campuchia."],
-      "correct": "A. Việt Nam.",
-      "explanation": "Theo các bằng chứng lịch sử khách quan, Việt Nam đã xác lập chủ quyền từ ít nhất thế kỷ XVII khi các đảo chưa thuộc về quốc gia nào.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 66,
-      "type": "mcq",
-      "question": "[Bài 13] Một trong những công trình sử học và địa lí ghi chép về cương vực, lãnh thổ và hoạt động thực thi, bảo vệ chủ quyền của nhà nước phong kiến Việt Nam ở quần đảo Hoàng Sa, quần đảo Trường Sa là",
-      "options": ["A. Đại Nam thực lục.", "B. Hịch tướng sĩ.", "C. Bình Ngô đại cáo.", "D. Ức Trai thi tập."],
-      "correct": "A. Đại Nam thực lục.",
-      "explanation": "Đại Nam thực lục là bộ chính sử của triều Nguyễn, ghi chép rất chi tiết các lệnh của vua cử đội Hoàng Sa ra đảo.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 67,
-      "type": "mcq",
-      "question": "[Bài 13] Từ thế kỉ XVII đến thế kỉ XIX, tổ chức nào sau đây có nhiệm vụ đến khai thác sản vật, thực thi chủ quyền tại quần đảo Hoàng Sa và Trường Sa?",
-      "options": ["A. Đội Hoàng Sa, Bắc Hải.", "B. Đội Trường Sa, Bắc Hải.", "C. Đội Hoàng Sa, Trường Sa.", "D. Đội Nam Hải, Đông Hải."],
-      "correct": "A. Đội Hoàng Sa, Bắc Hải.",
-      "explanation": "Đội Hoàng Sa (lập thời Chúa Nguyễn) và sau đó là đội Bắc Hải (đặt dưới sự quản lý của đội Hoàng Sa) là hai tổ chức thực thi chủ quyền tiêu biểu.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 68,
-      "type": "mcq",
-      "question": "[Bài 13] Dưới thời vua Minh Mạng, hoạt động khẳng định chủ quyền đối với quần đảo Hoàng Sa và Trường Sa được thể hiện qua việc",
-      "options": ["A. thành lập các xã đảo, huyện đảo.", "B. dựng miếu, trồng cây ở một số đảo.", "C. xây dựng các trạm khí tượng lớn.", "D. xây dựng các trạm vô tuyến điện."],
-      "correct": "B. dựng miếu, trồng cây ở một số đảo.",
-      "explanation": "Năm 1833-1835, vua Minh Mạng cử người ra xây miếu, dựng bia, trồng cây để làm dấu mốc cho tàu thuyền và khẳng định chủ quyền.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 69,
-      "type": "mcq",
-      "question": "[Bài 13] Nội dung nào sau đây không phản ánh đúng nhiệm vụ của hải đội Hoàng Sa và Bắc Hải dưới triều Nguyễn?",
-      "options": ["A. Dựng miếu thờ và trồng cây ở một số đảo.", "B. Đo đạc và cắm dấu mốc tại nơi khảo sát.", "C. Ngăn tàu thuyền nước ngoài đến buôn bán.", "D. Tiến hành thu gom, khai thác sản vật biển."],
-      "correct": "C. Ngăn tàu thuyền nước ngoài đến buôn bán.",
-      "explanation": "Nhiệm vụ của đội Hoàng Sa là khai thác sản vật, đo đạc, thực thi chủ quyền; không có nhiệm vụ ngăn cấm giao thương quốc tế.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "TH",
-      "image": null
-    },
-    {
-      "id": 70,
-      "type": "mcq",
-      "question": "[Bài 13] Trong những năm 30 của thế kỉ XX, chính quyền Pháp đại diện cho Việt Nam trong quan hệ đối ngoại đã khẳng định chủ quyền của Việt Nam đối với quần đảo Hoàng Sa và Trường Sa thông qua việc",
-      "options": ["A. thành lập đội Hoàng Sa.", "B. thành lập đội Bắc Hải.", "C. xây dựng trạm khí tượng.", "D. xây dựng sân bay lớn."],
-      "correct": "C. xây dựng trạm khí tượng.",
-      "explanation": "Người Pháp đã xây dựng các trạm khí tượng (như trạm Pattle ở Hoàng Sa và trạm Itu Aba ở Trường Sa) để phục vụ quốc tế và khẳng định quản lý hành chính.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 71,
-      "type": "mcq",
-      "question": "[Bài 13] Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam đã khẳng định chủ quyền của Việt Nam đối với quần đảo Hoàng Sa và Trường Sa thông qua việc",
-      "options": ["A. thành lập huyện đảo Hoàng Sa và Trường Sa.", "B. thành lập đội Hoàng Sa, Bắc Hải và Trường Đà.", "C. cho hoàn thiện tập Đại Nam nhất thống toàn đồ.", "D. cử thủy quân ra tuần tra đảo định kì hàng năm."],
-      "correct": "A. thành lập huyện đảo Hoàng Sa và Trường Sa.",
-      "explanation": "Đây là biện pháp quản lý hành chính hiện đại (Huyện Hoàng Sa thuộc Đà Nẵng, huyện Trường Sa thuộc Khánh Hòa).",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 72,
-      "type": "mcq",
-      "question": "[Bài 13] Từ cuối thế kỉ XIX đến năm 1945, quốc gia nào đại diện cho quyền lợi của Việt Nam tiếp tục khẳng định chủ quyền đối với quần đảo Hoàng Sa và Trường Sa?",
-      "options": ["A. Trung Quốc.", "B. Anh.", "C. Mĩ.", "D. Pháp."],
-      "correct": "D. Pháp.",
-      "explanation": "Thời kỳ Pháp thuộc, Pháp với tư cách là quốc gia bảo hộ đã thay mặt Việt Nam thực thi và bảo vệ chủ quyền trên hai quần đảo.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 73,
-      "type": "mcq",
-      "question": "[Bài 13] Chủ trương nhất quán của nước Cộng hòa xã hội chủ nghĩa Việt Nam trong việc giải quyết các tranh chấp ở Biển Đông hiện nay là",
-      "options": ["A. đấu tranh hòa bình.", "B. bạo lực cách mạng.", "C. chiến tranh cách mạng.", "D. bãi công, bãi khóa."],
-      "correct": "A. đấu tranh hòa bình.",
-      "explanation": "'Đấu tranh hòa bình' dựa trên luật pháp quốc tế là kim chỉ nam trong chính sách biển của Việt Nam.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "NB",
-      "image": null
-    },
-    {
-      "id": 74,
-      "type": "mcq",
-      "question": "[Bài 13] Tại hội nghị Hoà bình Xan Phran-xi-xcô (1951), khi chủ quyền của Việt Nam đối với quần đảo Hoàng Sa và quần đảo Trường Sa tiếp tục được tuyên bố mà không bị các quốc gia tham dự hội nghị phản đối. Điều đó cho thấy",
-      "options": ["A. tính pháp lý quốc tế và lịch sử về chủ quyền của Việt Nam.", "B. đây là những quần đảo không có giá trị cao về kinh tế.", "C. đây là những quần đảo không có giá trị cao về quốc phòng.", "D. các quốc gia tham dự hội nghị đều tuyệt đối tôn trọng luật Biển."],
-      "correct": "A. tính pháp lý quốc tế và lịch sử về chủ quyền của Việt Nam.",
-      "explanation": "Việc đại diện phái đoàn Trần Văn Hữu tuyên bố chủ quyền trước 51 quốc gia mà không ai phản đối là một bằng chứng pháp lý quốc tế quan trọng.",
-      "topic": "Việt Nam và Biển Đông",
-      "level": "TH",
-      "image": null
-    }
-  ]
+"title": "Tổng hợp Lịch sử 11: Cải cách Lê Thánh Tông, Minh Mạng và Biển Đảo",
+"subject": "Lịch sử",
+"questions": [
+{
+"id": 1,
+"type": "mcq",
+"question": "Năm 1460, vua Lê Thánh Tông lên ngôi trong bối cảnh như thế nào?",
+"options": [
+"A. Tình hình đất nước từng bước được ổn định.",
+"B. Nhà Lê lâm vào vào khủng hoảng, suy yếu.",
+"C. Nhà Minh đang lăm le xâm lược Đại Việt.",
+"D. Nhà Lê đang ở thời kì phát triển đỉnh cao."
+],
+"correct": "A. Tình hình đất nước từng bước được ổn định.",
+"explanation": "Năm 1460, sau sự kiện biến loạn của Lê Nghi Dân, triều đình rước Lê Thánh Tông lên ngôi. Lúc này, đất nước đã qua thời kỳ chiến tranh giải phóng dân tộc, những nền móng của nhà Lê sơ đã được các vua trước xây dựng và đang dần đi vào quỹ đạo ổn định.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 2,
+"type": "mcq",
+"question": "Về hành chính, Lê Thánh Tông đã thực hiện biện pháp gì để nâng cao quyền lực của nhà vua?",
+"options": [
+"A. Xóa bỏ hầu hết các chức quan đại thần có quyền lực lớn.",
+"B. Xóa bỏ tất cả các chức quan đại thần trong triều.",
+"C. Tiến hành hạ bậc các chức quan cao xuống nhiều lần.",
+"D. Tiến hành tuyển chọn các quan đại thần bằng thi cử."
+],
+"correct": "A. Xóa bỏ hầu hết các chức quan đại thần có quyền lực lớn.",
+"explanation": "Để tập trung quyền lực tuyệt đối vào tay hoàng đế, Lê Thánh Tông đã xóa bỏ các chức vụ trung gian có thể lấn át quyền vua như Tướng quốc, Đại hành khiển, Tể tướng.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 3,
+"type": "mcq",
+"question": "Nội dung nào sau đây phản ảnh đúng mục đích cải cách của vua Lê Thánh Tông?",
+"options": [
+"A. Tăng cường quyền lực của hoàng đế và củng cố bộ máy nhà nước.",
+"B. Giải quyết tình trạng khủng hoảng trầm trọng của đất nước bấy giờ.",
+"C. Biến nước ta trở thành cường quốc lớn mạnh hàng đầu trong khu vực.",
+"D. Tăng cường tiềm lực đất nước chuẩn bị đối phó với giặc ngoại xâm."
+],
+"correct": "A. Tăng cường quyền lực của hoàng đế và củng cố bộ máy nhà nước.",
+"explanation": "Mục đích cốt lõi của mọi cuộc cải cách quân chủ chuyên chế là tập quyền (quyền lực về tay vua) và chính quy hóa bộ máy hành chính để quản lý hiệu quả hơn.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 4,
+"type": "mcq",
+"question": "Một trong những đặc điểm về tình hình chính trị, xã hội nước ta trước khi vua Lê Thánh Tông tiến hành cải cách là",
+"options": [
+"A. chính trị bất ổn kéo dài ảnh hưởng đến sự phát triển của đất nước.",
+"B. nhiều cuộc đấu tranh của nông dân nổ ra ngày càng quyết liệt.",
+"C. bộ máy hành chính nhà nước bắt đầu bộc lộ những hạn chế.",
+"D. chính trị, xã hội ổn định, đất nước có bước phát triển mới."
+],
+"correct": "C. bộ máy hành chính nhà nước bắt đầu bộc lộ những hạn chế.",
+"explanation": "Trước cải cách, bộ máy nhà nước vẫn còn mang dấu ấn của thời kỳ chiến tranh, cồng kềnh và quyền lực bị phân tán ở các công thần khai quốc, dẫn đến hiệu lực quản lý bắt đầu giảm sút (bộc lộ hạn chế).",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 5,
+"type": "mcq",
+"question": "Năm 1484, vua Lê Thánh Tông quyết định cho dựng bia ghi tên Tiến sĩ nhằm",
+"options": [
+"A. tập trung quyền lực vào tay vua và triều đình trung ương.",
+"B. đề cao Nho học và tôn vinh các bậc trí thức Nho học.",
+"C. phát huy những phong tục tập quán tốt đẹp của dân tộc.",
+"D. tăng cường sự ràng buộc lẫn nhau giữa các cơ quan."
+],
+"correct": "B. đề cao Nho học và tôn vinh các bậc trí thức Nho học.",
+"explanation": "Việc dựng bia Tiến sĩ tại Văn Miếu là một hành động mang tính biểu tượng cao nhằm khuyến khích học tập, đề cao trí thức theo tư tưởng Nho giáo - hệ tư tưởng chính thống của nhà nước.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 6,
+"type": "mcq",
+"question": "Cuộc cải cách do vua Lê Thánh Tông thực hiện có ý nghĩa như thế nào đối với đất nước?",
+"options": [
+"A. Là khuôn mẫu điển hình cho nhà Lê sơ noi theo.",
+"B. Tạo điều kiện cho kinh tế thương nghiệp phát triển mạnh.",
+"C. Kìm hãm sự chuyên quyền của quan lại triều đình.",
+"D. Làm chuyển biến toàn bộ hoạt động của đất nước."
+],
+"correct": "D. Làm chuyển biến toàn bộ hoạt động của đất nước.",
+"explanation": "Đây là cuộc cải cách toàn diện nhất từ hành chính, quân sự đến luật pháp, văn hóa, giáo dục, làm thay đổi bộ mặt của quốc gia Đại Việt thế kỷ XV.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 7,
+"type": "mcq",
+"question": "Cuộc cải cách của vua Lê Thánh Tông được tiến hành trong bối cảnh lịch sử nào sau đây?",
+"options": [
+"A. Nội bộ triều đình có nhiều mâu thuẫn, biến động.",
+"B. Nền kinh tế sa sút, nạn đói diễn ra thường xuyên.",
+"C. Đất nước đứng trước nguy cơ bị nhà Minh xâm lược.",
+"D. Chế độ phong kiến lâm vào khủng hoảng trầm trọng."
+],
+"correct": "A. Nội bộ triều đình có nhiều mâu thuẫn, biến động.",
+"explanation": "Sau cái chết của vua Lê Nhân Tông và sự kiện Lê Nghi Dân cướp ngôi, nội bộ triều đình Lê sơ nảy sinh nhiều phe phái và mâu thuẫn giữa công thần với nhà vua.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 8,
+"type": "mcq",
+"question": "Công cuộc cải cách của Lê Thánh Tông được tiến hành trên mọi lĩnh vực, nhưng tập trung chủ yếu vào lĩnh vực",
+"options": [
+"A. kinh tế.",
+"B. giáo dục.",
+"C. hành chính.",
+"D. văn hóa."
+],
+"correct": "C. hành chính.",
+"explanation": "Trọng tâm xuyên suốt của cải cách Lê Thánh Tông là xây dựng một bộ máy nhà nước quân chủ chuyên chế tập quyền hoàn thiện nhất từ trung ương đến địa phương.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 9,
+"type": "mcq",
+"question": "Để quản lý đất nước, vua Lê Thánh Tông đã cho ban hành bộ luật nào sau đây?",
+"options": [
+"A. Hình thư.",
+"B. Quốc triều hình luật.",
+"C. Hình luật.",
+"D. Hoàng Việt luật lệ."
+],
+"correct": "B. Quốc triều hình luật.",
+"explanation": "Quốc triều hình luật (hay luật Hồng Đức) là thành tựu tiêu biểu của thời Lê Thánh Tông.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 10,
+"type": "mcq",
+"question": "Trong lĩnh vực văn hóa, Lê Thánh Tông đặc biệt đề cao hệ tư tưởng",
+"options": [
+"A. Phật giáo.",
+"B. Đạo giáo.",
+"C. Nho giáo.",
+"D. Thiên chúa giáo."
+],
+"correct": "C. Nho giáo.",
+"explanation": "Thời Lê sơ, Nho giáo chiếm vị trí độc tôn, trở thành hệ tư tưởng chính thống để xây dựng nhà nước quân chủ.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 11,
+"type": "mcq",
+"question": "Dưới thời vua Lê Thánh Tông, hệ thống cơ quan phụ trách đạo thừa tuyên có tên gọi là",
+"options": [
+"A. Tam ty.",
+"B. Lục bộ.",
+"C. Lục khoa.",
+"D. Thông chính ty."
+],
+"correct": "A. Tam ty.",
+"explanation": "Ở mỗi đạo thừa tuyên, nhà vua thiết lập 'Tam ty' gồm: Đô ty (quân sự), Thừa ty (hành chính), Hiến ty (giám sát).",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 12,
+"type": "mcq",
+"question": "Năm 1471, vua Lê Thánh Tông cho lập thêm đạo thừa tuyên thứ 13 có tên gọi là",
+"options": [
+"A. Hà Nội.",
+"B. Phú Xuân.",
+"C. Quảng Nam.",
+"D. Tây Đô."
+],
+"correct": "C. Quảng Nam.",
+"explanation": "Sau cuộc thân chinh chinh phạt Chiêm Thành năm 1471, vùng đất chiếm được được đặt làm đạo thừa tuyên thứ 13 - Quảng Nam.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 13,
+"type": "mcq",
+"question": "Trong cuộc cải cách thế kỉ XV, dưới đạo thừa tuyên, vua Lê Thánh Tông thiết lập hệ thống",
+"options": [
+"A. phủ, huyện/châu, xã.",
+"B. tỉnh/thành phố, huyện, xã.",
+"C. lộ, trấn, phủ, huyện/châu.",
+"D. tỉnh, phủ, huyện, làng."
+],
+"correct": "A. phủ, huyện/châu, xã.",
+"explanation": "Cấp hành chính địa phương thời Lê Thánh Tông lần lượt là: Đạo thừa tuyên -> Phủ -> Huyện (miền xuôi)/Châu (miền núi) -> Xã.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 14,
+"type": "mcq",
+"question": "Dưới thời vua Lê Thánh Tông, hệ thống quan lại được tuyển chọn chủ yếu thông qua",
+"options": [
+"A. dòng dõi tôn thất.",
+"B. tiến cử.",
+"C. giáo dục – khoa cử.",
+"D. đề cử."
+],
+"correct": "C. giáo dục – khoa cử.",
+"explanation": "Ông đẩy mạnh Nho học và lấy khoa cử làm phương thức chính để chọn người tài thay vì dựa vào dòng tộc như thời Trần.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 15,
+"type": "mcq",
+"question": "Để tập trung quyền lực vào nhà vua, Lê Thánh Tông đã",
+"options": [
+"A. bãi bỏ nhiều cơ quan, chức quan cũ.",
+"B. chú trọng đổi mới giáo dục khoa cử.",
+"C. ban hành chính sách hạn điền và hạn nô.",
+"D. coi trọng bảo vệ quyền lợi phụ nữ, trẻ em."
+],
+"correct": "A. bãi bỏ nhiều cơ quan, chức quan cũ.",
+"explanation": "Để tập trung quyền lực tuyệt đối vào tay hoàng đế, Lê Thánh Tông đã xóa bỏ các chức vụ trung gian có thể lấn át quyền vua như Tướng quốc, Đại hành khiển, Tể tướng.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 16,
+"type": "mcq",
+"question": "“Đây là một bộ luật đầy đủ… gồm hơn 700 điều... bảo vệ quyền hành của giai cấp thống trị, một số quyền lợi chân chính của nhân dân và an ninh đất nước”. Nhận xét trên đề cập đến bộ luật nào sau đây?",
+"options": [
+"A. Hình luật.",
+"B. Hình thư.",
+"C. Quốc triều hình luật.",
+"D. Hoàng Việt luật lệ."
+],
+"correct": "C. Quốc triều hình luật.",
+"explanation": "Đặc trưng của Quốc triều hình luật (luật Hồng Đức) là tính toàn diện và có những điểm tiến bộ bảo vệ nhân dân.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 17,
+"type": "mcq",
+"question": "Một trong những điểm mới và tiến bộ của bộ luật Quốc triều hình luật là",
+"options": [
+"A. đề cao quyền tự do, dân chủ của nhân dân.",
+"B. bảo vệ tuyệt đối quyền và lợi ích của vua.",
+"C. bảo vệ quyền và lợi ích của quân cấm binh.",
+"D. bảo vệ quyền lợi và địa vị của người phụ nữ."
+],
+"correct": "D. bảo vệ quyền lợi và địa vị của người phụ nữ.",
+"explanation": "Điểm tiến bộ vượt thời đại của luật Hồng Đức là công nhận quyền thừa kế tài sản và vị thế của phụ nữ trong gia đình.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 18,
+"type": "mcq",
+"question": "Nội dung nào sau đây phản ánh đúng về chức năng của Lục bộ dưới thời vua Lê Thánh Tông?",
+"options": [
+"A. Cơ quan giúp việc cho Lục Tự, Lục khoa.",
+"B. Theo dõi, giám sát hoạt động của Lục khoa.",
+"C. Cơ quan cao cấp chủ chốt trong triều đình.",
+"D. Phụ trách hoạt động quân sự của nhà nước."
+],
+"correct": "C. Cơ quan cao cấp chủ chốt trong triều đình.",
+"explanation": "Lục bộ (Lại, Hộ, Lễ, Binh, Hình, Công) là các cơ quan trực tiếp điều hành công việc đại sự của quốc gia dưới sự chỉ đạo trực tiếp của vua.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 19,
+"type": "mcq",
+"question": "Nội dung nào sau đây là cải cách của vua Lê Thánh Tông trên lĩnh vực văn hóa – giáo dục?",
+"options": [
+"A. Quy định chặt chẽ chế độ khoa cử.",
+"B. Thành lập Lục khoa giám sát Lục bộ.",
+"C. Ban hành chế độ lộc điền và quân điền.",
+"D. Hạn chế quyền lực của vương hầu, quý tộc."
+],
+"correct": "A. Quy định chặt chẽ chế độ khoa cử.",
+"explanation": "Vua quy định 3 năm có một kỳ thi Hội, dựng bia tiến sĩ... đều thuộc chế độ khoa cử.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 20,
+"type": "mcq",
+"question": "Nội dung nào sau đây là cải cách của vua Lê Thánh Tông trên lĩnh vực quân đội, quốc phòng?",
+"options": [
+"A. bãi bỏ nhiều cơ quan, chức quan cũ có nhiều quyền lực.",
+"B. Chú trọng xây dựng đội ngũ quan lại có phẩm chất tốt.",
+"C. Chú trọng hoàn thiện hệ thống pháp luật quản lý đất nước.",
+"D. Tổ chức các kì thi khảo võ nghệ để tuyển chọn tướng sĩ."
+],
+"correct": "D. Tổ chức các kì thi khảo võ nghệ để tuyển chọn tướng sĩ.",
+"explanation": "Để nâng cao chất lượng quân đội, vua tổ chức duyệt binh và thi sát hạch võ nghệ thường xuyên.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 21,
+"type": "mcq",
+"question": "Nội dung nào sau đây phản ánh đúng điểm giống nhau giữa cải cách của Hồ Quý Ly và vua Lê Thánh Tông?",
+"options": [
+"A. Cải cách chủ yếu mô phỏng theo mô hình nhà Minh (Trung Quốc).",
+"B. Cải cách thành công trọn vẹn và mang tính triệt để trên mọi lĩnh vực.",
+"C. Cải cách nhằm tập trung quyền lực về tay vua và triều đình trung ương.",
+"D. Cải cách toàn diện, quy mô lớn nhưng tập trung vào lĩnh vực quân đội."
+],
+"correct": "C. Cải cách nhằm tập trung quyền lực về tay vua và triều đình trung ương.",
+"explanation": "Cả hai đều muốn xóa bỏ chế độ quý tộc phân quyền thời Trần để xây dựng chế độ quân chủ tập quyền.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 22,
+"type": "mcq",
+"question": "Công cuộc cải cách của vua Lê Thánh Tông thế kỉ XV không được tiến hành trên lĩnh vực nào sau đây?",
+"options": [
+"A. Hành chính.",
+"B. Giáo dục.",
+"C. Kinh tế.",
+"D. Ngoại giao."
+],
+"correct": "D. Ngoại giao.",
+"explanation": "Cải cách của Lê Thánh Tông tập trung vào nội trị (Hành chính, Quân sự, Pháp luật, Kinh tế, Văn hóa). Ngoại giao là chính sách đối ngoại, không nằm trong các sắc lệnh 'cải cách' cấu trúc hệ thống.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 23,
+"type": "mcq",
+"question": "“Coi trọng biên soạn quốc sử” là nội dung cải cách của vua Lê Thánh Tông trên lĩnh vực nào sau đây?",
+"options": [
+"A. Quân đội.",
+"B. Văn hóa.",
+"C. Luật pháp.",
+"D. Kinh tế."
+],
+"correct": "B. Văn hóa.",
+"explanation": "Sử học là một bộ phận của văn hóa. Thời kỳ này có bộ Đại Việt sử ký toàn thư.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 24,
+"type": "mcq",
+"question": "Trong nội dung cải cách, Hồ Quý Ly và vua Lê Thánh Tông đều",
+"options": [
+"A. bãi bỏ nhiều cơ quan, chức quan cũ có nhiều quyền lực.",
+"B. khuyến khích và đề cao sử dụng chữ Nôm trong thi cử.",
+"C. hạn chế sỡ hữu ruộng đất quy mô lớn của quý tộc tôn thất.",
+"D. tăng cường cơ chế giám sát, ràng buộc nhau giữa các cơ quan."
+],
+"correct": "A. bãi bỏ nhiều cơ quan, chức quan cũ có nhiều quyền lực.",
+"explanation": "Đây là biện pháp cốt lõi để thu quyền về trung ương của cả hai nhà cải cách.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 25,
+"type": "mcq",
+"question": "Một trong những điểm mới của bộ Quốc triều hình luật là",
+"options": [
+"A. có sự gia tăng hình phạt đối với người phạm tội nếu đã đến tuổi trưởng thành.",
+"B. có sự phân biệt hình phạt đối với người phạm tội nếu tàn tật hoặc còn nhỏ.",
+"C. đề cao quyền lợi và địa vị của nam giới, quy định cụ thể về tố tụng.",
+"D. xóa bỏ hình phạt đối với người phạm tội nếu tàn tật hoặc còn nhỏ."
+],
+"correct": "B. có sự phân biệt hình phạt đối với người phạm tội nếu tàn tật hoặc còn nhỏ.",
+"explanation": "Bộ luật thể hiện tính nhân đạo khi quy định giảm nhẹ hoặc có chế độ riêng cho người già, trẻ em và người tàn tật.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 26,
+"type": "mcq",
+"question": "Nội dung nào sau đây không phải là những giá trị cơ bản mà cuộc cải cách hành chính của vua Lê Thánh Tông thế kỉ XV mang lại?",
+"options": [
+"A. Không để quyền lực tập trung quá nhiều vào một cơ quan.",
+"B. Xây dựng quy chế vận hành bộ máy nhà nước trên nguyên tắc quyền lực thuộc về nhân dân.",
+"C. Các cơ quan Nhà nước giám sát lẫn nhau để hạn chế sự lạm quyền.",
+"D. Thanh lọc, tinh giản một số chức quan và các cấp chính quyền trung gian."
+],
+"correct": "B. Xây dựng quy chế vận hành bộ máy nhà nước trên nguyên tắc quyền lực thuộc về nhân dân.",
+"explanation": "Nhà nước thời Lê Thánh Tông là nhà nước quân chủ chuyên chế (quyền lực thuộc về vua), không phải nhà nước dân chủ (quyền lực thuộc về nhân dân).",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 27,
+"type": "mcq",
+"question": "Nội dung nào sau đây là một trong những ý nghĩa về cuộc cải cách của vua Lê Thánh Tông ở thế kỉ XV?",
+"options": [
+"A. Mở ra khả năng độc lập, tự chủ đầu tiên cho dân tộc ta.",
+"B. Làm chuyển biến toàn bộ các hoạt động của quốc gia.",
+"C. Tạo thế và lực cho ta đánh bại quân xâm lược Minh.",
+"D. Tạo tiền đề cho cuộc chiến tranh xâm lược phương Bắc."
+],
+"correct": "B. Làm chuyển biến toàn bộ các hoạt động của quốc gia.",
+"explanation": "Cuộc cải cách toàn diện giúp Đại Việt cường thịnh toàn diện trên mọi lĩnh vực.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 28,
+"type": "mcq",
+"question": "Để tăng cường sức mạnh quân đội, trong cải cách của mình, vua Lê Thánh Tông đã",
+"options": [
+"A. quy định chặt chẽ kỉ luật quân đội và huấn luyện, tập trận.",
+"B. thải hồi những binh sĩ già yếu, bổ sung người khỏe mạnh.",
+"C. tăng cường tuyển quân quy mô lớn, ồ ạt ở các địa phương.",
+"D. chú trọng cải tiến vũ khí, phòng thủ những nơi hiểm yếu."
+],
+"correct": "A. quy định chặt chẽ kỉ luật quân đội và huấn luyện, tập trận.",
+"explanation": "Vua ban hành 'Thập điều quân lệnh' (10 điều kỷ luật) và thường xuyên tổ chức thao diễn võ trận.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 29,
+"type": "mcq",
+"question": "Cuộc cải cách do vua Lê Thánh Tông thực hiện có ý nghĩa như thế nào đối với Vương triều Lê sơ?",
+"options": [
+"A. Là khuôn mẫu điển hình cho nhà Lê sơ noi theo.",
+"B. Tạo điều kiện cho kinh tế thương nghiệp phát triển mạnh.",
+"C. Tạo cơ sở cho Vương triều Lê sơ phát triển vững mạnh.",
+"D. Kìm hãm sự chuyên quyền của quan lại triều đình."
+],
+"correct": "C. Tạo cơ sở cho Vương triều Lê sơ phát triển vững mạnh.",
+"explanation": "Giúp triều đại thoát khỏi sự lũng đoạn của các công thần và bước vào giai đoạn hoàng kim.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 30,
+"type": "mcq",
+"question": "Cuộc cải cách do vua Lê Thánh Tông thực hiện có ý nghĩa như thế nào đối với đất nước?",
+"options": [
+"A. Là khuôn mẫu điển hình cho nhà Lê sơ noi theo.",
+"B. Tạo điều kiện cho kinh tế thương nghiệp phát triển mạnh.",
+"C. Kìm hãm sự chuyên quyền của quan lại triều đình.",
+"D. Làm chuyển biến toàn bộ hoạt động của đất nước."
+],
+"correct": "D. Làm chuyển biến toàn bộ hoạt động của đất nước.",
+"explanation": "Cuộc cải cách toàn diện giúp Đại Việt cường thịnh toàn diện trên mọi lĩnh vực, làm thay đổi bộ mặt quốc gia.",
+"image": null,
+"topic": "Cuộc cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 31,
+"type": "mcq",
+"question": "Cuộc cải cách hành chính lớn nhất của vương triều Nguyễn được tiến hành dưới thời vua",
+"options": [
+"A. Gia Long.",
+"B. Minh Mạng.",
+"C. Tự Đức.",
+"D. Thiệu Trị."
+],
+"correct": "B. Minh Mạng.",
+"explanation": "Vua Minh Mạng là người thực hiện cuộc cải cách hành chính quy mô lớn nhất (1831-1832), xóa bỏ các cấp trung gian để trực tiếp quản lý các tỉnh.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 32,
+"type": "mcq",
+"question": "Cơ mật viện có chức năng, nhiệm vụ là cơ quan",
+"options": [
+"A. tiếp nhận và xử lý công văn đến và đi giữa trung ương với địa phương.",
+"B. tham mưu, tư vấn cho nhà vua các vấn đề chiến lược về quân sự.",
+"C. nắm quyền chỉ đạo các quan văn, thay thế vua xử lí một số công việc.",
+"D. giám sát thi hành luật pháp và quy định triều đình."
+],
+"correct": "B. tham mưu, tư vấn cho nhà vua các vấn đề chiến lược về quân sự.",
+"explanation": "Cơ mật viện được thành lập năm 1834, là cơ quan tư vấn tối cao cho vua về các việc trọng đại, đặc biệt là quân sự và an ninh.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 33,
+"type": "mcq",
+"question": "Nội dung nào sau đây không phản ánh đúng kết quả cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX)?",
+"options": [
+"A. Xây dựng được chế độ quân chủ trung ương tập quyền cao độ.",
+"B. Thống nhất đơn vị hành chính địa phương trong cả nước.",
+"C. Tổ chức cơ cấu bộ máy nhà nước gọn nhẹ, chặt chẽ.",
+"D. Xây dựng chế độ quân chủ trung ương phân quyền cao độ."
+],
+"correct": "D. Xây dựng chế độ quân chủ trung ương phân quyền cao độ.",
+"explanation": "Cải cách của Minh Mạng nhằm tập quyền (quyền lực tập trung vào tay vua), hoàn toàn đối lập với phân quyền.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 34,
+"type": "mcq",
+"question": "Vào nửa đầu thế kỉ XIX, vị vua nào của triều Nguyễn đã thực hiện chính sách cải cách đất nước?",
+"options": [
+"A. Minh Mạng.",
+"B. Gia Long.",
+"C. Tự Đức.",
+"D. Thiệu trị."
+],
+"correct": "A. Minh Mạng.",
+"explanation": "Đây là câu hỏi xác nhận định danh nhà cải cách tiêu biểu nhất triều Nguyễn.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 35,
+"type": "mcq",
+"question": "Hàn lâm viên có nhiệm vụ",
+"options": [
+"A. khởi thảo chiếu, sách, chế, cáo của nhà vua và thư từ ngoại giao.",
+"B. tham mưu, tư vấn cho nhà vua các vấn đề chiến lược về quân sự.",
+"C. nắm quyền chỉ đạo các quan văn, thay thế vua xử lí một số công việc.",
+"D. giám sát thi hành luật pháp và quy định triều đình."
+],
+"correct": "A. khởi thảo chiếu, sách, chế, cáo của nhà vua và thư từ ngoại giao.",
+"explanation": "Hàn lâm viện là cơ quan chuyên trách việc soạn thảo các văn kiện chính thức của triều đình.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 36,
+"type": "mcq",
+"question": "Nội dung nào sau đây không phải là chính sách cải cách về hành chính của Minh Mạng đối với vùng dân tộc thiểu số?",
+"options": [
+"A. Cho đổi tên nước Việt Nam thành Đại Nam.",
+"B. Bãi bỏ chế độ cai trị của các tù trưởng ở địa phương.",
+"C. Bổ nhiệm các quan lại triều đình đến cai trị trực tiếp.",
+"D. Xoá bỏ bỏ chế độ thổ quan."
+],
+"correct": "A. Cho đổi tên nước Việt Nam thành Đại Nam.",
+"explanation": "Việc đổi tên nước thành Đại Nam (1838) là chính sách mang tính quốc gia tổng thể, không phải là chính sách riêng biệt áp dụng cho vùng dân tộc thiểu số.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 37,
+"type": "mcq",
+"question": "Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) được thực hiện trong bối cảnh lịch sử nào sau đây?",
+"options": [
+"A. Chế độ quân chủ chuyên chế đang trong thời kì thịnh trị.",
+"B. Phương thức sản xuất tư bản chủ nghĩa phát triển mạnh.",
+"C. Bộ máy chính quyền nhà nước chưa hoàn thiện, đồng bộ.",
+"D. Đất nước đứng trước nguy cơ xâm lược từ nhà Thanh."
+],
+"correct": "C. Bộ máy chính quyền nhà nước chưa hoàn thiện, đồng bộ.",
+"explanation": "Dưới thời Gia Long, bộ máy nhà nước còn mang tính phân quyền (Bắc Thành và Gia Định Thành có quyền tự trị lớn), đơn vị hành chính chưa thống nhất.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 38,
+"type": "mcq",
+"question": "Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) nhằm thực hiện một trong những mục đích nào sau đây?",
+"options": [
+"A. Tập trung quyền lực vào tay vua.",
+"B. Thúc đẩy kinh tế tư bản chủ nghĩa.",
+"C. Ngăn ngừa nguy cơ giặc ngoại xâm.",
+"D. Khôi phục nền giáo dục Nho học."
+],
+"correct": "A. Tập trung quyền lực vào tay vua.",
+"explanation": "Mục tiêu tối thượng của Minh Mạng là củng cố quyền lực tuyệt đối của nhà vua và thống nhất quản lý quốc gia từ trung ương.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 39,
+"type": "mcq",
+"question": "Để hoàn thiện bộ máy chính quyền Trung ương, vua Minh Mạng đã cho thành lập một số cơ quan mới có tên là",
+"options": [
+"A. Lục bộ, Lục khoa, Lục tự.",
+"B. Đô ty, Thừa ty, Hiến ty.",
+"C. Đô sát viện, Cơ mật viện.",
+"D. Thông chính ty, Quốc Tử Giám."
+],
+"correct": "C. Đô sát viện, Cơ mật viện.",
+"explanation": "Ngoài việc giữ lại Lục bộ, Minh Mạng lập thêm Đô sát viện (giám sát), Cơ mật viện (tư vấn quân sự) và Nội các.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 40,
+"type": "mcq",
+"question": "Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) tập trung vào lĩnh vực chủ yếu nào sau đây?",
+"options": [
+"A. Kinh tế.",
+"B. Văn hóa.",
+"C. Quốc phòng.",
+"D. Hành chính."
+],
+"correct": "D. Hành chính.",
+"explanation": "Trọng tâm của cuộc cải cách này là tổ chức lại bộ máy nhà nước (hành chính).",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 41,
+"type": "mcq",
+"question": "Trong cuộc cải cách nửa đầu thế kỉ XIX, vua Minh Mạng đã phân chia bộ máy chính quyền địa phương thành các cấp nào sau đây?",
+"options": [
+"A. Đạo thừa tuyên, phủ, huyện/châu, xã.",
+"B. Tỉnh/thành phố, huyện/châu, xã.",
+"C. Lộ, trấn, phủ, huyện/châu, xã.",
+"D. Tỉnh, phủ, huyện/châu, tổng, xã."
+],
+"correct": "D. Tỉnh, phủ, huyện/châu, tổng, xã.",
+"explanation": "Hệ thống cấp bậc thời Minh Mạng là: Tỉnh -> Phủ -> Huyện/Châu -> Tổng -> Xã.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 42,
+"type": "mcq",
+"question": "Nội dung nào sau đây không phải là hoạt động cải cách của vua Minh Mạng nửa đầu thế kỉ XIX?",
+"options": [
+"A. Hoàn thiện cơ cấu, chức năng của Lục bộ.",
+"B. Ban hành chính sách hạn điền và hạn nô.",
+"C. Tăng cường giám sát lẫn nhau giữa các cơ quan.",
+"D. Phân chia lại đơn vị hành chính ở cấp địa phương."
+],
+"correct": "B. Ban hành chính sách hạn điền và hạn nô.",
+"explanation": "Chính sách 'hạn điền, hạn nô' là của Hồ Quý Ly (cuối thế kỷ XIV).",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 43,
+"type": "mcq",
+"question": "Trong công cuộc cải cách của vua Minh Mạng, Nội các được thành lập có vai trò nào sau đây?",
+"options": [
+"A. Giúp vua khởi thảo các văn bản hành chính.",
+"B. Kiểm tra, giám sát hoạt động của Lục bộ.",
+"C. Phụ trách nhân khẩu, thu thuế trong cả nước.",
+"D. Xướng danh những người đỗ trong kì thi Đình."
+],
+"correct": "A. Giúp vua khởi thảo các văn bản hành chính.",
+"explanation": "Nội các là cơ quan văn phòng của vua, lo việc tiếp nhận công văn, khởi thảo chiếu dụ.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 44,
+"type": "mcq",
+"question": "Năm 1832, vua Minh Mạng cho thành lập Đô sát viện để thực hiện nhiệm vụ nào sau đây?",
+"options": [
+"A. Tiếp nhận và xử lý các loại công văn, giấy tờ.",
+"B. Can gián nhà vua và giám sát các cơ quan.",
+"C. Phụ trách nhân khẩu, thu thuế trong cả nước.",
+"D. Phụ trách bang giao, đón tiếp sứ thần nước ngoài."
+],
+"correct": "B. Can gián nhà vua và giám sát các cơ quan.",
+"explanation": "Đô sát viện là cơ quan giám sát quan lại và can gián những sai lầm của nhà vua (ngự sử).",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 45,
+"type": "mcq",
+"question": "Trong cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX), đứng đầu tỉnh là",
+"options": [
+"A. Đô ty, Thừa ty, Hiến ty.",
+"B. Lục bộ, Lục khoa",
+"C. Tổng đốc, Tuần phủ.",
+"D. Lục khoa, Lục tự"
+],
+"correct": "C. Tổng đốc, Tuần phủ.",
+"explanation": "Minh Mạng đặt ra chức Tổng đốc (quản lý 2-3 tỉnh) và Tuần phủ (quản lý 1 tỉnh) để đứng đầu chính quyền cấp tỉnh.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 46,
+"type": "mcq",
+"question": "Công cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) đã đem lại một trong những kết quả nào sau đây?",
+"options": [
+"A. Đưa đất nước phát triển lên chế độ tư bản chủ nghĩa.",
+"B. Thúc đẩy bộ máy chính quyền các cấp hoạt động hiệu quả.",
+"C. Góp phần mở cửa và hội nhập nền kinh tế khu vực.",
+"D. Hoàn thành thống nhất đất nước về mặt lãnh thổ."
+],
+"correct": "B. Thúc đẩy bộ máy chính quyền các cấp hoạt động hiệu quả.",
+"explanation": "Việc thống nhất các đơn vị hành chính và tăng cường giám sát giúp bộ máy nhà nước hoạt động đồng bộ và hiệu quả hơn so với thời Gia Long.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 47,
+"type": "mcq",
+"question": "Trong bộ máy chính quyền trung ương thời Minh Mạng, Cơ mật viện có vai trò tư vấn cho nhà vua về",
+"options": [
+"A. văn hóa.",
+"B. quân sự.",
+"C. giáo dục.",
+"D. luật pháp."
+],
+"correct": "B. quân sự.",
+"explanation": "Cơ mật viện phụ trách các việc quốc phòng, quân sự trọng yếu.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 48,
+"type": "mcq",
+"question": "Ở địa phương, trong công cuộc cải cách hành chính nửa đầu thế kỉ XIX, vua Minh Mạng đã chia cả nước thành",
+"options": [
+"A. 30 tỉnh và 1 phủ Thừa Thiên.",
+"B. Bắc Thành, Gia Định thành.",
+"C. 13 đạo thừa tuyên và các phủ.",
+"D. các lộ, trấn, phủ, huyện/châu"
+],
+"correct": "A. 30 tỉnh và 1 phủ Thừa Thiên.",
+"explanation": "Năm 1831 (miền Bắc) và 1832 (miền Nam), vua chia cả nước thành 30 tỉnh và phủ Thừa Thiên (kinh đô).",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 49,
+"type": "mcq",
+"question": "Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) được thực hiện trong bối cảnh",
+"options": [
+"A. tình hình an ninh – xã hội ở nhiều địa phương bất ổn.",
+"B. bộ máy nhà nước phong kiến cơ bản đã hoàn chỉnh.",
+"C. tình trạng phân quyền, thiếu thống nhất đã khắc phục.",
+"D. phương thức sản xuất tư bản chủ nghĩa thâm nhập mạnh."
+],
+"correct": "A. tình hình an ninh – xã hội ở nhiều địa phương bất ổn.",
+"explanation": "Nửa đầu thế kỷ XIX có nhiều cuộc khởi nghĩa nông dân và sự lộng quyền của quan lại ở các vùng tự trị (Bắc Thành, Gia Định Thành).",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 50,
+"type": "mcq",
+"question": "Cuộc cải cách hành chính của vua Minh Mạng (nửa đầu thế kỉ XIX) không nhằm mục đích nào sau đây?",
+"options": [
+"A. Khắc phục tình trạng phân quyền, thiếu thống nhất.",
+"B. Tăng cường tính thống nhất và tiềm lực của đất nước.",
+"C. Tập trung quyền lực và hoàn thiện bộ máy nhà nước.",
+"D. Xoá bỏ tình trạng “bế quan tỏa cảng” của đất nước."
+],
+"correct": "D. Xoá bỏ tình trạng “bế quan tỏa cảng” của đất nước.",
+"explanation": "Vua Minh Mạng vẫn duy trì chính sách 'bế quan tỏa cảng' (đóng cửa biển, hạn chế giao thương với phương Tây). Cải cách hành chính không nhằm xóa bỏ điều này.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 51,
+"type": "mcq",
+"question": "Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) có ý nghĩa quan trọng nào sau đây?",
+"options": [
+"A. xóa bỏ tình trạng “bế quan tỏa cảng” của đất nước.",
+"B. ngăn chặn mọi nguy cơ xâm lược từ bên ngoài.",
+"C. đặt cơ sở cho sự phân chia tỉnh, huyện hiện nay.",
+"D. hoàn thành thống nhất đất nước về mặt lãnh thổ."
+],
+"correct": "C. đặt cơ sở cho sự phân chia tỉnh, huyện hiện nay.",
+"explanation": "Việc phân chia 30 tỉnh của Minh Mạng là tiền đề và có sự tương đồng rất lớn với bản đồ hành chính Việt Nam hiện đại.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 52,
+"type": "mcq",
+"question": "Một trong những di sản lớn nhất trong cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) còn giá trị đến ngày nay là",
+"options": [
+"A. cách thức tổ chức bộ máy nhà nước ở trung ương.",
+"B. cách thức phân chia đơn vị hành chính cấp tỉnh.",
+"C. tập trung cao độ quyền lực vào trong tay nhà vua.",
+"D. ưu tiên bổ nhiệm quan lại là người ở địa phương."
+],
+"correct": "B. cách thức phân chia đơn vị hành chính cấp tỉnh.",
+"explanation": "Việc phân chia 30 tỉnh của Minh Mạng là tiền đề và có sự tương đồng rất lớn với bản đồ hành chính Việt Nam hiện đại.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 53,
+"type": "mcq",
+"question": "Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỉ XIX) và cuộc cải cách của vua Lê Thánh Tông (thế kỉ XV) có điểm khác biệt nào sau đây?",
+"options": [
+"A. Thành lập lục Bộ để giúp việc cho nhà vua.",
+"B. Tăng cường quyền lực tuyệt đối của nhà vua.",
+"C. Thành lập các cơ quan Nội các và Cơ mật viện.",
+"D. Củng cố chế độ quân chủ chuyên chế tập quyền."
+],
+"correct": "C. Thành lập các cơ quan Nội các và Cơ mật viện.",
+"explanation": "Nội các và Cơ mật viện là những cơ quan đặc thù riêng của thời Nguyễn, không có ở thời Lê Thánh Tông.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 54,
+"type": "mcq",
+"question": "Cuộc cải cách hành chính của vua Minh Mạng được thực hiện trên cơ sở học tập chủ yếu mô hình của vương triều nào sau đây ở Trung Quốc?",
+"options": [
+"A. Nhà Nguyên.",
+"B. Nhà Thanh.",
+"C. Nhà Tống.",
+"D. Nhà Đường."
+],
+"correct": "B. Nhà Thanh.",
+"explanation": "Triều Nguyễn nói chung và Minh Mạng nói riêng mô phỏng rất nhiều thiết chế từ nhà Thanh (Trung Quốc).",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 55,
+"type": "mcq",
+"question": "Một trong những hạn chế trong cải cách của vua Minh Mạng nửa đầu thế kỉ XIX là",
+"options": [
+"A. cải cách nặng về củng cố vương triều, ít chú ý đến cải thiện dân sinh.",
+"B. cải cách làm tăng thêm tình trạng cát cứ, phân quyền ở các địa phương.",
+"C. sự giám sát, ràng buộc lẫn nhau giữa các cơ quan, chức quan mờ nhạt.",
+"D. bộ máy nhà nước cồng kềnh, hoạt động kém hiệu quả hơn thời kì trước."
+],
+"correct": "A. cải cách nặng về củng cố vương triều, ít chú ý đến cải thiện dân sinh.",
+"explanation": "Cải cách của ông tập trung quá mức vào việc kiểm soát và tập quyền (phục vụ dòng họ Nguyễn), chưa giải quyết được những mâu thuẫn xã hội cơ bản của nhân dân.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 56,
+"type": "mcq",
+"question": "Dưới thời Minh Mạng, triều đình tăng cường quyền kiểm soát đối với vùng dân tộc thiểu số thông qua việc",
+"options": [
+"A. thiết lập chế độ thổ quan.",
+"B. bãi bỏ quyền thế tập của tù trưởng.",
+"C. gả công chúa cho các tù trưởng.",
+"D. bỏ lưu quan (quan lại người Kinh)."
+],
+"correct": "B. bãi bỏ quyền thế tập của tù trưởng.",
+"explanation": "Vua thực hiện chính sách 'Lưu quan' (bổ nhiệm quan lại triều đình thay thế cho chế độ cha truyền con nối của tù trưởng).",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 57,
+"type": "mcq",
+"question": "Cuộc cải cách của vua Minh Mạng nửa đầu thế kỉ XIX đã đưa đến",
+"options": [
+"A. sự phát triển thịnh trị đạt đến đỉnh cao trong lịch sử của chế độ quân chủ Việt Nam.",
+"B. sự xác lập của mô hình quản lý nhà nước hoàn toàn độc đáo so với thế giới lúc bấy giờ.",
+"C. sự xác lập của nền quân chủ chuyên chế trung ương tập quyền cao độ mang tính quan liêu.",
+"D. sự xác lập của nền quân chủ chuyên chế trung ương tập quyền cao độ mang tính quý tộc."
+],
+"correct": "C. sự xác lập của nền quân chủ chuyên chế trung ương tập quyền cao độ mang tính quan liêu.",
+"explanation": "Nhà nước thời Minh Mạng vận hành dựa trên hệ thống quan lại chuyên nghiệp, phân cấp rõ ràng và tuân thủ kỷ luật nghiêm ngặt từ trên xuống (tính quan liêu).",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 58,
+"type": "mcq",
+"question": "Trong cải cách của vua Minh Mạng, cơ quan tư vấn tối cao cho nhà vua về những vấn đề quân sự quan trọng được gọi là",
+"options": [
+"A. Hàn lâm viện.",
+"B. Cơ mật viện.",
+"C. Nội các.",
+"D. Đô sát viện."
+],
+"correct": "B. Cơ mật viện.",
+"explanation": "Cơ mật viện phụ trách các việc quốc phòng, quân sự trọng yếu.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 59,
+"type": "mcq",
+"question": "Một trong những tác dụng tích cực của cải cách hành chính thời vua Minh Mạng là góp phần",
+"options": [
+"A. tạo điều kiện phát triển kinh tế theo hướng tư bản.",
+"B. hạn chế sự tham nhũng và lộng hành của quan lại.",
+"C. khích lệ người dân tích cực thi cử và ra làm quan.",
+"D. phát triển nền văn hóa mang đậm bản sắc dân tộc."
+],
+"correct": "B. hạn chế sự tham nhũng và lộng hành của quan lại.",
+"explanation": "Nhờ thiết lập Đô sát viện và hệ thống kiểm tra chéo giữa các tỉnh, sự tham nhũng và lạm quyền của quan lại địa phương được giám sát chặt chẽ hơn.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 60,
+"type": "mcq",
+"question": "Vua Minh Mạng cải cách hệ thống chính trị - hành chính chặt chẽ, gọn nhẹ từ trung ương đến địa phương không nhằm mục tiêu nào dưới đây?",
+"options": [
+"A. Nâng cao năng lực hệ thống quan chức ở trung ương.",
+"B. Thống nhất đất nước, xác lập chủ quyền lãnh thổ.",
+"C. Thiết lập nên nhà nước quân chủ phong kiến tập quyền.",
+"D. Hạn chế tối đa quyền tự trị của làng xã, địa phương."
+],
+"correct": "D. Hạn chế tối đa quyền tự trị của làng xã, địa phương.",
+"explanation": "Cải cách Minh Mạng tập trung vào cấp Tỉnh, Phủ, Huyện để thu quyền về Trung ương (đối với các vùng tự trị lớn). Đối với làng xã, triều đình vẫn tôn trọng một số quyền tự trị truyền thống theo lệ làng ('Phép vua thua lệ làng'). Mục tiêu của ông không phải là xóa bỏ quyền tự trị của làng xã.",
+"image": null,
+"topic": "Cuộc cải cách của Minh Mạng",
+"level": "TH"
+},
+{
+"id": 61,
+"type": "mcq",
+"question": "Vùng biển nằm ở rìa phía Tây Thái Bình Dương có diện tích khoảng 3,5 triệu km2, trải dài khoảng 3000km theo trục đông bắc – tây nam là",
+"options": [
+"A. Biển Đông.",
+"B. Biển Philippines.",
+"C. Biển San Hô.",
+"D. Biển Tasman."
+],
+"correct": "A. Biển Đông.",
+"explanation": "Đây là thông số địa lý cơ bản xác định danh tính của Biển Đông (South China Sea). Biển Đông là biển lớn thứ 2 ở Thái Bình Dương và thứ 4 trên thế giới.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 62,
+"type": "mcq",
+"question": "Tuyến đường vận tải quốc tế qua Biển Đông được coi là nhộn nhịp thứ 2 trên thế giới chỉ sau biển",
+"options": [
+"A. Địa Trung Hải.",
+"B. Hoa Đông.",
+"C. Caribê.",
+"D. Gia - va."
+],
+"correct": "A. Địa Trung Hải.",
+"explanation": "Về lưu lượng hàng hóa và tàu bè, Biển Đông chỉ đứng sau Địa Trung Hải. Đây là 'hành lang' kết nối các nền kinh tế lớn.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 63,
+"type": "mcq",
+"question": "Tầm quan trọng chiến lược của quần đảo Hoàng Sa và Trường Sa được thể hiện ở nội dung nào sau đây?",
+"options": [
+"A. Đây là hai quần đảo duy nhất thuộc khu vực Biển Đông.",
+"B. Đây là hai quần đảo lớn nhất thuộc khu vực Biển Đông.",
+"C. Phục vụ tuyến hàng hải huyết mạch trên Biển Đông.",
+"D. Là nơi tiếp nhiên liệu duy nhất cho các tàu trên biển."
+],
+"correct": "C. Phục vụ tuyến hàng hải huyết mạch trên Biển Đông.",
+"explanation": "Hai quần đảo nằm ở vị trí trung tâm Biển Đông, án ngữ các tuyến hàng hải quốc tế trọng yếu, đóng vai trò trạm dừng chân, cứu hộ và bảo vệ an ninh hàng hải.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 64,
+"type": "mcq",
+"question": "Biển Đông là một vùng biển kín thuộc khu vực",
+"options": [
+"A. Bắc Băng Dương.",
+"B. Ấn Độ Dương.",
+"C. Đại Tây Dương.",
+"D. Thái Bình Dương."
+],
+"correct": "D. Thái Bình Dương.",
+"explanation": "Biển Đông nằm ở rìa phía Tây của Thái Bình Dương.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 65,
+"type": "mcq",
+"question": "Hiện nay Trường Sa trực thuộc quyền quản lí hành chính của tỉnh nào ở Việt Nam?",
+"options": [
+"A. Đà Nẵng.",
+"B. Kiên Giang.",
+"C. Khánh Hòa.",
+"D. Cà Mau."
+],
+"correct": "C. Khánh Hòa.",
+"explanation": "Theo phân cấp hành chính hiện nay, huyện đảo Trường Sa thuộc tỉnh Khánh Hòa.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 66,
+"type": "mcq",
+"question": "Nguồn tài nguyên, khoáng sản, du lịch đa dạng là điều kiện để các đảo trên biển Đông phát triển lĩnh vực nào sau đây?",
+"options": [
+"A. Kiểm soát, đảm bảo an ninh giao thông trên biển.",
+"B. Xây dựng cơ sở hậu cần, kỹ thuật, phục vụ quân sự.",
+"C. Phát triển hoạt động kinh tế có tầm chiến lược.",
+"D. Thuận lợi xây dựng các trạm thông tin, trạm dừng chân."
+],
+"correct": "C. Phát triển hoạt động kinh tế có tầm chiến lược.",
+"explanation": "Từ khóa là 'tài nguyên, khoáng sản, du lịch' - đây là các yếu tố đầu vào cho kinh tế. Do đó mục đích là phát triển kinh tế chiến lược.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 67,
+"type": "mcq",
+"question": "Về vị trí địa lý, biển Đông được coi là cầu nối giữa Thái Bình Dương và",
+"options": [
+"A. Bắc Băng Dương.",
+"B. Ấn Độ Dương.",
+"C. Đại Tây Dương.",
+"D. Địa Trung Hải."
+],
+"correct": "B. Ấn Độ Dương.",
+"explanation": "Biển Đông thông với Ấn Độ Dương qua eo biển Malacca.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 68,
+"type": "mcq",
+"question": "Biển Đông là vùng biển chung của 9 quốc gia ở châu Á, trong đó có",
+"options": [
+"A. Trung Quốc.",
+"B. Lào.",
+"C. Ấn Độ.",
+"D. Nhật Bản."
+],
+"correct": "A. Trung Quốc.",
+"explanation": "9 quốc gia ven Biển Đông gồm: Việt Nam, Trung Quốc, Philippines, Malaysia, Brunei, Indonesia, Thái Lan, Campuchia và Singapore.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 69,
+"type": "mcq",
+"question": "Phía tây nam của biển Đông nối với biển An – đa – man của Ấn Độ Dương thông qua eo biển",
+"options": [
+"A. La – li – man – tan.",
+"B. Ma – lắc – ca.",
+"C. Lu – dông.",
+"D. Đài Loan."
+],
+"correct": "B. Ma – lắc – ca.",
+"explanation": "Malacca là eo biển quan trọng nhất kết nối Biển Đông với Ấn Độ Dương.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 70,
+"type": "mcq",
+"question": "Eo biển Ma-lắc-ca là điểm điều tiết giao thông quan trọng bậc nhất ở châu lục nào sau đây?",
+"options": [
+"A. Châu Âu.",
+"B. Châu Mĩ.",
+"C. Châu Phi.",
+"D. Châu Á."
+],
+"correct": "D. Châu Á.",
+"explanation": "Eo biển Malacca nằm giữa Malaysia, Singapore và Indonesia, thuộc Châu Á.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 71,
+"type": "mcq",
+"question": "Biển Đông là một trong những biển lớn và là đường vận chuyển huyết mạch của khu vực",
+"options": [
+"A. châu Á - Thái Bình Dương.",
+"B. Bắc Mĩ và eo biển Đan Mạch.",
+"C. châu Âu và mũi Hảo Vọng.",
+"D. châu Phi và châu Nam Cực."
+],
+"correct": "A. châu Á - Thái Bình Dương.",
+"explanation": "Dựa vào vị trí địa lý của biển.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 72,
+"type": "mcq",
+"question": "Biển Đông có ảnh hưởng trực tiếp tới cuộc sống của người dân ở một số nước thuộc khu vực nào sau đây?",
+"options": [
+"A. Châu Phi.",
+"B. Châu Mĩ.",
+"C. Châu Âu.",
+"D. Châu Á"
+],
+"correct": "D. Châu Á",
+"explanation": "Eo biển Malacca nằm giữa Malaysia, Singapore và Indonesia, thuộc Châu Á.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 73,
+"type": "mcq",
+"question": "Biển Đông là vùng biển chung của 9 quốc gia ở châu Á, trong đó có",
+"options": [
+"A. Ma – lai – xi – a.",
+"B. Mĩ.",
+"C. Liên bang Nga.",
+"D. Mi – an – ma."
+],
+"correct": "A. Ma – lai – xi – a.",
+"explanation": "9 quốc gia ven Biển Đông gồm: Việt Nam, Trung Quốc, Philippines, Malaysia, Brunei, Indonesia, Thái Lan, Campuchia và Singapore.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 74,
+"type": "mcq",
+"question": "Các cảng biển lớn trên Biển Đông có vai trò nào sau đây?",
+"options": [
+"A. Điểm trung chuyển của tàu thuyền.",
+"B. Nơi khai thác và chế biến dầu khí.",
+"C. Điểm tập trung phát triển du lịch.",
+"D. Nơi giải quyết các vấn đề xã hội."
+],
+"correct": "A. Điểm trung chuyển của tàu thuyền.",
+"explanation": "Cảng biển chức năng chính là bốc dỡ và trung chuyển hàng hóa cho tàu thuyền.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 75,
+"type": "mcq",
+"question": "Eo biển Ma – lắc – ca là điểm điều tiết giao thông đường biển quan trọng, kết nối nhiều nước châu Á, trong đó có 3 nước đông dân của thế giới là In – đô – nê – xi – a, Trung Quốc và",
+"options": [
+"A. Ai Cập.",
+"B. Liên bang Nga.",
+"C. Ấn Độ.",
+"D. Mông Cổ."
+],
+"correct": "C. Ấn Độ.",
+"explanation": "Malacca là con đường ngắn nhất để hàng hóa từ Trung Quốc, Nhật Bản đến Ấn Độ và ngược lại.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 76,
+"type": "mcq",
+"question": "Vùng biển nào sau đây là tuyến đường di chuyển ngắn nhất nối Thái Bình Dương và Ấn Độ Dương?",
+"options": [
+"A. Biển Địa Trung Hải.",
+"B. Biển Đông.",
+"C. Biển Đỏ.",
+"D. Biển Đen."
+],
+"correct": "B. Biển Đông.",
+"explanation": "Biển Đông nằm trên tuyến hàng hải ngắn nhất nối hai đại dương này.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 77,
+"type": "mcq",
+"question": "Trong lịch sử, Biển Đông được coi là tuyến đường thiết yếu trong giao thông, giao thương, di cư,…giữa",
+"options": [
+"A. Trung Quốc và Nhật Bản.",
+"B. Trung Quốc và Đông Á.",
+"C. Ấn Độ và Nam Á.",
+"D. Ấn Độ và Trung Quốc."
+],
+"correct": "D. Ấn Độ và Trung Quốc.",
+"explanation": "Từ thời cổ đại, Biển Đông đã là một phần của 'Con đường tơ lụa trên biển' nối liền hai nền văn minh lớn là Ấn Độ và Trung Quốc.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 78,
+"type": "mcq",
+"question": "Các quốc gia ở khu vực nào sau đây có nền kinh tế gắn trực tiếp với con đường thương mại, hệ thống cảng biển và tài nguyên trên Biển Đông?",
+"options": [
+"A. Đông Bắc Á và Tây Âu.",
+"B. Đông Bắc Á và Đông Nam Á.",
+"C. Đông Nam Á và Nam Á.",
+"D. Nam Á và Tây Á."
+],
+"correct": "B. Đông Bắc Á và Đông Nam Á.",
+"explanation": "Đông Nam Á là các nước ven biển trực tiếp, Đông Bắc Á (Nhật, Hàn, Trung) phụ thuộc vào Biển Đông để nhập khẩu năng lượng và xuất khẩu hàng hóa.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 79,
+"type": "mcq",
+"question": "Ở Biển Đông, nguồn tài nguyên thiên nhiên nào sau đây có trữ lượng vào loại lớn nhất thế giới?",
+"options": [
+"A. Muối biển.",
+"B. Băng cháy.",
+"C. Dầu khí.",
+"D. Quặng sắt."
+],
+"correct": "B. Băng cháy.",
+"explanation": "Ngoài dầu khí, Biển Đông được đánh giá là có trữ lượng Băng cháy (Methane Hydrate) khổng lồ, được coi là nguồn năng lượng của tương lai.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 80,
+"type": "mcq",
+"question": "Nội dung nào sau đây phản ánh đúng sự phong phú về nguồn tài nguyên thiên nhiên của Biển Đông?",
+"options": [
+"A. Biển Đông là điểm điều tiết giao thông đường biển quan trọng nhất châu Á.",
+"B. Biển Đông có hàng trăm loài sinh vật, bao gồm cả động vật và thực vật.",
+"C. Biển Đông là địa bàn cạnh tranh ảnh hưởng truyền thống của các nước lớn.",
+"D. Biển Đông là nơi tập trung các mô hình chính trị, kinh tế xã hội đa dạng."
+],
+"correct": "B. Biển Đông có hàng trăm loài sinh vật, bao gồm cả động vật và thực vật.",
+"explanation": "Câu hỏi hỏi về 'nguồn tài nguyên thiên nhiên'. Đáp án B nói về đa dạng sinh học (sinh vật).",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 81,
+"type": "mcq",
+"question": "Nội dung nào sau đây không phản ánh đúng vai trò quan trọng của Biển Đông về mặt kinh tế?",
+"options": [
+"A. Biển Đông là nơi diễn ra quá trình giao thoa của nhiều nền văn hóa lớn.",
+"B. Biển Đông là tuyến đường vận tải hàng hải nhộn nhịp thứ hai thế giới.",
+"C. Các nước Đông Nam Á ven biển hưởng lợi trực tiếp về kinh tế từ biển Đông.",
+"D. Các nước ven biển Đông có hoạt động khai thác hải sản và dầu khí sôi động."
+],
+"correct": "A. Biển Đông là nơi diễn ra quá trình giao thoa của nhiều nền văn hóa lớn.",
+"explanation": "Sự giao thoa văn hóa (A) thuộc về lĩnh vực văn hóa - xã hội, không phải lĩnh vực kinh tế.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 82,
+"type": "mcq",
+"question": "Ngành kinh tế nào sau đây của Biển Đông được đẩy mạnh nhờ hệ sinh vật đa dạng dưới đáy biển và cảnh quan thiên nhiên tươi đẹp?",
+"options": [
+"A. Du lịch biển.",
+"B. Nuôi trồng thủy, hải sản.",
+"C. Khai thác khoáng sản.",
+"D. Đánh bắt cá."
+],
+"correct": "A. Du lịch biển.",
+"explanation": "Cụm từ 'cảnh quan thiên nhiên tươi đẹp' chỉ phục vụ mục đích du lịch.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 83,
+"type": "mcq",
+"question": "Nội dung nào sau đây thể hiện tầm quan trọng chiến lược của Biển Đông?",
+"options": [
+"A. Là tuyến hàng hải quốc tế nhộn nhịp nhất trên thế giới.",
+"B. Là tuyến hàng hải nối Thái Bình Dương với Bắc Băng Dương",
+"C. Có nguồi tài nguyên thiên nhiên biển phong phú.",
+"D. Là tuyến giao thông hàng hải duy nhất trên biển."
+],
+"correct": "A. Là tuyến hàng hải quốc tế nhộn nhịp nhất trên thế giới.",
+"explanation": "Tầm quan trọng chiến lược lớn nhất nằm ở giá trị giao thông vận tải quốc tế. Mặc dù nhộn nhịp thứ 2 sau Địa Trung Hải (theo một số tài liệu cũ), nhưng trong bối cảnh địa chính trị hiện nay, nó thường được nhấn mạnh là tuyến đường 'huyết mạch nhộn nhịp' hàng đầu.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 84,
+"type": "mcq",
+"question": "Quần đảo Hoàng Sa và quần đảo Trường Sa thuộc chủ quyền của quốc gia nào sau đây?",
+"options": [
+"A. Trung Quốc.",
+"B. Hàn Quốc.",
+"C. Việt Nam.",
+"D. Nhật Bản."
+],
+"correct": "C. Việt Nam.",
+"explanation": "Đây là khẳng định pháp lý và lịch sử của Nhà nước Việt Nam.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 85,
+"type": "mcq",
+"question": "Hiện nay, quần đảo Hoàng Sa trực thuộc quyền quản lý hành chính của",
+"options": [
+"A. thành phố Đà Nẵng.",
+"B. tỉnh Bà Rịa – Vũng Tàu.",
+"C. tỉnh Cà Mau.",
+"D. tỉnh Khánh Hòa."
+],
+"correct": "A. thành phố Đà Nẵng.",
+"explanation": "Huyện đảo Hoàng Sa thuộc thành phố Đà Nẵng.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 86,
+"type": "mcq",
+"question": "Nội dung nào sau đây phản ánh đúng tầm quan trọng của quần đảo Hoàng Sa và Trường Sa đối với Việt Nam về mặt quốc phòng – an ninh?",
+"options": [
+"A. Xây dựng các trạm thông tin, dừng chân, tiếp nhiên liệu cho các tàu.",
+"B. Hình thành tuyến phòng thủ nhiều tầng, từ xa đến gần bảo vệ đất liền.",
+"C. Tạo thế mạnh cho dịch vụ hàng hải và đánh bắt hải sản trong khu vực.",
+"D. Giúp xây dựng các khu bảo tồn, trung tâm nghiên cứu sinh vật biển."
+],
+"correct": "B. Hình thành tuyến phòng thủ nhiều tầng, từ xa đến gần bảo vệ đất liền.",
+"explanation": "Về mặt quân sự, hệ thống các đảo đóng vai trò như những 'chiếc tàu sân bay không bao giờ chìm', tạo ra lớp bảo vệ đất liền từ phía biển.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 87,
+"type": "mcq",
+"question": "Đối với Việt Nam, tầm quan trọng chiến lược của quần đảo Trường Sa và quần đảo Hoàng Sa được thể hiện ở điểm nào sau đây ?",
+"options": [
+"A. Là tuyến đường duy nhất để Việt Nam xuất khẩu hàng nông sản.",
+"B. Đảm bảo nguồn an ninh lương thực cho nhân dân Việt Nam.",
+"C. Có ý nghĩa về chiến lược quốc phòng, an ninh, kinh tế biển.",
+"D. Là nền tảng duy nhất để Việt Nam phát triển công nghiệp nặng."
+],
+"correct": "C. Có ý nghĩa về chiến lược quốc phòng, an ninh, kinh tế biển.",
+"explanation": "Quần đảo Hoàng Sa và Trường Sa tổng hợp cả ba yếu tố quan trọng nhất về chiến lược quốc phòng, an ninh, kinh tế biển.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 88,
+"type": "mcq",
+"question": "Nội dung nào sau đây phản ánh đúng về tầm quan trọng chiến lược của Biển Đông đối với sự phát triển kinh tế Việt Nam?",
+"options": [
+"A. Hệ thống đảo, quần đảo trên Biển Đông chỉ thuận lợi để đầu tư và phát triển du lịch.",
+"B. Việt Nam được đánh giá là quốc gia có lợi thế và tiềm năng to lớn về tài nguyên biển.",
+"C. Vùng biển rộng lớn với nhiều đảo là không gian trọng yếu để phát triển văn hóa.",
+"D. Biển đảo là nguồn cung cấp lương thực chủ yếu cho cuộc sống của nhân dân Việt Nam."
+],
+"correct": "B. Việt Nam được đánh giá là quốc gia có lợi thế và tiềm năng to lớn về tài nguyên biển.",
+"explanation": "Với bờ biển dài và vùng đặc quyền kinh tế rộng, Việt Nam có tiềm năng cực lớn về hải sản, dầu khí và vận tải biển.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 89,
+"type": "mcq",
+"question": "Đặc điểm chung về vị trí địa lý của quần đảo Hoàng Sa và Trường Sa là",
+"options": [
+"A. gần với khu vực đất liền Việt Nam nhất.",
+"B. nằm ở vị trí trung tâm của Biển Đông.",
+"C. đều thuộc khu vực miền Bắc Việt Nam.",
+"D. đều thuộc khu vực miền Nam Việt Nam."
+],
+"correct": "B. nằm ở vị trí trung tâm của Biển Đông.",
+"explanation": "Hai quần đảo này nằm giữa Biển Đông, bao quát các tuyến đường biển.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 90,
+"type": "mcq",
+"question": "Cả hai quần đảo Hoàng Sa và Trường Sa đều tạo thuận lợi để Việt Nam phát triển ngành kinh tế nào sau đây?",
+"options": [
+"A. nông nghiệp lúa nước.",
+"B. lâm nghiệp.",
+"C. công nghiệp chế tạo.",
+"D. khai thác hải sản."
+],
+"correct": "D. khai thác hải sản.",
+"explanation": "Xung quanh các đảo là các ngư trường lớn với nhiều loài hải sản quý.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 91,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 1 - Ý a: Biển Đông là khu vực có hệ sinh vật phong phú, với hơn 12.000 loài sinh vật...",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Biển Đông là khu vực có hệ sinh vật phong phú, với hơn 12.000 loài sinh vật theo số liệu trong tư liệu.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 92,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 1 - Ý b: Biển Đông không có rừng ngập mặn do điều kiện môi trường không thuận lợi.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Tư liệu nêu rõ Biển Đông có 221 loài cây nước mặn tạo nên diện tích rừng ngập mặn tương đối lớn.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 93,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 1 - Ý c: Khu vực thềm lục địa của Biển Đông có tiềm năng dầu khí cao...",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Tư liệu liệt kê các bồn trũng Brunei, Nam Côn Sơn, Hoàng Sa ở thềm lục địa Biển Đông có tiềm năng dầu khí cao.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 94,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 1 - Ý d: Biển Đông không có giá trị đối với phát triển kinh tế - xã hội của các nước trong khu vực.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Tiềm năng tài nguyên và dầu khí cho thấy Biển Đông có giá trị kinh tế cực kỳ lớn đối với phát triển kinh tế - xã hội của các nước trong khu vực.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 95,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 2 - Ý a: Nghị quyết số 36... đã đưa ra nhiều bằng chứng khẳng định Hoàng Sa và Trường Sa thuộc chủ quyền của Việt Nam.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Nghị quyết 36 là về chiến lược phát triển bền vững kinh tế biển, không phải tài liệu chuyên biệt để đưa ra các bằng chứng lịch sử về chủ quyền, dù nó khẳng định chủ quyền.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 96,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 2 - Ý b: Quá trình xây dựng và bảo vệ Tổ quốc của Việt Nam hiện nay có sự gắn bó mật thiết với Biển Đông.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Tư liệu khẳng định biển là không gian sinh tồn và gắn bó mật thiết với sự nghiệp xây dựng, bảo vệ Tổ quốc của Việt Nam hiện nay.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 97,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 2 - Ý c: Trách nhiệm phát triển bền vững kinh tế biển không liên quan đến những người dân sống trong khu vực đất liền.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Tư liệu ghi rõ phát triển bền vững kinh tế biển là trách nhiệm của cả hệ thống chính trị, mọi tổ chức, doanh nghiệp và người dân Việt Nam.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 98,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 2 - Ý d: Nhiệm vụ phát triển kinh tế biển với đảm bảo an ninh quốc phòng luôn có sự gắn bó mật thiết, không tách rời nhau.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Điều này khớp với nội dung 'phát triển bền vững kinh tế biển gắn liền với đảm bảo quốc phòng, an ninh'.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 99,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 3 - Ý a: Biển Đông có nhiều tên gọi khác nhau tùy theo cách gọi của từng quốc gia.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Người Việt gọi là Biển Đông, Trung Quốc gọi là Nam Hải, Philippines gọi là Biển Tây...",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 100,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 3 - Ý b: Tổ chức Thủy đạc quốc tế đặt tên cho Biển Đông là South China Sea... dựa vào tên địa danh của một quốc gia ven biển có diện tích lãnh thổ đất liền lớn nhất.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Đúng theo thông tin trong đoạn trích của Tổ chức Thủy đạc quốc tế.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 101,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 3 - Ý c: Theo tổ chức Thủy đạc quốc tế, Biển Đông là vùng biển thuộc chủ quyền duy nhất của Trung Quốc.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Đoạn trích nêu rõ 'tên gọi này không hàm ý về chủ quyền'.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 102,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 3 - Ý d: Biển Đông là tên do người Việt Nam đặt do vùng biển này nằm ở phía đông đất nước ta... người Phi – lip – pin lại gọi là Biển Tây vì vùng biển này nằm ở phía tây đất nước họ.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Phù hợp với lô-gic địa lý của các quốc gia ven Biển Đông.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 103,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 4 - Ý a: Đoạn tư liệu cung cấp thông tin về tiềm năng phát triển du lịch...",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Đoạn tư liệu chỉ liệt kê tên các đảo, nhóm đảo và đơn vị hành chính, không nhắc đến tiềm năng du lịch.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 104,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 4 - Ý b: Quần đảo Hoàng Sa và quần đảo Trường Sa lần lượt trực thuộc thành phố Đà Nẵng và tỉnh Khánh Hòa.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Huyện đảo Hoàng Sa trực thuộc thành phố Đà Nẵng và huyện đảo Trường Sa trực thuộc tỉnh Khánh Hòa.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 105,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 4 - Ý c: Đảo Phú Lâm là một trong những đảo lớn nhất thuộc nhóm phía đông của quần đảo Hoàng Sa.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Đúng khớp với thông tin 'trong đó lớn nhất là đảo Phú Lâm' thuộc nhóm An Vĩnh phía đông của quần đảo Hoàng Sa.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 106,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 4 - Ý d: Nhóm đảo Loại Ta là 1 trong 8 cụm thuộc quần đảo Trường Sa.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Nhóm đảo Loại Ta nằm trong danh sách 8 cụm thuộc quần đảo Trường Sa được liệt kê.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 107,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 5 - Ý a: Những thông tin đoạn tư liệu cung cấp cho thấy Biển Đông là địa bàn chiến lược quan trọng về kinh tế ở khu vực châu Á – Thái Bình Dương.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Lưu lượng tàu bè và vai trò kết nối đại dương khẳng định Biển Đông là địa bàn chiến lược quan trọng về kinh tế.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 108,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 5 - Ý b: Biển Đông là tuyến đường biển duy nhất nối liền Thái Bình Dương với Ấn Độ Dương...",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Có thể đi vòng qua các eo biển khác hoặc phía nam châu Úc, nhưng Biển Đông là tuyến đường ngắn nhất/huyết mạch, không phải duy nhất.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "TH"
+},
+{
+"id": 109,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 5 - Ý c: Khu vực Biển Đông có rất nhiều eo biển quan trọng, trong đó quan trọng nhất là eo biển Ma – lắc – ca.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Eo biển Malacca được gọi là 'hành lang' hàng hải chính của khu vực Biển Đông.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 110,
+"type": "true_false",
+"question": "BÀI 12: VỊ TRÍ VÀ TẦM QUAN TRỌNG CỦA BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 5 - Ý d: Mỗi ngày có khoảng 150 – 200 tàu... tàu chở dầu và khí hóa lỏng đều có trọng tải từ 30 000 tấn trở lên.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Tư liệu nói hơn 10% tàu có trọng tải từ 30 000 tấn trở lên, không khẳng định tất cả tàu chở dầu đều thuộc nhóm này.",
+"image": null,
+"topic": "Vị trí và tầm quan trọng của Biển Đông",
+"level": "NB"
+},
+{
+"id": 111,
+"type": "mcq",
+"question": "Nội dung nào sau đây phản ánh đúng tầm quan trọng của Biển Đông về quốc phòng, an ninh đối với Việt Nam?",
+"options": [
+"A. Tạo điều kiện thuận lợi phát triển kinh tế biển đa dạng.",
+"B. Là cửa ngõ, tuyến phòng thủ bảo vệ đất liền từ xa.",
+"C. Là con đường giao thương giữa các vùng trong cả nước.",
+"D. Tạo thuận lợi cho Việt Nam phát triển thương mại hàng hải."
+],
+"correct": "B. Là cửa ngõ, tuyến phòng thủ bảo vệ đất liền từ xa.",
+"explanation": "Về mặt an ninh - quốc phòng, hệ thống đảo và vùng biển đóng vai trò là 'lá chắn' bảo vệ vùng trời, vùng biển và đất liền trước các nguy cơ từ phía Đông.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 112,
+"type": "mcq",
+"question": "Một trong những ngành kinh tế mũi nhọn ở nước ta được phát triển từ việc khai thác các điều kiện thuận lợi về vị trí địa lí và tài nguyên của Biển Đông",
+"options": [
+"A. thương mại biển, du lịch.",
+"B. kinh tế nông nghiệp lúa nước.",
+"C. khai thác và chế biến muối.",
+"D. kinh tế nông - lâm nghiệp."
+],
+"correct": "A. thương mại biển, du lịch.",
+"explanation": "Vị trí nằm trên tuyến hàng hải huyết mạch và có nhiều bãi biển đẹp giúp thương mại biển và du lịch trở thành mũi nhọn.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 113,
+"type": "mcq",
+"question": "Đối với các tranh chấp chủ quyền biển, đảo, Việt Nam chủ trương giải quyết các tranh chấp thông qua biện pháp hòa bình với tinh thần",
+"options": [
+"A. đề cao vai trò của tòa án quốc tế.",
+"B. không nhượng bộ trong mọi hoàn cảnh.",
+"C. hiểu biết và tôn trọng lẫn nhau.",
+"D. tuyên bố về ứng xử của các bên ở Biển Đông."
+],
+"correct": "C. hiểu biết và tôn trọng lẫn nhau.",
+"explanation": "Tinh thần ngoại giao của Việt Nam luôn đề cao đối thoại, hiểu biết và tôn trọng luật pháp quốc tế (UNCLOS 1982).",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 114,
+"type": "mcq",
+"question": "Vị trí địa lí và tài nguyên của Biển Đông có vai trò như thế nào đối với các ngành kinh tế trọng điểm của nước ta?",
+"options": [
+"A. Tạo điều kiện thuận lợi cho phát triển kinh tế biển đa dạng.",
+"B. Tạo điều kiện thuận lợi cho phát triển kinh tế nông nghiệp.",
+"C. Tạo điều kiện thuận lợi cho phát triển kinh tế lâm nghiệp.",
+"D. Tạo điều kiện thuận lợi cho phát triển kinh tế nông - lâm nghiệp."
+],
+"correct": "A. Tạo điều kiện thuận lợi cho phát triển kinh tế biển đa dạng.",
+"explanation": "Biển cung cấp hải sản, dầu khí, khoáng sản và không gian vận tải, tạo nên sự đa dạng cho kinh tế biển Việt Nam.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 115,
+"type": "mcq",
+"question": "Một trong những ngành kinh tế mũi nhọn ở nước ta được phát triển từ việc khai thác các điều kiện thuận lợi về vị trí địa lí và tài nguyên của Biển Đông là",
+"options": [
+"A. khai thác và nuôi trồng thủy sản.",
+"B. kinh tế nông nghiệp lúa nước.",
+"C. khai thác và chế biến muối.",
+"D. kinh tế nông - lâm nghiệp."
+],
+"correct": "A. khai thác và nuôi trồng thủy sản.",
+"explanation": "Thủy hải sản là mặt hàng xuất khẩu chủ lực của Việt Nam nhờ nguồn lợi từ Biển Đông.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 116,
+"type": "mcq",
+"question": "Khu vực nào của Việt Nam không giáp với Biển Đông?",
+"options": [
+"A. Tây Bắc.",
+"B. Đông Bắc.",
+"C. Tây Nam.",
+"D. Đông Nam."
+],
+"correct": "A. Tây Bắc.",
+"explanation": "Tây Bắc là vùng trung du miền núi phía bắc, nằm sâu trong đất liền, giáp Lào và Trung Quốc.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 117,
+"type": "mcq",
+"question": "Bờ biển nước ta dài khoảng 3260 km, kéo dài từ",
+"options": [
+"A. tỉnh Quảng Ninh đến tỉnh Kiên Giang.",
+"B. tỉnh Quảng Ninh đến tỉnh An Giang",
+"C. tỉnh Thái Bình đến tỉnh Cà Mau.",
+"D. tỉnh Nam định đến tỉnh Bình Thuận."
+],
+"correct": "A. tỉnh Quảng Ninh đến tỉnh Kiên Giang.",
+"explanation": "Điểm đầu là Móng Cái (Quảng Ninh) và điểm cuối là Hà Tiên (Kiên Giang).",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 118,
+"type": "mcq",
+"question": "Biển Đông nước ta góp phần quan trọng vào việc phát triển các ngành kinh tế trọng điểm, ngoại trừ",
+"options": [
+"A. nông nghiệp trồng lúa nước.",
+"B. thương mại hàng hải.",
+"C. nuôi trồng thủy sản.",
+"D. du lịch - dịch vụ."
+],
+"correct": "A. nông nghiệp trồng lúa nước.",
+"explanation": "Nông nghiệp lúa nước phụ thuộc vào đất đai và nguồn nước ngọt, không phải là ngành khai thác trực tiếp từ biển.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 119,
+"type": "mcq",
+"question": "Về quốc phòng, an ninh, tầm quan trọng của Biển Đông đối với Việt Nam được thể hiện ở điểm nào sau đây?",
+"options": [
+"A. Là nơi có trữ lượng dầu khí lớn nhất thế giới.",
+"B. Là nơi có nguồn tài nguyên sinh vật đa dạng.",
+"C. Là khu vực tập trung các tuyến đường chiến lược.",
+"D. Là tuyến phòng thủ từ phía đông của đất nước."
+],
+"correct": "D. Là tuyến phòng thủ từ phía đông của đất nước.",
+"explanation": "Về mặt an ninh - quốc phòng, hệ thống đảo và vùng biển đóng vai trò là 'lá chắn' bảo vệ vùng trời, vùng biển và đất liền trước các nguy cơ từ phía Đông.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 120,
+"type": "mcq",
+"question": "Hệ thống các cảng nước sâu và cảng trung bình được xây dựng dọc Biển Đông là điều kiện thuận lợi cho Việt Nam phát triển ngành kinh tế chủ yếu nào sau đây?",
+"options": [
+"A. nông nghiệp lúa nước.",
+"B. thương mại hàng hải.",
+"C. nuôi trồng thủy sản.",
+"D. khai thác tài nguyên biển."
+],
+"correct": "B. thương mại hàng hải.",
+"explanation": "Cảng nước sâu (như Cái Mép, Lạch Huyện) phục vụ các tàu container tải trọng lớn, trực tiếp thúc đẩy thương mại hàng hải quốc tế.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 121,
+"type": "mcq",
+"question": "Với vị trí địa lý và tài nguyên phong phú của Biển Đông, Việt Nam có thể khai thác phát triển nhiều ngành mũi nhọn, ngoại trừ",
+"options": [
+"A. giao thông hàng hải.",
+"B. du lịch biển.",
+"C. công nghiệp khai khoáng.",
+"D. chăn nuôi gia cầm."
+],
+"correct": "D. chăn nuôi gia cầm.",
+"explanation": "Chăn nuôi gia cầm (gà, vịt) là ngành nông nghiệp trên đất liền, không khai thác từ Biển Đông.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 122,
+"type": "mcq",
+"question": "Nội dung nào sau đây không phản ánh đúng tầm quan trọng của Biển Đông về kinh tế đối với Việt Nam?",
+"options": [
+"A. Là con đường để Việt Nam giao lưu, hội nhập với các nền văn hóa khác.",
+"B. Là cửa ngõ để Việt Nam giao lưu kinh tế với các nước khác trên thế giới.",
+"C. Cung cấp tiềm năng bảo tồn đa dạng sinh học biển và nguồn giống hải sản.",
+"D. Tạo điều kiện thuận lợi đề phát triển đa dạng nhiều loại hình du lịch biển."
+],
+"correct": "A. Là con đường để Việt Nam giao lưu, hội nhập với các nền văn hóa khác.",
+"explanation": "Giao lưu văn hóa (A) thuộc về lĩnh vực Văn hóa - Xã hội, không phải lĩnh vực Kinh tế.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 123,
+"type": "mcq",
+"question": "Một trong những bãi biển nổi tiếng của nước ta ở miền Trung, là địa điểm thu hút khách du lịch trong và ngoài nước là",
+"options": [
+"A. Hạ Long.",
+"B. Đà Nẵng.",
+"C. Phú Quốc.",
+"D. Cát Bà."
+],
+"correct": "B. Đà Nẵng.",
+"explanation": "Đà Nẵng nằm ở miền Trung Việt Nam và có bãi biển thu hút khách du lịch.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 124,
+"type": "mcq",
+"question": "Cảnh quan ở Biển Đông đa dạng với nhiều bãi cát, vịnh, hang động, tạo điều kiện cho Việt Nam phát triển nghành kinh tế mũi nhọn nào sau đây?",
+"options": [
+"A. Khai khoáng.",
+"B. Du lịch.",
+"C. Thương mại.",
+"D. Hàng hải."
+],
+"correct": "B. Du lịch.",
+"explanation": "Cảnh quan đẹp là nguồn lực trực tiếp cho phát triển ngành du lịch biển.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 125,
+"type": "mcq",
+"question": "Một trong những nguồn tài nguyên quan trọng nhất ở thềm lục địa Việt Nam ở Biển Đông là",
+"options": [
+"A. dầu khí.",
+"B. gỗ lim.",
+"C. cánh kiến.",
+"D. đồi mồi."
+],
+"correct": "A. dầu khí.",
+"explanation": "Dầu khí ở thềm lục địa là ngành khai thác khoáng sản quan trọng đóng góp ngân sách lớn cho quốc gia.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 126,
+"type": "mcq",
+"question": "Nguồn tài nguyên phong phú của Biển Đông đã tạo điều kiện thuận lợi để Việt Nam phát triển ngành",
+"options": [
+"A. dệt may.",
+"B. khai khoáng.",
+"C. hàng không.",
+"D. da giầy."
+],
+"correct": "B. khai khoáng.",
+"explanation": "Khai khoáng ở đây bao gồm khai thác dầu mỏ, khí đốt và khoáng sản biển từ nguồn tài nguyên phong phú của Biển Đông.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 127,
+"type": "mcq",
+"question": "Quốc gia đầu tiên khai phá, xác lập chủ quyền và quản lý liên tục đối với quần đảo Trường Sa và Hoàng Sa là",
+"options": [
+"A. Việt Nam.",
+"B. Trung Quốc",
+"C. Thái Lan.",
+"D. Campuchia."
+],
+"correct": "A. Việt Nam.",
+"explanation": "Theo các bằng chứng lịch sử khách quan, Việt Nam đã xác lập chủ quyền từ ít nhất thế kỷ XVII khi các đảo chưa thuộc về quốc gia nào (đất vô chủ).",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 128,
+"type": "mcq",
+"question": "Một trong những công trình sử học và địa lí ghi chép về cương vực, lãnh thổ và hoạt động thực thi, bảo vệ chủ quyền của nhà nước phong kiến Việt Nam ở quần đảo Hoàng Sa, quần đảo Trường Sa là",
+"options": [
+"A. Đại Nam thực lục.",
+"B. Hịch tướng sĩ.",
+"C. Bình Ngô đại cáo.",
+"D. Ức Trai thi tập."
+],
+"correct": "A. Đại Nam thực lục.",
+"explanation": "Đại Nam thực lục là bộ chính sử của triều Nguyễn, ghi chép rất chi tiết các lệnh của vua cử đội Hoàng Sa ra đảo.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 129,
+"type": "mcq",
+"question": "Từ thế kỉ XVII đến thế kỉ XIX, tổ chức nào sau đây có nhiệm vụ đến khai thác sản vật, thực thi chủ quyền tại quần đảo Hoàng Sa và Trường Sa?",
+"options": [
+"A. Đội Hoàng Sa, Bắc Hải.",
+"B. Đội Trường Sa, Bắc Hải.",
+"C. Đội Hoàng Sa, Trường Sa.",
+"D. Đội Nam Hải, Đông Hải."
+],
+"correct": "A. Đội Hoàng Sa, Bắc Hải.",
+"explanation": "Đội Hoàng Sa (lập thời Chúa Nguyễn) và sau đó là đội Bắc Hải (đặt dưới sự quản lý của đội Hoàng Sa) là hai tổ chức thực thi chủ quyền tiêu biểu.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 130,
+"type": "mcq",
+"question": "Dưới thời vua Minh Mạng, hoạt động khẳng định chủ quyền đối với quần đảo Hoàng Sa và Trường Sa được thể hiện qua việc",
+"options": [
+"A. thành lập các xã đảo, huyện đảo.",
+"B. dựng miếu, trồng cây ở một số đảo",
+"C. xây dựng các trạm khí tượng lớn.",
+"D. xây dựng các trạm vô tuyến điện."
+],
+"correct": "B. dựng miếu, trồng cây ở một số đảo",
+"explanation": "Năm 1833-1835, vua Minh Mạng cử người ra xây miếu, dựng bia, trồng cây để làm dấu mốc cho tàu thuyền và khẳng định chủ quyền.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 131,
+"type": "mcq",
+"question": "Dưới thời kì nhà Nguyễn, một trong những biện pháp của Nhà nước nhằm xác lập chủ quyền và quản lý đối với hai quần đảo Hoàng Sa và Trường Sa là",
+"options": [
+"A. xây dựng trạm vô tuyến điện.",
+"B. khảo sát đo vẽ bản đồ.",
+"C. thành lập các huyện đảo.",
+"D. xây dựng ngọn hải đăng."
+],
+"correct": "B. khảo sát đo vẽ bản đồ.",
+"explanation": "Nhà Nguyễn rất chú trọng việc đo đạc thủy trình và vẽ bản đồ để quản lý đối với hai quần đảo Hoàng Sa và Trường Sa.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 132,
+"type": "mcq",
+"question": "Nội dung nào sau đây không phản ánh đúng nhiệm vụ của hải đội Hoàng Sa và Bắc Hải dưới triều Nguyễn?",
+"options": [
+"A. Dựng miếu thờ và trồng cây ở một số đảo.",
+"B. Đo đạc và cắm dấu mốc tại nơi khảo sát.",
+"C. Ngăn tàu thuyền nước ngoài đến buôn bán.",
+"D. Tiến hành thu gom, khai thác sản vật biển."
+],
+"correct": "C. Ngăn tàu thuyền nước ngoài đến buôn bán.",
+"explanation": "Nhiệm vụ của đội Hoàng Sa là khai thác sản vật, đo đạc, thực thi chủ quyền; không có nhiệm vụ ngăn cấm giao thương quốc tế (buôn bán).",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 133,
+"type": "mcq",
+"question": "Trong những năm 30 của thế kỉ XX, chính quyền Pháp đại diện cho Việt Nam trong quan hệ đối ngoại đã khẳng định chủ quyền của Việt Nam đối với quần đảo Hoàng Sa và Trường Sa thông qua việc",
+"options": [
+"A. thành lập đội Hoàng Sa.",
+"B. thành lập đội Bắc Hải.",
+"C. xây dựng trạm khí tượng.",
+"D. xây dựng sân bay lớn."
+],
+"correct": "C. xây dựng trạm khí tượng.",
+"explanation": "Người Pháp đã xây dựng các trạm khí tượng để phục vụ quốc tế và khẳng định quản lý hành chính đối với quần đảo Hoàng Sa và Trường Sa.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 134,
+"type": "mcq",
+"question": "Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam đã khẳng định chủ quyền của Việt Nam đối với quần đảo Hoàng Sa và Trường Sa thông qua việc",
+"options": [
+"A. thành lập huyện đảo Hoàng Sa và Trường Sa.",
+"B. thành lập đội Hoàng Sa, Bắc Hải và Trường Đà.",
+"C. cho hoàn thiện tập Đại Nam nhất thống toàn đồ.",
+"D. cử thủy quân ra tuần tra đảo định kì hàng năm."
+],
+"correct": "A. thành lập huyện đảo Hoàng Sa và Trường Sa.",
+"explanation": "Đây là biện pháp quản lý hành chính hiện đại khẳng định chủ quyền của Việt Nam đối với quần đảo Hoàng Sa và Trường Sa.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 135,
+"type": "mcq",
+"question": "Từ cuối thế kỉ XIX đến năm 1945, quốc gia nào đại diện cho quyền lợi của Việt Nam tiếp tục khẳng định chủ quyền đối với quần đảo Hoàng Sa và Trường Sa?",
+"options": [
+"A. Trung Quốc.",
+"B. Anh.",
+"C. Mĩ.",
+"D. Pháp."
+],
+"correct": "D. Pháp.",
+"explanation": "Thời kỳ Pháp thuộc, Pháp với tư cách là quốc gia bảo hộ đã thay mặt Việt Nam thực thi và bảo vệ chủ quyền trên hai quần đảo.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 136,
+"type": "mcq",
+"question": "Sau khi Pháp rút khỏi Việt Nam theo Hiệp định Giơnevơ (1954), lực lượng nào sau đây đã tiếp quản và khẳng định chủ quyền đối với quần đảo Hoàng Sa và Trường Sa?",
+"options": [
+"A. Chính quyền Sài Gòn.",
+"B. Chính quyền Bảo Đại.",
+"C. Chính quyền Pháp.",
+"D. Chính phủ Việt Nam dân chủ cộng hòa."
+],
+"correct": "A. Chính quyền Sài Gòn.",
+"explanation": "Theo Hiệp định Giơnevơ, vùng lãnh thổ phía Nam vĩ tuyến 17 (bao gồm hai quần đảo) thuộc quyền quản lý của chính quyền Sài Gòn (Việt Nam Cộng hòa).",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 137,
+"type": "mcq",
+"question": "Nhằm bảo vệ và thực thi chủ quyền, các quyền và lợi ích hợp pháp của Việt Nam ở Biển Đông, biện pháp nào sau đây không được nhà nước Việt Nam áp dụng?",
+"options": [
+"A. Chủ động tấn công vũ trang.",
+"B. Tuyên truyền chủ quyền biển, đảo.",
+"C. Đàm phán ngoại giao.",
+"D. Xây dựng lực lượng quản lý biển."
+],
+"correct": "A. Chủ động tấn công vũ trang.",
+"explanation": "Việt Nam chủ trương giải quyết bằng biện pháp hòa bình, không chủ trương tấn công vũ trang để giải quyết tranh chấp.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 138,
+"type": "mcq",
+"question": "Nội dung nào sau đây không phải là hoạt động của Việt Nam để bảo vệ chủ quyền biển đảo hiện nay?",
+"options": [
+"A. Kí kết với các nước láng giềng một số văn kiện ngoại giao quốc tế về biển.",
+"B. Tham gia Công ước Luật biển năm 1982 của tổ chức Liên hợp quốc.",
+"C. Chủ động tấn công ngăn chặn các nước có ý đồ xâm phạm biển.",
+"D. Thực hiện đầy đủ Tuyên bố về ứng xử của các bên ở Biển Đông ."
+],
+"correct": "C. Chủ động tấn công ngăn chặn các nước có ý đồ xâm phạm biển.",
+"explanation": "Việt Nam chủ trương giải quyết bằng biện pháp hòa bình, sử dụng các biện pháp pháp lý và ngoại giao thay vì chủ động tấn công.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 139,
+"type": "mcq",
+"question": "Chủ trương nhất quán của nước Cộng hòa xã hội chủ nghĩa Việt Nam trong việc giải quyết các tranh chấp ở Biển Đông hiện nay là",
+"options": [
+"A. đấu tranh hòa bình.",
+"B. bạo lực cách mạng.",
+"C. chiến tranh cách mạng.",
+"D. bãi công, bãi khóa."
+],
+"correct": "A. đấu tranh hòa bình.",
+"explanation": "'Đấu tranh hòa bình' dựa trên luật pháp quốc tế là kim chỉ nam trong việc giải quyết các tranh chấp ở Biển Đông hiện nay của Việt Nam.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 140,
+"type": "mcq",
+"question": "Tại hội nghị Hoà bình Xan Phran-xi-xcô (1951), khi chủ quyền của Việt Nam đối với quần đảo Hoàng Sa và quần đảo Trường Sa tiếp tục được tuyên bố mà không bị các quốc gia tham dự hội nghị phản đối. Điều đó cho thấy",
+"options": [
+"A. tính pháp lý quốc tế và lịch sử về chủ quyền của Việt Nam.",
+"B. đây là những quần đảo không có giá trị cao về kinh tế.",
+"C. đây là những quần đảo không có giá trị cao về quốc phòng.",
+"D. các quốc gia tham dự hội nghị đều tuyệt đối tôn trọng luật Biển."
+],
+"correct": "A. tính pháp lý quốc tế và lịch sử về chủ quyền của Việt Nam.",
+"explanation": "Việc tuyên bố chủ quyền trước 51 quốc gia mà không ai phản đối là một bằng chứng pháp lý quốc tế quan trọng khẳng định sự thừa nhận của cộng đồng quốc tế.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 141,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 1 - Ý a: Trong các thập niên 80 - 90 của thế kỉ XX, Việt Nam đã nhiều lần công bố “Sách trắng”...",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Việt Nam đã công bố Sách trắng vào các năm 1979, 1981, 1988 để khẳng định tính chính nghĩa và pháp lý về chủ quyền biển đảo.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 142,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 1 - Ý b: Quần đảo Trường Sa thuộc chủ quyền của Việt Nam nhưng đã từng bị Trung Quốc gây xung đột vũ trang nhằm xâm chiếm.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Tiêu biểu là sự kiện ngày 14/3/1988 tại Gạc Ma khi Trung Quốc gây xung đột vũ trang nhằm xâm chiếm quần đảo Trường Sa.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 143,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 1 - Ý c: Trong Tuyên bố của mình năm 1988, Bộ Ngoại giao Việt Nam khẳng định sẽ đáp trả về quân sự...",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Tuyên bố năm 1988 chủ yếu là lên án hành động vũ lực của Trung Quốc và khẳng định chủ quyền, Việt Nam vẫn luôn kiên trì giải quyết bằng biện pháp hòa bình.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 144,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 1 - Ý d: Một trong những biện pháp để bảo vệ chủ quyền đối với quần đảo Trường Sa của Việt Nam là thành lập các đơn vị hành chính tại quần đảo này.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Việt Nam đã thành lập thị trấn Trường Sa, xã Song Tử Tây, xã Sinh Tồn vào năm 2007 để bảo vệ chủ quyền.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 145,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 2 - Ý a: Bãi Cát Vàng là tên gọi khác của quần đảo Trường Sa (Khánh Hoà).",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Bãi Cát Vàng hay Hoàng Sa Chử thường được dùng để chỉ quần đảo Hoàng Sa.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 146,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 2 - Ý b: Toản tập Thiên Nam tứ chí lộ đồ thư là một trong những công trình sử học và địa lí ghi chép về cương vực...",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Đây là tài liệu của Đỗ Bá thế kỷ XVII ghi chép về Bãi Cát Vàng khẳng định chủ quyền Việt Nam.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 147,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 2 - Ý c: Hoạt động khẳng định chủ quyền đối với quần đảo Hoàng Sa... được thể hiện qua việc di dân đến sinh sống và khai thác hoá vật trên các đảo.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Thời phong kiến chủ yếu là cử các đội quân chuyên trách của nhà nước như đội Hoàng Sa ra thực thi nhiệm vụ theo mùa, chưa phải là di dân định cư.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 148,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 2 - Ý d: Việt Nam đã thực hiện các hoạt động xác lập chủ quyền, quản lí liên tục đối với quần đảo Hoàng Sa, quần đảo Trường Sa.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Từ thời Chúa Nguyễn đến nay, việc xác lập và quản lý chủ quyền của Việt Nam luôn được duy trì liên tục.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 149,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 3 - Ý a: “ Sự kiện 14 – 3” được nhắc đến ở đây chính là cuộc đấu tranh anh dũng của các chiến sĩ hải quân Việt Nam... trên đảo Gạc Ma.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Sự kiện Gạc Ma 1988 là cuộc đấu tranh anh dũng của các chiến sĩ hải quân Việt Nam để bảo vệ chủ quyền.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 150,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 3 - Ý b: Sự kiện Gạc Ma được nhắc lại vừa để khơi dậy mối thù hằn dân tộc...",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Nhắc lại lịch sử sự kiện Gạc Ma là để tri ân, giáo dục lòng yêu nước và trách nhiệm, không phải để khơi dậy thù hằn dân tộc.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 151,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 3 - Ý c: Theo trung tá hải quân Nguyễn Viết Chức, trận chiến Gạc Ma là thất bại của người dân Việt Nam... nỗi đau ấy cần phải được quên đi.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Tư liệu nói rằng các chiến sĩ đã trở thành 'bất tử' và là bài học để giữ biển đảo, không phải là thất bại cần quên đi.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 152,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 3 - Ý d: Tài liệu về trận chiến Gạc Ma hiện nay chỉ được ghi chép trong chính sử của Hải quân Việt Nam.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Trận chiến Gạc Ma đã được đưa vào sách giáo khoa và các công trình chính sử quốc gia Việt Nam.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 153,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 4 - Ý a: UNCLOS là tên viết tắt tiếng Anh của Công ước Luật biển của Liên hợp quốc.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "UNCLOS viết tắt của United Nations Convention on the Law of the Sea.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 154,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 4 - Ý b: Năm 2021, Tòa trọng tài vụ kiện Biển Đông đã ra Phán quyết cuối cùng về vụ kiện của Phi – lip – pin.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Phán quyết được đưa ra vào ngày 12/7/2016. Năm 2021 là dịp kỷ niệm 5 năm phán quyết đó.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 155,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 4 - Ý c: Quan điểm của bà Lê Thị Thu Hằng - Người Phát ngôn Bộ Ngoại giao Việt Nam chưa thật sự phù hợp với nguyện vọng và mong muốn của nhân dân Việt Nam.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Quan điểm này hoàn toàn nhất quán với lập trường bảo vệ chủ quyền bằng biện pháp hòa bình của Đảng và nhân dân Việt Nam.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 156,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 4 - Ý d: Đấu tranh ngoại giao và pháp lý là chủ trương và lập trường nhất quán của Việt Nam trong việc giải quyết các tranh chấp ở Biển Đông hiện nay.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Theo nội dung phát biểu của người phát ngôn Bộ Ngoại giao, đấu tranh ngoại giao và pháp lý là lập trường nhất quán của Việt Nam.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 157,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 5 - Ý a: Toàn bộ quần đảo Hoàng Sa và Trường Sa của Việt Nam đã bị Trung Quốc và Đài Loan đánh chiếm ngay từ năm 1956.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Họ chỉ chiếm một phần/một số đảo trong thời gian đó, không phải toàn bộ quần đảo.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 158,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 5 - Ý b: Trung Quốc bắt đầu có hoạt động xâm chiếm quần đảo Hoàng Sa khi quần đảo Hoàng Sa đang thuộc quyền quản lý của chính phủ Việt Nam Cộng hòa.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Đúng",
+"explanation": "Giai đoạn sau năm 1954 khi quần đảo Hoàng Sa đang thuộc quyền quản lý của chính phủ Việt Nam Cộng hòa.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+},
+{
+"id": 159,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 5 - Ý c: Trước những hành động xâm lấn... chính phủ Việt Nam Cộng hòa đã có những hành động quân sự đích đáng và giành thắng lợi cuối cùng.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Việt Nam Cộng hòa có nổ súng nhưng cuối cùng Trung Quốc đã chiếm toàn bộ Hoàng Sa vào năm 1974.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "TH"
+},
+{
+"id": 160,
+"type": "true_false",
+"question": "BÀI 13: VIỆT NAM VÀ BIỂN ĐÔNG - Phần II. Đúng – Sai Câu 5 - Ý d: Năm 1975, Hải quân Nhân dân Việt Nam đã tiếp quản quần đảo Trường Sa từ Trung Quốc và chính quyền Việt Nam Cộng hòa.",
+"options": [
+"Đúng",
+"Sai"
+],
+"correct": "Sai",
+"explanation": "Năm 1975 Hải quân Nhân dân Việt Nam tiếp quản Trường Sa từ tay quân đội Việt Nam Cộng hòa đang trú đóng.",
+"image": null,
+"topic": "Việt Nam và Biển Đông",
+"level": "NB"
+}
+]
 }
