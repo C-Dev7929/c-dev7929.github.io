@@ -20,7 +20,6 @@
 
 ## Cài đặt & Khởi chạy
 
-Yêu cầu đã cài đặt **Node.js**.
 
 1. Mở trang web https://c-dev7929.github.io/smart-quiz/
 2. Tải lên file json hoặc nhập link file:
