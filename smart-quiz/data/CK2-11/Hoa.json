@@ -309,7 +309,7 @@
         {
             "id": 20,
             "type": "mcq",
-            "question": "Câu 2. Cho hợp chất carbonyl có công thức cấu tạo sau [image_78334f.png]. Tên theo danh pháp thay thế của hợp chất carbonyl đó là",
+            "question": "Câu 2. Cho hợp chất carbonyl có công thức cấu tạo sau . Tên theo danh pháp thay thế của hợp chất carbonyl đó là",
             "options": [
                 "A. 2-methylbutan -3-one.",
                 "B. 3-methylbutan-2-one.",
@@ -318,7 +318,7 @@
             ],
             "correct": "B. 3-methylbutan-2-one.",
             "explanation": "Đánh số mạch carbon chính (4 carbon) bắt đầu từ đầu gần nhóm carbonyl nhất (phía bên phải sang). Ta có nhóm ketone ở vị trí số 2 và nhánh methyl ở vị trí số 3. Tên gọi là 3-methylbutan-2-one.",
-            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa-ck2-2.png",
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/hoa-ck2-2.png",
             "topic": "Hợp chất carbonyl - Carboxylic acid",
             "level": "TH"
         },
@@ -453,7 +453,7 @@
         {
             "id": 29,
             "type": "mcq",
-            "question": "Câu 11. Đồ thị hình bên mô tả sự phụ thuộc giá trị nhiệt độ sôi vào số nguyên tử carbon của bốn loại hợp chất alkane, alcohol, aldehyde và carboxylic acid. Đồ thị A, B, C, D lần lượt tương ứng với các loại hợp chất là [image_783044.png]",
+            "question": "Câu 11. Đồ thị hình bên mô tả sự phụ thuộc giá trị nhiệt độ sôi vào số nguyên tử carbon của bốn loại hợp chất alkane, alcohol, aldehyde và carboxylic acid. Đồ thị A, B, C, D lần lượt tương ứng với các loại hợp chất là ",
             "options": [
                 "A. Alkane, alcohol, aldehyde, carboxylic acid",
                 "B. Alcohol, carboxylic acid, aldehyde, alkane.",
@@ -462,7 +462,7 @@
             ],
             "correct": "D. Carboxylic acid, alcohol, aldehyde, alkane.",
             "explanation": "Thứ tự nhiệt độ sôi của các hợp chất có cùng số carbon giảm dần: Carboxylic acid (tạo liên kết H liên phân tử bền nhất) > Alcohol > Aldehyde (không có liên kết H) > Alkane. Do đó A là acid, B là alcohol, C là aldehyde, D là alkane.",
-            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa11-ck2-11.png",
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa11-ck2-11-2.png",
             "topic": "Hợp chất carbonyl - Carboxylic acid",
             "level": "TH"
         },
@@ -549,7 +549,7 @@
         {
             "id": 35,
             "type": "true_false",
-            "question": "Câu 1. Tiến hành hai thí nghiệm sau: Thí nghiệm 1: Cho vào ống nghiệm khoảng 1 mL dung dịch phenol dạng huyền phù... - Ý a: Ở thí nghiệm 1, phenol tan trong dung dịch sodium carbonate và thấy có sủi bọt khí.",
+            "question": "Câu 1. Câu 1. Tiến hành hai thí nghiệm sau: \n\nThí nghiệm 1: Cho vào ống nghiệm khoảng 1 mL dung dịch phenol dạng huyền phù. Nhỏ từ từ khoảng 2 mL dung dịch sodium carbonate 1 M vào ống nghiệm. Lắc đều ống nghiệm.\nThí nghiệm 2: Cho 0,5 mL dung dịch phenol 5% vào ống nghiệm và thêm vài giọt nước bromine bão hòa. Lắc đều ống nghiệm.\n\n - Ý a: Ở thí nghiệm 1, phenol tan trong dung dịch sodium carbonate và thấy có sủi bọt khí.",
             "options": [
                 "Đúng",
                 "Sai"
@@ -563,7 +563,7 @@
         {
             "id": 36,
             "type": "true_false",
-            "question": "Câu 1. Tiến hành hai thí nghiệm sau: \n\nThí nghiệm 1: Cho vào ống nghiệm khoảng 1 mL dung dịch phenol dạng huyền phù. Nhỏ từ từ khoảng 2 mL dung dịch sodium carbonate 1 M vào ống nghiệm. Lắc đều ống nghiệm.\nThí nghiệm 2: Cho 0,5 mL dung dịch phenol 5% vào ống nghiệm và thêm vài giọt nước bromine bão hòa. Lắc đều ống nghiệm.\n\n Thí nghiệm 2: Cho 0,5 mL dung dịch phenol 5% vào ống nghiệm và thêm vài giọt nước bromine bão hòa... - Ý b: Ở thí nghiệm 2, thấy xuất hiện kết tủa trắng.",
+            "question": "Câu 1. Tiến hành hai thí nghiệm sau: \n\nThí nghiệm 1: Cho vào ống nghiệm khoảng 1 mL dung dịch phenol dạng huyền phù. Nhỏ từ từ khoảng 2 mL dung dịch sodium carbonate 1 M vào ống nghiệm. Lắc đều ống nghiệm.\nThí nghiệm 2: Cho 0,5 mL dung dịch phenol 5% vào ống nghiệm và thêm vài giọt nước bromine bão hòa. Lắc đều ống nghiệm.\n\n - Ý b: Ở thí nghiệm 2, thấy xuất hiện kết tủa trắng.",
             "options": [
                 "Đúng",
                 "Sai"
