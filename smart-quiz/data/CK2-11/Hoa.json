@@ -786,7 +786,7 @@
             "question": "Câu 2. Có ba ống nghiệm (1), (2), (3) chứa riêng biệt ba hoá chất sau: ethanol, glycerol, phenol (không theo thứ tự)... Sắp xếp thứ tự hoá chất trong các ống nghiệm lần lượt là ethanol, glycerol, phenol tạo thành dãy ba chữ số (Ví dụ: 123, 231,…).",
             "correct": "312",
             "explanation": "- Ống (1): Tan tốt, tạo phức xanh lam đậm với $Cu(OH)_2$ -> Glycerol.\n- Ống (2): Ít tan, tạo kết tủa trắng với $Br_2$ -> Phenol.\n- Ống (3): Tan tốt, không hiện tượng với 2 thuốc thử trên -> Ethanol.\nThứ tự ethanol, glycerol, phenol là ống 3, ống 1, ống 2 -> 312.",
-            "image": null,
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/Screenshot%20From%202026-05-06%2022-42-17.png",
             "topic": "Dẫn xuất halogen - Alcohol - Phenol",
             "level": "VD"
         },
