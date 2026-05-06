@@ -76,10 +76,7 @@ QUY TẮC CHUNG:
 ### MẪU 1: Câu trắc nghiệm 4 đáp án
 Câu [số thứ tự]: "[Nội dung câu hỏi]"
 Các đáp án:
-A. [Nội dung đáp án A]
-B. [Nội dung đáp án B]
-C. [Nội dung đáp án C]
-D. [Nội dung đáp án D]
+A. [Nội dung đáp án A] B. [Nội dung đáp án B] C. [Nội dung đáp án C] D. [Nội dung đáp án D]
 Đáp án đúng: [Chữ cái đáp án đúng, ví dụ: B]
 Giải thích chi tiết: [Trình bày lý do đáp án đúng, phân tích tại sao các đáp án còn lại sai (nếu cần)]
 
