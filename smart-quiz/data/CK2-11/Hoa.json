@@ -318,7 +318,7 @@
             ],
             "correct": "B. 3-methylbutan-2-one.",
             "explanation": "Đánh số mạch carbon chính (4 carbon) bắt đầu từ đầu gần nhóm carbonyl nhất (phía bên phải sang). Ta có nhóm ketone ở vị trí số 2 và nhánh methyl ở vị trí số 3. Tên gọi là 3-methylbutan-2-one.",
-            "image": "image_78334f.png",
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa-ck2-2.png",
             "topic": "Hợp chất carbonyl - Carboxylic acid",
             "level": "TH"
         },
@@ -462,7 +462,7 @@
             ],
             "correct": "D. Carboxylic acid, alcohol, aldehyde, alkane.",
             "explanation": "Thứ tự nhiệt độ sôi của các hợp chất có cùng số carbon giảm dần: Carboxylic acid (tạo liên kết H liên phân tử bền nhất) > Alcohol > Aldehyde (không có liên kết H) > Alkane. Do đó A là acid, B là alcohol, C là aldehyde, D là alkane.",
-            "image": "image_783044.png",
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa11-ck2-11.png",
             "topic": "Hợp chất carbonyl - Carboxylic acid",
             "level": "TH"
         },
@@ -563,7 +563,7 @@
         {
             "id": 36,
             "type": "true_false",
-            "question": "Câu 1. Tiến hành hai thí nghiệm sau: ... Thí nghiệm 2: Cho 0,5 mL dung dịch phenol 5% vào ống nghiệm và thêm vài giọt nước bromine bão hòa... - Ý b: Ở thí nghiệm 2, thấy xuất hiện kết tủa trắng.",
+            "question": "Câu 1. Tiến hành hai thí nghiệm sau: \n\nThí nghiệm 1: Cho vào ống nghiệm khoảng 1 mL dung dịch phenol dạng huyền phù. Nhỏ từ từ khoảng 2 mL dung dịch sodium carbonate 1 M vào ống nghiệm. Lắc đều ống nghiệm.\nThí nghiệm 2: Cho 0,5 mL dung dịch phenol 5% vào ống nghiệm và thêm vài giọt nước bromine bão hòa. Lắc đều ống nghiệm.\n\n Thí nghiệm 2: Cho 0,5 mL dung dịch phenol 5% vào ống nghiệm và thêm vài giọt nước bromine bão hòa... - Ý b: Ở thí nghiệm 2, thấy xuất hiện kết tủa trắng.",
             "options": [
                 "Đúng",
                 "Sai"
@@ -577,7 +577,7 @@
         {
             "id": 37,
             "type": "true_false",
-            "question": "Câu 1. Tiến hành hai thí nghiệm sau: ... - Ý c: Thí nghiệm 1 dùng để chứng minh phenol có tính acid mạnh.",
+            "question": "Câu 1. Tiến hành hai thí nghiệm sau: \n\nThí nghiệm 1: Cho vào ống nghiệm khoảng 1 mL dung dịch phenol dạng huyền phù. Nhỏ từ từ khoảng 2 mL dung dịch sodium carbonate 1 M vào ống nghiệm. Lắc đều ống nghiệm.\nThí nghiệm 2: Cho 0,5 mL dung dịch phenol 5% vào ống nghiệm và thêm vài giọt nước bromine bão hòa. Lắc đều ống nghiệm.\n\n - Ý c: Thí nghiệm 1 dùng để chứng minh phenol có tính acid mạnh.",
             "options": [
                 "Đúng",
                 "Sai"
@@ -591,7 +591,7 @@
         {
             "id": 38,
             "type": "true_false",
-            "question": "Câu 1. Tiến hành hai thí nghiệm sau: ... - Ý d: Thí nghiệm 2 dùng để chứng minh phản ứng thế nguyên tử H ở vòng benzene của phenol dễ hơn benzene.",
+            "question": "Câu 1. Tiến hành hai thí nghiệm sau: \n\nThí nghiệm 1: Cho vào ống nghiệm khoảng 1 mL dung dịch phenol dạng huyền phù. Nhỏ từ từ khoảng 2 mL dung dịch sodium carbonate 1 M vào ống nghiệm. Lắc đều ống nghiệm.\nThí nghiệm 2: Cho 0,5 mL dung dịch phenol 5% vào ống nghiệm và thêm vài giọt nước bromine bão hòa. Lắc đều ống nghiệm.\n\n - Ý d: Thí nghiệm 2 dùng để chứng minh phản ứng thế nguyên tử H ở vòng benzene của phenol dễ hơn benzene.",
             "options": [
                 "Đúng",
                 "Sai"
@@ -661,7 +661,7 @@
         {
             "id": 43,
             "type": "true_false",
-            "question": "Câu 3. Cho ba chất hữu cơ A, B, C có cùng công thức phân tử là $C_3H_6O$... - Ý a: Chất A có tên thay thế là propanal.",
+            "question": "Câu 3. Cho ba chất hữu cơ A, B, C có cùng công thức phân tử là $C_3H_6O$. Chất A có mạch carbon và có phản ứng tráng bạc; chất B không có phản ứng tráng bạc nhưng có phản ứng iodoform; chất C làm mất màu nước bromine. Khi hydrogen hóa C rồi oxi hóa sản phẩm thì được A. Xác định công thức cấu tạo và gọi tên A, B, C theo danh pháp thay thế.\n - Ý a: Chất A có tên thay thế là propanal.",
             "options": [
                 "Đúng",
                 "Sai"
@@ -675,7 +675,7 @@
         {
             "id": 44,
             "type": "true_false",
-            "question": "Câu 3. Cho ba chất hữu cơ A, B, C có cùng công thức phân tử là $C_3H_6O$... - Ý b: Chất B có tên thay thế là propanone.",
+            "question": "Câu 3. Cho ba chất hữu cơ A, B, C có cùng công thức phân tử là $C_3H_6O$. Chất A có mạch carbon và có phản ứng tráng bạc; chất B không có phản ứng tráng bạc nhưng có phản ứng iodoform; chất C làm mất màu nước bromine. Khi hydrogen hóa C rồi oxi hóa sản phẩm thì được A. Xác định công thức cấu tạo và gọi tên A, B, C theo danh pháp thay thế.\n - Ý b: Chất B có tên thay thế là propanone.",
             "options": [
                 "Đúng",
                 "Sai"
@@ -689,7 +689,7 @@
         {
             "id": 45,
             "type": "true_false",
-            "question": "Câu 3. Cho ba chất hữu cơ A, B, C có cùng công thức phân tử là $C_3H_6O$... - Ý c: Chất C có tên thay thế là propan – 2 – ol.",
+            "question": "Câu 3. Cho ba chất hữu cơ A, B, C có cùng công thức phân tử là $C_3H_6O$. Chất A có mạch carbon và có phản ứng tráng bạc; chất B không có phản ứng tráng bạc nhưng có phản ứng iodoform; chất C làm mất màu nước bromine. Khi hydrogen hóa C rồi oxi hóa sản phẩm thì được A. Xác định công thức cấu tạo và gọi tên A, B, C theo danh pháp thay thế.\n - Ý c: Chất C có tên thay thế là propan – 2 – ol.",
             "options": [
                 "Đúng",
                 "Sai"
@@ -703,7 +703,7 @@
         {
             "id": 46,
             "type": "true_false",
-            "question": "Câu 3. Cho ba chất hữu cơ A, B, C có cùng công thức phân tử là $C_3H_6O$... - Ý d: A, B, C là ba chất đồng phân của nhau.",
+            "question": "Câu 3. Cho ba chất hữu cơ A, B, C có cùng công thức phân tử là $C_3H_6O$. Chất A có mạch carbon và có phản ứng tráng bạc; chất B không có phản ứng tráng bạc nhưng có phản ứng iodoform; chất C làm mất màu nước bromine. Khi hydrogen hóa C rồi oxi hóa sản phẩm thì được A. Xác định công thức cấu tạo và gọi tên A, B, C theo danh pháp thay thế.\n - Ý d: A, B, C là ba chất đồng phân của nhau.",
             "options": [
                 "Đúng",
                 "Sai"
@@ -717,56 +717,56 @@
         {
             "id": 47,
             "type": "true_false",
-            "question": "Câu 4. Chanh là một loài thực vật cho quả nhỏ... Nước ép chanh chứa khoảng 5% citric acid... Citric acid có công thức cấu tạo là [image_782fe9.png] - Ý a: Citric acid tác dụng tối đa với $NaHCO_3$ theo tỉ lệ mol 1 : 3.",
+            "question": "Câu 4. Chanh là một loài thực vật cho quả nhỏ, thuộc chi Cam chanh (Citrus), khi chín có màu xanh hoặc vàng, thịt quả có vị chua. Quả chanh được sử dụng làm thực phẩm trên khắp thế giới – chủ yếu dùng nước ép của nó, thế nhưng phần cơm (các múi của chanh) và vỏ cũng được sử dụng, chủ yếu là trong nấu ăn và nướng bánh. Nước ép chanh chứa khoảng 5% (khoảng 0,3 mol/lít) citric acid, điều này giúp chanh có vị chua, và độ pH của chanh từ 2-3. Citric acid có công thức cấu tạo là \n Nước ép chanh chứa khoảng 5% citric acid... Citric acid có công thức cấu tạo là - Ý a: Citric acid tác dụng tối đa với $NaHCO_3$ theo tỉ lệ mol 1 : 3.",
             "options": [
                 "Đúng",
                 "Sai"
             ],
             "correct": "Đúng",
             "explanation": "Citric acid có 3 nhóm $-COOH$ có khả năng phản ứng với $NaHCO_3$ để tạo khí $CO_2$. Do đó tỉ lệ mol là 1:3.",
-            "image": "image_782fe9.png",
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa11-ck2-4.png",
             "topic": "Hợp chất carbonyl - Carboxylic acid",
             "level": "TH"
         },
         {
             "id": 48,
             "type": "true_false",
-            "question": "Câu 4. Chanh là một loài thực vật cho quả nhỏ... - Ý b: Citric acid thuộc loại hợp chất đa chức.",
+            "question": "Câu 4. Chanh là một loài thực vật cho quả nhỏ, thuộc chi Cam chanh (Citrus), khi chín có màu xanh hoặc vàng, thịt quả có vị chua. Quả chanh được sử dụng làm thực phẩm trên khắp thế giới – chủ yếu dùng nước ép của nó, thế nhưng phần cơm (các múi của chanh) và vỏ cũng được sử dụng, chủ yếu là trong nấu ăn và nướng bánh. Nước ép chanh chứa khoảng 5% (khoảng 0,3 mol/lít) citric acid, điều này giúp chanh có vị chua, và độ pH của chanh từ 2-3. Citric acid có công thức cấu tạo là \n - Ý b: Citric acid thuộc loại hợp chất đa chức.",
             "options": [
                 "Đúng",
                 "Sai"
             ],
             "correct": "Đúng",
             "explanation": "Phân tử có 3 nhóm $-COOH$ và 1 nhóm $-OH$. Đây là hợp chất tạp chức (chứa nhiều nhóm chức khác nhau). Thuật ngữ đề dùng 'đa chức' có thể hiểu là có nhiều nhóm chức.",
-            "image": "image_782fe9.png",
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa11-ck2-4.png",
             "topic": "Hợp chất carbonyl - Carboxylic acid",
             "level": "NB"
         },
         {
             "id": 49,
             "type": "true_false",
-            "question": "Câu 4. Chanh là một loài thực vật cho quả nhỏ... - Ý c: Công thức phân tử của citric acid là $C_6H_6O_7$.",
+            "question": "Câu 4. Chanh là một loài thực vật cho quả nhỏ, thuộc chi Cam chanh (Citrus), khi chín có màu xanh hoặc vàng, thịt quả có vị chua. Quả chanh được sử dụng làm thực phẩm trên khắp thế giới – chủ yếu dùng nước ép của nó, thế nhưng phần cơm (các múi của chanh) và vỏ cũng được sử dụng, chủ yếu là trong nấu ăn và nướng bánh. Nước ép chanh chứa khoảng 5% (khoảng 0,3 mol/lít) citric acid, điều này giúp chanh có vị chua, và độ pH của chanh từ 2-3. Citric acid có công thức cấu tạo là \n - Ý c: Công thức phân tử của citric acid là $C_6H_6O_7$.",
             "options": [
                 "Đúng",
                 "Sai"
             ],
             "correct": "Sai",
             "explanation": "Dựa vào hình ảnh cấu tạo, citric acid có công thức là $C_6H_8O_7$.",
-            "image": "image_782fe9.png",
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa11-ck2-4.png",
             "topic": "Hợp chất carbonyl - Carboxylic acid",
             "level": "TH"
         },
         {
             "id": 50,
             "type": "true_false",
-            "question": "Câu 4. Chanh là một loài thực vật cho quả nhỏ... - Ý d: Citric acid tác dụng với $NaOH$ theo tỉ lệ mol 1 : 4.",
+            "question": "Câu 4. Chanh là một loài thực vật cho quả nhỏ, thuộc chi Cam chanh (Citrus), khi chín có màu xanh hoặc vàng, thịt quả có vị chua. Quả chanh được sử dụng làm thực phẩm trên khắp thế giới – chủ yếu dùng nước ép của nó, thế nhưng phần cơm (các múi của chanh) và vỏ cũng được sử dụng, chủ yếu là trong nấu ăn và nướng bánh. Nước ép chanh chứa khoảng 5% (khoảng 0,3 mol/lít) citric acid, điều này giúp chanh có vị chua, và độ pH của chanh từ 2-3. Citric acid có công thức cấu tạo là \n - Ý d: Citric acid tác dụng với $NaOH$ theo tỉ lệ mol 1 : 4.",
             "options": [
                 "Đúng",
                 "Sai"
             ],
             "correct": "Sai",
             "explanation": "Trong điều kiện bình thường, chỉ có 3 nhóm $-COOH$ phản ứng được với $NaOH$. Nhóm $-OH$ alcohol không phản ứng. Tỉ lệ mol tối đa là 1:3.",
-            "image": "image_782fe9.png",
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa11-ck2-4.png",
             "topic": "Hợp chất carbonyl - Carboxylic acid",
             "level": "TH"
         },
@@ -806,7 +806,7 @@
             "question": "Câu 4. Bisphenol A là hợp chất được dùng nhiều trong công nghiệp để điều chế nhựa epoxy. Bisphenol A được điều chế từ phenol và acetone theo sơ đồ [image_782fa8.png]. Từ 282 kg phenol cho phản ứng với acetone dư hãy tính lượng bisphenol A thu được (theo kg), biết hiệu suất của phản ứng tổng hợp bisphenol A đạt 80% (Làm tròn kết quả đến hàng đơn vị).",
             "correct": "274",
             "explanation": "1. $n_{\\text{phenol}} = \\frac{282}{94} = 3$ kmol.\n2. Phương trình: $2 \\text{Phenol} + \\text{Acetone} \\to 1 \\text{Bisphenol A}$.\n3. $n_{\\text{BPA (lý thuyết)}} = \\frac{3}{2} = 1,5$ kmol.\n4. $m_{\\text{BPA (thực tế)}} = 1,5 \\times 228 \\times 0,8 = 273,6$ kg.\nLàm tròn đến hàng đơn vị: 274 kg.",
-            "image": "image_782fa8.png",
+            "image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/hoa11-ck2-tln4.png",
             "topic": "Dẫn xuất halogen - Alcohol - Phenol",
             "level": "VD"
         }
