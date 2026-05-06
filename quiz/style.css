@@ -561,8 +561,18 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .app-container { flex-direction: column; }
-    .sidebar { width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border); }
-    .question-grid { grid-template-columns: repeat(8, 1fr); max-height: 200px; }
-    .main-content { padding: 20px; }
+    .app-container { flex-direction: column; height: auto; min-height: 100vh; overflow: visible; }
+    .sidebar { width: 100%; height: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 16px; }
+    /* Use auto-fill so nav items wrap nicely on narrow screens */
+    .question-grid { grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); max-height: 160px; }
+    .main-content { padding: 16px; }
+    /* Reduce card padding on small screens */
+    .question-card { padding: 20px; }
+    .q-content h2 { font-size: 1.125rem; }
+    /* Make options stack on small screens */
+    .options-container { grid-template-columns: 1fr; }
+    /* Limit image height for mobile */
+    .q-image img { max-height: 220px; }
+    .finish-card { padding: 40px 24px; }
+    .view-switcher { margin-right: 8px; }
 }

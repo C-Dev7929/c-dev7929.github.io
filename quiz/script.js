@@ -303,7 +303,7 @@ class QuizApp {
         if (this.state.viewMode === 'card') {
             const currentQ = this.quizData.questions[this.state.currentIndex];
             if (!currentQ) return;
-            currentQ.folderUrl = this.quizData.FolerImgUrl || "";
+            currentQ.folderUrl = (this.quizData.folderUrl || this.quizData.FolerImgUrl || this.quizData.FolderImgUrl || "");
             currentQ.displayExplanation = currentQ.displayExplanation || AI.generateExplanation(currentQ);
             UIRenderer.renderQuestion(currentQ, this.state.answers[currentQ.id], (opt) => this.handleAnswer(opt));
             document.getElementById('btn-prev').disabled = this.state.currentIndex === 0;
@@ -311,7 +311,7 @@ class QuizApp {
             document.getElementById('question-card').classList.remove('hidden');
         } else {
             this.quizData.questions.forEach(q => {
-                q.folderUrl = this.quizData.FolerImgUrl || "";
+                q.folderUrl = (this.quizData.folderUrl || this.quizData.FolerImgUrl || this.quizData.FolderImgUrl || "");
                 q.displayExplanation = q.displayExplanation || AI.generateExplanation(q);
             });
             UIRenderer.renderListView(this.quizData.questions, this.state, (idx, opt) => this.handleAnswer(opt, idx));
