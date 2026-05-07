@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuyệnChữ — Typing Practice</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:       #0d0f14;
+            --surface:  #13161e;
+            --card:     #1a1e2a;
+            --border:   #252a38;
+            --muted:    #3a4055;
+            --dim:      #555e7a;
+            --text:     #c8cfe8;
+            --bright:   #eef0f8;
+            --green:    #4ade80;
+            --green-bg: rgba(74,222,128,.12);
+            --red:      #f87171;
+            --red-bg:   rgba(248,113,113,.12);
+            --gold:     #f4c55a;
+            --blue:     #60a5fa;
+            --cursor:   #f4c55a;
+            --mono:     'JetBrains Mono', monospace;
+            --serif:    'Playfair Display', serif;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--mono);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px 80px;
+            background-image:
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(96,165,250,.07) 0%, transparent 60%),
+                repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,.015) 40px),
+                repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,.015) 40px);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        header h1 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: var(--bright);
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+        header h1 span { color: var(--gold); font-style: italic; }
+        header p {
+            margin-top: 8px;
+            font-size: .75rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--dim);
+        }
+
+        .wrap { width: 100%; max-width: 860px; display: flex; flex-direction: column; gap: 20px; }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(255,255,255,.03) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .section-label {
+            font-size: .65rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--dim);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .input-row { display: flex; gap: 10px; }
+        textarea {
+            flex: 1;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-family: var(--mono);
+            font-size: .85rem;
+            padding: 14px 16px;
+            resize: vertical;
+            min-height: 90px;
+            line-height: 1.7;
+            outline: none;
+            transition: border-color .2s;
+        }
+        textarea::placeholder { color: var(--muted); }
+        textarea:focus { border-color: var(--blue); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-family: var(--mono);
+            font-size: .78rem;
+            font-weight: 500;
+            letter-spacing: .05em;
+            transition: opacity .15s, transform .1s;
+            white-space: nowrap;
+            user-select: none;
+        }
+        .btn:active { transform: scale(.97); }
+        .btn:hover { opacity: .88; }
+
+        .btn-primary { background: var(--gold); color: #0d0f14; }
+        .btn-ghost {
+            background: transparent;
+            color: var(--dim);
+            border: 1px solid var(--border);
+        }
+        .btn-ghost:hover { color: var(--text); border-color: var(--muted); }
+        .btn-sm { padding: 7px 14px; font-size: .72rem; }
+
+        .action-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .translation-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px 16px;
+            font-size: .82rem;
+            line-height: 1.8;
+            color: var(--dim);
+            min-height: 48px;
+            transition: color .3s;
+        }
+        .translation-box.loaded { color: var(--text); }
+        .translation-box.loading {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--muted);
+        }
+
+        .lang-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        select {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            font-family: var(--mono);
+            font-size: .75rem;
+            padding: 6px 10px;
+            outline: none;
+            cursor: pointer;
+        }
+        .arrow-icon { color: var(--dim); font-size: .8rem; }
+
+        .stats-bar {
+            display: flex;
+            gap: 0;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .stat {
+            flex: 1;
+            padding: 14px 16px;
+            text-align: center;
+            border-right: 1px solid var(--border);
+            transition: background .2s;
+        }
+        .stat:last-child { border-right: none; }
+        .stat-val {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--bright);
+            line-height: 1;
+            font-variant-numeric: tabular-nums;
+        }
+        .stat-val.green { color: var(--green); }
+        .stat-val.red   { color: var(--red); }
+        .stat-val.gold  { color: var(--gold); }
+        .stat-lbl {
+            font-size: .6rem;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: var(--dim);
+            margin-top: 4px;
+        }
+
+        #typing-display {
+            font-family: var(--mono);
+            font-size: clamp(.9rem, 2.2vw, 1.1rem);
+            line-height: 2.2;
+            letter-spacing: .03em;
+            word-break: break-word;
+            min-height: 80px;
+            user-select: none;
+            position: relative;
+        }
+
+        .char {
+            position: relative;
+            display: inline;
+            transition: color .08s;
+        }
+
+        .char.pending {
+            color: var(--muted);
+            filter: blur(3px);
+            transition: filter .15s, color .15s;
+        }
+
+        .char.cursor::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 10%;
+            height: 80%;
+            width: 2px;
+            background: var(--cursor);
+            border-radius: 2px;
+            animation: blink .9s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%,100% { opacity: 1; }
+            50%      { opacity: 0; }
+        }
+
+        .char.correct {
+            color: var(--green);
+            filter: none;
+        }
+
+        .char.wrong {
+            color: var(--red);
+            filter: none;
+            text-decoration: underline wavy var(--red) 1px;
+        }
+
+        .char.correct.space-char  { background: var(--green-bg); border-radius: 2px; }
+        .char.wrong.space-char    { background: var(--red-bg);   border-radius: 2px; }
+
+        #real-input {
+            position: fixed;
+            opacity: 0;
+            pointer-events: none;
+            width: 0; height: 0;
+        }
+
+        .typing-wrapper {
+            cursor: text;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            transition: border-color .2s, box-shadow .2s;
+            position: relative;
+        }
+        .typing-wrapper.focused {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(244,197,90,.08);
+        }
+        .typing-wrapper.done {
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px var(--green-bg);
+        }
+
+        .click-hint {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: inherit;
+            background: rgba(13,15,20,.55);
+            backdrop-filter: blur(2px);
+            color: var(--dim);
+            font-size: .8rem;
+            letter-spacing: .1em;
+            pointer-events: none;
+            transition: opacity .2s;
+            gap: 8px;
+        }
+        .click-hint.hidden { opacity: 0; }
+
+        .progress-track {
+            height: 3px;
+            background: var(--border);
+            border-radius: 99px;
+            margin-top: 16px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gold), var(--green));
+            border-radius: 99px;
+            width: 0%;
+            transition: width .15s ease;
+        }
+
+        .complete-banner {
+            display: none;
+            background: linear-gradient(135deg, rgba(74,222,128,.12), rgba(74,222,128,.04));
+            border: 1px solid rgba(74,222,128,.3);
+            border-radius: 10px;
+            padding: 18px 24px;
+            text-align: center;
+            margin-top: 12px;
+        }
+        .complete-banner.show { display: block; }
+        .complete-banner h3 {
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            color: var(--green);
+            margin-bottom: 4px;
+        }
+        .complete-banner p { font-size: .78rem; color: var(--dim); }
+
+        /* ── Saved texts ── */
+        .saved-header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+        .saved-count {
+            font-size: .65rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 99px;
+            padding: 2px 8px;
+            color: var(--dim);
+        }
+        .saved-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 4px;
+        }
+        .saved-empty {
+            text-align: center;
+            color: var(--muted);
+            font-size: .78rem;
+            padding: 20px 0;
+            letter-spacing: .05em;
+        }
+        .saved-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 14px;
+            transition: border-color .15s, background .15s;
+            animation: slideIn .2s ease;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-6px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .saved-item:hover { border-color: var(--blue); background: rgba(96,165,250,.04); }
+        .saved-item.active-saved { border-color: var(--gold); background: rgba(244,197,90,.05); }
+
+        .saved-item-body { flex: 1; min-width: 0; }
+        .saved-item-preview {
+            font-size: .8rem;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.4;
+        }
+        .saved-item-meta {
+            font-size: .65rem;
+            color: var(--dim);
+            margin-top: 3px;
+            letter-spacing: .05em;
+        }
+
+        .saved-item-actions { display: flex; gap: 6px; flex-shrink: 0; }
+        .btn-use {
+            background: rgba(244,197,90,.15);
+            color: var(--gold);
+            border: 1px solid rgba(244,197,90,.25);
+            padding: 5px 12px;
+            font-size: .7rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: var(--mono);
+            transition: background .15s;
+            white-space: nowrap;
+        }
+        .btn-use:hover { background: rgba(244,197,90,.28); }
+        .btn-del {
+            background: transparent;
+            color: var(--dim);
+            border: 1px solid var(--border);
+            padding: 5px 10px;
+            font-size: .75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: var(--mono);
+            transition: color .15s, border-color .15s;
+            line-height: 1;
+        }
+        .btn-del:hover { color: var(--red); border-color: var(--red); }
+
+        .spinner {
+            width: 14px; height: 14px;
+            border: 2px solid var(--border);
+            border-top-color: var(--blue);
+            border-radius: 50%;
+            animation: spin .7s linear infinite;
+            display: inline-block;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @media (max-width: 560px) {
+            .stat-val { font-size: 1.1rem; }
+            .stats-bar { flex-wrap: wrap; }
+            .stat { min-width: 50%; border-bottom: 1px solid var(--border); }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Luyện <span>Chữ</span></h1>
+    <p>Typing Practice · Translation · Real-time Feedback</p>
+</header>
+
+<div class="wrap">
+    <!-- ── Input section ── -->
+    <div class="card">
+        <div class="section-label">Đoạn văn luyện tập</div>
+        <div class="input-row">
+            <textarea id="source-text" rows="3"
+                      placeholder="Dán hoặc nhập đoạn văn bạn muốn luyện gõ vào đây…">The quick brown fox jumps over the lazy dog. Programming is the art of telling another human what one wants the computer to do.</textarea>
+        </div>
+        <div class="action-row">
+            <button class="btn btn-primary" onclick="startPractice()">▶ Bắt đầu luyện tập</button>
+            <button class="btn btn-ghost btn-sm" onclick="resetPractice()">↺ Làm lại</button>
+            <button class="btn btn-ghost btn-sm" onclick="saveCurrentText()">💾 Lưu đoạn này</button>
+        </div>
+
+        <!-- Saved texts list -->
+        <div class="saved-header-row" id="saved-header" style="display:none; margin-top: 20px;">
+            <div class="section-label" style="margin-bottom:0;">Đoạn đã lưu</div>
+            <span class="saved-count" id="saved-count">0</span>
+        </div>
+        <div class="saved-list" id="saved-list"></div>
+    </div>
+
+    <!-- ── Translation section ── -->
+    <div class="card">
+        <div class="section-label">Dịch thuật</div>
+        <div class="lang-row">
+            <select id="lang-from">
+                <option value="en">Tiếng Anh (EN)</option>
+                <option value="vi">Tiếng Việt (VI)</option>
+                <option value="fr">Tiếng Pháp (FR)</option>
+                <option value="ja">Tiếng Nhật (JA)</option>
+                <option value="ko">Tiếng Hàn (KO)</option>
+                <option value="zh">Tiếng Trung (ZH)</option>
+                <option value="de">Tiếng Đức (DE)</option>
+                <option value="es">Tiếng Tây Ban Nha (ES)</option>
+            </select>
+            <span class="arrow-icon">→</span>
+            <select id="lang-to">
+                <option value="vi">Tiếng Việt (VI)</option>
+                <option value="en">Tiếng Anh (EN)</option>
+                <option value="fr">Tiếng Pháp (FR)</option>
+                <option value="ja">Tiếng Nhật (JA)</option>
+                <option value="ko">Tiếng Hàn (KO)</option>
+                <option value="zh">Tiếng Trung (ZH)</option>
+                <option value="de">Tiếng Đức (DE)</option>
+                <option value="es">Tiếng Tây Ban Nha (ES)</option>
+            </select>
+            <button class="btn btn-ghost btn-sm" onclick="translateText()">⟳ Dịch</button>
+        </div>
+        <div class="translation-box" id="translation-box">
+            Nhấn <strong>Dịch</strong> để xem bản dịch…
+        </div>
+    </div>
+
+    <!-- ── Stats ── -->
+    <div class="stats-bar">
+        <div class="stat">
+            <div class="stat-val gold" id="stat-wpm">0</div>
+            <div class="stat-lbl">WPM</div>
+        </div>
+        <div class="stat">
+            <div class="stat-val green" id="stat-acc">100%</div>
+            <div class="stat-lbl">Chính xác</div>
+        </div>
+        <div class="stat">
+            <div class="stat-val" id="stat-time">0s</div>
+            <div class="stat-lbl">Thời gian</div>
+        </div>
+        <div class="stat">
+            <div class="stat-val" id="stat-chars">0</div>
+            <div class="stat-lbl">Ký tự</div>
+        </div>
+    </div>
+
+    <!-- ── Typing area ── -->
+    <div class="card">
+        <div class="section-label">Khu vực gõ phím</div>
+        <div class="typing-wrapper" id="typing-wrapper" onclick="focusInput()">
+            <div id="typing-display"></div>
+            <div class="click-hint" id="click-hint">
+                <span>⌨</span> Nhấn vào đây để bắt đầu gõ
+            </div>
+        </div>
+        <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <div class="complete-banner" id="complete-banner">
+            <h3>🎉 Hoàn thành!</h3>
+            <p id="complete-msg"></p>
+        </div>
+    </div>
+</div>
+
+<input id="real-input" type="text" autocomplete="off" autocorrect="off"
+       autocapitalize="off" spellcheck="false"
+       oninput="handleInput()" onkeydown="handleKeydown(event)"
+       onfocus="onFocus()" onblur="onBlur()">
+
+<script>
+    // ── State ──
+    let targetText = '';
+    let typedCorrect = [];
+    let cursorPos = 0;
+    let startTime = null;
+    let timerInterval = null;
+    let errorCount = 0;
+    let totalTyped = 0;
+    let isComplete = false;
+    let isFocused = false;
+
+    // ── Saved texts management ──
+    const STORAGE_KEY = 'luyenchu_savedTexts';
+
+    function loadSavedTexts() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            return raw ? JSON.parse(raw) : [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function saveSavedTexts(list) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+    }
+
+    function renderSavedList() {
+        const list = loadSavedTexts();
+        const header = document.getElementById('saved-header');
+        const countSpan = document.getElementById('saved-count');
+        const container = document.getElementById('saved-list');
+
+        if (!list.length) {
+            header.style.display = 'none';
+            container.innerHTML = '<div class="saved-empty">Chưa có đoạn nào được lưu.</div>';
+            return;
+        }
+
+        header.style.display = 'flex';
+        countSpan.textContent = list.length;
+
+        container.innerHTML = '';
+        list.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'saved-item';
+            div.innerHTML = `
+                <div class="saved-item-body">
+                    <div class="saved-item-preview">${escapeHtml(item.text.substring(0, 80))}</div>
+                    <div class="saved-item-meta">${new Date(item.createdAt).toLocaleString('vi-VN')}</div>
+                </div>
+                <div class="saved-item-actions">
+                    <button class="btn-use" data-id="${item.id}">Dùng lại</button>
+                    <button class="btn-del" data-id="${item.id}">✕</button>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+
+        // Attach event listeners
+        container.querySelectorAll('.btn-use').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = e.target.dataset.id;
+                loadSavedTextById(id);
+            });
+        });
+        container.querySelectorAll('.btn-del').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const id = e.target.dataset.id;
+                deleteSavedTextById(id);
+            });
+        });
+    }
+
+    function saveCurrentText() {
+        const text = document.getElementById('source-text').value.trim();
+        if (!text) {
+            alert('Vui lòng nhập đoạn văn trước khi lưu.');
+            return;
+        }
+
+        const list = loadSavedTexts();
+        // Limit to maximum 20 saved items
+        if (list.length >= 20) {
+            alert('Đã đạt giới hạn 20 đoạn lưu trữ. Vui lòng xóa bớt đoạn cũ.');
+            return;
+        }
+
+        const newItem = {
+            id: Date.now().toString(),
+            text: text,
+            createdAt: new Date().toISOString()
+        };
+        list.push(newItem);
+        saveSavedTexts(list);
+        renderSavedList();
+
+        // Brief feedback
+        const saveBtn = event.target;
+        const originalText = saveBtn.textContent;
+        saveBtn.textContent = '✅ Đã lưu';
+        saveBtn.disabled = true;
+        setTimeout(() => {
+            saveBtn.textContent = originalText;
+            saveBtn.disabled = false;
+        }, 1500);
+    }
+
+    function loadSavedTextById(id) {
+        const list = loadSavedTexts();
+        const item = list.find(i => i.id === id);
+        if (item) {
+            document.getElementById('source-text').value = item.text;
+            // Also reset practice state to avoid confusion
+            resetPractice();
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
+    function deleteSavedTextById(id) {
+        if (!confirm('Xóa đoạn này khỏi danh sách lưu?')) return;
+        let list = loadSavedTexts();
+        list = list.filter(i => i.id !== id);
+        saveSavedTexts(list);
+        renderSavedList();
+    }
+
+    // Helper escape
+    function escapeHtml(str) {
+        return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    // ── Typing practice functions ──
+    function startPractice() {
+        targetText = document.getElementById('source-text').value.trim();
+        if (!targetText) return;
+
+        typedCorrect = new Array(targetText.length).fill(null);
+        cursorPos    = 0;
+        errorCount   = 0;
+        totalTyped   = 0;
+        isComplete   = false;
+        startTime    = null;
+
+        clearInterval(timerInterval);
+        updateStats(0, 100, 0, 0);
+        document.getElementById('progress-fill').style.width = '0%';
+        document.getElementById('complete-banner').classList.remove('show');
+        document.getElementById('typing-wrapper').classList.remove('done');
+        document.getElementById('real-input').value = '';
+
+        renderDisplay();
+        focusInput();
+    }
+
+    function resetPractice() {
+        document.getElementById('real-input').value = '';
+        typedCorrect = new Array(targetText.length).fill(null);
+        cursorPos    = 0;
+        errorCount   = 0;
+        totalTyped   = 0;
+        isComplete   = false;
+        startTime    = null;
+        clearInterval(timerInterval);
+        updateStats(0, 100, 0, 0);
+        document.getElementById('progress-fill').style.width = '0%';
+        document.getElementById('complete-banner').classList.remove('show');
+        document.getElementById('typing-wrapper').classList.remove('done');
+        renderDisplay();
+        focusInput();
+    }
+
+    function renderDisplay() {
+        const display = document.getElementById('typing-display');
+        if (!targetText) {
+            display.innerHTML = '<span style="color:var(--muted);font-size:.82rem">Nhập đoạn văn ở trên rồi nhấn ▶ Bắt đầu luyện tập…</span>';
+            return;
+        }
+
+        let html = '';
+        for (let i = 0; i < targetText.length; i++) {
+            const ch = targetText[i];
+            let cls = '';
+
+            if (i < cursorPos) {
+                cls = typedCorrect[i] ? 'correct' : 'wrong';
+            } else if (i === cursorPos) {
+                cls = 'cursor pending';
+            } else {
+                cls = 'pending';
+            }
+
+            if (ch === ' ') cls += ' space-char';
+
+            const display_ch = ch === ' ' ? '&nbsp;' : ch === '\n' ? '↵<br>' : escapeHtml(ch);
+            html += `<span class="char ${cls}">${display_ch}</span>`;
+        }
+        display.innerHTML = html;
+
+        const cursorEl = display.querySelector('.cursor');
+        if (cursorEl) cursorEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    }
+
+    function handleKeydown(e) {
+        if (isComplete) return;
+        if (e.key === 'Backspace') {
+            e.preventDefault();
+            if (cursorPos > 0) {
+                cursorPos--;
+                typedCorrect[cursorPos] = null;
+                document.getElementById('real-input').value = '';
+                renderDisplay();
+                updateProgress();
+            }
+            return;
+        }
+    }
+
+    function handleInput() {
+        if (isComplete || !targetText) return;
+
+        const inp = document.getElementById('real-input');
+        const chars = [...inp.value];
+
+        for (const ch of chars) {
+            if (cursorPos >= targetText.length) break;
+
+            if (startTime === null) {
+                startTime = Date.now();
+                timerInterval = setInterval(tickTimer, 300);
+            }
+
+            const expected = targetText[cursorPos];
+            const correct  = ch === expected;
+
+            typedCorrect[cursorPos] = correct;
+            if (!correct) errorCount++;
+            totalTyped++;
+            cursorPos++;
+        }
+
+        inp.value = '';
+        renderDisplay();
+        updateProgress();
+
+        if (cursorPos >= targetText.length) finishPractice();
+    }
+
+    function tickTimer() {
+        if (!startTime) return;
+        const elapsed = (Date.now() - startTime) / 1000;
+        const correctChars = typedCorrect.filter(v => v === true).length;
+        const wpm = elapsed > 0 ? Math.round((correctChars / 5) / (elapsed / 60)) : 0;
+        const acc = totalTyped > 0 ? Math.round(((totalTyped - errorCount) / totalTyped) * 100) : 100;
+        updateStats(wpm, acc, Math.round(elapsed), correctChars);
+    }
+
+    function updateStats(wpm, acc, time, chars) {
+        document.getElementById('stat-wpm').textContent  = wpm;
+        document.getElementById('stat-acc').textContent  = acc + '%';
+        document.getElementById('stat-time').textContent = time + 's';
+        document.getElementById('stat-chars').textContent = chars;
+
+        const accEl = document.getElementById('stat-acc');
+        accEl.className = 'stat-val ' + (acc >= 90 ? 'green' : acc >= 70 ? 'gold' : 'red');
+    }
+
+    function updateProgress() {
+        const pct = targetText.length > 0 ? (cursorPos / targetText.length * 100) : 0;
+        document.getElementById('progress-fill').style.width = pct + '%';
+    }
+
+    function finishPractice() {
+        isComplete = true;
+        clearInterval(timerInterval);
+
+        const elapsed = startTime ? ((Date.now() - startTime) / 1000) : 0;
+        const correctChars = typedCorrect.filter(v => v === true).length;
+        const wpm = elapsed > 0 ? Math.round((correctChars / 5) / (elapsed / 60)) : 0;
+        const acc = totalTyped > 0 ? Math.round(((totalTyped - errorCount) / totalTyped) * 100) : 100;
+
+        updateStats(wpm, acc, Math.round(elapsed), correctChars);
+
+        document.getElementById('typing-wrapper').classList.add('done');
+        const banner = document.getElementById('complete-banner');
+        banner.classList.add('show');
+        document.getElementById('complete-msg').textContent =
+            `${wpm} WPM · ${acc}% chính xác · ${Math.round(elapsed)}s · ${errorCount} lỗi`;
+    }
+
+    function focusInput() {
+        if (!targetText) return;
+        document.getElementById('real-input').focus();
+    }
+
+    function onFocus() {
+        isFocused = true;
+        document.getElementById('typing-wrapper').classList.add('focused');
+        document.getElementById('click-hint').classList.add('hidden');
+    }
+
+    function onBlur() {
+        isFocused = false;
+        document.getElementById('typing-wrapper').classList.remove('focused');
+        if (!isComplete) document.getElementById('click-hint').classList.remove('hidden');
+    }
+
+    // ── Translation (MyMemory API) ──
+    function splitIntoChunks(text, maxLen = 490) {
+        const chunks = [];
+        const sentences = text.match(/[^.!?\n]+[.!?\n]?/g) || [text];
+        let current = '';
+        for (const s of sentences) {
+            if ((current + s).length > maxLen) {
+                if (current) chunks.push(current.trim());
+                if (s.length > maxLen) {
+                    const words = s.split(' ');
+                    let part = '';
+                    for (const w of words) {
+                        if ((part + ' ' + w).trim().length > maxLen) {
+                            if (part) chunks.push(part.trim());
+                            part = w;
+                        } else {
+                            part = (part + ' ' + w).trim();
+                        }
+                    }
+                    if (part) current = part + ' ';
+                } else {
+                    current = s;
+                }
+            } else {
+                current += s;
+            }
+        }
+        if (current.trim()) chunks.push(current.trim());
+        return chunks;
+    }
+
+    async function translateChunk(chunk, from, to) {
+        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=${from}|${to}`;
+        const res  = await fetch(url);
+        const data = await res.json();
+        if ((data.responseStatus === 200 || data.responseStatus === '200') && data.responseData?.translatedText) {
+            const t = data.responseData.translatedText;
+            if (t.includes('QUERY LENGTH LIMIT')) throw new Error('chunk too long');
+            return t;
+        }
+        throw new Error('API error: ' + data.responseStatus);
+    }
+
+    async function translateText() {
+        const text = document.getElementById('source-text').value.trim();
+        if (!text) return;
+
+        const from = document.getElementById('lang-from').value;
+        const to   = document.getElementById('lang-to').value;
+        const box  = document.getElementById('translation-box');
+
+        box.className = 'translation-box loading';
+        box.innerHTML = '<span class="spinner"></span> Đang dịch…';
+
+        try {
+            const chunks = splitIntoChunks(text, 490);
+            const results = [];
+            for (let i = 0; i < chunks.length; i++) {
+                box.innerHTML = `<span class="spinner"></span> Đang dịch đoạn ${i + 1}/${chunks.length}…`;
+                const translated = await translateChunk(chunks[i], from, to);
+                results.push(translated);
+                if (i < chunks.length - 1) await new Promise(r => setTimeout(r, 300));
+            }
+            box.className = 'translation-box loaded';
+            box.textContent = results.join(' ');
+        } catch (err) {
+            box.className = 'translation-box';
+            box.innerHTML = '<span style="color:var(--red)">Dịch thất bại. Vui lòng thử lại hoặc kiểm tra kết nối mạng.</span>';
+        }
+    }
+
+    // ── Boot ──
+    renderDisplay();
+    renderSavedList();
+</script>
+</body>
+</html>
