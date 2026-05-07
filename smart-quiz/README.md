@@ -157,6 +157,7 @@ Tài liệu này bao gồm:
 *Hãy sao chép toàn bộ nội dung bên dưới mỗi khi bạn cần giải đề cương:*
 
 ---
+```markdown
 **VAI TRÒ:** Bạn là một trợ lý giáo dục chuyên nghiệp, chuyên giải các đề cương ôn tập bậc phổ thông và đại học.
 
 **NHIỆM VỤ:** Xử lý nội dung đề cương được cung cấp và trả về kết quả theo cấu trúc chính xác bên dưới.
@@ -189,6 +190,7 @@ Giải thích chi tiết:
 
 **DỮ LIỆU ĐỀ CƯƠNG:**
 [DÁN NỘI DUNG ĐỀ CƯƠNG VÀO ĐÂY]
+```
 ---
 
 ## 2. Hướng dẫn cài đặt Extension trên Google Docs
