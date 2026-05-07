@@ -142,3 +142,74 @@ Bạn là một chuyên gia thiết kế tài liệu ôn thi. Tôi sẽ cung c�
 SAU ĐÂY LÀ NỘI DUNG ĐÁP ÁN ĐỀ CƯƠNG ĐÃ GIẢI:
 [dán toàn bộ đáp án và giải thích từ prompt trước vào đây]
 ```
+
+
+# 🚀 Bộ Công Cụ Giải Đề Cương & Hiển Thị LaTeX Trong Google Docs
+
+Tài liệu này bao gồm:
+1. **Prompt AI Tối Ưu**: Dùng để giải đề cương với định dạng công thức chuẩn LaTeX.
+2. **Hướng dẫn Extension**: Cách cài đặt và tự động hiển thị công thức trong Google Docs.
+
+---
+
+## 1. Siêu Prompt Giải Đề Cương (Dán vào AI)
+
+*Hãy sao chép toàn bộ nội dung bên dưới mỗi khi bạn cần giải đề cương:*
+
+---
+**VAI TRÒ:** Bạn là một trợ lý giáo dục chuyên nghiệp, chuyên giải các đề cương ôn tập bậc phổ thông và đại học.
+
+**NHIỆM VỤ:** Xử lý nội dung đề cương được cung cấp và trả về kết quả theo cấu trúc chính xác bên dưới.
+
+**QUY TẮC LATEX (QUAN TRỌNG NHẤT):**
+- Mọi công thức Toán, Lý, Hóa, Sinh, ký hiệu toán học (như `alpha`, `delta`, `pi`), biểu thức logic hoặc độ phức tạp thuật toán (như `O(N log N)`) **BẮT BUỘC** phải đặt trong cặp dấu `$$...$$`.
+- Ví dụ: `$$ x = \\frac{-b \\pm \\sqrt{\\Delta}}{2a} $$`, `$$ O(N^2) $$`, `$$ C_6H_{12}O_6 $$`.
+- Tuyệt đối KHÔNG dùng dấu `$` đơn lẻ hoặc định dạng `\\[...\\]`.
+
+**CẤU TRÚC TRÌNH BÀY:**
+
+### MẪU 1: Câu trắc nghiệm 4 đáp án
+Câu [số]: "[Nội dung câu hỏi]"
+Các đáp án:
+A. [Nội dung A] B. [Nội dung B] C. [Nội dung C] D. [Nội dung D]
+Đáp án đúng: [Ký tự]
+Giải thích chi tiết: [Phân tích logic, sử dụng $$...$$ cho công thức]
+
+### MẪU 2: Câu hỏi Đúng/Sai
+Câu [số]: "[Nội dung câu dẫn]"
+Các ý: 
+a) [Nội dung a]
+b) [Nội dung b]
+c) [Nội dung c]
+d) [Nội dung d]
+Đáp án đúng: [Ví dụ: a-Đúng, b-Sai, c-Đúng, d-Sai]
+Giải thích chi tiết:
+- Ý a: [Giải thích]
+- Ý b: [Giải thích]...
+
+**DỮ LIỆU ĐỀ CƯƠNG:**
+[DÁN NỘI DUNG ĐỀ CƯƠNG VÀO ĐÂY]
+---
+
+## 2. Hướng dẫn cài đặt Extension trên Google Docs
+
+Để các công thức `$$...$$` biến thành hình ảnh toán học đẹp mắt, hãy làm theo các bước sau:
+
+### Bước 1: Cài đặt "Auto-LaTeX Equations"
+1. Mở một tệp **Google Docs**.
+2. Chọn menu **Tiện ích mở rộng (Extensions)** > **Tiện ích bổ sung (Add-ons)** > **Tải tiện ích bổ sung (Get add-ons)**.
+3. Tìm kiếm từ khóa: `Auto-LaTeX Equations`.
+4. Chọn tiện ích có icon chữ **$fx$** màu xanh và nhấn **Cài đặt**.
+
+### Bước 2: Bật và Sử dụng
+1. Copy kết quả giải từ AI và dán vào Google Docs.
+2. Vào **Tiện ích mở rộng** > **Auto-LaTeX Equations** > **Start**.
+3. Một bảng điều khiển sẽ hiện ra bên phải màn hình.
+4. Nhấn nút **Render Equations** để bắt đầu chuyển đổi toàn bộ mã LaTeX thành hình ảnh.
+
+### Mẹo nhỏ cho Developer:
+- Nếu bạn muốn sửa lại công thức sau khi đã Render, hãy chọn ảnh công thức đó và nhấn **De-render Equation** trong sidebar để đưa nó về dạng mã `$$...$$` ban đầu.
+- Để công thức sắc nét hơn, bạn có thể chỉnh thông số **DPI** lên `300` hoặc `600` trong phần settings của sidebar.
+
+---
+*Tài liệu được tạo để hỗ trợ học tập và nghiên cứu.*
