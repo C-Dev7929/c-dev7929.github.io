@@ -63,7 +63,7 @@
             color: var(--dim);
         }
 
-        .wrap { width: 100%; max-width: 860px; display: flex; flex-direction: column; gap: 20px; }
+        .wrap { width: 100%; max-width: 1200px; display: flex; flex-direction: column; gap: 20px; }
 
         .card {
             background: var(--card);
@@ -153,6 +153,24 @@
             margin-top: 12px;
         }
 
+        /* Two‑column layout */
+        .two-col {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .col-left {
+            flex: 1 1 40%;
+            min-width: 280px;
+        }
+        .col-right {
+            flex: 1 1 60%;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
         .translation-box {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -161,7 +179,7 @@
             font-size: .82rem;
             line-height: 1.8;
             color: var(--dim);
-            min-height: 48px;
+            min-height: 120px;
             transition: color .3s;
         }
         .translation-box.loaded { color: var(--text); }
@@ -194,7 +212,6 @@
 
         .stats-bar {
             display: flex;
-            gap: 0;
             border: 1px solid var(--border);
             border-radius: 10px;
             overflow: hidden;
@@ -231,7 +248,7 @@
             line-height: 2.2;
             letter-spacing: .03em;
             word-break: break-word;
-            min-height: 80px;
+            min-height: 100px;
             user-select: none;
             position: relative;
         }
@@ -455,7 +472,13 @@
         }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        @media (max-width: 560px) {
+        @media (max-width: 780px) {
+            .two-col {
+                flex-direction: column;
+            }
+            .col-left, .col-right {
+                min-width: 100%;
+            }
             .stat-val { font-size: 1.1rem; }
             .stats-bar { flex-wrap: wrap; }
             .stat { min-width: 50%; border-bottom: 1px solid var(--border); }
@@ -469,7 +492,7 @@
 </header>
 
 <div class="wrap">
-    <!-- ── Input section ── -->
+    <!-- ── Input section (full width) ── -->
     <div class="card">
         <div class="section-label">Đoạn văn luyện tập</div>
         <div class="input-row">
@@ -479,7 +502,7 @@
         <div class="action-row">
             <button class="btn btn-primary" onclick="startPractice()">▶ Bắt đầu luyện tập</button>
             <button class="btn btn-ghost btn-sm" onclick="resetPractice()">↺ Làm lại</button>
-            <button class="btn btn-ghost btn-sm" onclick="saveCurrentText()">💾 Lưu đoạn này</button>
+            <button class="btn btn-ghost btn-sm" id="save-btn" onclick="saveCurrentText()">💾 Lưu đoạn này</button>
         </div>
 
         <!-- Saved texts list -->
@@ -490,77 +513,86 @@
         <div class="saved-list" id="saved-list"></div>
     </div>
 
-    <!-- ── Translation section ── -->
-    <div class="card">
-        <div class="section-label">Dịch thuật</div>
-        <div class="lang-row">
-            <select id="lang-from">
-                <option value="en">Tiếng Anh (EN)</option>
-                <option value="vi">Tiếng Việt (VI)</option>
-                <option value="fr">Tiếng Pháp (FR)</option>
-                <option value="ja">Tiếng Nhật (JA)</option>
-                <option value="ko">Tiếng Hàn (KO)</option>
-                <option value="zh">Tiếng Trung (ZH)</option>
-                <option value="de">Tiếng Đức (DE)</option>
-                <option value="es">Tiếng Tây Ban Nha (ES)</option>
-            </select>
-            <span class="arrow-icon">→</span>
-            <select id="lang-to">
-                <option value="vi">Tiếng Việt (VI)</option>
-                <option value="en">Tiếng Anh (EN)</option>
-                <option value="fr">Tiếng Pháp (FR)</option>
-                <option value="ja">Tiếng Nhật (JA)</option>
-                <option value="ko">Tiếng Hàn (KO)</option>
-                <option value="zh">Tiếng Trung (ZH)</option>
-                <option value="de">Tiếng Đức (DE)</option>
-                <option value="es">Tiếng Tây Ban Nha (ES)</option>
-            </select>
-            <button class="btn btn-ghost btn-sm" onclick="translateText()">⟳ Dịch</button>
-        </div>
-        <div class="translation-box" id="translation-box">
-            Nhấn <strong>Dịch</strong> để xem bản dịch…
-        </div>
-    </div>
-
-    <!-- ── Stats ── -->
-    <div class="stats-bar">
-        <div class="stat">
-            <div class="stat-val gold" id="stat-wpm">0</div>
-            <div class="stat-lbl">WPM</div>
-        </div>
-        <div class="stat">
-            <div class="stat-val green" id="stat-acc">100%</div>
-            <div class="stat-lbl">Chính xác</div>
-        </div>
-        <div class="stat">
-            <div class="stat-val" id="stat-time">0s</div>
-            <div class="stat-lbl">Thời gian</div>
-        </div>
-        <div class="stat">
-            <div class="stat-val" id="stat-chars">0</div>
-            <div class="stat-lbl">Ký tự</div>
-        </div>
-    </div>
-
-    <!-- ── Typing area ── -->
-    <div class="card">
-        <div class="section-label">Khu vực gõ phím</div>
-        <div class="typing-wrapper" id="typing-wrapper" onclick="focusInput()">
-            <div id="typing-display"></div>
-            <div class="click-hint" id="click-hint">
-                <span>⌨</span> Nhấn vào đây để bắt đầu gõ
+    <!-- ── Two‑column row: Dịch (trái) – Khu vực gõ (phải) ── -->
+    <div class="two-col">
+        <!-- Cột trái: Dịch thuật -->
+        <div class="col-left">
+            <div class="card">
+                <div class="section-label">Dịch thuật</div>
+                <div class="lang-row">
+                    <select id="lang-from">
+                        <option value="en">Tiếng Anh (EN)</option>
+                        <option value="vi">Tiếng Việt (VI)</option>
+                        <option value="fr">Tiếng Pháp (FR)</option>
+                        <option value="ja">Tiếng Nhật (JA)</option>
+                        <option value="ko">Tiếng Hàn (KO)</option>
+                        <option value="zh">Tiếng Trung (ZH)</option>
+                        <option value="de">Tiếng Đức (DE)</option>
+                        <option value="es">Tiếng Tây Ban Nha (ES)</option>
+                    </select>
+                    <span class="arrow-icon">→</span>
+                    <select id="lang-to">
+                        <option value="vi">Tiếng Việt (VI)</option>
+                        <option value="en">Tiếng Anh (EN)</option>
+                        <option value="fr">Tiếng Pháp (FR)</option>
+                        <option value="ja">Tiếng Nhật (JA)</option>
+                        <option value="ko">Tiếng Hàn (KO)</option>
+                        <option value="zh">Tiếng Trung (ZH)</option>
+                        <option value="de">Tiếng Đức (DE)</option>
+                        <option value="es">Tiếng Tây Ban Nha (ES)</option>
+                    </select>
+                    <button class="btn btn-ghost btn-sm" onclick="translateText()">⟳ Dịch</button>
+                </div>
+                <div class="translation-box" id="translation-box">
+                    Nhấn <strong>Dịch</strong> để xem bản dịch…
+                </div>
             </div>
         </div>
-        <div class="progress-track">
-            <div class="progress-fill" id="progress-fill"></div>
-        </div>
-        <div class="complete-banner" id="complete-banner">
-            <h3>🎉 Hoàn thành!</h3>
-            <p id="complete-msg"></p>
+
+        <!-- Cột phải: Thống kê + Khu vực gõ -->
+        <div class="col-right">
+            <!-- Thanh thống kê -->
+            <div class="stats-bar">
+                <div class="stat">
+                    <div class="stat-val gold" id="stat-wpm">0</div>
+                    <div class="stat-lbl">WPM</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-val green" id="stat-acc">100%</div>
+                    <div class="stat-lbl">Chính xác</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-val" id="stat-time">0s</div>
+                    <div class="stat-lbl">Thời gian</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-val" id="stat-chars">0</div>
+                    <div class="stat-lbl">Ký tự</div>
+                </div>
+            </div>
+
+            <!-- Khu vực gõ phím -->
+            <div class="card">
+                <div class="section-label">Khu vực gõ phím</div>
+                <div class="typing-wrapper" id="typing-wrapper" onclick="focusInput()">
+                    <div id="typing-display"></div>
+                    <div class="click-hint" id="click-hint">
+                        <span>⌨</span> Nhấn vào đây để bắt đầu gõ
+                    </div>
+                </div>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="complete-banner" id="complete-banner">
+                    <h3>🎉 Hoàn thành!</h3>
+                    <p id="complete-msg"></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<!-- Hidden real input -->
 <input id="real-input" type="text" autocomplete="off" autocorrect="off"
        autocapitalize="off" spellcheck="false"
        oninput="handleInput()" onkeydown="handleKeydown(event)"
@@ -626,7 +658,6 @@
             container.appendChild(div);
         });
 
-        // Attach event listeners
         container.querySelectorAll('.btn-use').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const id = e.target.dataset.id;
@@ -649,7 +680,6 @@
         }
 
         const list = loadSavedTexts();
-        // Limit to maximum 20 saved items
         if (list.length >= 20) {
             alert('Đã đạt giới hạn 20 đoạn lưu trữ. Vui lòng xóa bớt đoạn cũ.');
             return;
@@ -664,8 +694,8 @@
         saveSavedTexts(list);
         renderSavedList();
 
-        // Brief feedback
-        const saveBtn = event.target;
+        // Feedback on the save button
+        const saveBtn = document.getElementById('save-btn');
         const originalText = saveBtn.textContent;
         saveBtn.textContent = '✅ Đã lưu';
         saveBtn.disabled = true;
@@ -680,9 +710,7 @@
         const item = list.find(i => i.id === id);
         if (item) {
             document.getElementById('source-text').value = item.text;
-            // Also reset practice state to avoid confusion
             resetPractice();
-            // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     }
@@ -695,7 +723,6 @@
         renderSavedList();
     }
 
-    // Helper escape
     function escapeHtml(str) {
         return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     }
@@ -858,8 +885,19 @@
             `${wpm} WPM · ${acc}% chính xác · ${Math.round(elapsed)}s · ${errorCount} lỗi`;
     }
 
+    // ── Focus handling (improved) ──
     function focusInput() {
-        if (!targetText) return;
+        const src = document.getElementById('source-text').value.trim();
+        // If no target text yet but source text exists, automatically start practice
+        if (!targetText) {
+            if (src) {
+                startPractice();
+                return; // startPractice will call focusInput again, which will then focus
+            } else {
+                alert('Vui lòng nhập đoạn văn trong ô bên trên trước khi gõ.');
+                return;
+            }
+        }
         document.getElementById('real-input').focus();
     }
 
