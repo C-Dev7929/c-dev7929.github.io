@@ -604,8 +604,8 @@
 				"C. hình thành nội nhũ cung cấp chất dinh dưỡng cho phôi phát triển.",
 				"D. tiết kiệm vật liệu di truyền (do sử dụng cả hai tinh tử để thụ tinh)."
 			],
-			"correct": "C. hình thành nội nhũ cung cấp chất dinh dưỡng cho phôi phát triển.",
-			"explanation": "Thụ tinh kép (một tinh tử kết hợp với noãn tạo hợp tử, một tinh tử kết hợp với nhân cực tạo nội nhũ 3n) có ý nghĩa sinh học là hình thành nội nhũ giàu chất dự trữ để cung cấp chất dinh dưỡng nuôi phôi phát triển, đảm bảo thế hệ sau có sức sống cao.",
+			"correct": "A. cung cấp chất dinh dưỡng cho sự phát triển của phôi và thời kì đầu của cá thể mới.",
+			"explanation": "Theo đề cương, ý nghĩa sinh học của hiện tượng thụ tinh kép là cung cấp chất dinh dưỡng cho sự phát triển của phôi và thời kì đầu của cá thể mới.",
 			"image": null,
 			"topic": "Sinh sản ở thực vật",
 			"level": "TH"
@@ -762,8 +762,8 @@
 				"Đúng",
 				"Sai"
 			],
-			"correct": "Đúng",
-			"explanation": "Dựa vào đặc điểm các phương pháp nhân giống vô tính nhân tạo ở thực vật: việc nối một đoạn cành gọi là ghép cành, còn tách lấy một mắt ghép vào thân gốc gọi là ghép mắt.",
+			"correct": "Sai",
+			"explanation": "Theo đáp án trong đề cương, nhận định này là Sai.",
 			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-48.png",
 			"topic": "Sinh sản ở thực vật",
 			"level": "TH"
@@ -790,8 +790,8 @@
 				"Đúng",
 				"Sai"
 			],
-			"correct": "Đúng",
-			"explanation": "Ghép là hình thức sinh sản vô tính, dựa trên quá trình nguyên phân nên cơ sở di truyền không thay đổi, các đặc tính tốt của cây mẹ sẽ được duy trì và truyền lại nguyên vẹn.",
+			"correct": "Sai",
+			"explanation": "Theo đáp án trong đề cương, nhận định này là Sai.",
 			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-50.png",
 			"topic": "Sinh sản ở thực vật",
 			"level": "TH"
@@ -964,8 +964,8 @@
 				"C. trinh sinh.",
 				"D. phân mảnh."
 			],
-			"correct": "D. phân mảnh.",
-			"explanation": "Động vật (ví dụ sán lông Planaria, sao biển) khi bị cắt thành nhiều phần, mỗi mảnh có khả năng tái sinh và phát triển thành một cơ thể mới hoàn chỉnh. Đây là hình thức sinh sản vô tính bằng phân mảnh.",
+			"correct": "B. đẻ con.",
+			"explanation": "Theo đáp án gạch chân trong đề cương cho Câu 54, đáp án đúng là B. đẻ con.",
 			"image": null,
 			"topic": "Sinh sản ở động vật",
 			"level": "NB"
@@ -1156,8 +1156,8 @@
 				"Đúng",
 				"Sai"
 			],
-			"correct": "Đúng",
-			"explanation": "Quả đơn tính (parthenocarpy) là thuật ngữ sinh học chỉ loại quả được hình thành mà không cần thông qua sự thụ tinh của noãn, do đó hạt không được hình thành và ta có quả không hạt.",
+			"correct": "Sai",
+			"explanation": "Theo đáp án trong đề cương, nhận định này là Sai.",
 			"image": null,
 			"topic": "Sinh sản ở thực vật",
 			"level": "NB"
@@ -1184,8 +1184,8 @@
 				"Đúng",
 				"Sai"
 			],
-			"correct": "Sai",
-			"explanation": "Mít không phải là cây cỏ quả đơn hạt. Quả mít thực chất là một 'quả kép' (quả tụ) hình thành từ một cụm hoa, mỗi múi mít thực chất là phát triển từ một bông hoa đơn lẻ.",
+			"correct": "Đúng",
+			"explanation": "Theo đáp án trong đề cương, nhận định này là Đúng.",
 			"image": null,
 			"topic": "Sinh sản ở thực vật",
 			"level": "TH"
@@ -1212,8 +1212,8 @@
 				"Đúng",
 				"Sai"
 			],
-			"correct": "Sai",
-			"explanation": "Nếu chú thích (2) là nhộng thì nhộng nằm yên trong kén, không ăn uống nên không phá hoại. Nếu theo đúng quá trình phá hoại thì giai đoạn sâu non (ấu trùng) mới là lúc ăn lá nhiều và phá hoại mạnh nhất.",
+			"correct": "Đúng",
+			"explanation": "Theo đáp án trong đề cương, nhận định này là Đúng.",
 			"image": null,
 			"topic": "Sinh trưởng và phát triển ở động vật",
 			"level": "TH"
@@ -1436,8 +1436,8 @@
 				"Đúng",
 				"Sai"
 			],
-			"correct": "Sai",
-			"explanation": "Tôm thuộc ngành Chân khớp, lớp Giáp xác, không phải là côn trùng. Tôm trải qua biến thái phức tạp từ ấu trùng (nauplius).",
+			"correct": "Đúng",
+			"explanation": "Theo đáp án trong đề cương, nhận định này là Đúng.",
 			"image": "https://raw.githubusercontent.com/C-Dev7929/c-dev7929.github.io/refs/heads/main/smart-quiz/data/img/sinh11-ck2-73.png",
 			"topic": "Sinh trưởng và phát triển ở động vật",
 			"level": "TH"
