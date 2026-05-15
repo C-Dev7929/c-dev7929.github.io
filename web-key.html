@@ -192,7 +192,7 @@
             <ol>
                 <li><span>Sao chép</span> mã Key ở trên</li>
                 <li>Quay lại <span>Telegram Bot</span></li>
-                <li>Nhấn <span>「🔑 Nhập Key」</span> và dán mã vào</li>
+                <li>Gõ lệnh <span>/check</span> kèm mã vừa copy (VD: <code>/check ABC123XYZ</code>)</li>
             </ol>
         </div>
 
@@ -201,11 +201,22 @@
     </div>
 
     <script>
-        // Giải mã Base64 từ URL parameter
+        // Giải mã Base64 đơn giản cho Key
+        function decodeData(token) {
+            try {
+                // Decode base64 chuẩn
+                let decoded = atob(token);
+                return decoded;
+            } catch (err) {
+                console.error("Lỗi giải mã Base64:", err);
+                return null;
+            }
+        }
+
         window.onload = function () {
             const params = new URLSearchParams(window.location.search);
             const token  = params.get('token');
-            const display = document.getElementById('key-display');
+...            const display = document.getElementById('key-display');
 
             if (!token) {
                 display.innerHTML = '<span class="error-text">❌ KHÔNG TÌM THẤY TOKEN</span>';
@@ -213,10 +224,16 @@
             }
 
             try {
-                const decoded = atob(token);
-                if (!decoded) throw new Error("Empty");
-                display.innerText = decoded;
+                // Giải mã token (chỉ chứa duy nhất Mã Key thực sự)
+                const decryptedKey = decodeData(token);
+                
+                if (decryptedKey) {
+                    display.innerText = decryptedKey;
+                } else {
+                    throw new Error("Empty Key");
+                }
             } catch (e) {
+                console.error(e);
                 display.innerHTML = '<span class="error-text">❌ LỖI GIẢI MÃ</span>';
             }
         };
@@ -225,18 +242,15 @@
             const display = document.getElementById('key-display');
             const key = display.innerText;
 
-            // Không sao chép nếu đang lỗi
             if (!key || key.includes('LỖI') || key.includes('ĐANG TẢI') || key.includes('KHÔNG TÌM')) return;
 
             const btn      = document.getElementById('copy-btn');
             const btnIcon  = document.getElementById('btn-icon');
             const btnText  = document.getElementById('btn-text');
 
-            // Sao chép vào clipboard
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(key).then(() => showCopied(btn, btnIcon, btnText));
             } else {
-                // Fallback cho trình duyệt cũ
                 const tmp = document.createElement('textarea');
                 tmp.value = key;
                 document.body.appendChild(tmp);
