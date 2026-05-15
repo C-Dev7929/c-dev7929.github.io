@@ -1,0 +1,198 @@
+{
+"title": "Đề kiểm tra Lịch sử - Cải cách hành chính và Chủ quyền Biển Đông",
+"subject": "Lịch sử",
+"questions": [
+{
+"id": 1,
+"type": "mcq",
+"question": "Câu 1: Cuộc cải cách của vua Minh Mạng (nửa đầu thế kỷ XIX) và cuộc cải cách của vua Lê Thánh Tông (thế kỷ XV) có điểm giống nhau nào sau đây?",
+"options": [
+"A. Ưu tiên cho sự nghiệp thống nhất đất nước về lãnh thổ.",
+"B. Chú trọng phát triển kinh tế, xã hội theo hướng tư bản.",
+"C. Nâng cao vai trò quản lí của chính quyền ở trung ương.",
+"D. Khuyến khích, tạo điều kiện cho ngoại thương phát triển."
+],
+"correct": "C. Nâng cao vai trò quản lí của chính quyền ở trung ương.",
+"explanation": "Cả hai cuộc cải cách của Lê Thánh Tông và Minh Mạng đều có mục tiêu quan trọng là tăng cường quyền lực của nhà vua, củng cố sự thống nhất quốc gia và nâng cao vai trò, hiệu lực quản lý của bộ máy chính quyền trung ương đối với địa phương.",
+"image": null,
+"topic": "Cải cách hành chính nhà nước phong kiến",
+"level": "TH"
+},
+{
+"id": 2,
+"type": "mcq",
+"question": "Câu 2: Một trong những ngành kinh tế mũi nhọn ở nước ta được phát triển từ việc khai thác các điều kiện thuận lợi về vị trí địa lí và tài nguyên của Biển Đông là",
+"options": [
+"A. kinh tế nông nghiệp lúa nước.",
+"B. kinh tế nông - lâm nghiệp.",
+"C. khai thác và chế biến muối.",
+"D. khai thác và nuôi trồng thủy sản."
+],
+"correct": "D. khai thác và nuôi trồng thủy sản.",
+"explanation": "Biển Đông mang lại cho Việt Nam nguồn tài nguyên sinh vật biển vô cùng phong phú, đa dạng, tạo điều kiện thuận lợi để phát triển ngành khai thác và nuôi trồng thủy sản thành một ngành kinh tế mũi nhọn.",
+"image": null,
+"topic": "Biển Đông và hải đảo Việt Nam",
+"level": "NB"
+},
+{
+"id": 3,
+"type": "mcq",
+"question": "Câu 3: Ý nào sau đây không đúng về cải cách của vua Lê Thánh Tông?",
+"options": [
+"A. Nhiều khoa thi được tổ chức, định kỳ kiểm tra năng lực quan lại.",
+"B. Vua Lê Thánh Tông chú trọng hoàn thiện hệ thống quản lí nhà nước.",
+"C. Nhà nước chú trọng xây dựng đội ngũ quan lại có năng lực, phẩm chất đạo đức tốt.",
+"D. Xử lí xung đột giữa quan lại với nhân dân theo nguyên tắc bảo vệ giai cấp thống trị."
+],
+"correct": "D. Xử lí xung đột giữa quan lại với nhân dân theo nguyên tắc bảo vệ giai cấp thống trị.",
+"explanation": "Mặc dù pháp luật phong kiến luôn bảo vệ quyền lợi của giai cấp thống trị, nhưng nội dung nổi bật mang tính tiến bộ trong cải cách của Lê Thánh Tông là đề cao tinh thần 'thân dân', lấy dân làm gốc, kiểm soát quan lại gắt gao để tránh sách nhiễu nhân dân, chứ không phải đặt ra nguyên tắc thiên vị quan lại khi có xung đột với nhân dân.",
+"image": null,
+"topic": "Cải cách của Lê Thánh Tông",
+"level": "TH"
+},
+{
+"id": 4,
+"type": "mcq",
+"question": "Câu 4: Ý nào sau đây không phải là chủ trương của Đảng và Nhà nước ta trong vấn đề bảo vệ chủ quyền biển đảo hiện nay?",
+"options": [
+"A. Tăng cường phát triển kinh tế biển gắn với tăng cường quốc phòng an ninh trên biển.",
+"B. Kiên quyết dùng vũ lực để đánh trả lại bất cứ hoạt động tranh chấp trên Biển Đông.",
+"C. Giải quyết các tranh chấp, bất đồng trên Biển Đông bằng biện pháp hòa bình.",
+"D. Thực hiện các biện pháp toàn diện nhằm bảo vệ quyền, chủ quyền ở Biển Đông."
+],
+"correct": "B. Kiên quyết dùng vũ lực để đánh trả lại bất cứ hoạt động tranh chấp trên Biển Đông.",
+"explanation": "Chủ trương xuyên suốt của Đảng và Nhà nước Việt Nam là giải quyết các tranh chấp về chủ quyền ở Biển Đông bằng biện pháp hòa bình, trên cơ sở tôn trọng luật pháp quốc tế (như UNCLOS 1982), không sử dụng vũ lực hoặc đe dọa sử dụng vũ lực.",
+"image": null,
+"topic": "Biển Đông và hải đảo Việt Nam",
+"level": "NB"
+},
+{
+"id": 5,
+"type": "mcq",
+"question": "Câu 5: Vì sao các quốc gia trong khu vực châu Á - Thái Bình Dương đặc biệt quan tâm tới Biển Đông và các đảo, quần đảo trên Biển Đông?",
+"options": [
+"A. Đây là tuyến đường di chuyển ngắn nhất nối Thái Bình Dương và Đại Tây Dương.",
+"B. Nó có vai trò quan trọng trong sự nghiệp xây dựng và bảo vệ Tổ quốc.",
+"C. Đây là điểm điều tiết giao thông đường biển quan trọng nhất châu Âu.",
+"D. Có nguồn tài nguyên thiên nhiên phong phú với trữ lượng lớn sinh vật biển."
+],
+"correct": "D. Có nguồn tài nguyên thiên nhiên phong phú với trữ lượng lớn sinh vật biển.",
+"explanation": "Biển Đông có vị trí địa chiến lược quan trọng và sở hữu nguồn tài nguyên thiên nhiên (sinh vật biển, khoáng sản, dầu khí...) vô cùng phong phú, do đó thu hút sự quan tâm đặc biệt của nhiều quốc gia trong khu vực và trên thế giới.",
+"image": null,
+"topic": "Biển Đông và hải đảo Việt Nam",
+"level": "TH"
+},
+{
+"id": 6,
+"type": "mcq",
+"question": "Câu 6: Để tăng cường tiềm lực quốc gia phục vụ hoạt động bảo vệ chủ quyền biển đảo, Việt Nam đã tiến hành",
+"options": [
+"A. xây dựng các căn cứ hải quân hiện đại trên các đảo.",
+"B. xây dựng thế trận quốc phòng toàn dân trên biển.",
+"C. tiến hành diễn tập quân sự hàng năm trên Biển Đông.",
+"D. tăng cường tổ chức các lễ hội trên các đảo, đá ở Biển Đông."
+],
+"correct": "B. xây dựng thế trận quốc phòng toàn dân trên biển.",
+"explanation": "Chiến lược bảo vệ Tổ quốc của Việt Nam đặc biệt chú trọng việc xây dựng thế trận quốc phòng toàn dân gắn với thế trận an ninh nhân dân trên biển, phát huy sức mạnh tổng hợp của toàn dân tộc trong việc bảo vệ chủ quyền biển đảo.",
+"image": null,
+"topic": "Biển Đông và hải đảo Việt Nam",
+"level": "NB"
+},
+{
+"id": 7,
+"type": "mcq",
+"question": "Câu 7: Vào nửa đầu thế kỉ XIX, vị vua nào của triều Nguyễn đã thực hiện chính sách cải cách đất nước?",
+"options": [
+"A. Thiệu Trị",
+"B. Minh Mạng",
+"C. Gia Long",
+"D. Tự Đức"
+],
+"correct": "B. Minh Mạng",
+"explanation": "Vua Minh Mạng là người đã tiến hành cuộc cải cách hành chính lớn và quy mô nhất dưới triều Nguyễn vào nửa đầu thế kỷ XIX (nổi bật là năm 1831-1832 chia cả nước thành 30 tỉnh và 1 phủ Thừa Thiên).",
+"image": null,
+"topic": "Cải cách của Minh Mạng",
+"level": "NB"
+},
+{
+"id": 8,
+"type": "mcq",
+"question": "Câu 8: Nội dung nào sau đây phản ánh không đúng về tầm quan trọng chiến lược của quần đảo Hoàng Sa và quần đảo Trường Sa trong khu vực Biển Đông?",
+"options": [
+"A. Phát triển bền vững một số ngành kinh tế biển như du lịch, nuôi trồng và chế biến thủy sản.",
+"B. Giúp kiểm soát và đảm bảo an ninh cho các tuyến đường giao thông trên biển, trên không.",
+"C. Xây dựng các trung tâm nghiên cứu để duy trì và phát triển các di sản văn hóa thiên nhiên.",
+"D. Xây dựng thành cơ sở hậu cần - kĩ thuật phục vụ hoạt động kinh tế tại các đảo, quần đảo."
+],
+"correct": "C. Xây dựng các trung tâm nghiên cứu để duy trì và phát triển các di sản văn hóa thiên nhiên.",
+"explanation": "Tầm quan trọng của Hoàng Sa và Trường Sa chủ yếu nằm ở vị trí địa lý quân sự, an ninh hàng hải, nguồn lợi kinh tế (thủy sản, khoáng sản, du lịch biển). Việc xây dựng trung tâm nghiên cứu di sản văn hóa thiên nhiên không phải là ý nghĩa chiến lược trọng tâm của hai quần đảo này.",
+"image": null,
+"topic": "Biển Đông và hải đảo Việt Nam",
+"level": "TH"
+},
+{
+"id": 9,
+"type": "mcq",
+"question": "Câu 9: Đối với các tranh chấp chủ quyền biển, đảo, Việt Nam chủ trương giải quyết các tranh chấp thông qua biện pháp hòa bình với tinh thần",
+"options": [
+"A. tuyên bố về ứng xử của các bên ở Biển Đông.",
+"B. đề cao vai trò của tòa án quốc tế.",
+"C. hiểu biết và tôn trọng lẫn nhau.",
+"D. không nhượng bộ trong mọi hoàn cảnh."
+],
+"correct": "C. hiểu biết và tôn trọng lẫn nhau.",
+"explanation": "Quan điểm của Đảng và Nhà nước ta trong giải quyết các tranh chấp ở Biển Đông là kiên trì biện pháp hòa bình, dựa trên cơ sở luật pháp quốc tế, với tinh thần hiểu biết và tôn trọng lẫn nhau giữa các quốc gia liên quan.",
+"image": null,
+"topic": "Biển Đông và hải đảo Việt Nam",
+"level": "NB"
+},
+{
+"id": 10,
+"type": "mcq",
+"question": "Câu 10: Về hành chính, Lê Thánh Tông đã thực hiện biện pháp gì để nâng cao quyền lực của nhà vua?",
+"options": [
+"A. Xóa bỏ tất cả các chức quan đại thần trong triều.",
+"B. Tiến hành hạ bậc các chức quan cao xuống nhiều lần.",
+"C. Tiến hành tuyển chọn các quan đại thần bằng thi cử.",
+"D. Xóa bỏ hầu hết các chức quan đại thần có quyền lực lớn."
+],
+"correct": "D. Xóa bỏ hầu hết các chức quan đại thần có quyền lực lớn.",
+"explanation": "Để tập trung tối đa quyền lực vào tay nhà vua, vua Lê Thánh Tông đã bãi bỏ các chức tể tướng, đại hành khiển, đại tổng quản (những chức quan có quyền lực lớn trung gian), nhà vua trực tiếp cai quản Lục bộ.",
+"image": null,
+"topic": "Cải cách của Lê Thánh Tông",
+"level": "NB"
+},
+{
+"id": 11,
+"type": "mcq",
+"question": "Câu 11: Hiện nay Đặc khu Trường Sa trực thuộc quyền quản lí hành chính của tỉnh nào ở Việt Nam?",
+"options": [
+"A. Phú Yên",
+"B. Lâm Đồng",
+"C. Đà Nẵng",
+"D. Khánh Hòa"
+],
+"correct": "D. Khánh Hòa",
+"explanation": "Theo hệ thống phân chia hành chính của nước Cộng hòa Xã hội Chủ nghĩa Việt Nam hiện nay, huyện đảo Trường Sa trực thuộc sự quản lý của tỉnh Khánh Hòa (trong khi huyện đảo Hoàng Sa thuộc thành phố Đà Nẵng).",
+"image": null,
+"topic": "Biển Đông và hải đảo Việt Nam",
+"level": "NB"
+},
+{chan
+"id": 12,
+"type": "mcq",
+"question": "Câu 12: Hiện nay, trên Biển Đông đang tồn tại loại hình tranh chấp nào sau đây?",
+"options": [
+"A. Xây dựng các khu bảo tồn biển, trung tâm nghiên cứu sinh vật.",
+"B. Chủ quyền lãnh thổ đối với quần đảo Hoàng Sa và quần đảo Trường Sa.",
+"C. Xây dựng cơ sở hậu cần - kĩ thuật phục vụ hoạt động quân sự.",
+"D. Việc khai thác tài nguyên nông - lâm - thủy hải sản."
+],
+"correct": "B. Chủ quyền lãnh thổ đối với quần đảo Hoàng Sa và quần đảo Trường Sa.",
+"explanation": "Tình hình Biển Đông hiện nay rất phức tạp, trong đó cốt lõi nhất là những tranh chấp liên quan đến chủ quyền lãnh thổ đối với hai quần đảo Hoàng Sa và Trường Sa cùng các vùng biển, thềm lục địa liên quan giữa các quốc gia trong khu vực.",
+"image": null,
+"topic": "Biển Đông và hải đảo Việt Nam",
+"level": "NB"
+}
+]
+}
