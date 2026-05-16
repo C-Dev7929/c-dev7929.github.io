@@ -4,93 +4,247 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lấy Mã Key Truy Cập</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Be+Vietnam+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0f1e;
-            --card: #161e31;
-            --primary: #00f2fe;
-            --primary2: #4facfe;
+            --bg: #070c18;
+            --surface: #0e1628;
+            --card: #131d35;
+            --border: rgba(0,210,255,0.12);
+            --primary: #00d2ff;
+            --primary2: #3a7bd5;
+            --glow: rgba(0,210,255,0.25);
             --text: #e2e8f0;
-            --muted: #64748b;
-            --success: #22c55e;
-            --error: #ef4444;
+            --muted: #4a6080;
+            --muted2: #7a98b8;
+            --success: #00e676;
+            --error: #ff5252;
+            --warn: #ffab00;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg);
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background: var(--bg);
             background-image:
-                radial-gradient(ellipse at 20% 20%, rgba(0,242,254,0.06) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(79,172,254,0.06) 0%, transparent 50%);
+                radial-gradient(ellipse 70% 50% at 15% 10%, rgba(0,210,255,0.07) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 85% 90%, rgba(58,123,213,0.08) 0%, transparent 60%);
             color: var(--text);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Animated grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,210,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .container {
+            position: relative;
+            z-index: 1;
             background: var(--card);
-            padding: 40px 36px;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+            border: 1px solid var(--border);
+            padding: 36px 32px 32px;
+            border-radius: 20px;
+            box-shadow:
+                0 0 0 1px rgba(0,210,255,0.06),
+                0 24px 80px rgba(0,0,0,0.7),
+                0 0 60px rgba(0,210,255,0.04) inset;
             text-align: center;
-            max-width: 420px;
+            max-width: 440px;
             width: 100%;
-            animation: fadeIn 0.4s ease;
+            animation: cardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(16px); }
-            to   { opacity: 1; transform: translateY(0); }
+        @keyframes cardIn {
+            from { opacity: 0; transform: translateY(24px) scale(0.97); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        .icon { font-size: 52px; margin-bottom: 16px; display: block; }
+        /* Header badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0,210,255,0.08);
+            border: 1px solid rgba(0,210,255,0.2);
+            border-radius: 100px;
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 16px;
+            animation: fadeSlide 0.4s 0.1s ease both;
+        }
+
+        .badge .dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--success);
+            box-shadow: 0 0 6px var(--success);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
 
         h1 {
-            font-size: 1.4rem;
+            font-size: 1.45rem;
             font-weight: 700;
-            color: var(--primary);
+            background: linear-gradient(135deg, #fff 30%, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 6px;
+            animation: fadeSlide 0.4s 0.15s ease both;
         }
 
         .subtitle {
-            font-size: 0.85rem;
-            color: var(--muted);
-            margin-bottom: 28px;
+            font-size: 0.82rem;
+            color: var(--muted2);
+            margin-bottom: 24px;
+            animation: fadeSlide 0.4s 0.2s ease both;
         }
 
-        /* Key display box */
-        #key-display {
-            background: rgba(0,0,0,0.35);
-            border: 1.5px dashed var(--primary);
-            border-radius: 12px;
-            padding: 18px 16px;
-            font-family: 'Courier New', monospace;
-            font-size: 1.7rem;
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Info row: uid + date */
+        .meta-row {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            animation: fadeSlide 0.4s 0.25s ease both;
+        }
+
+        .meta-chip {
+            flex: 1;
+            background: var(--surface);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 8px 10px;
+            text-align: left;
+        }
+
+        .meta-chip .label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted);
+            margin-bottom: 3px;
+        }
+
+        .meta-chip .value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--text);
             font-weight: 700;
-            letter-spacing: 4px;
-            color: #ffffff;
+        }
+
+        .meta-chip.expired .value { color: var(--error); }
+        .meta-chip.valid   .value { color: var(--success); }
+        .meta-chip.warn    .value { color: var(--warn); }
+
+        /* Expiry warning banner */
+        #expiry-banner {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,82,82,0.08);
+            border: 1px solid rgba(255,82,82,0.25);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 16px;
+            font-size: 0.78rem;
+            color: var(--error);
+            font-weight: 600;
+            text-align: left;
+            animation: fadeSlide 0.3s ease both;
+        }
+
+        /* Key display */
+        .key-wrapper {
+            position: relative;
+            margin-bottom: 10px;
+            animation: fadeSlide 0.4s 0.3s ease both;
+        }
+
+        #key-display {
+            background: rgba(0,0,0,0.4);
+            border: 1.5px dashed rgba(0,210,255,0.35);
+            border-radius: 14px;
+            padding: 20px 16px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.65rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: #fff;
             cursor: pointer;
             word-break: break-all;
-            margin: 0 0 8px 0;
-            transition: background 0.2s, border-color 0.2s;
+            transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
             position: relative;
             user-select: all;
+            text-shadow: 0 0 20px rgba(0,210,255,0.4);
         }
 
         #key-display:hover {
-            background: rgba(0,242,254,0.06);
-            border-color: var(--primary2);
+            background: rgba(0,210,255,0.05);
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0,210,255,0.1);
         }
 
-        .click-hint {
-            font-size: 0.72rem;
+        #key-display.loading {
             color: var(--muted);
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Scan line effect on key display */
+        .key-wrapper::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            border-radius: 0 0 14px 14px;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .key-wrapper:hover::after { opacity: 1; }
+
+        .click-hint {
+            font-size: 0.7rem;
+            color: var(--muted);
+            margin-bottom: 18px;
+            animation: fadeSlide 0.4s 0.35s ease both;
         }
 
         /* Copy button */
@@ -98,68 +252,101 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(90deg, var(--primary) 0%, var(--primary2) 100%);
+            background: linear-gradient(100deg, var(--primary) 0%, var(--primary2) 100%);
             border: none;
-            padding: 13px 28px;
-            border-radius: 10px;
-            color: #0a0f1e;
-            font-size: 0.95rem;
+            padding: 14px 28px;
+            border-radius: 12px;
+            color: #050c18;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 0.9rem;
             font-weight: 700;
             cursor: pointer;
             transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 20px rgba(0,242,254,0.3);
+            box-shadow: 0 4px 24px rgba(0,210,255,0.3);
             width: 100%;
             justify-content: center;
+            letter-spacing: 0.5px;
+            animation: fadeSlide 0.4s 0.4s ease both;
         }
 
-        .btn-copy:hover  { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,242,254,0.4); }
+        .btn-copy:hover  { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,210,255,0.4); }
         .btn-copy:active { transform: translateY(0); opacity: 0.85; }
+        .btn-copy:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
 
-        /* Copy success feedback */
         .btn-copy.copied {
-            background: linear-gradient(90deg, var(--success) 0%, #16a34a 100%);
-            box-shadow: 0 4px 20px rgba(34,197,94,0.35);
+            background: linear-gradient(100deg, var(--success) 0%, #00a854 100%);
+            box-shadow: 0 4px 24px rgba(0,230,118,0.35);
         }
 
         /* Steps */
         .steps {
-            margin: 24px 0 0 0;
+            margin-top: 20px;
             text-align: left;
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.05);
             border-radius: 12px;
             padding: 16px 18px;
+            animation: fadeSlide 0.4s 0.45s ease both;
         }
 
-        .steps p {
-            font-size: 0.78rem;
-            font-weight: 600;
+        .steps-title {
+            font-size: 0.68rem;
+            font-weight: 700;
             color: var(--muted);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
             margin-bottom: 10px;
         }
+        .step-item:last-child { margin-bottom: 0; }
 
-        .steps ol {
-            padding-left: 18px;
+        .step-num {
+            flex-shrink: 0;
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            background: rgba(0,210,255,0.12);
+            border: 1px solid rgba(0,210,255,0.25);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 1px;
         }
 
-        .steps li {
-            font-size: 0.83rem;
+        .step-text {
+            font-size: 0.82rem;
             color: #94a3b8;
-            line-height: 1.8;
+            line-height: 1.6;
         }
-
-        .steps li span { color: var(--text); font-weight: 600; }
+        .step-text strong { color: var(--text); font-weight: 600; }
+        .step-text code {
+            background: rgba(0,210,255,0.1);
+            border: 1px solid rgba(0,210,255,0.15);
+            border-radius: 4px;
+            padding: 1px 5px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--primary);
+        }
 
         /* Divider */
         .divider {
             border: none;
-            border-top: 1px solid rgba(255,255,255,0.06);
-            margin: 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin: 18px 0 14px;
         }
 
         .warning {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             color: var(--muted);
             display: flex;
             align-items: center;
@@ -168,109 +355,224 @@
         }
 
         /* Error state */
-        .error-text { color: var(--error); font-size: 1rem; letter-spacing: 1px; }
+        .error-text {
+            color: var(--error);
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Reveal animation for key */
+        @keyframes keyReveal {
+            0%  { opacity: 0; transform: scale(0.95); letter-spacing: 12px; }
+            60% { opacity: 1; }
+            100%{ opacity: 1; transform: scale(1); letter-spacing: 5px; }
+        }
+
+        .key-revealed {
+            animation: keyReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <span class="icon">🔐</span>
-        <h1>Xác Minh Thành Công</h1>
-        <p class="subtitle">Đây là mã truy cập Bot của bạn hôm nay</p>
+        <div class="badge"><span class="dot"></span> Xác Minh Thành Công</div>
+        <h1>🔐 Mã Key Truy Cập</h1>
+        <p class="subtitle">Mã này dành riêng cho bạn hôm nay — không chia sẻ</p>
 
-        <div id="key-display" onclick="copyKey()" title="Nhấn để sao chép">
-            ĐANG TẢI...
+        <!-- Meta info: UID + Date -->
+        <div class="meta-row" id="meta-row" style="display:none;">
+            <div class="meta-chip" id="chip-uid">
+                <div class="label">🪪 User ID</div>
+                <div class="value" id="val-uid">—</div>
+            </div>
+            <div class="meta-chip" id="chip-date">
+                <div class="label">📅 Ngày hợp lệ</div>
+                <div class="value" id="val-date">—</div>
+            </div>
         </div>
-        <p class="click-hint">👆 Nhấn vào mã để sao chép</p>
 
-        <button class="btn-copy" id="copy-btn" onclick="copyKey()">
+        <!-- Expiry banner -->
+        <div id="expiry-banner">
+            ⚠️ <span id="expiry-msg">Key này đã hết hạn. Vui lòng lấy key mới.</span>
+        </div>
+
+        <!-- Key display -->
+        <div class="key-wrapper">
+            <div id="key-display" class="loading" onclick="copyKey()" title="Nhấn để sao chép">
+                ● ● ● ● ● ● ● ●
+            </div>
+        </div>
+        <p class="click-hint">👆 Nhấn vào ô key để sao chép nhanh</p>
+
+        <button class="btn-copy" id="copy-btn" onclick="copyKey()" disabled>
             <span id="btn-icon">📋</span>
             <span id="btn-text">SAO CHÉP MÃ KEY</span>
         </button>
 
         <div class="steps">
-            <p>📌 Tiếp theo</p>
-            <ol>
-                <li><span>Sao chép</span> mã Key ở trên</li>
-                <li>Quay lại <span>Telegram Bot</span></li>
-                <li>Gõ lệnh <span>/check</span> kèm mã vừa copy (VD: <code>/check ABC123XYZ</code>)</li>
-            </ol>
+            <p class="steps-title">📌 Hướng dẫn sử dụng</p>
+            <div class="step-item">
+                <span class="step-num">1</span>
+                <p class="step-text"><strong>Sao chép</strong> mã Key ở trên bằng nút hoặc nhấn vào ô key</p>
+            </div>
+            <div class="step-item">
+                <span class="step-num">2</span>
+                <p class="step-text">Quay lại <strong>Telegram Bot</strong> của bạn</p>
+            </div>
+            <div class="step-item">
+                <span class="step-num">3</span>
+                <p class="step-text">Gõ lệnh <code>/key [mã vừa copy]</code> — ví dụ: <code>/key ABC123XYZ</code></p>
+            </div>
         </div>
 
         <hr class="divider">
-        <p class="warning">🔒 Không chia sẻ mã này cho bất kỳ ai</p>
+        <p class="warning">🔒 Mã này chỉ dùng được <strong style="color:var(--text);margin:0 3px">1 lần</strong> và hết hạn sau <strong style="color:var(--text);margin:0 3px">24 giờ</strong></p>
     </div>
 
     <script>
-        // Giải mã Base64 đơn giản cho Key
-        function decodeData(token) {
+        // ── Giải mã Base64 chuẩn ──────────────────────────────────────────
+        function decodeToken(token) {
             try {
-                // Decode base64 chuẩn
-                let decoded = atob(token);
-                return decoded;
+                // Thêm padding nếu thiếu
+                const padded = token + '==='.slice((token.length + 3) % 4);
+                return atob(padded);
             } catch (err) {
-                console.error("Lỗi giải mã Base64:", err);
+                console.error('Lỗi giải mã Base64:', err);
                 return null;
             }
         }
 
-        window.onload = function () {
-            const params = new URLSearchParams(window.location.search);
-            const token  = params.get('token');
-...            const display = document.getElementById('key-display');
+        // ── Mask UID (hiển thị 3 đầu + *** + 3 cuối) ─────────────────────
+        function maskUID(uid) {
+            if (!uid || uid.length <= 6) return uid;
+            return uid.slice(0, 3) + '***' + uid.slice(-3);
+        }
 
+        // ── Kiểm tra key có còn hạn không ────────────────────────────────
+        function checkExpiry(dateStr) {
+            // dateStr format: YYYY-MM-DD
+            if (!dateStr) return { valid: false, status: 'no-date' };
+            const today = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD
+            if (dateStr === today) return { valid: true,  status: 'valid' };
+            if (dateStr > today)  return { valid: true,  status: 'future' };
+            return { valid: false, status: 'expired', date: dateStr };
+        }
+
+        // ── Format ngày hiển thị ──────────────────────────────────────────
+        function formatDate(dateStr) {
+            if (!dateStr) return '—';
+            const [y, m, d] = dateStr.split('-');
+            return `${d}/${m}/${y}`;
+        }
+
+        // ── Main ──────────────────────────────────────────────────────────
+        window.onload = function () {
+            const params  = new URLSearchParams(window.location.search);
+            const token   = params.get('token');
+            const uid     = params.get('uid');
+            const date    = params.get('date');
+            const display = document.getElementById('key-display');
+            const copyBtn = document.getElementById('copy-btn');
+
+            // Hiển thị meta row nếu có uid hoặc date
+            if (uid || date) {
+                document.getElementById('meta-row').style.display = 'flex';
+
+                if (uid) {
+                    document.getElementById('val-uid').textContent = maskUID(uid);
+                }
+
+                if (date) {
+                    const expiry = checkExpiry(date);
+                    const chipDate = document.getElementById('chip-date');
+                    const valDate  = document.getElementById('val-date');
+                    valDate.textContent = formatDate(date);
+
+                    if (expiry.status === 'valid') {
+                        chipDate.classList.add('valid');
+                    } else if (expiry.status === 'expired') {
+                        chipDate.classList.add('expired');
+                        const banner = document.getElementById('expiry-banner');
+                        banner.style.display = 'flex';
+                        document.getElementById('expiry-msg').textContent =
+                            `Key ngày ${formatDate(date)} đã hết hạn. Vui lòng lấy key mới từ Bot.`;
+                    } else if (expiry.status === 'future') {
+                        chipDate.classList.add('warn');
+                    }
+                }
+            }
+
+            // Không có token
             if (!token) {
+                display.classList.remove('loading');
                 display.innerHTML = '<span class="error-text">❌ KHÔNG TÌM THẤY TOKEN</span>';
                 return;
             }
 
-            try {
-                // Giải mã token (chỉ chứa duy nhất Mã Key thực sự)
-                const decryptedKey = decodeData(token);
-                
-                if (decryptedKey) {
-                    display.innerText = decryptedKey;
-                } else {
-                    throw new Error("Empty Key");
-                }
-            } catch (e) {
-                console.error(e);
-                display.innerHTML = '<span class="error-text">❌ LỖI GIẢI MÃ</span>';
+            // Giải mã
+            const decryptedKey = decodeToken(token);
+
+            if (decryptedKey && decryptedKey.trim() !== '') {
+                display.classList.remove('loading');
+                display.classList.add('key-revealed');
+                display.innerText = decryptedKey.trim();
+                copyBtn.removeAttribute('disabled');
+            } else {
+                display.classList.remove('loading');
+                display.innerHTML = '<span class="error-text">❌ LỖI GIẢI MÃ TOKEN</span>';
             }
         };
 
+        // ── Copy key ──────────────────────────────────────────────────────
         function copyKey() {
             const display = document.getElementById('key-display');
-            const key = display.innerText;
+            const key = display.innerText.trim();
 
-            if (!key || key.includes('LỖI') || key.includes('ĐANG TẢI') || key.includes('KHÔNG TÌM')) return;
+            const invalid = ['LỖI', 'ĐANG TẢI', 'KHÔNG TÌM', '● ●'];
+            if (!key || invalid.some(s => key.includes(s))) return;
 
-            const btn      = document.getElementById('copy-btn');
-            const btnIcon  = document.getElementById('btn-icon');
-            const btnText  = document.getElementById('btn-text');
+            const btn     = document.getElementById('copy-btn');
+            const btnIcon = document.getElementById('btn-icon');
+            const btnText = document.getElementById('btn-text');
+
+            const doFeedback = () => {
+                btn.classList.add('copied');
+                btnIcon.innerText = '✅';
+                btnText.innerText = 'ĐÃ SAO CHÉP!';
+                // Flash key box
+                display.style.borderColor = 'var(--success)';
+                display.style.boxShadow   = '0 0 20px rgba(0,230,118,0.2)';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btnIcon.innerText      = '📋';
+                    btnText.innerText      = 'SAO CHÉP MÃ KEY';
+                    display.style.borderColor = '';
+                    display.style.boxShadow   = '';
+                }, 2500);
+            };
 
             if (navigator.clipboard) {
-                navigator.clipboard.writeText(key).then(() => showCopied(btn, btnIcon, btnText));
+                navigator.clipboard.writeText(key).then(doFeedback).catch(() => {
+                    legacyCopy(key);
+                    doFeedback();
+                });
             } else {
-                const tmp = document.createElement('textarea');
-                tmp.value = key;
-                document.body.appendChild(tmp);
-                tmp.select();
-                document.execCommand('copy');
-                document.body.removeChild(tmp);
-                showCopied(btn, btnIcon, btnText);
+                legacyCopy(key);
+                doFeedback();
             }
         }
 
-        function showCopied(btn, icon, text) {
-            btn.classList.add('copied');
-            icon.innerText  = '✅';
-            text.innerText  = 'ĐÃ SAO CHÉP!';
-
-            setTimeout(() => {
-                btn.classList.remove('copied');
-                icon.innerText = '📋';
-                text.innerText = 'SAO CHÉP MÃ KEY';
-            }, 2500);
+        function legacyCopy(text) {
+            const tmp = document.createElement('textarea');
+            tmp.value = text;
+            tmp.style.position = 'fixed';
+            tmp.style.opacity  = '0';
+            document.body.appendChild(tmp);
+            tmp.select();
+            document.execCommand('copy');
+            document.body.removeChild(tmp);
         }
     </script>
 </body>
