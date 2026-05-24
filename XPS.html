@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>🚀 Study Planner – Xuất Phát Sớm</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Fredoka+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+	<style>
+		:root {
+			--bg: #EFF7FF;
+			--bg2: #E2F0FE;
+			--card: #FFFFFF;
+			--text: #1A2B3F;
+			--sub: #5A728A;
+			--border: #C3D9F2;
+			--shadow: 0 4px 20px rgba(90, 140, 200, 0.12);
+			--shadow-lg: 0 8px 40px rgba(90, 140, 200, 0.18);
+			--toan: #FF6B8A;
+			--toan-l: #FFF0F3;
+			--toan-g: linear-gradient(135deg, #FF6B8A, #FF8E9E);
+			--ly: #4DA8B8;
+			--ly-l: #F0FAFC;
+			--ly-g: linear-gradient(135deg, #6BC5D9, #4DA8B8);
+			--tin: #A78BFA;
+			--tin-l: #F8F4FF;
+			--tin-g: linear-gradient(135deg, #C4A0FF, #A78BFA);
+			--van: #FFB347;
+			--van-l: #FFFBF2;
+			--van-g: linear-gradient(135deg, #FFB347, #FF8C42);
+			--radius: 18px;
+			--radius-sm: 12px;
+			--transition: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+			--accent: #4A8FE7;
+			--card-hover: #F5FAFF;
+		}
+
+		.dark {
+			--bg: #1a1a2e;
+			--bg2: #1f1f35;
+			--card: #252540;
+			--text: #e8e0e8;
+			--sub: #b0a0b0;
+			--border: #3d3350;
+			--shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+			--shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.4);
+			--toan-l: #3d1f2a;
+			--ly-l: #1f353a;
+			--tin-l: #2a2440;
+			--van-l: #3d3020;
+			--card-hover: #2a2a45;
+		}
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font-family: 'Quicksand', 'Nunito', sans-serif;
+			background: var(--bg);
+			color: var(--text);
+			min-height: 100vh;
+			transition: background 0.4s, color 0.4s;
+			background-image: radial-gradient(circle at 15% 20%, rgba(100, 180, 255, 0.1) 0%, transparent 50%),
+				radial-gradient(circle at 85% 75%, rgba(130, 170, 230, 0.08) 0%, transparent 50%),
+				radial-gradient(circle at 50% 50%, rgba(180, 210, 250, 0.06) 0%, transparent 60%);
+		}
+		.dark body {
+			background-image: radial-gradient(circle at 15% 20%, rgba(255, 100, 140, 0.04) 0%, transparent 50%),
+				radial-gradient(circle at 85% 75%, rgba(160, 140, 255, 0.04) 0%, transparent 50%);
+		}
+
+		/* ─── HEADER ─── */
+		header {
+			padding: 18px 28px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 12px;
+			position: sticky;
+			top: 0;
+			z-index: 100;
+			background: var(--bg);
+			backdrop-filter: blur(10px);
+			border-bottom: 1px solid var(--border);
+			transition: all 0.4s;
+		}
+		.logo {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+		.logo-icon {
+			font-size: 36px;
+			animation: float 3s ease-in-out infinite;
+		}
+		@keyframes float {
+			0%,
+			100% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(-8px);
+			}
+		}
+		.logo h1 {
+			font-family: 'Fredoka One', sans-serif;
+			font-size: 24px;
+			color: var(--text);
+			background: linear-gradient(135deg, #4A8FE7, #5B9BD5);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		.logo p {
+			font-size: 12px;
+			color: var(--sub);
+			font-weight: 600;
+		}
+		.header-right {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			flex-wrap: wrap;
+		}
+		.date-box {
+			background: var(--card);
+			border-radius: 14px;
+			padding: 8px 16px;
+			box-shadow: var(--shadow);
+			text-align: right;
+			font-size: 11px;
+			color: var(--sub);
+			border: 2px solid var(--border);
+			transition: all 0.4s;
+		}
+		.date-box strong {
+			display: block;
+			font-size: 14px;
+			font-weight: 700;
+			color: var(--text);
+		}
+		.dark-toggle {
+			width: 42px;
+			height: 42px;
+			border-radius: 50%;
+			border: 2px solid var(--border);
+			background: var(--card);
+			cursor: pointer;
+			font-size: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.3s;
+			box-shadow: var(--shadow);
+		}
+		.dark-toggle:hover {
+			transform: scale(1.1);
+			box-shadow: var(--shadow-lg);
+		}
+
+		/* ─── MAIN ─── */
+		main {
+			padding: 20px 28px 40px;
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		/* ─── COUNTDOWN ─── */
+		.countdown-section {
+			background: var(--card);
+			border-radius: var(--radius);
+			padding: 20px 24px;
+			margin-bottom: 22px;
+			box-shadow: var(--shadow);
+			border: 2px solid var(--border);
+			display: flex;
+			align-items: center;
+			gap: 18px;
+			flex-wrap: wrap;
+			transition: all 0.4s;
+			position: relative;
+			overflow: hidden;
+		}
+		.countdown-section::before {
+			content: '';
+			position: absolute;
+			top: -20px;
+			right: -20px;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			background: var(--accent);
+			opacity: 0.08;
+		}
+		.cd-emoji {
+			font-size: 48px;
+			animation: float 2.5s ease-in-out infinite;
+			flex-shrink: 0;
+		}
+		.cd-info {
+			flex: 1;
+			min-width: 200px;
+		}
+		.cd-info h3 {
+			font-family: 'Fredoka One', sans-serif;
+			font-size: 18px;
+			margin-bottom: 2px;
+		}
+		.cd-info .cd-label {
+			font-size: 12px;
+			color: var(--sub);
+			font-weight: 600;
+		}
+		.cd-digits {
+			display: flex;
+			gap: 10px;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		.cd-digit-box {
+			background: var(--bg2);
+			border-radius: 12px;
+			padding: 10px 14px;
+			text-align: center;
+			min-width: 55px;
+			border: 2px solid var(--border);
+			transition: all 0.4s;
+		}
+		.cd-digit-box .cd-num {
+			font-family: 'Fredoka One', sans-serif;
+			font-size: 28px;
+			line-height: 1;
+			color: var(--accent);
+		}
+		.cd-digit-box .cd-unit {
+			font-size: 10px;
+			color: var(--sub);
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		.cd-sep {
+			font-family: 'Fredoka One', sans-serif;
+			font-size: 24px;
+			color: var(--sub);
+		}
+		.cd-date-input {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			margin-top: 8px;
+			flex-wrap: wrap;
+		}
+		.cd-date-input input {
+			padding: 6px 12px;
+			border-radius: 10px;
+			border: 2px solid var(--border);
+			font-family: 'Quicksand', sans-serif;
+			font-weight: 600;
+			font-size: 13px;
+			background: var(--card);
+			color: var(--text);
+			outline: none;
+			transition: all 0.3s;
+		}
+		.cd-date-input input:focus {
+			border-color: var(--accent);
+		}
+		.cd-date-input button {
+			padding: 6px 14px;
+			border-radius: 10px;
+			border: none;
+			background: var(--accent);
+			color: #fff;
+			font-weight: 700;
+			cursor: pointer;
+			font-family: 'Quicksand', sans-serif;
+			font-size: 12px;
+			transition: all 0.3s;
+		}
+		.cd-date-input button:hover {
+			transform: scale(1.04);
+			box-shadow: 0 4px 14px rgba(74, 143, 231, 0.3);
+		}
+
+		/* ─── SUBJECT CARDS ─── */
+		.section-label {
+			font-size: 14px;
+			font-weight: 700;
+			color: var(--sub);
+			text-transform: uppercase;
+			letter-spacing: 0.8px;
+			margin-bottom: 12px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.section-label::after {
+			content: '';
+			flex: 1;
+			height: 2px;
+			background: var(--border);
+			border-radius: 99px;
+		}
+		.subjects-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 14px;
+			margin-bottom: 22px;
+		}
+		.subject-card {
+			background: var(--card);
+			border-radius: var(--radius);
+			padding: 18px;
+			cursor: pointer;
+			transition: all var(--transition);
+			box-shadow: var(--shadow);
+			border: 2.5px solid transparent;
+			position: relative;
+			overflow: hidden;
+		}
+		.subject-card::after {
+			content: '';
+			position: absolute;
+			top: -25px;
+			right: -25px;
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			opacity: 0.07;
+			transition: all 0.4s;
+		}
+		.subject-card.toan::after {
+			background: var(--toan);
+		}
+		.subject-card.ly::after {
+			background: var(--ly);
+		}
+		.subject-card.tin::after {
+			background: var(--tin);
+		}
+		.subject-card:hover {
+			transform: translateY(-4px);
+			box-shadow: var(--shadow-lg);
+			background: var(--card-hover);
+		}
+		.subject-card.active.toan {
+			border-color: #FF6B8A;
+			background: var(--toan-l);
+		}
+		.subject-card.active.ly {
+			border-color: #6BC5D9;
+			background: var(--ly-l);
+		}
+		.subject-card.active.tin {
+			border-color: #C4A0FF;
+			background: var(--tin-l);
+		}
+		.sc-top {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin-bottom: 10px;
+		}
+		.sc-icon {
+			width: 42px;
+			height: 42px;
+			border-radius: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 20px;
+		}
+		.toan .sc-icon {
+			background: linear-gradient(135deg, #FFE0E8, #FFD0DA);
+		}
+		.ly .sc-icon {
+			background: linear-gradient(135deg, #D8F5FA, #C5EDF5);
+		}
+		.tin .sc-icon {
+			background: linear-gradient(135deg, #EDE4FF, #DFD4FF);
+		}
+		.sc-name {
+			font-size: 16px;
+			font-weight: 800;
+		}
+		.toan .sc-name {
+			color: #FF6B8A;
+		}
+		.ly .sc-name {
+			color: #4DA8B8;
+		}
+		.tin .sc-name {
+			color: #A78BFA;
+		}
+		.sc-chapters {
+			font-size: 11px;
+			color: var(--sub);
+			line-height: 1.5;
+		}
+		.sc-progress {
+			margin-top: 10px;
+			height: 6px;
+			background: #F3F4F6;
+			border-radius: 99px;
+			overflow: hidden;
+		}
+		.dark .sc-progress {
+			background: #3d3350;
+		}
+		.sc-bar {
+			height: 100%;
+			border-radius: 99px;
+			transition: width 0.5s;
+		}
+		.toan .sc-bar {
+			background: var(--toan-g);
+		}
+		.ly .sc-bar {
+			background: var(--ly-g);
+		}
+		.tin .sc-bar {
+			background: var(--tin-g);
+		}
+
+		/* ─── DETAIL TABS ─── */
+		.detail-section {
+			background: var(--card);
+			border-radius: var(--radius);
+			box-shadow: var(--shadow);
+			margin-bottom: 22px;
+			overflow: hidden;
+			border: 2px solid var(--border);
+			transition: all 0.4s;
+		}
+		.detail-tabs {
+			display: flex;
+			gap: 4px;
+			padding: 14px 16px 0;
+			flex-wrap: wrap;
+			background: var(--bg2);
+			border-bottom: 2px solid var(--border);
+			transition: all 0.4s;
+		}
+		.detail-tab {
+			padding: 10px 18px;
+			border-radius: 12px 12px 0 0;
+			font-weight: 700;
+			font-size: 13px;
+			cursor: pointer;
+			border: 2px solid transparent;
+			border-bottom: none;
+			background: transparent;
+			color: var(--sub);
+			transition: all 0.3s;
+			font-family: 'Quicksand', sans-serif;
+			position: relative;
+		}
+		.detail-tab:hover {
+			color: var(--text);
+			background: rgba(255, 255, 255, 0.3);
+		}
+		.detail-tab.active-tab-toan {
+			background: var(--toan-l);
+			color: #FF6B8A;
+			border-color: #FF6B8A;
+			font-weight: 800;
+		}
+		.detail-tab.active-tab-ly {
+			background: var(--ly-l);
+			color: #4DA8B8;
+			border-color: #6BC5D9;
+			font-weight: 800;
+		}
+		.detail-tab.active-tab-tin {
+			background: var(--tin-l);
+			color: #A78BFA;
+			border-color: #C4A0FF;
+			font-weight: 800;
+		}
+		.detail-content {
+			padding: 16px;
+			max-height: 500px;
+			overflow-y: auto;
+		}
+		.chapter-group {
+			margin-bottom: 14px;
+		}
+		.chapter-title {
+			font-weight: 800;
+			font-size: 14px;
+			color: var(--text);
+			margin-bottom: 6px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			cursor: pointer;
+			padding: 6px 10px;
+			border-radius: 8px;
+			transition: all 0.3s;
+		}
+		.chapter-title:hover {
+			background: var(--bg2);
+		}
+		.chapter-title .ch-arrow {
+			transition: transform 0.3s;
+			font-size: 12px;
+		}
+		.chapter-title.open .ch-arrow {
+			transform: rotate(90deg);
+		}
+		.lesson-list {
+			list-style: none;
+			padding-left: 8px;
+			display: none;
+		}
+		.lesson-list.show {
+			display: block;
+		}
+		.lesson-item {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 8px 12px;
+			border-radius: 10px;
+			cursor: pointer;
+			transition: all 0.25s;
+			font-size: 13px;
+			font-weight: 500;
+			border: 1.5px solid transparent;
+			margin: 2px 0;
+		}
+		.lesson-item:hover {
+			background: var(--bg2);
+			border-color: var(--border);
+		}
+		.lesson-check {
+			width: 22px;
+			height: 22px;
+			border-radius: 6px;
+			border: 2px solid #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			transition: all 0.3s;
+			font-size: 12px;
+		}
+		.lesson-item.done .lesson-check {
+			background: #10B981;
+			border-color: #10B981;
+			color: #fff;
+		}
+		.lesson-item.done {
+			text-decoration: line-through;
+			opacity: 0.65;
+			text-decoration-color: #10B981;
+			text-decoration-thickness: 2px;
+		}
+		.lesson-item.toan-item.done .lesson-check {
+			background: #FF6B8A;
+			border-color: #FF6B8A;
+		}
+		.lesson-item.ly-item.done .lesson-check {
+			background: #4DA8B8;
+			border-color: #4DA8B8;
+		}
+		.lesson-item.tin-item.done .lesson-check {
+			background: #A78BFA;
+			border-color: #A78BFA;
+		}
+
+		/* ─── TWO-COL ─── */
+		.two-col {
+			display: grid;
+			grid-template-columns: 1fr 1.6fr;
+			gap: 18px;
+		}
+		@media (max-width: 860px) {
+			.two-col {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		/* ─── TIMER PANEL ─── */
+		.timer-panel {
+			background: var(--card);
+			border-radius: var(--radius);
+			padding: 24px;
+			box-shadow: var(--shadow);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 16px;
+			border: 2px solid var(--border);
+			transition: all 0.4s;
+		}
+		.timer-subject-badge {
+			font-size: 12px;
+			font-weight: 700;
+			padding: 6px 14px;
+			border-radius: 99px;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+		}
+		.badge-toan {
+			background: var(--toan-l);
+			color: #FF6B8A;
+		}
+		.badge-ly {
+			background: var(--ly-l);
+			color: #4DA8B8;
+		}
+		.badge-tin {
+			background: var(--tin-l);
+			color: #A78BFA;
+		}
+		.badge-none {
+			background: #F3F4F6;
+			color: var(--sub);
+		}
+		.clock-ring {
+			position: relative;
+			width: 180px;
+			height: 180px;
+		}
+		.clock-ring svg {
+			transform: rotate(-90deg);
+		}
+		.ring-bg {
+			fill: none;
+			stroke: #F3F4F6;
+			stroke-width: 10;
+		}
+		.dark .ring-bg {
+			stroke: #3d3350;
+		}
+		.ring-prog {
+			fill: none;
+			stroke-width: 10;
+			stroke-linecap: round;
+			stroke-dasharray: 510;
+			stroke-dashoffset: 510;
+			transition: stroke-dashoffset 0.5s, stroke 0.4s;
+		}
+		.ring-prog.toan {
+			stroke: #FF6B8A;
+		}
+		.ring-prog.ly {
+			stroke: #6BC5D9;
+		}
+		.ring-prog.tin {
+			stroke: #C4A0FF;
+		}
+		.clock-center {
+			position: absolute;
+			inset: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.clock-time {
+			font-family: 'Fredoka One', sans-serif;
+			font-size: 40px;
+			line-height: 1;
+			color: var(--text);
+		}
+		.clock-label {
+			font-size: 11px;
+			color: var(--sub);
+			margin-top: 4px;
+			font-weight: 600;
+		}
+		.timer-controls {
+			display: flex;
+			gap: 8px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.btn {
+			padding: 10px 20px;
+			border: none;
+			border-radius: 12px;
+			font-family: 'Quicksand', sans-serif;
+			font-size: 13px;
+			font-weight: 700;
+			cursor: pointer;
+			transition: all 0.25s;
+			letter-spacing: 0.3px;
+		}
+		.btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+		}
+		.btn:active {
+			transform: translateY(0);
+		}
+		.btn-start {
+			color: white;
+		}
+		.btn-toan {
+			background: var(--toan-g);
+		}
+		.btn-ly {
+			background: var(--ly-g);
+		}
+		.btn-tin {
+			background: var(--tin-g);
+		}
+		.btn-default {
+			background: linear-gradient(135deg, #C4A0FF, #FF6B8A);
+		}
+		.btn-reset {
+			background: #F3F4F6;
+			color: var(--sub);
+		}
+		.dark .btn-reset {
+			background: #3d3350;
+			color: #b0a0b0;
+		}
+		.btn-reset:hover {
+			background: #E5E7EB;
+			box-shadow: none;
+		}
+		.duration-row {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.duration-row label {
+			font-size: 12px;
+			color: var(--sub);
+			font-weight: 600;
+		}
+		.duration-row input {
+			width: 65px;
+			padding: 6px 10px;
+			border: 2px solid var(--border);
+			border-radius: 10px;
+			font-family: 'Quicksand', sans-serif;
+			font-size: 13px;
+			font-weight: 700;
+			text-align: center;
+			outline: none;
+			background: var(--card);
+			color: var(--text);
+			transition: all 0.3s;
+		}
+		.duration-row input:focus {
+			border-color: var(--accent);
+		}
+		.timer-tip {
+			font-size: 11px;
+			color: var(--sub);
+			text-align: center;
+			padding: 10px 14px;
+			background: var(--bg2);
+			border-radius: 10px;
+			width: 100%;
+			transition: all 0.4s;
+		}
+
+		/* ─── NOTES ─── */
+		.notes-panel {
+			background: var(--card);
+			border-radius: var(--radius);
+			padding: 20px;
+			box-shadow: var(--shadow);
+			border: 2px solid var(--border);
+			transition: all 0.4s;
+		}
+		.panel-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 14px;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+		.panel-title {
+			font-size: 16px;
+			font-weight: 800;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.panel-subtitle {
+			font-size: 11px;
+			color: var(--sub);
+			margin-top: 2px;
+		}
+		.note-tabs {
+			display: flex;
+			gap: 5px;
+			flex-wrap: wrap;
+		}
+		.note-tab {
+			padding: 6px 12px;
+			border-radius: 99px;
+			font-size: 12px;
+			font-weight: 700;
+			cursor: pointer;
+			border: 2px solid var(--border);
+			background: var(--card);
+			color: var(--sub);
+			transition: all 0.2s;
+			font-family: 'Quicksand', sans-serif;
+		}
+		.note-tab.active-tab-toan {
+			background: var(--toan-l);
+			border-color: #FF6B8A;
+			color: #FF6B8A;
+		}
+		.note-tab.active-tab-ly {
+			background: var(--ly-l);
+			border-color: #6BC5D9;
+			color: #4DA8B8;
+		}
+		.note-tab.active-tab-tin {
+			background: var(--tin-l);
+			border-color: #C4A0FF;
+			color: #A78BFA;
+		}
+		.latex-guide {
+			background: var(--bg2);
+			border: 1px solid var(--border);
+			border-radius: 10px;
+			padding: 10px 12px;
+			margin-bottom: 10px;
+			font-size: 11px;
+			transition: all 0.4s;
+		}
+		.latex-guide summary {
+			cursor: pointer;
+			font-weight: 700;
+			color: var(--accent);
+			user-select: none;
+		}
+		.latex-grid {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 5px;
+			margin-top: 8px;
+		}
+		.latex-chip {
+			background: var(--card);
+			border-radius: 7px;
+			padding: 5px 9px;
+			font-family: monospace;
+			font-size: 10px;
+			color: #374151;
+			cursor: pointer;
+			border: 1px solid var(--border);
+			transition: all 0.2s;
+		}
+		.dark .latex-chip {
+			color: #d0c0d0;
+		}
+		.latex-chip:hover {
+			background: #EDE9FE;
+			border-color: #C4A0FF;
+		}
+		.latex-chip span {
+			color: #C4A0FF;
+			font-weight: 700;
+		}
+		.note-editor {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+		}
+		.note-textarea {
+			width: 100%;
+			min-height: 120px;
+			padding: 12px;
+			border: 2px solid var(--border);
+			border-radius: var(--radius-sm);
+			font-family: 'Quicksand', sans-serif;
+			font-size: 13px;
+			resize: vertical;
+			outline: none;
+			transition: border-color 0.2s;
+			line-height: 1.6;
+			background: var(--card);
+			color: var(--text);
+		}
+		.note-textarea:focus {
+			border-color: var(--accent);
+		}
+		.note-actions {
+			display: flex;
+			gap: 6px;
+			justify-content: flex-end;
+		}
+		.btn-sm {
+			padding: 7px 14px;
+			font-size: 12px;
+			border-radius: 9px;
+		}
+		.btn-render {
+			background: linear-gradient(135deg, #C4A0FF, #4A8FE7);
+			color: white;
+		}
+		.btn-clear {
+			background: var(--bg2);
+			color: var(--sub);
+			border: 2px solid var(--border);
+		}
+		.note-preview {
+			min-height: 60px;
+			padding: 12px;
+			background: var(--bg2);
+			border: 2px dashed var(--border);
+			border-radius: var(--radius-sm);
+			font-size: 13px;
+			line-height: 1.7;
+			color: var(--text);
+			transition: all 0.4s;
+		}
+		.note-preview.has-content {
+			background: #F0F8FF;
+			border-style: solid;
+			border-color: #B8D4F0;
+		}
+		.dark .note-preview.has-content {
+			background: #2a2440;
+			border-color: #4d4070;
+		}
+		.preview-empty {
+			color: var(--sub);
+			font-size: 12px;
+			font-style: italic;
+		}
+		.saved-notes {
+			margin-top: 14px;
+		}
+		.saved-notes-title {
+			font-size: 12px;
+			font-weight: 700;
+			color: var(--sub);
+			margin-bottom: 8px;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+		.saved-note-item {
+			background: var(--bg2);
+			border: 1.5px solid var(--border);
+			border-radius: var(--radius-sm);
+			padding: 10px 12px;
+			margin-bottom: 6px;
+			position: relative;
+			transition: border-color 0.2s;
+		}
+		.saved-note-item:hover {
+			border-color: var(--accent);
+		}
+		.saved-note-item .note-time {
+			font-size: 10px;
+			color: var(--sub);
+			margin-bottom: 4px;
+		}
+		.saved-note-item .note-content {
+			font-size: 12px;
+			line-height: 1.6;
+		}
+		.btn-del {
+			position: absolute;
+			top: 8px;
+			right: 8px;
+			background: none;
+			border: none;
+			cursor: pointer;
+			color: #EF4444;
+			font-size: 15px;
+			opacity: 0.5;
+			transition: opacity 0.2s;
+		}
+		.btn-del:hover {
+			opacity: 1;
+		}
+
+		/* ─── VAN SECTION ─── */
+		.van-section {
+			margin-top: 20px;
+			background: var(--card);
+			border-radius: var(--radius);
+			box-shadow: var(--shadow);
+			overflow: hidden;
+			border: 2px solid var(--border);
+			transition: all 0.4s;
+		}
+		.van-header {
+			background: var(--van-g);
+			padding: 18px 24px;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			cursor: pointer;
+		}
+		.van-header h2 {
+			color: white;
+			font-size: 17px;
+			font-weight: 800;
+		}
+		.van-header p {
+			color: rgba(255, 255, 255, .85);
+			font-size: 12px;
+			margin-top: 2px;
+		}
+		.van-toggle {
+			margin-left: auto;
+			background: rgba(255, 255, 255, .25);
+			border: none;
+			border-radius: 8px;
+			color: white;
+			font-size: 16px;
+			width: 32px;
+			height: 32px;
+			cursor: pointer;
+			transition: transform 0.3s;
+		}
+		.van-toggle.open {
+			transform: rotate(180deg);
+		}
+		.van-body {
+			padding: 20px 24px;
+			display: none;
+		}
+		.van-body.show {
+			display: block;
+		}
+		.van-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+			gap: 14px;
+		}
+		.van-card {
+			border-radius: var(--radius-sm);
+			padding: 16px;
+			border: 2px solid;
+		}
+		.van-card h3 {
+			font-size: 14px;
+			font-weight: 800;
+			margin-bottom: 8px;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+		}
+		.van-card ul {
+			padding-left: 16px;
+		}
+		.van-card ul li {
+			font-size: 12px;
+			margin-bottom: 5px;
+			color: #374151;
+			line-height: 1.4;
+		}
+		.dark .van-card ul li {
+			color: #c0b0c0;
+		}
+		.vc-1 {
+			background: #FEF3C7;
+			border-color: #FDE68A;
+		}
+		.vc-1 h3 {
+			color: #B45309;
+		}
+		.vc-2 {
+			background: #FEE2E2;
+			border-color: #FECACA;
+		}
+		.vc-2 h3 {
+			color: #DC2626;
+		}
+		.vc-3 {
+			background: #E0E7FF;
+			border-color: #C7D2FE;
+		}
+		.vc-3 h3 {
+			color: #4338CA;
+		}
+		.vc-4 {
+			background: #D1FAE5;
+			border-color: #A7F3D0;
+		}
+		.vc-4 h3 {
+			color: #065F46;
+		}
+		.dark .vc-1 {
+			background: #3d3020;
+			border-color: #5c4020;
+		}
+		.dark .vc-2 {
+			background: #3d2025;
+			border-color: #5c2530;
+		}
+		.dark .vc-3 {
+			background: #252540;
+			border-color: #3d3560;
+		}
+		.dark .vc-4 {
+			background: #1f3530;
+			border-color: #2d5040;
+		}
+
+		/* ─── TOAST ─── */
+		.toast {
+			position: fixed;
+			bottom: 24px;
+			right: 24px;
+			background: var(--card);
+			border-radius: 16px;
+			padding: 14px 20px;
+			box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			z-index: 1000;
+			transform: translateY(120px);
+			opacity: 0;
+			transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+			max-width: 320px;
+			border: 2px solid var(--border);
+		}
+		.toast.show {
+			transform: translateY(0);
+			opacity: 1;
+		}
+		.toast-icon {
+			font-size: 26px;
+			animation: ring 0.6s ease infinite alternate;
+		}
+		@keyframes ring {
+			from {
+				transform: rotate(-12deg);
+			}
+			to {
+				transform: rotate(12deg);
+			}
+		}
+		.toast-text strong {
+			display: block;
+			font-size: 14px;
+		}
+		.toast-text span {
+			font-size: 12px;
+			color: var(--sub);
+		}
+		.tag {
+			display: inline-flex;
+			align-items: center;
+			gap: 3px;
+			padding: 2px 8px;
+			border-radius: 99px;
+			font-size: 10px;
+			font-weight: 700;
+		}
+		.tag-toan {
+			background: var(--toan-l);
+			color: #FF6B8A;
+		}
+		.tag-ly {
+			background: var(--ly-l);
+			color: #4DA8B8;
+		}
+		.tag-tin {
+			background: var(--tin-l);
+			color: #A78BFA;
+		}
+
+		/* Scrollbar */
+		::-webkit-scrollbar {
+			width: 5px;
+		}
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
+		::-webkit-scrollbar-thumb {
+			background: #C3D9F2;
+			border-radius: 99px;
+		}
+		.dark ::-webkit-scrollbar-thumb {
+			background: #4d4070;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<div class="logo">
+			<div class="logo-icon">🚀</div>
+			<div>
+				<h1>Study Planner</h1>
+				<p>Lớp 12 → Xuất Phát Sớm 🎯</p>
+			</div>
+		</div>
+		<div class="header-right">
+			<div class="date-box">
+				<strong id="js-date">–</strong>
+				<span id="js-time">–</span>
+			</div>
+			<button class="dark-toggle" id="dark-toggle" title="Chuyển chế độ sáng/tối">🌙</button>
+		</div>
+	</header>
+
+	<main>
+
+		<!-- COUNTDOWN -->
+		<div class="countdown-section" id="countdown-section">
+			<div class="cd-emoji">📅</div>
+			<div class="cd-info">
+				<h3>Đếm ngược đến Kỳ thi THPTQG 🎓</h3>
+				<p class="cd-label" id="cd-exam-label">Ngày thi: 26/06/2026</p>
+				<div class="cd-date-input">
+					<input type="date" id="exam-date-input" title="Đổi ngày thi">
+					<button onclick="updateExamDate()">💾 Lưu ngày</button>
+				</div>
+			</div>
+			<div class="cd-digits" id="cd-digits">
+				<div class="cd-digit-box"><div class="cd-num" id="cd-days">00</div><div class="cd-unit">Ngày</div></div>
+				<div class="cd-sep">:</div>
+				<div class="cd-digit-box"><div class="cd-num" id="cd-hours">00</div><div class="cd-unit">Giờ</div></div>
+				<div class="cd-sep">:</div>
+				<div class="cd-digit-box"><div class="cd-num" id="cd-mins">00</div><div class="cd-unit">Phút</div></div>
+				<div class="cd-sep">:</div>
+				<div class="cd-digit-box"><div class="cd-num" id="cd-secs">00</div><div class="cd-unit">Giây</div></div>
+			</div>
+		</div>
+
+		<!-- Subject Cards -->
+		<div class="section-label">📚 Chọn môn học hôm nay</div>
+		<div class="subjects-grid">
+			<div class="subject-card toan active" onclick="selectSubject('toan')" id="card-toan">
+				<div class="sc-top"><div class="sc-icon">📐</div><div><div class="sc-name">Toán 12</div><div style="font-size:10px;color:var(--sub);font-weight:600;">6 Chương · 19 Bài</div></div></div>
+				<div class="sc-chapters">Đạo hàm · Vectơ KG · Tích phân · Xác suất · Hình KG</div>
+				<div class="sc-progress"><div class="sc-bar" id="bar-toan" style="width:0%"></div></div>
+			</div>
+			<div class="subject-card ly" onclick="selectSubject('ly')" id="card-ly">
+				<div class="sc-top"><div class="sc-icon">⚡</div><div><div class="sc-name">Vật Lý 12</div><div style="font-size:10px;color:var(--sub);font-weight:600;">4 Chương · 21 Bài</div></div></div>
+				<div class="sc-chapters">Vật lí Nhiệt · Khí lí tưởng · Từ trường · Hạt nhân</div>
+				<div class="sc-progress"><div class="sc-bar" id="bar-ly" style="width:0%"></div></div>
+			</div>
+			<div class="subject-card tin" onclick="selectSubject('tin')" id="card-tin">
+				<div class="sc-top"><div class="sc-icon">💻</div><div><div class="sc-name">Tin Học 12</div><div style="font-size:10px;color:var(--sub);font-weight:600;">7 Chủ đề · 26 Bài</div></div></div>
+				<div class="sc-chapters">AI · Mạng · HTML/CSS · Học máy · Data Science</div>
+				<div class="sc-progress"><div class="sc-bar" id="bar-tin" style="width:0%"></div></div>
+			</div>
+		</div>
+
+		<!-- DETAIL TABS -->
+		<div class="section-label">📋 Chi tiết bài học & CheckList</div>
+		<div class="detail-section">
+			<div class="detail-tabs">
+				<div class="detail-tab active-tab-toan" id="dt-tab-toan" onclick="switchDetailTab('toan')">📐 Toán 12</div>
+				<div class="detail-tab" id="dt-tab-ly" onclick="switchDetailTab('ly')">⚡ Vật Lý 12</div>
+				<div class="detail-tab" id="dt-tab-tin" onclick="switchDetailTab('tin')">💻 Tin Học 12</div>
+			</div>
+			<div class="detail-content" id="detail-content"></div>
+		</div>
+
+		<!-- Timer + Notes -->
+		<div class="section-label">⏱️ Phiên học</div>
+		<div class="two-col">
+			<!-- Timer -->
+			<div class="timer-panel">
+				<div class="timer-subject-badge badge-toan" id="timer-badge">📐 Toán 12</div>
+				<div class="clock-ring">
+					<svg width="180" height="180" viewBox="0 0 180 180">
+						<circle class="ring-bg" cx="90" cy="90" r="81"/>
+						<circle class="ring-prog toan" id="ring-prog" cx="90" cy="90" r="81"/>
+					</svg>
+					<div class="clock-center">
+						<div class="clock-time" id="clock-display">00:00</div>
+						<div class="clock-label" id="clock-label">Sẵn sàng học! 💪</div>
+					</div>
+				</div>
+				<div class="duration-row">
+					<label>⏰ Phút:</label>
+					<input type="number" id="duration-input" value="120" min="1" max="480">
+				</div>
+				<div class="timer-controls">
+					<button class="btn btn-start btn-toan" id="btn-start" onclick="toggleTimer()">▶ Bắt đầu</button>
+					<button class="btn btn-reset" onclick="resetTimer()">↺ Reset</button>
+				</div>
+				<div class="timer-tip" id="timer-tip">💡 Chọn môn ở trên rồi nhấn <strong>Bắt đầu</strong> để học!</div>
+			</div>
+
+			<!-- Notes -->
+			<div class="notes-panel">
+				<div class="panel-header">
+					<div><div class="panel-title">📝 Ghi chú</div><div class="panel-subtitle">Hỗ trợ LaTeX · Lưu tự động</div></div>
+					<div class="note-tabs">
+						<div class="note-tab active-tab-toan" id="tab-toan" onclick="switchNoteTab('toan')">📐</div>
+						<div class="note-tab" id="tab-ly" onclick="switchNoteTab('ly')">⚡</div>
+						<div class="note-tab" id="tab-tin" onclick="switchNoteTab('tin')">💻</div>
+					</div>
+				</div>
+				<details class="latex-guide">
+					<summary>📖 Hướng dẫn LaTeX – nhấn để xem</summary>
+					<div class="latex-grid">
+						<div class="latex-chip" onclick="insertLatex('$x^2$')">x² <span>$x^2$</span></div>
+						<div class="latex-chip" onclick="insertLatex('$\\frac{a}{b}$')">a/b <span>$\\frac{a}{b}$</span></div>
+						<div class="latex-chip" onclick="insertLatex('$\\sqrt{x}$')">√x</div>
+						<div class="latex-chip" onclick="insertLatex('$\\int_a^b f(x)dx$')">∫</div>
+						<div class="latex-chip" onclick="insertLatex('$\\lim_{x\\to 0}$')">lim</div>
+						<div class="latex-chip" onclick="insertLatex('$\\sum_{i=1}^n$')">Σ</div>
+						<div class="latex-chip" onclick="insertLatex('$\\vec{a}\\cdot\\vec{b}$')">a⃗·b⃗</div>
+						<div class="latex-chip" onclick="insertLatex('$P(A|B)=\\frac{P(AB)}{P(B)}$')">XS có ĐK</div>
+						<div class="latex-chip" onclick="insertLatex('$e^{i\\pi}+1=0$')">Euler ✨</div>
+						<div class="latex-chip" onclick="insertLatex('$$\\frac{p_1V_1}{T_1}=\\frac{p_2V_2}{T_2}$$')">Khí lí tưởng</div>
+					</div>
+				</details>
+				<div class="note-editor">
+					<textarea class="note-textarea" id="note-input" placeholder="Ghi chú nhanh... ví dụ: Công thức tiệm cận xiên $a = \lim \frac{f(x)}{x}$..."></textarea>
+					<div class="note-actions">
+						<button class="btn btn-sm btn-clear" onclick="clearNoteInput()">🗑 Xoá</button>
+						<button class="btn btn-sm btn-render" onclick="saveNote()">💾 Lưu & Render</button>
+					</div>
+				</div>
+				<div style="margin-top:10px;">
+					<div style="font-size:11px;font-weight:700;color:var(--sub);margin-bottom:4px;">👁 Xem trước:</div>
+					<div class="note-preview" id="note-preview"><span class="preview-empty">Nhập ghi chú rồi nhấn "Lưu & Render" ✨</span></div>
+				</div>
+				<div class="saved-notes">
+					<div class="saved-notes-title">📌 Đã lưu <span id="note-count" style="background:#F3F4F6;padding:2px 8px;border-radius:99px;font-size:10px;"></span></div>
+					<div id="saved-list"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Văn Tips -->
+		<div class="van-section">
+			<div class="van-header" onclick="toggleVan()">
+				<div style="font-size:30px;">✍️</div>
+				<div><h2>Gợi ý ôn Ngữ Văn – THPTQG</h2><p>Kế hoạch ôn Văn hiệu quả cho bạn 🌟</p></div>
+				<button class="van-toggle" id="van-toggle">▲</button>
+			</div>
+			<div class="van-body" id="van-body">
+				<div class="van-grid">
+					<div class="van-card vc-1"><h3>📖 Đọc hiểu (3đ)</h3><ul><li>Nhận biết thể thơ, phong cách ngôn ngữ</li><li>Phép tu từ: ẩn dụ, hoán dụ, điệp ngữ</li><li>Trả lời câu vận dụng cao ngắn gọn</li><li>Luyện đề 15–20 phút/ngày</li></ul></div>
+					<div class="van-card vc-2"><h3>✍️ NLXH (2đ)</h3><ul><li>Cấu trúc: Mở – Thân – Kết</li><li>Tích luỹ dẫn chứng thực tế</li><li>Viết 400–600 chữ trong 20–25 phút</li><li>Trọng tâm: đạo đức, kỹ năng sống</li></ul></div>
+					<div class="van-card vc-3"><h3>📚 NLVH (5đ)</h3><ul><li>Truyện Kiều, Việt Bắc, Đất Nước...</li><li>Dạng đề: Phân tích, So sánh, Cảm nhận</li><li>Luyện mở bài & kết bài đa dạng</li><li>Viết câu chủ đề cho từng luận điểm</li></ul></div>
+					<div class="van-card vc-4"><h3>📅 Kế hoạch hè</h3><ul><li><strong>T6:</strong> Ôn lý thuyết Văn 11, đọc hiểu</li><li><strong>T7:</strong> Học tác phẩm Văn 12 trọng tâm</li><li><strong>T8:</strong> Luyện đề tổng hợp, chữa bài</li><li>Tham khảo: Học Văn Chị Hiên, Thầy Thống</li></ul></div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- Toast -->
+	<div class="toast" id="toast">
+		<div class="toast-icon" id="toast-icon">🔔</div>
+		<div class="toast-text"><strong id="toast-title">Hết giờ!</strong><span id="toast-msg">Hoàn thành phiên học.</span></div>
+	</div>
+
+	<script>
+		// ─── DATA ────────────────────────────────────────────────────────────────────
+		const LESSON_DATA = {
+			toan: [
+				{ ch: 'Chương I: Ứng dụng đạo hàm',
+					lessons: ['Bài 1: Tính đơn điệu và cực trị',
+						'Bài 2: Giá trị lớn nhất và nhỏ nhất', 'Bài 3: Đường tiệm cận',
+						'Bài 4: Khảo sát và vẽ đồ thị hàm số', 'Bài 5: Ứng dụng đạo hàm thực tiễn'
+					] },
+				{ ch: 'Chương II: Vectơ & Hệ trục toạ độ KG',
+					lessons: ['Bài 6: Vectơ trong không gian', 'Bài 7: Hệ trục toạ độ Oxyz',
+						'Bài 8: Biểu thức toạ độ phép toán vectơ'
+					] },
+				{ ch: 'Chương III: Số đặc trưng phân tán',
+					lessons: ['Bài 9: Khoảng biến thiên & tứ phân vị', 'Bài 10: Phương sai & độ lệch chuẩn'] },
+				{ ch: 'Chương IV: Nguyên hàm & Tích phân',
+					lessons: ['Bài 11: Nguyên hàm', 'Bài 12: Tích phân', 'Bài 13: Ứng dụng hình học tích phân'] },
+				{ ch: 'Chương V: Phương pháp toạ độ KG',
+					lessons: ['Bài 14: Phương trình mặt phẳng', 'Bài 15: Phương trình đường thẳng',
+						'Bài 16: Công thức tính góc', 'Bài 17: Phương trình mặt cầu'
+					] },
+				{ ch: 'Chương VI: Xác suất có điều kiện',
+					lessons: ['Bài 18: Xác suất có điều kiện', 'Bài 19: Công thức Bayes & toàn phần'] },
+			],
+			ly: [
+				{ ch: 'Chương I: Vật lí nhiệt',
+					lessons: ['Bài 1: Cấu trúc chất. Sự chuyển thể', 'Bài 2: Nội năng. Định luật I NĐLH',
+						'Bài 3: Nhiệt độ. Thang nhiệt độ', 'Bài 4: Nhiệt dung riêng', 'Bài 5: Nhiệt nóng chảy riêng',
+						'Bài 6: Nhiệt hoá hơi riêng'
+					] },
+				{ ch: 'Chương II: Khí lí tưởng',
+					lessons: ['Bài 8: Mô hình động học phân tử chất khí', 'Bài 9: Định luật Boyle',
+						'Bài 10: Định luật Charles', 'Bài 11: Phương trình trạng thái khí lí tưởng',
+						'Bài 12: Áp suất khí & động năng phân tử'
+					] },
+				{ ch: 'Chương III: Từ trường',
+					lessons: ['Bài 14: Từ trường', 'Bài 15: Lực từ. Cảm ứng từ', 'Bài 16: Từ thông. Cảm ứng điện từ',
+						'Bài 17: Máy phát điện xoay chiều', 'Bài 18: Ứng dụng cảm ứng điện từ',
+						'Bài 19: Điện từ trường. Sóng điện từ'
+					] },
+				{ ch: 'Chương IV: Vật lí hạt nhân',
+					lessons: ['Bài 21: Cấu trúc hạt nhân', 'Bài 22: Phản ứng hạt nhân & năng lượng liên kết',
+						'Bài 23: Hiện tượng phóng xạ', 'Bài 24: Công nghiệp hạt nhân'
+					] },
+			],
+			tin: [
+				{ ch: 'CĐ1: Máy tính & Xã hội tri thức',
+					lessons: ['Bài 1: Làm quen với AI', 'Bài 2: AI trong khoa học và đời sống'] },
+				{ ch: 'CĐ2: Mạng máy tính & Internet',
+					lessons: ['Bài 3: Thiết bị mạng thông dụng', 'Bài 4: Giao thức mạng'] },
+				{ ch: 'CĐ3: Đạo đức, pháp luật & văn hoá số', lessons: ['Bài 6: Giao tiếp & ứng xử không gian mạng'] },
+				{ ch: 'CĐ4: Giải quyết vấn đề với máy tính',
+					lessons: ['Bài 7: HTML & cấu trúc trang web', 'Bài 8: Định dạng văn bản',
+						'Bài 9: Tạo danh sách, bảng', 'Bài 10: Tạo liên kết',
+						'Bài 11: Chèn đa phương tiện & iframe', 'Bài 12: Tạo biểu mẫu',
+						'Bài 13: Khái niệm, vai trò CSS', 'Bài 14: Định dạng văn bản bằng CSS',
+						'Bài 15: Tạo màu cho chữ và nền', 'Bài 16: Định dạng khung',
+						'Bài 17: Các mức ưu tiên bộ chọn'
+					] },
+				{ ch: 'CĐ5: Hướng nghiệp với Tin học',
+					lessons: ['Bài 19: Dịch vụ sửa chữa & bảo trì', 'Bài 20: Nhóm nghề quản trị CNTT'] },
+				{ ch: 'CĐ6: Mạng máy tính (nâng cao)',
+					lessons: ['Bài 22: Tìm hiểu thiết bị mạng', 'Bài 23: Đường truyền mạng & ứng dụng',
+						'Bài 24: Sơ bộ về thiết kế mạng'
+					] },
+				{ ch: 'CĐ7: Học máy & Khoa học dữ liệu',
+					lessons: ['Bài 25: Làm quen với Học máy', 'Bài 26: Làm quen với Khoa học dữ liệu',
+						'Bài 27: Máy tính & Khoa học dữ liệu', 'Bài 29: Mô phỏng trong giải quyết vấn đề',
+						'Bài 30: Ứng dụng mô phỏng trong giáo dục'
+					] },
+			],
+		};
+
+		const SUBJECT_INFO = {
+			toan: { name: 'Toán 12', emoji: '📐', tip: 'Tập trung đọc định lý, ghi công thức và xem ví dụ mẫu!',
+				color: '#FF6B8A' },
+			ly: { name: 'Vật Lý 12', emoji: '⚡', tip: 'Ghi nhớ công thức và điều kiện áp dụng của từng định luật!',
+				color: '#4DA8B8' },
+			tin: { name: 'Tin Học 12', emoji: '💻', tip: 'Đọc kỹ khái niệm, thử mô phỏng cú pháp HTML/CSS!',
+			color: '#A78BFA' },
+		};
+
+		// ─── STATE ────────────────────────────────────────────────────────────────────
+		const state = {
+			subject: 'toan',
+			running: false,
+			totalSecs: 120 * 60,
+			remainSecs: 120 * 60,
+			interval: null,
+			noteTab: 'toan',
+			notes: { toan: [], ly: [], tin: [] },
+			sessions: { toan: 0, ly: 0, tin: 0 },
+			completedLessons: { toan: {}, ly: {}, tin: {} },
+			examDate: '2026-06-26',
+			darkMode: false,
+			detailTab: 'toan',
+			expandedChapters: {},
+		};
+
+		// ─── STORAGE ──────────────────────────────────────────────────────────────────
+		function loadAll() {
+			try {
+				const raw = localStorage.getItem('studyplanner_v2');
+				if (raw) {
+					const d = JSON.parse(raw);
+					if (d.notes) state.notes = d.notes;
+					if (d.sessions) state.sessions = d.sessions;
+					if (d.completedLessons) state.completedLessons = d.completedLessons;
+					if (d.examDate) state.examDate = d.examDate;
+					if (d.darkMode !== undefined) state.darkMode = d.darkMode;
+				}
+			} catch (e) { /* fresh start */ }
+			applyDarkMode();
+			document.getElementById('exam-date-input').value = state.examDate;
+			updateCountdown();
+			renderDetailTab();
+			renderSavedNotes();
+			updateProgressBars();
+			updateAllLessonProgress();
+			selectSubject(state.subject);
+		}
+
+		function saveAll() {
+			try {
+				localStorage.setItem('studyplanner_v2', JSON.stringify({
+					notes: state.notes,
+					sessions: state.sessions,
+					completedLessons: state.completedLessons,
+					examDate: state.examDate,
+					darkMode: state.darkMode,
+				}));
+			} catch (e) {}
+		}
+
+		// ─── DARK MODE ────────────────────────────────────────────────────────────────
+		function applyDarkMode() {
+			if (state.darkMode) {
+				document.body.classList.add('dark');
+				document.getElementById('dark-toggle').textContent = '☀️';
+			} else {
+				document.body.classList.remove('dark');
+				document.getElementById('dark-toggle').textContent = '🌙';
+			}
+		}
+
+		function toggleDarkMode() {
+			state.darkMode = !state.darkMode;
+			applyDarkMode();
+			saveAll();
+		}
+		document.getElementById('dark-toggle').addEventListener('click', toggleDarkMode);
+
+		// ─── CLOCK & DATE ─────────────────────────────────────────────────────────────
+		function updateClock() {
+			const now = new Date();
+			document.getElementById('js-date').textContent = now.toLocaleDateString('vi-VN', { weekday: 'long',
+				day: 'numeric', month: 'long', year: 'numeric' });
+			document.getElementById('js-time').textContent = now.toLocaleTimeString('vi-VN', { hour: '2-digit',
+				minute: '2-digit', second: '2-digit' });
+		}
+		setInterval(updateClock, 1000);
+		updateClock();
+
+		// ─── COUNTDOWN ────────────────────────────────────────────────────────────────
+		function updateCountdown() {
+			const examDate = new Date(state.examDate + 'T07:00:00');
+			const now = new Date();
+			let diff = examDate - now;
+			if (diff < 0) diff = 0;
+			const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+			const secs = Math.floor((diff % (1000 * 60)) / 1000);
+			document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+			document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+			document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+			document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+			document.getElementById('cd-exam-label').textContent = 'Ngày thi: ' + new Date(state.examDate +
+				'T07:00:00').toLocaleDateString('vi-VN', { day: 'numeric', month: 'numeric', year: 'numeric' });
+		}
+		setInterval(updateCountdown, 1000);
+
+		function updateExamDate() {
+			const input = document.getElementById('exam-date-input').value;
+			if (input) {
+				state.examDate = input;
+				saveAll();
+				updateCountdown();
+				showToast('📅', 'Đã cập nhật!', 'Ngày thi đã được lưu lại ✅');
+			}
+		}
+
+		// ─── SUBJECT SELECTION ────────────────────────────────────────────────────────
+		function selectSubject(s) {
+			state.subject = s;
+			document.querySelectorAll('.subject-card').forEach(c => c.classList.remove('active'));
+			const card = document.getElementById('card-' + s);
+			if (card) card.classList.add('active');
+			const info = SUBJECT_INFO[s];
+			const badge = document.getElementById('timer-badge');
+			badge.textContent = info.emoji + ' ' + info.name;
+			badge.className = 'timer-subject-badge badge-' + s;
+			const prog = document.getElementById('ring-prog');
+			prog.className = 'ring-prog ' + s;
+			const btnStart = document.getElementById('btn-start');
+			btnStart.className = 'btn btn-start btn-' + s;
+			document.getElementById('timer-tip').innerHTML = '💡 <strong>' + info.name + ':</strong> ' + info.tip;
+			switchNoteTab(s);
+			switchDetailTab(s);
+			if (!state.running) resetTimer(true);
+		}
+
+		// ─── DETAIL TABS ──────────────────────────────────────────────────────────────
+		function switchDetailTab(s) {
+			state.detailTab = s;
+			document.querySelectorAll('.detail-tab').forEach(t => {
+				t.className = 'detail-tab';
+			});
+			const dt = document.getElementById('dt-tab-' + s);
+			if (dt) dt.className = 'detail-tab active-tab-' + s;
+			renderDetailTab();
+		}
+
+		function toggleChapter(subject, chIdx) {
+			const key = subject + '-' + chIdx;
+			state.expandedChapters[key] = !state.expandedChapters[key];
+			renderDetailTab();
+		}
+
+		function renderDetailTab() {
+			const s = state.detailTab;
+			const data = LESSON_DATA[s] || [];
+			const container = document.getElementById('detail-content');
+			let html = '';
+			data.forEach((ch, chIdx) => {
+				const key = s + '-' + chIdx;
+				const isOpen = state.expandedChapters[key] !== false;
+				let doneCount = 0;
+				ch.lessons.forEach((_, lIdx) => {
+					const lKey = chIdx + '-' + lIdx;
+					if (state.completedLessons[s] && state.completedLessons[s][lKey]) doneCount++;
+				});
+				html +=
+					`<div class="chapter-group">
+			  <div class="chapter-title ${isOpen?'open':''}" onclick="toggleChapter('${s}',${chIdx})">
+				<span class="ch-arrow">▶</span> ${ch.ch} 
+				<span style="font-size:10px;color:var(--sub);font-weight:500;">(${doneCount}/${ch.lessons.length} hoàn thành)</span>
+			  </div>
+			  <ul class="lesson-list ${isOpen?'show':''}">`;
+				ch.lessons.forEach((lesson, lIdx) => {
+					const lKey = chIdx + '-' + lIdx;
+					const isDone = state.completedLessons[s] && state.completedLessons[s][lKey];
+					html += `
+				<li class="lesson-item ${s}-item ${isDone?'done':''}" onclick="toggleLesson('${s}','${chIdx}','${lIdx}')">
+				  <div class="lesson-check">${isDone?'✓':''}</div>
+				  <span>${lesson}</span>
+				</li>`;
+				});
+				html += '</ul></div>';
+			});
+			if (data.length === 0) html =
+				'<div style="text-align:center;color:var(--sub);padding:20px;">Chưa có dữ liệu chi tiết 📝</div>';
+			container.innerHTML = html;
+		}
+
+		function toggleLesson(subject, chIdx, lIdx) {
+			const lKey = chIdx + '-' + lIdx;
+			if (!state.completedLessons[subject]) state.completedLessons[subject] = {};
+			if (state.completedLessons[subject][lKey]) {
+				delete state.completedLessons[subject][lKey];
+			} else {
+				state.completedLessons[subject][lKey] = true;
+			}
+			saveAll();
+			updateAllLessonProgress();
+			updateProgressBars();
+			renderDetailTab();
+		}
+
+		function updateAllLessonProgress() {
+			['toan', 'ly', 'tin'].forEach(s => {
+				const data = LESSON_DATA[s] || [];
+				let total = 0,
+					done = 0;
+				data.forEach((ch, chIdx) => {
+					ch.lessons.forEach((_, lIdx) => {
+						total++;
+						const lKey = chIdx + '-' + lIdx;
+						if (state.completedLessons[s] && state.completedLessons[s][lKey]) done++;
+					});
+				});
+				const pct = total > 0 ? Math.round((done / total) * 100) : 0;
+				const bar = document.getElementById('bar-' + s);
+				if (bar) bar.style.width = pct + '%';
+			});
+		}
+
+		// ─── TIMER ────────────────────────────────────────────────────────────────────
+		function getDuration() { return (parseInt(document.getElementById('duration-input').value) || 120) * 60; }
+
+		function toggleTimer() {
+			if (state.running) { pauseTimer(); } else { startTimer(); }
+		}
+
+		function startTimer() {
+			if (state.remainSecs <= 0) state.remainSecs = getDuration();
+			state.totalSecs = getDuration();
+			state.running = true;
+			document.getElementById('btn-start').textContent = '⏸ Tạm dừng';
+			document.getElementById('clock-label').textContent = 'Đang học... Cố lên! 💪';
+			state.interval = setInterval(tick, 1000);
+		}
+
+		function pauseTimer() {
+			state.running = false;
+			clearInterval(state.interval);
+			document.getElementById('btn-start').textContent = '▶ Tiếp tục';
+			document.getElementById('clock-label').textContent = 'Đã tạm dừng ☕';
+		}
+
+		function resetTimer(silent = false) {
+			state.running = false;
+			clearInterval(state.interval);
+			state.remainSecs = getDuration();
+			state.totalSecs = getDuration();
+			document.getElementById('btn-start').textContent = '▶ Bắt đầu';
+			document.getElementById('clock-label').textContent = 'Sẵn sàng học! 💪';
+			updateTimerDisplay();
+			if (!silent) document.getElementById('ring-prog').style.strokeDashoffset = 510;
+		}
+
+		function tick() {
+			if (state.remainSecs <= 0) { finishSession(); return; }
+			state.remainSecs--;
+			updateTimerDisplay();
+		}
+
+		function updateTimerDisplay() {
+			const m = Math.floor(state.remainSecs / 60).toString().padStart(2, '0');
+			const s = (state.remainSecs % 60).toString().padStart(2, '0');
+			document.getElementById('clock-display').textContent = m + ':' + s;
+			const prog = document.getElementById('ring-prog');
+			const total = state.totalSecs || getDuration();
+			const fraction = 1 - (state.remainSecs / total);
+			const offset = 510 - (510 * fraction);
+			prog.style.strokeDashoffset = offset;
+		}
+
+		function finishSession() {
+			state.running = false;
+			clearInterval(state.interval);
+			state.remainSecs = 0;
+			updateTimerDisplay();
+			document.getElementById('btn-start').textContent = '▶ Bắt đầu';
+			document.getElementById('clock-label').textContent = '✅ Hoàn thành! Tuyệt vời!';
+			const s = state.subject;
+			state.sessions[s] = (state.sessions[s] || 0) + 1;
+			saveAll();
+			updateProgressBars();
+			playChime();
+			const info = SUBJECT_INFO[s];
+			showToast('🎉', 'Xong phiên ' + info.name + '!',
+				'Nghỉ 5–10 phút rồi tiếp tục nhé! Đã học ' + state.sessions[s] + ' phiên hôm nay 🌟');
+		}
+
+		function updateProgressBars() {
+			['toan', 'ly', 'tin'].forEach(s => {
+				const sess = state.sessions[s] || 0;
+				const pct = Math.min(sess * 20, 100);
+				const bar = document.getElementById('bar-' + s);
+				if (bar) bar.style.width = pct + '%';
+			});
+			updateAllLessonProgress();
+		}
+
+		function playChime() {
+			try {
+				const ctx = new(window.AudioContext || window.webkitAudioContext)();
+				const notes = [523.25, 659.25, 783.99, 1046.5];
+				notes.forEach((freq, i) => {
+					const osc = ctx.createOscillator();
+					const gain = ctx.createGain();
+					osc.connect(gain);
+					gain.connect(ctx.destination);
+					osc.type = 'sine';
+					osc.frequency.value = freq;
+					const t = ctx.currentTime + i * 0.22;
+					gain.gain.setValueAtTime(0, t);
+					gain.gain.linearRampToValueAtTime(0.35, t + 0.05);
+					gain.gain.exponentialRampToValueAtTime(0.001, t + 0.6);
+					osc.start(t);
+					osc.stop(t + 0.65);
+				});
+			} catch (e) {}
+		}
+
+		// ─── NOTES ────────────────────────────────────────────────────────────────────
+		function switchNoteTab(s) {
+			state.noteTab = s;
+			['toan', 'ly', 'tin'].forEach(t => {
+				const el = document.getElementById('tab-' + t);
+				el.className = t === s ? 'note-tab active-tab-' + t : 'note-tab';
+			});
+			renderSavedNotes();
+			document.getElementById('note-input').value = '';
+			document.getElementById('note-preview').innerHTML =
+				'<span class="preview-empty">Nhập ghi chú rồi nhấn "Lưu & Render" ✨</span>';
+			document.getElementById('note-preview').classList.remove('has-content');
+		}
+
+		function insertLatex(text) {
+			const ta = document.getElementById('note-input');
+			const start = ta.selectionStart,
+				end = ta.selectionEnd;
+			ta.value = ta.value.slice(0, start) + text + ta.value.slice(end);
+			ta.focus();
+			ta.selectionStart = ta.selectionEnd = start + text.length;
+		}
+
+		function renderKatex(el) {
+			renderMathInElement(el, {
+				delimiters: [
+					{ left: '$$', right: '$$', display: true },
+					{ left: '$', right: '$', display: false },
+				],
+				throwOnError: false,
+			});
+		}
+
+		function saveNote() {
+			const text = document.getElementById('note-input').value.trim();
+			if (!text) return;
+			const preview = document.getElementById('note-preview');
+			preview.innerHTML = '';
+			text.split('\n').filter(l => l.trim()).forEach(line => {
+				const p = document.createElement('p');
+				p.textContent = line;
+				preview.appendChild(p);
+			});
+			renderKatex(preview);
+			preview.classList.add('has-content');
+			const now = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+			const tag = state.noteTab;
+			state.notes[tag].unshift({ text, time: now, tag });
+			saveAll();
+			renderSavedNotes();
+			document.getElementById('note-input').value = '';
+			showToast('📝', 'Đã lưu ghi chú!', 'Ghi chú mới được thêm vào danh sách ✅');
+		}
+
+		function clearNoteInput() {
+			document.getElementById('note-input').value = '';
+			document.getElementById('note-preview').innerHTML =
+				'<span class="preview-empty">Nhập ghi chú rồi nhấn "Lưu & Render" ✨</span>';
+			document.getElementById('note-preview').classList.remove('has-content');
+		}
+
+		function deleteNote(tag, idx) {
+			state.notes[tag].splice(idx, 1);
+			saveAll();
+			renderSavedNotes();
+		}
+
+		function renderSavedNotes() {
+			const tag = state.noteTab;
+			const list = document.getElementById('saved-list');
+			const notes = state.notes[tag] || [];
+			document.getElementById('note-count').textContent = notes.length + ' ghi chú';
+			if (notes.length === 0) {
+				list.innerHTML =
+					'<div style="text-align:center;color:var(--sub);font-size:12px;padding:14px;background:var(--bg2);border-radius:10px;border:1.5px dashed var(--border);">Chưa có ghi chú nào ✨</div>';
+				return;
+			}
+			list.innerHTML = '';
+			notes.forEach((note, i) => {
+				const div = document.createElement('div');
+				div.className = 'saved-note-item';
+				div.innerHTML = `
+			  <div class="note-time">⏰ ${note.time} <span class="tag tag-${tag}">${SUBJECT_INFO[tag]?.emoji||''} ${tag.toUpperCase()}</span></div>
+			  <div class="note-content" id="sn-${i}"></div>
+			  <button class="btn-del" onclick="deleteNote('${tag}',${i})" title="Xoá">✕</button>
+			`;
+				list.appendChild(div);
+				const contentEl = div.querySelector('#sn-' + i);
+				note.text.split('\n').filter(l => l.trim()).forEach(line => {
+					const p = document.createElement('p');
+					p.textContent = line;
+					contentEl.appendChild(p);
+				});
+				renderKatex(contentEl);
+			});
+		}
+
+		// ─── VAN TOGGLE ───────────────────────────────────────────────────────────────
+		let vanOpen = false;
+
+		function toggleVan() {
+			vanOpen = !vanOpen;
+			document.getElementById('van-body').classList.toggle('show', vanOpen);
+			document.getElementById('van-toggle').classList.toggle('open', vanOpen);
+		}
+
+		// ─── TOAST ────────────────────────────────────────────────────────────────────
+		let toastTimer;
+
+		function showToast(icon, title, msg) {
+			const t = document.getElementById('toast');
+			document.getElementById('toast-icon').textContent = icon;
+			document.getElementById('toast-title').textContent = title;
+			document.getElementById('toast-msg').textContent = msg;
+			t.classList.add('show');
+			clearTimeout(toastTimer);
+			toastTimer = setTimeout(() => t.classList.remove('show'), 4500);
+		}
+
+		// ─── INIT ─────────────────────────────────────────────────────────────────────
+		window.addEventListener('load', () => {
+			loadAll();
+			// Mở chương đầu tiên mặc định
+			if (!state.expandedChapters['toan-0']) state.expandedChapters['toan-0'] = true;
+			if (!state.expandedChapters['ly-0']) state.expandedChapters['ly-0'] = true;
+			if (!state.expandedChapters['tin-0']) state.expandedChapters['tin-0'] = true;
+			renderDetailTab();
+			selectSubject('toan');
+			document.getElementById('exam-date-input').value = state.examDate;
+		});
+	</script>
+</body>
+</html>
