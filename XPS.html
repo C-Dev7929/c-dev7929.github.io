@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-	<meta charset="UTF-8">
+<!-- saved from url=(0031)https://c-dev7929.github.io/XPS -->
+<html lang="vi"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>🚀 Study Planner – Xuất Phát Sớm</title>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Fredoka+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+	<link href="./XPS_files/css2" rel="stylesheet">
+	<link rel="stylesheet" href="./XPS_files/katex.min.css">
+	<script src="./XPS_files/katex.min.js"></script>
+	<script src="./XPS_files/auto-render.min.js"></script>
 	<style>
 		:root {
 			--bg: #EFF7FF;
@@ -534,10 +536,36 @@
 			font-weight: 500;
 			border: 1.5px solid transparent;
 			margin: 2px 0;
+			position: relative;
 		}
 		.lesson-item:hover {
 			background: var(--bg2);
 			border-color: var(--border);
+		}
+		.lesson-item .lesson-actions {
+			margin-left: auto;
+			display: flex;
+			gap: 5px;
+			opacity: 0;
+			transition: opacity 0.2s;
+		}
+		.lesson-item:hover .lesson-actions {
+			opacity: 1;
+		}
+		.btn-note-inline {
+			background: var(--bg);
+			border: 1px solid var(--border);
+			border-radius: 6px;
+			padding: 2px 6px;
+			font-size: 12px;
+			cursor: pointer;
+			color: var(--sub);
+			transition: all 0.2s;
+		}
+		.btn-note-inline:hover {
+			background: var(--accent);
+			color: white;
+			border-color: var(--accent);
 		}
 		.lesson-check {
 			width: 22px;
@@ -877,6 +905,27 @@
 			flex-direction: column;
 			gap: 8px;
 		}
+		.note-input-group {
+			display: flex;
+			flex-direction: column;
+			gap: 6px;
+		}
+		.note-subject {
+			width: 100%;
+			padding: 10px 14px;
+			border: 2px solid var(--border);
+			border-radius: 10px;
+			font-family: 'Quicksand', sans-serif;
+			font-size: 14px;
+			font-weight: 700;
+			outline: none;
+			background: var(--card);
+			color: var(--text);
+			transition: border-color 0.2s;
+		}
+		.note-subject:focus {
+			border-color: var(--accent);
+		}
 		.note-textarea {
 			width: 100%;
 			min-height: 120px;
@@ -955,34 +1004,63 @@
 			background: var(--bg2);
 			border: 1.5px solid var(--border);
 			border-radius: var(--radius-sm);
-			padding: 10px 12px;
-			margin-bottom: 6px;
+			margin-bottom: 8px;
 			position: relative;
-			transition: border-color 0.2s;
+			transition: all 0.3s;
+			overflow: hidden;
 		}
 		.saved-note-item:hover {
 			border-color: var(--accent);
 		}
-		.saved-note-item .note-time {
+		.note-header {
+			padding: 10px 14px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+		}
+		.note-header-left {
+			display: flex;
+			flex-direction: column;
+			gap: 2px;
+		}
+		.note-subject-title {
+			font-size: 13px;
+			font-weight: 800;
+			color: var(--text);
+		}
+		.note-time {
 			font-size: 10px;
 			color: var(--sub);
-			margin-bottom: 4px;
 		}
-		.saved-note-item .note-content {
+		.note-body {
+			padding: 0 14px 14px;
+			display: none;
+			border-top: 1px dashed var(--border);
+			padding-top: 10px;
+			animation: slideDown 0.3s ease-out;
+		}
+		.note-body.show {
+			display: block;
+		}
+		@keyframes slideDown {
+			from { opacity: 0; transform: translateY(-10px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+		.note-content {
 			font-size: 12px;
 			line-height: 1.6;
 		}
 		.btn-del {
-			position: absolute;
-			top: 8px;
-			right: 8px;
 			background: none;
 			border: none;
 			cursor: pointer;
 			color: #EF4444;
-			font-size: 15px;
+			font-size: 14px;
 			opacity: 0.5;
 			transition: opacity 0.2s;
+			padding: 4px;
 		}
 		.btn-del:hover {
 			opacity: 1;
@@ -1194,7 +1272,7 @@
 		}
 	</style>
 </head>
-<body>
+<body class="dark">
 
 	<header>
 		<div class="logo">
@@ -1206,10 +1284,10 @@
 		</div>
 		<div class="header-right">
 			<div class="date-box">
-				<strong id="js-date">–</strong>
-				<span id="js-time">–</span>
+				<strong id="js-date">Thứ Năm, 28 tháng 5, 2026</strong>
+				<span id="js-time">05:29:03</span>
 			</div>
-			<button class="dark-toggle" id="dark-toggle" title="Chuyển chế độ sáng/tối">🌙</button>
+			<button class="dark-toggle" id="dark-toggle" title="Chuyển chế độ sáng/tối">☀️</button>
 		</div>
 	</header>
 
@@ -1220,37 +1298,37 @@
 			<div class="cd-emoji">📅</div>
 			<div class="cd-info">
 				<h3>Đếm ngược đến Kỳ thi THPTQG 🎓</h3>
-				<p class="cd-label" id="cd-exam-label">Ngày thi: 26/06/2026</p>
+				<p class="cd-label" id="cd-exam-label">Ngày thi: 26/6/2026</p>
 				<div class="cd-date-input">
 					<input type="date" id="exam-date-input" title="Đổi ngày thi">
 					<button onclick="updateExamDate()">💾 Lưu ngày</button>
 				</div>
 			</div>
 			<div class="cd-digits" id="cd-digits">
-				<div class="cd-digit-box"><div class="cd-num" id="cd-days">00</div><div class="cd-unit">Ngày</div></div>
+				<div class="cd-digit-box"><div class="cd-num" id="cd-days">29</div><div class="cd-unit">Ngày</div></div>
 				<div class="cd-sep">:</div>
-				<div class="cd-digit-box"><div class="cd-num" id="cd-hours">00</div><div class="cd-unit">Giờ</div></div>
+				<div class="cd-digit-box"><div class="cd-num" id="cd-hours">01</div><div class="cd-unit">Giờ</div></div>
 				<div class="cd-sep">:</div>
-				<div class="cd-digit-box"><div class="cd-num" id="cd-mins">00</div><div class="cd-unit">Phút</div></div>
+				<div class="cd-digit-box"><div class="cd-num" id="cd-mins">30</div><div class="cd-unit">Phút</div></div>
 				<div class="cd-sep">:</div>
-				<div class="cd-digit-box"><div class="cd-num" id="cd-secs">00</div><div class="cd-unit">Giây</div></div>
+				<div class="cd-digit-box"><div class="cd-num" id="cd-secs">56</div><div class="cd-unit">Giây</div></div>
 			</div>
 		</div>
 
 		<!-- Subject Cards -->
 		<div class="section-label">📚 Chọn môn học hôm nay</div>
 		<div class="subjects-grid">
-			<div class="subject-card toan active" onclick="selectSubject('toan')" id="card-toan">
+			<div class="subject-card toan active" onclick="selectSubject(&#39;toan&#39;)" id="card-toan">
 				<div class="sc-top"><div class="sc-icon">📐</div><div><div class="sc-name">Toán 12</div><div style="font-size:10px;color:var(--sub);font-weight:600;">6 Chương · 19 Bài</div></div></div>
 				<div class="sc-chapters">Đạo hàm · Vectơ KG · Tích phân · Xác suất · Hình KG</div>
 				<div class="sc-progress"><div class="sc-bar" id="bar-toan" style="width:0%"></div></div>
 			</div>
-			<div class="subject-card ly" onclick="selectSubject('ly')" id="card-ly">
+			<div class="subject-card ly" onclick="selectSubject(&#39;ly&#39;)" id="card-ly">
 				<div class="sc-top"><div class="sc-icon">⚡</div><div><div class="sc-name">Vật Lý 12</div><div style="font-size:10px;color:var(--sub);font-weight:600;">4 Chương · 21 Bài</div></div></div>
 				<div class="sc-chapters">Vật lí Nhiệt · Khí lí tưởng · Từ trường · Hạt nhân</div>
 				<div class="sc-progress"><div class="sc-bar" id="bar-ly" style="width:0%"></div></div>
 			</div>
-			<div class="subject-card tin" onclick="selectSubject('tin')" id="card-tin">
+			<div class="subject-card tin" onclick="selectSubject(&#39;tin&#39;)" id="card-tin">
 				<div class="sc-top"><div class="sc-icon">💻</div><div><div class="sc-name">Tin Học 12</div><div style="font-size:10px;color:var(--sub);font-weight:600;">7 Chủ đề · 26 Bài</div></div></div>
 				<div class="sc-chapters">AI · Mạng · HTML/CSS · Học máy · Data Science</div>
 				<div class="sc-progress"><div class="sc-bar" id="bar-tin" style="width:0%"></div></div>
@@ -1258,14 +1336,120 @@
 		</div>
 
 		<!-- DETAIL TABS -->
-		<div class="section-label">📋 Chi tiết bài học & CheckList</div>
+		<div class="section-label">📋 Chi tiết bài học &amp; CheckList</div>
 		<div class="detail-section">
 			<div class="detail-tabs">
-				<div class="detail-tab active-tab-toan" id="dt-tab-toan" onclick="switchDetailTab('toan')">📐 Toán 12</div>
-				<div class="detail-tab" id="dt-tab-ly" onclick="switchDetailTab('ly')">⚡ Vật Lý 12</div>
-				<div class="detail-tab" id="dt-tab-tin" onclick="switchDetailTab('tin')">💻 Tin Học 12</div>
+				<div class="detail-tab active-tab-toan" id="dt-tab-toan" onclick="switchDetailTab(&#39;toan&#39;)">📐 Toán 12</div>
+				<div class="detail-tab" id="dt-tab-ly" onclick="switchDetailTab(&#39;ly&#39;)">⚡ Vật Lý 12</div>
+				<div class="detail-tab" id="dt-tab-tin" onclick="switchDetailTab(&#39;tin&#39;)">💻 Tin Học 12</div>
 			</div>
-			<div class="detail-content" id="detail-content"></div>
+			<div class="detail-content" id="detail-content"><div class="chapter-group">
+			  <div class="chapter-title open" onclick="toggleChapter(&#39;toan&#39;,0)">
+				<span class="ch-arrow">▶</span> Chương I: Ứng dụng đạo hàm 
+				<span style="font-size:10px;color:var(--sub);font-weight:500;">(0/5 hoàn thành)</span>
+			  </div>
+			  <ul class="lesson-list show">
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;0&#39;,&#39;0&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 1: Tính đơn điệu và cực trị</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;0&#39;,&#39;1&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 2: Giá trị lớn nhất và nhỏ nhất</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;0&#39;,&#39;2&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 3: Đường tiệm cận</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;0&#39;,&#39;3&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 4: Khảo sát và vẽ đồ thị hàm số</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;0&#39;,&#39;4&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 5: Ứng dụng đạo hàm thực tiễn</span>
+				</li></ul></div><div class="chapter-group">
+			  <div class="chapter-title open" onclick="toggleChapter(&#39;toan&#39;,1)">
+				<span class="ch-arrow">▶</span> Chương II: Vectơ &amp; Hệ trục toạ độ KG 
+				<span style="font-size:10px;color:var(--sub);font-weight:500;">(0/3 hoàn thành)</span>
+			  </div>
+			  <ul class="lesson-list show">
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;1&#39;,&#39;0&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 6: Vectơ trong không gian</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;1&#39;,&#39;1&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 7: Hệ trục toạ độ Oxyz</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;1&#39;,&#39;2&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 8: Biểu thức toạ độ phép toán vectơ</span>
+				</li></ul></div><div class="chapter-group">
+			  <div class="chapter-title open" onclick="toggleChapter(&#39;toan&#39;,2)">
+				<span class="ch-arrow">▶</span> Chương III: Số đặc trưng phân tán 
+				<span style="font-size:10px;color:var(--sub);font-weight:500;">(0/2 hoàn thành)</span>
+			  </div>
+			  <ul class="lesson-list show">
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;2&#39;,&#39;0&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 9: Khoảng biến thiên &amp; tứ phân vị</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;2&#39;,&#39;1&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 10: Phương sai &amp; độ lệch chuẩn</span>
+				</li></ul></div><div class="chapter-group">
+			  <div class="chapter-title open" onclick="toggleChapter(&#39;toan&#39;,3)">
+				<span class="ch-arrow">▶</span> Chương IV: Nguyên hàm &amp; Tích phân 
+				<span style="font-size:10px;color:var(--sub);font-weight:500;">(0/3 hoàn thành)</span>
+			  </div>
+			  <ul class="lesson-list show">
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;3&#39;,&#39;0&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 11: Nguyên hàm</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;3&#39;,&#39;1&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 12: Tích phân</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;3&#39;,&#39;2&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 13: Ứng dụng hình học tích phân</span>
+				</li></ul></div><div class="chapter-group">
+			  <div class="chapter-title open" onclick="toggleChapter(&#39;toan&#39;,4)">
+				<span class="ch-arrow">▶</span> Chương V: Phương pháp toạ độ KG 
+				<span style="font-size:10px;color:var(--sub);font-weight:500;">(0/4 hoàn thành)</span>
+			  </div>
+			  <ul class="lesson-list show">
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;4&#39;,&#39;0&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 14: Phương trình mặt phẳng</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;4&#39;,&#39;1&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 15: Phương trình đường thẳng</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;4&#39;,&#39;2&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 16: Công thức tính góc</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;4&#39;,&#39;3&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 17: Phương trình mặt cầu</span>
+				</li></ul></div><div class="chapter-group">
+			  <div class="chapter-title open" onclick="toggleChapter(&#39;toan&#39;,5)">
+				<span class="ch-arrow">▶</span> Chương VI: Xác suất có điều kiện 
+				<span style="font-size:10px;color:var(--sub);font-weight:500;">(0/2 hoàn thành)</span>
+			  </div>
+			  <ul class="lesson-list show">
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;5&#39;,&#39;0&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 18: Xác suất có điều kiện</span>
+				</li>
+				<li class="lesson-item toan-item " onclick="toggleLesson(&#39;toan&#39;,&#39;5&#39;,&#39;1&#39;)">
+				  <div class="lesson-check"></div>
+				  <span>Bài 19: Công thức Bayes &amp; toàn phần</span>
+				</li></ul></div></div>
 		</div>
 
 		<!-- Timer + Notes -->
@@ -1276,11 +1460,11 @@
 				<div class="timer-subject-badge badge-toan" id="timer-badge">📐 Toán 12</div>
 				<div class="clock-ring">
 					<svg width="180" height="180" viewBox="0 0 180 180">
-						<circle class="ring-bg" cx="90" cy="90" r="81"/>
-						<circle class="ring-prog toan" id="ring-prog" cx="90" cy="90" r="81"/>
+						<circle class="ring-bg" cx="90" cy="90" r="81"></circle>
+						<circle class="ring-prog toan" id="ring-prog" cx="90" cy="90" r="81" style="stroke-dashoffset: 510;"></circle>
 					</svg>
 					<div class="clock-center">
-						<div class="clock-time" id="clock-display">00:00</div>
+						<div class="clock-time" id="clock-display">120:00</div>
 						<div class="clock-label" id="clock-label">Sẵn sàng học! 💪</div>
 					</div>
 				</div>
@@ -1292,7 +1476,7 @@
 					<button class="btn btn-start btn-toan" id="btn-start" onclick="toggleTimer()">▶ Bắt đầu</button>
 					<button class="btn btn-reset" onclick="resetTimer()">↺ Reset</button>
 				</div>
-				<div class="timer-tip" id="timer-tip">💡 Chọn môn ở trên rồi nhấn <strong>Bắt đầu</strong> để học!</div>
+				<div class="timer-tip" id="timer-tip">💡 <strong>Toán 12:</strong> Tập trung đọc định lý, ghi công thức và xem ví dụ mẫu!</div>
 			</div>
 
 			<!-- Notes -->
@@ -1300,40 +1484,43 @@
 				<div class="panel-header">
 					<div><div class="panel-title">📝 Ghi chú</div><div class="panel-subtitle">Hỗ trợ LaTeX · Lưu tự động</div></div>
 					<div class="note-tabs">
-						<div class="note-tab active-tab-toan" id="tab-toan" onclick="switchNoteTab('toan')">📐</div>
-						<div class="note-tab" id="tab-ly" onclick="switchNoteTab('ly')">⚡</div>
-						<div class="note-tab" id="tab-tin" onclick="switchNoteTab('tin')">💻</div>
+						<div class="note-tab" id="tab-toan" onclick="switchNoteTab(&#39;toan&#39;)">📐</div>
+						<div class="note-tab" id="tab-ly" onclick="switchNoteTab(&#39;ly&#39;)">⚡</div>
+						<div class="note-tab active-tab-tin" id="tab-tin" onclick="switchNoteTab(&#39;tin&#39;)">💻</div>
 					</div>
 				</div>
 				<details class="latex-guide">
 					<summary>📖 Hướng dẫn LaTeX – nhấn để xem</summary>
 					<div class="latex-grid">
-						<div class="latex-chip" onclick="insertLatex('$x^2$')">x² <span>$x^2$</span></div>
-						<div class="latex-chip" onclick="insertLatex('$\\frac{a}{b}$')">a/b <span>$\\frac{a}{b}$</span></div>
-						<div class="latex-chip" onclick="insertLatex('$\\sqrt{x}$')">√x</div>
-						<div class="latex-chip" onclick="insertLatex('$\\int_a^b f(x)dx$')">∫</div>
-						<div class="latex-chip" onclick="insertLatex('$\\lim_{x\\to 0}$')">lim</div>
-						<div class="latex-chip" onclick="insertLatex('$\\sum_{i=1}^n$')">Σ</div>
-						<div class="latex-chip" onclick="insertLatex('$\\vec{a}\\cdot\\vec{b}$')">a⃗·b⃗</div>
-						<div class="latex-chip" onclick="insertLatex('$P(A|B)=\\frac{P(AB)}{P(B)}$')">XS có ĐK</div>
-						<div class="latex-chip" onclick="insertLatex('$e^{i\\pi}+1=0$')">Euler ✨</div>
-						<div class="latex-chip" onclick="insertLatex('$$\\frac{p_1V_1}{T_1}=\\frac{p_2V_2}{T_2}$$')">Khí lí tưởng</div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$x^2$&#39;)">x² <span>$x^2$</span></div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$\\frac{a}{b}$&#39;)">a/b <span>$\\frac{a}{b}$</span></div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$\\sqrt{x}$&#39;)">√x</div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$\\int_a^b f(x)dx$&#39;)">∫</div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$\\lim_{x\\to 0}$&#39;)">lim</div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$\\sum_{i=1}^n$&#39;)">Σ</div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$\\vec{a}\\cdot\\vec{b}$&#39;)">a⃗·b⃗</div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$P(A|B)=\\frac{P(AB)}{P(B)}$&#39;)">XS có ĐK</div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$e^{i\\pi}+1=0$&#39;)">Euler ✨</div>
+						<div class="latex-chip" onclick="insertLatex(&#39;$$\\frac{p_1V_1}{T_1}=\\frac{p_2V_2}{T_2}$$&#39;)">Khí lí tưởng</div>
 					</div>
 				</details>
 				<div class="note-editor">
-					<textarea class="note-textarea" id="note-input" placeholder="Ghi chú nhanh... ví dụ: Công thức tiệm cận xiên $a = \lim \frac{f(x)}{x}$..."></textarea>
+					<div class="note-input-group">
+						<input type="text" class="note-subject" id="note-subject" placeholder="Chủ đề ghi chú (ví dụ: Công thức Đạo hàm)...">
+						<textarea class="note-textarea" id="note-input" placeholder="Nội dung ghi chú... Hỗ trợ LaTeX: $x^2$, $\frac{a}{b}$..."></textarea>
+					</div>
 					<div class="note-actions">
 						<button class="btn btn-sm btn-clear" onclick="clearNoteInput()">🗑 Xoá</button>
-						<button class="btn btn-sm btn-render" onclick="saveNote()">💾 Lưu & Render</button>
+						<button class="btn btn-sm btn-render" onclick="saveNote()">💾 Lưu &amp; Render</button>
 					</div>
 				</div>
 				<div style="margin-top:10px;">
 					<div style="font-size:11px;font-weight:700;color:var(--sub);margin-bottom:4px;">👁 Xem trước:</div>
-					<div class="note-preview" id="note-preview"><span class="preview-empty">Nhập ghi chú rồi nhấn "Lưu & Render" ✨</span></div>
+					<div class="note-preview" id="note-preview"><span class="preview-empty">Nhập ghi chú rồi nhấn "Lưu &amp; Render" ✨</span></div>
 				</div>
 				<div class="saved-notes">
-					<div class="saved-notes-title">📌 Đã lưu <span id="note-count" style="background:#F3F4F6;padding:2px 8px;border-radius:99px;font-size:10px;"></span></div>
-					<div id="saved-list"></div>
+					<div class="saved-notes-title">📌 Đã lưu <span id="note-count" style="background:#F3F4F6;padding:2px 8px;border-radius:99px;font-size:10px;">0 ghi chú</span></div>
+					<div id="saved-list"><div style="text-align:center;color:var(--sub);font-size:12px;padding:14px;background:var(--bg2);border-radius:10px;border:1.5px dashed var(--border);">Chưa có ghi chú nào ✨</div></div>
 				</div>
 			</div>
 		</div>
@@ -1349,7 +1536,7 @@
 				<div class="van-grid">
 					<div class="van-card vc-1"><h3>📖 Đọc hiểu (3đ)</h3><ul><li>Nhận biết thể thơ, phong cách ngôn ngữ</li><li>Phép tu từ: ẩn dụ, hoán dụ, điệp ngữ</li><li>Trả lời câu vận dụng cao ngắn gọn</li><li>Luyện đề 15–20 phút/ngày</li></ul></div>
 					<div class="van-card vc-2"><h3>✍️ NLXH (2đ)</h3><ul><li>Cấu trúc: Mở – Thân – Kết</li><li>Tích luỹ dẫn chứng thực tế</li><li>Viết 400–600 chữ trong 20–25 phút</li><li>Trọng tâm: đạo đức, kỹ năng sống</li></ul></div>
-					<div class="van-card vc-3"><h3>📚 NLVH (5đ)</h3><ul><li>Truyện Kiều, Việt Bắc, Đất Nước...</li><li>Dạng đề: Phân tích, So sánh, Cảm nhận</li><li>Luyện mở bài & kết bài đa dạng</li><li>Viết câu chủ đề cho từng luận điểm</li></ul></div>
+					<div class="van-card vc-3"><h3>📚 NLVH (5đ)</h3><ul><li>Truyện Kiều, Việt Bắc, Đất Nước...</li><li>Dạng đề: Phân tích, So sánh, Cảm nhận</li><li>Luyện mở bài &amp; kết bài đa dạng</li><li>Viết câu chủ đề cho từng luận điểm</li></ul></div>
 					<div class="van-card vc-4"><h3>📅 Kế hoạch hè</h3><ul><li><strong>T6:</strong> Ôn lý thuyết Văn 11, đọc hiểu</li><li><strong>T7:</strong> Học tác phẩm Văn 12 trọng tâm</li><li><strong>T8:</strong> Luyện đề tổng hợp, chữa bài</li><li>Tham khảo: Học Văn Chị Hiên, Thầy Thống</li></ul></div>
 				</div>
 			</div>
@@ -1472,6 +1659,14 @@
 					if (d.completedLessons) state.completedLessons = d.completedLessons;
 					if (d.examDate) state.examDate = d.examDate;
 					if (d.darkMode !== undefined) state.darkMode = d.darkMode;
+					if (d.endTime) {
+						state.endTime = d.endTime;
+						const remain = Math.floor((state.endTime - Date.now()) / 1000);
+						if (remain > 0) {
+							state.remainSecs = remain;
+							startTimer();
+						}
+					}
 				}
 			} catch (e) { /* fresh start */ }
 			applyDarkMode();
@@ -1492,6 +1687,7 @@
 					completedLessons: state.completedLessons,
 					examDate: state.examDate,
 					darkMode: state.darkMode,
+					endTime: state.endTime,
 				}));
 			} catch (e) {}
 		}
@@ -1618,6 +1814,9 @@
 				<li class="lesson-item ${s}-item ${isDone?'done':''}" onclick="toggleLesson('${s}','${chIdx}','${lIdx}')">
 				  <div class="lesson-check">${isDone?'✓':''}</div>
 				  <span>${lesson}</span>
+				  <div class="lesson-actions">
+				    <button class="btn-note-inline" onclick="event.stopPropagation(); openNoteForLesson('${s}', '${lesson.replace(/'/g, "\\'")}')" title="Ghi chú cho bài này">📝</button>
+				  </div>
 				</li>`;
 				});
 				html += '</ul></div>';
@@ -1660,9 +1859,16 @@
 		}
 
 		// ─── TIMER ────────────────────────────────────────────────────────────────────
+		function requestNotificationPermission() {
+			if (Notification.permission === 'default') {
+				Notification.requestPermission();
+			}
+		}
+
 		function getDuration() { return (parseInt(document.getElementById('duration-input').value) || 120) * 60; }
 
 		function toggleTimer() {
+			requestNotificationPermission();
 			if (state.running) { pauseTimer(); } else { startTimer(); }
 		}
 
@@ -1673,6 +1879,9 @@
 			document.getElementById('btn-start').textContent = '⏸ Tạm dừng';
 			document.getElementById('clock-label').textContent = 'Đang học... Cố lên! 💪';
 			state.interval = setInterval(tick, 1000);
+			// Lưu thời điểm kết thúc để chạy ngầm
+			state.endTime = Date.now() + state.remainSecs * 1000;
+			saveAll();
 		}
 
 		function pauseTimer() {
@@ -1680,6 +1889,8 @@
 			clearInterval(state.interval);
 			document.getElementById('btn-start').textContent = '▶ Tiếp tục';
 			document.getElementById('clock-label').textContent = 'Đã tạm dừng ☕';
+			state.endTime = null;
+			saveAll();
 		}
 
 		function resetTimer(silent = false) {
@@ -1687,16 +1898,22 @@
 			clearInterval(state.interval);
 			state.remainSecs = getDuration();
 			state.totalSecs = getDuration();
+			state.endTime = null;
 			document.getElementById('btn-start').textContent = '▶ Bắt đầu';
 			document.getElementById('clock-label').textContent = 'Sẵn sàng học! 💪';
 			updateTimerDisplay();
 			if (!silent) document.getElementById('ring-prog').style.strokeDashoffset = 510;
+			saveAll();
 		}
 
 		function tick() {
 			if (state.remainSecs <= 0) { finishSession(); return; }
 			state.remainSecs--;
 			updateTimerDisplay();
+			// Thỉnh thoảng đồng bộ lại với endTime nếu có
+			if (state.endTime && Math.abs(state.endTime - (Date.now() + state.remainSecs * 1000)) > 2000) {
+				state.remainSecs = Math.max(0, Math.floor((state.endTime - Date.now()) / 1000));
+			}
 		}
 
 		function updateTimerDisplay() {
@@ -1714,6 +1931,7 @@
 			state.running = false;
 			clearInterval(state.interval);
 			state.remainSecs = 0;
+			state.endTime = null;
 			updateTimerDisplay();
 			document.getElementById('btn-start').textContent = '▶ Bắt đầu';
 			document.getElementById('clock-label').textContent = '✅ Hoàn thành! Tuyệt vời!';
@@ -1722,38 +1940,35 @@
 			saveAll();
 			updateProgressBars();
 			playChime();
+			
 			const info = SUBJECT_INFO[s];
-			showToast('🎉', 'Xong phiên ' + info.name + '!',
-				'Nghỉ 5–10 phút rồi tiếp tục nhé! Đã học ' + state.sessions[s] + ' phiên hôm nay 🌟');
-		}
-
-		function updateProgressBars() {
-			['toan', 'ly', 'tin'].forEach(s => {
-				const sess = state.sessions[s] || 0;
-				const pct = Math.min(sess * 20, 100);
-				const bar = document.getElementById('bar-' + s);
-				if (bar) bar.style.width = pct + '%';
-			});
-			updateAllLessonProgress();
+			const title = '🎉 Hoàn thành phiên ' + info.name + '!';
+			const msg = 'Đã học ' + state.sessions[s] + ' phiên hôm nay. Nghỉ ngơi chút nhé! 🌟';
+			
+			showToast('🎉', 'Xong phiên!', msg);
+			
+			if (Notification.permission === 'granted') {
+				new Notification(title, { body: msg, icon: 'https://cdn-icons-png.flaticon.com/512/3079/3079165.png' });
+			}
 		}
 
 		function playChime() {
 			try {
 				const ctx = new(window.AudioContext || window.webkitAudioContext)();
-				const notes = [523.25, 659.25, 783.99, 1046.5];
+				const notes = [523.25, 659.25, 783.99, 1046.5, 783.99, 1046.5];
 				notes.forEach((freq, i) => {
 					const osc = ctx.createOscillator();
 					const gain = ctx.createGain();
 					osc.connect(gain);
 					gain.connect(ctx.destination);
-					osc.type = 'sine';
+					osc.type = 'triangle';
 					osc.frequency.value = freq;
-					const t = ctx.currentTime + i * 0.22;
+					const t = ctx.currentTime + i * 0.25;
 					gain.gain.setValueAtTime(0, t);
-					gain.gain.linearRampToValueAtTime(0.35, t + 0.05);
-					gain.gain.exponentialRampToValueAtTime(0.001, t + 0.6);
+					gain.gain.linearRampToValueAtTime(0.6, t + 0.05);
+					gain.gain.exponentialRampToValueAtTime(0.001, t + 0.8);
 					osc.start(t);
-					osc.stop(t + 0.65);
+					osc.stop(t + 0.9);
 				});
 			} catch (e) {}
 		}
@@ -1766,10 +1981,15 @@
 				el.className = t === s ? 'note-tab active-tab-' + t : 'note-tab';
 			});
 			renderSavedNotes();
-			document.getElementById('note-input').value = '';
-			document.getElementById('note-preview').innerHTML =
-				'<span class="preview-empty">Nhập ghi chú rồi nhấn "Lưu & Render" ✨</span>';
-			document.getElementById('note-preview').classList.remove('has-content');
+			clearNoteInput();
+		}
+
+		function openNoteForLesson(subject, lessonName) {
+			selectSubject(subject);
+			switchNoteTab(subject);
+			document.getElementById('note-subject').value = lessonName;
+			document.getElementById('note-input').focus();
+			document.getElementById('note-input').scrollIntoView({ behavior: 'smooth', block: 'center' });
 		}
 
 		function insertLatex(text) {
@@ -1792,8 +2012,14 @@
 		}
 
 		function saveNote() {
+			const subject = document.getElementById('note-subject').value.trim();
 			const text = document.getElementById('note-input').value.trim();
-			if (!text) return;
+			if (!text) {
+				showToast('⚠️', 'Lỗi!', 'Bạn chưa nhập nội dung ghi chú.');
+				return;
+			}
+			const finalSubject = subject || 'Ghi chú tự do';
+			
 			const preview = document.getElementById('note-preview');
 			preview.innerHTML = '';
 			text.split('\n').filter(l => l.trim()).forEach(line => {
@@ -1803,26 +2029,35 @@
 			});
 			renderKatex(preview);
 			preview.classList.add('has-content');
-			const now = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+			
+			const now = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' });
 			const tag = state.noteTab;
-			state.notes[tag].unshift({ text, time: now, tag });
+			state.notes[tag].unshift({ subject: finalSubject, text, time: now, tag });
 			saveAll();
 			renderSavedNotes();
-			document.getElementById('note-input').value = '';
-			showToast('📝', 'Đã lưu ghi chú!', 'Ghi chú mới được thêm vào danh sách ✅');
+			clearNoteInput();
+			showToast('📝', 'Đã lưu ghi chú!', 'Ghi chú "' + finalSubject + '" đã được lưu ✅');
 		}
 
 		function clearNoteInput() {
+			document.getElementById('note-subject').value = '';
 			document.getElementById('note-input').value = '';
 			document.getElementById('note-preview').innerHTML =
 				'<span class="preview-empty">Nhập ghi chú rồi nhấn "Lưu & Render" ✨</span>';
 			document.getElementById('note-preview').classList.remove('has-content');
 		}
 
+		function toggleNoteBody(idx) {
+			const body = document.getElementById('note-body-' + idx);
+			if (body) body.classList.toggle('show');
+		}
+
 		function deleteNote(tag, idx) {
-			state.notes[tag].splice(idx, 1);
-			saveAll();
-			renderSavedNotes();
+			if (confirm('Bạn có chắc muốn xoá ghi chú này?')) {
+				state.notes[tag].splice(idx, 1);
+				saveAll();
+				renderSavedNotes();
+			}
 		}
 
 		function renderSavedNotes() {
@@ -1840,13 +2075,22 @@
 				const div = document.createElement('div');
 				div.className = 'saved-note-item';
 				div.innerHTML = `
-			  <div class="note-time">⏰ ${note.time} <span class="tag tag-${tag}">${SUBJECT_INFO[tag]?.emoji||''} ${tag.toUpperCase()}</span></div>
-			  <div class="note-content" id="sn-${i}"></div>
-			  <button class="btn-del" onclick="deleteNote('${tag}',${i})" title="Xoá">✕</button>
+				<div class="note-header" onclick="toggleNoteBody(${i})">
+					<div class="note-header-left">
+						<div class="note-subject-title">${note.subject || 'Ghi chú tự do'}</div>
+						<div class="note-time">⏰ ${note.time} <span class="tag tag-${tag}">${SUBJECT_INFO[tag]?.emoji||''} ${tag.toUpperCase()}</span></div>
+					</div>
+					<div style="display:flex; gap: 5px;">
+						<button class="btn-del" onclick="event.stopPropagation(); deleteNote('${tag}',${i})" title="Xoá">✕</button>
+					</div>
+				</div>
+				<div class="note-body" id="note-body-${i}">
+					<div class="note-content" id="sn-${i}"></div>
+				</div>
 			`;
 				list.appendChild(div);
 				const contentEl = div.querySelector('#sn-' + i);
-				note.text.split('\n').filter(l => l.trim()).forEach(line => {
+				(note.text || '').split('\n').filter(l => l.trim()).forEach(line => {
 					const p = document.createElement('p');
 					p.textContent = line;
 					contentEl.appendChild(p);
