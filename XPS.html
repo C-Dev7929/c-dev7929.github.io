@@ -1065,6 +1065,19 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 		.btn-del:hover {
 			opacity: 1;
 		}
+		.btn-edit {
+			background: none;
+			border: none;
+			cursor: pointer;
+			color: var(--accent);
+			font-size: 14px;
+			opacity: 0.5;
+			transition: opacity 0.2s;
+			padding: 4px;
+		}
+		.btn-edit:hover {
+			opacity: 1;
+		}
 
 		/* ─── VAN SECTION ─── */
 		.van-section {
@@ -1646,6 +1659,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 			darkMode: false,
 			detailTab: 'toan',
 			expandedChapters: {},
+			editingIdx: null,
 		};
 
 		// ─── STORAGE ──────────────────────────────────────────────────────────────────
@@ -2011,6 +2025,16 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 			});
 		}
 
+		function editNote(tag, idx) {
+			const note = state.notes[tag][idx];
+			document.getElementById('note-subject').value = note.subject === 'Ghi chú tự do' ? '' : note.subject;
+			document.getElementById('note-input').value = note.text;
+			state.editingIdx = idx;
+			document.getElementById('note-input').focus();
+			document.querySelector('.note-editor').scrollIntoView({ behavior: 'smooth', block: 'center' });
+			document.querySelector('.btn-render').innerHTML = '🔄 Cập nhật &amp; Render';
+		}
+
 		function saveNote() {
 			const subject = document.getElementById('note-subject').value.trim();
 			const text = document.getElementById('note-input').value.trim();
@@ -2032,19 +2056,29 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 			
 			const now = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit' });
 			const tag = state.noteTab;
-			state.notes[tag].unshift({ subject: finalSubject, text, time: now, tag });
+			
+			if (state.editingIdx !== null) {
+				state.notes[tag][state.editingIdx] = { subject: finalSubject, text, time: now + ' (đã sửa)', tag };
+				state.editingIdx = null;
+				showToast('📝', 'Đã cập nhật!', 'Ghi chú "' + finalSubject + '" đã được cập nhật ✅');
+			} else {
+				state.notes[tag].unshift({ subject: finalSubject, text, time: now, tag });
+				showToast('📝', 'Đã lưu ghi chú!', 'Ghi chú "' + finalSubject + '" đã được lưu ✅');
+			}
+			
 			saveAll();
 			renderSavedNotes();
 			clearNoteInput();
-			showToast('📝', 'Đã lưu ghi chú!', 'Ghi chú "' + finalSubject + '" đã được lưu ✅');
 		}
 
 		function clearNoteInput() {
+			state.editingIdx = null;
 			document.getElementById('note-subject').value = '';
 			document.getElementById('note-input').value = '';
 			document.getElementById('note-preview').innerHTML =
 				'<span class="preview-empty">Nhập ghi chú rồi nhấn "Lưu & Render" ✨</span>';
 			document.getElementById('note-preview').classList.remove('has-content');
+			document.querySelector('.btn-render').innerHTML = '💾 Lưu &amp; Render';
 		}
 
 		function toggleNoteBody(idx) {
@@ -2081,6 +2115,7 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
 						<div class="note-time">⏰ ${note.time} <span class="tag tag-${tag}">${SUBJECT_INFO[tag]?.emoji||''} ${tag.toUpperCase()}</span></div>
 					</div>
 					<div style="display:flex; gap: 5px;">
+						<button class="btn-edit" onclick="event.stopPropagation(); editNote('${tag}',${i})" title="Sửa">✏️</button>
 						<button class="btn-del" onclick="event.stopPropagation(); deleteNote('${tag}',${i})" title="Xoá">✕</button>
 					</div>
 				</div>
