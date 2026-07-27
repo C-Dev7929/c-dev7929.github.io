@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng Kích Hoạt Key - GitHub Pages Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top left, #1e1e2f, #0f0c20);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .background-glow {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            filter: blur(140px);
+            border-radius: 50%;
+            z-index: 0;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .background-glow.vip {
+            background: linear-gradient(135deg, #f59e0b, #ec4899);
+        }
+
+        .card {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 480px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 36px 28px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-box {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+        }
+
+        .icon-box.vip {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
+        }
+
+        .icon-box.error {
+            background: linear-gradient(135deg, #ef4444, #b91c1c);
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.4);
+        }
+
+        .icon-box svg {
+            width: 36px;
+            height: 36px;
+            fill: #ffffff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            margin-bottom: 12px;
+        }
+
+        .badge.free {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .badge.vip {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+        }
+
+        .badge.error {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        p.subtitle {
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .key-container {
+            position: relative;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px dashed rgba(255, 255, 255, 0.25);
+            border-radius: 16px;
+            padding: 18px 16px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .key-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            font-weight: 700;
+            color: #60a5fa;
+            letter-spacing: 2px;
+            word-break: break-all;
+        }
+
+        .btn-action {
+            display: inline-block;
+            width: 100%;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-copy {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+            white-space: nowrap;
+            margin-left: 10px;
+        }
+
+        .btn-copy:hover, .btn-action:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+        }
+
+        .btn-vip {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-vip:hover {
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, #f59e0b, #ec4899);
+            border-radius: 10px;
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 14px;
+            padding: 16px;
+            text-align: left;
+            font-size: 13px;
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 6px;
+        }
+
+        .footer {
+            margin-top: 24px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-glow" id="bgGlow"></div>
+    <div class="card" id="mainCard">
+        <!-- Dynamic Content rendered by JS -->
+        <div id="content">Loading...</div>
+        
+        <div class="footer">
+            &copy; 2026 Key Activation Portal &bull; Link4m Static Gateway
+        </div>
+    </div>
+
+    <script>
+        // Utility to decode Base64 safely
+        function decodeKey(str) {
+            try {
+                return atob(str);
+            } catch(e) {
+                return str; // fallback if plain text
+            }
+        }
+
+        // Copy key to clipboard
+        function copyKey(keyStr) {
+            navigator.clipboard.writeText(keyStr).then(() => {
+                const btn = document.getElementById("copyBtn");
+                btn.innerText = "Đã Chép! ✓";
+                btn.style.background = "#10b981";
+                setTimeout(() => {
+                    btn.innerText = "Sao Chép";
+                    btn.style.background = "linear-gradient(135deg, #6366f1, #4f46e5)";
+                }, 2500);
+            }).catch(() => {
+                alert("Mã Key: " + keyStr);
+            });
+        }
+
+        // Main rendering logic based on URL parameters
+        window.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const rawKey = params.get("k") || params.get("key");
+            const step = params.get("step");
+            const nextLink = params.get("next");
+            const type = (params.get("type") || "free").toLowerCase();
+
+            const contentDiv = document.getElementById("content");
+            const bgGlow = document.getElementById("bgGlow");
+
+            // CASE 1: VIP Step 1 (Completed 1st shortlink, redirecting to 2nd shortlink)
+            if (step === "1" && nextLink) {
+                bgGlow.classList.add("vip");
+                const targetLink = decodeURIComponent(nextLink);
+
+                contentDiv.innerHTML = `
+                    <div class="icon-box vip">
+                        <svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                    </div>
+                    <span class="badge vip">Bước 1 / 2 Hoàn Thành 🌟</span>
+                    <h1>Chỉ Còn 1 Bước Nữa!</h1>
+                    <p class="subtitle">Bạn đã hoàn thành Link 1 của gói VIP. Nhấn nút bên dưới để thực hiện Link 2 và nhận ngay Key VIP 24h.</p>
+                    
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                    <a href="${targetLink}" class="btn-action btn-vip">🚀 Chuyển Đến Link 2 (2/2) Để Lấy Key VIP</a>
+                `;
+                return;
+            }
+
+            // CASE 2: Key Display Page (Free or VIP Step 2)
+            if (rawKey) {
+                const keyStr = decodeKey(rawKey);
+                const isVip = type === "vip" || keyStr.includes("VIP");
+
+                if (isVip) {
+                    bgGlow.classList.add("vip");
+                }
+
+                contentDiv.innerHTML = `
+                    <div class="icon-box ${isVip ? 'vip' : ''}">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    </div>
+                    <span class="badge ${isVip ? 'vip' : 'free'}">${isVip ? 'Gói VIP 🌟' : 'Gói Cơ Bản 🟢'}</span>
+                    
+                    <h1>Vượt Link Thành Công!</h1>
+                    <p class="subtitle">Dưới đây là Mã Key cấp quyền sử dụng Bot Telegram của bạn.</p>
+
+                    <div class="key-container">
+                        <span class="key-text" id="keyCode">${keyStr}</span>
+                        <button class="btn-copy" id="copyBtn" onclick="copyKey('${keyStr}')">Sao Chép</button>
+                    </div>
+
+                    <div class="instructions">
+                        <strong>📌 Hướng dẫn kích hoạt:</strong>
+                        <ol>
+                            <li>Nhấn nút <b>Sao Chép</b> ở trên để copy mã key.</li>
+                            <li>Quay lại ứng dụng <b>Telegram Bot</b>.</li>
+                            <li>Dán mã key và bấm gửi cho Bot để kích hoạt 24h sử dụng.</li>
+                        </ol>
+                    </div>
+                `;
+                return;
+            }
+
+            // CASE 3: Missing parameters / Invalid link
+            contentDiv.innerHTML = `
+                <div class="icon-box error">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                </div>
+                <span class="badge error">Lỗi Liên Kết ❌</span>
+                <h1>Không Tìm Thấy Mã Key</h1>
+                <p class="subtitle">Liên kết này thiếu tham số kích hoạt. Vui lòng quay lại Telegram Bot và thực hiện bấm "Lấy Key" để nhận link mới.</p>
+                <a href="https://t.me" class="btn-action">Quay Lại Telegram</a>
+            `;
+        });
+    </script>
+</body>
+</html>
