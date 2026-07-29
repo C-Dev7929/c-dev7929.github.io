@@ -41,6 +41,7 @@ let appState = {
     lastBettedIssue: 0,
     placedRoomId: 0,
     ws: null,
+    engineInterval: null,
     waitElapsed: 0
 };
 
@@ -435,6 +436,11 @@ async function placeBet(roomId, amount) {
 
 // MAIN ENGINE CONTINUOUS LOOP
 function initGameEngine() {
+    if (appState.engineInterval) clearInterval(appState.engineInterval);
+    if (appState.ws) {
+        try { appState.ws.close(); } catch(e){}
+    }
+
     fetchBalance();
     fetchRecent100();
     startWebSocket();
@@ -442,7 +448,7 @@ function initGameEngine() {
     let lastProcessedIssue = 0;
 
     // 1-second continuous loop (vthv9 logic)
-    setInterval(async () => {
+    appState.engineInterval = setInterval(async () => {
         if (!appState.config.user_id || !appState.config.secret_key) return;
 
         // Ticker
@@ -465,12 +471,17 @@ function initGameEngine() {
             const killedRoom = recent10[0].killed_room_id || 0;
             const upcomingIssue = finishedIssue + 1;
 
-            // Process round result
+            // Process round result when new issue finishes
             if (finishedIssue > 0 && lastProcessedIssue !== finishedIssue) {
                 lastProcessedIssue = finishedIssue;
                 appState.telemetry.latest_issue_id = finishedIssue;
                 appState.telemetry.latest_killed_room = killedRoom;
-                appState.telemetry.phase = 'RESULT';
+                
+                // Immediately transition telemetry to upcoming issue countdown!
+                appState.telemetry.issue_id = upcomingIssue;
+                appState.telemetry.count_down = 10;
+                appState.telemetry.phase = 'COUNTDOWN';
+                appState.telemetry.current_placed_bet = 0.0;
 
                 if (appState.lastBettedIssue === finishedIssue) {
                     const isWin = (appState.placedRoomId !== killedRoom);
@@ -509,15 +520,7 @@ function initGameEngine() {
                 fetchRecent100();
             }
 
-            // Advance upcoming issue
-            if (appState.telemetry.issue_id < upcomingIssue) {
-                appState.telemetry.issue_id = upcomingIssue;
-                appState.telemetry.count_down = 10;
-                appState.telemetry.phase = 'COUNTDOWN';
-                appState.telemetry.current_placed_bet = 0.0;
-            }
-
-            // Auto Bot Trigger
+            // Auto Bot Trigger for upcoming issue
             if (appState.config.auto_bot && upcomingIssue > 0 && appState.lastBettedIssue !== upcomingIssue) {
                 computeAIScores();
                 const recRoom = appState.telemetry.recommended_room || 1;
@@ -534,18 +537,20 @@ function initGameEngine() {
 function startWebSocket() {
     try {
         const wsUrl = "wss://api.escapemaster.net/escape_master/ws";
-        const ws = new WebSocket(wsUrl);
+        appState.ws = new WebSocket(wsUrl);
 
-        ws.onopen = () => {
-            ws.send(JSON.stringify({
-                "msg_type": "handle_enter_game",
-                "asset_type": appState.config.coin_type,
-                "user_id": parseInt(appState.config.user_id),
-                "user_secret_key": appState.config.secret_key
-            }));
+        appState.ws.onopen = () => {
+            if (appState.ws.readyState === WebSocket.OPEN) {
+                appState.ws.send(JSON.stringify({
+                    "msg_type": "handle_enter_game",
+                    "asset_type": appState.config.coin_type,
+                    "user_id": parseInt(appState.config.user_id),
+                    "user_secret_key": appState.config.secret_key
+                }));
+            }
         };
 
-        ws.onmessage = (event) => {
+        appState.ws.onmessage = (event) => {
             try {
                 const data = JSON.parse(event.data);
                 if (data.msg_type === "notify_count_down") {
@@ -558,7 +563,6 @@ function startWebSocket() {
                 } else if (data.msg_type === "notify_result") {
                     appState.telemetry.latest_issue_id = data.issue_id || 0;
                     appState.telemetry.latest_killed_room = data.killed_room || 0;
-                    appState.telemetry.phase = 'RESULT';
                 }
                 updateUI();
             } catch (e) {
@@ -566,8 +570,8 @@ function startWebSocket() {
             }
         };
 
-        ws.onclose = () => {
-            setTimeout(startWebSocket, 3000); // Reconnect after 3s
+        appState.ws.onclose = () => {
+            setTimeout(startWebSocket, 5000); // Reconnect after 5s
         };
     } catch (e) {
         console.error("WebSocket init error:", e);
