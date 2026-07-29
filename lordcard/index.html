@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTH - Escape Master Web Control & Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Bar -->
+        <header class="app-header">
+            <div class="logo-group">
+                <div class="logo-icon">🛡️</div>
+                <div class="logo-text">
+                    <h1>VTH</h1>
+                    <span class="badge" id="vth-conn-badge">VUA THOÁT HIỂM LIVE</span>
+                </div>
+            </div>
+
+            <!-- Tab Navigation Bar -->
+            <nav class="nav-tabs">
+                <button class="tab-btn active" onclick="switchTab('dashboard-tab')">🖥️ BẢNG ĐIỀU KHIỂN LIVE</button>
+                <button class="tab-btn" onclick="switchTab('config-tab')">⚙️ CẤU HÌNH TÀI KHOẢN</button>
+                <button class="tab-btn" onclick="switchTab('analytics-tab')">📊 THỐNG KÊ 100 KỲ</button>
+            </nav>
+
+            <div class="header-stats">
+                <div class="stat-pill balance-pill">
+                    <span class="pill-label">BUILD</span>
+                    <span class="pill-value" id="balance-build">0.00</span>
+                </div>
+                <div class="stat-pill balance-pill">
+                    <span class="pill-label">USDT</span>
+                    <span class="pill-value" id="balance-usdt">0.00</span>
+                </div>
+                <div class="stat-pill pnl-pill" id="pnl-container">
+                    <span class="pill-label">P&L LỜI/LỖ</span>
+                    <span class="pill-value" id="total-pnl">+0.00</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- TAB 1: LIVE DASHBOARD -->
+        <div id="dashboard-tab" class="tab-content active">
+            <main class="dashboard-grid">
+                <!-- Left Side: Live Control & Countdown -->
+                <section class="control-panel glass-card">
+                    <h2 class="section-title">⚡ ĐIỀU KHIỂN VÁN ĐẤU</h2>
+
+                    <!-- Timer Widget -->
+                    <div class="countdown-widget">
+                        <div class="timer-ring-container">
+                            <svg class="timer-svg" viewBox="0 0 100 100">
+                                <circle class="timer-circle-bg" cx="50" cy="50" r="42"/>
+                                <circle class="timer-circle-progress" id="timer-circle" cx="50" cy="50" r="42"/>
+                            </svg>
+                            <div class="timer-text-container">
+                                <span class="timer-seconds" id="timer-count">10</span>
+                                <span class="timer-sublabel">THỜI GIAN CÒN LẠI</span>
+                            </div>
+                        </div>
+                        <div class="game-phase-badge" id="game-phase">ĐANG NHẬN CƯỢC</div>
+                    </div>
+
+                    <!-- Live Issue & Bet Info Panel -->
+                    <div class="live-info-panel">
+                        <div class="info-row">
+                            <span class="info-label">KỲ VÁN ĐẤU:</span>
+                            <strong class="info-val" id="display-issue-id">#0</strong>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">SỐ CƯỢC ĐÃ ĐẶT:</span>
+                            <strong class="info-val text-cyan" id="display-placed-bet">0.0 BUILD</strong>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">TIỀN CƯỢC PHÒNG CHỌN:</span>
+                            <strong class="info-val" id="display-room-bet">0 BUILD</strong>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">SỐ NGƯỜI TRONG PHÒNG:</span>
+                            <strong class="info-val" id="display-room-users">0 người</strong>
+                        </div>
+                    </div>
+
+                    <!-- Auto Bot Toggle -->
+                    <div class="action-box">
+                        <div class="bot-toggle-container">
+                            <span class="toggle-label">TỰ ĐỘNG CHƠI (AUTO BOT)</span>
+                            <label class="switch">
+                                <input type="checkbox" id="auto-bot-switch">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary" id="btn-bet-now">
+                            🚀 VÀO PHÒNG & ĐẶT CƯỢC
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Center: 8 Rooms Live Grid -->
+                <section class="rooms-container">
+                    <div class="section-header-row">
+                        <h2 class="section-title">🏢 8 PHÒNG CHƠI (TELEMETRY LIVE)</h2>
+                        <div class="ai-recommendation" id="ai-recommendation-tag">
+                            AI GỢI Ý: <strong id="recommended-room-name">Đang phân tích...</strong>
+                        </div>
+                    </div>
+
+                    <!-- Latest Finished Round Bar -->
+                    <div class="latest-round-bar" id="latest-round-bar">
+                        <span>KỲ VỪA KẾT THÚC: <strong id="latest-issue-title">#--</strong></span>
+                        <span>SÁT THỦ ĐÃ VÀO: <strong id="latest-killed-room-title" class="text-loss">--</strong></span>
+                    </div>
+
+                    <div class="rooms-grid" id="rooms-grid">
+                        <!-- 8 Room Cards Rendered Dynamically -->
+                    </div>
+                </section>
+
+                <!-- Right Side: Analytics -->
+                <section class="analytics-panel glass-card">
+                    <h2 class="section-title">📊 THỐNG KÊ CHI TIẾT</h2>
+
+                    <div class="stats-metric-grid">
+                        <div class="metric-card">
+                            <span class="metric-value" id="stat-total">0</span>
+                            <span class="metric-label">TỔNG VÁN</span>
+                        </div>
+                        <div class="metric-card win">
+                            <span class="metric-value" id="stat-win">0</span>
+                            <span class="metric-label">THẮNG</span>
+                        </div>
+                        <div class="metric-card loss">
+                            <span class="metric-value" id="stat-loss">0</span>
+                            <span class="metric-label">THUA</span>
+                        </div>
+                        <div class="metric-card rate">
+                            <span class="metric-value" id="stat-winrate">0%</span>
+                            <span class="metric-label">TỶ LỆ THẮNG</span>
+                        </div>
+                    </div>
+
+                    <div class="streak-box">
+                        <div class="streak-item">
+                            <span>Chuỗi Thắng Hiện Tại:</span>
+                            <strong class="text-win" id="stat-streak">0</strong>
+                        </div>
+                        <div class="streak-item">
+                            <span>Chuỗi Thắng Max:</span>
+                            <strong class="text-win" id="stat-max-win-streak">0</strong>
+                        </div>
+                        <div class="streak-item">
+                            <span>Chuỗi Thua Hiện Tại:</span>
+                            <strong class="text-loss" id="stat-loss-streak">0</strong>
+                        </div>
+                    </div>
+
+                    <!-- History Table -->
+                    <div class="history-section">
+                        <h3 class="subsection-title">📜 LỊCH SỬ VÁN ĐẤU</h3>
+                        <div class="table-scroll-container">
+                            <table class="history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Kỳ</th>
+                                        <th>Sát Thủ</th>
+                                        <th>KQ</th>
+                                        <th>P&L</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="history-table-body">
+                                    <tr><td colspan="4" class="empty-msg">Chưa có dữ liệu ván đấu</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Bottom System Terminal Log Panel -->
+            <section class="system-log-panel glass-card margin-top-20">
+                <div class="log-header-row">
+                    <h2 class="section-title margin-none">📋 NHẬT KÝ HỆ THỐNG REAL-TIME (SYSTEM LOGS)</h2>
+                    <button class="btn-clear-log" onclick="clearSystemLogs()">🗑️ XÓA LOG</button>
+                </div>
+                <div class="system-log-terminal" id="system-log-terminal">
+                    <div class="log-line info"><span class="log-time">[SYSTEM]</span> Đã kết nối Web Server VTH thành công. Sẵn sàng nhận dữ liệu thời gian thực.</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- TAB 2: CONFIGURATION -->
+        <div id="config-tab" class="tab-content glass-card">
+            <h2 class="section-title">⚙️ CẤU HÌNH TÀI KHOẢN</h2>
+            
+            <!-- Configuration Status Indicator Banner -->
+            <div id="cfg-status-banner" class="status-banner unconfigured">
+                <span class="status-icon">🔴</span>
+                <div class="status-text-group">
+                    <strong class="status-title" id="cfg-status-title">TRẠNG THÁI: CHƯA CẤU HÌNH TÀI KHOẢN</strong>
+                    <span class="status-desc" id="cfg-status-desc">Vui lòng nhập User ID và Secret Key bên dưới rồi nhấn Lưu để kết nối tài khoản.</span>
+                </div>
+            </div>
+
+            <form id="config-form" onsubmit="saveConfiguration(event)" class="config-form-grid">
+                <div class="form-group full-width">
+                    <label for="cfg-user-id">USER ID</label>
+                    <input type="text" id="cfg-user-id" class="custom-input" placeholder="Nhập User ID của bạn" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="cfg-secret-key">USER SECRET KEY</label>
+                    <input type="password" id="cfg-secret-key" class="custom-input" placeholder="Nhập User Secret Key của bạn" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cfg-coin-type">Loại tiền đặt cược</label>
+                    <select id="cfg-coin-type" class="custom-select">
+                        <option value="BUILD">BUILD</option>
+                        <option value="USDT">USDT</option>
+                        <option value="WORLD">WORLD</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cfg-base-bet">Mức cược cơ bản</label>
+                    <input type="number" id="cfg-base-bet" class="custom-input" step="0.1" min="0.1" value="0.1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cfg-trap">Hệ số thua Martingale (Trap Multiplier)</label>
+                    <input type="number" id="cfg-trap" class="custom-input" step="1" min="1" value="10" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cfg-strategy">Chọn Thuật Toán AI Chọn Phòng</label>
+                    <select id="cfg-strategy" class="custom-select">
+                        <option value="hybrid_vth">🤖 VTH Multi-Layer AI Predictor (Tổng hợp Cold Room + Telemetry)</option>
+                        <option value="target_cold_room">❄️ Cold Room (Phòng ít bị diệt nhất 100 kỳ)</option>
+                        <option value="lowest_bet">💰 Phòng Tiền Cược Ít Nhất</option>
+                        <option value="lowest_users">👥 Phòng Số Người Cược Ít Nhất</option>
+                    </select>
+                </div>
+
+                <div class="form-actions full-width">
+                    <button type="submit" class="btn btn-primary">💾 LƯU CẤU HÌNH & KẾT NỐI VTH</button>
+                </div>
+            </form>
+            <div id="config-status-msg" class="status-msg"></div>
+        </div>
+
+        <!-- TAB 3: RECENT 100 ISSUES STATISTICS -->
+        <div id="analytics-tab" class="tab-content glass-card">
+            <h2 class="section-title">📊 THỐNG KÊ 100 KỲ GẦN NHẤT (TỰ ĐỘNG CẬP NHẬT)</h2>
+            <div class="recent-stats-grid" id="recent-100-container">
+                <!-- 8 Rooms Cold Stats rendered dynamically -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

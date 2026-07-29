@@ -1,0 +1,8 @@
+{
+    "user_id": "",
+    "secret_key": "",
+    "coin_type": "BUILD",
+    "base_bet": 0.1,
+    "trap_multiplier": 10.0,
+    "selected_logic": "hybrid_vth"
+}
