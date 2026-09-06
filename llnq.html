@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#6366f1" />
+  <title>Ghi Nhớ Ngắt Quãng - Spaced Repetition</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --primary-light: #e0e7ff;
+      --success: #10b981;
+      --success-light: #d1fae5;
+      --warning: #f59e0b;
+      --warning-light: #fef3c7;
+      --danger: #ef4444;
+      --danger-light: #fee2e2;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      --radius: 16px;
+    }
+
+    .dark {
+      --primary: #818cf8;
+      --primary-hover: #6366f1;
+      --primary-light: #1e1b4b;
+      --bg: #0b0f19;
+      --card-bg: #151c2e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #232d45;
+      --shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding-bottom: 95px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Header */
+    .app-header {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: white;
+      padding: 24px 20px 28px;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.35);
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-area h1 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-area p {
+      font-size: 0.82rem;
+      opacity: 0.9;
+      margin-top: 2px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .icon-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: scale(1.05);
+    }
+
+    /* Stats Overview */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: -18px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 10px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-number {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+      display: flex;
+      background: var(--card-bg);
+      margin: 18px 0 14px;
+      border-radius: 14px;
+      padding: 5px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .tab-item {
+      flex: 1;
+      padding: 10px 6px;
+      text-align: center;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-weight: 700;
+      font-size: 0.88rem;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .tab-item.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* Subject / Category Filter Bar */
+    .subject-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .subject-bar::-webkit-scrollbar { display: none; }
+
+    .subject-pill {
+      flex: 0 0 auto;
+      padding: 7px 14px;
+      border-radius: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .subject-pill.active {
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+
+    .subject-pill-add {
+      background: var(--bg);
+      border: 1px dashed var(--primary);
+      color: var(--primary);
+    }
+
+    /* Review Area */
+    .study-progress {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .progress-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: var(--border);
+      border-radius: 10px;
+      margin: 0 12px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), #3b82f6);
+      border-radius: 10px;
+      transition: width 0.3s ease;
+    }
+
+    /* Flashcard Flip 3D */
+    .card-scene {
+      width: 100%;
+      min-height: 290px;
+      perspective: 1000px;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .flashcard {
+      width: 100%;
+      height: 100%;
+      min-height: 290px;
+      position: relative;
+      transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transform-style: preserve-3d;
+      border-radius: 20px;
+    }
+
+    .flashcard.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-face-back {
+      transform: rotateY(180deg);
+      border: 2px solid var(--primary);
+    }
+
+    .card-subject-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: var(--primary-light);
+      color: var(--primary);
+      align-self: flex-start;
+    }
+
+    .card-title-text {
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.45;
+      margin: auto 0;
+      word-break: break-word;
+    }
+
+    .card-content-text {
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.6;
+      white-space: pre-line;
+      text-align: left;
+      margin: auto 0;
+      word-break: break-word;
+      color: var(--text-main);
+    }
+
+    .card-tip-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Rating Buttons */
+    .rating-buttons {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .rate-btn {
+      padding: 12px 6px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.82rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      transition: transform 0.15s;
+    }
+
+    .rate-btn:active { transform: scale(0.95); }
+
+    .rate-again { background: var(--danger-light); color: var(--danger); }
+    .rate-hard { background: var(--warning-light); color: #b45309; }
+    .rate-good { background: var(--primary-light); color: var(--primary); }
+    .rate-easy { background: var(--success-light); color: var(--success); }
+
+    .rate-sub { font-size: 0.65rem; opacity: 0.85; font-weight: 600; }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px dashed var(--border);
+      color: var(--text-muted);
+    }
+
+    .empty-state i {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      opacity: 0.7;
+    }
+
+    .btn-action-pill {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    /* Library Cards List */
+    .card-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 10px;
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .card-item-body {
+      flex: 1;
+    }
+
+    .card-item-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .card-item-content {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      white-space: pre-line;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-item-meta {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-top: 8px;
+      font-size: 0.75rem;
+    }
+
+    .due-badge {
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.7rem;
+    }
+
+    .due-now { background: var(--danger-light); color: var(--danger); }
+    .due-later { background: var(--primary-light); color: var(--primary); }
+
+    .card-item-actions {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-icon-action {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1rem;
+      padding: 6px;
+      cursor: pointer;
+    }
+
+    /* Bottom Toolbar */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+      z-index: 50;
+      max-width: 680px;
+      margin: 0 auto;
+      gap: 10px;
+    }
+
+    .btn-backup {
+      background: var(--bg);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      padding: 12px 16px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-add-card {
+      flex: 1;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+    }
+
+    /* Modals */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 100;
+    }
+
+    .modal-overlay.active { display: flex; }
+
+    .modal-content {
+      background: var(--card-bg);
+      width: 100%;
+      max-width: 680px;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      padding: 24px 20px;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-title { font-size: 1.2rem; font-weight: 700; }
+    .modal-close { background: none; border: none; font-size: 1.4rem; color: var(--text-muted); cursor: pointer; }
+
+    .form-group { margin-bottom: 14px; }
+    .form-label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text-muted); }
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .form-control:focus { border-color: var(--primary); }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .subject-list-manager {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .subject-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: var(--bg);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="container">
+      <div class="header-nav">
+        <div class="logo-area">
+          <h1><i class="fa-solid fa-brain"></i> Nhắc Nhở Học Tập</h1>
+          <p>Phương pháp Lặp lại Ngắt quãng (Spaced Repetition)</p>
+        </div>
+        <div class="header-actions">
+          <button class="icon-btn" id="themeToggle" title="Đổi giao diện">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Quick Statistics -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-number" id="statDueToday" style="color: var(--danger);">0</div>
+        <div class="stat-label">Cần ôn hôm nay</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="statTotalCards" style="color: var(--primary);">0</div>
+        <div class="stat-label">Tổng số thẻ</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="statSubjectsCount" style="color: var(--success);">0</div>
+        <div class="stat-label">Môn học</div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+      <button class="tab-item active" onclick="switchMainTab('review')">
+        <i class="fa-solid fa-graduation-cap"></i> Ôn tập hôm nay
+      </button>
+      <button class="tab-item" onclick="switchMainTab('library')">
+        <i class="fa-solid fa-layer-group"></i> Tất cả thẻ học
+      </button>
+    </div>
+
+    <!-- Subjects Filter Bar -->
+    <div class="subject-bar" id="subjectBar">
+      <!-- Injected via JS -->
+    </div>
+
+    <!-- TAB 1: REVIEW MODE -->
+    <div id="tabReview" class="tab-content">
+      <div class="study-progress">
+        <span>Tiến trình hôm nay</span>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="reviewProgressBar" style="width: 0%;"></div>
+        </div>
+        <span id="reviewProgressText">0 / 0</span>
+      </div>
+
+      <div id="reviewContainer">
+        <!-- Injected via JS (card or empty/completed state) -->
+      </div>
+    </div>
+
+    <!-- TAB 2: ALL CARDS LIST -->
+    <div id="tabLibrary" class="tab-content" style="display: none;">
+      <div style="margin-bottom: 12px;">
+        <input type="text" id="searchInput" class="form-control" placeholder="🔍 Tìm kiếm tiêu đề hoặc nội dung thẻ..." oninput="renderLibrary()" />
+      </div>
+      <div id="libraryList">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Bottom Bar -->
+  <div class="bottom-bar">
+    <button class="btn-backup" onclick="openBackupModal()">
+      <i class="fa-solid fa-file-arrow-up"></i> Xuất / Nhập
+    </button>
+    <button class="btn-add-card" onclick="openAddCardModal()">
+      <i class="fa-solid fa-plus"></i> Thêm thẻ ghi nhớ mới
+    </button>
+  </div>
+
+  <!-- Modal: Thêm / Sửa Thẻ -->
+  <div class="modal-overlay" id="cardModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="cardModalTitle">Thêm thẻ ghi nhớ</div>
+        <button class="modal-close" onclick="closeModal('cardModal')">&times;</button>
+      </div>
+      <form id="cardForm" onsubmit="handleCardSubmit(event)">
+        <input type="hidden" id="cardEditId" />
+
+        <div class="form-group">
+          <label class="form-label">Chọn Môn học *</label>
+          <div style="display: flex; gap: 8px;">
+            <select id="cardSubjectSelect" class="form-control" required></select>
+            <button type="button" class="btn-backup" style="white-space: nowrap;" onclick="openManageSubjectsModal()">
+              <i class="fa-solid fa-gear"></i> Môn
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Tiêu đề / Câu hỏi *</label>
+          <input type="text" id="cardTitle" class="form-control" placeholder="VD: Từ vựng mới, Công thức, Khái niệm..." required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nội dung chi tiết / Đáp án *</label>
+          <textarea id="cardContent" class="form-control" rows="4" placeholder="Nội dung kiến thức, ý nghĩa, giải thích cần nhớ..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          <i class="fa-solid fa-check"></i> Lưu thẻ ghi nhớ
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Quản lý Môn học -->
+  <div class="modal-overlay" id="subjectModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Quản lý Môn học</div>
+        <button class="modal-close" onclick="closeModal('subjectModal')">&times;</button>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Thêm môn học mới</label>
+        <div style="display: flex; gap: 8px;">
+          <input type="text" id="newSubjectName" class="form-control" placeholder="Tên môn học mới..." />
+          <button type="button" class="btn-submit" style="width: auto; padding: 0 18px; margin-top: 0;" onclick="addNewSubject()">
+            Thêm
+          </button>
+        </div>
+      </div>
+
+      <div class="form-label" style="margin-top: 16px;">Danh sách môn học hiện có:</div>
+      <div class="subject-list-manager" id="subjectManagerList">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Xuất / Nhập Backup JSON -->
+  <div class="modal-overlay" id="backupModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Sao Lưu & Khôi Phục Dữ Liệu</div>
+        <button class="modal-close" onclick="closeModal('backupModal')">&times;</button>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div>
+          <label class="form-label">1. Xuất dữ liệu ra file JSON</label>
+          <button type="button" class="btn-submit" style="background: var(--success);" onclick="exportJSON()">
+            <i class="fa-solid fa-download"></i> Tải file sao lưu (.json) về máy
+          </button>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--border); margin: 6px 0;" />
+
+        <div>
+          <label class="form-label">2. Nhập từ file JSON trên máy</label>
+          <input type="file" id="importFileInput" accept=".json" class="form-control" onchange="importJSONFile(event)" />
+        </div>
+
+        <div>
+          <label class="form-label">Hoặc dán trực tiếp mã JSON vào đây:</label>
+          <textarea id="importTextarea" class="form-control" rows="3" placeholder='Dán nội dung JSON vào đây...'></textarea>
+          <button type="button" class="btn-submit" style="margin-top: 8px;" onclick="importJSONText()">
+            <i class="fa-solid fa-file-import"></i> Khôi phục từ mã JSON
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden file trigger -->
+  <input type="file" id="hiddenFileInput" accept=".json" style="display: none;" onchange="importJSONFile(event)" />
+
+  <script>
+    // State Persistence
+    let subjects = JSON.parse(localStorage.getItem('my_subjects')) || ['Chung'];
+    let cards = JSON.parse(localStorage.getItem('my_cards')) || [];
+    let selectedSubject = 'ALL';
+    let currentMainTab = 'review';
+    let dueCards = [];
+    let currentReviewIndex = 0;
+    let isFlipped = false;
+
+    // Synth for card audio feedback
+    const audioCtx = (window.AudioContext || window.webkitAudioContext) ? new (window.AudioContext || window.webkitAudioContext)() : null;
+    function playTone(freq, duration = 0.12) {
+      if (!audioCtx) return;
+      try {
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {}
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      renderSubjectBar();
+      updateDueQueue();
+      updateStats();
+      renderCurrentReviewCard();
+    });
+
+    // Theme Management
+    function initTheme() {
+      const isDark = localStorage.getItem('theme') === 'dark';
+      if (isDark) document.body.classList.add('dark');
+      updateThemeIcon(isDark);
+
+      document.getElementById('themeToggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const isNowDark = document.body.classList.contains('dark');
+        localStorage.setItem('theme', isNowDark ? 'dark' : 'light');
+        updateThemeIcon(isNowDark);
+      });
+    }
+
+    function updateThemeIcon(isDark) {
+      const icon = document.querySelector('#themeToggle i');
+      icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    }
+
+    // Tabs
+    function switchMainTab(tab) {
+      currentMainTab = tab;
+      document.querySelectorAll('.nav-tabs .tab-item').forEach((btn, idx) => {
+        if ((tab === 'review' && idx === 0) || (tab === 'library' && idx === 1)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      document.getElementById('tabReview').style.display = tab === 'review' ? 'block' : 'none';
+      document.getElementById('tabLibrary').style.display = tab === 'library' ? 'block' : 'none';
+
+      if (tab === 'review') {
+        updateDueQueue();
+        renderCurrentReviewCard();
+      } else {
+        renderLibrary();
+      }
+    }
+
+    // Subject Filter Bar
+    function renderSubjectBar() {
+      const bar = document.getElementById('subjectBar');
+      let html = `
+        <div class="subject-pill ${selectedSubject === 'ALL' ? 'active' : ''}" onclick="selectSubject('ALL')">
+          <i class="fa-solid fa-border-all"></i> Tất cả
+        </div>
+      `;
+
+      subjects.forEach(sub => {
+        html += `
+          <div class="subject-pill ${selectedSubject === sub ? 'active' : ''}" onclick="selectSubject('${escapeHtml(sub)}')">
+            ${escapeHtml(sub)}
+          </div>
+        `;
+      });
+
+      html += `
+        <div class="subject-pill subject-pill-add" onclick="openManageSubjectsModal()">
+          <i class="fa-solid fa-plus"></i> Thêm/Xóa môn
+        </div>
+      `;
+
+      bar.innerHTML = html;
+      populateSubjectDropdown();
+    }
+
+    function selectSubject(sub) {
+      selectedSubject = sub;
+      renderSubjectBar();
+      updateDueQueue();
+      if (currentMainTab === 'review') {
+        renderCurrentReviewCard();
+      } else {
+        renderLibrary();
+      }
+    }
+
+    // Spaced Repetition Queue
+    function updateDueQueue() {
+      const now = new Date();
+      dueCards = cards.filter(c => {
+        const matchesSubject = selectedSubject === 'ALL' || c.subject === selectedSubject;
+        const isDue = new Date(c.nextReview) <= now;
+        return matchesSubject && isDue;
+      });
+      currentReviewIndex = 0;
+      isFlipped = false;
+    }
+
+    function updateStats() {
+      const now = new Date();
+      const dueCount = cards.filter(c => new Date(c.nextReview) <= now).length;
+      document.getElementById('statDueToday').innerText = dueCount;
+      document.getElementById('statTotalCards').innerText = cards.length;
+      document.getElementById('statSubjectsCount').innerText = subjects.length;
+    }
+
+    // Render Review Card
+    function renderCurrentReviewCard() {
+      const container = document.getElementById('reviewContainer');
+      const progText = document.getElementById('reviewProgressText');
+      const progBar = document.getElementById('reviewProgressBar');
+
+      if (cards.length === 0) {
+        progText.innerText = '0 / 0';
+        progBar.style.width = '0%';
+        container.innerHTML = `
+          <div class="empty-state">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Chưa có thẻ ghi nhớ nào</h3>
+            <p style="margin-top: 6px; font-size: 0.9rem;">Hãy thêm thẻ đầu tiên để bắt đầu ôn tập ngắt quãng.</p>
+            <button class="btn-action-pill" onclick="openAddCardModal()">
+              <i class="fa-solid fa-plus"></i> Thêm thẻ ghi nhớ
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      if (dueCards.length === 0) {
+        progText.innerText = '0 / 0';
+        progBar.style.width = '100%';
+        container.innerHTML = `
+          <div class="empty-state" style="border-style: solid; border-color: var(--success);">
+            <i class="fa-solid fa-circle-check" style="color: var(--success); opacity: 1;"></i>
+            <h3>Tuyệt vời! Đã hoàn thành ôn tập</h3>
+            <p style="margin-top: 6px; font-size: 0.9rem;">
+              Bạn đã ôn hết các thẻ đến hạn hôm nay ${selectedSubject !== 'ALL' ? `của môn <b>${escapeHtml(selectedSubject)}</b>` : ''}.
+            </p>
+            <button class="btn-action-pill" onclick="openAddCardModal()">
+              <i class="fa-solid fa-plus"></i> Thêm thẻ mới
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      const total = dueCards.length;
+      const current = currentReviewIndex + 1;
+      progText.innerText = `${current} / ${total}`;
+      progBar.style.width = `${((current - 1) / total) * 100}%`;
+
+      const card = dueCards[currentReviewIndex];
+      isFlipped = false;
+
+      container.innerHTML = `
+        <div class="card-scene" onclick="flipCard()">
+          <div class="flashcard" id="activeFlashcard">
+            <!-- Mặt trước: Tiêu đề -->
+            <div class="card-face">
+              <div class="card-subject-tag">${escapeHtml(card.subject || 'Chung')}</div>
+              <div class="card-title-text">${escapeHtml(card.title)}</div>
+              <div class="card-tip-label">
+                <i class="fa-solid fa-hand-pointer"></i> Nhấn vào thẻ để xem nội dung
+              </div>
+            </div>
+
+            <!-- Mặt sau: Nội dung -->
+            <div class="card-face card-face-back">
+              <div class="card-subject-tag" style="background: var(--success-light); color: var(--success);">Nội dung chi tiết</div>
+              <div class="card-content-text">${escapeHtml(card.content)}</div>
+              <div class="card-tip-label" style="color: var(--primary); font-weight: 700;">
+                Đánh giá mức độ nhớ của bạn bên dưới 👇
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rating Buttons -->
+        <div class="rating-buttons">
+          <button class="rate-btn rate-again" onclick="rateCard(1)">
+            <span><i class="fa-solid fa-xmark"></i> Quên</span>
+            <span class="rate-sub">Ôn lại 1 ngày</span>
+          </button>
+          <button class="rate-btn rate-hard" onclick="rateCard(2)">
+            <span><i class="fa-solid fa-triangle-exclamation"></i> Khó</span>
+            <span class="rate-sub">+2 ngày</span>
+          </button>
+          <button class="rate-btn rate-good" onclick="rateCard(3)">
+            <span><i class="fa-solid fa-thumbs-up"></i> Nhớ được</span>
+            <span class="rate-sub">+4 ngày</span>
+          </button>
+          <button class="rate-btn rate-easy" onclick="rateCard(4)">
+            <span><i class="fa-solid fa-star"></i> Rất dễ</span>
+            <span class="rate-sub">+7+ ngày</span>
+          </button>
+        </div>
+      `;
+    }
+
+    function flipCard() {
+      const cardEl = document.getElementById('activeFlashcard');
+      if (!cardEl) return;
+      isFlipped = !isFlipped;
+      cardEl.classList.toggle('is-flipped', isFlipped);
+      playTone(420, 0.08);
+    }
+
+    // Spaced Repetition Rating Calculation
+    function rateCard(rating) {
+      if (dueCards.length === 0) return;
+      const card = dueCards[currentReviewIndex];
+      let intervalDays = 1;
+      let box = card.box || 1;
+
+      if (rating === 1) {
+        box = 1;
+        intervalDays = 1;
+        playTone(260, 0.2);
+      } else if (rating === 2) {
+        box = Math.max(1, box);
+        intervalDays = 2;
+        playTone(440, 0.15);
+      } else if (rating === 3) {
+        box += 1;
+        const intervals = [1, 3, 7, 14, 30, 60, 120];
+        intervalDays = intervals[Math.min(box - 1, intervals.length - 1)];
+        playTone(620, 0.15);
+      } else if (rating === 4) {
+        box += 2;
+        const intervals = [2, 6, 14, 30, 60, 120, 240];
+        intervalDays = intervals[Math.min(box - 1, intervals.length - 1)];
+        playTone(850, 0.2);
+      }
+
+      const nextDate = new Date();
+      nextDate.setDate(nextDate.getDate() + intervalDays);
+
+      card.box = box;
+      card.nextReview = nextDate.toISOString();
+      card.lastReviewed = new Date().toISOString();
+
+      saveAll();
+
+      currentReviewIndex++;
+      if (currentReviewIndex >= dueCards.length) {
+        updateDueQueue();
+      }
+      updateStats();
+      renderCurrentReviewCard();
+    }
+
+    // Library Tab Rendering
+    function renderLibrary() {
+      const container = document.getElementById('libraryList');
+      const search = document.getElementById('searchInput').value.toLowerCase().trim();
+
+      const filtered = cards.filter(c => {
+        const matchesSubject = selectedSubject === 'ALL' || c.subject === selectedSubject;
+        const matchesSearch = c.title.toLowerCase().includes(search) || c.content.toLowerCase().includes(search);
+        return matchesSubject && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3>Không có thẻ nào phù hợp</h3>
+            <p style="margin-top: 6px; font-size: 0.9rem;">Thử tìm kiếm từ khóa khác hoặc thêm thẻ mới.</p>
+          </div>
+        `;
+        return;
+      }
+
+      const now = new Date();
+      container.innerHTML = filtered.map(item => {
+        const isDue = new Date(item.nextReview) <= now;
+        const nextDateStr = new Date(item.nextReview).toLocaleDateString('vi-VN');
+        return `
+          <div class="card-item">
+            <div class="card-item-body">
+              <div class="card-item-title">${escapeHtml(item.title)}</div>
+              <div class="card-item-content">${escapeHtml(item.content)}</div>
+              <div class="card-item-meta">
+                <span class="card-subject-tag" style="font-size: 0.68rem; padding: 2px 8px;">${escapeHtml(item.subject || 'Chung')}</span>
+                <span class="due-badge ${isDue ? 'due-now' : 'due-later'}">
+                  ${isDue ? 'Cần ôn hôm nay' : 'Ôn ngày ' + nextDateStr}
+                </span>
+              </div>
+            </div>
+            <div class="card-item-actions">
+              <button class="btn-icon-action" onclick="openEditCardModal('${item.id}')" title="Sửa">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="btn-icon-action" style="color: var(--danger);" onclick="deleteCard('${item.id}')" title="Xóa">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Modal: Thêm / Sửa Thẻ
+    function openAddCardModal() {
+      document.getElementById('cardModalTitle').innerText = 'Thêm thẻ ghi nhớ mới';
+      document.getElementById('cardEditId').value = '';
+      document.getElementById('cardForm').reset();
+      populateSubjectDropdown();
+      if (selectedSubject !== 'ALL') {
+        document.getElementById('cardSubjectSelect').value = selectedSubject;
+      }
+      document.getElementById('cardModal').classList.add('active');
+    }
+
+    function openEditCardModal(id) {
+      const card = cards.find(c => c.id === id);
+      if (!card) return;
+
+      document.getElementById('cardModalTitle').innerText = 'Chỉnh sửa thẻ ghi nhớ';
+      document.getElementById('cardEditId').value = card.id;
+      populateSubjectDropdown();
+      document.getElementById('cardSubjectSelect').value = card.subject || subjects[0] || 'Chung';
+      document.getElementById('cardTitle').value = card.title;
+      document.getElementById('cardContent').value = card.content;
+      document.getElementById('cardModal').classList.add('active');
+    }
+
+    function handleCardSubmit(e) {
+      e.preventDefault();
+      const editId = document.getElementById('cardEditId').value;
+      const subject = document.getElementById('cardSubjectSelect').value;
+      const title = document.getElementById('cardTitle').value.trim();
+      const content = document.getElementById('cardContent').value.trim();
+
+      if (editId) {
+        const item = cards.find(c => c.id === editId);
+        if (item) {
+          item.subject = subject;
+          item.title = title;
+          item.content = content;
+        }
+      } else {
+        const newCard = {
+          id: Date.now().toString(),
+          subject,
+          title,
+          content,
+          box: 1,
+          nextReview: new Date().toISOString()
+        };
+        cards.unshift(newCard);
+      }
+
+      saveAll();
+      closeModal('cardModal');
+      updateDueQueue();
+      updateStats();
+      if (currentMainTab === 'library') renderLibrary();
+      else renderCurrentReviewCard();
+    }
+
+    function deleteCard(id) {
+      if (!confirm('Bạn có chắc chắn muốn xóa thẻ này không?')) return;
+      cards = cards.filter(c => c.id !== id);
+      saveAll();
+      updateDueQueue();
+      updateStats();
+      if (currentMainTab === 'library') renderLibrary();
+      else renderCurrentReviewCard();
+    }
+
+    // Modal: Quản lý Môn học
+    function openManageSubjectsModal() {
+      renderSubjectManagerList();
+      document.getElementById('newSubjectName').value = '';
+      document.getElementById('subjectModal').classList.add('active');
+    }
+
+    function renderSubjectManagerList() {
+      const list = document.getElementById('subjectManagerList');
+      if (subjects.length === 0) {
+        list.innerHTML = '<div style="color: var(--text-muted); font-size: 0.85rem;">Chưa có môn học nào.</div>';
+        return;
+      }
+      list.innerHTML = subjects.map(sub => {
+        const cardCount = cards.filter(c => c.subject === sub).length;
+        return `
+          <div class="subject-item-row">
+            <div>
+              <strong>${escapeHtml(sub)}</strong>
+              <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 6px;">(${cardCount} thẻ)</span>
+            </div>
+            <button class="btn-icon-action" style="color: var(--danger);" onclick="deleteSubject('${escapeHtml(sub)}')" title="Xóa môn">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function addNewSubject() {
+      const name = document.getElementById('newSubjectName').value.trim();
+      if (!name) return;
+      if (subjects.includes(name)) {
+        alert('Môn học này đã tồn tại!');
+        return;
+      }
+      subjects.push(name);
+      saveAll();
+      document.getElementById('newSubjectName').value = '';
+      renderSubjectManagerList();
+      renderSubjectBar();
+      updateStats();
+    }
+
+    function deleteSubject(name) {
+      const count = cards.filter(c => c.subject === name).length;
+      const msg = count > 0 
+        ? `Môn "${name}" đang có ${count} thẻ. Xóa môn này sẽ xóa luôn tất cả các thẻ thuộc môn. Tiếp tục?` 
+        : `Bạn có chắc muốn xóa môn "${name}"?`;
+      
+      if (!confirm(msg)) return;
+
+      subjects = subjects.filter(s => s !== name);
+      cards = cards.filter(c => c.subject !== name);
+      if (selectedSubject === name) selectedSubject = 'ALL';
+
+      saveAll();
+      renderSubjectManagerList();
+      renderSubjectBar();
+      updateDueQueue();
+      updateStats();
+      if (currentMainTab === 'library') renderLibrary();
+      else renderCurrentReviewCard();
+    }
+
+    function populateSubjectDropdown() {
+      const select = document.getElementById('cardSubjectSelect');
+      if (subjects.length === 0) {
+        subjects = ['Chung'];
+        saveAll();
+      }
+      select.innerHTML = subjects.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
+    }
+
+    // Modal: Backup / Export / Import JSON
+    function openBackupModal() {
+      document.getElementById('importTextarea').value = '';
+      document.getElementById('importFileInput').value = '';
+      document.getElementById('backupModal').classList.add('active');
+    }
+
+    function exportJSON() {
+      const backupData = {
+        subjects: subjects,
+        cards: cards,
+        exportedAt: new Date().toISOString()
+      };
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupData, null, 2));
+      const dl = document.createElement('a');
+      dl.setAttribute("href", dataStr);
+      dl.setAttribute("download", `spaced_repetition_backup_${new Date().toISOString().slice(0, 10)}.json`);
+      dl.click();
+    }
+
+    function importJSONFile(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        applyImportedJSON(e.target.result);
+      };
+      reader.readAsText(file);
+    }
+
+    function importJSONText() {
+      const text = document.getElementById('importTextarea').value.trim();
+      if (!text) {
+        alert('Vui lòng dán mã JSON!');
+        return;
+      }
+      applyImportedJSON(text);
+    }
+
+    function applyImportedJSON(jsonString) {
+      try {
+        const data = JSON.parse(jsonString);
+        if (Array.isArray(data)) {
+          // Backward compatibility if only cards array
+          cards = data;
+        } else if (data && typeof data === 'object') {
+          if (Array.isArray(data.subjects)) subjects = data.subjects;
+          if (Array.isArray(data.cards)) cards = data.cards;
+        } else {
+          throw new Error('Định dạng dữ liệu không hợp lệ');
+        }
+
+        saveAll();
+        closeModal('backupModal');
+        renderSubjectBar();
+        updateDueQueue();
+        updateStats();
+        if (currentMainTab === 'library') renderLibrary();
+        else renderCurrentReviewCard();
+        alert('Khôi phục dữ liệu thẻ và môn học thành công!');
+      } catch (err) {
+        alert('Lỗi đọc dữ liệu JSON: ' + err.message);
+      }
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('active');
+    }
+
+    function saveAll() {
+      localStorage.setItem('my_subjects', JSON.stringify(subjects));
+      localStorage.setItem('my_cards', JSON.stringify(cards));
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      return String(text).replace(/[&<>"']/g, m => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+      }[m]));
+    }
+  </script>
+</body>
+</html>
