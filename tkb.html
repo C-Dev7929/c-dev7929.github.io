@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#4f46e5" />
+  
+  <!-- Embedded PWA Manifest (Data URI - No external file required) -->
+  <link rel="manifest" href='data:application/manifest+json;utf-8,{"name":"Thời Khóa Biểu","short_name":"TKB","start_url":".","display":"standalone","background_color":"#0b0f19","theme_color":"#4f46e5","icons":[{"src":"data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 512 512%27><rect width=%27512%27 height=%27512%27 rx=%27100%27 fill=%27%234f46e5%27/><path d=%27M128 192v224a32 32 0 0 0 32 32h192a32 32 0 0 0 32-32V192H128zm64-96h-32a32 32 0 0 0-32 32v32h256v-32a32 32 0 0 0-32-32h-32V64h-32v32h-64V64h-32v32z%27 fill=%27white%27/></svg>","sizes":"192x192 512x512","type":"image/svg+xml"}]}' />
+  
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Thời Khóa Biểu" />
+  
+  <title>Thời Khóa Biểu Của Tôi</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --primary-light: #e0e7ff;
+      --secondary: #06b6d4;
+      --accent: #f59e0b;
+      --danger: #ef4444;
+      --success: #10b981;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+      --radius: 16px;
+    }
+
+    .dark {
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --primary-light: #1e1b4b;
+      --bg: #0b0f19;
+      --card-bg: #151c2e;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #232d45;
+      --shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding-bottom: 95px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, var(--primary), #3b82f6);
+      color: white;
+      padding: 24px 20px 28px;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+      box-shadow: 0 10px 25px -5px rgba(79, 70, 229, 0.35);
+      position: relative;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .greeting {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .current-date {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-top: 2px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .offline-badge {
+      display: none;
+      background: rgba(239, 68, 68, 0.9);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .offline-badge.visible {
+      display: inline-flex;
+    }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .icon-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+      transform: scale(1.05);
+    }
+
+    /* Container */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Navigation / Tabs */
+    .tabs {
+      display: flex;
+      background: var(--card-bg);
+      margin-top: -18px;
+      border-radius: 18px;
+      padding: 6px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      position: relative;
+      z-index: 10;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 10px 8px;
+      text-align: center;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    }
+
+    /* Day Selector Pills for All view */
+    .days-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 14px 2px;
+      margin: 8px 0;
+      scrollbar-width: none;
+    }
+    .days-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .day-pill {
+      flex: 0 0 auto;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .day-pill.active {
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Section Header */
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 18px 0 12px;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .count-badge {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    /* Schedule Cards List */
+    .schedule-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+    }
+
+    .card-color-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 6px;
+      background-color: var(--primary);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-left: 6px;
+    }
+
+    .subject-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    .status-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .status-ongoing {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--success);
+      animation: pulse 2s infinite;
+    }
+
+    .status-upcoming {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent);
+    }
+
+    .status-ended {
+      background: rgba(100, 116, 139, 0.15);
+      color: var(--text-muted);
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { opacity: 0.8; }
+    }
+
+    .card-body {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      padding-left: 6px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .info-item i {
+      color: var(--primary);
+      width: 14px;
+    }
+
+    .card-notes {
+      padding-left: 6px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: var(--bg);
+      padding: 6px 10px;
+      border-radius: 8px;
+      border-left: 3px solid var(--primary);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 45px 20px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px dashed var(--border);
+      color: var(--text-muted);
+    }
+
+    .empty-state i {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 12px;
+      opacity: 0.6;
+    }
+
+    .btn-empty-add {
+      margin-top: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border: none;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    /* Bottom Fixed Action */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+      z-index: 50;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .btn-add-main {
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+      transition: all 0.2s;
+    }
+
+    .btn-add-main:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    /* Modal / Bottom Sheet */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      z-index: 100;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      width: 100%;
+      max-width: 600px;
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      padding: 24px 20px;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    /* Form inputs */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-muted);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--bg);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .color-picker-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 6px;
+    }
+
+    .color-option {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.2s;
+    }
+
+    .color-option.selected {
+      transform: scale(1.15);
+      border-color: var(--text-main);
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .btn-submit {
+      flex: 1;
+      padding: 14px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .btn-delete {
+      padding: 14px 20px;
+      background: rgba(239, 68, 68, 0.1);
+      color: var(--danger);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Detail View */
+    .detail-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+    }
+
+    .detail-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-row i {
+      font-size: 1.2rem;
+      color: var(--primary);
+      width: 24px;
+      text-align: center;
+    }
+
+    .detail-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .detail-val {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-top">
+        <div>
+          <div class="greeting" id="greetingText">Xin chào! 🌤️</div>
+          <div class="current-date" id="currentDateText">Đang tải...</div>
+        </div>
+        <div class="header-actions">
+          <div class="offline-badge" id="offlineBadge">
+            <i class="fa-solid fa-plane"></i> Offline
+          </div>
+          <button class="icon-btn" id="themeToggle" title="Đổi giao diện">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- View Switcher Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchView('today')">
+        <i class="fa-solid fa-calendar-day"></i> Hôm nay
+      </button>
+      <button class="tab-btn" onclick="switchView('tomorrow')">
+        <i class="fa-solid fa-calendar-plus"></i> Ngày mai
+      </button>
+      <button class="tab-btn" onclick="switchView('all')">
+        <i class="fa-solid fa-table-list"></i> Xem toàn bộ
+      </button>
+    </div>
+
+    <!-- Day Pills (For 'all' view) -->
+    <div class="days-scroll" id="dayPills" style="display: none;">
+      <button class="day-pill active" onclick="filterByDay(1)">Thứ 2</button>
+      <button class="day-pill" onclick="filterByDay(2)">Thứ 3</button>
+      <button class="day-pill" onclick="filterByDay(3)">Thứ 4</button>
+      <button class="day-pill" onclick="filterByDay(4)">Thứ 5</button>
+      <button class="day-pill" onclick="filterByDay(5)">Thứ 6</button>
+      <button class="day-pill" onclick="filterByDay(6)">Thứ 7</button>
+      <button class="day-pill" onclick="filterByDay(0)">Chủ Nhật</button>
+    </div>
+
+    <!-- Section Header -->
+    <div class="section-header">
+      <div class="section-title" id="sectionTitle">
+        <span>Lịch học hôm nay</span>
+        <span class="count-badge" id="subjectCount">0 môn</span>
+      </div>
+    </div>
+
+    <!-- Schedule List -->
+    <div class="schedule-list" id="scheduleList">
+      <!-- Cards rendered via JS -->
+    </div>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <div class="bottom-bar">
+    <button class="btn-add-main" onclick="openAddModal()">
+      <i class="fa-solid fa-plus"></i> Thêm môn / Tiết học mới
+    </button>
+  </div>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="detailModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Chi tiết môn học</div>
+        <button class="modal-close" onclick="closeModal('detailModal')">&times;</button>
+      </div>
+      <div id="detailContent">
+        <!-- Injected via JS -->
+      </div>
+      <div class="btn-group">
+        <button class="btn-delete" onclick="deleteCurrentSubject()">
+          <i class="fa-solid fa-trash"></i> Xóa môn
+        </button>
+        <button class="btn-submit" onclick="openEditModal()">
+          <i class="fa-solid fa-pen-to-square"></i> Chỉnh sửa
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add / Edit Modal -->
+  <div class="modal-overlay" id="formModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="formTitle">Thêm tiết học mới</div>
+        <button class="modal-close" onclick="closeModal('formModal')">&times;</button>
+      </div>
+      <form id="scheduleForm" onsubmit="handleFormSubmit(event)">
+        <input type="hidden" id="editId" />
+        
+        <div class="form-group">
+          <label class="form-label">Tên môn học / Hoạt động *</label>
+          <input type="text" id="subjectName" class="form-control" placeholder="VD: Lập trình Web, Toán cao cấp..." required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Thứ trong tuần *</label>
+          <select id="dayOfWeek" class="form-control" required>
+            <option value="1">Thứ 2</option>
+            <option value="2">Thứ 3</option>
+            <option value="3">Thứ 4</option>
+            <option value="4">Thứ 5</option>
+            <option value="5">Thứ 6</option>
+            <option value="6">Thứ 7</option>
+            <option value="0">Chủ Nhật</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Giờ bắt đầu *</label>
+            <input type="time" id="startTime" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Giờ kết thúc *</label>
+            <input type="time" id="endTime" class="form-control" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Phòng học / Địa điểm</label>
+            <input type="text" id="roomName" class="form-control" placeholder="VD: A2-301, Online Zoom..." />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Giảng viên phụ trách</label>
+            <input type="text" id="teacherName" class="form-control" placeholder="VD: Thầy Nam, Cô Hương..." />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Ghi chú & Nhiệm vụ</label>
+          <textarea id="notes" class="form-control" rows="2" placeholder="VD: Làm bài tập chương 2, mang laptop..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Màu sắc đánh dấu</label>
+          <div class="color-picker-group" id="colorPicker">
+            <div class="color-option selected" style="background: #4f46e5;" data-color="#4f46e5"></div>
+            <div class="color-option" style="background: #06b6d4;" data-color="#06b6d4"></div>
+            <div class="color-option" style="background: #10b981;" data-color="#10b981"></div>
+            <div class="color-option" style="background: #f59e0b;" data-color="#f59e0b"></div>
+            <div class="color-option" style="background: #ec4899;" data-color="#ec4899"></div>
+            <div class="color-option" style="background: #8b5cf6;" data-color="#8b5cf6"></div>
+          </div>
+          <input type="hidden" id="selectedColor" value="#4f46e5" />
+        </div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn-submit">
+            <i class="fa-solid fa-check"></i> Lưu vào thời khóa biểu
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // All-in-one Single File: Schedules stored in LocalStorage
+    let schedules = JSON.parse(localStorage.getItem('my_schedules')) || [];
+    let currentView = 'today';
+    let selectedFilterDay = 1;
+    let selectedSubjectId = null;
+
+    const dayNames = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+
+    // Self-contained Service Worker Blob for Offline Support (Single File)
+    if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+      const swInlineCode = `
+        const CACHE_NAME = 'tkb-single-v1';
+        self.addEventListener('install', (e) => {
+          self.skipWaiting();
+        });
+        self.addEventListener('activate', (e) => {
+          e.waitUntil(self.clients.claim());
+        });
+        self.addEventListener('fetch', (e) => {
+          if (e.request.method !== 'GET') return;
+          e.respondWith(
+            fetch(e.request).then(res => {
+              if (res && res.status === 200) {
+                const resClone = res.clone();
+                caches.open(CACHE_NAME).then(c => c.put(e.request, resClone));
+              }
+              return res;
+            }).catch(() => caches.match(e.request))
+          );
+        });
+      `;
+      const blob = new Blob([swInlineCode], { type: 'application/javascript' });
+      const swUrl = URL.createObjectURL(blob);
+      navigator.serviceWorker.register(swUrl)
+        .then(() => console.log('[TKB] Offline Service Worker active.'))
+        .catch(err => console.log('[TKB] SW fallback mode:', err));
+    }
+
+    // Offline / Online Status Monitor
+    function updateOnlineStatus() {
+      const offlineBadge = document.getElementById('offlineBadge');
+      if (!navigator.onLine) {
+        offlineBadge.classList.add('visible');
+      } else {
+        offlineBadge.classList.remove('visible');
+      }
+    }
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      updateHeaderDate();
+      updateOnlineStatus();
+      renderSchedule();
+      setupColorPicker();
+      setInterval(updateHeaderDate, 60000);
+    });
+
+    // Theme Management
+    function initTheme() {
+      const isDark = localStorage.getItem('theme') === 'dark';
+      if (isDark) document.body.classList.add('dark');
+      updateThemeIcon(isDark);
+
+      document.getElementById('themeToggle').addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const isNowDark = document.body.classList.contains('dark');
+        localStorage.setItem('theme', isNowDark ? 'dark' : 'light');
+        updateThemeIcon(isNowDark);
+      });
+    }
+
+    function updateThemeIcon(isDark) {
+      const icon = document.querySelector('#themeToggle i');
+      icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+    }
+
+    // Header Date/Clock
+    function updateHeaderDate() {
+      const now = new Date();
+      const dayName = dayNames[now.getDay()];
+      const dateStr = now.toLocaleDateString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      const timeStr = now.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+
+      document.getElementById('currentDateText').innerText = `${dayName}, ${dateStr} (${timeStr})`;
+
+      const hour = now.getHours();
+      let greeting = 'Chào buổi sáng! 🌅';
+      if (hour >= 12 && hour < 18) greeting = 'Chào buổi chiều! ☀️';
+      else if (hour >= 18) greeting = 'Chào buổi tối! 🌙';
+      document.getElementById('greetingText').innerText = greeting;
+    }
+
+    // View Switching
+    function switchView(view) {
+      currentView = view;
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+
+      const dayPills = document.getElementById('dayPills');
+      if (view === 'all') {
+        dayPills.style.display = 'flex';
+        const todayDay = new Date().getDay();
+        filterByDay(todayDay);
+      } else {
+        dayPills.style.display = 'none';
+        renderSchedule();
+      }
+    }
+
+    function filterByDay(dayNum) {
+      selectedFilterDay = dayNum;
+      document.querySelectorAll('.day-pill').forEach((pill, idx) => {
+        const map = [1, 2, 3, 4, 5, 6, 0];
+        if (map[idx] === dayNum) pill.classList.add('active');
+        else pill.classList.remove('active');
+      });
+      renderSchedule();
+    }
+
+    // Status calculation
+    function getStatus(day, startStr, endStr) {
+      const now = new Date();
+      const currentDay = now.getDay();
+      
+      if (currentDay !== day) {
+        return { label: 'Chưa diễn ra', class: 'status-upcoming' };
+      }
+
+      const [sH, sM] = startStr.split(':').map(Number);
+      const [eH, eM] = endStr.split(':').map(Number);
+      
+      const nowMin = now.getHours() * 60 + now.getMinutes();
+      const startMin = sH * 60 + sM;
+      const endMin = eH * 60 + eM;
+
+      if (nowMin >= startMin && nowMin <= endMin) {
+        return { label: '● Đang diễn ra', class: 'status-ongoing' };
+      } else if (nowMin < startMin) {
+        return { label: 'Sắp tới', class: 'status-upcoming' };
+      } else {
+        return { label: 'Đã hoàn thành', class: 'status-ended' };
+      }
+    }
+
+    // Render schedule list
+    function renderSchedule() {
+      const listEl = document.getElementById('scheduleList');
+      const titleEl = document.getElementById('sectionTitle');
+      const countEl = document.getElementById('subjectCount');
+      
+      const today = new Date().getDay();
+      let targetDay = today;
+      let titlePrefix = 'Lịch học hôm nay';
+
+      if (currentView === 'today') {
+        targetDay = today;
+        titlePrefix = `Hôm nay (${dayNames[today]})`;
+      } else if (currentView === 'tomorrow') {
+        targetDay = (today + 1) % 7;
+        titlePrefix = `Ngày mai (${dayNames[targetDay]})`;
+      } else if (currentView === 'all') {
+        targetDay = selectedFilterDay;
+        titlePrefix = `Thời khóa biểu ${dayNames[targetDay]}`;
+      }
+
+      titleEl.querySelector('span').innerText = titlePrefix;
+
+      const filtered = schedules
+        .filter(s => parseInt(s.day) === parseInt(targetDay))
+        .sort((a, b) => a.start.localeCompare(b.start));
+
+      countEl.innerText = `${filtered.length} môn`;
+
+      if (filtered.length === 0) {
+        listEl.innerHTML = `
+          <div class="empty-state">
+            <i class="fa-regular fa-calendar-xmark"></i>
+            <h3>Chưa có tiết học nào</h3>
+            <p style="margin-top: 6px; font-size: 0.9rem;">Bạn chưa nhập môn học nào cho ${dayNames[targetDay]}.</p>
+            <button class="btn-empty-add" onclick="openAddModal()">
+              <i class="fa-solid fa-plus"></i> Thêm môn học ngay
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      listEl.innerHTML = filtered.map(item => {
+        const status = getStatus(parseInt(item.day), item.start, item.end);
+        return `
+          <div class="card" onclick="openDetailModal('${item.id}')">
+            <div class="card-color-bar" style="background-color: ${item.color || '#4f46e5'}"></div>
+            <div class="card-header">
+              <div class="subject-title">${escapeHtml(item.name)}</div>
+              <div class="status-tag ${status.class}">${status.label}</div>
+            </div>
+            <div class="card-body">
+              <div class="info-item">
+                <i class="fa-regular fa-clock"></i>
+                <span>${item.start} - ${item.end}</span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>${escapeHtml(item.room || 'Chưa có phòng')}</span>
+              </div>
+              ${item.teacher ? `
+                <div class="info-item" style="grid-column: span 2;">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                  <span>${escapeHtml(item.teacher)}</span>
+                </div>
+              ` : ''}
+            </div>
+            ${item.notes ? `
+              <div class="card-notes">
+                <i class="fa-regular fa-note-sticky"></i> ${escapeHtml(item.notes)}
+              </div>
+            ` : ''}
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Modal Details
+    function openDetailModal(id) {
+      selectedSubjectId = id;
+      const item = schedules.find(s => s.id === id);
+      if (!item) return;
+
+      const content = document.getElementById('detailContent');
+      content.innerHTML = `
+        <div class="detail-badge" style="background: ${item.color || '#4f46e5'}">
+          ${dayNames[item.day]}
+        </div>
+        <h2 style="font-size: 1.35rem; margin-bottom: 16px;">${escapeHtml(item.name)}</h2>
+        
+        <div class="detail-row">
+          <i class="fa-regular fa-clock"></i>
+          <div>
+            <div class="detail-label">Thời gian</div>
+            <div class="detail-val">${item.start} đến ${item.end}</div>
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <div class="detail-label">Phòng học / Địa điểm</div>
+            <div class="detail-val">${escapeHtml(item.room || 'Chưa cập nhật')}</div>
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <i class="fa-solid fa-user-tie"></i>
+          <div>
+            <div class="detail-label">Giảng viên phụ trách</div>
+            <div class="detail-val">${escapeHtml(item.teacher || 'Chưa cập nhật')}</div>
+          </div>
+        </div>
+
+        <div class="detail-row">
+          <i class="fa-regular fa-clipboard"></i>
+          <div>
+            <div class="detail-label">Ghi chú & nhiệm vụ</div>
+            <div class="detail-val" style="font-weight: normal;">${escapeHtml(item.notes || 'Không có ghi chú')}</div>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('detailModal').classList.add('active');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('active');
+    }
+
+    // Add / Edit Modal Logic
+    function openAddModal() {
+      document.getElementById('formTitle').innerText = 'Thêm tiết học mới';
+      document.getElementById('editId').value = '';
+      document.getElementById('scheduleForm').reset();
+      
+      const today = new Date().getDay();
+      document.getElementById('dayOfWeek').value = currentView === 'tomorrow' ? (today + 1) % 7 : (currentView === 'all' ? selectedFilterDay : today);
+      document.getElementById('selectedColor').value = '#4f46e5';
+      updateColorSelection('#4f46e5');
+
+      document.getElementById('formModal').classList.add('active');
+    }
+
+    function openEditModal() {
+      closeModal('detailModal');
+      const item = schedules.find(s => s.id === selectedSubjectId);
+      if (!item) return;
+
+      document.getElementById('formTitle').innerText = 'Chỉnh sửa tiết học';
+      document.getElementById('editId').value = item.id;
+      document.getElementById('subjectName').value = item.name;
+      document.getElementById('dayOfWeek').value = item.day;
+      document.getElementById('startTime').value = item.start;
+      document.getElementById('endTime').value = item.end;
+      document.getElementById('roomName').value = item.room || '';
+      document.getElementById('teacherName').value = item.teacher || '';
+      document.getElementById('notes').value = item.notes || '';
+      document.getElementById('selectedColor').value = item.color || '#4f46e5';
+      updateColorSelection(item.color || '#4f46e5');
+
+      document.getElementById('formModal').classList.add('active');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const editId = document.getElementById('editId').value;
+      const newItem = {
+        id: editId || Date.now().toString(),
+        name: document.getElementById('subjectName').value.trim(),
+        day: parseInt(document.getElementById('dayOfWeek').value),
+        start: document.getElementById('startTime').value,
+        end: document.getElementById('endTime').value,
+        room: document.getElementById('roomName').value.trim(),
+        teacher: document.getElementById('teacherName').value.trim(),
+        notes: document.getElementById('notes').value.trim(),
+        color: document.getElementById('selectedColor').value
+      };
+
+      if (editId) {
+        schedules = schedules.map(s => s.id === editId ? newItem : s);
+      } else {
+        schedules.push(newItem);
+      }
+
+      saveAndRender();
+      closeModal('formModal');
+    }
+
+    function deleteCurrentSubject() {
+      if (!confirm('Bạn có chắc chắn muốn xóa tiết học này không?')) return;
+      schedules = schedules.filter(s => s.id !== selectedSubjectId);
+      saveAndRender();
+      closeModal('detailModal');
+    }
+
+    function saveAndRender() {
+      localStorage.setItem('my_schedules', JSON.stringify(schedules));
+      renderSchedule();
+    }
+
+    // Color picker
+    function setupColorPicker() {
+      const options = document.querySelectorAll('.color-option');
+      options.forEach(opt => {
+        opt.addEventListener('click', () => {
+          const color = opt.getAttribute('data-color');
+          document.getElementById('selectedColor').value = color;
+          updateColorSelection(color);
+        });
+      });
+    }
+
+    function updateColorSelection(color) {
+      document.querySelectorAll('.color-option').forEach(opt => {
+        if (opt.getAttribute('data-color') === color) {
+          opt.classList.add('selected');
+        } else {
+          opt.classList.remove('selected');
+        }
+      });
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      return String(text).replace(/[&<>"']/g, m => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+      }[m]));
+    }
+  </script>
+</body>
+</html>
