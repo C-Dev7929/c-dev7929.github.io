@@ -964,6 +964,10 @@
       padding: 16px;
     }
 
+    #confirmModal, #promptModal {
+      z-index: 2100;
+    }
+
     .modal-overlay.active { display: flex; }
 
     .modal-content {
@@ -1387,9 +1391,14 @@
             <span><i class="fa-solid fa-layer-group"></i> Cấp độ: <strong id="cardEditBox" style="color: var(--primary);">Hộp 1</strong></span>
             <span><i class="fa-solid fa-clock"></i> Lần ôn tiếp: <strong id="cardEditNextDate" style="color: var(--text-main);">-</strong></span>
           </div>
-          <button type="button" class="btn-backup" style="width: 100%; justify-content: center; font-size: 0.78rem; padding: 6px;" onclick="resetCardProgress()">
-            <i class="fa-solid fa-rotate-left"></i> Đặt lại tiến trình về Hộp 1 (Ôn ngay hôm nay)
-          </button>
+          <div style="display: flex; gap: 8px; flex-direction: column;">
+            <button type="button" class="btn-backup" style="width: 100%; justify-content: center; font-size: 0.78rem; padding: 7px;" onclick="resetCardProgress()">
+              <i class="fa-solid fa-rotate-left"></i> Đặt lại tiến trình về Hộp 1 (Ôn ngay hôm nay)
+            </button>
+            <button type="button" class="btn-backup" style="width: 100%; justify-content: center; font-size: 0.78rem; padding: 7px; color: var(--danger); border-color: var(--danger);" onclick="deleteCardFromModal()">
+              <i class="fa-solid fa-trash"></i> Xóa thẻ ghi nhớ này
+            </button>
+          </div>
         </div>
 
         <button type="submit" class="btn-submit" id="cardSubmitBtn">
@@ -1441,6 +1450,21 @@
         </div>
 
         <hr style="border: 0; border-top: 1px solid var(--border); margin: 4px 0;" />
+        <div>
+          <label class="form-label">2. Khôi phục từ file sao lưu (.json)</label>
+          <input type="file" id="importFileInput" accept=".json" class="form-control" onchange="importJSONFile(event)" />
+        </div>
+
+        <div>
+          <label class="form-label">Hoặc dán nội dung JSON vào đây:</label>
+          <textarea id="importTextarea" class="form-control" rows="3" placeholder='{"subjects": [...], "cards": [...]}'></textarea>
+          <button type="button" class="btn-submit" style="margin-top: 8px; background: var(--primary);" onclick="importJSONText()">
+            <i class="fa-solid fa-file-import"></i> Khôi phục dữ liệu
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- In-App Toast Container (Thay thế thông báo trên thanh browser của Google) -->
   <div id="toastContainer" class="toast-container"></div>
@@ -1853,9 +1877,12 @@
                 <span class="subject-tag">${escapeHtml(card.subject || 'Chung')}</span>
                 <span class="box-badge"><i class="fa-solid fa-box-archive"></i> Hộp ${card.box || 1}</span>
               </div>
-              <div class="card-btn-tools">
+              <div class="card-btn-tools" onclick="event.stopPropagation()">
                 <button class="mini-icon-btn" onclick="openEditCardModal('${card.id}')" title="Chỉnh sửa thẻ">
                   <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="mini-icon-btn" style="color: var(--danger);" onclick="deleteCard('${card.id}')" title="Xóa thẻ">
+                  <i class="fa-solid fa-trash"></i>
                 </button>
                 <button class="mini-icon-btn" onclick="toggleCardAnswer('${card.id}')" title="Xem/Ẩn đáp án">
                   <i class="fa-solid fa-eye"></i>
@@ -1940,8 +1967,11 @@
                   <span class="subject-tag">${escapeHtml(card.subject || 'Chung')}</span>
                   <div style="display: flex; gap: 6px;">
                     <span class="box-badge"><i class="fa-solid fa-box-archive"></i> Hộp ${card.box || 1}</span>
-                    <button class="mini-icon-btn" onclick="event.stopPropagation(); openEditCardModal('${card.id}')">
+                    <button class="mini-icon-btn" onclick="event.stopPropagation(); openEditCardModal('${card.id}')" title="Sửa thẻ">
                       <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="mini-icon-btn" style="color: var(--danger);" onclick="event.stopPropagation(); deleteCard('${card.id}')" title="Xóa thẻ">
+                      <i class="fa-solid fa-trash"></i>
                     </button>
                   </div>
                 </div>
@@ -1955,9 +1985,14 @@
               <div class="focus-card-face focus-card-face-back">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                   <span class="subject-tag" style="background: var(--success-light); color: var(--success);">Đáp án</span>
-                  <button class="mini-icon-btn" onclick="event.stopPropagation(); openEditCardModal('${card.id}')">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </button>
+                  <div style="display: flex; gap: 6px;">
+                    <button class="mini-icon-btn" onclick="event.stopPropagation(); openEditCardModal('${card.id}')" title="Sửa thẻ">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="mini-icon-btn" style="color: var(--danger);" onclick="event.stopPropagation(); deleteCard('${card.id}')" title="Xóa thẻ">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
                 </div>
                 <div class="focus-card-content">${escapeHtml(card.content)}</div>
                 <div style="text-align: center; font-size: 0.78rem; color: var(--primary); font-weight: 700;">
@@ -2277,21 +2312,30 @@
     }
 
     function deleteCard(id) {
+      const card = cards.find(c => c.id === id);
+      const title = card ? ` "${card.title}"` : '';
       showConfirmModal({
         title: 'Xóa thẻ ghi nhớ',
-        message: 'Bạn có chắc chắn muốn xóa thẻ này vĩnh viễn không?',
+        message: `Bạn có chắc chắn muốn xóa thẻ${title} vĩnh viễn không?`,
         confirmText: 'Xóa thẻ',
         isDanger: true,
         onConfirm: () => {
           cards = cards.filter(c => c.id !== id);
           saveAll();
+          closeModal('cardModal');
           renderSubjectBar();
           updateDueQueue(false);
           updateStats();
           renderCurrentView();
-          showToast('Đã xóa thẻ ghi nhớ!', 'info');
+          showToast('Đã xóa thẻ ghi nhớ thành công!', 'info');
         }
       });
+    }
+
+    function deleteCardFromModal() {
+      const id = document.getElementById('cardEditId').value;
+      if (!id) return;
+      deleteCard(id);
     }
 
     // ==========================================
@@ -2310,7 +2354,7 @@
         list.innerHTML = '<div style="color: var(--text-muted); font-size: 0.85rem;">Chưa có môn học nào.</div>';
         return;
       }
-      list.innerHTML = subjects.map(sub => {
+      list.innerHTML = subjects.map((sub, idx) => {
         const cardCount = cards.filter(c => c.subject === sub).length;
         return `
           <div class="subject-item-row">
@@ -2319,10 +2363,10 @@
               <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 6px;">(${cardCount} thẻ)</span>
             </div>
             <div style="display: flex; gap: 4px;">
-              <button class="mini-icon-btn" onclick="editSubject('${escapeHtml(sub)}')" title="Đổi tên môn">
+              <button class="mini-icon-btn" onclick="editSubjectByIndex(${idx})" title="Đổi tên môn">
                 <i class="fa-solid fa-pen"></i>
               </button>
-              <button class="mini-icon-btn" style="color: var(--danger);" onclick="deleteSubject('${escapeHtml(sub)}')" title="Xóa môn">
+              <button class="mini-icon-btn" style="color: var(--danger);" onclick="deleteSubjectByIndex(${idx})" title="Xóa môn">
                 <i class="fa-solid fa-trash"></i>
               </button>
             </div>
@@ -2331,7 +2375,9 @@
       }).join('');
     }
 
-    function editSubject(oldName) {
+    function editSubjectByIndex(idx) {
+      if (idx < 0 || idx >= subjects.length) return;
+      const oldName = subjects[idx];
       showPromptModal({
         title: 'Đổi tên môn học',
         message: `Nhập tên mới cho môn "${oldName}":`,
@@ -2343,10 +2389,7 @@
             showToast('Tên môn học này đã tồn tại!', 'warning');
             return;
           }
-          const idx = subjects.indexOf(oldName);
-          if (idx !== -1) {
-            subjects[idx] = trimmed;
-          }
+          subjects[idx] = trimmed;
           cards.forEach(c => {
             if (c.subject === oldName) c.subject = trimmed;
           });
@@ -2361,6 +2404,11 @@
           showToast(`Đã đổi tên môn thành "${trimmed}"!`, 'success');
         }
       });
+    }
+
+    function editSubject(oldName) {
+      const idx = subjects.indexOf(oldName);
+      if (idx !== -1) editSubjectByIndex(idx);
     }
 
     function addNewSubject() {
@@ -2379,7 +2427,9 @@
       showToast(`Đã thêm môn "${name}"!`, 'success');
     }
 
-    function deleteSubject(name) {
+    function deleteSubjectByIndex(idx) {
+      if (idx < 0 || idx >= subjects.length) return;
+      const name = subjects[idx];
       const count = cards.filter(c => c.subject === name).length;
       const msg = count > 0 
         ? `Môn "${name}" đang có ${count} thẻ. Xóa môn này sẽ xóa luôn tất cả các thẻ thuộc môn. Bạn có chắc muốn tiếp tục?` 
@@ -2391,7 +2441,7 @@
         confirmText: 'Xóa môn',
         isDanger: true,
         onConfirm: () => {
-          subjects = subjects.filter(s => s !== name);
+          subjects = subjects.filter((_, i) => i !== idx);
           cards = cards.filter(c => c.subject !== name);
           if (selectedSubject === name) selectedSubject = 'ALL';
 
@@ -2404,6 +2454,11 @@
           showToast(`Đã xóa môn "${name}"!`, 'info');
         }
       });
+    }
+
+    function deleteSubject(name) {
+      const idx = subjects.indexOf(name);
+      if (idx !== -1) deleteSubjectByIndex(idx);
     }
 
     function populateSubjectDropdown() {
