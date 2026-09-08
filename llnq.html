@@ -2,8 +2,8 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#6366f1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#4338ca" />
   <title>Ghi Nhớ Ngắt Quãng - Spaced Repetition</title>
   
   <!-- Font Awesome -->
@@ -24,13 +24,17 @@
       --warning-light: #fef3c7;
       --danger: #ef4444;
       --danger-light: #fee2e2;
-      --bg: #f8fafc;
+      --bg: #f1f5f9;
       --card-bg: #ffffff;
+      --card-sub-bg: #f8fafc;
       --text-main: #0f172a;
       --text-muted: #64748b;
       --border: #e2e8f0;
-      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-      --radius: 16px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+      --radius: 12px;
+      --radius-sm: 8px;
     }
 
     .dark {
@@ -39,10 +43,13 @@
       --primary-light: #1e1b4b;
       --bg: #0b0f19;
       --card-bg: #151c2e;
+      --card-sub-bg: #1a233a;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --border: #232d45;
-      --shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
     }
 
     * {
@@ -51,40 +58,43 @@
       padding: 0;
       font-family: 'Plus Jakarta Sans', sans-serif;
       -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
     }
 
     body {
       background-color: var(--bg);
       color: var(--text-main);
       min-height: 100vh;
-      padding-bottom: 95px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px));
+      transition: background-color 0.25s ease, color 0.25s ease;
+      overscroll-behavior-y: none;
     }
 
     .container {
-      max-width: 680px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 0 16px;
     }
 
     /* Header */
     .app-header {
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      background: linear-gradient(135deg, #4338ca, #6366f1, #7c3aed);
       color: white;
-      padding: 24px 20px 28px;
-      border-bottom-left-radius: 28px;
-      border-bottom-right-radius: 28px;
-      box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.35);
+      padding: 16px 0 20px;
+      box-shadow: 0 4px 20px -2px rgba(99, 102, 241, 0.3);
+      margin-bottom: 16px;
     }
 
     .header-nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .logo-area h1 {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-weight: 800;
       display: flex;
       align-items: center;
@@ -92,95 +102,160 @@
     }
 
     .logo-area p {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       opacity: 0.9;
       margin-top: 2px;
     }
 
     .header-actions {
       display: flex;
+      align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .header-btn {
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+      backdrop-filter: blur(4px);
+    }
+
+    .header-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+    .header-btn:active {
+      transform: scale(0.96);
+    }
+
+    .header-btn-primary {
+      background: #ffffff;
+      color: #4338ca;
+      border-color: #ffffff;
+    }
+    .header-btn-primary:hover {
+      background: #f8fafc;
+      color: #3730a3;
     }
 
     .icon-btn {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.18);
       border: 1px solid rgba(255, 255, 255, 0.3);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       cursor: pointer;
       transition: all 0.2s;
     }
 
     .icon-btn:hover {
-      background: rgba(255, 255, 255, 0.35);
-      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .icon-btn:active {
+      transform: scale(0.92);
     }
 
-    /* Stats Overview */
-    .stats-row {
+    /* Quick Stats Bar */
+    .stats-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 10px;
-      margin-top: -18px;
-      position: relative;
-      z-index: 10;
+      margin-bottom: 14px;
     }
 
-    .stat-card {
+    .stat-chip {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 12px 10px;
-      text-align: center;
-      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
     }
 
-    .stat-number {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--primary);
+    .stat-chip-info {
+      display: flex;
+      flex-direction: column;
     }
 
-    .stat-label {
-      font-size: 0.75rem;
+    .stat-chip-label {
+      font-size: 0.72rem;
       font-weight: 600;
       color: var(--text-muted);
-      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    /* Navigation Tabs */
+    .stat-chip-number {
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .stat-chip-icon {
+      font-size: 1.4rem;
+      opacity: 0.85;
+      padding: 8px;
+      border-radius: 10px;
+    }
+
+    /* Main Toolbar: Tabs & View controls */
+    .toolbar-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 6px 10px;
+      box-shadow: var(--shadow-sm);
+    }
+
     .nav-tabs {
       display: flex;
-      background: var(--card-bg);
-      margin: 18px 0 14px;
-      border-radius: 14px;
-      padding: 5px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
+      gap: 6px;
     }
 
     .tab-item {
-      flex: 1;
-      padding: 10px 6px;
-      text-align: center;
+      padding: 8px 14px;
       border: none;
       background: transparent;
       color: var(--text-muted);
       font-weight: 700;
-      font-size: 0.88rem;
-      border-radius: 10px;
+      font-size: 0.85rem;
+      border-radius: var(--radius-sm);
       cursor: pointer;
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 6px;
       transition: all 0.2s;
+    }
+
+    .tab-item:hover {
+      background: var(--bg);
+      color: var(--text-main);
+    }
+    .tab-item:active {
+      transform: scale(0.96);
     }
 
     .tab-item.active {
@@ -188,32 +263,124 @@
       color: white;
     }
 
-    /* Subject / Category Filter Bar */
+    .tab-badge {
+      font-size: 0.7rem;
+      padding: 2px 6px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.25);
+      font-weight: 800;
+    }
+    .tab-item:not(.active) .tab-badge {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .view-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .view-btn {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s;
+    }
+
+    .view-btn.active {
+      background: var(--primary-light);
+      color: var(--primary);
+      border-color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* Filter & Search Bar */
+    .filter-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .search-and-subjects {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .search-box-wrapper {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+
+    .search-box-wrapper i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 9px 12px 9px 34px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--card-bg);
+      color: var(--text-main);
+      font-size: 0.88rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+
+    /* Subject Pills Bar */
     .subject-bar {
       display: flex;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 14px;
+      gap: 6px;
       overflow-x: auto;
-      padding-bottom: 4px;
-      scrollbar-width: none;
+      padding: 2px 0 6px;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
     }
-    .subject-bar::-webkit-scrollbar { display: none; }
 
     .subject-pill {
       flex: 0 0 auto;
-      padding: 7px 14px;
+      padding: 6px 12px;
       border-radius: 20px;
       background: var(--card-bg);
       border: 1px solid var(--border);
       color: var(--text-muted);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 6px;
-      transition: all 0.2s;
+      gap: 5px;
+      transition: all 0.15s;
+    }
+
+    .subject-pill:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .subject-pill:active {
+      transform: scale(0.95);
     }
 
     .subject-pill.active {
@@ -229,15 +396,17 @@
       color: var(--primary);
     }
 
-    /* Review Area */
-    .study-progress {
+    /* Progress bar */
+    .study-progress-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      margin-bottom: 14px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      margin-bottom: 12px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
+      gap: 12px;
+      box-shadow: var(--shadow-sm);
     }
 
     .progress-bar-bg {
@@ -245,7 +414,6 @@
       height: 8px;
       background: var(--border);
       border-radius: 10px;
-      margin: 0 12px;
       overflow: hidden;
     }
 
@@ -256,30 +424,246 @@
       transition: width 0.3s ease;
     }
 
-    /* Flashcard Flip 3D */
-    .card-scene {
+    /* =========================================================
+       GRID / MULTI-CARD REVIEW LAYOUT (Hiển thị nhiều thẻ)
+       ========================================================= */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    @media (min-width: 1400px) {
+      .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      }
+    }
+
+    /* Individual Grid Card */
+    .review-grid-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.3s;
+      position: relative;
+    }
+
+    .review-grid-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .review-grid-card.removed {
+      opacity: 0;
+      transform: scale(0.9);
+      pointer-events: none;
+    }
+
+    .card-top-bar {
+      padding: 10px 12px 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .tag-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .subject-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 12px;
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .box-badge {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: var(--bg);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .card-btn-tools {
+      display: flex;
+      gap: 4px;
+    }
+
+    .mini-icon-btn {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 6px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.15s;
+      min-width: 30px;
+      min-height: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mini-icon-btn:hover {
+      background: var(--bg);
+      color: var(--primary);
+    }
+    .mini-icon-btn:active {
+      transform: scale(0.9);
+    }
+
+    .card-main-body {
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .card-question {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      word-break: break-word;
+    }
+
+    .card-answer-toggle-btn {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--bg);
+      border: 1px dashed var(--border);
+      border-radius: 6px;
+      padding: 8px 10px;
+      text-align: center;
+      margin-top: auto;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .card-answer-toggle-btn:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+    }
+    .card-answer-toggle-btn:active {
+      transform: scale(0.97);
+    }
+
+    .card-answer-panel {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background: var(--card-sub-bg);
+      border-radius: 8px;
+      border-left: 3px solid var(--primary);
+      font-size: 0.88rem;
+      font-weight: 500;
+      line-height: 1.5;
+      white-space: pre-line;
+      word-break: break-word;
+      color: var(--text-main);
+    }
+
+    .card-answer-panel.show {
+      display: block;
+      animation: fadeIn 0.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Rating actions in grid card */
+    .grid-card-ratings {
+      padding: 8px 10px;
+      background: var(--card-sub-bg);
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    .grid-rate-btn {
+      padding: 8px 2px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      min-height: 42px;
+      justify-content: center;
+    }
+    .grid-rate-btn:active {
+      transform: scale(0.92);
+      opacity: 0.9;
+    }
+
+    .rate-btn-again { background: var(--danger-light); color: var(--danger); border-color: rgba(239, 68, 68, 0.2); }
+    .rate-btn-hard { background: var(--warning-light); color: #b45309; border-color: rgba(245, 158, 11, 0.2); }
+    .rate-btn-good { background: var(--primary-light); color: var(--primary); border-color: rgba(99, 102, 241, 0.2); }
+    .rate-btn-easy { background: var(--success-light); color: var(--success); border-color: rgba(16, 185, 129, 0.2); }
+
+    .rate-days {
+      font-size: 0.62rem;
+      font-weight: 600;
+      opacity: 0.85;
+    }
+
+    /* =========================================================
+       SINGLE FOCUS FLASHCARD MODE (1 thẻ lớn)
+       ========================================================= */
+    .focus-mode-container {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .focus-card-scene {
       width: 100%;
-      min-height: 290px;
+      min-height: 260px;
       perspective: 1000px;
       cursor: pointer;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
-    .flashcard {
+    .focus-flashcard {
       width: 100%;
       height: 100%;
-      min-height: 290px;
+      min-height: 260px;
       position: relative;
-      transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
       transform-style: preserve-3d;
-      border-radius: 20px;
+      border-radius: var(--radius);
     }
 
-    .flashcard.is-flipped {
+    .focus-flashcard.is-flipped {
       transform: rotateY(180deg);
     }
 
-    .card-face {
+    .focus-card-face {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -287,31 +671,21 @@
       -webkit-backface-visibility: hidden;
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 24px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .card-face-back {
+    .focus-card-face-back {
       transform: rotateY(180deg);
       border: 2px solid var(--primary);
     }
 
-    .card-subject-tag {
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 20px;
-      background: var(--primary-light);
-      color: var(--primary);
-      align-self: flex-start;
-    }
-
-    .card-title-text {
-      font-size: 1.35rem;
+    .focus-card-title {
+      font-size: 1.25rem;
       font-weight: 700;
       text-align: center;
       line-height: 1.45;
@@ -319,8 +693,8 @@
       word-break: break-word;
     }
 
-    .card-content-text {
-      font-size: 1.1rem;
+    .focus-card-content {
+      font-size: 1rem;
       font-weight: 500;
       line-height: 1.6;
       white-space: pre-line;
@@ -330,42 +704,143 @@
       color: var(--text-main);
     }
 
-    .card-tip-label {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    /* Rating Buttons */
-    .rating-buttons {
-      width: 100%;
+    .focus-ratings {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 8px;
     }
 
-    .rate-btn {
-      padding: 12px 6px;
+    .focus-rate-btn {
+      padding: 12px 4px;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       cursor: pointer;
       font-weight: 700;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
       transition: transform 0.15s;
     }
+    .focus-rate-btn:active { transform: scale(0.95); }
 
-    .rate-btn:active { transform: scale(0.95); }
+    /* =========================================================
+       LIBRARY VIEWS (Grid / Table / Detailed list)
+       ========================================================= */
+    .library-grid-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
 
-    .rate-again { background: var(--danger-light); color: var(--danger); }
-    .rate-hard { background: var(--warning-light); color: #b45309; }
-    .rate-good { background: var(--primary-light); color: var(--primary); }
-    .rate-easy { background: var(--success-light); color: var(--success); }
+    .library-grid-card:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+    .library-grid-card:active {
+      transform: scale(0.98);
+    }
 
-    .rate-sub { font-size: 0.65rem; opacity: 0.85; font-weight: 600; }
+    .card-title-text {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      word-break: break-word;
+    }
+
+    .card-content-preview {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      white-space: pre-line;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      word-break: break-word;
+    }
+
+    .card-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+    }
+
+    .due-badge {
+      padding: 2px 7px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.68rem;
+    }
+    .due-now { background: var(--danger-light); color: var(--danger); }
+    .due-later { background: var(--primary-light); color: var(--primary); }
+
+    /* Compact Table View */
+    .compact-table-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      box-shadow: var(--shadow-sm);
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .compact-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      text-align: left;
+    }
+
+    .compact-table th {
+      background: var(--card-sub-bg);
+      padding: 8px 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .compact-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    .compact-table tr:hover td {
+      background: var(--bg);
+    }
+
+    .table-cell-title {
+      font-weight: 700;
+      color: var(--text-main);
+      max-width: 250px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .table-cell-content {
+      color: var(--text-muted);
+      max-width: 380px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
 
     /* Empty state */
     .empty-state {
@@ -375,157 +850,118 @@
       border-radius: var(--radius);
       border: 1px dashed var(--border);
       color: var(--text-muted);
+      grid-column: 1 / -1;
     }
 
     .empty-state i {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: var(--primary);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       opacity: 0.7;
     }
 
     .btn-action-pill {
-      margin-top: 14px;
+      margin-top: 12px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       background: var(--primary);
       color: white;
       border: none;
-      padding: 10px 20px;
-      border-radius: 12px;
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
       font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-
-    /* Library Cards List */
-    .card-item {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 16px;
-      margin-bottom: 10px;
-      box-shadow: var(--shadow);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .card-item-body {
-      flex: 1;
-    }
-
-    .card-item-title {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .card-item-content {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      white-space: pre-line;
-      line-height: 1.4;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .card-item-meta {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      margin-top: 8px;
-      font-size: 0.75rem;
-    }
-
-    .due-badge {
-      padding: 2px 8px;
-      border-radius: 10px;
-      font-weight: 700;
-      font-size: 0.7rem;
-    }
-
-    .due-now { background: var(--danger-light); color: var(--danger); }
-    .due-later { background: var(--primary-light); color: var(--primary); }
-
-    .card-item-actions {
-      display: flex;
-      gap: 6px;
-    }
-
-    .btn-icon-action {
-      background: none;
-      border: none;
-      color: var(--text-muted);
-      font-size: 1rem;
-      padding: 6px;
-      cursor: pointer;
-    }
-
-    /* Bottom Toolbar */
-    .bottom-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: var(--card-bg);
-      border-top: 1px solid var(--border);
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
-      z-index: 50;
-      max-width: 680px;
-      margin: 0 auto;
-      gap: 10px;
-    }
-
-    .btn-backup {
-      background: var(--bg);
-      color: var(--text-main);
-      border: 1px solid var(--border);
-      padding: 12px 16px;
-      border-radius: 14px;
-      font-weight: 600;
       font-size: 0.85rem;
       cursor: pointer;
+    }
+    .btn-action-pill:active { transform: scale(0.96); }
+
+    /* =========================================================
+       IN-APP TOAST NOTIFICATIONS (Thay thế alert của Chrome)
+       ========================================================= */
+    .toast-container {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
       display: flex;
-      align-items: center;
-      gap: 6px;
+      flex-direction: column;
+      gap: 8px;
+      width: 90%;
+      max-width: 420px;
+      pointer-events: none;
     }
 
-    .btn-add-card {
-      flex: 1;
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 14px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
+    .toast {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-shadow: var(--shadow-lg);
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 8px;
-      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      animation: toastSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: auto;
+      transition: opacity 0.25s, transform 0.25s;
+    }
+
+    .toast.hide {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.95);
+    }
+
+    .toast i {
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .toast-success {
+      border-left: 5px solid var(--success);
+    }
+    .toast-success i { color: var(--success); }
+
+    .toast-error {
+      border-left: 5px solid var(--danger);
+    }
+    .toast-error i { color: var(--danger); }
+
+    .toast-warning {
+      border-left: 5px solid var(--warning);
+    }
+    .toast-warning i { color: var(--warning); }
+
+    .toast-info {
+      border-left: 5px solid var(--primary);
+    }
+    .toast-info i { color: var(--primary); }
+
+    @keyframes toastSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     /* Modals */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.55);
       backdrop-filter: blur(4px);
       display: none;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
-      z-index: 100;
+      z-index: 1000;
+      padding: 16px;
     }
 
     .modal-overlay.active { display: flex; }
@@ -533,65 +969,66 @@
     .modal-content {
       background: var(--card-bg);
       width: 100%;
-      max-width: 680px;
-      border-top-left-radius: 24px;
-      border-top-right-radius: 24px;
-      padding: 24px 20px;
+      max-width: 600px;
+      border-radius: var(--radius);
+      padding: 20px;
       max-height: 90vh;
       overflow-y: auto;
-      animation: slideUp 0.3s ease-out;
+      box-shadow: var(--shadow-lg);
+      animation: modalPop 0.2s ease-out;
     }
 
-    @keyframes slideUp {
-      from { transform: translateY(100%); }
-      to { transform: translateY(0); }
+    @keyframes modalPop {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
 
     .modal-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       padding-bottom: 10px;
       border-bottom: 1px solid var(--border);
     }
 
-    .modal-title { font-size: 1.2rem; font-weight: 700; }
-    .modal-close { background: none; border: none; font-size: 1.4rem; color: var(--text-muted); cursor: pointer; }
+    .modal-title { font-size: 1.1rem; font-weight: 700; }
+    .modal-close { background: none; border: none; font-size: 1.3rem; color: var(--text-muted); cursor: pointer; padding: 4px 8px; }
 
-    .form-group { margin-bottom: 14px; }
-    .form-label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--text-muted); }
+    .form-group { margin-bottom: 12px; }
+    .form-label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 4px; color: var(--text-muted); }
     .form-control {
       width: 100%;
-      padding: 12px 14px;
+      padding: 10px 12px;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: var(--radius-sm);
       background: var(--bg);
       color: var(--text-main);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       outline: none;
     }
     .form-control:focus { border-color: var(--primary); }
 
     .btn-submit {
       width: 100%;
-      padding: 14px;
+      padding: 12px;
       background: var(--primary);
       color: white;
       border: none;
-      border-radius: 12px;
+      border-radius: var(--radius-sm);
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.92rem;
       cursor: pointer;
-      margin-top: 10px;
+      margin-top: 8px;
     }
+    .btn-submit:active { transform: scale(0.98); }
 
     .subject-list-manager {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      margin-top: 12px;
-      max-height: 200px;
+      gap: 6px;
+      margin-top: 10px;
+      max-height: 220px;
       overflow-y: auto;
     }
 
@@ -601,8 +1038,174 @@
       align-items: center;
       padding: 8px 12px;
       background: var(--bg);
-      border-radius: 10px;
+      border-radius: 8px;
       border: 1px solid var(--border);
+      font-size: 0.85rem;
+    }
+
+    /* Fixed Bottom Action Bar (Mobile & Quick Add) */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+      z-index: 50;
+      max-width: 1240px;
+      margin: 0 auto;
+      gap: 10px;
+    }
+
+    .btn-backup {
+      background: var(--bg);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      padding: 9px 14px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.82rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .btn-backup:active { transform: scale(0.96); }
+
+    .btn-add-card {
+      flex: 1;
+      max-width: 300px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+    }
+    .btn-add-card:active { transform: scale(0.96); }
+
+    /* =========================================================
+       MOBILE / ANDROID SPECIFIC RESPONSIVE OPTIMIZATIONS
+       ========================================================= */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 10px;
+      }
+
+      .app-header {
+        padding: 12px 0 14px;
+        margin-bottom: 12px;
+      }
+
+      .header-nav {
+        gap: 8px;
+      }
+
+      .logo-area h1 {
+        font-size: 1.1rem;
+      }
+
+      .header-btn {
+        padding: 7px 11px;
+        font-size: 0.75rem;
+      }
+
+      .stats-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+
+      .stat-chip {
+        padding: 8px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
+      }
+
+      .stat-chip-icon {
+        display: none;
+      }
+
+      .stat-chip-number {
+        font-size: 1.15rem;
+      }
+
+      .stat-chip-label {
+        font-size: 0.62rem;
+      }
+
+      .toolbar-wrapper {
+        padding: 4px 6px;
+        gap: 6px;
+      }
+
+      .tab-item {
+        padding: 7px 10px;
+        font-size: 0.78rem;
+      }
+
+      .view-btn {
+        padding: 6px 8px;
+        font-size: 0.75rem;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      /* Native Android-like Bottom Sheet on Mobile */
+      .modal-overlay {
+        align-items: flex-end;
+        padding: 0;
+      }
+
+      .modal-content {
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+        padding: 20px 16px calc(24px + env(safe-area-inset-bottom, 0px));
+        max-height: 85vh;
+        animation: slideUpSheet 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      @keyframes slideUpSheet {
+        from { transform: translateY(100%); }
+        to { transform: translateY(0); }
+      }
+
+      .bottom-bar {
+        padding: 8px 10px calc(8px + env(safe-area-inset-bottom, 0px));
+        gap: 6px;
+      }
+
+      .btn-backup {
+        padding: 8px 10px;
+        font-size: 0.74rem;
+      }
+
+      .btn-add-card {
+        padding: 9px 12px;
+        font-size: 0.82rem;
+      }
+    }
+
+    @media (min-width: 480px) and (max-width: 768px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
@@ -613,11 +1216,17 @@
     <div class="container">
       <div class="header-nav">
         <div class="logo-area">
-          <h1><i class="fa-solid fa-brain"></i> Nhắc Nhở Học Tập</h1>
-          <p>Phương pháp Lặp lại Ngắt quãng (Spaced Repetition)</p>
+          <h1><i class="fa-solid fa-brain"></i> Ghi Nhớ Ngắt Quãng</h1>
+          <p>Hệ thống ôn tập Spaced Repetition tối ưu hiển thị nhiều thẻ</p>
         </div>
         <div class="header-actions">
-          <button class="icon-btn" id="themeToggle" title="Đổi giao diện">
+          <button class="header-btn header-btn-primary" onclick="openAddCardModal()">
+            <i class="fa-solid fa-plus"></i> Thêm thẻ mới
+          </button>
+          <button class="header-btn" onclick="openBackupModal()">
+            <i class="fa-solid fa-file-arrow-up"></i> Sao lưu
+          </button>
+          <button class="icon-btn" id="themeToggle" title="Đổi giao diện Sáng / Tối">
             <i class="fa-solid fa-moon"></i>
           </button>
         </div>
@@ -626,70 +1235,120 @@
   </header>
 
   <main class="container">
-    <!-- Quick Statistics -->
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="stat-number" id="statDueToday" style="color: var(--danger);">0</div>
-        <div class="stat-label">Cần ôn hôm nay</div>
+    <!-- Quick Statistics Chips -->
+    <div class="stats-container">
+      <div class="stat-chip">
+        <div class="stat-chip-info">
+          <span class="stat-chip-label">Cần ôn hôm nay</span>
+          <span class="stat-chip-number" id="statDueToday" style="color: var(--danger);">0</span>
+        </div>
+        <div class="stat-chip-icon" style="background: var(--danger-light); color: var(--danger);">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-number" id="statTotalCards" style="color: var(--primary);">0</div>
-        <div class="stat-label">Tổng số thẻ</div>
+
+      <div class="stat-chip">
+        <div class="stat-chip-info">
+          <span class="stat-chip-label">Tổng số thẻ</span>
+          <span class="stat-chip-number" id="statTotalCards" style="color: var(--primary);">0</span>
+        </div>
+        <div class="stat-chip-icon" style="background: var(--primary-light); color: var(--primary);">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-number" id="statSubjectsCount" style="color: var(--success);">0</div>
-        <div class="stat-label">Môn học</div>
+
+      <div class="stat-chip">
+        <div class="stat-chip-info">
+          <span class="stat-chip-label">Số môn học</span>
+          <span class="stat-chip-number" id="statSubjectsCount" style="color: var(--success);">0</span>
+        </div>
+        <div class="stat-chip-icon" style="background: var(--success-light); color: var(--success);">
+          <i class="fa-solid fa-book-bookmark"></i>
+        </div>
       </div>
     </div>
 
-    <!-- Navigation Tabs -->
-    <div class="nav-tabs">
-      <button class="tab-item active" onclick="switchMainTab('review')">
-        <i class="fa-solid fa-graduation-cap"></i> Ôn tập hôm nay
-      </button>
-      <button class="tab-item" onclick="switchMainTab('library')">
-        <i class="fa-solid fa-layer-group"></i> Tất cả thẻ học
-      </button>
+    <!-- Main Toolbar (Tabs + View Switcher) -->
+    <div class="toolbar-wrapper">
+      <div class="nav-tabs">
+        <button class="tab-item active" id="tabBtnReview" onclick="switchMainTab('review')">
+          <i class="fa-solid fa-graduation-cap"></i> Ôn tập hôm nay
+          <span class="tab-badge" id="tabDueBadge">0</span>
+        </button>
+        <button class="tab-item" id="tabBtnLibrary" onclick="switchMainTab('library')">
+          <i class="fa-solid fa-table-cells-large"></i> Tất cả thẻ học
+          <span class="tab-badge" id="tabTotalBadge">0</span>
+        </button>
+      </div>
+
+      <!-- View Switcher -->
+      <div class="view-controls" id="reviewViewControls">
+        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Hiển thị:</span>
+        <button class="view-btn active" id="reviewModeGrid" onclick="setReviewMode('grid')" title="Hiển thị nhiều thẻ dạng lưới">
+          <i class="fa-solid fa-table-cells"></i> Lưới nhiều thẻ
+        </button>
+        <button class="view-btn" id="reviewModeFocus" onclick="setReviewMode('focus')" title="Chế độ 1 thẻ tập trung">
+          <i class="fa-solid fa-square"></i> 1 Thẻ
+        </button>
+      </div>
+
+      <div class="view-controls" id="libraryViewControls" style="display: none;">
+        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">Bố cục:</span>
+        <button class="view-btn active" id="libViewGrid" onclick="setLibraryView('grid')" title="Dạng lưới nhiều thẻ">
+          <i class="fa-solid fa-table-cells"></i> Lưới
+        </button>
+        <button class="view-btn" id="libViewCompact" onclick="setLibraryView('compact')" title="Dạng danh sách thu gọn">
+          <i class="fa-solid fa-list-ul"></i> Thu gọn
+        </button>
+      </div>
     </div>
 
-    <!-- Subjects Filter Bar -->
-    <div class="subject-bar" id="subjectBar">
-      <!-- Injected via JS -->
+    <!-- Filter & Subject bar -->
+    <div class="filter-section">
+      <div class="search-and-subjects">
+        <div class="search-box-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm theo câu hỏi, nội dung hoặc môn..." oninput="handleSearch()" />
+        </div>
+      </div>
+      <div class="subject-bar" id="subjectBar">
+        <!-- Injected via JS -->
+      </div>
     </div>
 
     <!-- TAB 1: REVIEW MODE -->
     <div id="tabReview" class="tab-content">
-      <div class="study-progress">
-        <span>Tiến trình hôm nay</span>
+      <div class="study-progress-card">
+        <span style="font-size: 0.8rem; font-weight: 700; white-space: nowrap; color: var(--text-muted);">Tiến trình:</span>
         <div class="progress-bar-bg">
           <div class="progress-bar-fill" id="reviewProgressBar" style="width: 0%;"></div>
         </div>
-        <span id="reviewProgressText">0 / 0</span>
+        <span id="reviewProgressText" style="font-size: 0.82rem; font-weight: 800; color: var(--primary); white-space: nowrap;">0 / 0</span>
       </div>
 
       <div id="reviewContainer">
-        <!-- Injected via JS (card or empty/completed state) -->
+        <!-- Injected via JS -->
       </div>
     </div>
 
-    <!-- TAB 2: ALL CARDS LIST -->
+    <!-- TAB 2: LIBRARY (ALL CARDS) -->
     <div id="tabLibrary" class="tab-content" style="display: none;">
-      <div style="margin-bottom: 12px;">
-        <input type="text" id="searchInput" class="form-control" placeholder="🔍 Tìm kiếm tiêu đề hoặc nội dung thẻ..." oninput="renderLibrary()" />
-      </div>
-      <div id="libraryList">
+      <div id="libraryContainer">
         <!-- Injected via JS -->
       </div>
     </div>
   </main>
 
-  <!-- Bottom Bar -->
+  <!-- Bottom Toolbar -->
   <div class="bottom-bar">
+    <button class="btn-backup" onclick="openManageSubjectsModal()">
+      <i class="fa-solid fa-gear"></i> Quản lý môn học
+    </button>
     <button class="btn-backup" onclick="openBackupModal()">
-      <i class="fa-solid fa-file-arrow-up"></i> Xuất / Nhập
+      <i class="fa-solid fa-file-arrow-up"></i> Sao lưu & Khôi phục
     </button>
     <button class="btn-add-card" onclick="openAddCardModal()">
-      <i class="fa-solid fa-plus"></i> Thêm thẻ ghi nhớ mới
+      <i class="fa-solid fa-plus"></i> Thêm thẻ mới
     </button>
   </div>
 
@@ -708,7 +1367,7 @@
           <div style="display: flex; gap: 8px;">
             <select id="cardSubjectSelect" class="form-control" required></select>
             <button type="button" class="btn-backup" style="white-space: nowrap;" onclick="openManageSubjectsModal()">
-              <i class="fa-solid fa-gear"></i> Môn
+              <i class="fa-solid fa-plus"></i> Môn
             </button>
           </div>
         </div>
@@ -723,7 +1382,17 @@
           <textarea id="cardContent" class="form-control" rows="4" placeholder="Nội dung kiến thức, ý nghĩa, giải thích cần nhớ..." required></textarea>
         </div>
 
-        <button type="submit" class="btn-submit">
+        <div id="cardEditExtraOptions" style="display: none; margin-bottom: 12px; padding: 10px; background: var(--bg); border-radius: var(--radius-sm); border: 1px solid var(--border);">
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">
+            <span><i class="fa-solid fa-layer-group"></i> Cấp độ: <strong id="cardEditBox" style="color: var(--primary);">Hộp 1</strong></span>
+            <span><i class="fa-solid fa-clock"></i> Lần ôn tiếp: <strong id="cardEditNextDate" style="color: var(--text-main);">-</strong></span>
+          </div>
+          <button type="button" class="btn-backup" style="width: 100%; justify-content: center; font-size: 0.78rem; padding: 6px;" onclick="resetCardProgress()">
+            <i class="fa-solid fa-rotate-left"></i> Đặt lại tiến trình về Hộp 1 (Ôn ngay hôm nay)
+          </button>
+        </div>
+
+        <button type="submit" class="btn-submit" id="cardSubmitBtn">
           <i class="fa-solid fa-check"></i> Lưu thẻ ghi nhớ
         </button>
       </form>
@@ -742,13 +1411,13 @@
         <label class="form-label">Thêm môn học mới</label>
         <div style="display: flex; gap: 8px;">
           <input type="text" id="newSubjectName" class="form-control" placeholder="Tên môn học mới..." />
-          <button type="button" class="btn-submit" style="width: auto; padding: 0 18px; margin-top: 0;" onclick="addNewSubject()">
+          <button type="button" class="btn-submit" style="width: auto; padding: 0 16px; margin-top: 0;" onclick="addNewSubject()">
             Thêm
           </button>
         </div>
       </div>
 
-      <div class="form-label" style="margin-top: 16px;">Danh sách môn học hiện có:</div>
+      <div class="form-label" style="margin-top: 14px;">Danh sách môn học hiện có:</div>
       <div class="subject-list-manager" id="subjectManagerList">
         <!-- Injected via JS -->
       </div>
@@ -763,7 +1432,7 @@
         <button class="modal-close" onclick="closeModal('backupModal')">&times;</button>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
         <div>
           <label class="form-label">1. Xuất dữ liệu ra file JSON</label>
           <button type="button" class="btn-submit" style="background: var(--success);" onclick="exportJSON()">
@@ -771,36 +1440,158 @@
           </button>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid var(--border); margin: 6px 0;" />
+        <hr style="border: 0; border-top: 1px solid var(--border); margin: 4px 0;" />
 
-        <div>
-          <label class="form-label">2. Nhập từ file JSON trên máy</label>
-          <input type="file" id="importFileInput" accept=".json" class="form-control" onchange="importJSONFile(event)" />
-        </div>
+  <!-- In-App Toast Container (Thay thế thông báo trên thanh browser của Google) -->
+  <div id="toastContainer" class="toast-container"></div>
 
-        <div>
-          <label class="form-label">Hoặc dán trực tiếp mã JSON vào đây:</label>
-          <textarea id="importTextarea" class="form-control" rows="3" placeholder='Dán nội dung JSON vào đây...'></textarea>
-          <button type="button" class="btn-submit" style="margin-top: 8px;" onclick="importJSONText()">
-            <i class="fa-solid fa-file-import"></i> Khôi phục từ mã JSON
-          </button>
-        </div>
+  <!-- Modal: Xác nhận In-App (Thay thế confirm() của browser) -->
+  <div class="modal-overlay" id="confirmModal">
+    <div class="modal-content" style="max-width: 400px; text-align: center;">
+      <div style="font-size: 2.4rem; color: var(--danger); margin-bottom: 8px;" id="confirmIcon">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <div class="modal-title" id="confirmTitle" style="font-size: 1.1rem; margin-bottom: 6px;">Xác nhận</div>
+      <p id="confirmMessage" style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 18px;"></p>
+      <div style="display: flex; gap: 10px;">
+        <button type="button" class="btn-backup" style="flex: 1; justify-content: center; padding: 11px;" onclick="closeConfirmModal(false)">
+          Hủy bỏ
+        </button>
+        <button type="button" class="btn-submit" id="confirmBtnAction" style="flex: 1; margin-top: 0; padding: 11px; background: var(--danger);" onclick="closeConfirmModal(true)">
+          Đồng ý
+        </button>
       </div>
     </div>
   </div>
 
-  <!-- Hidden file trigger -->
-  <input type="file" id="hiddenFileInput" accept=".json" style="display: none;" onchange="importJSONFile(event)" />
+  <!-- Modal: Nhập dữ liệu In-App (Thay thế prompt() của browser) -->
+  <div class="modal-overlay" id="promptModal">
+    <div class="modal-content" style="max-width: 420px;">
+      <div class="modal-header">
+        <div class="modal-title" id="promptTitle">Nhập thông tin</div>
+        <button class="modal-close" onclick="closePromptModal(false)">&times;</button>
+      </div>
+      <form onsubmit="handlePromptSubmit(event)">
+        <p id="promptMessage" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;"></p>
+        <input type="text" id="promptInput" class="form-control" style="margin-bottom: 14px;" required />
+        <div style="display: flex; gap: 10px;">
+          <button type="button" class="btn-backup" style="flex: 1; justify-content: center;" onclick="closePromptModal(false)">
+            Hủy
+          </button>
+          <button type="submit" class="btn-submit" style="flex: 1; margin-top: 0;">
+            Xác nhận
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script>
     // State Persistence
     let subjects = JSON.parse(localStorage.getItem('my_subjects')) || ['Chung'];
     let cards = JSON.parse(localStorage.getItem('my_cards')) || [];
     let selectedSubject = 'ALL';
-    let currentMainTab = 'review';
+    let currentMainTab = 'review'; // 'review' | 'library'
+    let reviewMode = localStorage.getItem('review_mode') || 'grid'; // 'grid' | 'focus'
+    let libraryView = localStorage.getItem('library_view') || 'grid'; // 'grid' | 'compact'
+    
     let dueCards = [];
-    let currentReviewIndex = 0;
-    let isFlipped = false;
+    let totalDueInitial = 0;
+    let reviewedCountInSession = 0;
+    
+    // Focus Mode state
+    let currentFocusIndex = 0;
+    let isFocusFlipped = false;
+
+    // Callbacks for In-App Modals
+    let confirmCallback = null;
+    let promptCallback = null;
+
+    // Android Haptic Vibration
+    function haptic(duration = 35) {
+      if (typeof navigator !== 'undefined' && navigator.vibrate) {
+        try { navigator.vibrate(duration); } catch (e) {}
+      }
+    }
+
+    // In-App Toast Notification (Thay thế alert)
+    function showToast(message, type = 'info', duration = 2800) {
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      toast.className = `toast toast-${type}`;
+
+      let iconClass = 'fa-solid fa-circle-info';
+      if (type === 'success') iconClass = 'fa-solid fa-circle-check';
+      else if (type === 'error') iconClass = 'fa-solid fa-circle-xmark';
+      else if (type === 'warning') iconClass = 'fa-solid fa-triangle-exclamation';
+
+      toast.innerHTML = `
+        <i class="${iconClass}"></i>
+        <div style="flex: 1;">${escapeHtml(message)}</div>
+      `;
+
+      container.appendChild(toast);
+      haptic(25);
+
+      setTimeout(() => {
+        toast.classList.add('hide');
+        setTimeout(() => toast.remove(), 250);
+      }, duration);
+    }
+
+    // In-App Confirm Modal (Thay thế confirm)
+    function showConfirmModal({ title, message, confirmText = 'Đồng ý', isDanger = true, onConfirm }) {
+      document.getElementById('confirmTitle').innerText = title || 'Xác nhận';
+      document.getElementById('confirmMessage').innerText = message || '';
+      const btn = document.getElementById('confirmBtnAction');
+      btn.innerText = confirmText;
+      btn.style.background = isDanger ? 'var(--danger)' : 'var(--primary)';
+      
+      const icon = document.getElementById('confirmIcon');
+      icon.style.color = isDanger ? 'var(--danger)' : 'var(--primary)';
+      icon.innerHTML = isDanger ? '<i class="fa-solid fa-triangle-exclamation"></i>' : '<i class="fa-solid fa-circle-question"></i>';
+
+      confirmCallback = onConfirm;
+      document.getElementById('confirmModal').classList.add('active');
+      haptic(30);
+    }
+
+    function closeConfirmModal(isConfirmed) {
+      document.getElementById('confirmModal').classList.remove('active');
+      if (isConfirmed && typeof confirmCallback === 'function') {
+        confirmCallback();
+      }
+      confirmCallback = null;
+    }
+
+    // In-App Prompt Modal (Thay thế prompt)
+    function showPromptModal({ title, message, defaultValue = '', onConfirm }) {
+      document.getElementById('promptTitle').innerText = title || 'Nhập thông tin';
+      document.getElementById('promptMessage').innerText = message || '';
+      const input = document.getElementById('promptInput');
+      input.value = defaultValue;
+      promptCallback = onConfirm;
+      document.getElementById('promptModal').classList.add('active');
+      setTimeout(() => input.focus(), 150);
+      haptic(30);
+    }
+
+    function handlePromptSubmit(e) {
+      e.preventDefault();
+      const val = document.getElementById('promptInput').value.trim();
+      document.getElementById('promptModal').classList.remove('active');
+      if (typeof promptCallback === 'function') {
+        promptCallback(val);
+      }
+      promptCallback = null;
+    }
+
+    function closePromptModal() {
+      document.getElementById('promptModal').classList.remove('active');
+      promptCallback = null;
+    }
 
     // Synth for card audio feedback
     const audioCtx = (window.AudioContext || window.webkitAudioContext) ? new (window.AudioContext || window.webkitAudioContext)() : null;
@@ -823,9 +1614,28 @@
     document.addEventListener('DOMContentLoaded', () => {
       initTheme();
       renderSubjectBar();
-      updateDueQueue();
+      updateDueQueue(true);
       updateStats();
-      renderCurrentReviewCard();
+      renderCurrentView();
+
+      // Keyboard shortcuts for focus mode
+      document.addEventListener('keydown', (e) => {
+        if (document.querySelector('.modal-overlay.active')) return;
+        if (currentMainTab === 'review' && reviewMode === 'focus' && dueCards.length > 0) {
+          if (e.code === 'Space') {
+            e.preventDefault();
+            flipFocusCard();
+          } else if (e.key === '1') {
+            rateCardById(dueCards[currentFocusIndex]?.id, 1);
+          } else if (e.key === '2') {
+            rateCardById(dueCards[currentFocusIndex]?.id, 2);
+          } else if (e.key === '3') {
+            rateCardById(dueCards[currentFocusIndex]?.id, 3);
+          } else if (e.key === '4') {
+            rateCardById(dueCards[currentFocusIndex]?.id, 4);
+          }
+        }
+      });
     });
 
     // Theme Management
@@ -839,56 +1649,78 @@
         const isNowDark = document.body.classList.contains('dark');
         localStorage.setItem('theme', isNowDark ? 'dark' : 'light');
         updateThemeIcon(isNowDark);
+        haptic(25);
       });
     }
 
     function updateThemeIcon(isDark) {
       const icon = document.querySelector('#themeToggle i');
-      icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      if (icon) icon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
     }
 
     // Tabs
     function switchMainTab(tab) {
       currentMainTab = tab;
-      document.querySelectorAll('.nav-tabs .tab-item').forEach((btn, idx) => {
-        if ((tab === 'review' && idx === 0) || (tab === 'library' && idx === 1)) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
+      haptic(20);
+      document.getElementById('tabBtnReview').classList.toggle('active', tab === 'review');
+      document.getElementById('tabBtnLibrary').classList.toggle('active', tab === 'library');
 
       document.getElementById('tabReview').style.display = tab === 'review' ? 'block' : 'none';
       document.getElementById('tabLibrary').style.display = tab === 'library' ? 'block' : 'none';
 
+      document.getElementById('reviewViewControls').style.display = tab === 'review' ? 'flex' : 'none';
+      document.getElementById('libraryViewControls').style.display = tab === 'library' ? 'flex' : 'none';
+
       if (tab === 'review') {
-        updateDueQueue();
-        renderCurrentReviewCard();
+        updateDueQueue(false);
+        renderReviewContent();
       } else {
         renderLibrary();
       }
     }
 
+    function setReviewMode(mode) {
+      reviewMode = mode;
+      haptic(20);
+      localStorage.setItem('review_mode', mode);
+      document.getElementById('reviewModeGrid').classList.toggle('active', mode === 'grid');
+      document.getElementById('reviewModeFocus').classList.toggle('active', mode === 'focus');
+      renderReviewContent();
+    }
+
+    function setLibraryView(view) {
+      libraryView = view;
+      haptic(20);
+      localStorage.setItem('library_view', view);
+      document.getElementById('libViewGrid').classList.toggle('active', view === 'grid');
+      document.getElementById('libViewCompact').classList.toggle('active', view === 'compact');
+      renderLibrary();
+    }
+
     // Subject Filter Bar
     function renderSubjectBar() {
       const bar = document.getElementById('subjectBar');
+      const now = new Date();
+      const allDue = cards.filter(c => new Date(c.nextReview) <= now).length;
+
       let html = `
         <div class="subject-pill ${selectedSubject === 'ALL' ? 'active' : ''}" onclick="selectSubject('ALL')">
-          <i class="fa-solid fa-border-all"></i> Tất cả
+          <i class="fa-solid fa-border-all"></i> Tất cả (${cards.length})
         </div>
       `;
 
       subjects.forEach(sub => {
+        const count = cards.filter(c => c.subject === sub).length;
         html += `
           <div class="subject-pill ${selectedSubject === sub ? 'active' : ''}" onclick="selectSubject('${escapeHtml(sub)}')">
-            ${escapeHtml(sub)}
+            ${escapeHtml(sub)} (${count})
           </div>
         `;
       });
 
       html += `
         <div class="subject-pill subject-pill-add" onclick="openManageSubjectsModal()">
-          <i class="fa-solid fa-plus"></i> Thêm/Xóa môn
+          <i class="fa-solid fa-plus"></i> Thêm/Sửa môn
         </div>
       `;
 
@@ -898,25 +1730,46 @@
 
     function selectSubject(sub) {
       selectedSubject = sub;
+      haptic(20);
       renderSubjectBar();
-      updateDueQueue();
+      updateDueQueue(true);
+      renderCurrentView();
+    }
+
+    function handleSearch() {
+      if (currentMainTab === 'library') {
+        renderLibrary();
+      } else {
+        renderReviewContent();
+      }
+    }
+
+    function renderCurrentView() {
       if (currentMainTab === 'review') {
-        renderCurrentReviewCard();
+        renderReviewContent();
       } else {
         renderLibrary();
       }
     }
 
     // Spaced Repetition Queue
-    function updateDueQueue() {
+    function updateDueQueue(resetCount = false) {
       const now = new Date();
+      const search = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+
       dueCards = cards.filter(c => {
         const matchesSubject = selectedSubject === 'ALL' || c.subject === selectedSubject;
+        const matchesSearch = !search || c.title.toLowerCase().includes(search) || c.content.toLowerCase().includes(search);
         const isDue = new Date(c.nextReview) <= now;
-        return matchesSubject && isDue;
+        return matchesSubject && matchesSearch && isDue;
       });
-      currentReviewIndex = 0;
-      isFlipped = false;
+
+      if (resetCount) {
+        totalDueInitial = dueCards.length;
+        reviewedCountInSession = 0;
+        currentFocusIndex = 0;
+        isFocusFlipped = false;
+      }
     }
 
     function updateStats() {
@@ -925,13 +1778,20 @@
       document.getElementById('statDueToday').innerText = dueCount;
       document.getElementById('statTotalCards').innerText = cards.length;
       document.getElementById('statSubjectsCount').innerText = subjects.length;
+
+      document.getElementById('tabDueBadge').innerText = dueCount;
+      document.getElementById('tabTotalBadge').innerText = cards.length;
     }
 
-    // Render Review Card
-    function renderCurrentReviewCard() {
+    // ==========================================
+    // RENDER REVIEW CONTENT
+    // ==========================================
+    function renderReviewContent() {
       const container = document.getElementById('reviewContainer');
       const progText = document.getElementById('reviewProgressText');
       const progBar = document.getElementById('reviewProgressBar');
+
+      updateDueQueue(false);
 
       if (cards.length === 0) {
         progText.innerText = '0 / 0';
@@ -940,9 +1800,9 @@
           <div class="empty-state">
             <i class="fa-solid fa-layer-group"></i>
             <h3>Chưa có thẻ ghi nhớ nào</h3>
-            <p style="margin-top: 6px; font-size: 0.9rem;">Hãy thêm thẻ đầu tiên để bắt đầu ôn tập ngắt quãng.</p>
+            <p style="margin-top: 6px; font-size: 0.85rem;">Hãy thêm thẻ ghi nhớ đầu tiên để bắt đầu ôn tập.</p>
             <button class="btn-action-pill" onclick="openAddCardModal()">
-              <i class="fa-solid fa-plus"></i> Thêm thẻ ghi nhớ
+              <i class="fa-solid fa-plus"></i> Thêm thẻ ghi nhớ mới
             </button>
           </div>
         `;
@@ -950,14 +1810,14 @@
       }
 
       if (dueCards.length === 0) {
-        progText.innerText = '0 / 0';
+        progText.innerText = `${totalDueInitial} / ${totalDueInitial}`;
         progBar.style.width = '100%';
         container.innerHTML = `
-          <div class="empty-state" style="border-style: solid; border-color: var(--success);">
+          <div class="empty-state" style="border-style: solid; border-color: var(--success); background: var(--card-bg);">
             <i class="fa-solid fa-circle-check" style="color: var(--success); opacity: 1;"></i>
             <h3>Tuyệt vời! Đã hoàn thành ôn tập</h3>
-            <p style="margin-top: 6px; font-size: 0.9rem;">
-              Bạn đã ôn hết các thẻ đến hạn hôm nay ${selectedSubject !== 'ALL' ? `của môn <b>${escapeHtml(selectedSubject)}</b>` : ''}.
+            <p style="margin-top: 6px; font-size: 0.85rem;">
+              Không còn thẻ nào cần ôn hôm nay ${selectedSubject !== 'ALL' ? `trong môn <b>${escapeHtml(selectedSubject)}</b>` : ''}.
             </p>
             <button class="btn-action-pill" onclick="openAddCardModal()">
               <i class="fa-solid fa-plus"></i> Thêm thẻ mới
@@ -967,92 +1827,208 @@
         return;
       }
 
-      const total = dueCards.length;
-      const current = currentReviewIndex + 1;
-      progText.innerText = `${current} / ${total}`;
-      progBar.style.width = `${((current - 1) / total) * 100}%`;
+      const total = Math.max(totalDueInitial, dueCards.length + reviewedCountInSession);
+      const done = total - dueCards.length;
+      const percent = total > 0 ? Math.round((done / total) * 100) : 0;
+      progText.innerText = `${done} / ${total} thẻ (${dueCards.length} còn lại)`;
+      progBar.style.width = `${percent}%`;
 
-      const card = dueCards[currentReviewIndex];
-      isFlipped = false;
+      if (reviewMode === 'grid') {
+        renderReviewGrid(container);
+      } else {
+        renderReviewFocus(container);
+      }
+    }
 
-      container.innerHTML = `
-        <div class="card-scene" onclick="flipCard()">
-          <div class="flashcard" id="activeFlashcard">
-            <!-- Mặt trước: Tiêu đề -->
-            <div class="card-face">
-              <div class="card-subject-tag">${escapeHtml(card.subject || 'Chung')}</div>
-              <div class="card-title-text">${escapeHtml(card.title)}</div>
-              <div class="card-tip-label">
-                <i class="fa-solid fa-hand-pointer"></i> Nhấn vào thẻ để xem nội dung
+    // Grid Review Mode (Multi-card view)
+    function renderReviewGrid(container) {
+      let html = '<div class="cards-grid">';
+
+      dueCards.forEach(card => {
+        html += `
+          <div class="review-grid-card" id="reviewCard_${card.id}">
+            <!-- Top bar -->
+            <div class="card-top-bar">
+              <div class="tag-group">
+                <span class="subject-tag">${escapeHtml(card.subject || 'Chung')}</span>
+                <span class="box-badge"><i class="fa-solid fa-box-archive"></i> Hộp ${card.box || 1}</span>
+              </div>
+              <div class="card-btn-tools">
+                <button class="mini-icon-btn" onclick="openEditCardModal('${card.id}')" title="Chỉnh sửa thẻ">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="mini-icon-btn" onclick="toggleCardAnswer('${card.id}')" title="Xem/Ẩn đáp án">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
               </div>
             </div>
 
-            <!-- Mặt sau: Nội dung -->
-            <div class="card-face card-face-back">
-              <div class="card-subject-tag" style="background: var(--success-light); color: var(--success);">Nội dung chi tiết</div>
-              <div class="card-content-text">${escapeHtml(card.content)}</div>
-              <div class="card-tip-label" style="color: var(--primary); font-weight: 700;">
-                Đánh giá mức độ nhớ của bạn bên dưới 👇
+            <!-- Card Body -->
+            <div class="card-main-body" onclick="toggleCardAnswer('${card.id}')">
+              <div class="card-question">${escapeHtml(card.title)}</div>
+              <div class="card-answer-toggle-btn" id="btnReveal_${card.id}">
+                <i class="fa-solid fa-hand-pointer"></i> Nhấn để xem đáp án
+              </div>
+              <div class="card-answer-panel" id="answerPanel_${card.id}">
+                ${escapeHtml(card.content)}
+              </div>
+            </div>
+
+            <!-- Rating Actions -->
+            <div class="grid-card-ratings">
+              <button class="grid-rate-btn rate-btn-again" onclick="rateCardById('${card.id}', 1)" title="Quên - Ôn lại sau 1 ngày">
+                <span>Quên</span>
+                <span class="rate-days">1 ngày</span>
+              </button>
+              <button class="grid-rate-btn rate-btn-hard" onclick="rateCardById('${card.id}', 2)" title="Khó - Ôn sau 2 ngày">
+                <span>Khó</span>
+                <span class="rate-days">+2 ngày</span>
+              </button>
+              <button class="grid-rate-btn rate-btn-good" onclick="rateCardById('${card.id}', 3)" title="Nhớ - Ôn sau vài ngày">
+                <span>Nhớ</span>
+                <span class="rate-days">Tăng cấp</span>
+              </button>
+              <button class="grid-rate-btn rate-btn-easy" onclick="rateCardById('${card.id}', 4)" title="Rất dễ - Giãn cách xa">
+                <span>Rất dễ</span>
+                <span class="rate-days">+7+ ngày</span>
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      html += '</div>';
+      container.innerHTML = html;
+    }
+
+    function toggleCardAnswer(cardId) {
+      const panel = document.getElementById(`answerPanel_${cardId}`);
+      const btn = document.getElementById(`btnReveal_${cardId}`);
+      if (!panel) return;
+      const isVisible = panel.classList.contains('show');
+      if (isVisible) {
+        panel.classList.remove('show');
+        if (btn) btn.style.display = 'block';
+      } else {
+        panel.classList.add('show');
+        if (btn) btn.style.display = 'none';
+        playTone(420, 0.06);
+        haptic(20);
+      }
+    }
+
+    // Focus Single Card Mode
+    function renderReviewFocus(container) {
+      if (currentFocusIndex >= dueCards.length) {
+        currentFocusIndex = 0;
+      }
+      const card = dueCards[currentFocusIndex];
+      isFocusFlipped = false;
+
+      container.innerHTML = `
+        <div class="focus-mode-container">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 0.8rem; color: var(--text-muted);">
+            <span>Thẻ <b>${currentFocusIndex + 1}</b> / <b>${dueCards.length}</b></span>
+            <span><i class="fa-solid fa-keyboard"></i> Phím tắt: <b>Space</b> (lật), <b>1-4</b> (đánh giá)</span>
+          </div>
+
+          <div class="focus-card-scene" onclick="flipFocusCard()">
+            <div class="focus-flashcard" id="activeFocusCard">
+              <!-- Front -->
+              <div class="focus-card-face">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span class="subject-tag">${escapeHtml(card.subject || 'Chung')}</span>
+                  <div style="display: flex; gap: 6px;">
+                    <span class="box-badge"><i class="fa-solid fa-box-archive"></i> Hộp ${card.box || 1}</span>
+                    <button class="mini-icon-btn" onclick="event.stopPropagation(); openEditCardModal('${card.id}')">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="focus-card-title">${escapeHtml(card.title)}</div>
+                <div style="text-align: center; font-size: 0.78rem; color: var(--text-muted);">
+                  <i class="fa-solid fa-hand-pointer"></i> Nhấn vào thẻ để xem đáp án
+                </div>
+              </div>
+
+              <!-- Back -->
+              <div class="focus-card-face focus-card-face-back">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span class="subject-tag" style="background: var(--success-light); color: var(--success);">Đáp án</span>
+                  <button class="mini-icon-btn" onclick="event.stopPropagation(); openEditCardModal('${card.id}')">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </button>
+                </div>
+                <div class="focus-card-content">${escapeHtml(card.content)}</div>
+                <div style="text-align: center; font-size: 0.78rem; color: var(--primary); font-weight: 700;">
+                  Chọn mức độ nhớ bên dưới 👇
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Rating Buttons -->
-        <div class="rating-buttons">
-          <button class="rate-btn rate-again" onclick="rateCard(1)">
-            <span><i class="fa-solid fa-xmark"></i> Quên</span>
-            <span class="rate-sub">Ôn lại 1 ngày</span>
-          </button>
-          <button class="rate-btn rate-hard" onclick="rateCard(2)">
-            <span><i class="fa-solid fa-triangle-exclamation"></i> Khó</span>
-            <span class="rate-sub">+2 ngày</span>
-          </button>
-          <button class="rate-btn rate-good" onclick="rateCard(3)">
-            <span><i class="fa-solid fa-thumbs-up"></i> Nhớ được</span>
-            <span class="rate-sub">+4 ngày</span>
-          </button>
-          <button class="rate-btn rate-easy" onclick="rateCard(4)">
-            <span><i class="fa-solid fa-star"></i> Rất dễ</span>
-            <span class="rate-sub">+7+ ngày</span>
-          </button>
+          <!-- Rating Buttons -->
+          <div class="focus-ratings">
+            <button class="focus-rate-btn rate-btn-again" onclick="rateCardById('${card.id}', 1)">
+              <span><i class="fa-solid fa-xmark"></i> Quên (1)</span>
+              <span class="rate-days">Ôn lại 1 ngày</span>
+            </button>
+            <button class="focus-rate-btn rate-btn-hard" onclick="rateCardById('${card.id}', 2)">
+              <span><i class="fa-solid fa-triangle-exclamation"></i> Khó (2)</span>
+              <span class="rate-days">+2 ngày</span>
+            </button>
+            <button class="focus-rate-btn rate-btn-good" onclick="rateCardById('${card.id}', 3)">
+              <span><i class="fa-solid fa-thumbs-up"></i> Nhớ (3)</span>
+              <span class="rate-days">+4 ngày</span>
+            </button>
+            <button class="focus-rate-btn rate-btn-easy" onclick="rateCardById('${card.id}', 4)">
+              <span><i class="fa-solid fa-star"></i> Rất dễ (4)</span>
+              <span class="rate-days">+7+ ngày</span>
+            </button>
+          </div>
         </div>
       `;
     }
 
-    function flipCard() {
-      const cardEl = document.getElementById('activeFlashcard');
+    function flipFocusCard() {
+      const cardEl = document.getElementById('activeFocusCard');
       if (!cardEl) return;
-      isFlipped = !isFlipped;
-      cardEl.classList.toggle('is-flipped', isFlipped);
+      isFocusFlipped = !isFocusFlipped;
+      cardEl.classList.toggle('is-flipped', isFocusFlipped);
       playTone(420, 0.08);
+      haptic(25);
     }
 
-    // Spaced Repetition Rating Calculation
-    function rateCard(rating) {
-      if (dueCards.length === 0) return;
-      const card = dueCards[currentReviewIndex];
+    // Rate card by ID
+    function rateCardById(cardId, rating) {
+      const card = cards.find(c => c.id === cardId);
+      if (!card) return;
+
       let intervalDays = 1;
       let box = card.box || 1;
 
       if (rating === 1) {
         box = 1;
         intervalDays = 1;
-        playTone(260, 0.2);
+        playTone(260, 0.18);
+        haptic(45);
       } else if (rating === 2) {
         box = Math.max(1, box);
         intervalDays = 2;
         playTone(440, 0.15);
+        haptic(35);
       } else if (rating === 3) {
         box += 1;
         const intervals = [1, 3, 7, 14, 30, 60, 120];
         intervalDays = intervals[Math.min(box - 1, intervals.length - 1)];
         playTone(620, 0.15);
+        haptic(30);
       } else if (rating === 4) {
         box += 2;
         const intervals = [2, 6, 14, 30, 60, 120, 240];
         intervalDays = intervals[Math.min(box - 1, intervals.length - 1)];
         playTone(850, 0.2);
+        haptic([30, 40, 30]);
       }
 
       const nextDate = new Date();
@@ -1063,23 +2039,36 @@
       card.lastReviewed = new Date().toISOString();
 
       saveAll();
+      reviewedCountInSession++;
 
-      currentReviewIndex++;
-      if (currentReviewIndex >= dueCards.length) {
-        updateDueQueue();
+      if (reviewMode === 'grid') {
+        const el = document.getElementById(`reviewCard_${cardId}`);
+        if (el) {
+          el.classList.add('removed');
+          setTimeout(() => {
+            updateDueQueue(false);
+            updateStats();
+            renderReviewContent();
+          }, 250);
+          return;
+        }
       }
+
+      updateDueQueue(false);
       updateStats();
-      renderCurrentReviewCard();
+      renderReviewContent();
     }
 
-    // Library Tab Rendering
+    // ==========================================
+    // RENDER LIBRARY (ALL CARDS)
+    // ==========================================
     function renderLibrary() {
-      const container = document.getElementById('libraryList');
-      const search = document.getElementById('searchInput').value.toLowerCase().trim();
+      const container = document.getElementById('libraryContainer');
+      const search = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
 
       const filtered = cards.filter(c => {
         const matchesSubject = selectedSubject === 'ALL' || c.subject === selectedSubject;
-        const matchesSearch = c.title.toLowerCase().includes(search) || c.content.toLowerCase().includes(search);
+        const matchesSearch = !search || c.title.toLowerCase().includes(search) || c.content.toLowerCase().includes(search);
         return matchesSubject && matchesSearch;
       });
 
@@ -1087,46 +2076,122 @@
         container.innerHTML = `
           <div class="empty-state">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <h3>Không có thẻ nào phù hợp</h3>
-            <p style="margin-top: 6px; font-size: 0.9rem;">Thử tìm kiếm từ khóa khác hoặc thêm thẻ mới.</p>
+            <h3>Không tìm thấy thẻ nào</h3>
+            <p style="margin-top: 6px; font-size: 0.85rem;">Thử tìm kiếm với từ khóa khác hoặc thêm thẻ mới.</p>
+            <button class="btn-action-pill" onclick="openAddCardModal()">
+              <i class="fa-solid fa-plus"></i> Thêm thẻ mới
+            </button>
           </div>
         `;
         return;
       }
 
       const now = new Date();
-      container.innerHTML = filtered.map(item => {
-        const isDue = new Date(item.nextReview) <= now;
-        const nextDateStr = new Date(item.nextReview).toLocaleDateString('vi-VN');
-        return `
-          <div class="card-item">
-            <div class="card-item-body">
-              <div class="card-item-title">${escapeHtml(item.title)}</div>
-              <div class="card-item-content">${escapeHtml(item.content)}</div>
-              <div class="card-item-meta">
-                <span class="card-subject-tag" style="font-size: 0.68rem; padding: 2px 8px;">${escapeHtml(item.subject || 'Chung')}</span>
+
+      if (libraryView === 'grid') {
+        let html = '<div class="cards-grid">';
+        filtered.forEach(item => {
+          const isDue = new Date(item.nextReview) <= now;
+          const nextDateStr = new Date(item.nextReview).toLocaleDateString('vi-VN');
+          html += `
+            <div class="library-grid-card" onclick="openEditCardModal('${item.id}')" title="Nhấn để chỉnh sửa thẻ">
+              <div>
+                <div class="card-top-bar" style="padding: 0 0 6px 0;">
+                  <div class="tag-group">
+                    <span class="subject-tag">${escapeHtml(item.subject || 'Chung')}</span>
+                    <span class="box-badge">Hộp ${item.box || 1}</span>
+                  </div>
+                  <div class="card-btn-tools" onclick="event.stopPropagation()">
+                    <button class="mini-icon-btn" onclick="openEditCardModal('${item.id}')" title="Sửa">
+                      <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="mini-icon-btn" style="color: var(--danger);" onclick="deleteCard('${item.id}')" title="Xóa">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card-title-text">${escapeHtml(item.title)}</div>
+                <div class="card-content-preview">${escapeHtml(item.content)}</div>
+              </div>
+
+              <div class="card-footer-row">
                 <span class="due-badge ${isDue ? 'due-now' : 'due-later'}">
-                  ${isDue ? 'Cần ôn hôm nay' : 'Ôn ngày ' + nextDateStr}
+                  ${isDue ? '⚡ Cần ôn ngay' : '📅 ' + nextDateStr}
+                </span>
+                <span style="color: var(--text-muted); font-weight: 600;">
+                  <i class="fa-solid fa-pen"></i> Sửa
                 </span>
               </div>
             </div>
-            <div class="card-item-actions">
-              <button class="btn-icon-action" onclick="openEditCardModal('${item.id}')" title="Sửa">
-                <i class="fa-solid fa-pen-to-square"></i>
-              </button>
-              <button class="btn-icon-action" style="color: var(--danger);" onclick="deleteCard('${item.id}')" title="Xóa">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
+          `;
+        });
+        html += '</div>';
+        container.innerHTML = html;
+      } else {
+        // Compact Table View
+        let html = `
+          <div class="compact-table-container">
+            <table class="compact-table">
+              <thead>
+                <tr>
+                  <th style="width: 40px;">#</th>
+                  <th>Môn học</th>
+                  <th>Câu hỏi / Tiêu đề</th>
+                  <th>Nội dung / Đáp án</th>
+                  <th>Cấp độ</th>
+                  <th>Lần ôn tới</th>
+                  <th style="text-align: right;">Thao tác</th>
+                </tr>
+              </thead>
+              <tbody>
+        `;
+
+        filtered.forEach((item, idx) => {
+          const isDue = new Date(item.nextReview) <= now;
+          const nextDateStr = new Date(item.nextReview).toLocaleDateString('vi-VN');
+          html += `
+            <tr onclick="openEditCardModal('${item.id}')" style="cursor: pointer;" title="Nhấn để chỉnh sửa">
+              <td style="color: var(--text-muted); font-size: 0.75rem;">${idx + 1}</td>
+              <td><span class="subject-tag">${escapeHtml(item.subject || 'Chung')}</span></td>
+              <td><div class="table-cell-title">${escapeHtml(item.title)}</div></td>
+              <td><div class="table-cell-content">${escapeHtml(item.content)}</div></td>
+              <td><span class="box-badge">Hộp ${item.box || 1}</span></td>
+              <td>
+                <span class="due-badge ${isDue ? 'due-now' : 'due-later'}">
+                  ${isDue ? 'Hôm nay' : nextDateStr}
+                </span>
+              </td>
+              <td style="text-align: right;" onclick="event.stopPropagation()">
+                <button class="mini-icon-btn" onclick="openEditCardModal('${item.id}')" title="Sửa thẻ">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="mini-icon-btn" style="color: var(--danger);" onclick="deleteCard('${item.id}')" title="Xóa thẻ">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          `;
+        });
+
+        html += `
+              </tbody>
+            </table>
           </div>
         `;
-      }).join('');
+        container.innerHTML = html;
+      }
     }
 
-    // Modal: Thêm / Sửa Thẻ
+    // ==========================================
+    // MODAL: ADD / EDIT CARD
+    // ==========================================
     function openAddCardModal() {
-      document.getElementById('cardModalTitle').innerText = 'Thêm thẻ ghi nhớ mới';
+      haptic(20);
+      document.getElementById('cardModalTitle').innerHTML = '<i class="fa-solid fa-plus"></i> Thêm thẻ ghi nhớ mới';
+      document.getElementById('cardSubmitBtn').innerHTML = '<i class="fa-solid fa-check"></i> Lưu thẻ ghi nhớ';
       document.getElementById('cardEditId').value = '';
+      document.getElementById('cardEditExtraOptions').style.display = 'none';
       document.getElementById('cardForm').reset();
       populateSubjectDropdown();
       if (selectedSubject !== 'ALL') {
@@ -1138,14 +2203,40 @@
     function openEditCardModal(id) {
       const card = cards.find(c => c.id === id);
       if (!card) return;
+      haptic(20);
 
-      document.getElementById('cardModalTitle').innerText = 'Chỉnh sửa thẻ ghi nhớ';
+      document.getElementById('cardModalTitle').innerHTML = '<i class="fa-solid fa-pen-to-square"></i> Chỉnh sửa thẻ ghi nhớ';
+      document.getElementById('cardSubmitBtn').innerHTML = '<i class="fa-solid fa-check"></i> Cập nhật thẻ';
       document.getElementById('cardEditId').value = card.id;
       populateSubjectDropdown();
       document.getElementById('cardSubjectSelect').value = card.subject || subjects[0] || 'Chung';
       document.getElementById('cardTitle').value = card.title;
       document.getElementById('cardContent').value = card.content;
+
+      const extraOptions = document.getElementById('cardEditExtraOptions');
+      if (extraOptions) {
+        extraOptions.style.display = 'block';
+        document.getElementById('cardEditBox').innerText = `Hộp ${card.box || 1}`;
+        const nextDate = new Date(card.nextReview).toLocaleDateString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' });
+        document.getElementById('cardEditNextDate').innerText = nextDate;
+      }
+
       document.getElementById('cardModal').classList.add('active');
+    }
+
+    function resetCardProgress() {
+      const editId = document.getElementById('cardEditId').value;
+      if (!editId) return;
+      const card = cards.find(c => c.id === editId);
+      if (card) {
+        card.box = 1;
+        card.nextReview = new Date().toISOString();
+        document.getElementById('cardEditBox').innerText = 'Hộp 1';
+        const nextDate = new Date(card.nextReview).toLocaleDateString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' });
+        document.getElementById('cardEditNextDate').innerText = nextDate;
+        saveAll();
+        showToast('Đã đặt lại tiến trình của thẻ về Hộp 1 (Ôn ngay hôm nay)!', 'success');
+      }
     }
 
     function handleCardSubmit(e) {
@@ -1162,6 +2253,7 @@
           item.title = title;
           item.content = content;
         }
+        showToast('Đã cập nhật thẻ ghi nhớ thành công!', 'success');
       } else {
         const newCard = {
           id: Date.now().toString(),
@@ -1172,28 +2264,41 @@
           nextReview: new Date().toISOString()
         };
         cards.unshift(newCard);
+        showToast('Đã thêm thẻ ghi nhớ mới!', 'success');
       }
 
       saveAll();
       closeModal('cardModal');
-      updateDueQueue();
+
+      renderSubjectBar();
+      updateDueQueue(false);
       updateStats();
-      if (currentMainTab === 'library') renderLibrary();
-      else renderCurrentReviewCard();
+      renderCurrentView();
     }
 
     function deleteCard(id) {
-      if (!confirm('Bạn có chắc chắn muốn xóa thẻ này không?')) return;
-      cards = cards.filter(c => c.id !== id);
-      saveAll();
-      updateDueQueue();
-      updateStats();
-      if (currentMainTab === 'library') renderLibrary();
-      else renderCurrentReviewCard();
+      showConfirmModal({
+        title: 'Xóa thẻ ghi nhớ',
+        message: 'Bạn có chắc chắn muốn xóa thẻ này vĩnh viễn không?',
+        confirmText: 'Xóa thẻ',
+        isDanger: true,
+        onConfirm: () => {
+          cards = cards.filter(c => c.id !== id);
+          saveAll();
+          renderSubjectBar();
+          updateDueQueue(false);
+          updateStats();
+          renderCurrentView();
+          showToast('Đã xóa thẻ ghi nhớ!', 'info');
+        }
+      });
     }
 
-    // Modal: Quản lý Môn học
+    // ==========================================
+    // MODAL: SUBJECT MANAGEMENT
+    // ==========================================
     function openManageSubjectsModal() {
+      haptic(20);
       renderSubjectManagerList();
       document.getElementById('newSubjectName').value = '';
       document.getElementById('subjectModal').classList.add('active');
@@ -1213,19 +2318,56 @@
               <strong>${escapeHtml(sub)}</strong>
               <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 6px;">(${cardCount} thẻ)</span>
             </div>
-            <button class="btn-icon-action" style="color: var(--danger);" onclick="deleteSubject('${escapeHtml(sub)}')" title="Xóa môn">
-              <i class="fa-solid fa-trash"></i>
-            </button>
+            <div style="display: flex; gap: 4px;">
+              <button class="mini-icon-btn" onclick="editSubject('${escapeHtml(sub)}')" title="Đổi tên môn">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+              <button class="mini-icon-btn" style="color: var(--danger);" onclick="deleteSubject('${escapeHtml(sub)}')" title="Xóa môn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
           </div>
         `;
       }).join('');
+    }
+
+    function editSubject(oldName) {
+      showPromptModal({
+        title: 'Đổi tên môn học',
+        message: `Nhập tên mới cho môn "${oldName}":`,
+        defaultValue: oldName,
+        onConfirm: (newName) => {
+          if (!newName || newName.trim() === '' || newName.trim() === oldName) return;
+          const trimmed = newName.trim();
+          if (subjects.includes(trimmed)) {
+            showToast('Tên môn học này đã tồn tại!', 'warning');
+            return;
+          }
+          const idx = subjects.indexOf(oldName);
+          if (idx !== -1) {
+            subjects[idx] = trimmed;
+          }
+          cards.forEach(c => {
+            if (c.subject === oldName) c.subject = trimmed;
+          });
+          if (selectedSubject === oldName) selectedSubject = trimmed;
+
+          saveAll();
+          renderSubjectManagerList();
+          renderSubjectBar();
+          updateDueQueue(false);
+          updateStats();
+          renderCurrentView();
+          showToast(`Đã đổi tên môn thành "${trimmed}"!`, 'success');
+        }
+      });
     }
 
     function addNewSubject() {
       const name = document.getElementById('newSubjectName').value.trim();
       if (!name) return;
       if (subjects.includes(name)) {
-        alert('Môn học này đã tồn tại!');
+        showToast('Môn học này đã tồn tại!', 'warning');
         return;
       }
       subjects.push(name);
@@ -1234,31 +2376,39 @@
       renderSubjectManagerList();
       renderSubjectBar();
       updateStats();
+      showToast(`Đã thêm môn "${name}"!`, 'success');
     }
 
     function deleteSubject(name) {
       const count = cards.filter(c => c.subject === name).length;
       const msg = count > 0 
-        ? `Môn "${name}" đang có ${count} thẻ. Xóa môn này sẽ xóa luôn tất cả các thẻ thuộc môn. Tiếp tục?` 
-        : `Bạn có chắc muốn xóa môn "${name}"?`;
+        ? `Môn "${name}" đang có ${count} thẻ. Xóa môn này sẽ xóa luôn tất cả các thẻ thuộc môn. Bạn có chắc muốn tiếp tục?` 
+        : `Bạn có chắc chắn muốn xóa môn "${name}"?`;
       
-      if (!confirm(msg)) return;
+      showConfirmModal({
+        title: 'Xóa môn học',
+        message: msg,
+        confirmText: 'Xóa môn',
+        isDanger: true,
+        onConfirm: () => {
+          subjects = subjects.filter(s => s !== name);
+          cards = cards.filter(c => c.subject !== name);
+          if (selectedSubject === name) selectedSubject = 'ALL';
 
-      subjects = subjects.filter(s => s !== name);
-      cards = cards.filter(c => c.subject !== name);
-      if (selectedSubject === name) selectedSubject = 'ALL';
-
-      saveAll();
-      renderSubjectManagerList();
-      renderSubjectBar();
-      updateDueQueue();
-      updateStats();
-      if (currentMainTab === 'library') renderLibrary();
-      else renderCurrentReviewCard();
+          saveAll();
+          renderSubjectManagerList();
+          renderSubjectBar();
+          updateDueQueue(true);
+          updateStats();
+          renderCurrentView();
+          showToast(`Đã xóa môn "${name}"!`, 'info');
+        }
+      });
     }
 
     function populateSubjectDropdown() {
       const select = document.getElementById('cardSubjectSelect');
+      if (!select) return;
       if (subjects.length === 0) {
         subjects = ['Chung'];
         saveAll();
@@ -1266,8 +2416,11 @@
       select.innerHTML = subjects.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
     }
 
-    // Modal: Backup / Export / Import JSON
+    // ==========================================
+    // MODAL: BACKUP / EXPORT / IMPORT JSON
+    // ==========================================
     function openBackupModal() {
+      haptic(20);
       document.getElementById('importTextarea').value = '';
       document.getElementById('importFileInput').value = '';
       document.getElementById('backupModal').classList.add('active');
@@ -1284,6 +2437,7 @@
       dl.setAttribute("href", dataStr);
       dl.setAttribute("download", `spaced_repetition_backup_${new Date().toISOString().slice(0, 10)}.json`);
       dl.click();
+      showToast('Đã tải xuống file sao lưu JSON!', 'success');
     }
 
     function importJSONFile(event) {
@@ -1299,7 +2453,7 @@
     function importJSONText() {
       const text = document.getElementById('importTextarea').value.trim();
       if (!text) {
-        alert('Vui lòng dán mã JSON!');
+        showToast('Vui lòng dán mã JSON vào ô nhập!', 'warning');
         return;
       }
       applyImportedJSON(text);
@@ -1309,7 +2463,6 @@
       try {
         const data = JSON.parse(jsonString);
         if (Array.isArray(data)) {
-          // Backward compatibility if only cards array
           cards = data;
         } else if (data && typeof data === 'object') {
           if (Array.isArray(data.subjects)) subjects = data.subjects;
@@ -1321,13 +2474,12 @@
         saveAll();
         closeModal('backupModal');
         renderSubjectBar();
-        updateDueQueue();
+        updateDueQueue(true);
         updateStats();
-        if (currentMainTab === 'library') renderLibrary();
-        else renderCurrentReviewCard();
-        alert('Khôi phục dữ liệu thẻ và môn học thành công!');
+        renderCurrentView();
+        showToast('Khôi phục dữ liệu thẻ và môn học thành công!', 'success');
       } catch (err) {
-        alert('Lỗi đọc dữ liệu JSON: ' + err.message);
+        showToast('Lỗi đọc dữ liệu JSON: ' + err.message, 'error');
       }
     }
 
