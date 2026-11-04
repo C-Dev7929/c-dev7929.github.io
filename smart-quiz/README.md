@@ -214,4 +214,5 @@ Giải thích chi tiết:
 - Để công thức sắc nét hơn, bạn có thể chỉnh thông số **DPI** lên `300` hoặc `600` trong phần settings của sidebar.
 
 ---
+- **Chia sẻ đề thi:** Thêm tham số `dataUrl` vào link Smart Quiz để tự động nạp đề từ URL JSON, ví dụ: `https://c-dev7929.github.io/smart-quiz/?dataUrl=<URL-đến-file-JSON>`.
 *Tài liệu được tạo để hỗ trợ học tập và nghiên cứu.*
