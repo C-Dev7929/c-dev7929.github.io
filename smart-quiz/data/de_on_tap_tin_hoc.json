@@ -1,9 +1,57 @@
 {
-  "title": "Đề ôn tập Tin học – Trắc nghiệm và Đúng/Sai",
+  "title": "ĐỀ CƯƠNG ÔN TẬP GIỮA HỌC KỲ I NĂM HỌC 2026-2027 - MÔN TIN HỌC 12",
   "subject": "Tin học",
   "questions": [
     {
       "id": 1,
+      "type": "mcq",
+      "question": "Câu 1: Trí tuệ nhân tạo (AI) là gì?",
+      "options": [
+        "A. Là khả năng của máy tính thực hiện các công việc mang tính trí tuệ của con người.",
+        "B. Là quá trình máy tính tự động hóa công việc lặp đi lặp lại.",
+        "C. Là công nghệ giúp con người lưu trữ thông tin tốt hơn.",
+        "D. Là hệ thống quản lý dữ liệu trên máy tính."
+      ],
+      "correct": "A. Là khả năng của máy tính thực hiện các công việc mang tính trí tuệ của con người.",
+      "explanation": "Trí tuệ nhân tạo (AI) là khả năng của máy tính có thể thực hiện các công việc mang tính trí tuệ của con người như đọc chữ, hiểu tiếng nói, dịch thuật, lái xe hay ra quyết định.",
+      "image": null,
+      "topic": "Làm quen với trí tuệ nhân tạo",
+      "level": "NB"
+    },
+    {
+      "id": 2,
+      "type": "mcq",
+      "question": "Câu 2: Mục đích chính của AI là gì?",
+      "options": [
+        "A. Giúp máy tính lưu trữ dữ liệu tốt hơn.",
+        "B. Xây dựng phần mềm để máy tính có năng lực trí tuệ tương tự con người.",
+        "C. Tăng cường hiệu quả của tự động hóa.",
+        "D. Tạo ra các phần mềm máy tính với tốc độ xử lý nhanh hơn."
+      ],
+      "correct": "B. Xây dựng phần mềm để máy tính có năng lực trí tuệ tương tự con người.",
+      "explanation": "Mục đích chính của nghiên cứu và phát triển AI là chế tạo ra các phần mềm, hệ thống giúp máy tính có được các năng lực trí tuệ tương tự như con người.",
+      "image": null,
+      "topic": "Làm quen với trí tuệ nhân tạo",
+      "level": "NB"
+    },
+    {
+      "id": 3,
+      "type": "mcq",
+      "question": "Câu 3: Khả năng học của AI giúp máy tính là gì?",
+      "options": [
+        "A. Tự động hóa các tác vụ.",
+        "B. Điều chỉnh hành vi dựa trên dữ liệu mới.",
+        "C. Tăng tốc độ xử lý dữ liệu.",
+        "D. Chẩn đoán các lỗi phần mềm."
+      ],
+      "correct": "B. Điều chỉnh hành vi dựa trên dữ liệu mới.",
+      "explanation": "Khả năng học của AI cho phép hệ thống máy tính tích lũy tri thức từ dữ liệu được cung cấp để tự điều chỉnh hành vi và cải thiện hiệu suất theo thời gian.",
+      "image": null,
+      "topic": "Làm quen với trí tuệ nhân tạo",
+      "level": "TH"
+    },
+    {
+      "id": 4,
       "type": "mcq",
       "question": "Câu 4: Khả năng suy luận của AI được áp dụng trong trường hợp nào sau đây?",
       "options": [
@@ -13,13 +61,13 @@
         "D. Tự động điều khiển xe tự lái."
       ],
       "correct": "B. Hệ thống chẩn đoán y tế.",
-      "explanation": "AI suy luận bằng cách phân tích triệu chứng, xét nghiệm và dữ liệu để hỗ trợ bác sĩ chẩn đoán.",
+      "explanation": "Hệ thống chẩn đoán y tế áp dụng khả năng suy luận logic và tri thức chuyên gia để phân tích triệu chứng, bệnh án nhằm đưa ra kết luận chẩn đoán bệnh.",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
+      "topic": "Làm quen với trí tuệ nhân tạo",
       "level": "TH"
     },
     {
-      "id": 2,
+      "id": 5,
       "type": "mcq",
       "question": "Câu 5: Khả năng nhận thức của AI có đặc trưng gì?",
       "options": [
@@ -29,13 +77,13 @@
         "D. Điều chỉnh hành vi dựa trên phản hồi của người dùng."
       ],
       "correct": "C. Cảm nhận và hiểu biết môi trường thông qua cảm biến.",
-      "explanation": "Khả năng nhận thức của AI là cảm nhận và nhận biết môi trường thông qua cảm biến hoặc thiết bị đầu vào.",
+      "explanation": "Khả năng nhận thức của AI là khả năng cảm nhận và hiểu biết môi trường xung quanh thông qua các thiết bị cảm biến, camera, micro (như thị giác máy tính, nhận dạng âm thanh).",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
+      "topic": "Làm quen với trí tuệ nhân tạo",
       "level": "NB"
     },
     {
-      "id": 3,
+      "id": 6,
       "type": "mcq",
       "question": "Câu 6: Loại AI nào được thiết kế để thực hiện một nhiệm vụ cụ thể?",
       "options": [
@@ -45,13 +93,13 @@
         "D. Trí tuệ nhân tạo không hạn chế."
       ],
       "correct": "B. Trí tuệ nhân tạo hẹp.",
-      "explanation": "AI hẹp được thiết kế để thực hiện một nhiệm vụ hoặc nhóm nhiệm vụ cụ thể.",
+      "explanation": "Trí tuệ nhân tạo hẹp (ANI - Artificial Narrow Intelligence) hay AI yếu được thiết kế và huấn luyện để giải quyết một nhiệm vụ cụ thể (như chơi cờ, nhận diện khuôn mặt).",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
+      "topic": "Làm quen với trí tuệ nhân tạo",
       "level": "NB"
     },
     {
-      "id": 4,
+      "id": 7,
       "type": "mcq",
       "question": "Câu 7: Robot Asimo là ví dụ về AI trong lĩnh vực nào?",
       "options": [
@@ -61,13 +109,13 @@
         "D. Chẩn đoán y tế."
       ],
       "correct": "C. Điều khiển robot thông minh.",
-      "explanation": "ASIMO là robot có khả năng di chuyển và thực hiện hành động tự động, thuộc lĩnh vực điều khiển robot thông minh.",
+      "explanation": "Robot Asimo của Honda là ví dụ tiêu biểu về việc ứng dụng AI trong lĩnh vực điều khiển robot thông minh có hình dáng và khả năng vận động giống con người.",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
+      "topic": "Làm quen với trí tuệ nhân tạo",
       "level": "NB"
     },
     {
-      "id": 5,
+      "id": 8,
       "type": "mcq",
       "question": "Câu 8: Ứng dụng của AI trong lĩnh vực y học giúp gì cho việc điều trị?",
       "options": [
@@ -77,13 +125,13 @@
         "D. Điều hành các cơ sở y tế một cách thông minh."
       ],
       "correct": "B. Cải thiện chất lượng chẩn đoán và điều trị bệnh.",
-      "explanation": "AI hỗ trợ phân tích dữ liệu y tế, nâng cao chất lượng chẩn đoán và hỗ trợ lựa chọn phương pháp điều trị.",
+      "explanation": "Trong y học, AI phân tích hình ảnh y tế (X-quang, CT, MRI) và bệnh án giúp bác sĩ nâng cao độ chính xác trong chẩn đoán và đưa ra phác đồ điều trị cá nhân hóa hiệu quả.",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
-      "level": "TH"
+      "topic": "Trí tuệ nhân tạo trong khoa học và đời sống",
+      "level": "NB"
     },
     {
-      "id": 6,
+      "id": 9,
       "type": "mcq",
       "question": "Câu 9: AI trong giao thông giúp phát triển công nghệ gì?",
       "options": [
@@ -93,13 +141,13 @@
         "D. Giám sát vi phạm giao thông."
       ],
       "correct": "A. Xe tự lái và quản lý giao thông thông minh.",
-      "explanation": "AI được ứng dụng trong xe tự lái và các hệ thống quản lý giao thông thông minh.",
+      "explanation": "AI đóng vai trò cốt lõi trong việc phát triển các phương tiện tự hành (xe tự lái) và hệ thống điều phối, quản lý luồng giao thông thông minh.",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
+      "topic": "Trí tuệ nhân tạo trong khoa học và đời sống",
       "level": "NB"
     },
     {
-      "id": 7,
+      "id": 10,
       "type": "mcq",
       "question": "Câu 10: AI hỗ trợ giáo dục bằng cách nào?",
       "options": [
@@ -109,13 +157,13 @@
         "D. Cải tiến giáo trình giảng dạy."
       ],
       "correct": "C. Phát triển các nền tảng học tập trực tuyến và theo dõi tiến trình.",
-      "explanation": "AI có thể cá nhân hóa học tập, phát triển nền tảng học trực tuyến và theo dõi tiến trình học.",
+      "explanation": "AI hỗ trợ cá nhân hóa học tập thông qua các nền tảng học trực tuyến thông minh, theo dõi tiến trình của từng học sinh và gợi ý nội dung học phù hợp.",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
+      "topic": "Trí tuệ nhân tạo trong khoa học và đời sống",
       "level": "NB"
     },
     {
-      "id": 8,
+      "id": 11,
       "type": "mcq",
       "question": "Câu 11: AI tổng quát (AGI) khác với AI hẹp ở điểm nào?",
       "options": [
@@ -125,13 +173,13 @@
         "D. AI tổng quát chỉ có thể thực hiện một tác vụ nhất định."
       ],
       "correct": "A. AI tổng quát có khả năng tự học và thực hiện nhiều công việc giống con người.",
-      "explanation": "AGI hướng đến khả năng thực hiện nhiều nhiệm vụ trí tuệ khác nhau; AI hẹp chỉ tập trung vào nhiệm vụ cụ thể.",
+      "explanation": "AI tổng quát (AGI) hướng tới khả năng tự học, tư duy và thực hiện đa dạng các công việc trí tuệ giống như con người, thay vì chỉ giới hạn ở một nhiệm vụ như AI hẹp.",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
+      "topic": "Trí tuệ nhân tạo trong khoa học và đời sống",
       "level": "TH"
     },
     {
-      "id": 9,
+      "id": 12,
       "type": "mcq",
       "question": "Câu 12: ChatGPT do OpenAI phát triển được đánh giá cao vì lý do gì?",
       "options": [
@@ -141,13 +189,13 @@
         "D. Khả năng giải mã thông tin mật."
       ],
       "correct": "A. Khả năng tổng hợp thông tin phức tạp và thích nghi với phản hồi của người dùng.",
-      "explanation": "ChatGPT xử lý ngôn ngữ tự nhiên, tổng hợp thông tin và điều chỉnh phản hồi theo yêu cầu người dùng.",
+      "explanation": "ChatGPT là mô hình ngôn ngữ lớn nổi bật với khả năng hiểu ngữ cảnh, tổng hợp thông tin phức tạp, trả lời tự nhiên và điều chỉnh theo phản hồi của người dùng.",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
-      "level": "NB"
+      "topic": "Trí tuệ nhân tạo trong khoa học và đời sống",
+      "level": "TH"
     },
     {
-      "id": 10,
+      "id": 13,
       "type": "mcq",
       "question": "Câu 13: Một trong những mối lo ngại lớn về AI là gì?",
       "options": [
@@ -157,13 +205,13 @@
         "D. Giảm khả năng kiểm soát dữ liệu cá nhân."
       ],
       "correct": "B. Áp lực thất nghiệp do tự động hóa công việc.",
-      "explanation": "Tự động hóa có thể làm thay đổi nhu cầu lao động và tạo áp lực thất nghiệp ở một số ngành nghề. Lưu ý: phương án về quyền riêng tư cũng là một rủi ro thực tế.",
+      "explanation": "Sự phát triển của AI giúp tự động hóa nhiều công việc, dẫn đến nguy cơ thay thế sức lao động của con người và gây ra áp lực thất nghiệp ở nhiều ngành nghề.",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
-      "level": "TH"
+      "topic": "Trí tuệ nhân tạo trong khoa học và đời sống",
+      "level": "NB"
     },
     {
-      "id": 11,
+      "id": 14,
       "type": "mcq",
       "question": "Câu 14: Để đảm bảo an toàn khi phát triển AI, điều gì là cần thiết?",
       "options": [
@@ -173,13 +221,13 @@
         "D. Tự động hóa tất cả các công việc của con người."
       ],
       "correct": "B. Đề ra các ràng buộc đạo đức và pháp lý.",
-      "explanation": "Các ràng buộc đạo đức và pháp lý giúp kiểm soát rủi ro, bảo vệ quyền và lợi ích của người dùng.",
+      "explanation": "Để kiểm soát rủi ro và đảm bảo AI phục vụ lợi ích con người, cần xây dựng các quy chuẩn đạo đức và hành lang pháp lý chặt chẽ trong nghiên cứu, phát triển và ứng dụng AI.",
       "image": null,
-      "topic": "Trí tuệ nhân tạo",
-      "level": "NB"
+      "topic": "Trí tuệ nhân tạo trong khoa học và đời sống",
+      "level": "TH"
     },
     {
-      "id": 12,
+      "id": 15,
       "type": "mcq",
       "question": "Câu 15: Thiết bị nào được sử dụng để mở rộng phạm vi của mạng không dây?",
       "options": [
@@ -189,29 +237,29 @@
         "D. Wireless Access Point"
       ],
       "correct": "D. Wireless Access Point",
-      "explanation": "Wireless Access Point cung cấp kết nối Wi-Fi và mở rộng vùng phủ sóng mạng không dây.",
+      "explanation": "Wireless Access Point (WAP / điểm truy cập không dây) được dùng để kết nối các thiết bị không dây vào mạng LAN và mở rộng vùng phủ sóng của mạng không dây.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
+      "topic": "Một số thiết bị mạng thông dụng",
       "level": "NB"
     },
     {
-      "id": 13,
+      "id": 16,
       "type": "mcq",
       "question": "Câu 16: Router có chức năng chính là gì?",
       "options": [
-        "A. Kết nối các máy tính với nhau trong cùng một mạng LAN.",
-        "B. Chuyển tiếp dữ liệu trên mạng LAN.",
-        "C. Định tuyến dữ liệu giữa các mạng khác nhau.",
-        "D. Mở rộng phạm vi của mạng không dây."
+        "A. Kết nối các máy tính với nhau trong cùng một mạng LAN",
+        "B. Chuyển tiếp dữ liệu trên mạng LAN",
+        "C. Định tuyến dữ liệu giữa các mạng khác nhau",
+        "D. Mở rộng phạm vi của mạng không dây"
       ],
-      "correct": "C. Định tuyến dữ liệu giữa các mạng khác nhau.",
-      "explanation": "Router định tuyến và chuyển tiếp gói dữ liệu giữa các mạng khác nhau.",
+      "correct": "C. Định tuyến dữ liệu giữa các mạng khác nhau",
+      "explanation": "Router (bộ định tuyến) có chức năng chính là dẫn đường (định tuyến) các gói dữ liệu di chuyển giữa các mạng khác nhau (ví dụ giữa mạng LAN và mạng Internet).",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
+      "topic": "Một số thiết bị mạng thông dụng",
       "level": "NB"
     },
     {
-      "id": 14,
+      "id": 17,
       "type": "mcq",
       "question": "Câu 17: Thiết bị nào thường được tích hợp Wi-Fi và có cổng WAN cho kết nối Internet?",
       "options": [
@@ -221,13 +269,13 @@
         "D. Wireless Access Point"
       ],
       "correct": "C. Router Wi-Fi",
-      "explanation": "Router Wi-Fi thường có cổng WAN, chức năng định tuyến và khả năng phát Wi-Fi.",
+      "explanation": "Router Wi-Fi thường tích hợp cả bộ định tuyến (có cổng WAN để kết nối ra Internet), Switch (các cổng LAN) và điểm truy cập không dây (phát Wi-Fi).",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
-      "level": "TH"
+      "topic": "Một số thiết bị mạng thông dụng",
+      "level": "NB"
     },
     {
-      "id": 15,
+      "id": 18,
       "type": "mcq",
       "question": "Câu 18: Thiết bị nào có chức năng chuyển đổi tín hiệu từ tín hiệu số sang tín hiệu tương tự và ngược lại?",
       "options": [
@@ -237,13 +285,13 @@
         "D. Modem"
       ],
       "correct": "D. Modem",
-      "explanation": "Modem thực hiện điều chế và giải điều chế tín hiệu để phù hợp với đường truyền.",
+      "explanation": "Modem (Modulator/Demodulator) thực hiện điều chế tín hiệu số từ thiết bị mạng thành tín hiệu tương tự (hoặc quang) để truyền trên đường truyền ISP và giải điều chế theo chiều ngược lại.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
+      "topic": "Một số thiết bị mạng thông dụng",
       "level": "NB"
     },
     {
-      "id": 16,
+      "id": 19,
       "type": "mcq",
       "question": "Câu 19: Thiết bị nào thường được dùng để kết nối các thiết bị trong một mạng LAN mà không cần dây cáp?",
       "options": [
@@ -253,45 +301,45 @@
         "D. Router"
       ],
       "correct": "C. Wireless Access Point",
-      "explanation": "Access Point cho phép thiết bị kết nối mạng LAN không dây thông qua Wi-Fi.",
+      "explanation": "Wireless Access Point (AP) dùng sóng vô tuyến (Wi-Fi) để kết nối các thiết bị đầu cuối vào mạng LAN mà không cần sử dụng dây cáp mạng.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
+      "topic": "Một số thiết bị mạng thông dụng",
       "level": "NB"
     },
     {
-      "id": 17,
+      "id": 20,
       "type": "mcq",
       "question": "Câu 20: Giao thức mạng là gì?",
       "options": [
-        "A. Tập hợp các quy định về cách truyền tải dữ liệu giữa các thiết bị mạng.",
-        "B. Một loại phần cứng để truyền dữ liệu.",
-        "C. Một địa chỉ cho các thiết bị mạng.",
-        "D. Một phần mềm quản lý mạng."
+        "A. Tập hợp các quy định về cách truyền tải dữ liệu giữa các thiết bị mạng",
+        "B. Một loại phần cứng để truyền dữ liệu",
+        "C. Một địa chỉ cho các thiết bị mạng",
+        "D. Một phần mềm quản lý mạng"
       ],
-      "correct": "A. Tập hợp các quy định về cách truyền tải dữ liệu giữa các thiết bị mạng.",
-      "explanation": "Giao thức mạng là tập hợp quy tắc quy định cách các thiết bị trao đổi dữ liệu.",
+      "correct": "A. Tập hợp các quy định về cách truyền tải dữ liệu giữa các thiết bị mạng",
+      "explanation": "Giao thức mạng (Network Protocol) là tập hợp các quy tắc, quy định chuẩn hóa về định dạng và cách thức trao đổi dữ liệu giữa các thiết bị trong mạng.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
-      "level": "TH"
+      "topic": "Giao thức mạng",
+      "level": "NB"
     },
     {
-      "id": 18,
+      "id": 21,
       "type": "mcq",
       "question": "Câu 21: Giao thức IP có chức năng chính là gì?",
       "options": [
-        "A. Quản lý địa chỉ MAC của các thiết bị.",
-        "B. Thiết lập địa chỉ IP và dẫn đường các gói dữ liệu.",
-        "C. Mã hóa dữ liệu truyền trên mạng.",
-        "D. Tạo kết nối giữa các thiết bị không dây."
+        "A. Quản lý địa chỉ MAC của các thiết bị",
+        "B. Thiết lập địa chỉ IP và dẫn đường các gói dữ liệu",
+        "C. Mã hóa dữ liệu truyền trên mạng",
+        "D. Tạo kết nối giữa các thiết bị không dây"
       ],
-      "correct": "B. Thiết lập địa chỉ IP và dẫn đường các gói dữ liệu.",
-      "explanation": "IP sử dụng địa chỉ IP để xác định nguồn, đích và hỗ trợ định tuyến gói tin; DHCP mới là giao thức thường cấp phát IP tự động.",
+      "correct": "B. Thiết lập địa chỉ IP và dẫn đường các gói dữ liệu",
+      "explanation": "Giao thức IP (Internet Protocol) đảm nhiệm việc định địa chỉ logic (địa chỉ IP) cho các thiết bị và định tuyến, dẫn đường các gói tin từ nguồn đến đích qua các mạng.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
-      "level": "TH"
+      "topic": "Giao thức mạng",
+      "level": "NB"
     },
     {
-      "id": 19,
+      "id": 22,
       "type": "mcq",
       "question": "Câu 22: Giao thức nào chịu trách nhiệm đảm bảo dữ liệu được gửi đến đúng ứng dụng và theo thứ tự?",
       "options": [
@@ -301,29 +349,29 @@
         "D. MAC"
       ],
       "correct": "B. TCP",
-      "explanation": "TCP truyền dữ liệu tin cậy, sắp xếp đúng thứ tự và sử dụng số cổng để phân biệt ứng dụng.",
+      "explanation": "Giao thức TCP (Transmission Control Protocol) quản lý việc phân mảnh dữ liệu thành các gói, đánh số thứ tự, kiểm soát lỗi và chuyển giao chính xác cho đúng cổng ứng dụng.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
-      "level": "TH"
+      "topic": "Giao thức mạng",
+      "level": "NB"
     },
     {
-      "id": 20,
+      "id": 23,
       "type": "mcq",
       "question": "Câu 23: Địa chỉ IP khác với địa chỉ MAC ở điểm nào?",
       "options": [
-        "A. Địa chỉ IP là địa chỉ vật lý, còn MAC là địa chỉ tạm thời.",
-        "B. Địa chỉ IP là địa chỉ tạm thời, còn MAC là địa chỉ vật lý (được nhà sản xuất gắn trên thiết bị card mạng).",
-        "C. Địa chỉ IP chỉ dùng trong mạng LAN, còn MAC dùng cho mạng toàn cầu.",
-        "D. Địa chỉ IP và MAC không liên quan đến nhau."
+        "A. Địa chỉ IP là địa chỉ vật lý, còn MAC là địa chỉ tạm thời",
+        "B. Địa chỉ IP là địa chỉ logic, còn MAC là địa chỉ vật lý (được nhà sản xuất gán trên thiết bị card mạng)",
+        "C. Địa chỉ IP chỉ dùng trong mạng LAN, còn MAC dùng cho mạng toàn cầu",
+        "D. Địa chỉ IP và MAC không liên quan đến nhau"
       ],
-      "correct": "B. Địa chỉ IP là địa chỉ tạm thời, còn MAC là địa chỉ vật lý (được nhà sản xuất gắn trên thiết bị card mạng).",
-      "explanation": "IP là địa chỉ logic có thể thay đổi theo mạng; MAC là địa chỉ gắn với giao diện mạng.",
+      "correct": "B. Địa chỉ IP là địa chỉ logic, còn MAC là địa chỉ vật lý (được nhà sản xuất gán trên thiết bị card mạng)",
+      "explanation": "Địa chỉ MAC là địa chỉ vật lý gắn cố định trên phần cứng card mạng do nhà sản xuất cấp, còn địa chỉ IP là địa chỉ logic ở tầng mạng có thể thay đổi tùy thuộc vào mạng mà thiết bị tham gia.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
+      "topic": "Giao thức mạng",
       "level": "TH"
     },
     {
-      "id": 21,
+      "id": 24,
       "type": "mcq",
       "question": "Câu 24: Giao thức nào được sử dụng để chia dữ liệu thành các gói và đảm bảo gửi lại nếu cần?",
       "options": [
@@ -333,13 +381,13 @@
         "D. FTP"
       ],
       "correct": "C. TCP",
-      "explanation": "TCP chia dữ liệu thành các đoạn và có cơ chế phát hiện mất dữ liệu, truyền lại khi cần.",
+      "explanation": "TCP chia dữ liệu từ tầng ứng dụng thành các phân đoạn (gói dữ liệu), theo dõi quá trình truyền và yêu cầu truyền lại nếu gói tin bị thất lạc hoặc lỗi.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
-      "level": "TH"
+      "topic": "Giao thức mạng",
+      "level": "NB"
     },
     {
-      "id": 22,
+      "id": 25,
       "type": "mcq",
       "question": "Câu 25: IPv4 dùng bao nhiêu bit để biểu diễn địa chỉ IP?",
       "options": [
@@ -349,125 +397,125 @@
         "D. 128"
       ],
       "correct": "C. 32",
-      "explanation": "IPv4 sử dụng địa chỉ có độ dài 32 bit.",
+      "explanation": "Địa chỉ IPv4 sử dụng chuỗi 32 bit nhị phân, thường được chia thành 4 cụm 8 bit (4 octet) cách nhau bởi dấu chấm.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
+      "topic": "Giao thức mạng",
       "level": "NB"
-    },
-    {
-      "id": 23,
-      "type": "mcq",
-      "question": "Câu 26: Cổng ứng dụng (port) trong giao thức TCP có chức năng gì?",
-      "options": [
-        "A. Định tuyến các gói dữ liệu.",
-        "B. Phân biệt giữa các ứng dụng khác nhau trên cùng một thiết bị.",
-        "C. Thiết lập địa chỉ cho thiết bị mạng.",
-        "D. Kiểm tra lỗi dữ liệu."
-      ],
-      "correct": "B. Phân biệt giữa các ứng dụng khác nhau trên cùng một thiết bị.",
-      "explanation": "Số cổng TCP giúp phân biệt các ứng dụng hoặc dịch vụ trên cùng một thiết bị.",
-      "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
-      "level": "TH"
-    },
-    {
-      "id": 24,
-      "type": "mcq",
-      "question": "Câu 27: Khi một thiết bị kết nối mạng, giao thức IP sẽ làm gì đầu tiên?",
-      "options": [
-        "A. Chia nhỏ dữ liệu thành các gói.",
-        "B. Thiết lập địa chỉ cho thiết bị đó.",
-        "C. Kết nối thiết bị với ứng dụng.",
-        "D. Kiểm tra tính bảo mật của thiết bị."
-      ],
-      "correct": "B. Thiết lập địa chỉ cho thiết bị đó.",
-      "explanation": "Thiết bị cần có địa chỉ IP để trao đổi dữ liệu; việc cấp phát thường do cấu hình thủ công hoặc DHCP, không phải bản thân IP tự cấp địa chỉ.",
-      "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
-      "level": "TH"
-    },
-    {
-      "id": 25,
-      "type": "mcq",
-      "question": "Câu 28: Giao thức mạng có vai trò gì trong việc truyền dữ liệu?",
-      "options": [
-        "A. Xác định đường đi ngắn nhất cho dữ liệu.",
-        "B. Đảm bảo dữ liệu đến đúng đích, đúng định dạng, đúng cách xử lý.",
-        "C. Kiểm tra tính bảo mật của dữ liệu.",
-        "D. Lưu trữ dữ liệu tạm thời trước khi truyền."
-      ],
-      "correct": "B. Đảm bảo dữ liệu đến đúng đích, đúng định dạng, đúng cách xử lý.",
-      "explanation": "Giao thức mạng quy định cách truyền, nhận và xử lý dữ liệu để các thiết bị giao tiếp thống nhất.",
-      "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
-      "level": "TH"
     },
     {
       "id": 26,
       "type": "mcq",
-      "question": "Câu 29: IPv6 khác với IPv4 ở điểm nào?",
+      "question": "Câu 26: Cổng ứng dụng (port) trong giao thức TCP có chức năng gì?",
       "options": [
-        "A. IPv6 dùng địa chỉ 32-bit, IPv4 dùng địa chỉ 128-bit.",
-        "B. IPv6 dùng địa chỉ 128-bit, IPv4 dùng địa chỉ 32-bit.",
-        "C. IPv6 nhanh hơn IPv4.",
-        "D. IPv6 chỉ dùng trong mạng nội bộ, IPv4 dùng cho Internet."
+        "A. Định tuyến các gói dữ liệu",
+        "B. Phân biệt giữa các ứng dụng khác nhau trên cùng một thiết bị",
+        "C. Thiết lập địa chỉ cho thiết bị mạng",
+        "D. Kiểm tra lỗi dữ liệu"
       ],
-      "correct": "A. IPv6 dùng địa chỉ 32-bit, IPv4 dùng địa chỉ 128-bit.",
-      "explanation": "IPv6 sử dụng địa chỉ 128 bit, trong khi IPv4 sử dụng 32 bit.",
+      "correct": "B. Phân biệt giữa các ứng dụng khác nhau trên cùng một thiết bị",
+      "explanation": "Số hiệu cổng (port) trong giao thức TCP giúp phân biệt các tiến trình, ứng dụng mạng khác nhau đang chạy đồng thời trên cùng một máy tính.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
-      "level": "NB"
+      "topic": "Giao thức mạng",
+      "level": "TH"
     },
     {
       "id": 27,
       "type": "mcq",
-      "question": "Câu 30: Vai trò chính của giao thức TCP trong bộ giao thức TCP/IP là gì?",
+      "question": "Câu 27: Khi một thiết bị kết nối mạng, giao thức IP sẽ làm gì đầu tiên?",
       "options": [
-        "A. Chia nhỏ dữ liệu thành các gói và đảm bảo chúng được gửi lại nếu lỗi xảy ra.",
-        "B. Xác định địa chỉ IP của các thiết bị trong mạng.",
-        "C. Tìm đường đi tối ưu cho dữ liệu qua mạng.",
-        "D. Mã hóa dữ liệu trước khi gửi đi."
+        "A. Chia nhỏ dữ liệu thành các gói",
+        "B. Thiết lập địa chỉ cho thiết bị đó",
+        "C. Kết nối thiết bị với ứng dụng",
+        "D. Kiểm tra tính bảo mật của thiết bị"
       ],
-      "correct": "A. Chia nhỏ dữ liệu thành các gói và đảm bảo chúng được gửi lại nếu lỗi xảy ra.",
-      "explanation": "TCP chia dữ liệu thành các đoạn, đánh số thứ tự và hỗ trợ truyền lại khi dữ liệu bị mất.",
+      "correct": "B. Thiết lập địa chỉ cho thiết bị đó",
+      "explanation": "Để có thể gửi và nhận các gói tin trên mạng theo giao thức IP, thiết bị trước tiên cần được cấp phát và thiết lập một địa chỉ IP xác định.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
+      "topic": "Giao thức mạng",
       "level": "TH"
     },
     {
       "id": 28,
       "type": "mcq",
-      "question": "Câu 31: Địa chỉ IP tương ứng ở dạng thập phân của địa chỉ IP dưới dạng nhị phân sau đây là gì? 11000000 10101000 00001101 11010010",
+      "question": "Câu 28: Giao thức mạng có vai trò gì trong việc truyền dữ liệu?",
+      "options": [
+        "A. Xác định đường đi ngắn nhất cho dữ liệu",
+        "B. Đảm bảo dữ liệu đến đúng đích, đúng định dạng, đúng cách xử lý",
+        "C. Kiểm tra tính bảo mật của dữ liệu",
+        "D. Lưu trữ dữ liệu tạm thời trước khi truyền"
+      ],
+      "correct": "B. Đảm bảo dữ liệu đến đúng đích, đúng định dạng, đúng cách xử lý",
+      "explanation": "Giao thức mạng quy định chặt chẽ cấu trúc gói tin và quy trình trao đổi nhằm đảm bảo dữ liệu được truyền đến đúng nơi nhận, đúng định dạng và được xử lý đồng bộ.",
+      "image": null,
+      "topic": "Giao thức mạng",
+      "level": "NB"
+    },
+    {
+      "id": 29,
+      "type": "mcq",
+      "question": "Câu 29: IPv6 khác với IPv4 ở điểm nào?",
+      "options": [
+        "A. IPv6 dùng địa chỉ 32-bit, IPv4 dùng địa chỉ 128-bit",
+        "B. IPv6 dùng địa chỉ 128-bit, IPv4 dùng địa chỉ 32-bit",
+        "C. IPv6 nhanh hơn IPv4",
+        "D. IPv6 chỉ dùng trong mạng nội bộ, IPv4 dùng cho Internet"
+      ],
+      "correct": "B. IPv6 dùng địa chỉ 128-bit, IPv4 dùng địa chỉ 32-bit",
+      "explanation": "IPv4 sử dụng 32 bit để đánh địa chỉ, trong khi IPv6 ra đời sau sử dụng 128 bit nhằm mở rộng không gian địa chỉ tránh cạn kiệt.",
+      "image": null,
+      "topic": "Giao thức mạng",
+      "level": "NB"
+    },
+    {
+      "id": 30,
+      "type": "mcq",
+      "question": "Câu 30: Vai trò chính của giao thức TCP trong bộ giao thức TCP/IP là gì?",
+      "options": [
+        "A. Chia nhỏ dữ liệu thành các gói và đảm bảo chúng được gửi lại nếu lỗi xảy ra",
+        "B. Xác định địa chỉ IP của các thiết bị trong mạng",
+        "C. Tìm đường đi tối ưu cho dữ liệu qua mạng",
+        "D. Mã hóa dữ liệu trước khi gửi đi"
+      ],
+      "correct": "A. Chia nhỏ dữ liệu thành các gói và đảm bảo chúng được gửi lại nếu lỗi xảy ra",
+      "explanation": "Trong bộ TCP/IP, giao thức TCP đảm bảo truyền dữ liệu tin cậy bằng cách cắt nhỏ dữ liệu thành các gói, đánh số thứ tự, xác nhận đã nhận và gửi lại gói bị lỗi.",
+      "image": null,
+      "topic": "Giao thức mạng",
+      "level": "NB"
+    },
+    {
+      "id": 31,
+      "type": "mcq",
+      "question": "Câu 31: Địa chỉ IP tương ứng ở dạng thập phân của địa chỉ IP dưới dạng nhị phân sau đây là gì?\n11000000 10101000 00001101 11010010",
       "options": [
         "A. 192.168.13.210",
         "B. 192.168.3.7",
         "C. 168.192.7.210",
         "D. 168.192.2.13"
       ],
-      "correct": "C. 168.192.7.210",
-      "explanation": "Chia thành bốn nhóm 8 bit: 11000000 = 192; 10101000 = 168; 00001101 = 13; 11010010 = 210.",
+      "correct": "A. 192.168.13.210",
+      "explanation": "Đổi từng cụm 8 bit từ nhị phân sang thập phân: 11000000 = 192; 10101000 = 168; 00001101 = 13; 11010010 = 210. Vậy địa chỉ thập phân là 192.168.13.210.",
       "image": null,
-      "topic": "Thiết bị mạng và giao thức mạng",
+      "topic": "Giao thức mạng",
       "level": "VD"
     },
     {
-      "id": 29,
+      "id": 32,
       "type": "mcq",
       "question": "Câu 32: Mục tiêu chính của việc thiết lập chế độ mạng riêng là gì?",
       "options": [
-        "A. Tắt tường lửa.",
-        "B. Đảm bảo an toàn cho hệ thống mạng.",
-        "C. Cho phép các thiết bị trong mạng cục bộ phát hiện và chia sẻ tài nguyên.",
-        "D. Tăng tốc độ truyền dữ liệu."
+        "A. Tắt tường lửa",
+        "B. Đảm bảo an toàn cho hệ thống mạng",
+        "C. Cho phép các thiết bị trong mạng cục bộ phát hiện và chia sẻ tài nguyên",
+        "D. Tăng tốc độ truyền dữ liệu"
       ],
-      "correct": "C. Cho phép các thiết bị trong mạng cục bộ phát hiện và chia sẻ tài nguyên.",
-      "explanation": "Chế độ mạng riêng cho phép thiết bị trong mạng cục bộ nhận diện nhau và chia sẻ tài nguyên.",
+      "correct": "C. Cho phép các thiết bị trong mạng cục bộ phát hiện và chia sẻ tài nguyên",
+      "explanation": "Thiết lập chế độ mạng riêng (Private network) cho phép các máy tính trong cùng mạng nội bộ tin cậy có thể tìm thấy nhau và chia sẻ tệp tin, thư mục, máy in.",
       "image": null,
-      "topic": "Chia sẻ tài nguyên mạng",
-      "level": "TH"
+      "topic": "Thực hành chia sẻ tài nguyên trên mạng",
+      "level": "NB"
     },
     {
-      "id": 30,
+      "id": 33,
       "type": "mcq",
       "question": "Câu 33: Cách mở chức năng thiết lập chia sẻ nâng cao trong Windows là gì?",
       "options": [
@@ -477,45 +525,45 @@
         "D. Network Settings → File Sharing"
       ],
       "correct": "B. Control Panel → Network and Internet → Network and Sharing Center → Advanced Sharing Settings",
-      "explanation": "Advanced Sharing Settings nằm trong Network and Sharing Center của Control Panel.",
+      "explanation": "Đường dẫn chuẩn trong Windows để mở thiết lập chia sẻ nâng cao là: Control Panel → Network and Internet → Network and Sharing Center → Advanced Sharing Settings.",
       "image": null,
-      "topic": "Chia sẻ tài nguyên mạng",
-      "level": "NB"
+      "topic": "Thực hành chia sẻ tài nguyên trên mạng",
+      "level": "TH"
     },
     {
-      "id": 31,
+      "id": 34,
       "type": "mcq",
       "question": "Câu 34: Thư mục công cộng trên máy tính thường được lưu trữ ở đâu?",
       "options": [
-        "A. This PC → System (C) → Users → Public",
+        "A. This PC → System (C:) → Users → Public",
         "B. This PC → Documents → Public",
         "C. This PC → Downloads → Public",
-        "D. This PC → System (C) → Windows → Public"
+        "D. This PC → System (C:) → Windows → Public"
       ],
-      "correct": "A. This PC → System (C) → Users → Public",
-      "explanation": "Thư mục Public mặc định của Windows thường nằm tại C:\\\\Users\\\\Public.",
+      "correct": "A. This PC → System (C:) → Users → Public",
+      "explanation": "Trên hệ điều hành Windows, thư mục công cộng (Public) mặc định nằm theo đường dẫn ổ cài đặt hệ điều hành: This PC → System (C:) → Users → Public.",
       "image": null,
-      "topic": "Chia sẻ tài nguyên mạng",
+      "topic": "Thực hành chia sẻ tài nguyên trên mạng",
       "level": "NB"
     },
     {
-      "id": 32,
+      "id": 35,
       "type": "mcq",
-      "question": "Câu 35: Khi chia sẻ thư mục, tại bước “Sharing” trong cửa sổ Properties, người dùng cần làm gì để cho phép mọi người trong mạng truy cập thư mục?",
+      "question": "Câu 35: Khi chia sẻ thư mục, tại bước \"Sharing\" trong cửa sổ Properties, người dùng cần làm gì để cho phép mọi người trong mạng truy cập thư mục?",
       "options": [
-        "A. Chọn “Administrator”",
-        "B. Chọn “Everyone”",
-        "C. Chọn “Guest”",
-        "D. Chọn “Network”"
+        "A. Chọn \"Administrator\"",
+        "B. Chọn \"Everyone\"",
+        "C. Chọn \"Guest\"",
+        "D. Chọn \"Network\""
       ],
-      "correct": "B. Chọn “Everyone”",
-      "explanation": "Everyone là nhóm cho phép thiết lập quyền chia sẻ cho mọi người dùng được hệ thống cho phép.",
+      "correct": "B. Chọn \"Everyone\"",
+      "explanation": "Để tất cả người dùng trong mạng LAN đều có thể truy cập thư mục được chia sẻ, ta cần thêm đối tượng \"Everyone\" vào danh sách chia sẻ.",
       "image": null,
-      "topic": "Chia sẻ tài nguyên mạng",
-      "level": "NB"
+      "topic": "Thực hành chia sẻ tài nguyên trên mạng",
+      "level": "TH"
     },
     {
-      "id": 33,
+      "id": 36,
       "type": "mcq",
       "question": "Câu 36: Bước nào là đúng khi chia sẻ máy in trong mạng?",
       "options": [
@@ -525,29 +573,29 @@
         "D. Settings → Devices → Sharing"
       ],
       "correct": "B. Control Panel → Hardware and Sound → View device and printers → Printer properties → Sharing",
-      "explanation": "Có thể bật chia sẻ máy in trong thẻ Sharing của cửa sổ Printer properties.",
+      "explanation": "Để chia sẻ máy in qua Control Panel, ta vào Hardware and Sound → View devices and printers, chọn máy in rồi mở Printer properties → thẻ Sharing và tích chọn Share this printer.",
       "image": null,
-      "topic": "Chia sẻ tài nguyên mạng",
-      "level": "NB"
-    },
-    {
-      "id": 34,
-      "type": "mcq",
-      "question": "Câu 37: Tại sao việc tắt tạm thời tường lửa (firewall) lại cần thiết khi chia sẻ tệp và máy in?",
-      "options": [
-        "A. Để bảo mật tốt hơn.",
-        "B. Để đảm bảo quá trình chia sẻ không bị gián đoạn.",
-        "C. Để tránh lỗi phần cứng.",
-        "D. Để tăng tốc độ mạng."
-      ],
-      "correct": "B. Để đảm bảo quá trình chia sẻ không bị gián đoạn.",
-      "explanation": "Tường lửa có thể chặn kết nối chia sẻ nếu chưa được cấu hình. Thực tế nên bật quy tắc chia sẻ phù hợp thay vì tắt toàn bộ tường lửa.",
-      "image": null,
-      "topic": "Chia sẻ tài nguyên mạng",
+      "topic": "Thực hành chia sẻ tài nguyên trên mạng",
       "level": "TH"
     },
     {
-      "id": 35,
+      "id": 37,
+      "type": "mcq",
+      "question": "Câu 37: Tại sao việc tắt tạm thời tường lửa (firewall) lại cần thiết khi chia sẻ tệp và máy in?",
+      "options": [
+        "A. Để bảo mật tốt hơn",
+        "B. Để đảm bảo quá trình chia sẻ không bị gián đoạn hoặc bị chặn",
+        "C. Để tránh lỗi phần cứng",
+        "D. Để tăng tốc độ mạng"
+      ],
+      "correct": "B. Để đảm bảo quá trình chia sẻ không bị gián đoạn hoặc bị chặn",
+      "explanation": "Tường lửa (Firewall) đôi khi chặn các kết nối nội bộ để bảo vệ máy tính, nên trong quá trình thực hành chia sẻ tệp và máy in có thể tạm thời tắt để tránh bị chặn kết nối.",
+      "image": null,
+      "topic": "Thực hành chia sẻ tài nguyên trên mạng",
+      "level": "TH"
+    },
+    {
+      "id": 38,
       "type": "mcq",
       "question": "Câu 38: Làm thế nào để tắt tạm thời tường lửa trên Windows?",
       "options": [
@@ -557,141 +605,141 @@
         "D. Network and Sharing Center → Turn off Firewall"
       ],
       "correct": "A. Privacy and Security → Windows Security Firewall Network Protection → Private Network",
-      "explanation": "Đường dẫn được nêu gần với phần Firewall & network protection trong Windows Security; tên mục có thể khác đôi chút tùy phiên bản Windows.",
+      "explanation": "Trong cài đặt của Windows, người dùng truy cập Privacy & Security → Windows Security → Firewall & network protection → chọn mạng hiện tại (Private network) để bật/tắt tạm thời tường lửa.",
       "image": null,
-      "topic": "Chia sẻ tài nguyên mạng",
+      "topic": "Thực hành chia sẻ tài nguyên trên mạng",
       "level": "TH"
-    },
-    {
-      "id": 36,
-      "type": "mcq",
-      "question": "Câu 39: Không gian mạng là gì?",
-      "options": [
-        "A. Môi trường giao tiếp trực tiếp.",
-        "B. Môi trường được tạo ra nhờ các mạng máy tính.",
-        "C. Một cách thức giao tiếp bằng giọng nói.",
-        "D. Môi trường giao tiếp qua điện thoại."
-      ],
-      "correct": "B. Môi trường được tạo ra nhờ các mạng máy tính.",
-      "explanation": "Không gian mạng là môi trường hình thành từ các mạng máy tính, cho phép giao tiếp và trao đổi thông tin.",
-      "image": null,
-      "topic": "Giao tiếp trong không gian mạng",
-      "level": "NB"
-    },
-    {
-      "id": 37,
-      "type": "mcq",
-      "question": "Câu 40: Một trong những nhược điểm chính của giao tiếp trong không gian mạng là gì?",
-      "options": [
-        "A. Dễ dàng kết nối với mọi người.",
-        "B. Thiếu tín hiệu phi ngôn ngữ.",
-        "C. Công cụ giao tiếp đa dạng.",
-        "D. Tăng cường giao tiếp đa quốc gia."
-      ],
-      "correct": "C. Công cụ giao tiếp đa dạng.",
-      "explanation": "Giao tiếp trực tuyến thường thiếu tín hiệu phi ngôn ngữ như nét mặt, cử chỉ và ngôn ngữ cơ thể.",
-      "image": null,
-      "topic": "Giao tiếp trong không gian mạng",
-      "level": "TH"
-    },
-    {
-      "id": 38,
-      "type": "mcq",
-      "question": "Câu 41: Khi giao tiếp trong không gian mạng, cần tôn trọng người khác bằng cách nào?",
-      "options": [
-        "A. Chia sẻ thông tin cá nhân của họ.",
-        "B. Sử dụng ngôn từ đúng mực và lịch sự.",
-        "C. Tấn công cá nhân.",
-        "D. Phớt lờ ý kiến của họ."
-      ],
-      "correct": "B. Sử dụng ngôn từ đúng mực và lịch sự.",
-      "explanation": "Sử dụng ngôn từ đúng mực, lịch sự thể hiện sự tôn trọng người khác.",
-      "image": null,
-      "topic": "Giao tiếp trong không gian mạng",
-      "level": "NB"
     },
     {
       "id": 39,
       "type": "mcq",
-      "question": "Câu 42: Điều nào sau đây hình thành thói quen ứng xử nhân văn trong không gian mạng?",
+      "question": "Câu 39: Không gian mạng là gì?",
       "options": [
-        "A. Tấn công những người có ý kiến khác biệt.",
-        "B. Sử dụng ngôn ngữ xúc phạm.",
-        "C. Bình tĩnh và tôn trọng ý kiến của người khác.",
-        "D. Đưa ra thông tin sai lệch để gây tranh cãi."
+        "A. Môi trường giao tiếp trực tiếp",
+        "B. Môi trường được tạo ra nhờ các mạng máy tính",
+        "C. Một cách thức giao tiếp bằng giọng nói",
+        "D. Môi trường giao tiếp qua điện thoại"
       ],
-      "correct": "B. Sử dụng ngôn ngữ xúc phạm.",
-      "explanation": "Bình tĩnh và tôn trọng ý kiến khác biệt giúp xây dựng môi trường mạng văn minh.",
+      "correct": "B. Môi trường được tạo ra nhờ các mạng máy tính",
+      "explanation": "Không gian mạng (Cyberspace) là môi trường truyền thông và tương tác xã hội được tạo ra nhờ sự kết nối của các hệ thống mạng máy tính, đặc biệt là Internet.",
       "image": null,
-      "topic": "Giao tiếp trong không gian mạng",
+      "topic": "Giao tiếp và ứng xử trong không gian mạng",
       "level": "NB"
     },
     {
       "id": 40,
       "type": "mcq",
-      "question": "Câu 43: Tại sao việc cẩn trọng với ngôn từ trong không gian mạng lại quan trọng?",
+      "question": "Câu 40: Một trong những nhược điểm chính của giao tiếp trong không gian mạng là gì?",
       "options": [
-        "A. Để tăng lượng người theo dõi.",
-        "B. Để tránh làm tổn thương người khác và duy trì mối quan hệ tốt đẹp.",
-        "C. Để kiểm soát thông tin cá nhân.",
-        "D. Để được nổi tiếng trên mạng."
+        "A. Dễ dàng kết nối với mọi người",
+        "B. Thiếu tín hiệu phi ngôn ngữ",
+        "C. Công cụ giao tiếp đa dạng",
+        "D. Tăng cường giao tiếp đa quốc gia"
       ],
-      "correct": "A. Để tăng lượng người theo dõi.",
-      "explanation": "Cẩn trọng với ngôn từ giúp tránh làm tổn thương người khác và duy trì quan hệ tốt đẹp.",
+      "correct": "B. Thiếu tín hiệu phi ngôn ngữ",
+      "explanation": "Giao tiếp qua mạng (như nhắn tin văn bản) thường thiếu các tín hiệu phi ngôn ngữ như nét mặt, cử chỉ, ngữ điệu, dễ dẫn đến hiểu lầm cảm xúc của người nói.",
       "image": null,
-      "topic": "Giao tiếp trong không gian mạng",
-      "level": "TH"
+      "topic": "Giao tiếp và ứng xử trong không gian mạng",
+      "level": "NB"
     },
     {
       "id": 41,
       "type": "mcq",
-      "question": "Câu 44: Người dùng cần làm gì trước khi đưa ra ý kiến về bài viết của người khác?",
+      "question": "Câu 41: Khi giao tiếp trong không gian mạng, cần tôn trọng người khác bằng cách nào?",
       "options": [
-        "A. Đọc kĩ bài viết của người khác.",
-        "B. Trả lời ngay lập tức mà không cần đọc kỹ.",
-        "C. Tấn công cá nhân nếu không đồng ý.",
-        "D. Phớt lờ ý kiến của người khác."
+        "A. Chia sẻ thông tin cá nhân của họ",
+        "B. Sử dụng ngôn từ đúng mực và lịch sự",
+        "C. Tấn công cá nhân",
+        "D. Phớt lờ ý kiến của họ"
       ],
-      "correct": "B. Trả lời ngay lập tức mà không cần đọc kỹ.",
-      "explanation": "Đọc kỹ bài viết giúp hiểu đúng nội dung trước khi đưa ra ý kiến.",
+      "correct": "B. Sử dụng ngôn từ đúng mực và lịch sự",
+      "explanation": "Thể hiện sự tôn trọng người khác trên không gian mạng thông qua việc sử dụng ngôn từ văn minh, đúng mực, lịch sự và tôn trọng quyền riêng tư của họ.",
       "image": null,
-      "topic": "Giao tiếp trong không gian mạng",
+      "topic": "Giao tiếp và ứng xử trong không gian mạng",
       "level": "NB"
     },
     {
       "id": 42,
       "type": "mcq",
-      "question": "Câu 45: HTML là gì?",
+      "question": "Câu 42: Điều nào sau đây hình thành thói quen ứng xử nhân văn trong không gian mạng?",
       "options": [
-        "A. Ngôn ngữ lập trình của máy tính.",
-        "B. Ngôn ngữ đánh dấu siêu văn bản.",
-        "C. Phần mềm soạn thảo văn bản.",
-        "D. Giao thức mạng."
+        "A. Tấn công những người có ý kiến khác biệt",
+        "B. Sử dụng ngôn ngữ xúc phạm",
+        "C. Bình tĩnh và tôn trọng ý kiến của người khác",
+        "D. Đưa ra thông tin sai lệch để gây tranh cãi"
       ],
-      "correct": "B. Ngôn ngữ đánh dấu siêu văn bản.",
-      "explanation": "HTML là ngôn ngữ đánh dấu siêu văn bản dùng để tạo cấu trúc nội dung trang web.",
+      "correct": "C. Bình tĩnh và tôn trọng ý kiến của người khác",
+      "explanation": "Giữ thái độ bình tĩnh, lắng nghe, thấu cảm và tôn trọng sự khác biệt trong ý kiến của người khác là biểu hiện của ứng xử nhân văn trên không gian mạng.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
-      "level": "NB"
+      "topic": "Giao tiếp và ứng xử trong không gian mạng",
+      "level": "TH"
     },
     {
       "id": 43,
       "type": "mcq",
-      "question": "Câu 46: Thẻ đánh dấu HTML (tag) được viết trong cặp dấu nào?",
+      "question": "Câu 43: Tại sao việc cẩn trọng với ngôn từ trong không gian mạng lại quan trọng?",
       "options": [
-        "A. \"(\" và \")\"",
-        "B. \"{\" và \"}\"",
-        "C. \"<\" và \">\"",
-        "D. \"[\" và \"]\""
+        "A. Để tăng lượng người theo dõi",
+        "B. Để tránh làm tổn thương người khác và duy trì mối quan hệ tốt đẹp",
+        "C. Để kiểm soát thông tin cá nhân",
+        "D. Để được nổi tiếng trên mạng"
       ],
-      "correct": "C. \"<\" và \">\"",
-      "explanation": "Thẻ HTML được viết trong cặp dấu ngoặc nhọn góc < và >.",
+      "correct": "B. Để tránh làm tổn thương người khác và duy trì mối quan hệ tốt đẹp",
+      "explanation": "Ngôn từ trên mạng lan truyền rất nhanh và lưu lại lâu dài, do đó cần cẩn trọng để không gây tổn thương tinh thần cho người khác và giữ gìn môi trường mạng lành mạnh.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
-      "level": "NB"
+      "topic": "Giao tiếp và ứng xử trong không gian mạng",
+      "level": "TH"
     },
     {
       "id": 44,
+      "type": "mcq",
+      "question": "Câu 44: Người dùng cần làm gì trước khi đưa ra ý kiến về bài viết của người khác?",
+      "options": [
+        "A. Đọc kĩ bài viết của người khác",
+        "B. Trả lời ngay lập tức mà không cần đọc kỹ",
+        "C. Tấn công cá nhân nếu không đồng ý",
+        "D. Phớt lờ ý kiến của người khác"
+      ],
+      "correct": "A. Đọc kĩ bài viết của người khác",
+      "explanation": "Trước khi bình luận hay phản biện, người dùng cần đọc kỹ nội dung bài viết để hiểu đúng thông điệp và ngữ cảnh, tránh phán xét vội vàng hoặc hiểu sai ý tác giả.",
+      "image": null,
+      "topic": "Giao tiếp và ứng xử trong không gian mạng",
+      "level": "NB"
+    },
+    {
+      "id": 45,
+      "type": "mcq",
+      "question": "Câu 45: HTML là gì?",
+      "options": [
+        "A. Ngôn ngữ lập trình của máy tính",
+        "B. Ngôn ngữ đánh dấu siêu văn bản",
+        "C. Phần mềm soạn thảo văn bản",
+        "D. Giao thức mạng"
+      ],
+      "correct": "B. Ngôn ngữ đánh dấu siêu văn bản",
+      "explanation": "HTML (HyperText Markup Language) là ngôn ngữ đánh dấu siêu văn bản được sử dụng để thiết lập cấu trúc và nội dung cho các trang web.",
+      "image": null,
+      "topic": "HTML và cấu trúc trang web",
+      "level": "NB"
+    },
+    {
+      "id": 46,
+      "type": "mcq",
+      "question": "Câu 46: Thẻ đánh dấu HTML (tag) được viết trong cặp dấu nào?",
+      "options": [
+        "A. ( , )",
+        "B. { , }",
+        "C. < , >",
+        "D. [ , ]"
+      ],
+      "correct": "C. < , >",
+      "explanation": "Các thẻ đánh dấu (tag) trong HTML luôn được đặt bên trong cặp dấu ngoặc nhọn < và >, ví dụ như <p>, <html>.",
+      "image": null,
+      "topic": "HTML và cấu trúc trang web",
+      "level": "NB"
+    },
+    {
+      "id": 47,
       "type": "mcq",
       "question": "Câu 47: Phần tử nào sau đây bắt buộc phải có trong một tệp HTML?",
       "options": [
@@ -700,14 +748,14 @@
         "C. <html>",
         "D. <body>"
       ],
-      "correct": "B. <title>",
-      "explanation": "Trong cấu trúc HTML cơ bản, html là phần tử gốc bao bọc tài liệu. HTML5 có thể tự suy ra một số thẻ bị lược bỏ.",
+      "correct": "C. <html>",
+      "explanation": "Phần tử <html> là phần tử gốc (root element) bao bọc toàn bộ nội dung của một văn bản HTML và là thành phần bắt buộc trong cấu trúc chuẩn của trang HTML.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "HTML và cấu trúc trang web",
       "level": "NB"
     },
     {
-      "id": 45,
+      "id": 48,
       "type": "mcq",
       "question": "Câu 48: Thẻ nào dùng để khai báo tiêu đề cho trang web và hiển thị trên tab trình duyệt?",
       "options": [
@@ -716,14 +764,14 @@
         "C. <h1>",
         "D. <body>"
       ],
-      "correct": "C. <h1>",
-      "explanation": "Thẻ title xác định tiêu đề tài liệu, thường hiển thị trên tab trình duyệt.",
+      "correct": "B. <title>",
+      "explanation": "Thẻ <title> nằm trong phần <head> được dùng để đặt tên tiêu đề của trang web hiển thị trên thanh tiêu đề hoặc tab của trình duyệt.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "HTML và cấu trúc trang web",
       "level": "NB"
     },
     {
-      "id": 46,
+      "id": 49,
       "type": "mcq",
       "question": "Câu 49: Thẻ nào dùng để định dạng một đoạn văn bản?",
       "options": [
@@ -732,30 +780,30 @@
         "C. <p>",
         "D. <a>"
       ],
-      "correct": "B. <span>",
-      "explanation": "Thẻ p dùng để tạo một đoạn văn bản.",
+      "correct": "C. <p>",
+      "explanation": "Thẻ <p> (viết tắt của paragraph) được dùng để khai báo và định dạng một đoạn văn bản trên trang web.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "HTML và cấu trúc trang web",
       "level": "NB"
     },
     {
-      "id": 47,
+      "id": 50,
       "type": "mcq",
-      "question": "Câu 50: Thẻ nào sau đây là thẻ đơn trong HTML?",
+      "question": "Câu 50: Thẻ nào sau đây là thẻ đơn trong HTML?",
       "options": [
         "A. <p>",
         "B. <hr>",
         "C. <h1>",
         "D. <div>"
       ],
-      "correct": "A. <p>",
-      "explanation": "table tạo bảng, không phải thẻ định dạng văn bản; b, strong và i định dạng/nhấn mạnh văn bản.",
+      "correct": "B. <hr>",
+      "explanation": "Thẻ <hr> (tạo đường kẻ ngang) là thẻ đơn (thẻ rỗng), chỉ có thẻ mở mà không cần thẻ đóng. Các thẻ <p>, <h1>, <div> đều là thẻ đôi.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "HTML và cấu trúc trang web",
       "level": "NB"
     },
     {
-      "id": 48,
+      "id": 51,
       "type": "mcq",
       "question": "Câu 51: Trong HTML, thẻ nào được sử dụng để tạo một đoạn văn bản?",
       "options": [
@@ -764,14 +812,14 @@
         "C. <a>",
         "D. <img>"
       ],
-      "correct": "C. <a>",
-      "explanation": "Thẻ u tạo phần văn bản có gạch dưới.",
+      "correct": "A. <p>",
+      "explanation": "Trong HTML, phần tử <p> được dùng để xác định một đoạn văn bản (paragraph).",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "Định dạng văn bản",
       "level": "NB"
     },
     {
-      "id": 49,
+      "id": 52,
       "type": "mcq",
       "question": "Câu 52: Thẻ nào dưới đây không phải là thẻ định dạng văn bản trong HTML?",
       "options": [
@@ -780,14 +828,14 @@
         "C. <table>",
         "D. <i>"
       ],
-      "correct": "A. <b>",
-      "explanation": "text-indent thiết lập độ thụt đầu dòng của dòng đầu tiên trong đoạn.",
+      "correct": "C. <table>",
+      "explanation": "Thẻ <table> dùng để tạo bảng trong HTML, trong khi các thẻ <b>, <strong> (in đậm) và <i> (in nghiêng) là các thẻ định dạng kiểu chữ cho văn bản.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
-      "level": "TH"
+      "topic": "Định dạng văn bản",
+      "level": "NB"
     },
     {
-      "id": 50,
+      "id": 53,
       "type": "mcq",
       "question": "Câu 53: Để tạo chữ nghiêng trong HTML, thẻ nào sau đây sẽ được sử dụng?",
       "options": [
@@ -796,14 +844,14 @@
         "C. <u>",
         "D. <strike>"
       ],
-      "correct": "C. <u>",
-      "explanation": "font-family chọn kiểu phông chữ.",
+      "correct": "A. <em>",
+      "explanation": "Thẻ <em> (emphasized text) và thẻ <i> được sử dụng để định dạng văn bản hiển thị kiểu chữ in nghiêng trong HTML.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "Định dạng văn bản",
       "level": "NB"
     },
     {
-      "id": 51,
+      "id": 54,
       "type": "mcq",
       "question": "Câu 54: Thẻ HTML nào sau đây được sử dụng để tạo một đường gạch dưới chữ?",
       "options": [
@@ -812,14 +860,14 @@
         "C. <u>",
         "D. <sub>"
       ],
-      "correct": "A. <ul>",
-      "explanation": "width thiết lập chiều rộng của phần tử HTML chứa đoạn văn.",
+      "correct": "C. <u>",
+      "explanation": "Thẻ <u> (underline) dùng để tạo đường gạch chân dưới văn bản trong HTML.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "Định dạng văn bản",
       "level": "NB"
     },
     {
-      "id": 52,
+      "id": 55,
       "type": "mcq",
       "question": "Câu 55: Để định dạng một đoạn văn bản có thụt đầu dòng, ta sử dụng thuộc tính CSS nào?",
       "options": [
@@ -828,14 +876,14 @@
         "C. text-indent",
         "D. padding-left"
       ],
-      "correct": "B. text-align",
-      "explanation": "strong biểu thị nội dung quan trọng và thường được trình duyệt hiển thị chữ đậm.",
+      "correct": "C. text-indent",
+      "explanation": "Thuộc tính CSS text-indent dùng để quy định khoảng cách thụt lề dòng đầu tiên của một đoạn văn bản.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
-      "level": "NB"
+      "topic": "Định dạng văn bản",
+      "level": "TH"
     },
     {
-      "id": 53,
+      "id": 56,
       "type": "mcq",
       "question": "Câu 56: Trong HTML, thuộc tính nào dùng để thay đổi kiểu font chữ?",
       "options": [
@@ -844,14 +892,14 @@
         "C. font-size",
         "D. text-decoration"
       ],
-      "correct": "B. font-weight",
-      "explanation": "line-height thiết lập chiều cao dòng, ảnh hưởng khoảng cách giữa các dòng văn bản.",
+      "correct": "A. font-family",
+      "explanation": "Trong thuộc tính style (CSS), thuộc tính font-family được sử dụng để thiết lập phông chữ (kiểu chữ) cho phần tử văn bản.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "Định dạng văn bản",
       "level": "NB"
     },
     {
-      "id": 54,
+      "id": 57,
       "type": "mcq",
       "question": "Câu 57: Trong HTML, thuộc tính nào được sử dụng để thiết lập độ rộng của một đoạn văn bản?",
       "options": [
@@ -860,14 +908,14 @@
         "C. line-height",
         "D. text-width"
       ],
-      "correct": "B. height",
-      "explanation": "background-color thiết lập màu nền của phần tử.",
+      "correct": "A. width",
+      "explanation": "Thuộc tính width được dùng để thiết lập chiều rộng (độ rộng) hiển thị của phần tử chứa đoạn văn bản.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "Định dạng văn bản",
       "level": "NB"
     },
     {
-      "id": 55,
+      "id": 58,
       "type": "mcq",
       "question": "Câu 58: Để làm cho văn bản hiển thị dạng in đậm trong HTML, thẻ nào sau đây là phù hợp nhất?",
       "options": [
@@ -877,13 +925,13 @@
         "D. <i>"
       ],
       "correct": "B. <strong>",
-      "explanation": "Đáp án được chọn phù hợp với kiến thức Tin học của nội dung câu hỏi.",
+      "explanation": "Thẻ <strong> dùng để nhấn mạnh văn bản quan trọng và trình duyệt sẽ hiển thị văn bản đó dưới dạng chữ in đậm.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "Định dạng văn bản",
       "level": "NB"
     },
     {
-      "id": 56,
+      "id": 59,
       "type": "mcq",
       "question": "Câu 59: Trong HTML, thuộc tính nào được sử dụng để thiết lập khoảng cách giữa các dòng?",
       "options": [
@@ -893,13 +941,13 @@
         "D. font-line"
       ],
       "correct": "B. line-height",
-      "explanation": "Đáp án được chọn phù hợp với kiến thức Tin học của nội dung câu hỏi.",
+      "explanation": "Thuộc tính line-height được sử dụng để điều chỉnh chiều cao của dòng, qua đó thiết lập khoảng cách giữa các dòng văn bản.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
-      "level": "NB"
+      "topic": "Định dạng văn bản",
+      "level": "TH"
     },
     {
-      "id": 57,
+      "id": 60,
       "type": "mcq",
       "question": "Câu 60: Trong HTML, thuộc tính nào để thiết lập màu nền cho một đoạn văn bản?",
       "options": [
@@ -909,122 +957,122 @@
         "D. text-background"
       ],
       "correct": "A. background-color",
-      "explanation": "Đáp án được chọn phù hợp với kiến thức Tin học của nội dung câu hỏi.",
+      "explanation": "Thuộc tính background-color dùng để đặt màu nền cho phần tử HTML, còn thuộc tính color dùng để đặt màu chữ.",
       "image": null,
-      "topic": "HTML và định dạng văn bản",
+      "topic": "Định dạng văn bản",
       "level": "NB"
-    },
-    {
-      "id": 58,
-      "type": "true_false",
-      "question": "Câu 1: Giờ thực hành, các học sinh sau khi quan sát các thiết bị mạng trong phòng máy đưa ra các ý kiến như sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý a: Access Point có chức năng và cách hoạt động tương tự như Router nhưng được trang bị thêm khả năng truyền/nhận dữ liệu thông qua kết nối không dây.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Access Point chủ yếu cung cấp kết nối không dây cho mạng LAN; Router có chức năng định tuyến giữa các mạng. Hai thiết bị có chức năng chính khác nhau.",
-      "image": null,
-      "topic": "Thiết bị mạng và thiết kế mở rộng mạng",
-      "level": "TH"
-    },
-    {
-      "id": 59,
-      "type": "true_false",
-      "question": "Câu 1: Giờ thực hành, các học sinh sau khi quan sát các thiết bị mạng trong phòng máy đưa ra các ý kiến như sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý b: Access Point là thiết bị được sử dụng để hỗ trợ kết nối mạng không dây.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Đúng",
-      "explanation": "Access Point cho phép các thiết bị như điện thoại và máy tính xách tay kết nối vào mạng thông qua Wi-Fi.",
-      "image": null,
-      "topic": "Thiết bị mạng và thiết kế mở rộng mạng",
-      "level": "TH"
-    },
-    {
-      "id": 60,
-      "type": "true_false",
-      "question": "Câu 1: Giờ thực hành, các học sinh sau khi quan sát các thiết bị mạng trong phòng máy đưa ra các ý kiến như sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý c: Switch là bộ định tuyến được dùng để kết nối các LAN với nhau, giữa mạng LAN và mạng Internet.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Switch chủ yếu kết nối các thiết bị trong cùng mạng LAN. Router mới thực hiện định tuyến giữa các mạng khác nhau.",
-      "image": null,
-      "topic": "Thiết bị mạng và thiết kế mở rộng mạng",
-      "level": "TH"
     },
     {
       "id": 61,
       "type": "true_false",
-      "question": "Câu 1: Giờ thực hành, các học sinh sau khi quan sát các thiết bị mạng trong phòng máy đưa ra các ý kiến như sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý d: Modem được sử dụng để truy cập Internet thông qua nhà cung cấp dịch vụ Internet.",
+      "question": "Câu 1: Giờ thực hành, các học sinh sau khi quan sát các thiết bị mạng trong phòng máy đưa ra các ý kiến như sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý a: a) Access Point có chức năng và cách hoạt động tương tự như Router nhưng được trang bị thêm khả năng truyền/nhận dữ liệu thông qua kết nối không dây.",
       "options": [
         "Đúng",
         "Sai"
       ],
-      "correct": "Đúng",
-      "explanation": "Modem giúp thiết lập kết nối với đường truyền của nhà cung cấp dịch vụ Internet.",
+      "correct": "Sai",
+      "explanation": "Access Point đóng vai trò là điểm truy cập không dây giúp các thiết bị không dây kết nối vào mạng LAN (tương tự như Switch không dây), chứ không có chức năng định tuyến giữa các mạng khác nhau như Router.",
       "image": null,
-      "topic": "Thiết bị mạng và thiết kế mở rộng mạng",
+      "topic": "Một số thiết bị mạng thông dụng",
       "level": "TH"
     },
     {
       "id": 62,
       "type": "true_false",
-      "question": "Câu 2: Hình bên là sơ đồ mạng máy tính của một trường Trung học phổ thông. Hiện nay, do mở rộng quy mô nên nhà trường có nhu cầu chỉnh sửa thiết kế của hệ thống để tối ưu những thiết bị đang có và thuận tiện nhất trong hoạt động của trường. Cán bộ quản lý của nhà trường đã đưa ra một số nhận định sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý a: Có thể lắp đặt thêm một modem nối với modem hiện thời để tạo một mạng tương tự như mạng đang giúp kết nối thêm các thiết bị vào mạng.",
-      "options": [
-        "Đúng",
-        "Sai"
-      ],
-      "correct": "Sai",
-      "explanation": "Modem không phải thiết bị chuyên dùng để mở rộng số lượng kết nối trong mạng nội bộ. Có thể dùng Switch hoặc Access Point tùy nhu cầu. Sơ đồ mạng được nhắc đến không có trong nội dung văn bản được cung cấp, nên đánh giá theo nguyên lý mạng thông thường.",
-      "image": null,
-      "topic": "Thiết bị mạng và thiết kế mở rộng mạng",
-      "level": "TH"
-    },
-    {
-      "id": 63,
-      "type": "true_false",
-      "question": "Câu 2: Hình bên là sơ đồ mạng máy tính của một trường Trung học phổ thông. Hiện nay, do mở rộng quy mô nên nhà trường có nhu cầu chỉnh sửa thiết kế của hệ thống để tối ưu những thiết bị đang có và thuận tiện nhất trong hoạt động của trường. Cán bộ quản lý của nhà trường đã đưa ra một số nhận định sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý b: Access point được sử dụng để mở rộng mạng ở các vị trí có nhiều người dùng thiết bị di động.",
+      "question": "Câu 1: Giờ thực hành, các học sinh sau khi quan sát các thiết bị mạng trong phòng máy đưa ra các ý kiến như sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý b: b) Access Point là thiết bị được sử dụng để hỗ trợ kết nối mạng không dây.",
       "options": [
         "Đúng",
         "Sai"
       ],
       "correct": "Đúng",
-      "explanation": "Access Point có thể được lắp tại khu vực đông người dùng thiết bị di động để cung cấp Wi-Fi và mở rộng vùng phủ sóng.",
+      "explanation": "Access Point (điểm truy cập không dây) phát sóng Wi-Fi để hỗ trợ các thiết bị đầu cuối kết nối vào mạng mà không cần cáp mạng.",
       "image": null,
-      "topic": "Thiết bị mạng và thiết kế mở rộng mạng",
+      "topic": "Một số thiết bị mạng thông dụng",
+      "level": "NB"
+    },
+    {
+      "id": 63,
+      "type": "true_false",
+      "question": "Câu 1: Giờ thực hành, các học sinh sau khi quan sát các thiết bị mạng trong phòng máy đưa ra các ý kiến như sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý c: c) Switch là bộ định tuyến được dùng để kết nối các LAN với nhau, giữa mạng LAN và mạng Internet.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Switch là bộ chuyển mạch dùng để kết nối các thiết bị trong cùng một mạng LAN. Thiết bị định tuyến kết nối các mạng LAN với nhau và với Internet là Router.",
+      "image": null,
+      "topic": "Một số thiết bị mạng thông dụng",
       "level": "TH"
     },
     {
       "id": 64,
       "type": "true_false",
-      "question": "Câu 2: Hình bên là sơ đồ mạng máy tính của một trường Trung học phổ thông. Hiện nay, do mở rộng quy mô nên nhà trường có nhu cầu chỉnh sửa thiết kế của hệ thống để tối ưu những thiết bị đang có và thuận tiện nhất trong hoạt động của trường. Cán bộ quản lý của nhà trường đã đưa ra một số nhận định sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý c: Hiện nay, có các Router hiện đại tích hợp chức năng nhiều thiết bị, có thể thay thế được modem.",
+      "question": "Câu 1: Giờ thực hành, các học sinh sau khi quan sát các thiết bị mạng trong phòng máy đưa ra các ý kiến như sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý d: d) Modem được sử dụng để truy cập Internet thông qua nhà cung cấp dịch vụ Internet.",
       "options": [
         "Đúng",
         "Sai"
       ],
       "correct": "Đúng",
-      "explanation": "Một số thiết bị gateway hoặc modem-router tích hợp chức năng modem và router, có thể thay thế thiết bị riêng nếu tương thích với đường truyền của nhà cung cấp.",
+      "explanation": "Modem chuyển đổi tín hiệu giữa mạng nội bộ và đường truyền của nhà cung cấp dịch vụ Internet (ISP), giúp các thiết bị trong mạng truy cập được Internet.",
       "image": null,
-      "topic": "Thiết bị mạng và thiết kế mở rộng mạng",
-      "level": "TH"
+      "topic": "Một số thiết bị mạng thông dụng",
+      "level": "NB"
     },
     {
       "id": 65,
       "type": "true_false",
-      "question": "Câu 2: Hình bên là sơ đồ mạng máy tính của một trường Trung học phổ thông. Hiện nay, do mở rộng quy mô nên nhà trường có nhu cầu chỉnh sửa thiết kế của hệ thống để tối ưu những thiết bị đang có và thuận tiện nhất trong hoạt động của trường. Cán bộ quản lý của nhà trường đã đưa ra một số nhận định sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý d: Để phục vụ cho việc tăng số lượng thiết bị truy cập mạng, ta chỉ cần nâng cấp gói cước với nhà cung cấp dịch vụ mạng.",
+      "question": "Câu 2: Hình bên là sơ đồ mạng máy tính của một trường Trung học phổ thông. Hiện nay, do mở rộng quy mô nên nhà trường có nhu cầu chỉnh sửa thiết kế của hệ thống để tối ưu những thiết bị đang có và thuận tiện nhất trong hoạt động của trường. Cán bộ quản lý của nhà trường đã đưa ra một số nhận định sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý a: a) Có thể lắp đặt thêm một modem nối với modem hiện thời để tạo một mạng tương tự như mạng đang có, giúp kết nối thêm các thiết bị vào mạng.",
       "options": [
         "Đúng",
         "Sai"
       ],
       "correct": "Sai",
-      "explanation": "Nâng cấp gói cước chủ yếu cải thiện băng thông Internet, không trực tiếp tăng số cổng kết nối hoặc khả năng phục vụ thiết bị của Router, Switch và Access Point.",
+      "explanation": "Để mở rộng mạng LAN và kết nối thêm nhiều thiết bị, người ta nối thêm Switch hoặc Access Point vào hệ thống, không nối hai Modem trực tiếp với nhau vì Modem chỉ dùng để giao tiếp với đường truyền của nhà mạng.",
       "image": null,
-      "topic": "Thiết bị mạng và thiết kế mở rộng mạng",
+      "topic": "Một số thiết bị mạng thông dụng",
+      "level": "VD"
+    },
+    {
+      "id": 66,
+      "type": "true_false",
+      "question": "Câu 2: Hình bên là sơ đồ mạng máy tính của một trường Trung học phổ thông. Hiện nay, do mở rộng quy mô nên nhà trường có nhu cầu chỉnh sửa thiết kế của hệ thống để tối ưu những thiết bị đang có và thuận tiện nhất trong hoạt động của trường. Cán bộ quản lý của nhà trường đã đưa ra một số nhận định sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý b: b) Access point được sử dụng để mở rộng mạng ở các vị trí có nhiều người dùng thiết bị di động.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Access Point giúp mở rộng vùng phủ sóng Wi-Fi tại các khu vực tập trung đông người dùng thiết bị di động như điện thoại thông minh, máy tính bảng, laptop.",
+      "image": null,
+      "topic": "Một số thiết bị mạng thông dụng",
       "level": "TH"
+    },
+    {
+      "id": 67,
+      "type": "true_false",
+      "question": "Câu 2: Hình bên là sơ đồ mạng máy tính của một trường Trung học phổ thông. Hiện nay, do mở rộng quy mô nên nhà trường có nhu cầu chỉnh sửa thiết kế của hệ thống để tối ưu những thiết bị đang có và thuận tiện nhất trong hoạt động của trường. Cán bộ quản lý của nhà trường đã đưa ra một số nhận định sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý c: c) Hiện nay, có các Router hiện đại tích hợp chức năng nhiều thiết bị, có thể thay thế được modem.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Đúng",
+      "explanation": "Nhiều thiết bị mạng hiện đại ngày nay là thiết bị tích hợp (Modem-Router Wi-Fi) vừa có chức năng giải điều chế tín hiệu của Modem, vừa định tuyến và phát sóng không dây.",
+      "image": null,
+      "topic": "Một số thiết bị mạng thông dụng",
+      "level": "TH"
+    },
+    {
+      "id": 68,
+      "type": "true_false",
+      "question": "Câu 2: Hình bên là sơ đồ mạng máy tính của một trường Trung học phổ thông. Hiện nay, do mở rộng quy mô nên nhà trường có nhu cầu chỉnh sửa thiết kế của hệ thống để tối ưu những thiết bị đang có và thuận tiện nhất trong hoạt động của trường. Cán bộ quản lý của nhà trường đã đưa ra một số nhận định sau, hãy xác định mỗi nhận định là Đúng hay Sai? - Ý d: d) Để phục vụ cho việc tăng số lượng thiết bị truy cập mạng, ta chỉ cần nâng cấp gói cước với nhà cung cấp dịch vụ mạng.",
+      "options": [
+        "Đúng",
+        "Sai"
+      ],
+      "correct": "Sai",
+      "explanation": "Khi số lượng thiết bị truy cập tăng lớn, ngoài việc nâng cấp gói cước băng thông Internet, nhà trường còn phải nâng cấp hoặc bổ sung thiết bị phần cứng mạng (Switch nhiều cổng hơn, Router/AP chịu tải cao hơn).",
+      "image": null,
+      "topic": "Một số thiết bị mạng thông dụng",
+      "level": "VD"
     }
   ]
 }
